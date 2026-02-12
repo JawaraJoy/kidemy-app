@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace EduGame
 {
-    public class QuestColoring : Quest
+    public class QuestPainting : Quest
     {
         public static Color EmptyColor => new Color(0, 0, 0, 0);
 
@@ -14,8 +14,6 @@ namespace EduGame
 
         [Header("Palettes")]
         [SerializeField] private List<Color> colorOptions;
-        [SerializeField] private Material brush;
-        [SerializeField] private float brushSize = 0.1f;
         
         [Header("Components")]
         [SerializeField] private RectTransform palettesContainer;
@@ -27,9 +25,7 @@ namespace EduGame
         [Header("Cursor")]
         [SerializeField] private Sprite bindedCursor;
 
-        public Color SelectedColor => bindedColor;
-        public Material Brush => brush;
-        public float BrushSize => brushSize;
+        public Color BindedColor => bindedColor;
         
         private Color bindedColor = EmptyColor;
 
@@ -42,9 +38,6 @@ namespace EduGame
 
             if(!canvasContainer)
                 Debug.LogError("Canvas not set");
-
-            if(!brush)
-                Debug.LogError("Brush not set");
             
             if(canvasContainer)
                 InstantiateColoringCanvas();
@@ -80,10 +73,8 @@ namespace EduGame
         public void BindColor(Color color)
         {
             bindedColor = color;
+
             
-            // Assign SelectedColor to brush
-            brush.SetColor("_BrushColor", bindedColor);
-            brush.SetFloat("_BrushSize", brushSize);
         }
 
         QuestColoringPalette InstantiatePalette(Color color)

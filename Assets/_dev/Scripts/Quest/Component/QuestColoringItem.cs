@@ -10,13 +10,13 @@ namespace EduGame
         private Color defaultColor;
 
         private QuestColoring questColoring;
-        private QuestUtilRegionalEvent regionalEvent;
+        private QuestUtilRegionalClick regionalClick;
 
         protected override void Awake()
         {
             image = GetComponent<Image>();
             questColoring = GetComponentInParent<QuestColoring>();
-            regionalEvent = GetComponent<QuestUtilRegionalEvent>();
+            regionalClick = GetComponent<QuestUtilRegionalClick>();
 
             if (!image)
                 Debug.LogError("Image Component not found");
@@ -24,14 +24,14 @@ namespace EduGame
             if(!questColoring)
                 Debug.LogError("Quest Component not found");
 
-            if(!regionalEvent)
+            if(!regionalClick)
                 Debug.LogError("QuestUtilRegionalEvent Component not found");
 
             defaultColor = image.color;
 
             questColoring.AddColor(defaultColor);
 
-            regionalEvent.AddClickEvent(ChangeColor);
+            regionalClick.AddClickEvent(ChangeColor);
 
             ChangeColor(Color.white);    
         }
@@ -44,8 +44,8 @@ namespace EduGame
 
         public void ChangeColor()
         {
-            if(questColoring.BindedColor.a > 0.5f)
-                ChangeColor(questColoring.BindedColor);
+            if(questColoring.SelectedColor.a > 0.5f)
+                ChangeColor(questColoring.SelectedColor);
         }
     }
 }

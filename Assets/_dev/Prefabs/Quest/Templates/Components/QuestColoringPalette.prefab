@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8111443033163816278}
   - component: {fileID: -1056894754099392858}
   m_Layer: 5
-  m_Name: QuestColoring_Palette
+  m_Name: QuestColoringPalette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

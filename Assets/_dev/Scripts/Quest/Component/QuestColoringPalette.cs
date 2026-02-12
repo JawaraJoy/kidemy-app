@@ -34,7 +34,6 @@ namespace EduGame
 
         public void BindColor()
         {
-            Debug.Log("xxx");
             questColoring.BindColor(defaultColor);
         }
     }
