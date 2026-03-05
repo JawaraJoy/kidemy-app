@@ -7,8 +7,6 @@ namespace EduGame
     public class QuestMatching : Quest
     {
         [Header("Data")]
-        [SerializeField] private SO_QuestMatching matching;
-
         [SerializeField] private TMP_Text questionText;
         [SerializeField] private RectTransform cardsContainer;
         [SerializeField] private RectTransform success;
@@ -22,20 +20,26 @@ namespace EduGame
 
         public float PeekDuration => peekDuration;
 
+        private SO_QuestMatching dataQuestMatching;
         private QuestMatchingCard[] cards;
         private int unansweredCorrect = 0;
         private QuestMatchingCard openedCard = null;
 
-        protected override void Start()
+        public override void Init(SO_Quest data)
         {
-            base.Start();
+            dataQuestMatching = data as SO_QuestMatching;
 
-            unansweredCorrect = matching.Matches.Length/2;
+            if(dataQuestMatching)
+                base.Init(data);
+            else
+                Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMatching");
+
+            unansweredCorrect = dataQuestMatching.Matches.Length/2;
 
             if (questionText)
             {
-                if (!string.IsNullOrEmpty(matching.Text))
-                    questionText.text = matching.Text;
+                if (!string.IsNullOrEmpty(dataQuestMatching.Text))
+                    questionText.text = dataQuestMatching.Text;
                 else
                 {
                     questionText.gameObject.SetActive(false);
@@ -45,19 +49,14 @@ namespace EduGame
 
             if (cardsContainer && cardPrefab)
             {
-                cards = new QuestMatchingCard[matching.Matches.Length];
+                cards = new QuestMatchingCard[dataQuestMatching.Matches.Length];
 
-                for (int i = 0; i < matching.Matches.Length; i++)
+                for (int i = 0; i < dataQuestMatching.Matches.Length; i++)
                 {
                     cards[i] = InstantiateCard(cards[0]);
-                    cards[i].SetMatch(matching.Matches[i]);
+                    cards[i].SetMatch(dataQuestMatching.Matches[i]);
                 }
-
-                Invoke("RecalculateChoiceContainer", 0.5f);
             }
-
-            if(submitButton)
-                submitButton.gameObject.SetActive(false);
                 
             Reset();
         }
@@ -105,10 +104,13 @@ namespace EduGame
 
         public override void Reset()
         {
-            unansweredCorrect = matching.Matches.Length/2;
+            unansweredCorrect = dataQuestMatching.Matches.Length/2;
 
             foreach (var card in cards)
                 card.Reset();
+
+             if (nextButton)
+                nextButton.gameObject.SetActive(false);
 
             if (restartButton)
                 restartButton.gameObject.SetActive(false);
@@ -140,12 +142,21 @@ namespace EduGame
         {
             if(success)
                 success.gameObject.SetActive(true);
+            
+            base.OnAnswered(true);
         }
 
         void Failed()
         {
             if(failed)
                 failed.gameObject.SetActive(true);
+        }
+
+        public override void Enabled()
+        {
+            base.Enabled();
+
+            Invoke("RecalculateChoiceContainer", 0.5f);
         }
     }
 }

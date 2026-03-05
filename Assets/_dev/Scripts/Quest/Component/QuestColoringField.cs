@@ -42,8 +42,6 @@ namespace EduGame
             {
                 Texture baseTexture = image.texture;
 
-                Debug.Log(image.texture.width);
-
                 // Create a RenderTexture with the same dimensions and format as the Texture2D
                 rt = new RenderTexture(image.texture.width, image.texture.height, 0, RenderTextureFormat.ARGB32);
 

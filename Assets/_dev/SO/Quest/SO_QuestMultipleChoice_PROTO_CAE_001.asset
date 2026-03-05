@@ -12,35 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
   m_Name: SO_QuestMultipleChoice_PROTO_CAE_001
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
-  id: PROTO_CAE_001
-  category: 3
+  id: PROTO_CAE_005
+  category: 2
+  autoSubmit: 0
   question:
-    image: {fileID: 0}
-    text: Pick Music Instrument (More than one)
+    image: {fileID: 21300000, guid: 2e0f26a07e253f54cbf404ee0efc9a35, type: 3}
+    text: What the color of the mouse?
+    sound: {fileID: 0}
   choices:
-  - image: {fileID: 7684461926862890678, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: 
-    isAnswer: 0
-  - image: {fileID: 5518886142484678812, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: 
-    isAnswer: 0
-  - image: {fileID: -598336299142214049, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: 
+  - image: {fileID: 0}
+    text: Brown
+    sound: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: -2479494404768115379, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: 
+  - image: {fileID: 0}
+    text: White
+    sound: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: -3620790740481045043, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: 
+  - image: {fileID: 0}
+    text: Blue
+    sound: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: -9041508683981611798, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: 
-    isAnswer: 1
-  - image: {fileID: -1875196723251469201, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: 
+  - image: {fileID: 0}
+    text: Gray
+    sound: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: -1170365721, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: 
+  - image: {fileID: 0}
+    text: Black
+    sound: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: Yellow
+    sound: {fileID: 0}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

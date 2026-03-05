@@ -9,14 +9,11 @@ namespace EduGame
     {
         public static Color EmptyColor => new Color(0, 0, 0, 0);
 
-        [Header("Data")]
-        [SerializeField] private SO_QuestColoring coloring;
-
         [Header("Palettes")]
         [SerializeField] private List<Color> colorOptions;
         [SerializeField] private Material brush;
         [SerializeField] private float brushSize = 0.1f;
-        
+
         [Header("Components")]
         [SerializeField] private RectTransform palettesContainer;
         [SerializeField] private RectTransform canvasContainer;
@@ -30,33 +27,34 @@ namespace EduGame
         public Color SelectedColor => bindedColor;
         public Material Brush => brush;
         public float BrushSize => brushSize;
-        
+
         private Color bindedColor = EmptyColor;
 
         private QuestColoringPalette[] palettes;
 
+        private SO_QuestColoring dataQuestColoring;
+
         void Awake()
         {
-            if(!coloring)
-                Debug.LogError("Coloring data not set");
-
-            if(!canvasContainer)
+            if (!canvasContainer)
                 Debug.LogError("Canvas not set");
 
-            if(!brush)
+            if (!brush)
                 Debug.LogError("Brush not set");
-            
-            if(canvasContainer)
-                InstantiateColoringCanvas();
+
+            if (!palettesContainer)
+                Debug.LogError("Palettes Container is not found");
         }
 
-        protected override void Start()
+        public override void Init(SO_Quest data)
         {
-            base.Start();
-            
-            if(!palettesContainer)
-                Debug.LogError("Palettes Container is not found");
-            
+            dataQuestColoring = data as SO_QuestColoring;
+
+            if(dataQuestColoring)
+                base.Init(data);
+            else
+                Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestColoring");
+
             if (palettesContainer && palettePrefab)
             {
                 palettes = new QuestColoringPalette[colorOptions.Count];
@@ -69,18 +67,27 @@ namespace EduGame
 
                 Invoke("RecalculatePalettesContainer", 0.5f);
             }
+
+            if (canvasContainer)
+                InstantiateColoringCanvas();
+
+            if(nextButton)
+                nextButton.gameObject.SetActive(true);
+            
+            if(restartButton)
+                restartButton.gameObject.SetActive(true);
         }
 
         public void AddColor(Color color)
         {
-            if(!colorOptions.Contains(color))
+            if (!colorOptions.Contains(color))
                 colorOptions.Add(color);
         }
 
         public void BindColor(Color color)
         {
             bindedColor = color;
-            
+
             // Assign SelectedColor to brush
             brush.SetColor("_BrushColor", bindedColor);
             brush.SetFloat("_BrushSize", brushSize);
@@ -99,7 +106,7 @@ namespace EduGame
 
         RectTransform InstantiateColoringCanvas()
         {
-            RectTransform canvas = Instantiate(coloring.Canvas, canvasContainer);
+            RectTransform canvas = Instantiate(dataQuestColoring.Canvas, canvasContainer);
 
             canvas.transform.localPosition = Vector3.zero;
             canvas.localScale = Vector3.one;
@@ -120,10 +127,10 @@ namespace EduGame
 
         void OnGUI()
         {
-            if(bindedColor != EmptyColor && bindedCursor && Mouse.current != null)
+            if (bindedColor != EmptyColor && bindedCursor && Mouse.current != null)
             {
                 Vector2 mousePosition = Mouse.current.position.ReadValue();
-                
+
                 Cursor.visible = false;
 
                 GUI.color = bindedColor;
@@ -134,6 +141,13 @@ namespace EduGame
                 Cursor.visible = true;
                 GUI.color = Color.white;
             }
+        }
+
+        public override void Next()
+        {
+            base.OnAnswered(true);
+
+            base.Next();
         }
     }
 }

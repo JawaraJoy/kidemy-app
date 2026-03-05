@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestColoring
   id: PROTO_CAE_002
   category: 2
+  questTemplate: {fileID: 6878104783486173123, guid: 18fac23bc4be33c48b1a0445e8892c93, type: 3}
   text: 
   canvas: {fileID: 2854874389893677318, guid: 9c2998c630dfff1478c13e1e86454368, type: 3}
   attempt: 10

@@ -7,6 +7,7 @@ namespace EduGame
     public class QuestMultipleChoicesItem : QuestComponent
     {
         [SerializeField] protected TMP_Text text;
+        [SerializeField] private AudioPlayer audioPlayer;
         [SerializeField] private Image image;
         
         [SerializeField] protected GameObject correct;
@@ -42,6 +43,17 @@ namespace EduGame
             {
                 text?.gameObject.SetActive(false);
                 text?.transform.parent.gameObject.SetActive(false);   
+            }
+
+            if(choice.Audio)
+            {
+                if(audioPlayer)
+                    audioPlayer.SetAudioClip(choice.Audio);
+            }   
+            else
+            {
+                audioPlayer?.gameObject.SetActive(false);
+                audioPlayer?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(choice.Image)

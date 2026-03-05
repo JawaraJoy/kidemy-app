@@ -44,16 +44,12 @@ namespace EduGame
         {
             Dragged = true;
             PointerData = eventData;
-
-            Debug.Log(gameObject.name);
         }
 
         void IDragHandler.OnDrag(PointerEventData eventData)
         {
             Dragged = true;
             PointerData = eventData;
-
-            Debug.Log(gameObject.name);
         }
 
         void IPointerUpHandler.OnPointerUp(PointerEventData eventData)

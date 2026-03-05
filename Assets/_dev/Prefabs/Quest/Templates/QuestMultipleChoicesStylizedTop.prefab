@@ -157,9 +157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestMultipleChoices
   title: {fileID: 4316317848602402990}
   restartButton: {fileID: 5103000320886433991}
-  submitButton: {fileID: 9179583104561998634}
-  multipleChoice: {fileID: 11400000, guid: 4a38157c20810004e991c6443d3f5e64, type: 2}
+  nextButton: {fileID: 9179583104561998634}
   questionImage: {fileID: 2504406913942234815}
+  questionAudio: {fileID: 0}
   questionText: {fileID: 0}
   choicesContainer: {fileID: 196174786254370431}
   choiceItemPrefab: {fileID: -2086928366923832096, guid: 5475b38072488b443846af0fc9aa1aca, type: 3}
@@ -306,6 +306,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4536352040121406461}
+    - target: {fileID: 5513561384418962552, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513561384418962552, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513561384418962552, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513561384418962552, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513561384418962552, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513561384418962552, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7478788369969235624, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -384,6 +408,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7478788369969235624, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350201320513051093, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4536352040121406461}
+    - target: {fileID: 8350201320513051093, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124007136293261167, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124007136293261167, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124007136293261167, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124007136293261167, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124007136293261167, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124007136293261167, guid: d590504fb0db49743b9b804240eb83c3, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

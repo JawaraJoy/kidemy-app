@@ -7,29 +7,35 @@ namespace EduGame
     public class QuestMultipleChoices : Quest
     {
         [Header("Data")]
-        [SerializeField] private SO_QuestMultipleChoice multipleChoice;
-
+        
         [Header("Components")]
         [SerializeField] private Image questionImage;
+        [SerializeField] private AudioPlayer questionAudio;
         [SerializeField] private TMP_Text questionText;
         [SerializeField] private RectTransform choicesContainer;
 
         [Header("Prefab")]
         [SerializeField] private QuestMultipleChoicesItem choiceItemPrefab;
 
+        private SO_QuestMultipleChoice dataMultipleChoice;
         private QuestMultipleChoicesItem[] choices;
         private int unansweredCorrect = 0;
 
-        protected override void Start()
+        public override void Init(SO_Quest data)
         {
-            base.Start();
+            dataMultipleChoice = data as SO_QuestMultipleChoice;
 
-            unansweredCorrect = multipleChoice.TotalAnswer;
+            if(dataMultipleChoice)
+                base.Init(data);
+            else
+                Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoice");
+
+            unansweredCorrect = dataMultipleChoice.TotalAnswer;
 
             if (questionImage)
             {
-                if (multipleChoice.Question.Image)
-                    questionImage.sprite = multipleChoice.Question.Image;
+                if (dataMultipleChoice.Question.Image)
+                    questionImage.sprite = dataMultipleChoice.Question.Image;
                 else
                 {
                     questionImage.gameObject.SetActive(false);
@@ -37,10 +43,21 @@ namespace EduGame
                 }
             }
 
+            if (questionAudio)
+            {
+                if (dataMultipleChoice.Question.Audio)
+                    questionAudio.SetAudioClip(dataMultipleChoice.Question.Audio);
+                else
+                {
+                    questionAudio.gameObject.SetActive(false);
+                    questionAudio.transform.parent.gameObject.SetActive(false);
+                }
+            }
+
             if (questionText)
             {
-                if (!string.IsNullOrEmpty(multipleChoice.Question.Text))
-                    questionText.text = multipleChoice.Question.Text;
+                if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
+                    questionText.text = dataMultipleChoice.Question.Text;
                 else
                 {
                     questionText.gameObject.SetActive(false);
@@ -50,19 +67,17 @@ namespace EduGame
 
             if (choicesContainer && choiceItemPrefab)
             {
-                choices = new QuestMultipleChoicesItem[multipleChoice.Choices.Length];
+                choices = new QuestMultipleChoicesItem[dataMultipleChoice.Choices.Length];
 
-                for (int i = 0; i < multipleChoice.Choices.Length; i++)
+                for (int i = 0; i < dataMultipleChoice.Choices.Length; i++)
                 {
                     choices[i] = InstantiateItem(choices[0], i);
-                    choices[i].SetChoice(multipleChoice.Choices[i]);
+                    choices[i].SetChoice(dataMultipleChoice.Choices[i]);
                 }
-
-                Invoke("RecalculateChoiceContainer", 0.5f);
             }
 
-            if(submitButton)
-                submitButton.gameObject.SetActive(false);
+            if(nextButton && dataMultipleChoice.AutoSubmit)
+                nextButton.gameObject.SetActive(false);
         }
 
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)
@@ -92,14 +107,13 @@ namespace EduGame
                 foreach (var choice in choices)
                     choice.Disable();
 
-                if (restartButton)
-                    restartButton.gameObject.SetActive(true);
+                base.OnAnswered(result);
             }
         }
 
         public override void Reset()
         {
-            unansweredCorrect = multipleChoice.TotalAnswer;
+            unansweredCorrect = dataMultipleChoice.TotalAnswer;
 
             foreach (var choice in choices)
                 choice.Reset();
@@ -116,6 +130,13 @@ namespace EduGame
                 if (gridLayoutGroup)
                     gridLayoutGroup.cellSize = choices[0].Rect.sizeDelta;
             }
+        }
+
+        public override void Enabled()
+        {
+            base.Enabled();
+
+            Invoke("RecalculateChoiceContainer", 0.5f);
         }
     }
 }
