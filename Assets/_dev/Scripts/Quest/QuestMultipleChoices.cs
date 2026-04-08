@@ -67,6 +67,8 @@ namespace EduGame
 
             if (choicesContainer && choiceItemPrefab)
             {
+                choicesContainer.gameObject.SetActive(true);
+
                 choices = new QuestMultipleChoicesItem[dataMultipleChoice.Choices.Length];
 
                 for (int i = 0; i < dataMultipleChoice.Choices.Length; i++)
@@ -86,12 +88,14 @@ namespace EduGame
 
             choiceItem.transform.SetParent(choicesContainer);
             choiceItem.transform.localPosition = Vector3.zero;
+            choiceItem.Init();
             choiceItem.Rect.localScale = Vector3.one;
+            choiceItem.gameObject.SetActive(true);
 
             return choiceItem;
         }
 
-        public override void OnAnswered(bool result)
+        public override void OnAnswered(bool result, bool submit = false)
         {
             bool isFinished = true;
 
@@ -107,7 +111,7 @@ namespace EduGame
                 foreach (var choice in choices)
                     choice.Disable();
 
-                base.OnAnswered(result);
+                base.OnAnswered(result, true);
             }
         }
 
@@ -135,6 +139,9 @@ namespace EduGame
         public override void Enabled()
         {
             base.Enabled();
+
+            if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
+                ChallengeManager.Instance.SetNPCDialog(dataMultipleChoice.Question.Text);
 
             Invoke("RecalculateChoiceContainer", 0.5f);
         }

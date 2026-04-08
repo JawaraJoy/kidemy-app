@@ -6,9 +6,12 @@ namespace EduGame
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioSource audioSourceSFX;
 
         public static GameManager Instance { get; private set; }
+        
         public AudioSource AudioSource => audioSource;
+        public AudioSource AudioSourceSFX => audioSourceSFX;
         
         void Awake()
         {

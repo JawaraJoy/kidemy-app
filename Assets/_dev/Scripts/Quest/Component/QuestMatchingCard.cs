@@ -5,8 +5,6 @@ namespace EduGame
 {
     public class QuestMatchingCard : QuestComponent
     {
-        [SerializeField] private Image image;
-
         public QuestUtilLabelMatching Match => match;
 
         private Sprite cardFace;

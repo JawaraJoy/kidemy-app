@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_QuestDragNDrop_PROTO_LSAD_003
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: PROTO_LSAD_003
+  category: 4
+  autoSubmit: 0
+  score: 10
+  question:
+    image: {fileID: 0}
+    text: Put the morning steps in the right order!
+    audio: {fileID: 0}
+  groups:
+  - label:
+      image: {fileID: 0}
+      text: 1
+      audio: {fileID: 0}
+    limit: 1
+    labels:
+    - image: {fileID: 0}
+      text: Wake Up
+      audio: {fileID: 0}
+  - label:
+      image: {fileID: 0}
+      text: 2
+      audio: {fileID: 0}
+    limit: 1
+    labels:
+    - image: {fileID: 0}
+      text: Brush Teeths
+      audio: {fileID: 0}
+  - label:
+      image: {fileID: 0}
+      text: 3
+      audio: {fileID: 0}
+    limit: -1
+    labels:
+    - image: {fileID: 0}
+      text: Get Dressed
+      audio: {fileID: 0}
+  - label:
+      image: {fileID: 0}
+      text: 4
+      audio: {fileID: 0}
+    limit: -1
+    labels:
+    - image: {fileID: 0}
+      text: Eat Breakfast
+      audio: {fileID: 0}
+  randomizeChoice: 1
+  answerInOrder: 0
+  timer: 0

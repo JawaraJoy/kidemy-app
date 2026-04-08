@@ -16,8 +16,6 @@ namespace EduGame
         {
             image = GetComponent<Image>();
 
-            Debug.Log(image);
-
             // Set the threshold. Pixels with alpha less than 0.5 will be ignored by clicks.
             if (image != null)
                 image.alphaHitTestMinimumThreshold = 0.5f;

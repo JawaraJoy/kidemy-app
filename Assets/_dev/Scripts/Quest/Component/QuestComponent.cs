@@ -11,16 +11,23 @@ namespace EduGame
 
         protected Quest quest;
 
+        protected bool isInit;
+
         protected virtual void Awake()
         {
-            Rect = GetComponent<RectTransform>();
-            Button = GetComponent<Button>();
-            Image = GetComponent<Image>();
+            Init();
         }
 
         public virtual void Init()
         {
-            
+            if(!isInit)
+            {
+                Rect = GetComponent<RectTransform>();
+                Button = GetComponent<Button>();
+                Image = GetComponent<Image>();
+
+                isInit = true;   
+            }
         }
 
         protected virtual void Start()

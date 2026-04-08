@@ -7,12 +7,14 @@ namespace EduGame
     public abstract class Quest : MonoBehaviour
     {
         [Header("Components")]
-        [SerializeField] protected TMP_Text title;
         [SerializeField] protected Button restartButton;
         [SerializeField] protected Button nextButton;
+        [SerializeField] protected Button submitButton;
+
+        [Header("Rules")]
+        [SerializeField] protected int score = 10;
 
         protected SO_Quest data;
-        protected ChallengeManager challenge;
         protected bool isAnswered = false;
         protected bool isCorrect = false;
         
@@ -23,44 +25,31 @@ namespace EduGame
             
             if (nextButton)
                 nextButton.gameObject.SetActive(false);
-
-            challenge = GetComponentInParent<ChallengeManager>();
-
-            if(!challenge)
-                Debug.LogError("ChallengeManager componenet not found in parent, make sure it setup properly");
-
-            if (title)
-                title.text = "Question " + challenge.CurrentQuestNumber;
         }
 
         public virtual void Init(SO_Quest data)
         {
             this.data = data;
+
+            ChallengeManager.Instance.InitQuest(data);
         }
 
-        public virtual void OnAnswered(bool result)
+        public virtual void OnAnswered(bool result, bool submit = true)
         {
             isAnswered = true;
-            
-            if (restartButton)
-                restartButton.gameObject.SetActive(true);
-            
-            if (nextButton)
-                nextButton.gameObject.SetActive(true);
 
-            if(!isCorrect && result)
-            {
-                isCorrect = result;    
-                challenge.AddScore(data.Score);
-            }
+            if(submit)
+                Submit(result);
+        }
 
-            if(data.AutoSubmit)
-                Next();
+        public virtual void Submit(bool result)
+        {
+            ChallengeManager.Instance.Submit(result, score);
         }
 
         public virtual void Next()
         {
-            challenge.Next();
+            ChallengeManager.Instance.Next();
         }
 
         public virtual void Reset()

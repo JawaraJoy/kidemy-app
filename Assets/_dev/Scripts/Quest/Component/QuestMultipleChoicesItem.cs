@@ -9,14 +9,14 @@ namespace EduGame
         [SerializeField] protected TMP_Text text;
         [SerializeField] private AudioPlayer audioPlayer;
         [SerializeField] private Image image;
-        
         [SerializeField] protected GameObject correct;
         [SerializeField] protected GameObject wrong;
         
         public bool IsRightAnswer { get; private set; } = false;
 
         protected QuestUtilLabelChoice choice;
-
+        protected ButtonEvents events;
+        
         protected override void Awake()
         {
             base.Awake();
@@ -28,6 +28,20 @@ namespace EduGame
                 Debug.LogError("Button Component not found");
 
             Reset();
+        }
+
+        public override void Init()
+        {
+            base.Init();
+
+            events = GetComponent<ButtonEvents> ();
+
+            if(events)
+            {
+                events.AddEventOnPointerOver(FeedbackManager.Instance.ButtonOver.Play);
+                events.AddEventOnPointerExit(FeedbackManager.Instance.ButtonExit.Play);
+                events.AddEventOnPointerClick(FeedbackManager.Instance.ButtonClick.Play);
+            }
         }
 
         public virtual void SetChoice(QuestUtilLabelChoice choice)
@@ -70,16 +84,12 @@ namespace EduGame
 
         public override void OnClick()
         {
+            Disable();
+
             if(choice.IsAnswer)
-            {   
-                correct.SetActive(true);
                 quest?.OnAnswered(true);
-            }
             else
-            {
-                wrong.SetActive(true);
                 quest?.OnAnswered(false);
-            }
         }
 
         public override void Disable()

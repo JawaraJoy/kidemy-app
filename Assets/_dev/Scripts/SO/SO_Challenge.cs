@@ -8,7 +8,11 @@ namespace EduGame
     public class SO_Challenge : ScriptableObject
     {
         [SerializeField] private QuestItem[] quests;
+
+        private int difficulty = 1;
+
         public QuestItem[] Quests => quests;
+        public int Difficulty { get => difficulty; set { difficulty = value; } }
     }
 
     [Serializable]
