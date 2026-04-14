@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_002A_AdditionTrek
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 002A
+  title: Addition Trek
+  category: 0
+  autoSubmit: 0
+  score: 10
+  question:
+    image: {fileID: 0}
+    text: How many fruit in the image?
+    audio: {fileID: 0}
+  choices:
+  - image: {fileID: 21300000, guid: 79fccebad208f4f49b9a437d08d36564, type: 3}
+    text: 6
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: ee06fd9a25ce8474986961eeb753aee2, type: 3}
+    text: 7
+    audio: {fileID: 0}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: c14be7c4a11c276489e530aa4d893193, type: 3}
+    text: 8
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: c6e95c71ae8f83e40b98cf4385bfe130, type: 3}
+    text: 9
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 1f21a08cfca15c347b6021891cbfa82b, type: 3}
+    text: 10
+    audio: {fileID: 0}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 0

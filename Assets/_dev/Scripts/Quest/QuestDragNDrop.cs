@@ -23,13 +23,13 @@ namespace EduGame
         private QuestDragNDropItem[] items;
         private QuestDragNDropSlot[] slots;
 
-        public override void Init(SO_Quest data)
+        protected override void Start()
         {
+            base.Start();
+
             dataDragNDrop = data as SO_QuestDragNDrop;
 
-            if(dataDragNDrop)
-                base.Init(data);
-            else
+            if(!dataDragNDrop)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoice");
 
             if (questionImage)
@@ -86,9 +86,6 @@ namespace EduGame
                     slots[i].SetSlot(dataDragNDrop.Slots[i]);
                 }
             }
-
-            if(nextButton && dataDragNDrop.AutoSubmit)
-                nextButton.gameObject.SetActive(false);
         }
 
         QuestDragNDropItem InstantiateItem(QuestDragNDropItem prefab)
@@ -117,9 +114,6 @@ namespace EduGame
         {
             foreach (var choice in items)
                 choice.Reset();
-
-            if (restartButton)
-                restartButton.gameObject.SetActive(false);
         }
 
         void RecalculateContainer()
@@ -169,7 +163,7 @@ namespace EduGame
                 }
             }
 
-            ChallengeManager.Instance.ShowResult(totalAnswers == dataDragNDrop.Items.Length);
+            GameManager.Instance.ShowResult(totalAnswers == dataDragNDrop.Items.Length);
         }
     }
 }

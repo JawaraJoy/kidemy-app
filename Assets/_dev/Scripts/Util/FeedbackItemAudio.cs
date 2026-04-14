@@ -13,8 +13,8 @@ namespace EduGame
 
         public override void ExecPlay()
         {
-            if(audioClip && GameManager.Instance.AudioSourceSFX)
-                GameManager.Instance.AudioSourceSFX.PlayOneShot(audioClip);
+            if(audioClip && GameManager.Instance.AudioSource)
+                GameManager.Instance.AudioSource.PlayOneShot(audioClip);
         }
     }
 }

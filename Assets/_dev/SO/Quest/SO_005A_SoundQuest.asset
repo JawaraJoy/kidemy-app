@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_005A_SoundQuest
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 005A
+  title: SoundQuest
+  category: 1
+  autoSubmit: 0
+  score: 10
+  question:
+    image: {fileID: 0}
+    text: 
+    audio: {fileID: 8300000, guid: 61f95dd3090956f479579978271d61c9, type: 3}
+  choices:
+  - image: {fileID: 2120956924630866063, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
+    text: Rabbit
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 5926469055973327904, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
+    text: Dog
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: -221739221237478197, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
+    text: Cat
+    audio: {fileID: 0}
+    isAnswer: 1
+  timer: 0
+  randomizeChoice: 0

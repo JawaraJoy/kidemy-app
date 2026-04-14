@@ -25,13 +25,13 @@ namespace EduGame
         private int unansweredCorrect = 0;
         private QuestMatchingCard openedCard = null;
 
-        public override void Init(SO_Quest data)
+        protected override void Start()
         {
+            base.Start();
+
             dataQuestMatching = data as SO_QuestMatching;
 
-            if(dataQuestMatching)
-                base.Init(data);
-            else
+            if(!dataQuestMatching)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMatching");
 
             unansweredCorrect = dataQuestMatching.Matches.Length/2;
@@ -108,12 +108,6 @@ namespace EduGame
 
             foreach (var card in cards)
                 card.Reset();
-
-             if (nextButton)
-                nextButton.gameObject.SetActive(false);
-
-            if (restartButton)
-                restartButton.gameObject.SetActive(false);
             
             if(success)
                 success.gameObject.SetActive(false);

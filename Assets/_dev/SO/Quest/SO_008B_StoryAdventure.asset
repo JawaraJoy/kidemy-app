@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_008B_StoryAdventure
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 008A
+  title: StoryAdventure
+  category: 1
+  autoSubmit: 0
+  score: 10
+  question:
+    image: {fileID: 0}
+    text: What Mia do?
+    audio: {fileID: 0}
+  choices:
+  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
+    text: Mad at the cat
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
+    text: Have fun with mices
+    audio: {fileID: 0}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
+    text: Sad for missing socks
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
+    text: Ignore the socks
+    audio: {fileID: 0}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 0

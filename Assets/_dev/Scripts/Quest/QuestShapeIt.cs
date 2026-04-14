@@ -17,13 +17,13 @@ namespace EduGame
         private QuestShapeItCanvas canvas;
         private QuestDragNDropItem[] items;
 
-        public override void Init(SO_Quest data)
+        protected override void Start()
         {
+            base.Start();
+
             dataShapeIt = data as SO_QuestShapeIt;
 
             if(dataShapeIt)
-                base.Init(data);
-            else
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestShapeIt");
 
             if (questionImage)
@@ -69,9 +69,6 @@ namespace EduGame
                 for (int i = 0; i < canvas.Items.Length; i++)
                     items[i] = InstantiateItem(canvas.Items[i]);
             }
-
-            if(nextButton && dataShapeIt.AutoSubmit)
-                nextButton.gameObject.SetActive(false);
         }
 
         QuestDragNDropItem InstantiateItem(QuestDragNDropItem item)
@@ -87,9 +84,6 @@ namespace EduGame
         {
             foreach (var choice in items)
                 choice.Reset();
-
-            if (restartButton)
-                restartButton.gameObject.SetActive(false);
         }
 
         void RecalculateContainer()

@@ -6,32 +6,21 @@ namespace EduGame
 {
     public abstract class Quest : MonoBehaviour
     {
-        [Header("Components")]
-        [SerializeField] protected Button restartButton;
-        [SerializeField] protected Button nextButton;
-        [SerializeField] protected Button submitButton;
-
+        [Header("Data")]
+        [SerializeField] protected SO_Quest data;
+        
         [Header("Rules")]
         [SerializeField] protected int score = 10;
 
-        protected SO_Quest data;
         protected bool isAnswered = false;
         protected bool isCorrect = false;
         
         protected virtual void Start()
         {
-            if (restartButton)
-                restartButton.gameObject.SetActive(false);
-            
-            if (nextButton)
-                nextButton.gameObject.SetActive(false);
-        }
+            if(!data)
+                Debug.LogError("Quest not set");
 
-        public virtual void Init(SO_Quest data)
-        {
-            this.data = data;
-
-            ChallengeManager.Instance.InitQuest(data);
+            GameManager.Instance.InitQuest(data);
         }
 
         public virtual void OnAnswered(bool result, bool submit = true)
@@ -44,12 +33,12 @@ namespace EduGame
 
         public virtual void Submit(bool result)
         {
-            ChallengeManager.Instance.Submit(result, score);
+            GameManager.Instance.Submit(result, score);
         }
 
         public virtual void Next()
         {
-            ChallengeManager.Instance.Next();
+            GameManager.Instance.Next();
         }
 
         public virtual void Reset()

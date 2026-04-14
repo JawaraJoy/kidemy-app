@@ -7,8 +7,8 @@ namespace EduGame
     public class QuestMultipleChoicesItem : QuestComponent
     {
         [SerializeField] protected TMP_Text text;
-        [SerializeField] private AudioPlayer audioPlayer;
-        [SerializeField] private Image image;
+        [SerializeField] protected AudioPlayer audioPlayer;
+        [SerializeField] protected Image image;
         [SerializeField] protected GameObject correct;
         [SerializeField] protected GameObject wrong;
         

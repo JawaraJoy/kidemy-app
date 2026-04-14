@@ -6,8 +6,50 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_dev/Scenes/Dev_TestRoomApril.unity
-    guid: 5fd01c7b16c41974baa8a3e6d2706594
+    path: Assets/_dev/Scenes/Dev_001_FrogsCount_A.unity
+    guid: c74b6fc5f46bd7445b91ee47b7c1306d
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_001_FrogsCount_B.unity
+    guid: dc7b28b6869a99d4893e615482651b72
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_001_FrogsCount_C.unity
+    guid: db253f74a38b0754daccf945298b7683
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_002_AdditionTrek_A.unity
+    guid: 55a9a3b42a363904bb8794399e4d97e9
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_002_AdditionTrek_B.unity
+    guid: 098508509674c0940bec2bb0ef96acd9
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_002_AdditionTrek_C.unity
+    guid: d2772adbff54fdc429e969d38c409751
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_006_LetterHunt_A.unity
+    guid: 9db063b4a22ac964fa3af55cef58518a
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_006_LetterHunt_B.unity
+    guid: 769fa78827a6cd84496cdcb061fd0971
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_006_LetterHunt_C.unity
+    guid: 49a544d27389bc34d9d3ec181103ba2f
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_003_PatternJungle_A.unity
+    guid: 5bedef139b18c72429590da28e35bafa
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_003_PatternJungle_B.unity
+    guid: cc8dd19d2708c694cb49247c5874a4ac
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_003_PatternJungle_C.unity
+    guid: 390daddcdaf9fd449958ce8e05281c4d
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_005_SoundQuest_A.unity
+    guid: ed6aa058f48783f46b5a4953daf3b962
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_005_SoundQuest_B.unity
+    guid: ffebb0dda20d42b438c1c6ebc390b917
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_005_SoundQuest_C.unity
+    guid: 4db1fa481617b334db5dcb9a943279fc
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 57cd4d59be8adbf4894b91aafbbe14ba, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

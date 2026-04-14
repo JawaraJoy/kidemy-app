@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_006C_LetterHunt
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 006C
+  title: LetterHunt
+  category: 1
+  autoSubmit: 0
+  score: 10
+  question:
+    image: {fileID: 0}
+    text: Find the letter!
+    audio: {fileID: 0}
+  choices:
+  - image: {fileID: 0}
+    text: H
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: E
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: F
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: K
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: C
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: F
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: O
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: V
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: T
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: Y
+    audio: {fileID: 0}
+    isAnswer: 1
+  - image: {fileID: 0}
+    text: R
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: X
+    audio: {fileID: 0}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 0

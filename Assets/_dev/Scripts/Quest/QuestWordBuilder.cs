@@ -21,13 +21,13 @@ namespace EduGame
         private SO_QuestWordBuilder dataWordBuilder;
         private QuestWordBuilderItem[] choices;
         
-        public override void Init(SO_Quest data)
+        protected override void Start()
         {
             dataWordBuilder = data as SO_QuestWordBuilder;
 
-            if(dataWordBuilder)
-                base.Init(data);
-            else
+            base.Start();
+
+            if(!dataWordBuilder)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestWordBuilder");
 
             if (questionImage)
@@ -73,9 +73,6 @@ namespace EduGame
                     choices[i].SetChoice(dataWordBuilder.Values[i]);
                 }
             }
-
-            if(nextButton && dataWordBuilder.AutoSubmit)
-                nextButton.gameObject.SetActive(false);
         }
 
         QuestWordBuilderItem InstantiateItem(QuestWordBuilderItem prefab, int index)
@@ -93,9 +90,6 @@ namespace EduGame
         {
             foreach (Transform child in answerContainer)
                 child.transform.parent = choicesContainer.transform;
-            
-            if (restartButton)
-                restartButton.gameObject.SetActive(false);
         }
 
         void RecalculateChoiceContainer()

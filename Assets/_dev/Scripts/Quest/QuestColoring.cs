@@ -46,13 +46,13 @@ namespace EduGame
                 Debug.LogError("Palettes Container is not found");
         }
 
-        public override void Init(SO_Quest data)
+        protected override void Start()
         {
+            base.Start();
+
             dataQuestColoring = data as SO_QuestColoring;
 
-            if(dataQuestColoring)
-                base.Init(data);
-            else
+            if(!dataQuestColoring)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestColoring");
 
             if (palettesContainer && palettePrefab)
@@ -70,12 +70,6 @@ namespace EduGame
 
             if (canvasContainer)
                 InstantiateColoringCanvas();
-
-            if(nextButton)
-                nextButton.gameObject.SetActive(true);
-            
-            if(restartButton)
-                restartButton.gameObject.SetActive(true);
         }
 
         public void AddColor(Color color)

@@ -21,13 +21,13 @@ namespace EduGame
         private QuestMultipleChoicesItem[] choices;
         private int unansweredCorrect = 0;
 
-        public override void Init(SO_Quest data)
+        protected override void Start()
         {
+            base.Start();
+            
             dataMultipleChoice = data as SO_QuestMultipleChoice;
 
-            if(dataMultipleChoice)
-                base.Init(data);
-            else
+            if(!dataMultipleChoice)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoice");
 
             unansweredCorrect = dataMultipleChoice.TotalAnswer;
@@ -77,9 +77,6 @@ namespace EduGame
                     choices[i].SetChoice(dataMultipleChoice.Choices[i]);
                 }
             }
-
-            if(nextButton && dataMultipleChoice.AutoSubmit)
-                nextButton.gameObject.SetActive(false);
         }
 
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)
@@ -121,9 +118,6 @@ namespace EduGame
 
             foreach (var choice in choices)
                 choice.Reset();
-
-            if (restartButton)
-                restartButton.gameObject.SetActive(false);
         }
 
         void RecalculateChoiceContainer()
@@ -141,7 +135,7 @@ namespace EduGame
             base.Enabled();
 
             if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
-                ChallengeManager.Instance.SetNPCDialog(dataMultipleChoice.Question.Text);
+                GameManager.Instance.SetNPCDialog(dataMultipleChoice.Question.Text);
 
             Invoke("RecalculateChoiceContainer", 0.5f);
         }

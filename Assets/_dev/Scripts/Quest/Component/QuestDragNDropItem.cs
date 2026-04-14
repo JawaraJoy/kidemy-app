@@ -41,8 +41,8 @@ namespace EduGame
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            if(ChallengeManager.Instance)
-                transform.parent = ChallengeManager.Instance.Canvas.transform;
+            if(GameManager.Instance)
+                transform.parent = GameManager.Instance.Canvas.transform;
 
             originalPosition = Rect.anchoredPosition;
 
@@ -55,8 +55,8 @@ namespace EduGame
         {
             float modifier = 1;
 
-            if(ChallengeManager.Instance)
-                modifier = ChallengeManager.Instance.Canvas.scaleFactor;
+            if(GameManager.Instance)
+                modifier = GameManager.Instance.Canvas.scaleFactor;
 
             Rect.anchoredPosition += eventData.delta / modifier;
         }
