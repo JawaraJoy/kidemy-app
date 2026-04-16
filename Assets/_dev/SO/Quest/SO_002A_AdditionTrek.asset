@@ -22,23 +22,23 @@ MonoBehaviour:
     text: How many fruit in the image?
     audio: {fileID: 0}
   choices:
-  - image: {fileID: 21300000, guid: 79fccebad208f4f49b9a437d08d36564, type: 3}
+  - image: {fileID: 0}
     text: 6
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: ee06fd9a25ce8474986961eeb753aee2, type: 3}
+  - image: {fileID: 0}
     text: 7
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: 21300000, guid: c14be7c4a11c276489e530aa4d893193, type: 3}
+  - image: {fileID: 0}
     text: 8
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: c6e95c71ae8f83e40b98cf4385bfe130, type: 3}
+  - image: {fileID: 0}
     text: 9
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 1f21a08cfca15c347b6021891cbfa82b, type: 3}
+  - image: {fileID: 0}
     text: 10
     audio: {fileID: 0}
     isAnswer: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
   score: 10
   question:
     image: {fileID: 0}
-    text: 
+    text: What Start with this sound?
     audio: {fileID: 8300000, guid: 61f95dd3090956f479579978271d61c9, type: 3}
   choices:
   - image: {fileID: 2120956924630866063, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}

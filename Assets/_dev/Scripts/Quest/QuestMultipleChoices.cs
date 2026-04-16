@@ -77,6 +77,8 @@ namespace EduGame
                     choices[i].SetChoice(dataMultipleChoice.Choices[i]);
                 }
             }
+
+            SetDialog();
         }
 
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)
@@ -118,6 +120,8 @@ namespace EduGame
 
             foreach (var choice in choices)
                 choice.Reset();
+
+            SetDialog();
         }
 
         void RecalculateChoiceContainer()
@@ -134,10 +138,15 @@ namespace EduGame
         {
             base.Enabled();
 
-            if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
-                GameManager.Instance.SetNPCDialog(dataMultipleChoice.Question.Text);
+            SetDialog();
 
             Invoke("RecalculateChoiceContainer", 0.5f);
+        }
+
+        void SetDialog()
+        {
+            if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
+                GameManager.Instance.SetNPCDialog(dataMultipleChoice.Question.Text);
         }
     }
 }

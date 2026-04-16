@@ -19,17 +19,17 @@ MonoBehaviour:
   score: 10
   question:
     image: {fileID: 0}
-    text: How many frog you see?
+    text: How many frogs are there? Count it fast!
     audio: {fileID: 0}
   choices:
   - image: {fileID: 0}
     text: 16
     audio: {fileID: 0}
-    isAnswer: 1
+    isAnswer: 0
   - image: {fileID: 0}
     text: 15
     audio: {fileID: 0}
-    isAnswer: 0
+    isAnswer: 1
   - image: {fileID: 0}
     text: 14
     audio: {fileID: 0}
@@ -40,6 +40,26 @@ MonoBehaviour:
     isAnswer: 0
   - image: {fileID: 0}
     text: 18
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 12
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 13
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 14
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 20
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 21
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

@@ -8,12 +8,19 @@ namespace EduGame
     {
         [Header("Data")]
         [SerializeField] protected SO_Quest data;
+
+        [Header("Theme")]
+        [SerializeField] protected Sprite background;
+        [SerializeField] protected Color color;
         
         [Header("Rules")]
         [SerializeField] protected int score = 10;
 
         protected bool isAnswered = false;
         protected bool isCorrect = false;
+
+        public Sprite Background => background;
+        public Color Color => color;
         
         protected virtual void Start()
         {

@@ -270,7 +270,7 @@ PrefabInstance:
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: questPrefab
       value: 
-      objectReference: {fileID: 8344063676491614192, guid: d262db5bfea8af94cbcc7aa28749c366, type: 3}
+      objectReference: {fileID: 8344063676491614192, guid: 290727f7e1daebe44b22ed642a935f4c, type: 3}
     - target: {fileID: 7069886483629464305, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: m_Name
       value: Stage

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,9 +12,11 @@ namespace EduGame
         [Header("Frame")]
         [SerializeField] private TMP_Text title;
         [SerializeField] private TMP_Text category;
+        [SerializeField] private TMP_Text timer;
+        [SerializeField] private Image background;
         [SerializeField] private RectTransform npc;
         [SerializeField] private TMP_Text npcDialog;
-
+        
         [Header("Result Pop")]
         [SerializeField] private RectTransform popResult;
         [SerializeField] private RectTransform correctTitle;
@@ -43,10 +46,15 @@ namespace EduGame
         
         private Image[] stars;
         private Quest quest;
+        private float recordedTime;
+        private float startTime;
+        private IEnumerator timerCo;
         
         public Canvas Canvas { get; private set; }
         public AudioSource AudioSource => audioSource;
-
+        public float ResultTime => recordedTime;
+        public Color ColorTheme { get; private set; }
+        
         public static GameManager Instance { get; private set; }
 
         void Awake()
@@ -63,16 +71,61 @@ namespace EduGame
                 InstantiateStar();
         }
 
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
             if (questPrefab)
             {
                 quest = InstantiateTemplate(questPrefab);
                 quest.gameObject.SetActive(true);
+
+                StartTimer();
             }
             else
                 Debug.LogError("Failed to load data, challenge will return empty");
+        }
+
+        void StopTimer()
+        {
+            if(timerCo != null)
+            {
+                recordedTime = Time.time - startTime;
+
+                StopCoroutine(timerCo);
+                timerCo = null;  
+            }
+        }
+
+        void StartTimer()
+        {
+            if(timerCo == null)
+            {
+                startTime = Time.time;
+
+                timerCo = TimerCo();
+                StartCoroutine(timerCo);
+            }
+        }
+
+        IEnumerator TimerCo()
+        {
+            if(timer)
+            {
+                while (true)
+                {
+                    float elapsedTime = Time.time - startTime;
+
+                    float m = Mathf.FloorToInt(elapsedTime/60);
+                    float s = Mathf.FloorToInt(elapsedTime%60);
+
+                    string timerText = m.ToString().PadLeft(2, '0') + ":" + s.ToString().PadLeft(2, '0');
+
+                    timer.text = timerText;
+
+                    yield return new WaitForSeconds(1);
+                }
+            }
+
+            yield return null;
         }
 
         Quest InstantiateTemplate(Quest templatePrefab)
@@ -81,6 +134,11 @@ namespace EduGame
 
             template.transform.localPosition = Vector3.zero;
             template.transform.localScale = Vector3.one;
+
+            ColorTheme = template.Color;
+
+            if(background && template.Background)
+                background.sprite = template.Background;
 
             return template;
         }
@@ -116,12 +174,16 @@ namespace EduGame
 
         public virtual void Submit(bool good, int point = 0)
         {
+            StopTimer();
+
             ShowResult(good);
         }
 
         public virtual void ResetQuest()
         {
             CloseResult();
+            StopTimer();
+            StartTimer();
 
             quest.Reset();
         }
