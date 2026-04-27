@@ -14,7 +14,7 @@ namespace EduGame
             {
                 Image shadowImage = shadow.GetComponent<Image>();
 
-                if(shadowImage)
+                if(shadowImage && GameManager.Instance)
                 {
                     Color newColor = GameManager.Instance.ColorTheme;
                     newColor.a = 1;

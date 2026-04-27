@@ -1,0 +1,5577 @@
+fileFormatVersion: 2
+guid: 90bad4eca941b4d42a41352eae4ea1d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5074896302888756245
+    second: SP_IceCreamOutline_0
+  - first:
+      213: -633559171638946164
+    second: SP_IceCreamOutline_1
+  - first:
+      213: -422945980774140950
+    second: SP_IceCreamOutline_2
+  - first:
+      213: 3662259627903531296
+    second: SP_IceCreamOutline_3
+  - first:
+      213: -5991349424787577846
+    second: SP_IceCreamOutline_4
+  - first:
+      213: 1229477381031422640
+    second: SP_IceCreamOutline_5
+  - first:
+      213: -8496847275319039457
+    second: SP_IceCreamOutline_6
+  - first:
+      213: 644527334251450
+    second: SP_IceCreamOutline_7
+  - first:
+      213: 4536061586895488149
+    second: SP_IceCreamOutline_8
+  - first:
+      213: -7895167495610935807
+    second: SP_IceCreamOutline_9
+  - first:
+      213: -2246070686682725465
+    second: SP_IceCreamOutline_10
+  - first:
+      213: 8872109400836309607
+    second: SP_IceCreamOutline_11
+  - first:
+      213: 6269170247262938427
+    second: SP_IceCreamOutline_12
+  - first:
+      213: -2631855758537651511
+    second: SP_IceCreamOutline_13
+  - first:
+      213: 6245135768891026747
+    second: SP_IceCreamOutline_14
+  - first:
+      213: 3366245566980626735
+    second: SP_IceCreamOutline_15
+  - first:
+      213: 4853615016580004341
+    second: SP_IceCreamOutline_16
+  - first:
+      213: 3082894914726696004
+    second: SP_IceCreamOutline_17
+  - first:
+      213: -2262098669651793825
+    second: SP_IceCreamOutline_18
+  - first:
+      213: 7119314778690813015
+    second: SP_IceCreamOutline_19
+  - first:
+      213: -5136935347296347210
+    second: SP_IceCreamOutline_20
+  - first:
+      213: -7070464164055107198
+    second: SP_IceCreamOutline_21
+  - first:
+      213: 2581104940071365082
+    second: SP_IceCreamOutline_22
+  - first:
+      213: 2222816859868560375
+    second: SP_IceCreamOutline_23
+  - first:
+      213: 2534394809934054813
+    second: SP_IceCreamOutline_24
+  - first:
+      213: 5681120206115311603
+    second: SP_IceCreamOutline_25
+  - first:
+      213: -1955294124400948836
+    second: SP_IceCreamOutline_26
+  - first:
+      213: -4233657507819899859
+    second: SP_IceCreamOutline_27
+  - first:
+      213: -7417266166690491601
+    second: SP_IceCreamOutline_28
+  - first:
+      213: -6014248266072497671
+    second: SP_IceCreamOutline_29
+  - first:
+      213: -5615678190545753192
+    second: SP_IceCreamOutline_30
+  - first:
+      213: -4727316786124801997
+    second: SP_IceCreamOutline_31
+  - first:
+      213: -3559963903296141259
+    second: SP_IceCreamOutline_32
+  - first:
+      213: -3581150997572862123
+    second: SP_IceCreamOutline_33
+  - first:
+      213: 6825628616502284624
+    second: SP_IceCreamOutline_34
+  - first:
+      213: 1837447438572917968
+    second: SP_IceCreamOutline_35
+  - first:
+      213: -2184381746396843544
+    second: SP_IceCreamOutline_36
+  - first:
+      213: 7503348289147834769
+    second: SP_IceCreamOutline_37
+  - first:
+      213: 2497176588410917723
+    second: SP_IceCreamOutline_38
+  - first:
+      213: 4966255597636145204
+    second: SP_IceCreamOutline_39
+  - first:
+      213: 1473406171642367139
+    second: SP_IceCreamOutline_40
+  - first:
+      213: 4384310290164956522
+    second: SP_IceCreamOutline_41
+  - first:
+      213: -917341386975951956
+    second: SP_IceCreamOutline_42
+  - first:
+      213: 5577093400954973725
+    second: SP_IceCreamOutline_43
+  - first:
+      213: 2534618241806373955
+    second: SP_IceCreamOutline_44
+  - first:
+      213: 9082933796322225236
+    second: SP_IceCreamOutline_45
+  - first:
+      213: 629861903467249974
+    second: SP_IceCreamOutline_46
+  - first:
+      213: 6723570042116156384
+    second: SP_IceCreamOutline_47
+  - first:
+      213: 3949762518773998817
+    second: SP_IceCreamOutline_48
+  - first:
+      213: 4251164274937509471
+    second: SP_IceCreamOutline_49
+  - first:
+      213: -633542291033143757
+    second: SP_IceCreamOutline_50
+  - first:
+      213: -4438327863268946726
+    second: SP_IceCreamOutline_51
+  - first:
+      213: 3141034213134635234
+    second: SP_IceCreamOutline_52
+  - first:
+      213: -8611084727885042437
+    second: SP_IceCreamOutline_53
+  - first:
+      213: -7048257183192130491
+    second: SP_IceCreamOutline_54
+  - first:
+      213: -4471848132581560122
+    second: SP_IceCreamOutline_55
+  - first:
+      213: 7332011961652067629
+    second: SP_IceCreamOutline_56
+  - first:
+      213: 7903114466675769090
+    second: SP_IceCreamOutline_57
+  - first:
+      213: -5356102592950126744
+    second: SP_IceCreamOutline_58
+  - first:
+      213: 6671064895412082364
+    second: SP_IceCreamOutline_59
+  - first:
+      213: -5089772588651835663
+    second: SP_IceCreamOutline_60
+  - first:
+      213: -4837452875844089382
+    second: SP_IceCreamOutline_61
+  - first:
+      213: -540151221694048596
+    second: SP_IceCreamOutline_62
+  - first:
+      213: 2776197876286243632
+    second: SP_IceCreamOutline_63
+  - first:
+      213: -1870123270060870755
+    second: SP_IceCreamOutline_64
+  - first:
+      213: 5534742329199379156
+    second: SP_IceCreamOutline_65
+  - first:
+      213: -3669982276478715094
+    second: SP_IceCreamOutline_66
+  - first:
+      213: 4714014495071306114
+    second: SP_IceCreamOutline_67
+  - first:
+      213: -3067521178325041942
+    second: SP_IceCreamOutline_68
+  - first:
+      213: 4326379441092690917
+    second: SP_IceCreamOutline_69
+  - first:
+      213: -6141085765262381873
+    second: SP_IceCreamOutline_70
+  - first:
+      213: 2764783112290739608
+    second: SP_IceCreamOutline_71
+  - first:
+      213: -4231737630547305227
+    second: SP_IceCreamOutline_72
+  - first:
+      213: -8431410206502502935
+    second: SP_IceCreamOutline_73
+  - first:
+      213: -3948493697044410272
+    second: SP_IceCreamOutline_74
+  - first:
+      213: -167329958298052517
+    second: SP_IceCreamOutline_75
+  - first:
+      213: -4976346478436787917
+    second: SP_IceCreamOutline_76
+  - first:
+      213: -6940025283011952413
+    second: SP_IceCreamOutline_77
+  - first:
+      213: 9154538059939035995
+    second: SP_IceCreamOutline_78
+  - first:
+      213: -5349909540661318604
+    second: SP_IceCreamOutline_79
+  - first:
+      213: 1771081616495628445
+    second: SP_IceCreamOutline_80
+  - first:
+      213: -727870303359332683
+    second: SP_IceCreamOutline_81
+  - first:
+      213: -7243725463117835109
+    second: SP_IceCreamOutline_82
+  - first:
+      213: 525182328676794735
+    second: SP_IceCreamOutline_83
+  - first:
+      213: 3787834106828421510
+    second: SP_IceCreamOutline_84
+  - first:
+      213: -3511104689045276235
+    second: SP_IceCreamOutline_85
+  - first:
+      213: -1808118665923683285
+    second: SP_IceCreamOutline_86
+  - first:
+      213: -8629008241325269110
+    second: SP_IceCreamOutline_87
+  - first:
+      213: 8854125345985585927
+    second: SP_IceCreamOutline_88
+  - first:
+      213: -4716378947075306342
+    second: SP_IceCreamOutline_89
+  - first:
+      213: -5851442804972145980
+    second: SP_IceCreamOutline_90
+  - first:
+      213: 4835624832334314375
+    second: SP_IceCreamOutline_91
+  - first:
+      213: 3420113170488263022
+    second: SP_IceCreamOutline_92
+  - first:
+      213: 2005795359240802523
+    second: SP_IceCreamOutline_93
+  - first:
+      213: -6921789176874167612
+    second: SP_IceCreamOutline_94
+  - first:
+      213: -595434786330990567
+    second: SP_IceCreamOutline_95
+  - first:
+      213: -7473440251718344136
+    second: SP_IceCreamOutline_96
+  - first:
+      213: 5976240421581712337
+    second: SP_IceCreamOutline_97
+  - first:
+      213: 8804255770063279133
+    second: SP_IceCreamOutline_98
+  - first:
+      213: -3842199719136813648
+    second: SP_IceCreamOutline_99
+  - first:
+      213: -1455400231176278848
+    second: SP_IceCreamOutline_100
+  - first:
+      213: 8560066784422620148
+    second: SP_IceCreamOutline_101
+  - first:
+      213: -9019667826348005094
+    second: SP_IceCreamOutline_102
+  - first:
+      213: 7226209205315536074
+    second: SP_IceCreamOutline_103
+  - first:
+      213: 5863961357834952084
+    second: SP_IceCreamOutline_104
+  - first:
+      213: -9015846107234284876
+    second: SP_IceCreamOutline_105
+  - first:
+      213: -4632738903500679987
+    second: SP_IceCreamOutline_106
+  - first:
+      213: 6816500335431188963
+    second: SP_IceCreamOutline_107
+  - first:
+      213: 2198949998808748758
+    second: SP_IceCreamOutline_108
+  - first:
+      213: -3822712201804401961
+    second: SP_IceCreamOutline_109
+  - first:
+      213: 7443696554581808135
+    second: SP_IceCreamOutline_110
+  - first:
+      213: 8417011292356926867
+    second: SP_IceCreamOutline_111
+  - first:
+      213: -6440590519102672860
+    second: SP_IceCreamOutline_112
+  - first:
+      213: -2887953554689225923
+    second: SP_IceCreamOutline_113
+  - first:
+      213: -1489811729942087652
+    second: SP_IceCreamOutline_114
+  - first:
+      213: -6906654711061034956
+    second: SP_IceCreamOutline_115
+  - first:
+      213: 6245139076444030822
+    second: SP_IceCreamOutline_116
+  - first:
+      213: 4276463006412085027
+    second: SP_IceCreamOutline_117
+  - first:
+      213: -5441668520839000495
+    second: SP_IceCreamOutline_118
+  - first:
+      213: -4874839409534927750
+    second: SP_IceCreamOutline_119
+  - first:
+      213: 1637299619226305204
+    second: SP_IceCreamOutline_120
+  - first:
+      213: 6768868459959406878
+    second: SP_IceCreamOutline_121
+  - first:
+      213: -6780182711417220714
+    second: SP_IceCreamOutline_122
+  - first:
+      213: -4622493184191326124
+    second: SP_IceCreamOutline_123
+  - first:
+      213: 5157082707554691634
+    second: SP_IceCreamOutline_124
+  - first:
+      213: 7769716053722931617
+    second: SP_IceCreamOutline_125
+  - first:
+      213: 6938944574214381679
+    second: SP_IceCreamOutline_126
+  - first:
+      213: 3625847202639002119
+    second: SP_IceCreamOutline_127
+  - first:
+      213: -5175850189054020194
+    second: SP_IceCreamOutline_128
+  - first:
+      213: -7907429024323704700
+    second: SP_IceCreamOutline_129
+  - first:
+      213: -3003830783091749102
+    second: SP_IceCreamOutline_130
+  - first:
+      213: 8471154970553057603
+    second: SP_IceCreamOutline_131
+  - first:
+      213: -1471120596307227897
+    second: SP_IceCreamOutline_132
+  - first:
+      213: -8631484416008861654
+    second: SP_IceCreamOutline_133
+  - first:
+      213: 6194861183269275364
+    second: SP_IceCreamOutline_134
+  - first:
+      213: 1722775969970906770
+    second: SP_IceCreamOutline_135
+  - first:
+      213: 4748207822795459366
+    second: SP_IceCreamOutline_136
+  - first:
+      213: 8726361189057139869
+    second: SP_IceCreamOutline_137
+  - first:
+      213: -8305381327296055842
+    second: SP_IceCreamOutline_138
+  - first:
+      213: -4535932490421837206
+    second: SP_IceCreamOutline_139
+  - first:
+      213: -5598605477312439156
+    second: SP_IceCreamOutline_140
+  - first:
+      213: 7968829002429761532
+    second: SP_IceCreamOutline_141
+  - first:
+      213: 2208599549645097688
+    second: SP_IceCreamOutline_142
+  - first:
+      213: -3519449507344433454
+    second: SP_IceCreamOutline_143
+  - first:
+      213: -3924634262583522508
+    second: SP_IceCreamOutline_144
+  - first:
+      213: 1677775430542096179
+    second: SP_IceCreamOutline_145
+  - first:
+      213: -103685227998795712
+    second: SP_IceCreamOutline_146
+  - first:
+      213: 8456454784878264910
+    second: SP_IceCreamOutline_147
+  - first:
+      213: 6005001411636069562
+    second: SP_IceCreamOutline_148
+  - first:
+      213: -4976565974650370149
+    second: SP_IceCreamOutline_149
+  - first:
+      213: 1323232553896220594
+    second: SP_IceCreamOutline_150
+  - first:
+      213: -4844976366947251802
+    second: SP_IceCreamOutline_151
+  - first:
+      213: 4763639387709757919
+    second: SP_IceCreamOutline_152
+  - first:
+      213: -3508342586114169463
+    second: SP_IceCreamOutline_153
+  - first:
+      213: 1670131128839801801
+    second: SP_IceCreamOutline_154
+  - first:
+      213: 7656212558193185649
+    second: SP_IceCreamOutline_155
+  - first:
+      213: 2130437213206325623
+    second: SP_IceCreamOutline_156
+  - first:
+      213: -6363533336812027208
+    second: SP_IceCreamOutline_157
+  - first:
+      213: 4949188430478524941
+    second: SP_IceCreamOutline_158
+  - first:
+      213: -4984058590651055935
+    second: SP_IceCreamOutline_159
+  - first:
+      213: 1767447382590997315
+    second: SP_IceCreamOutline_160
+  - first:
+      213: -1347730816909761197
+    second: SP_IceCreamOutline_161
+  - first:
+      213: -2588606169593141424
+    second: SP_IceCreamOutline_162
+  - first:
+      213: -6002947250008053737
+    second: SP_IceCreamOutline_163
+  - first:
+      213: -2879023600920246833
+    second: SP_IceCreamOutline_164
+  - first:
+      213: 3789788352723796272
+    second: SP_IceCreamOutline_165
+  - first:
+      213: 4431350858464940010
+    second: SP_IceCreamOutline_166
+  - first:
+      213: -8145894215565884462
+    second: SP_IceCreamOutline_167
+  - first:
+      213: -750549568136244998
+    second: SP_IceCreamOutline_168
+  - first:
+      213: 2792415604523366092
+    second: SP_IceCreamOutline_169
+  - first:
+      213: 6639248410415605612
+    second: SP_IceCreamOutline_170
+  - first:
+      213: -2445125040785467780
+    second: SP_IceCreamOutline_171
+  - first:
+      213: -1397366769548762193
+    second: SP_IceCreamOutline_172
+  - first:
+      213: -8870763041638499767
+    second: SP_IceCreamOutline_173
+  - first:
+      213: 6601427755832309864
+    second: SP_IceCreamOutline_174
+  - first:
+      213: 6806739746873542902
+    second: SP_IceCreamOutline_175
+  - first:
+      213: 4386194402185448431
+    second: SP_IceCreamOutline_176
+  - first:
+      213: 6408498182584223056
+    second: SP_IceCreamOutline_177
+  - first:
+      213: -1168705952649834703
+    second: SP_IceCreamOutline_178
+  - first:
+      213: -4246962773387816214
+    second: SP_IceCreamOutline_179
+  - first:
+      213: -4712624365159905260
+    second: SP_IceCreamOutline_180
+  - first:
+      213: 2464439124767972134
+    second: SP_IceCreamOutline_181
+  - first:
+      213: -5226524282452442905
+    second: SP_IceCreamOutline_182
+  - first:
+      213: 5663115534745912562
+    second: SP_IceCreamOutline_183
+  - first:
+      213: 6494270716516213463
+    second: SP_IceCreamOutline_184
+  - first:
+      213: -3585590129252113257
+    second: SP_IceCreamOutline_185
+  - first:
+      213: -513238875509028806
+    second: SP_IceCreamOutline_186
+  - first:
+      213: 4613147751065085776
+    second: SP_IceCreamOutline_187
+  - first:
+      213: 6348440902854263164
+    second: SP_IceCreamOutline_188
+  - first:
+      213: -3485621597732232216
+    second: SP_IceCreamOutline_189
+  - first:
+      213: -3056130212305334237
+    second: SP_IceCreamOutline_190
+  - first:
+      213: 2025341226871332418
+    second: SP_IceCreamOutline_191
+  - first:
+      213: -8886797248759732047
+    second: SP_IceCreamOutline_192
+  - first:
+      213: 1109155312695594680
+    second: SP_IceCreamOutline_193
+  - first:
+      213: 7461598579870251951
+    second: SP_IceCreamOutline_194
+  - first:
+      213: 4406775364624763404
+    second: SP_IceCreamOutline_195
+  - first:
+      213: 3598770041153333158
+    second: SP_IceCreamOutline_196
+  - first:
+      213: 5989228524069373196
+    second: SP_IceCreamOutline_197
+  - first:
+      213: -8226074783086470369
+    second: SP_IceCreamOutline_198
+  - first:
+      213: 1476655826735781396
+    second: SP_IceCreamOutline_199
+  - first:
+      213: 1510010227356742322
+    second: SP_IceCreamOutline_200
+  - first:
+      213: -3021450384387833420
+    second: SP_IceCreamOutline_201
+  - first:
+      213: -5016553706164488263
+    second: SP_IceCreamOutline_202
+  - first:
+      213: -1438787809047824819
+    second: SP_IceCreamOutline_203
+  - first:
+      213: -3964693831643466251
+    second: SP_IceCreamOutline_204
+  - first:
+      213: -2159684101555565813
+    second: SP_IceCreamOutline_205
+  - first:
+      213: -828766817444936982
+    second: SP_IceCreamOutline_206
+  - first:
+      213: 4164297544912680271
+    second: SP_IceCreamOutline_207
+  - first:
+      213: 4094261818151076797
+    second: SP_IceCreamOutline_208
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_0
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 611
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514a0adac47ad6640800000000000000
+      internalID: 5074896302888756245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_1
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 615
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8615464a452537f0800000000000000
+      internalID: -633559171638946164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_2
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 618
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae337c01fd4612af0800000000000000
+      internalID: -422945980774140950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 618
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029b1746ab5f2d230800000000000000
+      internalID: 3662259627903531296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_4
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 615
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04ab4211737adca0800000000000000
+      internalID: -5991349424787577846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_5
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 610
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba61cbf92bff0110800000000000000
+      internalID: 1229477381031422640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_6
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 598
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1aecdbdb62251a80800000000000000
+      internalID: -8496847275319039457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_7
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 605
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb5ec6b13a420000800000000000000
+      internalID: 644527334251450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_8
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 602
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594433eeaf353fe30800000000000000
+      internalID: 4536061586895488149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_9
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 593
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10656ed3efabe6290800000000000000
+      internalID: -7895167495610935807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_10
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 577
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3cbd35c9a54d0e0800000000000000
+      internalID: -2246070686682725465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_11
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 588
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762804d5e70102b70800000000000000
+      internalID: 8872109400836309607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 582
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b352e88df11900750800000000000000
+      internalID: 6269170247262938427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_13
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 565
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca0c4cb125c97bd0800000000000000
+      internalID: -2631855758537651511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_14
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 570
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3de5d6c4ed2ba650800000000000000
+      internalID: 6245135768891026747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_15
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 557
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f291d9e028e47be20800000000000000
+      internalID: 3366245566980626735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 531
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f9b0cb54218b5340800000000000000
+      internalID: 4853615016580004341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_17
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 552
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44494205794a8ca20800000000000000
+      internalID: 3082894914726696004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_18
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 544
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58658cbe396b90e0800000000000000
+      internalID: -2262098669651793825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_19
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 517
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75cfd0c4213ecc260800000000000000
+      internalID: 7119314778690813015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_20
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 521
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbd04ea480f5b8b0800000000000000
+      internalID: -5136935347296347210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_21
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 507
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289bd50cd4aa0ed90800000000000000
+      internalID: -7070464164055107198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_22
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 502
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9a5f8844de1d320800000000000000
+      internalID: 2581104940071365082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_23
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 487
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbf635382809de10800000000000000
+      internalID: 2222816859868560375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_24
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 490
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9586bed6aafb2320800000000000000
+      internalID: 2534394809934054813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_25
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 484
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff0cc34ab467de40800000000000000
+      internalID: 5681120206115311603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_26
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 494
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c994cab7a566dd4e0800000000000000
+      internalID: -1955294124400948836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_27
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 493
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24bab17de60f35c0800000000000000
+      internalID: -4233657507819899859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_28
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 489
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23d3e148b3901990800000000000000
+      internalID: -7417266166690491601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_29
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 480
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f16dbd1119198ca0800000000000000
+      internalID: -6014248266072497671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 484
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bac97507a1112b0800000000000000
+      internalID: -5615678190545753192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_31
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 486
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3383a4eed62356eb0800000000000000
+      internalID: -4727316786124801997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_32
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 482
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53802d201b7789ec0800000000000000
+      internalID: -3559963903296141259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_33
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 476
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f32a634223d4ec0800000000000000
+      internalID: -3581150997572862123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_34
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 475
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0511c5f101189be50800000000000000
+      internalID: 6825628616502284624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_35
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 482
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4179dc5bcef7910800000000000000
+      internalID: 1837447438572917968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_36
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 467
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e13b2000648fa1e0800000000000000
+      internalID: -2184381746396843544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_37
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 474
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19111b8b38f312860800000000000000
+      internalID: 7503348289147834769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_38
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 467
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5397a560e0c7a220800000000000000
+      internalID: 2497176588410917723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_39
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 467
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430d5e8572fabe440800000000000000
+      internalID: 4966255597636145204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_40
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 470
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac8c9e4b17927410800000000000000
+      internalID: 1473406171642367139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_41
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 472
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d3f56daf238dc30800000000000000
+      internalID: 4384310290164956522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_42
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 470
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3c88b6ed2f443f0800000000000000
+      internalID: -917341386975951956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_43
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 467
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ea81346e0d56d40800000000000000
+      internalID: 5577093400954973725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_44
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 458
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3441818acd5cc2320800000000000000
+      internalID: 2534618241806373955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_45
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 473
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c2d201a201d0e70800000000000000
+      internalID: 9082933796322225236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_46
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 463
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63187b56018bdb800800000000000000
+      internalID: 629861903467249974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_47
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 447
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebaace845bee4d50800000000000000
+      internalID: 6723570042116156384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_48
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 457
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e42da6851060d630800000000000000
+      internalID: 3949762518773998817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_49
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 452
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f563b79626b2ffa30800000000000000
+      internalID: 4251164274937509471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_50
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 460
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33648c894a43537f0800000000000000
+      internalID: -633542291033143757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_51
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 450
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcc229d254e762c0800000000000000
+      internalID: -4438327863268946726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 452
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e01d3599f1379b20800000000000000
+      internalID: 3141034213134635234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_53
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 435
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfcee9f30184f7880800000000000000
+      internalID: -8611084727885042437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_54
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 429
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cdc366f6f8f2e90800000000000000
+      internalID: -7048257183192130491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_55
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 441
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c07bf7f0ddc0f1c0800000000000000
+      internalID: -4471848132581560122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_56
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 440
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2dbf2f480a80c560800000000000000
+      internalID: 7332011961652067629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_57
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 428
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20fb5752cb08dad60800000000000000
+      internalID: 7903114466675769090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_58
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 438
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867b8aec11d4ba5b0800000000000000
+      internalID: -5356102592950126744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_59
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 422
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb69d947d22649c50800000000000000
+      internalID: 6671064895412082364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_60
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 416
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe03e12cce7d59b0800000000000000
+      internalID: -5089772588651835663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_61
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 415
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad90f954d3aeddcb0800000000000000
+      internalID: -4837452875844089382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_62
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 424
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6dee1635ff088f0800000000000000
+      internalID: -540151221694048596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_63
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 395
+        width: 7
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0334c327249078620800000000000000
+      internalID: 2776197876286243632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_64
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 394
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9374d15bccfb06e0800000000000000
+      internalID: -1870123270060870755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_65
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 408
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d24f37f2da5fcc40800000000000000
+      internalID: 5534742329199379156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_66
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 402
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2bb18e509a911dc0800000000000000
+      internalID: -3669982276478715094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_67
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 401
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28184c4153b8b6140800000000000000
+      internalID: 4714014495071306114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_68
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 379
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aecb2f0adb9fd65d0800000000000000
+      internalID: -3067521178325041942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_69
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 373
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e302e5fd236a0c30800000000000000
+      internalID: 4326379441092690917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_70
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 388
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcce35a880b76caa0800000000000000
+      internalID: -6141085765262381873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_71
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 386
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 895a619979b7e5620800000000000000
+      internalID: 2764783112290739608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_72
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 380
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc1394bb09d545c0800000000000000
+      internalID: -4231737630547305227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_73
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 364
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edb0d5b61d9dfa80800000000000000
+      internalID: -8431410206502502935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_74
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 359
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0609ccd07e12439c0800000000000000
+      internalID: -3948493697044410272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_75
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 358
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b581d5b1a468dadf0800000000000000
+      internalID: -167329958298052517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_76
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 371
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33952816e3770fab0800000000000000
+      internalID: -4976346478436787917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_77
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 366
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0c7d166c310bf90800000000000000
+      internalID: -6940025283011952413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_78
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 350
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5bb579dcd37b0f70800000000000000
+      internalID: 9154538059939035995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_79
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 350
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ca8682e9d41c5b0800000000000000
+      internalID: -5349909540661318604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_80
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 355
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90527bb855249810800000000000000
+      internalID: 1771081616495628445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_81
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 359
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be06b5c0d516e5f0800000000000000
+      internalID: -727870303359332683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_82
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 360
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94d868f11e197b90800000000000000
+      internalID: -7243725463117835109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_83
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 354
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61c71f9b82d94700800000000000000
+      internalID: 525182328676794735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_84
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 353
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689fd952d07119430800000000000000
+      internalID: 3787834106828421510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_85
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 336
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b97f3053ec064fc0800000000000000
+      internalID: -3511104689045276235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_86
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 339
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c9dd537a548e6e0800000000000000
+      internalID: -1808118665923683285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_87
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 341
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f93e319ba9f3880800000000000000
+      internalID: -8629008241325269110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_88
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 342
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703e04c471c20ea70800000000000000
+      internalID: 8854125345985585927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_89
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 348
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c0279065e0c8eb0800000000000000
+      internalID: -4716378947075306342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_90
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 340
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2be1a65cf7bcea0800000000000000
+      internalID: -5851442804972145980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_91
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 333
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b385e2a279b1340800000000000000
+      internalID: 4835624832334314375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_92
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 329
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61869adecea67f20800000000000000
+      internalID: 3420113170488263022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_93
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 335
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0dca7804406db10800000000000000
+      internalID: 2005795359240802523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_94
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 337
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c29546ba6dd0ff90800000000000000
+      internalID: -6921789176874167612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_95
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 332
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918a4d177379cb7f0800000000000000
+      internalID: -595434786330990567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_96
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 333
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832e832efa1094890800000000000000
+      internalID: -7473440251718344136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_97
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 331
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db65bcfffedfe250800000000000000
+      internalID: 5976240421581712337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_98
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 322
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d141e46d9fffe2a70800000000000000
+      internalID: 8804255770063279133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_99
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 312
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd9eb856b3cdaac0800000000000000
+      internalID: -3842199719136813648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_100
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 322
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc67b663316dcbe0800000000000000
+      internalID: -1455400231176278848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_101
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 325
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb612323677bc670800000000000000
+      internalID: 8560066784422620148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_102
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 316
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19e18276e3b3d280800000000000000
+      internalID: -9019667826348005094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_103
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 322
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac48d737cf6a84460800000000000000
+      internalID: 7226209205315536074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_104
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 315
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49d9e5e49c9f06150800000000000000
+      internalID: 5863961357834952084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_105
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 311
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba46b4cbb741e280800000000000000
+      internalID: -9015846107234284876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_106
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 300
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc495b7338435bfb0800000000000000
+      internalID: -4632738903500679987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_107
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 302
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e105b090f2199e50800000000000000
+      internalID: 6816500335431188963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_108
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 306
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d257d59f5d348e10800000000000000
+      internalID: 2198949998808748758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_109
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 302
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2b5ec818ff2fac0800000000000000
+      internalID: -3822712201804401961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_110
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 292
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 704d5a7f3925d4760800000000000000
+      internalID: 7443696554581808135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_111
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 279
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39dd267dc2b3fc470800000000000000
+      internalID: 8417011292356926867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_112
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 294
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420f22deb0d6e96a0800000000000000
+      internalID: -6440590519102672860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_113
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 282
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b0ce40b8debe7d0800000000000000
+      internalID: -2887953554689225923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_114
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 288
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18779eff10235be0800000000000000
+      internalID: -1489811729942087652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_115
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 265
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 438cde02222a620a0800000000000000
+      internalID: -6906654711061034956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_116
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 268
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6678b50e6e03ba650800000000000000
+      internalID: 6245139076444030822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_117
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 273
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3279a48527c095b30800000000000000
+      internalID: 4276463006412085027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_118
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 259
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e47fdbf4f4b74b0800000000000000
+      internalID: -5441668520839000495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_119
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 251
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c78919267195cb0800000000000000
+      internalID: -4874839409534927750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_120
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 254
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2cdd2345bd8b610800000000000000
+      internalID: 1637299619226305204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_121
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 239
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11d937500adfed50800000000000000
+      internalID: 6768868459959406878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_122
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 244
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6915bb53fb3f7e1a0800000000000000
+      internalID: -6780182711417220714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_123
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 237
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4589c93a0fa99dfb0800000000000000
+      internalID: -4622493184191326124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_124
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 225
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a6b1d2663a19740800000000000000
+      internalID: 5157082707554691634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_125
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 229
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a12ecbc59393db60800000000000000
+      internalID: 7769716053722931617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_126
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 213
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f602c2e73551c4060800000000000000
+      internalID: 6938944574214381679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_127
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 222
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a342bf1d8915230800000000000000
+      internalID: 3625847202639002119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_128
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 215
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e95fbc60dafab28b0800000000000000
+      internalID: -5175850189054020194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_129
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 214
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488629e923b234290800000000000000
+      internalID: -7907429024323704700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_130
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 201
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21fce6851df3056d0800000000000000
+      internalID: -3003830783091749102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_131
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341891940969f8570800000000000000
+      internalID: 8471154970553057603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_132
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70bc85bac97859be0800000000000000
+      internalID: -1471120596307227897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_133
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a28c87bb7aec63880800000000000000
+      internalID: -8631484416008861654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_134
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e60f95ac6198f550800000000000000
+      internalID: 6194861183269275364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_135
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 296e1b5fd9788e710800000000000000
+      internalID: 1722775969970906770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_136
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b44759bd505e140800000000000000
+      internalID: 4748207822795459366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_137
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d94918764434a1970800000000000000
+      internalID: 8726361189057139869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_138
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed53b56cfab5dbc80800000000000000
+      internalID: -8305381327296055842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_139
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a62e04fae612d01c0800000000000000
+      internalID: -4535932490421837206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_140
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c5c372bf1cd42b0800000000000000
+      internalID: -5598605477312439156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_141
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf708adc1c7f69e60800000000000000
+      internalID: 7968829002429761532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_142
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da0fa7b69586ae10800000000000000
+      internalID: 2208599549645097688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_143
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2debfc5e157682fc0800000000000000
+      internalID: -3519449507344433454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_144
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43bc1698ee5e889c0800000000000000
+      internalID: -3924634262583522508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_145
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337f6566dd7a84710800000000000000
+      internalID: 1677775430542096179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_146
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0482da0a5d2af8ef0800000000000000
+      internalID: -103685227998795712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_147
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4242d792dc5b5570800000000000000
+      internalID: 8456454784878264910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_148
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab48940d7fc065350800000000000000
+      internalID: 6005001411636069562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_149
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 215
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b974bafec9fafeab0800000000000000
+      internalID: -4976565974650370149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_150
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 215
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7973a3ff01d5210800000000000000
+      internalID: 1323232553896220594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_151
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 215
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a942fef9af23ccb0800000000000000
+      internalID: -4844976366947251802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_152
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 205
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd9df76c8c8db1240800000000000000
+      internalID: 4763639387709757919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_153
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 188
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9852a44810ddf4fc0800000000000000
+      internalID: -3508342586114169463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_154
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 174
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb81d6b96f7d2710800000000000000
+      internalID: 1670131128839801801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_155
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 185
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1735dffd1c4504a60800000000000000
+      internalID: 7656212558193185649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_156
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 185
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779af6d9b55d09d10800000000000000
+      internalID: 2130437213206325623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_157
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 185
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b286f6452030b7a0800000000000000
+      internalID: -6363533336812027208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_158
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 185
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d024525d7ac0fa440800000000000000
+      internalID: 4949188430478524941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_159
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 185
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c082845e1115dab0800000000000000
+      internalID: -4984058590651055935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_160
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 185
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343c786b70c378810800000000000000
+      internalID: 1767447382590997315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_161
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 185
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3552f3d66f5eb4de0800000000000000
+      internalID: -1347730816909761197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_162
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 185
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 057240e576c631cd0800000000000000
+      internalID: -2588606169593141424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_163
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 185
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718acd5f74f31bca0800000000000000
+      internalID: -6002947250008053737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_164
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 185
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5ce27e947ab08d0800000000000000
+      internalID: -2879023600920246833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_165
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 185
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031c30a7d68089430800000000000000
+      internalID: 3789788352723796272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_166
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 185
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aefcce1a0225f7d30800000000000000
+      internalID: 4431350858464940010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_167
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 185
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d34947ae58f3fe80800000000000000
+      internalID: -8145894215565884462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_168
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 185
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af09ae4f4238595f0800000000000000
+      internalID: -750549568136244998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_169
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 185
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc67fdc8237a0c620800000000000000
+      internalID: 2792415604523366092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_170
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 185
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c672666c049532c50800000000000000
+      internalID: 6639248410415605612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_171
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 185
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76d190fabb211ed0800000000000000
+      internalID: -2445125040785467780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_172
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 185
+        width: 45
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa36c10a35e8b9ce0800000000000000
+      internalID: -1397366769548762193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_173
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 177
+        width: 58
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a39705308b4e480800000000000000
+      internalID: -8870763041638499767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_174
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 191
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868f9cc619bfc9b50800000000000000
+      internalID: 6601427755832309864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_175
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 160
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f80ee27cb5667e50800000000000000
+      internalID: 6806739746873542902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_176
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 147
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb021ad194eedc30800000000000000
+      internalID: 4386194402185448431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_177
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 162
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0554ba4b42f8fe850800000000000000
+      internalID: 6408498182584223056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_178
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 145
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f0c6dc02ce7cfe0800000000000000
+      internalID: -1168705952649834703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_179
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 130
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae259e5ebd1cf05c0800000000000000
+      internalID: -4246962773387816214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_180
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 133
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4180bc2cb15699eb0800000000000000
+      internalID: -4712624365159905260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_181
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 116
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b9e5aa352733220800000000000000
+      internalID: 2464439124767972134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_182
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 104
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0087e3bd7a777b0800000000000000
+      internalID: -5226524282452442905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_183
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 118
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4c68a039d679e40800000000000000
+      internalID: 5663115534745912562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_184
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 102
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2ab2dfec8402a50800000000000000
+      internalID: 6494270716516213463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_185
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 88
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794e7c356cc6d3ec0800000000000000
+      internalID: -3585590129252113257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_186
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 90
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a380d5446fb90e8f0800000000000000
+      internalID: -513238875509028806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_187
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 75
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05760a62071350040800000000000000
+      internalID: 4613147751065085776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_188
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 63
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71403c9d513a1850800000000000000
+      internalID: 6348440902854263164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_189
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 65
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3adbddf9590afc0800000000000000
+      internalID: -3485621597732232216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_190
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 77
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320933493c17695d0800000000000000
+      internalID: -3056130212305334237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_191
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 53
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e9e987d157b1c10800000000000000
+      internalID: 2025341226871332418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_192
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 45
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8e1cc8cf0cba480800000000000000
+      internalID: -8886797248759732047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_193
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 46
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be45fd51e2846f00800000000000000
+      internalID: 1109155312695594680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_194
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 55
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fabb9b9006cec8760800000000000000
+      internalID: 7461598579870251951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_195
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 39
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ac66598d2082d30800000000000000
+      internalID: 4406775364624763404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_196
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 34
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7234b094661f130800000000000000
+      internalID: 3598770041153333158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_197
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 34
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05cacf3c930e1350800000000000000
+      internalID: 5989228524069373196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_198
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 40
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b1552819c17dd80800000000000000
+      internalID: -8226074783086470369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_199
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 30
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416d81896a22e7410800000000000000
+      internalID: 1476655826735781396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_200
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 29
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b23ec82d42a4f410800000000000000
+      internalID: 1510010227356742322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_201
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 22
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1881c32e6a116d0800000000000000
+      internalID: -3021450384387833420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_202
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 25
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7756babfe916ab0800000000000000
+      internalID: -5016553706164488263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_203
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 29
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46ba865c16680ce0800000000000000
+      internalID: -1438787809047824819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_204
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 31
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f575b947f39af8c0800000000000000
+      internalID: -3964693831643466251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_205
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 8
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0bc8bb80c24702e0800000000000000
+      internalID: -2159684101555565813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_206
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 99
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2409478f0af74f0800000000000000
+      internalID: -828766817444936982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_207
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 10
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f453d8fbd8e8ac930800000000000000
+      internalID: 4164297544912680271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_IceCreamOutline_208
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 0
+        width: 27
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db307586e6db1d830800000000000000
+      internalID: 4094261818151076797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SP_IceCreamOutline_0: 5074896302888756245
+      SP_IceCreamOutline_1: -633559171638946164
+      SP_IceCreamOutline_10: -2246070686682725465
+      SP_IceCreamOutline_100: -1455400231176278848
+      SP_IceCreamOutline_101: 8560066784422620148
+      SP_IceCreamOutline_102: -9019667826348005094
+      SP_IceCreamOutline_103: 7226209205315536074
+      SP_IceCreamOutline_104: 5863961357834952084
+      SP_IceCreamOutline_105: -9015846107234284876
+      SP_IceCreamOutline_106: -4632738903500679987
+      SP_IceCreamOutline_107: 6816500335431188963
+      SP_IceCreamOutline_108: 2198949998808748758
+      SP_IceCreamOutline_109: -3822712201804401961
+      SP_IceCreamOutline_11: 8872109400836309607
+      SP_IceCreamOutline_110: 7443696554581808135
+      SP_IceCreamOutline_111: 8417011292356926867
+      SP_IceCreamOutline_112: -6440590519102672860
+      SP_IceCreamOutline_113: -2887953554689225923
+      SP_IceCreamOutline_114: -1489811729942087652
+      SP_IceCreamOutline_115: -6906654711061034956
+      SP_IceCreamOutline_116: 6245139076444030822
+      SP_IceCreamOutline_117: 4276463006412085027
+      SP_IceCreamOutline_118: -5441668520839000495
+      SP_IceCreamOutline_119: -4874839409534927750
+      SP_IceCreamOutline_12: 6269170247262938427
+      SP_IceCreamOutline_120: 1637299619226305204
+      SP_IceCreamOutline_121: 6768868459959406878
+      SP_IceCreamOutline_122: -6780182711417220714
+      SP_IceCreamOutline_123: -4622493184191326124
+      SP_IceCreamOutline_124: 5157082707554691634
+      SP_IceCreamOutline_125: 7769716053722931617
+      SP_IceCreamOutline_126: 6938944574214381679
+      SP_IceCreamOutline_127: 3625847202639002119
+      SP_IceCreamOutline_128: -5175850189054020194
+      SP_IceCreamOutline_129: -7907429024323704700
+      SP_IceCreamOutline_13: -2631855758537651511
+      SP_IceCreamOutline_130: -3003830783091749102
+      SP_IceCreamOutline_131: 8471154970553057603
+      SP_IceCreamOutline_132: -1471120596307227897
+      SP_IceCreamOutline_133: -8631484416008861654
+      SP_IceCreamOutline_134: 6194861183269275364
+      SP_IceCreamOutline_135: 1722775969970906770
+      SP_IceCreamOutline_136: 4748207822795459366
+      SP_IceCreamOutline_137: 8726361189057139869
+      SP_IceCreamOutline_138: -8305381327296055842
+      SP_IceCreamOutline_139: -4535932490421837206
+      SP_IceCreamOutline_14: 6245135768891026747
+      SP_IceCreamOutline_140: -5598605477312439156
+      SP_IceCreamOutline_141: 7968829002429761532
+      SP_IceCreamOutline_142: 2208599549645097688
+      SP_IceCreamOutline_143: -3519449507344433454
+      SP_IceCreamOutline_144: -3924634262583522508
+      SP_IceCreamOutline_145: 1677775430542096179
+      SP_IceCreamOutline_146: -103685227998795712
+      SP_IceCreamOutline_147: 8456454784878264910
+      SP_IceCreamOutline_148: 6005001411636069562
+      SP_IceCreamOutline_149: -4976565974650370149
+      SP_IceCreamOutline_15: 3366245566980626735
+      SP_IceCreamOutline_150: 1323232553896220594
+      SP_IceCreamOutline_151: -4844976366947251802
+      SP_IceCreamOutline_152: 4763639387709757919
+      SP_IceCreamOutline_153: -3508342586114169463
+      SP_IceCreamOutline_154: 1670131128839801801
+      SP_IceCreamOutline_155: 7656212558193185649
+      SP_IceCreamOutline_156: 2130437213206325623
+      SP_IceCreamOutline_157: -6363533336812027208
+      SP_IceCreamOutline_158: 4949188430478524941
+      SP_IceCreamOutline_159: -4984058590651055935
+      SP_IceCreamOutline_16: 4853615016580004341
+      SP_IceCreamOutline_160: 1767447382590997315
+      SP_IceCreamOutline_161: -1347730816909761197
+      SP_IceCreamOutline_162: -2588606169593141424
+      SP_IceCreamOutline_163: -6002947250008053737
+      SP_IceCreamOutline_164: -2879023600920246833
+      SP_IceCreamOutline_165: 3789788352723796272
+      SP_IceCreamOutline_166: 4431350858464940010
+      SP_IceCreamOutline_167: -8145894215565884462
+      SP_IceCreamOutline_168: -750549568136244998
+      SP_IceCreamOutline_169: 2792415604523366092
+      SP_IceCreamOutline_17: 3082894914726696004
+      SP_IceCreamOutline_170: 6639248410415605612
+      SP_IceCreamOutline_171: -2445125040785467780
+      SP_IceCreamOutline_172: -1397366769548762193
+      SP_IceCreamOutline_173: -8870763041638499767
+      SP_IceCreamOutline_174: 6601427755832309864
+      SP_IceCreamOutline_175: 6806739746873542902
+      SP_IceCreamOutline_176: 4386194402185448431
+      SP_IceCreamOutline_177: 6408498182584223056
+      SP_IceCreamOutline_178: -1168705952649834703
+      SP_IceCreamOutline_179: -4246962773387816214
+      SP_IceCreamOutline_18: -2262098669651793825
+      SP_IceCreamOutline_180: -4712624365159905260
+      SP_IceCreamOutline_181: 2464439124767972134
+      SP_IceCreamOutline_182: -5226524282452442905
+      SP_IceCreamOutline_183: 5663115534745912562
+      SP_IceCreamOutline_184: 6494270716516213463
+      SP_IceCreamOutline_185: -3585590129252113257
+      SP_IceCreamOutline_186: -513238875509028806
+      SP_IceCreamOutline_187: 4613147751065085776
+      SP_IceCreamOutline_188: 6348440902854263164
+      SP_IceCreamOutline_189: -3485621597732232216
+      SP_IceCreamOutline_19: 7119314778690813015
+      SP_IceCreamOutline_190: -3056130212305334237
+      SP_IceCreamOutline_191: 2025341226871332418
+      SP_IceCreamOutline_192: -8886797248759732047
+      SP_IceCreamOutline_193: 1109155312695594680
+      SP_IceCreamOutline_194: 7461598579870251951
+      SP_IceCreamOutline_195: 4406775364624763404
+      SP_IceCreamOutline_196: 3598770041153333158
+      SP_IceCreamOutline_197: 5989228524069373196
+      SP_IceCreamOutline_198: -8226074783086470369
+      SP_IceCreamOutline_199: 1476655826735781396
+      SP_IceCreamOutline_2: -422945980774140950
+      SP_IceCreamOutline_20: -5136935347296347210
+      SP_IceCreamOutline_200: 1510010227356742322
+      SP_IceCreamOutline_201: -3021450384387833420
+      SP_IceCreamOutline_202: -5016553706164488263
+      SP_IceCreamOutline_203: -1438787809047824819
+      SP_IceCreamOutline_204: -3964693831643466251
+      SP_IceCreamOutline_205: -2159684101555565813
+      SP_IceCreamOutline_206: -828766817444936982
+      SP_IceCreamOutline_207: 4164297544912680271
+      SP_IceCreamOutline_208: 4094261818151076797
+      SP_IceCreamOutline_21: -7070464164055107198
+      SP_IceCreamOutline_22: 2581104940071365082
+      SP_IceCreamOutline_23: 2222816859868560375
+      SP_IceCreamOutline_24: 2534394809934054813
+      SP_IceCreamOutline_25: 5681120206115311603
+      SP_IceCreamOutline_26: -1955294124400948836
+      SP_IceCreamOutline_27: -4233657507819899859
+      SP_IceCreamOutline_28: -7417266166690491601
+      SP_IceCreamOutline_29: -6014248266072497671
+      SP_IceCreamOutline_3: 3662259627903531296
+      SP_IceCreamOutline_30: -5615678190545753192
+      SP_IceCreamOutline_31: -4727316786124801997
+      SP_IceCreamOutline_32: -3559963903296141259
+      SP_IceCreamOutline_33: -3581150997572862123
+      SP_IceCreamOutline_34: 6825628616502284624
+      SP_IceCreamOutline_35: 1837447438572917968
+      SP_IceCreamOutline_36: -2184381746396843544
+      SP_IceCreamOutline_37: 7503348289147834769
+      SP_IceCreamOutline_38: 2497176588410917723
+      SP_IceCreamOutline_39: 4966255597636145204
+      SP_IceCreamOutline_4: -5991349424787577846
+      SP_IceCreamOutline_40: 1473406171642367139
+      SP_IceCreamOutline_41: 4384310290164956522
+      SP_IceCreamOutline_42: -917341386975951956
+      SP_IceCreamOutline_43: 5577093400954973725
+      SP_IceCreamOutline_44: 2534618241806373955
+      SP_IceCreamOutline_45: 9082933796322225236
+      SP_IceCreamOutline_46: 629861903467249974
+      SP_IceCreamOutline_47: 6723570042116156384
+      SP_IceCreamOutline_48: 3949762518773998817
+      SP_IceCreamOutline_49: 4251164274937509471
+      SP_IceCreamOutline_5: 1229477381031422640
+      SP_IceCreamOutline_50: -633542291033143757
+      SP_IceCreamOutline_51: -4438327863268946726
+      SP_IceCreamOutline_52: 3141034213134635234
+      SP_IceCreamOutline_53: -8611084727885042437
+      SP_IceCreamOutline_54: -7048257183192130491
+      SP_IceCreamOutline_55: -4471848132581560122
+      SP_IceCreamOutline_56: 7332011961652067629
+      SP_IceCreamOutline_57: 7903114466675769090
+      SP_IceCreamOutline_58: -5356102592950126744
+      SP_IceCreamOutline_59: 6671064895412082364
+      SP_IceCreamOutline_6: -8496847275319039457
+      SP_IceCreamOutline_60: -5089772588651835663
+      SP_IceCreamOutline_61: -4837452875844089382
+      SP_IceCreamOutline_62: -540151221694048596
+      SP_IceCreamOutline_63: 2776197876286243632
+      SP_IceCreamOutline_64: -1870123270060870755
+      SP_IceCreamOutline_65: 5534742329199379156
+      SP_IceCreamOutline_66: -3669982276478715094
+      SP_IceCreamOutline_67: 4714014495071306114
+      SP_IceCreamOutline_68: -3067521178325041942
+      SP_IceCreamOutline_69: 4326379441092690917
+      SP_IceCreamOutline_7: 644527334251450
+      SP_IceCreamOutline_70: -6141085765262381873
+      SP_IceCreamOutline_71: 2764783112290739608
+      SP_IceCreamOutline_72: -4231737630547305227
+      SP_IceCreamOutline_73: -8431410206502502935
+      SP_IceCreamOutline_74: -3948493697044410272
+      SP_IceCreamOutline_75: -167329958298052517
+      SP_IceCreamOutline_76: -4976346478436787917
+      SP_IceCreamOutline_77: -6940025283011952413
+      SP_IceCreamOutline_78: 9154538059939035995
+      SP_IceCreamOutline_79: -5349909540661318604
+      SP_IceCreamOutline_8: 4536061586895488149
+      SP_IceCreamOutline_80: 1771081616495628445
+      SP_IceCreamOutline_81: -727870303359332683
+      SP_IceCreamOutline_82: -7243725463117835109
+      SP_IceCreamOutline_83: 525182328676794735
+      SP_IceCreamOutline_84: 3787834106828421510
+      SP_IceCreamOutline_85: -3511104689045276235
+      SP_IceCreamOutline_86: -1808118665923683285
+      SP_IceCreamOutline_87: -8629008241325269110
+      SP_IceCreamOutline_88: 8854125345985585927
+      SP_IceCreamOutline_89: -4716378947075306342
+      SP_IceCreamOutline_9: -7895167495610935807
+      SP_IceCreamOutline_90: -5851442804972145980
+      SP_IceCreamOutline_91: 4835624832334314375
+      SP_IceCreamOutline_92: 3420113170488263022
+      SP_IceCreamOutline_93: 2005795359240802523
+      SP_IceCreamOutline_94: -6921789176874167612
+      SP_IceCreamOutline_95: -595434786330990567
+      SP_IceCreamOutline_96: -7473440251718344136
+      SP_IceCreamOutline_97: 5976240421581712337
+      SP_IceCreamOutline_98: 8804255770063279133
+      SP_IceCreamOutline_99: -3842199719136813648
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

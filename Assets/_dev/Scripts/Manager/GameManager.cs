@@ -172,11 +172,16 @@ namespace EduGame
                 category.text = questData.Category.ToString().Replace('_', ' ');
         }
 
-        public virtual void Submit(bool good, int point = 0)
+        public virtual void Submit(int star = 0)
         {
             StopTimer();
 
-            ShowResult(good);
+            if(star < 1)
+                star = 1;
+            else if(star > 3)
+                star = 3;
+
+            ShowResult(star);
         }
 
         public virtual void ResetQuest()
@@ -188,12 +193,12 @@ namespace EduGame
             quest.Reset();
         }
 
-        public virtual void ShowResult(bool good)
+        public virtual void ShowResult(int star)
         {
             if (popResult)
                 popResult.gameObject.SetActive(true);
 
-            if (good)
+            if (star > 1)
             {
                 if(correctFeedback)
                     correctFeedback.Play(npc? npc : transform);
@@ -222,7 +227,7 @@ namespace EduGame
                 {
                     stars[i].gameObject.SetActive(true);
                     
-                    if(good || (!good && i == 0))
+                    if(i < star)
                         stars[i].color = Color.white;
                     else
                         stars[i].color = Color.black;

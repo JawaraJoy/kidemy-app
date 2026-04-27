@@ -110,8 +110,16 @@ namespace EduGame
                 foreach (var choice in choices)
                     choice.Disable();
 
-                base.OnAnswered(result, true);
+                Submit();
             }
+        }
+
+        public override void Submit(int star = 1)
+        {
+            if(unansweredCorrect == 0)
+                star = 3;
+
+            GameManager.Instance.Submit(star);
         }
 
         public override void Reset()

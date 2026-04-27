@@ -31,6 +31,7 @@ namespace EduGame
         private Color bindedColor = EmptyColor;
 
         private QuestColoringPalette[] palettes;
+        private QuestColoringField[] fields;
 
         private SO_QuestColoring dataQuestColoring;
 
@@ -69,7 +70,11 @@ namespace EduGame
             }
 
             if (canvasContainer)
+            {
                 InstantiateColoringCanvas();
+
+                fields = canvasContainer.GetComponentsInChildren<QuestColoringField>();
+            }   
         }
 
         public void AddColor(Color color)
@@ -137,11 +142,33 @@ namespace EduGame
             }
         }
 
-        public override void Next()
+        public override void Submit(int star = 1)
         {
-            base.OnAnswered(true);
+            float appraisal = 0;
 
-            base.Next();
+            if(fields.Length > 0)
+            {
+                foreach (var field in fields)
+                    appraisal += field.Result;
+                
+                appraisal = appraisal/fields.Length;
+            }
+
+            if(appraisal >= 0.85)
+                star = 3;
+            else if(appraisal >= 0.5)
+                star = 2;
+            
+            base.Submit(star);
+        }
+
+        public override void Reset()
+        {
+            if(fields.Length > 0)
+            {
+                foreach (var field in fields)
+                    field.Reset();
+            }
         }
     }
 }

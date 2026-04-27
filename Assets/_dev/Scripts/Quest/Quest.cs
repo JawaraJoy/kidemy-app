@@ -35,12 +35,12 @@ namespace EduGame
             isAnswered = true;
 
             if(submit)
-                Submit(result);
+                Submit(result ? 3 : 1);
         }
 
-        public virtual void Submit(bool result)
+        public virtual void Submit(int star = 1)
         {
-            GameManager.Instance.Submit(result, score);
+            GameManager.Instance.Submit(star);
         }
 
         public virtual void Next()

@@ -147,7 +147,7 @@ namespace EduGame
             Invoke("RecalculateContainer", 0.5f);
         }
 
-        public override void Submit(bool result)
+        public override void Submit(int star = 1)
         {
             int totalAnswers = 0;
 
@@ -163,7 +163,17 @@ namespace EduGame
                 }
             }
 
-            GameManager.Instance.ShowResult(totalAnswers == dataDragNDrop.Items.Length);
+            if(totalAnswers == dataDragNDrop.Items.Length)
+                star = 3;
+            else if(totalAnswers/dataDragNDrop.Items.Length >= 0.5f)
+                star = 2;
+
+            GameManager.Instance.Submit(star);
+        }
+
+        public virtual void Reject()
+        {
+            
         }
     }
 }

@@ -14,6 +14,9 @@ namespace EduGame
         private CommandBuffer cb;
         private QuestUtilRegionalDrag e;
         private QuestColoring questColoring;
+        private Texture baseTexture;
+
+        public float Result => GetPaintedPercentage();
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -40,7 +43,7 @@ namespace EduGame
 
             if (image)
             {
-                Texture baseTexture = image.texture;
+                baseTexture = image.texture;
 
                 // Create a RenderTexture with the same dimensions and format as the Texture2D
                 rt = new RenderTexture(image.texture.width, image.texture.height, 0, RenderTextureFormat.ARGB32);
@@ -96,10 +99,58 @@ namespace EduGame
             RenderTexture.ReleaseTemporary(tempRT);
         }
 
+        public void Reset() 
+        {
+            // This instantly overwrites the colored RT with the clean original
+            Graphics.Blit(baseTexture, rt);
+        }
+
         private void OnDestroy()
         {
             cb?.Release();
             if (rt != null) rt.Release();
+        }
+
+        protected float GetPaintedPercentage() {
+            // 1. Create a tiny temporary RenderTexture
+            // 64x64 is usually enough for a accurate score
+            RenderTexture smallRT = RenderTexture.GetTemporary(64, 64);
+            
+            // 2. Downscale using Blit (GPU does the heavy lifting)
+            // Use Bilinear filtering for better averaging of "painted" areas
+            //rt.filterMode = FilterMode.Bilinear;
+            Graphics.Blit(rt, smallRT);
+
+            // 3. Copy only the small texture to CPU
+            Texture2D tex = new Texture2D(64, 64, TextureFormat.ARGB32, false);
+            RenderTexture.active = smallRT;
+            tex.ReadPixels(new Rect(0, 0, 64, 64), 0, 0);
+            tex.Apply();
+
+            // 4. Count colored pixels on the small array
+            Color32[] pixels = tex.GetPixels32();
+
+            int paintedCount = 0;
+            int pixelCount = 0;
+
+            for (int i = 0; i < pixels.Length; i++) {
+                
+                if(pixels[i].a > 20f)
+                {
+                    pixelCount++;
+
+                    // If not white (using a small threshold for safety)
+                    if (pixels[i].r < 250 || pixels[i].g < 250 || pixels[i].b < 250)
+                        paintedCount++;
+                }
+            }
+
+            // 5. Cleanup
+            RenderTexture.ReleaseTemporary(smallRT);
+            Destroy(tex);
+
+            // Return percentage (0.0 to 1.0)
+            return (float)paintedCount / pixelCount;
         }
     }
 }

@@ -1,0 +1,5083 @@
+fileFormatVersion: 2
+guid: dfdc349d4810d1e418f03e016d1dd707
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1393345807540319360
+    second: SP_ShipOutline_0
+  - first:
+      213: -8656025267184601544
+    second: SP_ShipOutline_1
+  - first:
+      213: -6010105632449472013
+    second: SP_ShipOutline_2
+  - first:
+      213: -5125646810315827018
+    second: SP_ShipOutline_3
+  - first:
+      213: -6515480913391086143
+    second: SP_ShipOutline_4
+  - first:
+      213: 4958444030828573016
+    second: SP_ShipOutline_5
+  - first:
+      213: 7451691050093946078
+    second: SP_ShipOutline_6
+  - first:
+      213: 4053418906399946151
+    second: SP_ShipOutline_7
+  - first:
+      213: 119182812421380407
+    second: SP_ShipOutline_8
+  - first:
+      213: 9124586355239812920
+    second: SP_ShipOutline_9
+  - first:
+      213: 3763161636020958801
+    second: SP_ShipOutline_10
+  - first:
+      213: 3223193984296165618
+    second: SP_ShipOutline_11
+  - first:
+      213: -1611250960622064414
+    second: SP_ShipOutline_12
+  - first:
+      213: 2309729873478502574
+    second: SP_ShipOutline_13
+  - first:
+      213: -2166024446934051456
+    second: SP_ShipOutline_14
+  - first:
+      213: 3322326069337390947
+    second: SP_ShipOutline_15
+  - first:
+      213: -11674761648382866
+    second: SP_ShipOutline_16
+  - first:
+      213: 3049183706352124703
+    second: SP_ShipOutline_17
+  - first:
+      213: 3703698322929569181
+    second: SP_ShipOutline_18
+  - first:
+      213: -5267274980409089575
+    second: SP_ShipOutline_19
+  - first:
+      213: 5971382792345257603
+    second: SP_ShipOutline_20
+  - first:
+      213: -1792313714290897316
+    second: SP_ShipOutline_21
+  - first:
+      213: -965876676012957641
+    second: SP_ShipOutline_22
+  - first:
+      213: 5290910747104776443
+    second: SP_ShipOutline_23
+  - first:
+      213: -4042166142739909843
+    second: SP_ShipOutline_24
+  - first:
+      213: -797361677574224305
+    second: SP_ShipOutline_25
+  - first:
+      213: 2757836616323843994
+    second: SP_ShipOutline_26
+  - first:
+      213: 6495593014388783666
+    second: SP_ShipOutline_27
+  - first:
+      213: -198901839888640102
+    second: SP_ShipOutline_28
+  - first:
+      213: 5598137726277872617
+    second: SP_ShipOutline_29
+  - first:
+      213: 7448114263243484974
+    second: SP_ShipOutline_30
+  - first:
+      213: -2568148172156445027
+    second: SP_ShipOutline_31
+  - first:
+      213: -252853836362192650
+    second: SP_ShipOutline_32
+  - first:
+      213: 1652199744879700567
+    second: SP_ShipOutline_33
+  - first:
+      213: 6461066741230144861
+    second: SP_ShipOutline_34
+  - first:
+      213: 3483477645787057874
+    second: SP_ShipOutline_35
+  - first:
+      213: 3716214546210976505
+    second: SP_ShipOutline_36
+  - first:
+      213: 433211233173842954
+    second: SP_ShipOutline_37
+  - first:
+      213: 8497647070322533615
+    second: SP_ShipOutline_38
+  - first:
+      213: -1811606581994119972
+    second: SP_ShipOutline_39
+  - first:
+      213: 1917863354106606716
+    second: SP_ShipOutline_40
+  - first:
+      213: 8170187706198888376
+    second: SP_ShipOutline_41
+  - first:
+      213: 6458892735706664873
+    second: SP_ShipOutline_42
+  - first:
+      213: -5212956510212327524
+    second: SP_ShipOutline_43
+  - first:
+      213: 5007359249144177337
+    second: SP_ShipOutline_44
+  - first:
+      213: 251979617643626510
+    second: SP_ShipOutline_45
+  - first:
+      213: -7579532054149829407
+    second: SP_ShipOutline_46
+  - first:
+      213: 1620551639186933587
+    second: SP_ShipOutline_47
+  - first:
+      213: -699662992169553697
+    second: SP_ShipOutline_48
+  - first:
+      213: 7083992403914461639
+    second: SP_ShipOutline_49
+  - first:
+      213: -1427943454660895880
+    second: SP_ShipOutline_50
+  - first:
+      213: 8003483635375036637
+    second: SP_ShipOutline_51
+  - first:
+      213: -7132000544169971828
+    second: SP_ShipOutline_52
+  - first:
+      213: -7337965850963395696
+    second: SP_ShipOutline_53
+  - first:
+      213: 156849516168710707
+    second: SP_ShipOutline_54
+  - first:
+      213: 8499401912019920961
+    second: SP_ShipOutline_55
+  - first:
+      213: 7910775622858875333
+    second: SP_ShipOutline_56
+  - first:
+      213: -5508249725051911954
+    second: SP_ShipOutline_57
+  - first:
+      213: 1214219404829805276
+    second: SP_ShipOutline_58
+  - first:
+      213: -8331798663849675003
+    second: SP_ShipOutline_59
+  - first:
+      213: 8398992829408996786
+    second: SP_ShipOutline_60
+  - first:
+      213: -4594574248193265729
+    second: SP_ShipOutline_61
+  - first:
+      213: -3177866970813913316
+    second: SP_ShipOutline_62
+  - first:
+      213: 5696613434413244083
+    second: SP_ShipOutline_63
+  - first:
+      213: -5702036407224804459
+    second: SP_ShipOutline_64
+  - first:
+      213: 6483820568138552635
+    second: SP_ShipOutline_65
+  - first:
+      213: -4287142872577910786
+    second: SP_ShipOutline_66
+  - first:
+      213: 2843012933142371462
+    second: SP_ShipOutline_67
+  - first:
+      213: -2277155920190811581
+    second: SP_ShipOutline_68
+  - first:
+      213: 1383727417923814780
+    second: SP_ShipOutline_69
+  - first:
+      213: -1342806318368557349
+    second: SP_ShipOutline_70
+  - first:
+      213: -2149448532991365971
+    second: SP_ShipOutline_71
+  - first:
+      213: 1834150727212772693
+    second: SP_ShipOutline_72
+  - first:
+      213: 2769750662669870896
+    second: SP_ShipOutline_73
+  - first:
+      213: 8946775947377413511
+    second: SP_ShipOutline_74
+  - first:
+      213: -4571629978474896348
+    second: SP_ShipOutline_75
+  - first:
+      213: -985437018582528966
+    second: SP_ShipOutline_76
+  - first:
+      213: -5089005670060541263
+    second: SP_ShipOutline_77
+  - first:
+      213: 9167814768166202160
+    second: SP_ShipOutline_78
+  - first:
+      213: 1782065520289661483
+    second: SP_ShipOutline_79
+  - first:
+      213: 990687213523086164
+    second: SP_ShipOutline_80
+  - first:
+      213: -7385659193844759928
+    second: SP_ShipOutline_81
+  - first:
+      213: -7460681730359158178
+    second: SP_ShipOutline_82
+  - first:
+      213: -4834887942093436588
+    second: SP_ShipOutline_83
+  - first:
+      213: -574897022891900246
+    second: SP_ShipOutline_84
+  - first:
+      213: 5378990749191707195
+    second: SP_ShipOutline_85
+  - first:
+      213: -3506318572243671761
+    second: SP_ShipOutline_86
+  - first:
+      213: 4046727788397841596
+    second: SP_ShipOutline_87
+  - first:
+      213: -3978535776220882336
+    second: SP_ShipOutline_88
+  - first:
+      213: -3338000415850556674
+    second: SP_ShipOutline_89
+  - first:
+      213: 6382123673354566721
+    second: SP_ShipOutline_90
+  - first:
+      213: 6674509901832079023
+    second: SP_ShipOutline_91
+  - first:
+      213: -2593433854741716124
+    second: SP_ShipOutline_92
+  - first:
+      213: 567116926647468105
+    second: SP_ShipOutline_93
+  - first:
+      213: 8324563546232980927
+    second: SP_ShipOutline_94
+  - first:
+      213: -5585993363116993223
+    second: SP_ShipOutline_95
+  - first:
+      213: -2458239262333067490
+    second: SP_ShipOutline_96
+  - first:
+      213: 2009602933997630951
+    second: SP_ShipOutline_97
+  - first:
+      213: 8363420915384964476
+    second: SP_ShipOutline_98
+  - first:
+      213: -2730895373045301643
+    second: SP_ShipOutline_99
+  - first:
+      213: -2932726348162692975
+    second: SP_ShipOutline_100
+  - first:
+      213: 5029320890977092815
+    second: SP_ShipOutline_101
+  - first:
+      213: 6222776637827753802
+    second: SP_ShipOutline_102
+  - first:
+      213: 2073133883385286895
+    second: SP_ShipOutline_103
+  - first:
+      213: -7831507707320364783
+    second: SP_ShipOutline_104
+  - first:
+      213: -2422085960975526694
+    second: SP_ShipOutline_105
+  - first:
+      213: -3718113854329906162
+    second: SP_ShipOutline_106
+  - first:
+      213: -6668706239825274391
+    second: SP_ShipOutline_107
+  - first:
+      213: 3081714118835175758
+    second: SP_ShipOutline_108
+  - first:
+      213: 3086913987718186721
+    second: SP_ShipOutline_109
+  - first:
+      213: -459045733535578727
+    second: SP_ShipOutline_110
+  - first:
+      213: 390346962749092365
+    second: SP_ShipOutline_111
+  - first:
+      213: 5176946225182245008
+    second: SP_ShipOutline_112
+  - first:
+      213: -8980142767311857115
+    second: SP_ShipOutline_113
+  - first:
+      213: -7310896681308341243
+    second: SP_ShipOutline_114
+  - first:
+      213: -1936028448667791484
+    second: SP_ShipOutline_115
+  - first:
+      213: 4568137931746566277
+    second: SP_ShipOutline_116
+  - first:
+      213: -3231271668023393867
+    second: SP_ShipOutline_117
+  - first:
+      213: 6757284453209877886
+    second: SP_ShipOutline_118
+  - first:
+      213: -8065949606263983193
+    second: SP_ShipOutline_119
+  - first:
+      213: 8009497150433901768
+    second: SP_ShipOutline_120
+  - first:
+      213: -516740151230857672
+    second: SP_ShipOutline_121
+  - first:
+      213: 7171423302920612917
+    second: SP_ShipOutline_122
+  - first:
+      213: -6911017192146195732
+    second: SP_ShipOutline_123
+  - first:
+      213: 324880197247057421
+    second: SP_ShipOutline_124
+  - first:
+      213: 5126038903006467906
+    second: SP_ShipOutline_125
+  - first:
+      213: 3679380730547847518
+    second: SP_ShipOutline_126
+  - first:
+      213: 2533822044293094382
+    second: SP_ShipOutline_127
+  - first:
+      213: -4198252977687713130
+    second: SP_ShipOutline_128
+  - first:
+      213: -1389779686285231649
+    second: SP_ShipOutline_129
+  - first:
+      213: 6394058298188663754
+    second: SP_ShipOutline_130
+  - first:
+      213: 4712072899729012934
+    second: SP_ShipOutline_131
+  - first:
+      213: 2894330757380935024
+    second: SP_ShipOutline_132
+  - first:
+      213: -2497126559188521917
+    second: SP_ShipOutline_133
+  - first:
+      213: 5295982998018867822
+    second: SP_ShipOutline_134
+  - first:
+      213: -9025852246650880817
+    second: SP_ShipOutline_135
+  - first:
+      213: -7156909819060871309
+    second: SP_ShipOutline_136
+  - first:
+      213: -8096321789638017762
+    second: SP_ShipOutline_137
+  - first:
+      213: -2836240558839062278
+    second: SP_ShipOutline_138
+  - first:
+      213: 9000169576299110600
+    second: SP_ShipOutline_139
+  - first:
+      213: -3528507188662293077
+    second: SP_ShipOutline_140
+  - first:
+      213: -5120592495609652424
+    second: SP_ShipOutline_141
+  - first:
+      213: -6737135002124800772
+    second: SP_ShipOutline_142
+  - first:
+      213: 7090321178248042471
+    second: SP_ShipOutline_143
+  - first:
+      213: 1908680182073269201
+    second: SP_ShipOutline_144
+  - first:
+      213: 2495761129655321710
+    second: SP_ShipOutline_145
+  - first:
+      213: -8969502779825551554
+    second: SP_ShipOutline_146
+  - first:
+      213: 6266107546931103498
+    second: SP_ShipOutline_147
+  - first:
+      213: -2262219667032369720
+    second: SP_ShipOutline_148
+  - first:
+      213: -3079465478937543579
+    second: SP_ShipOutline_149
+  - first:
+      213: -1437337642445666046
+    second: SP_ShipOutline_150
+  - first:
+      213: -9206195625889429650
+    second: SP_ShipOutline_151
+  - first:
+      213: -5005442991193431515
+    second: SP_ShipOutline_152
+  - first:
+      213: 6048145945888384979
+    second: SP_ShipOutline_153
+  - first:
+      213: 1848455155935702839
+    second: SP_ShipOutline_154
+  - first:
+      213: 3140886493124611039
+    second: SP_ShipOutline_155
+  - first:
+      213: -105141335333689418
+    second: SP_ShipOutline_156
+  - first:
+      213: 1568679553191354001
+    second: SP_ShipOutline_157
+  - first:
+      213: -5458067220136789483
+    second: SP_ShipOutline_158
+  - first:
+      213: 6933565476040413781
+    second: SP_ShipOutline_159
+  - first:
+      213: -3018185893666580850
+    second: SP_ShipOutline_160
+  - first:
+      213: -6817446295770672530
+    second: SP_ShipOutline_161
+  - first:
+      213: -4917161623123286217
+    second: SP_ShipOutline_162
+  - first:
+      213: -6549508406243428221
+    second: SP_ShipOutline_163
+  - first:
+      213: -6803759638853482117
+    second: SP_ShipOutline_164
+  - first:
+      213: -2652819592118230547
+    second: SP_ShipOutline_165
+  - first:
+      213: -1320699962913348413
+    second: SP_ShipOutline_166
+  - first:
+      213: -2909062526474825784
+    second: SP_ShipOutline_167
+  - first:
+      213: 1469100897341603545
+    second: SP_ShipOutline_168
+  - first:
+      213: 1199394693720071675
+    second: SP_ShipOutline_169
+  - first:
+      213: -4087862462224030413
+    second: SP_ShipOutline_170
+  - first:
+      213: -262743987192258316
+    second: SP_ShipOutline_171
+  - first:
+      213: -364226894987639382
+    second: SP_ShipOutline_172
+  - first:
+      213: -7691370525644854455
+    second: SP_ShipOutline_173
+  - first:
+      213: 5718739062240911762
+    second: SP_ShipOutline_174
+  - first:
+      213: 8756708487809667208
+    second: SP_ShipOutline_175
+  - first:
+      213: -5422760044158704464
+    second: SP_ShipOutline_176
+  - first:
+      213: 109036047200837495
+    second: SP_ShipOutline_177
+  - first:
+      213: 4723842572293456023
+    second: SP_ShipOutline_178
+  - first:
+      213: 8511846654569699770
+    second: SP_ShipOutline_179
+  - first:
+      213: -7642645910443189273
+    second: SP_ShipOutline_180
+  - first:
+      213: -7648393358314333459
+    second: SP_ShipOutline_181
+  - first:
+      213: 5554025628475608450
+    second: SP_ShipOutline_182
+  - first:
+      213: -1528093754391870403
+    second: SP_ShipOutline_183
+  - first:
+      213: 1080583645747588001
+    second: SP_ShipOutline_184
+  - first:
+      213: -6505085145000276471
+    second: SP_ShipOutline_185
+  - first:
+      213: -4407835904645640755
+    second: SP_ShipOutline_186
+  - first:
+      213: 6718536861356816985
+    second: SP_ShipOutline_187
+  - first:
+      213: 384537194376720842
+    second: SP_ShipOutline_188
+  - first:
+      213: 6137056373046660448
+    second: SP_ShipOutline_189
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SP_ShipOutline_0
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 551
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b874cce57d9ace0800000000000000
+      internalID: -1393345807540319360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_1
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 562
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836f7ae81ee9fd780800000000000000
+      internalID: -8656025267184601544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 545
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9564b25c0d79ca0800000000000000
+      internalID: -6010105632449472013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 539
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8d203026b0ed8b0800000000000000
+      internalID: -5125646810315827018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_4
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 545
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c59c7831ac5495a0800000000000000
+      internalID: -6515480913391086143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_5
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 531
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8517138339eefc440800000000000000
+      internalID: 4958444030828573016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_6
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 526
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4aec08789b96760800000000000000
+      internalID: 7451691050093946078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_7
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 533
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a532d9f403a04830800000000000000
+      internalID: 4053418906399946151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_8
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 514
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73955bde22c67a100800000000000000
+      internalID: 119182812421380407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_9
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 520
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ff17a22fa01ae70800000000000000
+      internalID: 9124586355239812920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_10
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 516
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1563863e19f693430800000000000000
+      internalID: 3763161636020958801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_11
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 502
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0262cf9d51bbc20800000000000000
+      internalID: 3223193984296165618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_12
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 508
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec6d10c9cfa3a9e0800000000000000
+      internalID: -1611250960622064414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_13
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 501
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea84bcb151fcd0020800000000000000
+      internalID: 2309729873478502574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_14
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 490
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0851fa9dd3cb0f1e0800000000000000
+      internalID: -2166024446934051456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_15
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 496
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36fffd625f54b1e20800000000000000
+      internalID: 3322326069337390947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_16
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 486
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c5c1bbdd586dff0800000000000000
+      internalID: -11674761648382866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 477
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f130708fc60e05a20800000000000000
+      internalID: 3049183706352124703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_18
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 483
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d4d6d600e266330800000000000000
+      internalID: 3703698322929569181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_19
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 472
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1e9620051e6e6b0800000000000000
+      internalID: -5267274980409089575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_20
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 470
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3868e9b030d9ed250800000000000000
+      internalID: 5971382792345257603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_21
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 464
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e41a54c2c6027e0800000000000000
+      internalID: -1792313714290897316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_22
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 457
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730a965d7448892f0800000000000000
+      internalID: -965876676012957641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_23
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 458
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf01a73ca471d6940800000000000000
+      internalID: 5290910747104776443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_24
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 452
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2370ea3f4757e7c0800000000000000
+      internalID: -4042166142739909843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_25
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 446
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46cda267c33fe4f0800000000000000
+      internalID: -797361677574224305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_26
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 440
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a974c887acdc54620800000000000000
+      internalID: 2757836616323843994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_27
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 442
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23af6247e6bf42a50800000000000000
+      internalID: 6495593014388783666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_28
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 433
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97144894db5d3df0800000000000000
+      internalID: -198901839888640102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_29
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 427
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb61821a9490bd40800000000000000
+      internalID: 5598137726277872617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_30
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 427
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fe52be5740d5760800000000000000
+      internalID: 7448114263243484974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_31
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 421
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9edb0418da1c5cd0800000000000000
+      internalID: -2568148172156445027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_32
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 415
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8698786cead7cf0800000000000000
+      internalID: -252853836362192650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_33
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 412
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75aab8b0aeacde610800000000000000
+      internalID: 1652199744879700567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_34
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 369
+        width: 26
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d0d1d08f15aa950800000000000000
+      internalID: 6461066741230144861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_35
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 412
+        width: 54
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dec62c667cc75030800000000000000
+      internalID: 3483477645787057874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_36
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 409
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f27b00c075a29330800000000000000
+      internalID: 3716214546210976505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_37
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 400
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c29024253130600800000000000000
+      internalID: 433211233173842954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_38
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 398
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4a63decf4bde570800000000000000
+      internalID: 8497647070322533615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_39
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 398
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc1b777961ebd6e0800000000000000
+      internalID: -1811606581994119972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_40
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 385
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74734d2f8e9d9a10800000000000000
+      internalID: 1917863354106606716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_41
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 370
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf8f386e66526170800000000000000
+      internalID: 8170187706198888376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_42
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 383
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af8522f8b892a950800000000000000
+      internalID: 6458892735706664873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_43
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 384
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97fb336cabd7a7b0800000000000000
+      internalID: -5212956510212327524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_44
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 356
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b2610cf4b6bd7540800000000000000
+      internalID: 5007359249144177337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_45
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 368
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00894090263f7300800000000000000
+      internalID: 251979617643626510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_46
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 345
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec66bc31c710d690800000000000000
+      internalID: -7579532054149829407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_47
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 369
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3570ae9312b5d7610800000000000000
+      internalID: 1620551639186933587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_48
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 355
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd03f31373c4a46f0800000000000000
+      internalID: -699662992169553697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_49
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 345
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c113ea0f856f4260800000000000000
+      internalID: 7083992403914461639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_50
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 345
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87bd7995efcee2ce0800000000000000
+      internalID: -1427943454660895880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_51
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 353
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd85e2c46f5121f60800000000000000
+      internalID: 8003483635375036637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_52
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 345
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f2bd2ca4b060d90800000000000000
+      internalID: -7132000544169971828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_53
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 340
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b316fcfee4a2a90800000000000000
+      internalID: -7337965850963395696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_54
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 345
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a8d6ecdcd3d2200800000000000000
+      internalID: 156849516168710707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_55
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1482939d101f3f570800000000000000
+      internalID: 8499401912019920961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_56
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1a2521488b8cd60800000000000000
+      internalID: 7910775622858875333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_57
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 345
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0432c1f04ce83b0800000000000000
+      internalID: -5508249725051911954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_58
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 345
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda44409d16c9d010800000000000000
+      internalID: 1214219404829805276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_59
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 345
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5077a2d42418f5c80800000000000000
+      internalID: -8331798663849675003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_60
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 345
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bde9f38a773f8470800000000000000
+      internalID: 8398992829408996786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_61
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf684a701bcc30c0800000000000000
+      internalID: -4594574248193265729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_62
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c17a03db3d2f5e3d0800000000000000
+      internalID: -3177866970813913316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_63
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 345
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be5be49cbf6e0f40800000000000000
+      internalID: 5696613434413244083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_64
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b550b291c4ed0b0800000000000000
+      internalID: -5702036407224804459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_65
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35154734782bf950800000000000000
+      internalID: 6483820568138552635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_66
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef755aa85420184c0800000000000000
+      internalID: -4287142872577910786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_67
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68cdac32339647720800000000000000
+      internalID: 2843012933142371462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_68
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34259d661cae560e0800000000000000
+      internalID: -2277155920190811581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_69
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75415b51ccf33310800000000000000
+      internalID: 1383727417923814780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_70
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6fd7794c46d5de0800000000000000
+      internalID: -1342806318368557349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_71
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 345
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daca01092ff9b22e0800000000000000
+      internalID: -2149448532991365971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_72
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 345
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55daa006e56347910800000000000000
+      internalID: 1834150727212772693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_73
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 345
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03727dc8d81207620800000000000000
+      internalID: 2769750662669870896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_74
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 340
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d80747255592c70800000000000000
+      internalID: 8946775947377413511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_75
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 328
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4242a7091ce4e80c0800000000000000
+      internalID: -4571629978474896348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_76
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 313
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c4edea0460352f0800000000000000
+      internalID: -985437018582528966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_77
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 299
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bab7184e483069b0800000000000000
+      internalID: -5089005670060541263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_78
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 284
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b602f55fe9a3f70800000000000000
+      internalID: 9167814768166202160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_79
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 269
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22465f162b2bb810800000000000000
+      internalID: 1782065520289661483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_80
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 259
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ba09595c0afbd00800000000000000
+      internalID: 990687213523086164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_81
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 284
+        width: 8
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88209c6181ed08990800000000000000
+      internalID: -7385659193844759928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_82
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 247
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a12bf9e75567890800000000000000
+      internalID: -7460681730359158178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_83
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 257
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45983b2780707ecb0800000000000000
+      internalID: -4834887942093436588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_84
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa24910243e8508f0800000000000000
+      internalID: -574897022891900246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_85
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a1fa7569306aa40800000000000000
+      internalID: 5378990749191707195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_86
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f25af08f5dd075fc0800000000000000
+      internalID: -3506318572243671761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_87
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbcc72aab7dd82830800000000000000
+      internalID: 4046727788397841596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_88
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06adb2c6ac669c8c0800000000000000
+      internalID: -3978535776220882336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_89
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef21f19ae4a0da1d0800000000000000
+      internalID: -3338000415850556674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_90
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 259
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14cf8eebaabd19850800000000000000
+      internalID: 6382123673354566721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_91
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa64784846f90ac50800000000000000
+      internalID: 6674509901832079023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_92
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 259
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463e5a356a5420cd0800000000000000
+      internalID: -2593433854741716124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_93
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9400fee07ddced700800000000000000
+      internalID: 567116926647468105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_94
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5026b907ac68370800000000000000
+      internalID: 8324563546232980927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_95
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 259
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 935d8b1d1a09a72b0800000000000000
+      internalID: -5585993363116993223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_96
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f18bb4a6492edd0800000000000000
+      internalID: -2458239262333067490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_97
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5f28c983b83eb10800000000000000
+      internalID: 2009602933997630951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_98
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75d790e207d01470800000000000000
+      internalID: 8363420915384964476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_99
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e70ea8029e91ad0800000000000000
+      internalID: -2730895373045301643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_100
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1988552bcecdc47d0800000000000000
+      internalID: -2932726348162692975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_101
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 259
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc4042034bcbbc540800000000000000
+      internalID: 5029320890977092815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_102
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47a256e16ebb5650800000000000000
+      internalID: 6222776637827753802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_103
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe09103784045cc10800000000000000
+      internalID: 2073133883385286895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_104
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1119f69bb35e05390800000000000000
+      internalID: -7831507707320364783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_105
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad4d798b6a5036ed0800000000000000
+      internalID: -2422085960975526694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_106
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c153e162b966cc0800000000000000
+      internalID: -3718113854329906162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_107
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e998c7d10ff373a0800000000000000
+      internalID: -6668706239825274391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_108
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e410a78d9a274ca20800000000000000
+      internalID: 3081714118835175758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_109
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 259
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6802aaaebe6da20800000000000000
+      internalID: 3086913987718186721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_110
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99504f4665421a9f0800000000000000
+      internalID: -459045733535578727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_111
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02ffc59e7aca6500800000000000000
+      internalID: 390346962749092365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_112
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0908945c92538d740800000000000000
+      internalID: 5176946225182245008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_113
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a55126bbf106380800000000000000
+      internalID: -8980142767311857115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_114
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50cb801043a7a8a90800000000000000
+      internalID: -7310896681308341243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_115
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 259
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f0b1a2268d125e0800000000000000
+      internalID: -1936028448667791484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_116
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580edb2fe39456f30800000000000000
+      internalID: 4568137931746566277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_117
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b18ea6b9873823d0800000000000000
+      internalID: -3231271668023393867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_118
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d28d79862b6cd50800000000000000
+      internalID: 6757284453209877886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_119
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 259
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3fe6e719dff0090800000000000000
+      internalID: -8065949606263983193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_120
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccbd11e833772f60800000000000000
+      internalID: 8009497150433901768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_121
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 259
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ef3bcf19b24d8f0800000000000000
+      internalID: -516740151230857672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_122
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 258
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53caa888f73068360800000000000000
+      internalID: 7171423302920612917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_123
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 249
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cea2289da722710a0800000000000000
+      internalID: -6911017192146195732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_124
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 218
+        width: 7
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e387f61d4328400800000000000000
+      internalID: 324880197247057421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_125
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 235
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247988e2939532740800000000000000
+      internalID: 5126038903006467906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_126
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 220
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51c8bdb749cf0330800000000000000
+      internalID: 3679380730547847518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_127
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 203
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eebd42a79b1f92320800000000000000
+      internalID: 2533822044293094382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_128
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 191
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69aa2bbf82fccb5c0800000000000000
+      internalID: -4198252977687713130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_129
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 206
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd93aea1db286bce0800000000000000
+      internalID: -1389779686285231649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_130
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 189
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb8ca025224cb850800000000000000
+      internalID: 6394058298188663754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_131
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 174
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c8b7103655a46140800000000000000
+      internalID: 4712072899729012934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_132
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 177
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d8d203d7aba2820800000000000000
+      internalID: 2894330757380935024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_133
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34cef50ff9c685dd0800000000000000
+      internalID: -2497126559188521917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_134
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 148
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e624c653a7c1f7940800000000000000
+      internalID: 5295982998018867822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_135
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 162
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc7633e33bbdb280800000000000000
+      internalID: -9025852246650880817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_136
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 146
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f1f51407c8dac90800000000000000
+      internalID: -7156909819060871309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_137
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 133
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1dfe5d7a3614af80800000000000000
+      internalID: -8096321789638017762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_138
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 135
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0a7d02d36a3a8d0800000000000000
+      internalID: -2836240558839062278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_139
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 120
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c026917b8607ec70800000000000000
+      internalID: 9000169576299110600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_140
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 109
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad2f502869380fc0800000000000000
+      internalID: -3528507188662293077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_141
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 122
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83bd7ab514000f8b0800000000000000
+      internalID: -5120592495609652424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_142
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 107
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc20821963e082a0800000000000000
+      internalID: -6737135002124800772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_143
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 95
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e757e4ab81e56260800000000000000
+      internalID: 7090321178248042471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_144
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 97
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db1e42538efc7a10800000000000000
+      internalID: 1908680182073269201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_145
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 39
+        width: 75
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6445593689b2a220800000000000000
+      internalID: 2495761129655321710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_146
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 83
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e378e948ebce58380800000000000000
+      internalID: -8969502779825551554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_147
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 77
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07093b5d9fa5f650800000000000000
+      internalID: 6266107546931103498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_148
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 80
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c512a6d23bfa90e0800000000000000
+      internalID: -2262219667032369720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_149
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 81
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c79dd667a8345d0800000000000000
+      internalID: -3079465478937543579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_150
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 78
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2098abf870d8d0ce0800000000000000
+      internalID: -1437337642445666046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_151
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 76
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e670b12dad50d3080800000000000000
+      internalID: -9206195625889429650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_152
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 80
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52262769e18198ab0800000000000000
+      internalID: -5005442991193431515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_153
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 81
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d7656e71b45fe350800000000000000
+      internalID: 6048145945888384979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_154
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 79
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f69c8bb2807a910800000000000000
+      internalID: 1848455155935702839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_155
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 79
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdbc386df9ba69b20800000000000000
+      internalID: 3140886493124611039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_156
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 81
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7a93833867a8ef0800000000000000
+      internalID: -105141335333689418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_157
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 79
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e936e0eb115c510800000000000000
+      internalID: 1568679553191354001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_158
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 62
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51afa8708cc0144b0800000000000000
+      internalID: -5458067220136789483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_159
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 85
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5521d4a9019f83060800000000000000
+      internalID: 6933565476040413781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_160
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 73
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8698e5bbef3d16d0800000000000000
+      internalID: -3018185893666580850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_161
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 66
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e625941e6b09361a0800000000000000
+      internalID: -6817446295770672530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_162
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 70
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737ad865e8bb2cbb0800000000000000
+      internalID: -4917161623123286217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_163
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 74
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 388fc682ec87b15a0800000000000000
+      internalID: -6549508406243428221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_164
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 67
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b798ff408a03491a0800000000000000
+      internalID: -6803759638853482117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_165
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 69
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de1a89ed2aa4f2bd0800000000000000
+      internalID: -2652819592118230547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_166
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 75
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4adaf816eebade0800000000000000
+      internalID: -1320699962913348413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_167
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 75
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cf41188b0fe0a7d0800000000000000
+      internalID: -2909062526474825784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_168
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 58
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9def0458b7b436410800000000000000
+      internalID: 1469100897341603545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_169
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 55
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd5ca88e1b15a010800000000000000
+      internalID: 1199394693720071675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_170
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 63
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335ab70cfbef447c0800000000000000
+      internalID: -4087862462224030413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_171
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 60
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f029885cbb8a5cf0800000000000000
+      internalID: -262743987192258316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_172
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 53
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa54e9a919102faf0800000000000000
+      internalID: -364226894987639382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_173
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 54
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b670fe143c24590800000000000000
+      internalID: -7691370525644854455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_174
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 61
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2912500c0ea0d5f40800000000000000
+      internalID: 5718739062240911762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_175
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 33
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8801b8189f3168970800000000000000
+      internalID: 8756708487809667208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_176
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 52
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b42db9887c7eb4b0800000000000000
+      internalID: -5422760044158704464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_177
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 48
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f5e1d05bf538100800000000000000
+      internalID: 109036047200837495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_178
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 47
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7904b60aac57e8140800000000000000
+      internalID: 4723842572293456023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_179
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 47
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab959344f67202670800000000000000
+      internalID: 8511846654569699770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_180
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 50
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb11f3790edfe590800000000000000
+      internalID: -7642645910443189273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_181
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 48
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea973773c27bd590800000000000000
+      internalID: -7648393358314333459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_182
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 47
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d44b2f1ecd31d40800000000000000
+      internalID: 5554025628475608450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_183
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 47
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34caf993de1bcae0800000000000000
+      internalID: -1528093754391870403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_184
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 49
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aba1e2c9110ffe00800000000000000
+      internalID: 1080583645747588001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_185
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 25
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e869aa68b49b5a0800000000000000
+      internalID: -6505085145000276471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_186
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 61
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd4263399834d2c0800000000000000
+      internalID: -4407835904645640755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_187
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 18
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a7a87dda90d3d50800000000000000
+      internalID: 6718536861356816985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_188
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 0
+        width: 561
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1ffb97a86265500800000000000000
+      internalID: 384537194376720842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_ShipOutline_189
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 4
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d4ef971443b2550800000000000000
+      internalID: 6137056373046660448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SP_ShipOutline_0: -1393345807540319360
+      SP_ShipOutline_1: -8656025267184601544
+      SP_ShipOutline_10: 3763161636020958801
+      SP_ShipOutline_100: -2932726348162692975
+      SP_ShipOutline_101: 5029320890977092815
+      SP_ShipOutline_102: 6222776637827753802
+      SP_ShipOutline_103: 2073133883385286895
+      SP_ShipOutline_104: -7831507707320364783
+      SP_ShipOutline_105: -2422085960975526694
+      SP_ShipOutline_106: -3718113854329906162
+      SP_ShipOutline_107: -6668706239825274391
+      SP_ShipOutline_108: 3081714118835175758
+      SP_ShipOutline_109: 3086913987718186721
+      SP_ShipOutline_11: 3223193984296165618
+      SP_ShipOutline_110: -459045733535578727
+      SP_ShipOutline_111: 390346962749092365
+      SP_ShipOutline_112: 5176946225182245008
+      SP_ShipOutline_113: -8980142767311857115
+      SP_ShipOutline_114: -7310896681308341243
+      SP_ShipOutline_115: -1936028448667791484
+      SP_ShipOutline_116: 4568137931746566277
+      SP_ShipOutline_117: -3231271668023393867
+      SP_ShipOutline_118: 6757284453209877886
+      SP_ShipOutline_119: -8065949606263983193
+      SP_ShipOutline_12: -1611250960622064414
+      SP_ShipOutline_120: 8009497150433901768
+      SP_ShipOutline_121: -516740151230857672
+      SP_ShipOutline_122: 7171423302920612917
+      SP_ShipOutline_123: -6911017192146195732
+      SP_ShipOutline_124: 324880197247057421
+      SP_ShipOutline_125: 5126038903006467906
+      SP_ShipOutline_126: 3679380730547847518
+      SP_ShipOutline_127: 2533822044293094382
+      SP_ShipOutline_128: -4198252977687713130
+      SP_ShipOutline_129: -1389779686285231649
+      SP_ShipOutline_13: 2309729873478502574
+      SP_ShipOutline_130: 6394058298188663754
+      SP_ShipOutline_131: 4712072899729012934
+      SP_ShipOutline_132: 2894330757380935024
+      SP_ShipOutline_133: -2497126559188521917
+      SP_ShipOutline_134: 5295982998018867822
+      SP_ShipOutline_135: -9025852246650880817
+      SP_ShipOutline_136: -7156909819060871309
+      SP_ShipOutline_137: -8096321789638017762
+      SP_ShipOutline_138: -2836240558839062278
+      SP_ShipOutline_139: 9000169576299110600
+      SP_ShipOutline_14: -2166024446934051456
+      SP_ShipOutline_140: -3528507188662293077
+      SP_ShipOutline_141: -5120592495609652424
+      SP_ShipOutline_142: -6737135002124800772
+      SP_ShipOutline_143: 7090321178248042471
+      SP_ShipOutline_144: 1908680182073269201
+      SP_ShipOutline_145: 2495761129655321710
+      SP_ShipOutline_146: -8969502779825551554
+      SP_ShipOutline_147: 6266107546931103498
+      SP_ShipOutline_148: -2262219667032369720
+      SP_ShipOutline_149: -3079465478937543579
+      SP_ShipOutline_15: 3322326069337390947
+      SP_ShipOutline_150: -1437337642445666046
+      SP_ShipOutline_151: -9206195625889429650
+      SP_ShipOutline_152: -5005442991193431515
+      SP_ShipOutline_153: 6048145945888384979
+      SP_ShipOutline_154: 1848455155935702839
+      SP_ShipOutline_155: 3140886493124611039
+      SP_ShipOutline_156: -105141335333689418
+      SP_ShipOutline_157: 1568679553191354001
+      SP_ShipOutline_158: -5458067220136789483
+      SP_ShipOutline_159: 6933565476040413781
+      SP_ShipOutline_16: -11674761648382866
+      SP_ShipOutline_160: -3018185893666580850
+      SP_ShipOutline_161: -6817446295770672530
+      SP_ShipOutline_162: -4917161623123286217
+      SP_ShipOutline_163: -6549508406243428221
+      SP_ShipOutline_164: -6803759638853482117
+      SP_ShipOutline_165: -2652819592118230547
+      SP_ShipOutline_166: -1320699962913348413
+      SP_ShipOutline_167: -2909062526474825784
+      SP_ShipOutline_168: 1469100897341603545
+      SP_ShipOutline_169: 1199394693720071675
+      SP_ShipOutline_17: 3049183706352124703
+      SP_ShipOutline_170: -4087862462224030413
+      SP_ShipOutline_171: -262743987192258316
+      SP_ShipOutline_172: -364226894987639382
+      SP_ShipOutline_173: -7691370525644854455
+      SP_ShipOutline_174: 5718739062240911762
+      SP_ShipOutline_175: 8756708487809667208
+      SP_ShipOutline_176: -5422760044158704464
+      SP_ShipOutline_177: 109036047200837495
+      SP_ShipOutline_178: 4723842572293456023
+      SP_ShipOutline_179: 8511846654569699770
+      SP_ShipOutline_18: 3703698322929569181
+      SP_ShipOutline_180: -7642645910443189273
+      SP_ShipOutline_181: -7648393358314333459
+      SP_ShipOutline_182: 5554025628475608450
+      SP_ShipOutline_183: -1528093754391870403
+      SP_ShipOutline_184: 1080583645747588001
+      SP_ShipOutline_185: -6505085145000276471
+      SP_ShipOutline_186: -4407835904645640755
+      SP_ShipOutline_187: 6718536861356816985
+      SP_ShipOutline_188: 384537194376720842
+      SP_ShipOutline_189: 6137056373046660448
+      SP_ShipOutline_19: -5267274980409089575
+      SP_ShipOutline_2: -6010105632449472013
+      SP_ShipOutline_20: 5971382792345257603
+      SP_ShipOutline_21: -1792313714290897316
+      SP_ShipOutline_22: -965876676012957641
+      SP_ShipOutline_23: 5290910747104776443
+      SP_ShipOutline_24: -4042166142739909843
+      SP_ShipOutline_25: -797361677574224305
+      SP_ShipOutline_26: 2757836616323843994
+      SP_ShipOutline_27: 6495593014388783666
+      SP_ShipOutline_28: -198901839888640102
+      SP_ShipOutline_29: 5598137726277872617
+      SP_ShipOutline_3: -5125646810315827018
+      SP_ShipOutline_30: 7448114263243484974
+      SP_ShipOutline_31: -2568148172156445027
+      SP_ShipOutline_32: -252853836362192650
+      SP_ShipOutline_33: 1652199744879700567
+      SP_ShipOutline_34: 6461066741230144861
+      SP_ShipOutline_35: 3483477645787057874
+      SP_ShipOutline_36: 3716214546210976505
+      SP_ShipOutline_37: 433211233173842954
+      SP_ShipOutline_38: 8497647070322533615
+      SP_ShipOutline_39: -1811606581994119972
+      SP_ShipOutline_4: -6515480913391086143
+      SP_ShipOutline_40: 1917863354106606716
+      SP_ShipOutline_41: 8170187706198888376
+      SP_ShipOutline_42: 6458892735706664873
+      SP_ShipOutline_43: -5212956510212327524
+      SP_ShipOutline_44: 5007359249144177337
+      SP_ShipOutline_45: 251979617643626510
+      SP_ShipOutline_46: -7579532054149829407
+      SP_ShipOutline_47: 1620551639186933587
+      SP_ShipOutline_48: -699662992169553697
+      SP_ShipOutline_49: 7083992403914461639
+      SP_ShipOutline_5: 4958444030828573016
+      SP_ShipOutline_50: -1427943454660895880
+      SP_ShipOutline_51: 8003483635375036637
+      SP_ShipOutline_52: -7132000544169971828
+      SP_ShipOutline_53: -7337965850963395696
+      SP_ShipOutline_54: 156849516168710707
+      SP_ShipOutline_55: 8499401912019920961
+      SP_ShipOutline_56: 7910775622858875333
+      SP_ShipOutline_57: -5508249725051911954
+      SP_ShipOutline_58: 1214219404829805276
+      SP_ShipOutline_59: -8331798663849675003
+      SP_ShipOutline_6: 7451691050093946078
+      SP_ShipOutline_60: 8398992829408996786
+      SP_ShipOutline_61: -4594574248193265729
+      SP_ShipOutline_62: -3177866970813913316
+      SP_ShipOutline_63: 5696613434413244083
+      SP_ShipOutline_64: -5702036407224804459
+      SP_ShipOutline_65: 6483820568138552635
+      SP_ShipOutline_66: -4287142872577910786
+      SP_ShipOutline_67: 2843012933142371462
+      SP_ShipOutline_68: -2277155920190811581
+      SP_ShipOutline_69: 1383727417923814780
+      SP_ShipOutline_7: 4053418906399946151
+      SP_ShipOutline_70: -1342806318368557349
+      SP_ShipOutline_71: -2149448532991365971
+      SP_ShipOutline_72: 1834150727212772693
+      SP_ShipOutline_73: 2769750662669870896
+      SP_ShipOutline_74: 8946775947377413511
+      SP_ShipOutline_75: -4571629978474896348
+      SP_ShipOutline_76: -985437018582528966
+      SP_ShipOutline_77: -5089005670060541263
+      SP_ShipOutline_78: 9167814768166202160
+      SP_ShipOutline_79: 1782065520289661483
+      SP_ShipOutline_8: 119182812421380407
+      SP_ShipOutline_80: 990687213523086164
+      SP_ShipOutline_81: -7385659193844759928
+      SP_ShipOutline_82: -7460681730359158178
+      SP_ShipOutline_83: -4834887942093436588
+      SP_ShipOutline_84: -574897022891900246
+      SP_ShipOutline_85: 5378990749191707195
+      SP_ShipOutline_86: -3506318572243671761
+      SP_ShipOutline_87: 4046727788397841596
+      SP_ShipOutline_88: -3978535776220882336
+      SP_ShipOutline_89: -3338000415850556674
+      SP_ShipOutline_9: 9124586355239812920
+      SP_ShipOutline_90: 6382123673354566721
+      SP_ShipOutline_91: 6674509901832079023
+      SP_ShipOutline_92: -2593433854741716124
+      SP_ShipOutline_93: 567116926647468105
+      SP_ShipOutline_94: 8324563546232980927
+      SP_ShipOutline_95: -5585993363116993223
+      SP_ShipOutline_96: -2458239262333067490
+      SP_ShipOutline_97: 2009602933997630951
+      SP_ShipOutline_98: 8363420915384964476
+      SP_ShipOutline_99: -2730895373045301643
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

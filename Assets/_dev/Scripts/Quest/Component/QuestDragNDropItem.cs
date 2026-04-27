@@ -15,7 +15,9 @@ namespace EduGame
         protected LayoutElement layoutElement;
         protected Vector2 originalPosition; 
         protected QuestDragNDropZone originalParent;
-        protected CanvasGroup  canvasGroup;
+        protected CanvasGroup canvasGroup;
+        protected Vector2 originalSize;
+        protected RectTransform imageRect;
 
         [SerializeField] protected GameObject correct;
         [SerializeField] protected GameObject wrong;
@@ -27,14 +29,22 @@ namespace EduGame
         {
             base.Awake();
 
+            RegisterZone();
+
             Reset();
+
+            if(image)
+                imageRect = image.transform.GetComponent<RectTransform>();
+
+            if(imageRect)
+                originalSize = imageRect.sizeDelta;
+            else
+                originalSize = Rect.sizeDelta;
         }
 
         protected override void Start()
         {
             base.Start();
-
-            RegisterZone();
 
             canvasGroup = GetComponent<CanvasGroup>();
         }
@@ -47,8 +57,11 @@ namespace EduGame
             originalPosition = Rect.anchoredPosition;
 
             canvasGroup.blocksRaycasts = false;
-
-            originalParent.Scaled(this, 1);
+            
+            if(imageRect)
+                imageRect.sizeDelta = originalSize;
+            else
+                Rect.sizeDelta = originalSize;
         }
 
         public void OnDrag(PointerEventData eventData)

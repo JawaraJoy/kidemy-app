@@ -1207,6 +1207,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 131366360215288804}
+        m_TargetAssemblyTypeName: Frontend, Assembly-CSharp
+        m_MethodName: Goto
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dev_Frontend
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &6060861582967984330
 Animator:
   serializedVersion: 7
@@ -1357,8 +1369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.FeedbackManager
   buttonClick: {fileID: 6234511396023433651}
-  buttonOver: {fileID: 1185518859008026822}
-  buttonExit: {fileID: 6782871898696495948}
+  buttonOver: {fileID: 9032581560790835462}
+  buttonExit: {fileID: 954046523574506545}
 --- !u!1 &2458718431832030628
 GameObject:
   m_ObjectHideFlags: 0
@@ -6608,6 +6620,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 131366360215288804}
+        m_TargetAssemblyTypeName: Frontend, Assembly-CSharp
+        m_MethodName: Goto
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dev_Frontend
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &7389696192561267850
 Animator:
   serializedVersion: 7
@@ -7131,6 +7155,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 131366360215288804}
+        m_TargetAssemblyTypeName: Frontend, Assembly-CSharp
+        m_MethodName: Goto
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dev_Frontend
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &700460670336949022
 Animator:
   serializedVersion: 7
@@ -7403,7 +7439,7 @@ MonoBehaviour:
   correctFeedback: {fileID: 676795301757787957}
   wrongFeedback: {fileID: 5494171477637079563}
   audioSource: {fileID: 4056242353772412095}
-  questPrefab: {fileID: 8344063676491614192, guid: 3d02ff19c9bb06f43971c340ddd19fb4, type: 3}
+  questPrefab: {fileID: 1443337414653971488, guid: 40a6e721d3c26484db2f549bc602940b, type: 3}
 --- !u!222 &1756416439628791414
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8360,6 +8396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3079495263401239039}
+  - component: {fileID: 131366360215288804}
   m_Layer: 0
   m_Name: Stage
   m_TagString: Untagged
@@ -8387,6 +8424,18 @@ Transform:
   - {fileID: 2350469413094965650}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &131366360215288804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069886483629464305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a860c862b0dce2648a209019ed5575ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Frontend
 --- !u!1 &7166980279286614823
 GameObject:
   m_ObjectHideFlags: 0
