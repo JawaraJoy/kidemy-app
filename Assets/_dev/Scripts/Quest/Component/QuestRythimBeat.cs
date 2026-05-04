@@ -4,14 +4,13 @@ using UnityEngine.UI;
 
 namespace EduGame
 {
-    [RequireComponent(typeof(Collider2D))]
     [RequireComponent(typeof(Button))]
 
     public class QuestRythimBeat : QuestComponent
     {   
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip clip;
-
+        
         private Collider2D col;
         private Animator animator;
 
@@ -27,7 +26,7 @@ namespace EduGame
             base.Awake();
 
             col = GetComponent<Collider2D>();
-            animator = GetComponent<Animator>();
+            animator = GetComponentInChildren<Animator>();
 
             if(!audioSource)
                 audioSource = GameManager.Instance.AudioSource;

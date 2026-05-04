@@ -23,7 +23,7 @@ namespace EduGame
             if(!isInit)
             {
                 Rect = GetComponent<RectTransform>();
-                Button = GetComponent<Button>();
+                Button = GetComponentInChildren<Button>();
                 Image = GetComponent<Image>();
 
                 isInit = true;   

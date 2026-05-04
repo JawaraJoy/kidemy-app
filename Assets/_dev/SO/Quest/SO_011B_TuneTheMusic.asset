@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
-  m_Name: SO_011A_TuneTheMusic
+  m_Name: SO_011B_TuneTheMusic
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
   id: 011A
   title: TuneTheMusic
@@ -23,18 +23,6 @@ MonoBehaviour:
     audio: {fileID: 0}
   choices:
   - image: {fileID: 0}
-    text: DO
-    audio: {fileID: 8300000, guid: a71e0c9653afb7941b8fc733b817b570, type: 3}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: RE
-    audio: {fileID: 8300000, guid: 6ab057fedc9284f41836fb5ecdc05b47, type: 3}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: MI
-    audio: {fileID: 8300000, guid: 6cca2ebbd62a78f4d994f2ab6e893330, type: 3}
-    isAnswer: 1
-  - image: {fileID: 0}
     text: FA
     audio: {fileID: 8300000, guid: f32e5c57c28ed1c4eae9e5aebdff830d, type: 3}
     isAnswer: 0
@@ -42,5 +30,17 @@ MonoBehaviour:
     text: SOL
     audio: {fileID: 8300000, guid: e37e2f2146931f441ac0ab6df146afac, type: 3}
     isAnswer: 0
+  - image: {fileID: 0}
+    text: SI
+    audio: {fileID: 8300000, guid: af5e4b3478185a74aa68bfeb9494a41f, type: 3}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: LA
+    audio: {fileID: 8300000, guid: ed4e505f789248045b65fc753c983b68, type: 3}
+    isAnswer: 1
+  - image: {fileID: 0}
+    text: MI
+    audio: {fileID: 8300000, guid: 6cca2ebbd62a78f4d994f2ab6e893330, type: 3}
+    isAnswer: 0
   timer: 0
-  randomizeChoice: 0
+  randomizeChoice: 1

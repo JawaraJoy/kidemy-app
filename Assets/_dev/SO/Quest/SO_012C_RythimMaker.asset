@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f99f8e037f83f5488ca3838f534e681, type: 3}
+  m_Name: SO_012C_RythimMaker
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestRythimMaker
+  id: SO_012C
+  title: Rythim Maker
+  category: 2
+  autoSubmit: 0
+  score: 10
+  question:
+    image: {fileID: 0}
+    text: Tap the circle on the left, when animal passthrough
+    audio: {fileID: 0}
+  speed: 0.1
+  notes:
+  - notePrefab: {fileID: -1886138623961233230, guid: 0ad11dbe5cf4c804a859b786e4086720, type: 3}
+    delay: 0
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 0aa7ec60105cd2c49a4b88c1bebcfd7c, type: 3}
+  - notePrefab: {fileID: -1886138623961233230, guid: 0ad11dbe5cf4c804a859b786e4086720, type: 3}
+    delay: 0.9
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: ab7280018c396994faff1cf5bde239fe, type: 3}
+  - notePrefab: {fileID: 3556553260390308215, guid: e111092594ab85c42b0aa7e304d73949, type: 3}
+    delay: 1.8
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: af8fcbdf2ba2bb240b02de243cb704be, type: 3}
+  - notePrefab: {fileID: 3556553260390308215, guid: e111092594ab85c42b0aa7e304d73949, type: 3}
+    delay: 2.7
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: a049af7be000fb448a33a8496b0932f6, type: 3}
+  - notePrefab: {fileID: -5770972901350114523, guid: a81f00ac2d352104ab15799273bbe169, type: 3}
+    delay: 3.6
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: ec19c3166720f014e8022b5dadb0308f, type: 3}
+  - notePrefab: {fileID: -5770972901350114523, guid: a81f00ac2d352104ab15799273bbe169, type: 3}
+    delay: 4.5
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 8f27d892803fad34eb1245f4d220cfbb, type: 3}
+  - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
+    delay: 5.4
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 9d7bc93d7fdef66458b4ba452ae525bd, type: 3}
+  - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
+    delay: 6.3
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: a0594507a20d7bc4d86a8b50938b4df6, type: 3}
+  - notePrefab: {fileID: 3556553260390308215, guid: e111092594ab85c42b0aa7e304d73949, type: 3}
+    delay: 7.2
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 5ff7fbe04ccfc8b4d82cdf80f0b51a27, type: 3}
+  - notePrefab: {fileID: 3556553260390308215, guid: e111092594ab85c42b0aa7e304d73949, type: 3}
+    delay: 8.1
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 9ef0ac7f82fdc4044a43c53e3768bf52, type: 3}
+  - notePrefab: {fileID: -1886138623961233230, guid: 0ad11dbe5cf4c804a859b786e4086720, type: 3}
+    delay: 9
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 32228d8e3dff8934fa875285165b05ec, type: 3}
+  - notePrefab: {fileID: -1886138623961233230, guid: 0ad11dbe5cf4c804a859b786e4086720, type: 3}
+    delay: 9.9
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: e3289c6e548b705409c7ca4e305312f8, type: 3}
+  - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
+    delay: 11.3
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: e61de9aad02d02947b3be298ee1a2f92, type: 3}
+  - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
+    delay: 12.4
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: cf3bb98ed8c71154aae2494c5cb7c6c8, type: 3}
+  - notePrefab: {fileID: 9194836460546708298, guid: ebd08f1d116885345b503cc6bcc76588, type: 3}
+    delay: 13.8
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 25b26dde94fbdf647bf39c0f2fece1fe, type: 3}
+  - notePrefab: {fileID: 9194836460546708298, guid: ebd08f1d116885345b503cc6bcc76588, type: 3}
+    delay: 15.4
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 981101152786cc44f9cf787c288c4962, type: 3}
+  - notePrefab: {fileID: 9194836460546708298, guid: ebd08f1d116885345b503cc6bcc76588, type: 3}
+    delay: 17
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 3f66e2f555183b847968755ce78013d4, type: 3}
+  timer: 0
+  randomizeChoice: 0

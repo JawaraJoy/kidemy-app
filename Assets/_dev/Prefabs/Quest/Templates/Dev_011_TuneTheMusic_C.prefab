@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d80875dbbbf2642aecbdceeb8e21d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.AudioPlayer
-  audioClip: {fileID: 8300000, guid: 6cca2ebbd62a78f4d994f2ab6e893330, type: 3}
+  audioClip: {fileID: 8300000, guid: af5e4b3478185a74aa68bfeb9494a41f, type: 3}
 --- !u!1 &1275145668938466524
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 180, y: 270}
+  m_CellSize: {x: 160, y: 240}
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 9161515179906445578}
   - component: {fileID: 8344063676491614192}
   m_Layer: 5
-  m_Name: Dev_011_TuneTheMusic_A
+  m_Name: Dev_011_TuneTheMusic_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395d84bf1697fe94ea351f2684fad354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestMultipleChoices
-  data: {fileID: 11400000, guid: f39218b29e74c214c9ba32f115edc46f, type: 2}
+  data: {fileID: 11400000, guid: 8528c97cd7c53ba49a0a6a28e5bff29b, type: 2}
   background: {fileID: 21300000, guid: 6fcd064ad665f6a44bcb6d08ae6aba7c, type: 3}
   color: {r: 0, g: 0.8666667, b: 1, a: 1}
   score: 10
