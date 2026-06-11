@@ -1404,6 +1404,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: d078e35e58207964990102834bcacf3f, type: 2}
   background: {fileID: 21300000, guid: e669b2decd815094bbb44d98b7d12ad0, type: 3}
   color: {r: 0.21960784, g: 0.5568628, b: 0.34117648, a: 0}
+  npcController: {fileID: 9100000, guid: ee0292fe0a32e0d4387871e6462a4a8d, type: 2}
   score: 10
   questionImage: {fileID: 0}
   questionAudio: {fileID: 0}

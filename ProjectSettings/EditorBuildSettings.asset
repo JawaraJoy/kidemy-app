@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_dev/Scenes/Dev_Frontend.unity
+    path: Assets/_dev/Scenes/Test/Dev_Frontend.unity
     guid: caf67ebef74adc746aca65ae9a7dd159
   - enabled: 1
     path: Assets/_dev/Scenes/Dev_001_FrogsCount_A.unity
@@ -116,6 +116,78 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_dev/Scenes/Dev_012_RythimMaker_C.unity
     guid: f8e4976ad495cbf44b3f6c015634f4f7
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_013_EmotionMatch_A.unity
+    guid: 8e026a30325363847b6c88380fcf7e89
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_013_EmotionMatch_B.unity
+    guid: de93c450c2657de49a065585c1acabef
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_013_EmotionMatch_C.unity
+    guid: 320bc99cde23f674db69394aa3cf2fe3
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_014_MoodTracker_A.unity
+    guid: 240b297c8e248b04f805fc7f404ee1be
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_014_MoodTracker_B.unity
+    guid: 227eea42a6c6a3b4fbb3b7b84fa6a463
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_014_MoodTracker_C.unity
+    guid: 66192728f8206d84b8485c9dfcacfca8
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_015_KindnessQuest_A.unity
+    guid: 4f270a29b71e3384198caaf4d58fdad2
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_015_KindnessQuest_B.unity
+    guid: a861850bcf2dca4468927b65f3708f63
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_015_KindnessQuest_C.unity
+    guid: e0634aeeab321ae4ca5fc8520d67620d
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_016_CompassionateChoice_A.unity
+    guid: 771aa584ff5b76247b7b780e5f270b47
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_016_CompassionateChoice_B.unity
+    guid: 8fc6b40812d5c02469869857269a6694
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_016_CompassionateChoice_C.unity
+    guid: 5dfa068547ded1c46ab3c09a30669874
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_017_DailyRoutine_A.unity
+    guid: 31eb40a33006e934b927488363be85c0
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_017_DailyRoutine_B.unity
+    guid: 660f79a2a190b204eb8f30b7a22a52c0
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_017_DailyRoutine_C.unity
+    guid: dacb53e567b08ad468bf7d64aa82283f
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_018_DailySchedule_A.unity
+    guid: 35095968f4685024d9417c354277973a
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_018_DailySchedule_B.unity
+    guid: ecf092f2c8f179344a78cec1796c2d4c
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_018_DailySchedule_C.unity
+    guid: 8647a64ec1d852141991ad8d6fb68d27
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_019_Safety Puzzles_A.unity
+    guid: db3c3571a13b20242b202deb1aef808b
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_019_Safety Puzzles_B.unity
+    guid: 9185759881bcb174784cb7cc2c859ed0
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_019_Safety Puzzles_C.unity
+    guid: 6fa04848d9c63d64d8f6d17b04715135
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_020_StepSequence_A.unity
+    guid: 575b78cbdf4fc1c46abf9a29aee45867
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_020_StepSequence_B.unity
+    guid: 149fca5042c410e499a4897b865ee7f0
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_020_StepSequence_C.unity
+    guid: e7aa6eeb9398eba48acb4db5a7704402
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 57cd4d59be8adbf4894b91aafbbe14ba, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

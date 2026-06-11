@@ -74,7 +74,9 @@ namespace EduGame
                 InstantiateColoringCanvas();
 
                 fields = canvasContainer.GetComponentsInChildren<QuestColoringField>();
-            }   
+            }
+
+            SetDialog();
         }
 
         public void AddColor(Color color)
@@ -169,6 +171,12 @@ namespace EduGame
                 foreach (var field in fields)
                     field.Reset();
             }
+        }
+
+        void SetDialog()
+        {
+            if (!string.IsNullOrEmpty(dataQuestColoring.Text))
+                GameManager.Instance.SetNPCDialog(dataQuestColoring.Text);
         }
     }
 }

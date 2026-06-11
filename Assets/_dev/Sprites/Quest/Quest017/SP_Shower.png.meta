@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: af6f9bf7b79732c4eb88b855b1cad99b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2166352548863561820
+    second: SP_Shower_0
+  - first:
+      213: -1011060202438523551
+    second: SP_Shower_1
+  - first:
+      213: 5264294875709455956
+    second: SP_Shower_2
+  - first:
+      213: 8515009029817312212
+    second: SP_Shower_3
+  - first:
+      213: 8594797469764259434
+    second: SP_Shower_4
+  - first:
+      213: 8690069186056027589
+    second: SP_Shower_5
+  - first:
+      213: -8627582323454645413
+    second: SP_Shower_6
+  - first:
+      213: -2631493754386615062
+    second: SP_Shower_7
+  - first:
+      213: 3213731664463317348
+    second: SP_Shower_8
+  - first:
+      213: -1601725324595519443
+    second: SP_Shower_9
+  - first:
+      213: 309919223487664773
+    second: SP_Shower_10
+  - first:
+      213: 1115962135583071533
+    second: SP_Shower_11
+  - first:
+      213: -5331114444237831255
+    second: SP_Shower_12
+  - first:
+      213: 261813945213619381
+    second: SP_Shower_13
+  - first:
+      213: 6840641671811269902
+    second: SP_Shower_14
+  - first:
+      213: 2121816857884451976
+    second: SP_Shower_15
+  - first:
+      213: 2795336528788160681
+    second: SP_Shower_16
+  - first:
+      213: -2187810687806523373
+    second: SP_Shower_17
+  - first:
+      213: -1623303563255436042
+    second: SP_Shower_18
+  - first:
+      213: 3003200239167039074
+    second: SP_Shower_19
+  - first:
+      213: -3781972153969596756
+    second: SP_Shower_20
+  - first:
+      213: 6659699475446997862
+    second: SP_Shower_21
+  - first:
+      213: 200156941577796560
+    second: SP_Shower_22
+  - first:
+      213: 813983343655256823
+    second: SP_Shower_23
+  - first:
+      213: 2229011107070217829
+    second: SP_Shower_24
+  - first:
+      213: 4436151399618886823
+    second: SP_Shower_25
+  - first:
+      213: 5888790036953152839
+    second: SP_Shower_26
+  - first:
+      213: 4929346450275858099
+    second: SP_Shower_27
+  - first:
+      213: -436929305543837350
+    second: SP_Shower_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SP_Shower_0
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 63
+        width: 273
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5056455a2e601e10800000000000000
+      internalID: 2166352548863561820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 234
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1650e1b4a1ef7f1f0800000000000000
+      internalID: -1011060202438523551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 210
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e329b4c488e0940800000000000000
+      internalID: 5264294875709455956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_3
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 172
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3218129936b2670800000000000000
+      internalID: 8515009029817312212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_4
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 149
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e89b5f2cad64770800000000000000
+      internalID: 8594797469764259434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_5
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 125
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cdff6cf1e3599870800000000000000
+      internalID: 8690069186056027589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_6
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 97
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5beb04769ba44880800000000000000
+      internalID: -8627582323454645413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_7
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 59
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae470256f5e0b7bd0800000000000000
+      internalID: -2631493754386615062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_8
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 59
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469c2c7fbe7799c20800000000000000
+      internalID: 3213731664463317348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_9
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 70
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d20acb7bd4785c9e0800000000000000
+      internalID: -1601725324595519443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_10
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 72
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5821c0944ed0d4400800000000000000
+      internalID: 309919223487664773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 44
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d173256a1bc7f00800000000000000
+      internalID: 1115962135583071533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 56
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3004e88a31406b0800000000000000
+      internalID: -5331114444237831255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_13
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 52
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc83b1656622a300800000000000000
+      internalID: 261813945213619381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_14
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 45
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e058b047b57deee50800000000000000
+      internalID: 6840641671811269902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_15
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 43
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88463acb035327d10800000000000000
+      internalID: 2121816857884451976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_16
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 34
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a0871a33c70bc620800000000000000
+      internalID: 2795336528788160681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_17
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 39
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3183d7d55c553a1e0800000000000000
+      internalID: -2187810687806523373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_18
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 34
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fca885820ed879e0800000000000000
+      internalID: -1623303563255436042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_19
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 12
+        width: 6
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2666be4b4b28da920800000000000000
+      internalID: 3003200239167039074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_20
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 44
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6293c1d5cb38bc0800000000000000
+      internalID: -3781972153969596756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_21
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 26
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663afd863610c6c50800000000000000
+      internalID: 6659699475446997862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_22
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 20
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dbb21a8da917c200800000000000000
+      internalID: 200156941577796560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_23
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 31
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f208a3d989db4b00800000000000000
+      internalID: 813983343655256823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_24
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 12
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e0255cac90fee10800000000000000
+      internalID: 2229011107070217829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_25
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 16
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7acb228b130609d30800000000000000
+      internalID: 4436151399618886823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_26
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 10
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74db375a65f29b150800000000000000
+      internalID: 5888790036953152839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_27
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 16
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6768fca7e886440800000000000000
+      internalID: 4929346450275858099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Shower_28
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 18
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59f91f8c17bfe9f0800000000000000
+      internalID: -436929305543837350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SP_Shower_0: 2166352548863561820
+      SP_Shower_1: -1011060202438523551
+      SP_Shower_10: 309919223487664773
+      SP_Shower_11: 1115962135583071533
+      SP_Shower_12: -5331114444237831255
+      SP_Shower_13: 261813945213619381
+      SP_Shower_14: 6840641671811269902
+      SP_Shower_15: 2121816857884451976
+      SP_Shower_16: 2795336528788160681
+      SP_Shower_17: -2187810687806523373
+      SP_Shower_18: -1623303563255436042
+      SP_Shower_19: 3003200239167039074
+      SP_Shower_2: 5264294875709455956
+      SP_Shower_20: -3781972153969596756
+      SP_Shower_21: 6659699475446997862
+      SP_Shower_22: 200156941577796560
+      SP_Shower_23: 813983343655256823
+      SP_Shower_24: 2229011107070217829
+      SP_Shower_25: 4436151399618886823
+      SP_Shower_26: 5888790036953152839
+      SP_Shower_27: 4929346450275858099
+      SP_Shower_28: -436929305543837350
+      SP_Shower_3: 8515009029817312212
+      SP_Shower_4: 8594797469764259434
+      SP_Shower_5: 8690069186056027589
+      SP_Shower_6: -8627582323454645413
+      SP_Shower_7: -2631493754386615062
+      SP_Shower_8: 3213731664463317348
+      SP_Shower_9: -1601725324595519443
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

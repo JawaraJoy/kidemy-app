@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 120, y: 120}
-  m_Spacing: {x: 5, y: 5}
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 25, y: 25}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &3384018139623179177
@@ -557,6 +557,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 0bafa5fcc2bc1e84d8b7d32268ae4c8e, type: 2}
   background: {fileID: 21300000, guid: 3b10404c8f3f0c6438c311a2b690b766, type: 3}
   color: {r: 0.37486643, g: 0.30753997, b: 0.30753997, a: 0}
+  npcController: {fileID: 9100000, guid: 87da3143e33dd9d4e8098a520f7f61e8, type: 2}
   score: 10
   questionImage: {fileID: 0}
   questionAudio: {fileID: 0}

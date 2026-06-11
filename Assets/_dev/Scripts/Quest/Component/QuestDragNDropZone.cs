@@ -48,7 +48,7 @@ namespace EduGame
                     isSameZone = true;
                 }
 
-                item.transform.parent = transform;
+                item.transform.SetParent(transform);
                 item.transform.SetSiblingIndex(itemIndex);
 
                 if (!isSameZone)
@@ -117,10 +117,10 @@ namespace EduGame
 
                     if (slotLimitVerification && (!verify || quest.Verify(draggedItem, this)))
                     {
+                        AddItem(draggedItem);
+
                         if(answer)
                             quest.OnAnswered(true);
-
-                        AddItem(draggedItem);
 
                         OnAccept();
                     }

@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 1233503411207592021}
   - component: {fileID: 4767038371756794067}
   - component: {fileID: 613604066227590288}
-  - component: {fileID: 5548584821667026932}
+  - component: {fileID: 8980743468332237630}
   m_Layer: 5
   m_Name: NPC
   m_TagString: Untagged
@@ -170,10 +170,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1341022202585374223}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0}
-  m_AnchorMax: {x: 0.1, y: 0}
+  m_AnchorMin: {x: 0.1, y: 0.4}
+  m_AnchorMax: {x: 0.1, y: 0.4}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 0}
+  m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4767038371756794067
 CanvasRenderer:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6c3ff55cce7156e4ab7fc0b2639922b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 10e0800cc33d7f149877c89dc955dbc1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -213,20 +213,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5548584821667026932
-MonoBehaviour:
+--- !u!95 &8980743468332237630
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400029272999639553}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
-  m_AspectMode: 1
-  m_AspectRatio: 0.72
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ee0292fe0a32e0d4387871e6462a4a8d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &586345537471216498
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +593,7 @@ GameObject:
   - component: {fileID: 8488875955898211657}
   - component: {fileID: 5494171477637079563}
   - component: {fileID: 8842419708114591594}
+  - component: {fileID: 7565211676620395162}
   m_Layer: 0
   m_Name: Fail
   m_TagString: Untagged
@@ -634,6 +643,21 @@ MonoBehaviour:
   delay: 0
   delayStop: 0
   audioClip: {fileID: 8300000, guid: 01f4952eed488f9419d400c81386b808, type: 3}
+--- !u!114 &7565211676620395162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454020795896399989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0621548ddddb91040805a7d4a7993fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.FeedbackItemAnimation
+  delay: 0
+  delayStop: 0
+  animationName: Fail
 --- !u!1 &1516895060484420686
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +797,66 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1552967731464013336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314193677494121800}
+  - component: {fileID: 6177775187951103780}
+  - component: {fileID: 4133827288129598418}
+  m_Layer: 0
+  m_Name: Think
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &314193677494121800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552967731464013336}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2350469413094965650}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6177775187951103780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552967731464013336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340c6007e1537174c877feb772b779a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.Feedback
+--- !u!114 &4133827288129598418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552967731464013336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0621548ddddb91040805a7d4a7993fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.FeedbackItemAnimation
+  delay: 0
+  delayStop: 0
+  animationName: Think
 --- !u!1 &1647648949282339206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,6 +1438,8 @@ Transform:
   - {fileID: 2066683269050820868}
   - {fileID: 8499547564619414096}
   - {fileID: 8488875955898211657}
+  - {fileID: 6178076613745146908}
+  - {fileID: 314193677494121800}
   m_Father: {fileID: 3079495263401239039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5913596085635339954
@@ -6303,6 +6389,66 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!1 &2643108317196545900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6178076613745146908}
+  - component: {fileID: 5818175278132908258}
+  - component: {fileID: 6116997345700805553}
+  m_Layer: 0
+  m_Name: Idle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6178076613745146908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643108317196545900}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2350469413094965650}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5818175278132908258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643108317196545900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340c6007e1537174c877feb772b779a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.Feedback
+--- !u!114 &6116997345700805553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643108317196545900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0621548ddddb91040805a7d4a7993fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.FeedbackItemAnimation
+  delay: 0
+  delayStop: 0
+  animationName: Idle
 --- !u!1 &2871166216991185018
 GameObject:
   m_ObjectHideFlags: 0
@@ -7198,7 +7344,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3713327370358534345}
-  - component: {fileID: 4023759870076993878}
   m_Layer: 5
   m_Name: Teacher
   m_TagString: Untagged
@@ -7226,28 +7371,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &4023759870076993878
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4068557874937214859}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ee0292fe0a32e0d4387871e6462a4a8d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4159484587244905702
 GameObject:
   m_ObjectHideFlags: 0
@@ -7421,7 +7544,7 @@ MonoBehaviour:
   category: {fileID: 0}
   timer: {fileID: 4020118607892384557}
   background: {fileID: 7519748125573167325}
-  npc: {fileID: 3713327370358534345}
+  npc: {fileID: 1233503411207592021}
   npcDialog: {fileID: 2835687406002947134}
   popResult: {fileID: 3634373223474568201}
   correctTitle: {fileID: 1382281327184398228}
@@ -7438,8 +7561,10 @@ MonoBehaviour:
   buttonCharacter: {fileID: 0}
   correctFeedback: {fileID: 676795301757787957}
   wrongFeedback: {fileID: 5494171477637079563}
+  idleFeedback: {fileID: 5818175278132908258}
+  thinkFeedback: {fileID: 6177775187951103780}
   audioSource: {fileID: 4056242353772412095}
-  questPrefab: {fileID: 1443337414653971488, guid: 40a6e721d3c26484db2f549bc602940b, type: 3}
+  questPrefab: {fileID: 8344063676491614192, guid: 077156e976b94b44cabd3d6ba5e993c5, type: 3}
 --- !u!222 &1756416439628791414
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7885,7 +8010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.FeedbackItemAnimation
   delay: 0
   delayStop: 0
-  animationName: Jump
+  animationName: Win
 --- !u!1 &5357392038722351429
 GameObject:
   m_ObjectHideFlags: 0
@@ -8281,7 +8406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 481538687851454650}
   m_Layer: 5
-  m_Name: Frame
+  m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

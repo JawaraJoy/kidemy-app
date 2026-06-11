@@ -16,6 +16,7 @@ namespace EduGame
         [Header("Rule")]
         [SerializeField] protected bool autoSubmit;
         [SerializeField] private int score = 10;
+        [SerializeField] private float tresholdTime = 20;
 
 
         public string Id => id;
@@ -23,5 +24,6 @@ namespace EduGame
         public QuestCategory Category => category;
         public bool AutoSubmit => autoSubmit;
         public int Score => score;
+        public float TresholdTime => tresholdTime;
     }
 }

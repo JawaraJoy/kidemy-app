@@ -17,6 +17,7 @@ MonoBehaviour:
   category: 2
   autoSubmit: 0
   score: 10
+  tresholdTime: 0
   text: Color the picture, press button 'SUBMIT' when done
   canvas: {fileID: 2854874389893677318, guid: 81b4a880bae52154da8018b80224de7d, type: 3}
   attempt: 10

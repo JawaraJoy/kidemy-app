@@ -46,8 +46,6 @@ namespace EduGame
                     group.Id = groupIndex;
                     slots[group.Id] = group;
                     
-                    totalItem += group.Labels.Length;
-
                     if(!compiledMap.ContainsKey(group.Id))
                         compiledMap.Add(group.Id, new int[group.Labels.Length]);
 
@@ -63,6 +61,8 @@ namespace EduGame
 
                         itemIndex++;
                     }
+
+                    totalItem += group.Labels.Length;
 
                     groupIndex++;
                 }

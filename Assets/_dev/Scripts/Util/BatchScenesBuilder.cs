@@ -1,62 +1,49 @@
 #if UNITY_EDITOR
 using UnityEditor;
 using System.IO;
-using System.Collections.Generic;
+using UnityEngine;
 
 public class BatchScenesBuilder
 {
-    [MenuItem("Build/Build WebGL Scenes")]
-    public static void BuildAllScenes()
+    [MenuItem("Build/Build Scenes To HTML5")]
+    public static void BuildAllScenesToSeparateFolders()
     {
-        // 1. Define target folders
-        string[] scenes = {
-            "Assets/_dev/Scenes/Dev_001_FrogsCount_A.unity",
-            "Assets/_dev/Scenes/Dev_001_FrogsCount_B.unity",
-            "Assets/_dev/Scenes/Dev_001_FrogsCount_C.unity",
-            "Assets/_dev/Scenes/Dev_002_AdditionTrek_A.unity",
-            "Assets/_dev/Scenes/Dev_002_AdditionTrek_B.unity",
-            "Assets/_dev/Scenes/Dev_002_AdditionTrek_C.unity",
-            "Assets/_dev/Scenes/Dev_003_PatternJungle_A.unity",
-            "Assets/_dev/Scenes/Dev_003_PatternJungle_B.unity",
-            "Assets/_dev/Scenes/Dev_003_PatternJungle_C.unity",
-            "Assets/_dev/Scenes/Dev_004_PuzzleJungle_A.unity",
-            "Assets/_dev/Scenes/Dev_004_PuzzleJungle_B.unity",
-            "Assets/_dev/Scenes/Dev_004_PuzzleJungle_C.unity",
-            "Assets/_dev/Scenes/Dev_005_SoundQuest_A.unity",
-            "Assets/_dev/Scenes/Dev_005_SoundQuest_B.unity",
-            "Assets/_dev/Scenes/Dev_005_SoundQuest_C.unity",
-            "Assets/_dev/Scenes/Dev_006_LetterHunt_A.unity",
-            "Assets/_dev/Scenes/Dev_006_LetterHunt_B.unity",
-            "Assets/_dev/Scenes/Dev_006_LetterHunt_C.unity",
-            "Assets/_dev/Scenes/Dev_007_WordBuilder_A.unity",
-            "Assets/_dev/Scenes/Dev_007_WordBuilder_B.unity",
-            "Assets/_dev/Scenes/Dev_007_WordBuilder_C.unity",
-            "Assets/_dev/Scenes/Dev_008_StoryAdventure_A.unity",
-            "Assets/_dev/Scenes/Dev_008_StoryAdventure_B.unity",
-            "Assets/_dev/Scenes/Dev_008_StoryAdventure_C.unity",
-        };
+        // Get all scenes in the build settings (or replace this to target a specific folder)
+        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
         
-        string baseBuildPath = "Builds/";
-
-        // 2. Setup BuildPlayer Options
-        for (int i = 0; i < scenes.Length; i++)
+        if (scenes.Length == 0)
         {
-            string sceneName = Path.GetFileNameWithoutExtension(scenes[i]);
-            string buildPath = baseBuildPath + sceneName;
+            Debug.LogError("No scenes found in Build Settings! Please add them first.");
+            return;
+        }
 
-            // Create folder if it doesn't exist
-            if (!Directory.Exists(buildPath))
-                Directory.CreateDirectory(buildPath);
+        // Define base output directory
+        string baseOutputPath = Path.Combine(Application.dataPath, "../Builds/HTML5");
 
+        foreach (EditorBuildSettingsScene buildScene in scenes)
+        {
+            if (!buildScene.enabled) continue;
+
+            // Extract the scene name
+            string sceneName = Path.GetFileNameWithoutExtension(buildScene.path);
+
+            // Define the path to build specifically for this scene
+            string sceneOutputPath = Path.Combine(baseOutputPath, sceneName);
+
+            // Setup build player options
             BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
-            buildPlayerOptions.scenes = new[] { scenes[i] };
-            buildPlayerOptions.locationPathName = buildPath;
+            buildPlayerOptions.scenes = new[] { buildScene.path };
+            buildPlayerOptions.locationPathName = sceneOutputPath;
             buildPlayerOptions.target = BuildTarget.WebGL;
             buildPlayerOptions.options = BuildOptions.None;
 
-            // 3. Build the scene
+            Debug.Log($"Building scene '{sceneName}' to {sceneOutputPath}...");
+
+            // Perform the build
             BuildPipeline.BuildPlayer(buildPlayerOptions);
         }
+
+        Debug.Log("All scene builds completed!");
     }
 }
 #endif

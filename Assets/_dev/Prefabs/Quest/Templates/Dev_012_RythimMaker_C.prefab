@@ -259,6 +259,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: d655eb823f6ee2b4aaba7c365ba74829, type: 2}
   background: {fileID: 21300000, guid: 6fcd064ad665f6a44bcb6d08ae6aba7c, type: 3}
   color: {r: 0, g: 0.8666667, b: 1, a: 0}
+  npcController: {fileID: 9100000, guid: 8813f0802c58c5842b04c5613205aa2c, type: 2}
   score: 10
   questionImage: {fileID: 0}
   questionAudio: {fileID: 0}

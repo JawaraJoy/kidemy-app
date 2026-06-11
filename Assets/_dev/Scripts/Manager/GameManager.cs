@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
 namespace EduGame
@@ -37,6 +35,8 @@ namespace EduGame
         [Header("Feedback")]
         [SerializeField] private Feedback correctFeedback;
         [SerializeField] private Feedback wrongFeedback;
+        [SerializeField] private Feedback idleFeedback;
+        [SerializeField] private Feedback thinkFeedback;
 
         [Header("Audio")]
         [SerializeField] private AudioSource audioSource;
@@ -119,6 +119,11 @@ namespace EduGame
 
                     string timerText = m.ToString().PadLeft(2, '0') + ":" + s.ToString().PadLeft(2, '0');
 
+                    if(s%10 == 0)
+                        idleFeedback.Play(npc ? npc : transform);
+                    else if(s%5 == 0)
+                        thinkFeedback.Play(npc ? npc : transform);
+
                     timer.text = timerText;
 
                     yield return new WaitForSeconds(1);
@@ -141,6 +146,14 @@ namespace EduGame
                 background.sprite = template.Background;
 
             return template;
+        }
+
+        public virtual void SetNPC(RuntimeAnimatorController controller)
+        {
+            Animator animator = npc.GetComponent<Animator>();
+
+            if(animator)
+                animator.runtimeAnimatorController = controller;
         }
 
         public virtual void SetNPCDialog(string dialog)
@@ -180,6 +193,9 @@ namespace EduGame
                 star = 1;
             else if(star > 3)
                 star = 3;
+
+            if(star == 3 && quest.Data.TresholdTime > 0 && recordedTime > quest.Data.TresholdTime)
+                star = 2;
 
             ShowResult(star);
         }

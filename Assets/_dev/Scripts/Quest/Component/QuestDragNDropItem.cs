@@ -52,7 +52,7 @@ namespace EduGame
         public void OnBeginDrag(PointerEventData eventData)
         {
             if(GameManager.Instance)
-                transform.parent = GameManager.Instance.Canvas.transform;
+                transform.SetParent(GameManager.Instance.Canvas.transform);
 
             originalPosition = Rect.anchoredPosition;
 

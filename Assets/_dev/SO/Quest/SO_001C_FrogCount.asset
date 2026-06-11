@@ -17,6 +17,7 @@ MonoBehaviour:
   category: 0
   autoSubmit: 0
   score: 10
+  tresholdTime: 20
   question:
     image: {fileID: 0}
     text: How many frogs are there? Count it fast!

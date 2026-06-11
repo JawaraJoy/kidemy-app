@@ -1,6 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace EduGame
 {
@@ -12,6 +10,7 @@ namespace EduGame
         [Header("Theme")]
         [SerializeField] protected Sprite background;
         [SerializeField] protected Color color;
+        [SerializeField] protected RuntimeAnimatorController npcController;
         
         [Header("Rules")]
         [SerializeField] protected int score = 10;
@@ -21,11 +20,17 @@ namespace EduGame
 
         public Sprite Background => background;
         public Color Color => color;
+        public RuntimeAnimatorController NPCController => npcController;
+        
+        public SO_Quest Data => data;
         
         protected virtual void Start()
         {
             if(!data)
                 Debug.LogError("Quest not set");
+            
+            if(npcController)
+                GameManager.Instance.SetNPC(npcController);
 
             GameManager.Instance.InitQuest(data);
         }

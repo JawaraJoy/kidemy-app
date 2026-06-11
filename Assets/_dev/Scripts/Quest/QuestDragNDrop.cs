@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace EduGame
 {
-    public class QuestDragNDrop : Quest
+    public class QuestDragNDrop : QuestZonePairing
     {
         [Header("Data")]
         
@@ -22,6 +23,7 @@ namespace EduGame
         private SO_QuestDragNDrop dataDragNDrop;
         private QuestDragNDropItem[] items;
         private QuestDragNDropSlot[] slots;
+        private int unansweredQuestion = 0;
 
         protected override void Start()
         {
@@ -86,13 +88,14 @@ namespace EduGame
                     slots[i].SetSlot(dataDragNDrop.Slots[i]);
                 }
             }
+
+            SetDialog();
         }
 
         QuestDragNDropItem InstantiateItem(QuestDragNDropItem prefab)
         {
-            QuestDragNDropItem item = Instantiate(prefab ? prefab : itemPrefab);
+            QuestDragNDropItem item = Instantiate(prefab ? prefab : itemPrefab, itemsContainer);
 
-            item.transform.SetParent(itemsContainer);
             item.transform.localPosition = Vector3.zero;
             item.Rect.localScale = Vector3.one;
 
@@ -101,19 +104,12 @@ namespace EduGame
 
         QuestDragNDropSlot InstantiateSlot(QuestDragNDropSlot prefab)
         {
-            QuestDragNDropSlot slot = Instantiate(prefab ? prefab : slotPrefab);
+            QuestDragNDropSlot slot = Instantiate(prefab ? prefab : slotPrefab, slotsContainer);
 
-            slot.transform.SetParent(slotsContainer);
             slot.transform.localPosition = Vector3.zero;
             slot.Rect.localScale = Vector3.one;
 
             return slot;
-        }
-
-        public override void Reset()
-        {
-            foreach (var choice in items)
-                choice.Reset();
         }
 
         void RecalculateContainer()
@@ -147,7 +143,56 @@ namespace EduGame
             Invoke("RecalculateContainer", 0.5f);
         }
 
+        public override void OnAnswered(bool answer, bool submit = true)
+        {
+            if(dataDragNDrop.AutoSubmit)
+            {   
+                int answereds = 0;
+
+                foreach (var slot in slots)
+                    answereds += slot.DropZone.transform.childCount;
+                
+                if(answereds >= dataDragNDrop.Items.Length)
+                    Submit();
+            }
+        }
+
         public override void Submit(int star = 1)
+        {
+            int totalAnswers = dataDragNDrop.AnswerInOrder ? Sort() : Check();
+
+            if(totalAnswers == dataDragNDrop.Items.Length)
+                star = 3;
+            else if(totalAnswers/dataDragNDrop.Items.Length >= 0.5f)
+                star = 2;
+
+            GameManager.Instance.Submit(star);
+        }
+
+        protected virtual int Sort()
+        {
+            Dictionary<int, int> answers = new Dictionary<int, int>();
+
+            int totalAnswers = 0;
+
+            foreach (var slot in slots)
+            {
+                QuestDragNDropItem[] answereds = slot.GetComponentsInChildren<QuestDragNDropItem>();
+                
+                if(dataDragNDrop.CompiledMap[slot.GroupData.Id].Length == answereds.Length)
+                {
+                    for(int i = 0; i < dataDragNDrop.CompiledMap[slot.GroupData.Id].Length; i++)
+                    {
+                        if(dataDragNDrop.CompiledMap[slot.GroupData.Id][i] == answereds[i].ItemData.Id)
+                            totalAnswers++;
+                    }
+                }
+            }
+
+            return totalAnswers;
+        }
+
+        protected virtual int Check()
         {
             int totalAnswers = 0;
 
@@ -163,17 +208,21 @@ namespace EduGame
                 }
             }
 
-            if(totalAnswers == dataDragNDrop.Items.Length)
-                star = 3;
-            else if(totalAnswers/dataDragNDrop.Items.Length >= 0.5f)
-                star = 2;
-
-            GameManager.Instance.Submit(star);
+            return totalAnswers;
         }
 
-        public virtual void Reject()
+        public override void Reset()
         {
-            
+            foreach (var choice in items)
+                choice.transform.SetParent(itemsContainer);
+        
+            SetDialog();
+        }
+
+        void SetDialog()
+        {
+            if (!string.IsNullOrEmpty(dataDragNDrop.Question.Text))
+                GameManager.Instance.SetNPCDialog(dataDragNDrop.Question.Text);
         }
     }
 }

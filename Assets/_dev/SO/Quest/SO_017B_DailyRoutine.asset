@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_017B_DailyRoutine
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: 017B
+  title: Daily Routine
+  category: 4
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
+  question:
+    image: {fileID: 0}
+    text: What you do after school
+    audio: {fileID: 0}
+  groups:
+  - label:
+      image: {fileID: 0}
+      text: 1
+      audio: {fileID: 0}
+    limit: 5
+    labels:
+    - image: {fileID: 21300000, guid: 1114ba327ba01a94f9c04e973bd35752, type: 3}
+      text: Go Home
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 4ed0adb871115ed40a3feb5aca3c7108, type: 3}
+      text: Play Outside
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: af6f9bf7b79732c4eb88b855b1cad99b, type: 3}
+      text: Bath
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: f2361592f247301449a425516208f649, type: 3}
+      text: Dinner
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: c696f271bf601724ebe27f4eb15510e7, type: 3}
+      text: Sleep
+      audio: {fileID: 0}
+  randomizeChoice: 1
+  answerInOrder: 1
+  timer: 0

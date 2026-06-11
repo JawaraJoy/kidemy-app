@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_018C_DailySchedule
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: 018B
+  title: Daily Schedule
+  category: 4
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 40
+  question:
+    image: {fileID: 0}
+    text: Categorize Your Activity at Holiday
+    audio: {fileID: 0}
+  groups:
+  - label:
+      image: {fileID: 21300000, guid: c9b4f9896961fce4496e2481cb1fbc36, type: 3}
+      text: Morning
+      audio: {fileID: 0}
+    limit: 3
+    labels:
+    - image: {fileID: 21300000, guid: de57d52d23a6ea34294b3c125b6434ad, type: 3}
+      text: Wake Up
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 82d8027ffc339e347ba58e6ba3a2cff3, type: 3}
+      text: Breakfast
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: abf9db58c21768044885ade535261ce3, type: 3}
+      text: Gardening
+      audio: {fileID: 0}
+  - label:
+      image: {fileID: 21300000, guid: 09c1f6a1292643349aa96c7a492b1fb8, type: 3}
+      text: Afternoon
+      audio: {fileID: 0}
+    limit: 3
+    labels:
+    - image: {fileID: 21300000, guid: 3cd2804cf30c3004caf2d4d74eddc942, type: 3}
+      text: Lunch
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 2e97fbf14efdb844c912612c2879b6d7, type: 3}
+      text: Rest
+      audio: {fileID: 0}
+  - label:
+      image: {fileID: 21300000, guid: 959e37526aa277345baebd9d42999d58, type: 3}
+      text: Night
+      audio: {fileID: 0}
+    limit: 3
+    labels:
+    - image: {fileID: 21300000, guid: af6f9bf7b79732c4eb88b855b1cad99b, type: 3}
+      text: Showering
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: f2361592f247301449a425516208f649, type: 3}
+      text: Dinner
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: c696f271bf601724ebe27f4eb15510e7, type: 3}
+      text: Sleep
+      audio: {fileID: 0}
+  randomizeChoice: 1
+  answerInOrder: 0
+  timer: 0

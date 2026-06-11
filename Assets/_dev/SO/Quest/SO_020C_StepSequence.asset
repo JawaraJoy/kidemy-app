@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_020C_StepSequence
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: 020C
+  title: StepSequence
+  category: 4
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 40
+  question:
+    image: {fileID: 0}
+    text: Put Step By Order
+    audio: {fileID: 0}
+  groups:
+  - label:
+      image: {fileID: 0}
+      text: 1
+      audio: {fileID: 0}
+    limit: 5
+    labels:
+    - image: {fileID: 21300000, guid: e9e9fc7d9149f9949b347578a3af0f16, type: 3}
+      text: Crouching and Cover your head
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: cf22fbf800d21ce4fbbfff9006bb39ca, type: 3}
+      text: Crawl to sturdy table and stay under it
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 443e71909229e7741a0ececcc73f8834, type: 3}
+      text: Wait until shake gone
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 6d899a81e61a6d9408e015329b73e2a8, type: 3}
+      text: Try to get out
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 1114ba327ba01a94f9c04e973bd35752, type: 3}
+      text: Meet at safe spot
+      audio: {fileID: 0}
+  randomizeChoice: 1
+  answerInOrder: 1
+  timer: 0

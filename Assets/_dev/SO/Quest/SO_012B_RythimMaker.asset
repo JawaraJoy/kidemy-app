@@ -17,6 +17,7 @@ MonoBehaviour:
   category: 2
   autoSubmit: 0
   score: 10
+  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Tap the circle on the left, when animal passthrough
