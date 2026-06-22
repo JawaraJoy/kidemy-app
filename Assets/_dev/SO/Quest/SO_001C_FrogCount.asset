@@ -52,15 +52,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 0}
-    text: 14
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: 20
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: 21
+    text: 19
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

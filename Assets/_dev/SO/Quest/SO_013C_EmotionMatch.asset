@@ -20,23 +20,28 @@ MonoBehaviour:
   tresholdTime: 20
   question:
     image: {fileID: 0}
-    text: How does Bunny feel?
+    text: What emotion is Bunny feeling right now?
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:
-  - image: {fileID: 21300000, guid: e89e1513d19d637409d234a6ecde838d, type: 3}
-    text: 
+  - image: {fileID: 21300000, guid: 254b2de9614a65b49ae47c1f091881e4, type: 3}
+    text: Happy
+    color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: e43fe595a60d1c449bdc0292d54575d4, type: 3}
-    text: 
+  - image: {fileID: 21300000, guid: c921e70933a944b479a208417e447493, type: 3}
+    text: Sad
+    color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: be72bd80224c8184babacca0e00d2710, type: 3}
-    text: 
+  - image: {fileID: 21300000, guid: 826a974a7daf6f64a98dc8925b4e0d1b, type: 3}
+    text: Shock
+    color: {r: 1, g: 0.54509807, b: 0.8352941, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 7040895370089211987, guid: aa0d5d3831383cb4eb3e4521ff71396f, type: 3}
-    text: 
+  - image: {fileID: 21300000, guid: f018856afe6c4874d9ec8e67e8c33f76, type: 3}
+    text: Scared
+    color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
   timer: 0

@@ -12,8 +12,8 @@ namespace EduGame
         [SerializeField] private QuestUtilLabelMatching[] matches;
 
         [Header("Rule")]
-        [SerializeField] private int attempt = 10;
-        [SerializeField] private float timer = 0;
+        //[SerializeField] private int attempt = 10;
+        //[SerializeField] private float timer = 0;
 
         public string Text => text;
         public QuestUtilLabelMatching[] Matches => GetMatches();

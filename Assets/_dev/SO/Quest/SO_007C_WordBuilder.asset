@@ -26,42 +26,37 @@ MonoBehaviour:
   - image: {fileID: 0}
     text: B
     audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     isAnswer: 0
   - image: {fileID: 0}
     text: E
     audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     isAnswer: 0
   - image: {fileID: 0}
     text: G
     audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     isAnswer: 1
   - image: {fileID: 0}
     text: H
     audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     isAnswer: 0
   - image: {fileID: 0}
-    text: O
+    text: D
     audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: R
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     isAnswer: 0
   - image: {fileID: 0}
     text: A
     audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     isAnswer: 0
   - image: {fileID: 0}
     text: J
     audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: P
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: S
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

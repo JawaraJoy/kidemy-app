@@ -20,50 +20,62 @@ MonoBehaviour:
   tresholdTime: 0
   question:
     image: {fileID: 0}
-    text: Categorize Your Activity
+    text: Categorize the activities
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   groups:
   - label:
-      image: {fileID: 21300000, guid: c9b4f9896961fce4496e2481cb1fbc36, type: 3}
+      image: {fileID: 21300000, guid: 84c9fc5e5de83f143991a927d4a13dde, type: 3}
       text: Morning
+      color: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
-    limit: 3
+    limit: 4
     labels:
     - image: {fileID: 21300000, guid: de57d52d23a6ea34294b3c125b6434ad, type: 3}
       text: Wake Up
+      color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
       audio: {fileID: 0}
     - image: {fileID: 21300000, guid: 82d8027ffc339e347ba58e6ba3a2cff3, type: 3}
       text: Breakfast
+      color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
       audio: {fileID: 0}
     - image: {fileID: 21300000, guid: b06acd95387066e468c477a6ce06fa3d, type: 3}
       text: School
+      color: {r: 1, g: 0.54509807, b: 0.8352941, a: 1}
       audio: {fileID: 0}
   - label:
-      image: {fileID: 21300000, guid: 09c1f6a1292643349aa96c7a492b1fb8, type: 3}
+      image: {fileID: 21300000, guid: f81dd1b79d243d34db956465bce50339, type: 3}
       text: Afternoon
+      color: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
-    limit: 3
+    limit: 4
     labels:
     - image: {fileID: 21300000, guid: 1114ba327ba01a94f9c04e973bd35752, type: 3}
       text: Go Home
+      color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
       audio: {fileID: 0}
     - image: {fileID: 21300000, guid: 3cd2804cf30c3004caf2d4d74eddc942, type: 3}
       text: Lunch
+      color: {r: 0, g: 0.84313726, b: 0.039215688, a: 1}
       audio: {fileID: 0}
     - image: {fileID: 21300000, guid: 4ed0adb871115ed40a3feb5aca3c7108, type: 3}
       text: Play Outside
+      color: {r: 0.8276967, g: 0.63738453, b: 0.580036, a: 1}
       audio: {fileID: 0}
   - label:
-      image: {fileID: 21300000, guid: 959e37526aa277345baebd9d42999d58, type: 3}
+      image: {fileID: 21300000, guid: a57a0fbe42aebca45b9cd4b618ef0980, type: 3}
       text: Night
+      color: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
-    limit: 3
+    limit: 4
     labels:
     - image: {fileID: 21300000, guid: f2361592f247301449a425516208f649, type: 3}
       text: Dinner
+      color: {r: 0.8846525, g: 0.9558562, b: 0.5800132, a: 1}
       audio: {fileID: 0}
     - image: {fileID: 21300000, guid: c696f271bf601724ebe27f4eb15510e7, type: 3}
       text: Sleep
+      color: {r: 0.8608063, g: 0.64006275, b: 0.998576, a: 1}
       audio: {fileID: 0}
   randomizeChoice: 1
   answerInOrder: 0

@@ -9,7 +9,7 @@ namespace EduGame
     public class QuestUtilRegionalDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
     {
         [Range(0, 1)]
-        [SerializeField] private float alphaThreshold = 0.1f;
+        //[SerializeField] private float alphaThreshold = 0.1f;
 
         [SerializeField] private UnityEvent onclickEvent = new UnityEvent();
 

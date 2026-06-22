@@ -30,6 +30,7 @@ namespace EduGame
 
         private Color bindedColor = EmptyColor;
 
+        private QuestColoringCursor coloringCursor;
         private QuestColoringPalette[] palettes;
         private QuestColoringField[] fields;
 
@@ -37,6 +38,8 @@ namespace EduGame
 
         void Awake()
         {
+            coloringCursor = GetComponent<QuestColoringCursor>();
+
             if (!canvasContainer)
                 Debug.LogError("Canvas not set");
 
@@ -92,6 +95,10 @@ namespace EduGame
             // Assign SelectedColor to brush
             brush.SetColor("_BrushColor", bindedColor);
             brush.SetFloat("_BrushSize", brushSize);
+            
+            if(coloringCursor)
+                coloringCursor.SetToCustom(color);
+
         }
 
         QuestColoringPalette InstantiatePalette(Color color)
@@ -146,6 +153,9 @@ namespace EduGame
 
         public override void Submit(int star = 1)
         {
+            if(coloringCursor)
+                coloringCursor.ResetToDefault();
+
             float appraisal = 0;
 
             if(fields.Length > 0)

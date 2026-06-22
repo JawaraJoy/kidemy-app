@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -6,9 +7,10 @@ namespace EduGame
 {
     public class QuestDragNDropZone : MonoBehaviour, IDropHandler
     {
-        public enum DisplayMode { Normal, Fill, ScaledUp, ScaledDown, FollowParent }
+        public enum DisplayMode { Normal, Dynamic, Sticky, Fill, ScaledUp, ScaledDown, ScaledDown2, FollowParent }
 
         [SerializeField] private DisplayMode displayMode;
+        [SerializeField] private TMP_Text dropInfo;
         [SerializeField] private bool verify;
         [SerializeField] private bool answer;
 
@@ -19,6 +21,7 @@ namespace EduGame
         private QuestDragNDropItem[] items;
         private QuestDragNDropSlot slot;
         private QuestZonePairing quest;
+        private GridLayoutGroup grid;
         private Animator animator;
 
         public QuestDragNDropItem[] Items => items;
@@ -31,6 +34,7 @@ namespace EduGame
             quest = GetComponentInParent<QuestZonePairing>();
 
             animator = GetComponent<Animator>();
+            grid = GetComponentInChildren<GridLayoutGroup>();
 
             RegisterItems();
         }
@@ -61,10 +65,16 @@ namespace EduGame
 
                 if (displayMode == DisplayMode.Fill)
                     FillZone(item);
+                else if (displayMode == DisplayMode.Dynamic)
+                    Dynamic(item);
+                else if (displayMode == DisplayMode.Sticky)
+                    Sticky(item);
                 else if (displayMode == DisplayMode.ScaledUp)
                     Scaled(item, 2);
                 else if (displayMode == DisplayMode.ScaledDown)
                     Scaled(item, 0.5f);
+                else if (displayMode == DisplayMode.ScaledDown2)
+                    Scaled(item, 0.75f);
                 else if (displayMode == DisplayMode.FollowParent)
                     FollowParent(item);
                 else if (displayMode == DisplayMode.Normal)
@@ -80,10 +90,21 @@ namespace EduGame
 
             int x = 0;
 
-            foreach (Transform child in transform)
+            if(transform.childCount > 0)
             {
-                items[x] = child.GetComponent<QuestDragNDropItem>();
-                x++;
+                foreach (Transform child in transform)
+                {
+                    items[x] = child.GetComponent<QuestDragNDropItem>();
+                    x++;
+                }
+                
+                if(dropInfo)
+                    dropInfo.gameObject.SetActive(false);
+            }
+            else
+            {
+                if(dropInfo)
+                    dropInfo.gameObject.SetActive(true);
             }
         }
 
@@ -107,6 +128,8 @@ namespace EduGame
 
         public void OnDrop(PointerEventData eventData)
         {
+            Debug.Log(eventData.pointerDrag);
+
             if (eventData.pointerDrag != null)
             {
                 QuestDragNDropItem draggedItem = eventData.pointerDrag.GetComponent<QuestDragNDropItem>();
@@ -138,15 +161,21 @@ namespace EduGame
         public void ReInsertItem(QuestDragNDropItem item)
         {
             int itemIndex = GetItemIndex(item);
-            item.transform.parent = transform;
+            item.transform.SetParent(transform);
             item.transform.SetSiblingIndex(itemIndex);
 
             if (displayMode == DisplayMode.Fill)
                 FillZone(item);
+            else if (displayMode == DisplayMode.Dynamic)
+                Dynamic(item);
+            else if (displayMode == DisplayMode.Sticky)
+                Sticky(item);
             else if (displayMode == DisplayMode.ScaledUp)
                 Scaled(item, 2);
             else if (displayMode == DisplayMode.ScaledDown)
                 Scaled(item, 0.5f);
+            else if (displayMode == DisplayMode.ScaledDown2)
+                Scaled(item, 0.75f);
             else if (displayMode == DisplayMode.FollowParent)
                 FollowParent(item);
             else if (displayMode == DisplayMode.Normal)
@@ -155,7 +184,45 @@ namespace EduGame
             RegisterItems();
         }
 
+        public void Dynamic(QuestDragNDropItem item)
+        {
+            RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+
+            if(grid)
+            {
+                Debug.Log(rect.rect.height + " > " + grid.cellSize.y);
+                if(rect.rect.width > grid.cellSize.x)
+                    Scaled(item, grid.cellSize.x/rect.rect.width);
+                else if(rect.rect.height > grid.cellSize.y)
+                    Scaled(item, grid.cellSize.y/rect.rect.height);
+                else
+                    Sticky(item);
+            }
+            else
+                Normal(item);
+        }
+
         public void Normal(QuestDragNDropItem item)
+        {
+            /*
+            RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+            RectTransform rectParent = item.transform.GetComponent<RectTransform>();
+
+            rectParent.pivot = Vector2.one * 0.5f;
+            rectParent.anchorMax = Vector2.one * 0.5f;
+            rectParent.anchorMin = Vector2.one * 0.5f;
+
+            rectParent.anchoredPosition = Vector2.zero;
+
+            rect.pivot = Vector2.one * 0.5f;
+            rect.anchorMax = Vector2.one * 0.5f;
+            rect.anchorMin = Vector2.one * 0.5f;
+
+            rect.anchoredPosition = Vector2.zero;
+            */
+        }
+
+        public void Sticky(QuestDragNDropItem item)
         {
             RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
             RectTransform rectParent = item.transform.GetComponent<RectTransform>();
@@ -169,6 +236,8 @@ namespace EduGame
             rect.pivot = Vector2.one * 0.5f;
             rect.anchorMax = Vector2.one * 0.5f;
             rect.anchorMin = Vector2.one * 0.5f;
+
+            rect.localScale = Vector3.one;
 
             rect.anchoredPosition = Vector2.zero;
         }

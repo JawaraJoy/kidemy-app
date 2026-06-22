@@ -20,23 +20,28 @@ MonoBehaviour:
   tresholdTime: 0
   question:
     image: {fileID: 0}
-    text: How is Koala's feeling?
+    text: How is Froggy's feeling?
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:
-  - image: {fileID: 21300000, guid: c14be7c4a11c276489e530aa4d893193, type: 3}
+  - image: {fileID: 21300000, guid: 181b3d42214bd874c951f03cc286b3a8, type: 3}
     text: Excited
+    color: {r: 0.5125027, g: 0.7935208, b: 0.46116865, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 1f21a08cfca15c347b6021891cbfa82b, type: 3}
+  - image: {fileID: 21300000, guid: ce8f847cc5bf1b34bba86e9571dfda09, type: 3}
     text: Worried
+    color: {r: 1, g: 0.853639, b: 0.47864014, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: 21300000, guid: c6e95c71ae8f83e40b98cf4385bfe130, type: 3}
+  - image: {fileID: 21300000, guid: a406fb871ccb0b742b223bcc7d3de4bd, type: 3}
     text: Calm
+    color: {r: 0.47864014, g: 0.9442153, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: ee06fd9a25ce8474986961eeb753aee2, type: 3}
+  - image: {fileID: 21300000, guid: e28ab21b50634fd4bb705fc556db6448, type: 3}
     text: Tired
+    color: {r: 1, g: 0.6666074, b: 0.6666074, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
   m_Name: SO_008C_StoryAdventure
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
-  id: 008A
+  id: 008CSSS
   title: StoryAdventure
   category: 1
   autoSubmit: 0
@@ -20,27 +20,28 @@ MonoBehaviour:
   tresholdTime: 20
   question:
     image: {fileID: 0}
-    text: What the story not said?
+    text: What flavor is the popsicle?
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Sophie solve puzzle
+  - image: {fileID: 21300000, guid: cb48a88b0d0c7724eaff099f9c007434, type: 3}
+    text: Strawberry
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Sophie meet medieval boy
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Sophie see flying car
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Sophie having fun
+  - image: {fileID: 21300000, guid: a93b74c316410e34a8144457c52b48cf, type: 3}
+    text: Orange
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Sophie is confused
+  - image: {fileID: 21300000, guid: dcba83527e540b94b9e2d8921cbc5e0d, type: 3}
+    text: Melon
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 01540d18261e4d448bdbe7b16f8c54f1, type: 3}
+    text: Watermelon
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

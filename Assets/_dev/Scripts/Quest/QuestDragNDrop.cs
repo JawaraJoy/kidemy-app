@@ -23,7 +23,7 @@ namespace EduGame
         private SO_QuestDragNDrop dataDragNDrop;
         private QuestDragNDropItem[] items;
         private QuestDragNDropSlot[] slots;
-        private int unansweredQuestion = 0;
+        //private int unansweredQuestion = 0;
 
         protected override void Start()
         {
@@ -215,7 +215,10 @@ namespace EduGame
         {
             foreach (var choice in items)
                 choice.transform.SetParent(itemsContainer);
-        
+
+            foreach (var slot in slots)
+                slot.DropZone.RegisterItems();
+
             SetDialog();
         }
 

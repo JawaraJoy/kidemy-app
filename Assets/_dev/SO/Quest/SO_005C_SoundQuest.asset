@@ -20,19 +20,23 @@ MonoBehaviour:
   tresholdTime: 20
   question:
     image: {fileID: 0}
-    text: 
+    text: What starts with this sound?
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 61f95dd3090956f479579978271d61c9, type: 3}
   choices:
   - image: {fileID: -1690701659134126745, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
     text: Trumpet
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
   - image: {fileID: 1325350862766022879, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
     text: Flute
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: -2504376117917555374, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
     text: Saxophone
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

@@ -20,19 +20,23 @@ MonoBehaviour:
   tresholdTime: 0
   question:
     image: {fileID: 0}
-    text: What Start with this sound?
+    text: What starts with this sound?
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 61f95dd3090956f479579978271d61c9, type: 3}
   choices:
   - image: {fileID: 2120956924630866063, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
     text: Rabbit
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 5926469055973327904, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
     text: Dog
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: -221739221237478197, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
     text: Cat
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
   timer: 0

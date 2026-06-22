@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace EduGame
 {
@@ -25,7 +26,12 @@ namespace EduGame
 
         protected override void Awake()
         {
-            base.Awake();
+            base.Awake();        
+        }
+
+        public override void Init()
+        {
+            base.Init();
 
             rb = GetComponent<Rigidbody2D>();
 
@@ -33,16 +39,11 @@ namespace EduGame
                 rb.gravityScale = 0;
             else
                 Debug.LogError("Rigidbody not found");
-                
-            originalPosition = rb.position;
-        }
-
-        public override void Init()
-        {
-            base.Init();
 
             Rect.localScale = Vector3.one;
             Rect.anchoredPosition = Vector2.zero;
+
+            originalPosition = rb.position;
         }
 
         public void Setup(float speed, float delay, AudioClip clip = null)
@@ -67,10 +68,19 @@ namespace EduGame
             if(delay > 0)
                 yield return new WaitForSeconds(delay);
 
+            originalPosition = rb.position;
+        
             while (!isDone)
             {
-                rb.MovePosition(transform.position + Vector3.left * speed);
-                yield return new WaitForSeconds(Time.deltaTime);
+                // 1. Calculate the next target position using fixedDeltaTime
+                Vector2 currentPosition = rb.position;
+                Vector2 targetPosition = currentPosition + (Vector2.left * (speed * 60) * Time.fixedDeltaTime);
+
+                // 2. Teleport the physics body smoothly to the new position
+                rb.MovePosition(targetPosition);
+
+                // 3. CRITICAL: Wait exactly for the next physics loop calculation
+                yield return new WaitForFixedUpdate();
             }
 
             isPlaying = false;
@@ -80,6 +90,7 @@ namespace EduGame
         public void OnBeat(bool success = true)
         {
             isDone = true;
+            StopAllCoroutines();
 
             if(success)
             {
@@ -89,6 +100,7 @@ namespace EduGame
                 quest.OnAnswered(true);
             }
 
+            
             rb.MovePosition(originalPosition);
         }
 

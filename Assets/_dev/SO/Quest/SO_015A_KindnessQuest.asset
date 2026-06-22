@@ -20,19 +20,23 @@ MonoBehaviour:
   tresholdTime: 0
   question:
     image: {fileID: 0}
-    text: What the kindest choice?
+    text: Which choice is the kindest?
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:
-  - image: {fileID: 21300000, guid: c877012766ffbf64f9bf8b81c0f74df6, type: 3}
-    text: Go help the Bunny, and ask if she's okay
+  - image: {fileID: 21300000, guid: f35285223987ec1429ad31d013131d2d, type: 3}
+    text: Help her
+    color: {r: 0.79476684, g: 0.94518614, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Keep playing, she'll be fine
+  - image: {fileID: 21300000, guid: f5fef254fdec0bc4fb648843ed290051, type: 3}
+    text: Ignore her
+    color: {r: 1, g: 0.867901, b: 0.6666074, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 9dc3637fcdb56d84bb56eee24d708595, type: 3}
-    text: Laugh with your friends
+  - image: {fileID: 21300000, guid: 2308d430622cc7840a9e4f1dbe67025f, type: 3}
+    text: Laugh at her
+    color: {r: 1, g: 0.76059103, b: 0.9133174, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

@@ -21,28 +21,35 @@ MonoBehaviour:
   question:
     image: {fileID: 0}
     text: Put the morning steps in the right order!
+    color: {r: 0, g: 0, b: 0, a: 0}
     audio: {fileID: 0}
   groups:
   - label:
       image: {fileID: 0}
       text: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
       audio: {fileID: 0}
-    limit: 5
+    limit: 6
     labels:
     - image: {fileID: 21300000, guid: de57d52d23a6ea34294b3c125b6434ad, type: 3}
       text: Wake Up
+      color: {r: 0.36862746, g: 0.83137256, b: 1, a: 0}
       audio: {fileID: 0}
     - image: {fileID: 21300000, guid: faec26b660adf294ebcaf502164197df, type: 3}
       text: Brush Teeth
+      color: {r: 1, g: 0.7529412, b: 0.3764706, a: 0}
       audio: {fileID: 0}
     - image: {fileID: 21300000, guid: e9d428977dd6d8e4e94a6c9addf6ae6f, type: 3}
       text: Get Dressed
+      color: {r: 1, g: 0.54509807, b: 0.8352941, a: 0}
       audio: {fileID: 0}
     - image: {fileID: 21300000, guid: 82d8027ffc339e347ba58e6ba3a2cff3, type: 3}
       text: Eat Breakfast
+      color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 0}
       audio: {fileID: 0}
     - image: {fileID: 21300000, guid: 6e85724f618218f40b7b558d95bd2109, type: 3}
       text: Grab Backpack
+      color: {r: 0, g: 0.84478456, b: 0.0411286, a: 0}
       audio: {fileID: 0}
   randomizeChoice: 1
   answerInOrder: 1

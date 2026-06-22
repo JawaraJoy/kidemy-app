@@ -21,39 +21,33 @@ MonoBehaviour:
   question:
     image: {fileID: 0}
     text: Listen and choose the matching sound
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:
   - image: {fileID: 0}
     text: FA
+    color: {r: 0, g: 0.7490196, b: 0.14901961, a: 1}
     audio: {fileID: 8300000, guid: f32e5c57c28ed1c4eae9e5aebdff830d, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: SOL
+    color: {r: 1, g: 0.53333336, b: 0, a: 1}
     audio: {fileID: 8300000, guid: e37e2f2146931f441ac0ab6df146afac, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: SI
+    color: {r: 1, g: 0.03137255, b: 0, a: 1}
     audio: {fileID: 8300000, guid: af5e4b3478185a74aa68bfeb9494a41f, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: LA
+    color: {r: 1, g: 0, b: 0.84313726, a: 1}
     audio: {fileID: 8300000, guid: ed4e505f789248045b65fc753c983b68, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: MI
+    color: {r: 0, g: 0.49019608, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 6cca2ebbd62a78f4d994f2ab6e893330, type: 3}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: DO
-    audio: {fileID: 8300000, guid: a71e0c9653afb7941b8fc733b817b570, type: 3}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: RE
-    audio: {fileID: 8300000, guid: 6ab057fedc9284f41836fb5ecdc05b47, type: 3}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: DO
-    audio: {fileID: 8300000, guid: 5ee79bc57df81994db76a84320f997de, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

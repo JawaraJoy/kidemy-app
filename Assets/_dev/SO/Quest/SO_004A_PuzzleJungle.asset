@@ -39,5 +39,13 @@ MonoBehaviour:
     text: 
     audio: {fileID: 0}
     isAnswer: 0
+  - image: {fileID: -7989704848763042235, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+    text: 
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 498159134, guid: b2bde88cd595fbd499ab3cfc9d0763e5, type: 3}
+    text: 
+    audio: {fileID: 0}
+    isAnswer: 0
   timer: 0
   randomizeChoice: 0

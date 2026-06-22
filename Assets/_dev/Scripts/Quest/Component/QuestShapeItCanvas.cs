@@ -19,8 +19,6 @@ namespace EduGame
             items = GetComponentsInChildren<QuestShapeItItem>();
             zones = GetComponentsInChildren<QuestDragNDropZone>();
 
-            Debug.Log(items.Length);
-
             if(!Rect)
                 Debug.LogError("Gameobject is not UI");
 

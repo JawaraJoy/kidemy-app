@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1280, y: 512}
+  m_SizeDelta: {x: 1140, y: 456}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6056736762469817533
 CanvasRenderer:
@@ -533,6 +533,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Container_6x2
       objectReference: {fileID: 0}
+    - target: {fileID: 4593433973833172433, guid: 64464eaf0637a344baed789655d9d46e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593433973833172433, guid: 64464eaf0637a344baed789655d9d46e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593433973833172433, guid: 64464eaf0637a344baed789655d9d46e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593433973833172433, guid: 64464eaf0637a344baed789655d9d46e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593433973833172433, guid: 64464eaf0637a344baed789655d9d46e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593433973833172433, guid: 64464eaf0637a344baed789655d9d46e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593433973833172433, guid: 64464eaf0637a344baed789655d9d46e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593433973833172433, guid: 64464eaf0637a344baed789655d9d46e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4609138655397346279, guid: 64464eaf0637a344baed789655d9d46e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -702,14 +734,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 10
+    m_Right: 10
+    m_Top: 10
+    m_Bottom: 10
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 128}
+  m_CellSize: {x: 140, y: 118}
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2

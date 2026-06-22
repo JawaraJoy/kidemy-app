@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.929317, y: -31.096014}
-  m_SizeDelta: {x: 175.216, y: 102.1517}
+  m_AnchoredPosition: {x: -47.4566, y: -28.4453}
+  m_SizeDelta: {x: 165, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6192619459619028192
 MonoBehaviour:
@@ -51,7 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799f9a1bf62cdd54883667f48066051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropZone
-  displayMode: 0
+  displayMode: 2
+  dropInfo: {fileID: 0}
   verify: 1
   answer: 1
   acceptSound: {fileID: 8300000, guid: 064d1d7340a63c64f8650899ce5cf0df, type: 3}
@@ -130,7 +131,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 303.278, y: 0}
+  m_SizeDelta: {x: 285, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5852610744629257737
 CanvasRenderer:
@@ -183,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
-  m_AspectRatio: 12.107438
+  m_AspectRatio: 12.391304
 --- !u!1 &925159715203011028
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +259,7 @@ MonoBehaviour:
   text: {fileID: 0}
   audioPlayer: {fileID: 0}
   image: {fileID: 2030503409029179599}
+  tint: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}
   canBeRotated: 1
@@ -297,8 +299,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 83.188034, y: -23.69729}
-  m_SizeDelta: {x: 147.8573, y: 116.9494}
+  m_AnchoredPosition: {x: 78.2888, y: -21.9526}
+  m_SizeDelta: {x: 138, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7305305677493417476
 MonoBehaviour:
@@ -312,7 +314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799f9a1bf62cdd54883667f48066051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropZone
-  displayMode: 0
+  displayMode: 2
+  dropInfo: {fileID: 0}
   verify: 1
   answer: 1
   acceptSound: {fileID: 8300000, guid: 064d1d7340a63c64f8650899ce5cf0df, type: 3}
@@ -391,7 +394,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 176, y: 0}
+  m_SizeDelta: {x: 163, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4460388261267959427
 CanvasRenderer:
@@ -444,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
-  m_AspectRatio: 1.3538462
+  m_AspectRatio: 1.3360655
 --- !u!1 &1224138862924357027
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +522,7 @@ MonoBehaviour:
   text: {fileID: 0}
   audioPlayer: {fileID: 0}
   image: {fileID: 3330995919729265998}
+  tint: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}
   canBeRotated: 1
@@ -596,9 +600,46 @@ MonoBehaviour:
   text: {fileID: 0}
   audioPlayer: {fileID: 0}
   image: {fileID: 5704164742457762979}
+  tint: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}
   canBeRotated: 1
+--- !u!1 &2546535122074060272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176087875312118484}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &176087875312118484
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546535122074060272}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2088712184341127847}
+  m_Father: {fileID: 7088486652644607328}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 512, y: 512}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3097977738861135016
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +676,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 160}
+  m_SizeDelta: {x: 0, y: 149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &169653913526335538
 CanvasRenderer:
@@ -688,7 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
-  m_AspectRatio: 0.875
+  m_AspectRatio: 0.88590604
 --- !u!1 &3450364380615401833
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +804,7 @@ MonoBehaviour:
   text: {fileID: 0}
   audioPlayer: {fileID: 0}
   image: {fileID: 2020425671072701772}
+  tint: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}
   canBeRotated: 1
@@ -802,8 +844,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110.534454, y: 73.694214}
-  m_SizeDelta: {x: 116.8113, y: 138.6786}
+  m_AnchoredPosition: {x: 104.0751, y: 69.67325}
+  m_SizeDelta: {x: 109, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128953515039530234
 MonoBehaviour:
@@ -817,7 +859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799f9a1bf62cdd54883667f48066051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropZone
-  displayMode: 0
+  displayMode: 2
+  dropInfo: {fileID: 0}
   verify: 1
   answer: 1
   acceptSound: {fileID: 8300000, guid: 064d1d7340a63c64f8650899ce5cf0df, type: 3}
@@ -934,6 +977,7 @@ MonoBehaviour:
   text: {fileID: 0}
   audioPlayer: {fileID: 0}
   image: {fileID: 3600863894415426714}
+  tint: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}
   canBeRotated: 1
@@ -966,7 +1010,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 159950415738705122}
+  - {fileID: 176087875312118484}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1097,8 +1141,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.4388, y: -179.20784}
-  m_SizeDelta: {x: 289.5619, y: 151.4851}
+  m_AnchoredPosition: {x: 6.8011, y: -167.7606}
+  m_SizeDelta: {x: 271, y: 142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2664922732679203335
 MonoBehaviour:
@@ -1112,7 +1156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799f9a1bf62cdd54883667f48066051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropZone
-  displayMode: 0
+  displayMode: 2
+  dropInfo: {fileID: 0}
   verify: 1
   answer: 1
   acceptSound: {fileID: 8300000, guid: 064d1d7340a63c64f8650899ce5cf0df, type: 3}
@@ -1191,7 +1236,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 290, y: 0}
+  m_SizeDelta: {x: 271, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6367544894288997880
 CanvasRenderer:
@@ -1244,7 +1289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
-  m_AspectRatio: 1.9078947
+  m_AspectRatio: 1.9084507
 --- !u!1 &5056371469482067571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,9 +1364,10 @@ MonoBehaviour:
   text: {fileID: 0}
   audioPlayer: {fileID: 0}
   image: {fileID: 3165885308434623674}
+  tint: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}
-  canBeRotated: 1
+  canBeRotated: 0
 --- !u!1 &5378174117070884362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,8 +1404,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98.93579, y: 57.5351}
-  m_SizeDelta: {x: 139.8954, y: 159.4436}
+  m_AnchoredPosition: {x: -92.56091, y: 54.291916}
+  m_SizeDelta: {x: 132, y: 149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &226501033609886349
 MonoBehaviour:
@@ -1373,7 +1419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799f9a1bf62cdd54883667f48066051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropZone
-  displayMode: 0
+  displayMode: 2
+  dropInfo: {fileID: 0}
   verify: 1
   answer: 1
   acceptSound: {fileID: 8300000, guid: 064d1d7340a63c64f8650899ce5cf0df, type: 3}
@@ -1452,7 +1499,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 156, y: 0}
+  m_SizeDelta: {x: 146, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &499029048707702291
 CanvasRenderer:
@@ -1505,7 +1552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
-  m_AspectRatio: 1.2
+  m_AspectRatio: 1.1967213
 --- !u!1 &5476270168780794346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,7 +1589,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 148, y: 0}
+  m_SizeDelta: {x: 138, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &990869580936322761
 CanvasRenderer:
@@ -1595,7 +1642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
-  m_AspectRatio: 1.2758621
+  m_AspectRatio: 1.2545455
 --- !u!1 &6266299749448431211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,6 +1717,7 @@ MonoBehaviour:
   text: {fileID: 0}
   audioPlayer: {fileID: 0}
   image: {fileID: 5611603670691416161}
+  tint: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}
   canBeRotated: 1
@@ -1709,8 +1757,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.4158, y: -93.35565}
-  m_SizeDelta: {x: 303.278, y: 25.0489}
+  m_AnchoredPosition: {x: 7.2223, y: -86.66548}
+  m_SizeDelta: {x: 285, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2731800310467607502
 MonoBehaviour:
@@ -1724,7 +1772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799f9a1bf62cdd54883667f48066051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropZone
-  displayMode: 0
+  displayMode: 2
+  dropInfo: {fileID: 0}
   verify: 1
   answer: 1
   acceptSound: {fileID: 8300000, guid: 064d1d7340a63c64f8650899ce5cf0df, type: 3}
@@ -1803,7 +1852,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 176, y: 0}
+  m_SizeDelta: {x: 165, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3376397022903680508
 CanvasRenderer:
@@ -1856,7 +1905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
-  m_AspectRatio: 1.7254902
+  m_AspectRatio: 1.7368422
 --- !u!1 &6802029180594402639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1893,8 +1942,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.8115, y: 176.54556}
-  m_SizeDelta: {x: 175.396, y: 130.9149}
+  m_AnchoredPosition: {x: -2.944, y: 165.78177}
+  m_SizeDelta: {x: 163, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897457903641317409
 MonoBehaviour:
@@ -1908,7 +1957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799f9a1bf62cdd54883667f48066051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropZone
-  displayMode: 0
+  displayMode: 2
+  dropInfo: {fileID: 0}
   verify: 1
   answer: 1
   acceptSound: {fileID: 8300000, guid: 064d1d7340a63c64f8650899ce5cf0df, type: 3}
@@ -1987,8 +2037,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.457813, y: 59.843506}
-  m_SizeDelta: {x: 156.4893, y: 129.0877}
+  m_AnchoredPosition: {x: 16.3066, y: 56.2932}
+  m_SizeDelta: {x: 146, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7837216777819285280
 MonoBehaviour:
@@ -2002,7 +2052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799f9a1bf62cdd54883667f48066051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropZone
-  displayMode: 0
+  displayMode: 2
+  dropInfo: {fileID: 0}
   verify: 1
   answer: 1
   acceptSound: {fileID: 8300000, guid: 064d1d7340a63c64f8650899ce5cf0df, type: 3}
@@ -2081,7 +2132,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 138}
+  m_SizeDelta: {x: 0, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1470899127424229451
 CanvasRenderer:
@@ -2134,7 +2185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
-  m_AspectRatio: 0.8405797
+  m_AspectRatio: 0.8384615
 --- !u!1 &7644049869671435148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,6 +2260,7 @@ MonoBehaviour:
   text: {fileID: 0}
   audioPlayer: {fileID: 0}
   image: {fileID: 7226418383420001374}
+  tint: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}
   canBeRotated: 1
@@ -2256,145 +2308,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &4453691840779185925
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7088486652644607328}
-    m_Modifications:
-    - target: {fileID: 5027162009466001, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_Name
-      value: Container_2x2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2088712184341127847}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
---- !u!224 &159950415738705122 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4609138655397346279, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-  m_PrefabInstance: {fileID: 4453691840779185925}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &176087875312118484 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4593433973833172433, guid: 8623b87ac000ea249abca1e34e40a11c, type: 3}
-  m_PrefabInstance: {fileID: 4453691840779185925}
-  m_PrefabAsset: {fileID: 0}

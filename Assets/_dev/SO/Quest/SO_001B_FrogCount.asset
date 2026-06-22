@@ -40,7 +40,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 0}
-    text: 8
+    text: 9
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

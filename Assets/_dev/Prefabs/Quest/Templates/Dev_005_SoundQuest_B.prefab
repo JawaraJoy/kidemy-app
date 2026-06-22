@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d80875dbbbf2642aecbdceeb8e21d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.AudioPlayer
-  audioClip: {fileID: 8300000, guid: 32b363fdb544d2d439bf7702f268e042, type: 3}
+  audioClip: {fileID: 8300000, guid: 427d0db9d09472145b50d9a6798ee92a, type: 3}
 --- !u!1 &1275145668938466524
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What Start with this sound?
+  m_text: What starts with this sound?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7ac3a10f3ede1c74ea4c26949b04a1c3, type: 2}
   m_sharedMaterial: {fileID: 2872454883550864049, guid: 7ac3a10f3ede1c74ea4c26949b04a1c3, type: 2}

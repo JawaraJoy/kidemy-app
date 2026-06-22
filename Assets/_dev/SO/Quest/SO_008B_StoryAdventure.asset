@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
   m_Name: SO_008B_StoryAdventure
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
-  id: 008A
+  id: 008B
   title: StoryAdventure
   category: 1
   autoSubmit: 0
@@ -20,23 +20,28 @@ MonoBehaviour:
   tresholdTime: 0
   question:
     image: {fileID: 0}
-    text: What Mia do?
+    text: What did Domba forget?
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Mad at the cat
+  - image: {fileID: 21300000, guid: b63e7d431c6624b4da7cfc8975818fae, type: 3}
+    text: Camera
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Have fun with mices
+  - image: {fileID: 21300000, guid: ed94fa95c3f80f941917f285b85494e3, type: 3}
+    text: Bag
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 46ab13be5b25b684793c9b26809abd81, type: 3}
+    text: Binocular
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Sad for missing socks
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: a98db549462d243479aa4f709bb8b603, type: 3}
-    text: Ignore the socks
+  - image: {fileID: 21300000, guid: d265f41cd4018514e8abd800d3a630c1, type: 3}
+    text: Hat
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

@@ -21,22 +21,27 @@ MonoBehaviour:
   question:
     image: {fileID: 0}
     text: What is the compassionate choice?
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:
-  - image: {fileID: 0}
-    text: Buy one ice cream just for you
+  - image: {fileID: 21300000, guid: 49c0a821999de364e826ec39f9d4ada2, type: 3}
+    text: Buy one for me
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 0}
-    text: Keep the money, not buy anything
+  - image: {fileID: 21300000, guid: f5fef254fdec0bc4fb648843ed290051, type: 3}
+    text: Not buy anything
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 0}
-    text: Buy something cheaper, which can be shared
+  - image: {fileID: 21300000, guid: 3f6cf1926282ba049acc72bc333d2e52, type: 3}
+    text: 'Buy and share '
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: 0}
-    text: Buy one ice cream just for Sheepa
+  - image: {fileID: 21300000, guid: 49c0a821999de364e826ec39f9d4ada2, type: 3}
+    text: Buy one for Domba
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

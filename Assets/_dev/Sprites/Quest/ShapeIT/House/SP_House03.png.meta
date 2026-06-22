@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a4b7ce43bb8c6c9428489199cf28e3ab
+guid: a48726be16bc01545abdc71d2b388c9b
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -129,10 +129,10 @@ TextureImporter:
       name: SP_House03_0
       rect:
         serializedVersion: 2
-        x: 153
+        x: 0
         y: 0
-        width: 123
-        height: 275
+        width: 263
+        height: 263
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

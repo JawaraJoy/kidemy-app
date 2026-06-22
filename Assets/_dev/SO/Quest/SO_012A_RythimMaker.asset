@@ -20,7 +20,8 @@ MonoBehaviour:
   tresholdTime: 0
   question:
     image: {fileID: 0}
-    text: Tap the circle on the left, when animal passthrough
+    text: When the animals pass by, tap the circle on the left
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   speed: 0.1
   notes:

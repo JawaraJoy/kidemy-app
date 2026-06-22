@@ -33,6 +33,8 @@ namespace EduGame
                 GameManager.Instance.SetNPC(npcController);
 
             GameManager.Instance.InitQuest(data);
+
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
 
         public virtual void OnAnswered(bool result, bool submit = true)

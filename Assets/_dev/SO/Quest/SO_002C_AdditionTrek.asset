@@ -20,27 +20,33 @@ MonoBehaviour:
   tresholdTime: 20
   question:
     image: {fileID: 0}
-    text: How many fruit in the image?
+    text: How many fruits are in the image?
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:
   - image: {fileID: 0}
     text: 20
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 0}
     text: 18
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 0}
     text: 17
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 0}
     text: 19
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
   - image: {fileID: 0}
     text: 15
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

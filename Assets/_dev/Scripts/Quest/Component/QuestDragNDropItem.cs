@@ -11,6 +11,7 @@ namespace EduGame
         [SerializeField] protected TMP_Text text;
         [SerializeField] private AudioPlayer audioPlayer;
         [SerializeField] private Image image;
+        [SerializeField] private Image tint;
         
         protected LayoutElement layoutElement;
         protected Vector2 originalPosition; 
@@ -123,6 +124,12 @@ namespace EduGame
                 image?.gameObject.SetActive(false);
                 image?.transform.parent.gameObject.SetActive(false);   
             }
+
+            if(item.Color != Color.white && item.Color != Color.black)
+            {
+                if(tint)
+                    tint.color = item.Color;
+            }   
         }
 
         public override void Reset()

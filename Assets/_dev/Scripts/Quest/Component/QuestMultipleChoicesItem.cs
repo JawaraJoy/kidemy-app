@@ -9,6 +9,7 @@ namespace EduGame
         [SerializeField] protected TMP_Text text;
         [SerializeField] protected AudioPlayer audioPlayer;
         [SerializeField] protected Image image;
+        [SerializeField] protected Image tint;
         [SerializeField] protected GameObject correct;
         [SerializeField] protected GameObject wrong;
         
@@ -80,6 +81,12 @@ namespace EduGame
                 image?.gameObject.SetActive(false);
                 image?.transform.parent.gameObject.SetActive(false);   
             }
+
+            if(choice.Color != Color.white && choice.Color != Color.black)
+            {
+                if(tint)
+                    tint.color = choice.Color;
+            }   
         }
 
         public override void OnClick()

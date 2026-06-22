@@ -18,9 +18,6 @@ namespace EduGame
 
         private bool isSuccess;
         
-        private float speed = 1;
-        private float delay = 0;
-
         protected override void Awake()
         {
             base.Awake();
@@ -75,7 +72,7 @@ namespace EduGame
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.tag == "NoteHead")
+            if(collision.tag == "NoteHead" && !isSuccess)
             {
                 isSuccess = true;
                 
