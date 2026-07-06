@@ -21,14 +21,22 @@ MonoBehaviour:
   question:
     image: {fileID: 0}
     text: How many frogs are there? Count it fast!
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:
   - image: {fileID: 0}
-    text: 5
+    text: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 2
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
   - image: {fileID: 0}
-    text: 6
+    text: 4
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

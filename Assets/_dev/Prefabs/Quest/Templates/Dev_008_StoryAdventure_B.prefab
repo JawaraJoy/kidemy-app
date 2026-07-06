@@ -398,7 +398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Domba wanted to go on an adventure, but forgot something
+  m_text: Domba is on an adventure, but forgot something
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75c089c4b9aa2d043bb45508700c80f9, type: 2}
   m_sharedMaterial: {fileID: 761234858155092854, guid: 75c089c4b9aa2d043bb45508700c80f9, type: 2}

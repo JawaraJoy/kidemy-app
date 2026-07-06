@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_006A_LetterHunt_2
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 006A
+  title: LetterHunt
+  category: 1
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  question:
+    image: {fileID: 0}
+    text: Find the letter!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+  choices:
+  - image: {fileID: 0}
+    text: E
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: F
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: G
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: H
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: I
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: J
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: K
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: L
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: M
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 1
+  - image: {fileID: 0}
+    text: N
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: P
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: Q
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 0

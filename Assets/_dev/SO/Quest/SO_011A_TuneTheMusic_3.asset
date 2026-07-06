@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_011A_TuneTheMusic_3
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 011A
+  title: TuneTheMusic
+  category: 2
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  question:
+    image: {fileID: 0}
+    text: Listen and choose the matching sound
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+  choices:
+  - image: {fileID: 0}
+    text: DO
+    color: {r: 0, g: 0.75080097, b: 0.15016022, a: 1}
+    audio: {fileID: 8300000, guid: a71e0c9653afb7941b8fc733b817b570, type: 3}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: RE
+    color: {r: 1, g: 0.53367746, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: 6ab057fedc9284f41836fb5ecdc05b47, type: 3}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: MI
+    color: {r: 1, g: 0.030064182, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: 6cca2ebbd62a78f4d994f2ab6e893330, type: 3}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: FA
+    color: {r: 1, g: 0, b: 0.8438678, a: 1}
+    audio: {fileID: 8300000, guid: f32e5c57c28ed1c4eae9e5aebdff830d, type: 3}
+    isAnswer: 1
+  - image: {fileID: 0}
+    text: SOL
+    color: {r: 0, g: 0.48990488, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: e37e2f2146931f441ac0ab6df146afac, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 0

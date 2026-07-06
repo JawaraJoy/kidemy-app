@@ -25,27 +25,27 @@ MonoBehaviour:
     audio: {fileID: 0}
   choices:
   - image: {fileID: 0}
+    text: 3
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 4
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 5
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 1
+  - image: {fileID: 0}
     text: 6
     color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 0}
     text: 7
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
-    isAnswer: 1
-  - image: {fileID: 0}
-    text: 8
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: 9
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: 10
     color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0

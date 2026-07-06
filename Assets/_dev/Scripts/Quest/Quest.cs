@@ -50,11 +50,6 @@ namespace EduGame
             GameManager.Instance.Submit(star);
         }
 
-        public virtual void Next()
-        {
-            GameManager.Instance.Next();
-        }
-
         public virtual void Reset()
         {
             

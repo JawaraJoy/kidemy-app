@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropZone
   displayMode: 0
+  dropInfo: {fileID: 0}
   verify: 0
   answer: 0
   acceptSound: {fileID: 0}

@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 0b9bbb26e37f8544c986b67ee5f659f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9095623114387462826
+    second: SP_SmilingTurtle4_0
+  - first:
+      213: -8536259149582320103
+    second: SP_SmilingTurtle4_1
+  - first:
+      213: -2894938577825879042
+    second: SP_SmilingTurtle4_2
+  - first:
+      213: -6597566887592196830
+    second: SP_SmilingTurtle4_3
+  - first:
+      213: -3407982668341743020
+    second: SP_SmilingTurtle4_4
+  - first:
+      213: -4764935076614679180
+    second: SP_SmilingTurtle4_5
+  - first:
+      213: 5652785732468075851
+    second: SP_SmilingTurtle4_6
+  - first:
+      213: -948184848181102427
+    second: SP_SmilingTurtle4_7
+  - first:
+      213: 5092243433189262712
+    second: SP_SmilingTurtle4_8
+  - first:
+      213: 3328879125077239359
+    second: SP_SmilingTurtle4_9
+  - first:
+      213: 3331491108386088870
+    second: SP_SmilingTurtle4_10
+  - first:
+      213: 1234680116578572710
+    second: SP_SmilingTurtle4_11
+  - first:
+      213: -6928349077746492510
+    second: SP_SmilingTurtle4_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_0
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 447
+        width: 196
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6556a18d7fad5c180800000000000000
+      internalID: -9095623114387462826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_1
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 628
+        width: 111
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91eb77ec78d198980800000000000000
+      internalID: -8536259149582320103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_2
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 569
+        width: 223
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb2d1693bc13d7d0800000000000000
+      internalID: -2894938577825879042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_3
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 543
+        width: 135
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22500330fdbb074a0800000000000000
+      internalID: -6597566887592196830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_4
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 410
+        width: 92
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4527dc4c1d964b0d0800000000000000
+      internalID: -3407982668341743020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 493
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47555942bcc8fddb0800000000000000
+      internalID: -4764935076614679180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 378
+        width: 222
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4de7278caab27e40800000000000000
+      internalID: 5652785732468075851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_7
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 394
+        width: 179
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8f1ce77ee57d2f0800000000000000
+      internalID: -948184848181102427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_8
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 427
+        width: 44
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875cf013c684ba640800000000000000
+      internalID: 5092243433189262712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_9
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 309
+        width: 246
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3621765ded823e20800000000000000
+      internalID: 3328879125077239359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_10
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 309
+        width: 136
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7a9b71385db3e20800000000000000
+      internalID: 3331491108386088870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_11
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 330
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a957ef3607722110800000000000000
+      internalID: 1234680116578572710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_SmilingTurtle4_12
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 375
+        width: 55
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abd305c83f89df90800000000000000
+      internalID: -6928349077746492510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SP_SmilingTurtle4_0: -9095623114387462826
+      SP_SmilingTurtle4_1: -8536259149582320103
+      SP_SmilingTurtle4_10: 3331491108386088870
+      SP_SmilingTurtle4_11: 1234680116578572710
+      SP_SmilingTurtle4_12: -6928349077746492510
+      SP_SmilingTurtle4_2: -2894938577825879042
+      SP_SmilingTurtle4_3: -6597566887592196830
+      SP_SmilingTurtle4_4: -3407982668341743020
+      SP_SmilingTurtle4_5: -4764935076614679180
+      SP_SmilingTurtle4_6: 5652785732468075851
+      SP_SmilingTurtle4_7: -948184848181102427
+      SP_SmilingTurtle4_8: 5092243433189262712
+      SP_SmilingTurtle4_9: 3328879125077239359
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

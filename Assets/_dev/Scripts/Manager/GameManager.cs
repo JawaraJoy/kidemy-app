@@ -14,7 +14,7 @@ namespace EduGame
         [SerializeField] private Image background;
         [SerializeField] private RectTransform npc;
         [SerializeField] private TMP_Text npcDialog;
-        
+
         [Header("Result Pop")]
         [SerializeField] private RectTransform popResult;
         [SerializeField] private RectTransform correctTitle;
@@ -43,18 +43,20 @@ namespace EduGame
 
         [Header("Data")]
         [SerializeField] private Quest questPrefab;
-        
+        [SerializeField] private Quest[] questPrefabs;
+
         private Image[] stars;
-        private Quest quest;
+        private Quest[] quests;
+        private int currentIndex = 0;
         private float recordedTime;
         private float startTime;
         private IEnumerator timerCo;
-        
+
         public Canvas Canvas { get; private set; }
         public AudioSource AudioSource => audioSource;
         public float ResultTime => recordedTime;
         public Color ColorTheme { get; private set; }
-        
+
         public static GameManager Instance { get; private set; }
 
         void Awake()
@@ -73,10 +75,26 @@ namespace EduGame
 
         void Start()
         {
-            if (questPrefab)
+            if (questPrefabs.Length > 0)
             {
-                quest = InstantiateTemplate(questPrefab);
-                quest.gameObject.SetActive(true);
+                quests = new Quest[questPrefabs.Length];
+
+                for (int i = 0; i < questPrefabs.Length; i++)
+                {
+                    quests[i] = InstantiateTemplate(questPrefabs[i]);
+                    quests[i].gameObject.SetActive(false);
+                }
+
+                quests[0].gameObject.SetActive(true);
+
+                StartTimer();
+            }
+            else if (questPrefab)
+            {
+                quests = new Quest[1];
+
+                quests[0] = InstantiateTemplate(questPrefab);
+                quests[0].gameObject.SetActive(true);
 
                 StartTimer();
             }
@@ -86,18 +104,18 @@ namespace EduGame
 
         void StopTimer()
         {
-            if(timerCo != null)
+            if (timerCo != null)
             {
                 recordedTime = Time.time - startTime;
 
                 StopCoroutine(timerCo);
-                timerCo = null;  
+                timerCo = null;
             }
         }
 
         void StartTimer()
         {
-            if(timerCo == null)
+            if (timerCo == null)
             {
                 startTime = Time.time;
 
@@ -108,20 +126,20 @@ namespace EduGame
 
         IEnumerator TimerCo()
         {
-            if(timer)
+            if (timer)
             {
                 while (true)
                 {
                     float elapsedTime = Time.time - startTime;
 
-                    float m = Mathf.FloorToInt(elapsedTime/60);
-                    float s = Mathf.FloorToInt(elapsedTime%60);
+                    float m = Mathf.FloorToInt(elapsedTime / 60);
+                    float s = Mathf.FloorToInt(elapsedTime % 60);
 
                     string timerText = m.ToString().PadLeft(2, '0') + ":" + s.ToString().PadLeft(2, '0');
 
-                    if(s%10 == 0)
+                    if (s % 10 == 0)
                         idleFeedback.Play(npc ? npc : transform);
-                    else if(s%5 == 0)
+                    else if (s % 5 == 0)
                         thinkFeedback.Play(npc ? npc : transform);
 
                     timer.text = timerText;
@@ -142,7 +160,7 @@ namespace EduGame
 
             ColorTheme = template.Color;
 
-            if(background && template.Background)
+            if (background && template.Background)
                 background.sprite = template.Background;
 
             return template;
@@ -152,13 +170,13 @@ namespace EduGame
         {
             Animator animator = npc.GetComponent<Animator>();
 
-            if(animator)
+            if (animator)
                 animator.runtimeAnimatorController = controller;
         }
 
         public virtual void SetNPCDialog(string dialog)
         {
-            if(npcDialog)
+            if (npcDialog)
                 npcDialog.text = dialog;
         }
 
@@ -185,28 +203,53 @@ namespace EduGame
                 category.text = questData.Category.ToString().Replace('_', ' ');
         }
 
+        void Next()
+        {
+            int nextIndex = currentIndex + 1;
+
+            if(quests.Length > 0 && nextIndex < quests.Length)
+            {
+                quests[currentIndex].gameObject.SetActive(false);
+            
+                quests[nextIndex].gameObject.SetActive(true);
+
+                currentIndex = nextIndex;
+
+                Reset();
+            }
+            else
+            {
+                
+            }
+        }
+
         public virtual void Submit(int star = 0)
         {
             StopTimer();
 
-            if(star < 1)
+            if (star < 1)
                 star = 1;
-            else if(star > 3)
+            else if (star > 3)
                 star = 3;
 
-            if(star == 3 && quest.Data.TresholdTime > 0 && recordedTime > quest.Data.TresholdTime)
+            if (star == 3 && quests[currentIndex].Data.TresholdTime > 0 && recordedTime > quests[currentIndex].Data.TresholdTime)
                 star = 2;
 
             ShowResult(star);
         }
 
-        public virtual void ResetQuest()
+        public virtual void Reset()
         {
             CloseResult();
             StopTimer();
             StartTimer();
+        }
 
-            quest.Reset();
+        public virtual void ResetQuest()
+        {
+            Reset();
+
+            quests[currentIndex].Reset();
         }
 
         public virtual void ShowResult(int star)
@@ -216,21 +259,21 @@ namespace EduGame
 
             if (star > 1)
             {
-                if(correctFeedback)
-                    correctFeedback.Play(npc? npc : transform);
-                
-                if(npcDialog)
+                if (correctFeedback)
+                    correctFeedback.Play(npc ? npc : transform);
+
+                if (npcDialog)
                     SetNPCDialog("Yaaay! Amazing!");
-                
+
                 correctTitle.gameObject.SetActive(true);
                 correctNote.gameObject.SetActive(true);
             }
             else
             {
-                if(wrongFeedback)
-                    wrongFeedback.Play(npc? npc : transform);
+                if (wrongFeedback)
+                    wrongFeedback.Play(npc ? npc : transform);
 
-                if(npcDialog)
+                if (npcDialog)
                     SetNPCDialog("Oh no!");
 
                 wrongTitle.gameObject.SetActive(true);
@@ -242,13 +285,19 @@ namespace EduGame
                 for (int i = 0; i < stars.Length; i++)
                 {
                     stars[i].gameObject.SetActive(true);
-                    
-                    if(i < star)
+
+                    if (i < star)
                         stars[i].color = Color.white;
                     else
                         stars[i].color = Color.black;
                 }
             }
+
+            if(currentIndex + 1 == quests.Length)
+                buttonNext.gameObject.SetActive(false);
+            else
+                buttonNext.gameObject.SetActive(true);
+            
         }
 
         public virtual void CloseResult()
@@ -266,11 +315,6 @@ namespace EduGame
                 for (int i = 0; i < stars.Length; i++)
                     stars[i].gameObject.SetActive(false);
             }
-        }
-
-        public virtual void Next()
-        {
-            CloseResult();
         }
     }
 }

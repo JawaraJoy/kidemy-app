@@ -128,8 +128,6 @@ namespace EduGame
 
         public void OnDrop(PointerEventData eventData)
         {
-            Debug.Log(eventData.pointerDrag);
-
             if (eventData.pointerDrag != null)
             {
                 QuestDragNDropItem draggedItem = eventData.pointerDrag.GetComponent<QuestDragNDropItem>();
