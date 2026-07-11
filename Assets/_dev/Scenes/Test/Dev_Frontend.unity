@@ -1839,7 +1839,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_017_DailyRoutine_A
+          m_StringArgument: Dev_017_DailyRoutine_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &146771395
@@ -2309,7 +2309,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_018_DailySchedule_A
+          m_StringArgument: Dev_018_DailySchedule_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &192615756
@@ -2811,7 +2811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &214255130
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2827,10 +2827,10 @@ RectTransform:
   - {fileID: 1213935050}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 767.66315, y: -867.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214255131
 MonoBehaviour:
@@ -2885,7 +2885,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_019_Safety Puzzles_A
+          m_StringArgument: Dev_019_Safety Puzzles_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &214255132
@@ -3257,7 +3257,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_004_PuzzleJungle_A
+          m_StringArgument: Dev_004_PuzzleJungle_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &246438816
@@ -7344,7 +7344,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_002_AdditionTrek_A
+          m_StringArgument: Dev_002_AdditionTrek_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &655096237
@@ -7372,7 +7372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &686722162
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7388,10 +7388,10 @@ RectTransform:
   - {fileID: 278011469}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 302.66315, y: -402.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686722163
 MonoBehaviour:
@@ -7446,7 +7446,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_008_StoryAdventure_A
+          m_StringArgument: Dev_008_StoryAdventure_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &686722164
@@ -8495,7 +8495,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_003_PatternJungle_A
+          m_StringArgument: Dev_003_PatternJungle_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &777931254
@@ -10285,7 +10285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &986858643
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10301,10 +10301,10 @@ RectTransform:
   - {fileID: 773035825}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 767.66315, y: -402.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986858644
 MonoBehaviour:
@@ -10359,7 +10359,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_009_ColortheIsland_A
+          m_StringArgument: Dev_009_ColortheIsland_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &986858645
@@ -12078,7 +12078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1132647579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12094,10 +12094,10 @@ RectTransform:
   - {fileID: 557996327}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 457.66315, y: -712.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132647580
 MonoBehaviour:
@@ -12152,7 +12152,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_015_KindnessQuest_A
+          m_StringArgument: Dev_015_KindnessQuest_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1132647581
@@ -12892,7 +12892,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_007_WordBuilder_A
+          m_StringArgument: Dev_007_WordBuilder_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1186502224
@@ -14220,7 +14220,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_016_CompassionateChoice_A
+          m_StringArgument: Dev_016_CompassionateChoice_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1282645414
@@ -15771,7 +15771,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_006_LetterHunt_A
+          m_StringArgument: Dev_006_LetterHunt_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1417389691
@@ -17251,7 +17251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1618794801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17267,10 +17267,10 @@ RectTransform:
   - {fileID: 1147236957}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1542.6631, y: -557.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618794802
 MonoBehaviour:
@@ -17325,7 +17325,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_014_MoodTracker_A
+          m_StringArgument: Dev_014_MoodTracker_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1618794803
@@ -17676,7 +17676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1652594740
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17692,10 +17692,10 @@ RectTransform:
   - {fileID: 2079566071}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1155.1631, y: -480}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652594741
 MonoBehaviour:
@@ -17750,7 +17750,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_005_SoundQuest_A
+          m_StringArgument: Dev_005_SoundQuest_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1652594742
@@ -18119,7 +18119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1711325831
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18135,10 +18135,10 @@ RectTransform:
   - {fileID: 857091766}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 612.66315, y: -557.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711325832
 MonoBehaviour:
@@ -18193,7 +18193,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_012_RythimMaker_A
+          m_StringArgument: Dev_012_RythimMaker_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1711325833
@@ -18668,7 +18668,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_001_FrogsCount_A
+          m_StringArgument: Dev_001_FrogsCount_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1769768209
@@ -18770,7 +18770,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_011_TuneTheMusic_A
+          m_StringArgument: Dev_011_TuneTheMusic_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1771167336
@@ -20216,7 +20216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1959558444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20232,10 +20232,10 @@ RectTransform:
   - {fileID: 1208858166}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1077.6631, y: -557.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959558445
 MonoBehaviour:
@@ -20290,7 +20290,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_013_EmotionMatch_A
+          m_StringArgument: Dev_013_EmotionMatch_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1959558446
@@ -22372,7 +22372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2112310688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22388,10 +22388,10 @@ RectTransform:
   - {fileID: 1098189051}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1232.6631, y: -402.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2112310689
 MonoBehaviour:
@@ -22446,7 +22446,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_010_ShapeIt_A
+          m_StringArgument: Dev_010_ShapeIt_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &2112310690
@@ -22917,7 +22917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2139599473
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22933,10 +22933,10 @@ RectTransform:
   - {fileID: 445787665}
   m_Father: {fileID: 2006959074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1232.6631, y: -867.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2139599474
 MonoBehaviour:
@@ -22991,7 +22991,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dev_020_StepSequence_A
+          m_StringArgument: Dev_020_StepSequence_A_rev
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &2139599475

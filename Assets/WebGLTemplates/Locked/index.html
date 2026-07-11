@@ -61,19 +61,29 @@
       const deviceAspect = widthScreen / heightScreen;
       const refAspect = refRes.width / refRes.height;
 
-      console.log(widthScreen);
-      console.log(heightScreen);
-      if (deviceAspect > refAspect) {
-        canvas.height = heightScreen;
-        canvas.width = refRes.width * (heightScreen / refRes.height)
-        //canvas.classList.add("potrait");
-      }
-      else {
-        canvas.width = widthScreen;
-        canvas.height = refRes.height * (widthScreen / refRes.width)
+      let finalWidth, finalHeight;
 
-        //canvas.classList.add("landscape");
+      if (deviceAspect > refAspect) {
+        finalHeight = heightScreen;
+        finalWidth = refRes.width * (heightScreen / refRes.height);
+      } 
+      else {
+        finalWidth = widthScreen;
+        finalHeight = refRes.height * (widthScreen / refRes.width);
       }
+
+      // Set the internal rendering buffer size
+      canvas.width = finalWidth;
+      canvas.height = finalHeight;
+
+      // FIX: Force the CSS display sizes to match the exact calculations
+      canvas.style.width = finalWidth + "px";
+      canvas.style.height = finalHeight + "px";
+      
+      // Optional: Center the canvas in the 100% x 100% iframe if desired
+      container.style.display = "flex";
+      container.style.justifyContent = "center";
+      container.style.alignItems = "center";
     });
 
     doResize();
@@ -92,8 +102,8 @@
       companyName: "{{{ COMPANY_NAME }}}",
       productName: "{{{ PRODUCT_NAME }}}",
       productVersion: "{{{ PRODUCT_VERSION }}}",
-      devicePixelRatio: 1,
-      matchWebGLToCanvasSize: false,
+      devicePixelRatio: window.devicePixelRatio || 1,
+      matchWebGLToCanvasSize: true,
     };
 
     var script = document.createElement("script");

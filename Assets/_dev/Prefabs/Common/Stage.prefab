@@ -7577,10 +7577,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 131366360215288804}
-        m_TargetAssemblyTypeName: Frontend, Assembly-CSharp
-        m_MethodName: Goto
-        m_Mode: 5
+      - m_Target: {fileID: 5551957968048432706}
+        m_TargetAssemblyTypeName: EduGame.GameManager, Assembly-CSharp
+        m_MethodName: GoHome
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7777,6 +7777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918952422263613987}
   - component: {fileID: 5551957968048432706}
+  - component: {fileID: 8269293218450831837}
   - component: {fileID: 1756416439628791414}
   m_Layer: 5
   m_Name: Challenge
@@ -7842,6 +7843,18 @@ MonoBehaviour:
   audioSource: {fileID: 4056242353772412095}
   questPrefab: {fileID: 8344063676491614192, guid: 077156e976b94b44cabd3d6ba5e993c5, type: 3}
   questPrefabs: []
+--- !u!114 &8269293218450831837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4233305820043262610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d76637fa534666ebab15c154353a130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::APIManager
 --- !u!222 &1756416439628791414
 CanvasRenderer:
   m_ObjectHideFlags: 0

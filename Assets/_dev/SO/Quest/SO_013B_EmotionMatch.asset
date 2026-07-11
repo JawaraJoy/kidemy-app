@@ -20,7 +20,7 @@ MonoBehaviour:
   tresholdTime: 0
   question:
     image: {fileID: 0}
-    text: What emotion is Bunny feeling right now?
+    text: What emotion is Loppi feeling right now?
     color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
   choices:

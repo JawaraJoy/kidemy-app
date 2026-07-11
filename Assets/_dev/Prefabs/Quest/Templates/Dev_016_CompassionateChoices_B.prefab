@@ -236,7 +236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When playing with Domba, you notice expensive cake being sold, but your
+  m_text: When playing with Nola, you notice expensive cake being sold, but your
     money is not enough to buy two
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7ac3a10f3ede1c74ea4c26949b04a1c3, type: 2}

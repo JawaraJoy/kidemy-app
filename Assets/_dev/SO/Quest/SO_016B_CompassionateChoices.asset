@@ -40,7 +40,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 49c0a821999de364e826ec39f9d4ada2, type: 3}
-    text: Buy one for Domba
+    text: Buy one for Nola
     color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0

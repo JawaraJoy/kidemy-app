@@ -236,7 +236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A blackout suddenly occurred in Bunny\u2019s house! It\u2019s dark and
+  m_text: "A blackout suddenly occurred in Loppi\u2019s house! It\u2019s dark and
     spooky, it's pretty dark in there"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c1e18e4b719b0c47bd0cf5570462b39, type: 2}

@@ -40,7 +40,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 73da531ea26d6494b9335e628a02fd9f, type: 3}
-    text: Give Panda a turn
+    text: Give Bobo a turn
     color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1

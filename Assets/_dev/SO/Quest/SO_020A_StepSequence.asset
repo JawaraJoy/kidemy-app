@@ -31,25 +31,25 @@ MonoBehaviour:
       audio: {fileID: 0}
     limit: 5
     labels:
-    - image: {fileID: 21300000, guid: c50dacdd94850954ca081405bccd23ab, type: 3}
-      text: See Fire or Smoke
-      color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
+    - image: {fileID: 21300000, guid: f9dc06709266df74e93829010ad3fe79, type: 3}
+      text: Wet hands
+      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
       audio: {fileID: 0}
-    - image: {fileID: 21300000, guid: 8dca195386055e44399404fd35b2da18, type: 3}
-      text: Stay Low and Crawl
-      color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
+    - image: {fileID: 21300000, guid: 5b385daba9f28bd41b78412bdc12b197, type: 3}
+      text: Add soap
+      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
       audio: {fileID: 0}
-    - image: {fileID: 21300000, guid: 6d899a81e61a6d9408e015329b73e2a8, type: 3}
-      text: Check Door is Cool
-      color: {r: 1, g: 0.54509807, b: 0.8352941, a: 1}
+    - image: {fileID: 21300000, guid: 6881ff6f7a901d74dba148b2a2763ba9, type: 3}
+      text: Scrub hands
+      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
       audio: {fileID: 0}
-    - image: {fileID: 21300000, guid: 93477e4bc6cb10c488e4f6d6a023b4f2, type: 3}
-      text: Shout for Help
-      color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
+    - image: {fileID: 21300000, guid: 7f9004bbfd6d86d45a411124e209fac0, type: 3}
+      text: Rinse
+      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
       audio: {fileID: 0}
-    - image: {fileID: 21300000, guid: 1114ba327ba01a94f9c04e973bd35752, type: 3}
-      text: Meet at Safe Spot
-      color: {r: 0, g: 0.84313726, b: 0.039215688, a: 1}
+    - image: {fileID: 21300000, guid: 0dddab27f6bdcd04cafd7cc468b7fcfe, type: 3}
+      text: Dry Hands
+      color: {r: 0.8066038, g: 1, b: 0.81559896, a: 1}
       audio: {fileID: 0}
   randomizeChoice: 1
   answerInOrder: 1

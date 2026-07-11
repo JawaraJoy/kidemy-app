@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_014A_MoodTracker_2
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 014A
+  title: Mood Tracker
+  category: 3
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  question:
+    image: {fileID: 0}
+    text: 'How is the character feeling? '
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+  choices:
+  - image: {fileID: 21300000, guid: d602b45309a45227fad57350a281b966, type: 3}
+    text: Excited
+    color: {r: 0.5125027, g: 0.7935208, b: 0.46116865, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: cd41fba01dea692598d55fde51251135, type: 3}
+    text: Proud
+    color: {r: 1, g: 0.853639, b: 0.47864014, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 693065f527a92d6d1b2a3ae6304c16c1, type: 3}
+    text: Tired
+    color: {r: 0.47864014, g: 0.9442153, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: 24c1ddca19711b102bb761b0db33d2b1, type: 3}
+    text: Scared
+    color: {r: 1, g: 0.6666074, b: 0.6666074, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 0

@@ -236,7 +236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bunny lost her favorite camera. She tried looking everywhere, but couldn\u2019t
+  m_text: "Loppi lost her favorite camera. She tried looking everywhere, but couldn\u2019t
     seem to find it.  "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c1e18e4b719b0c47bd0cf5570462b39, type: 2}

@@ -30,7 +30,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 21300000, guid: bdcfdbf27b5e7334daa10640e35b4d08, type: 3}
-    text: Help Duck clean
+    text: Help Melo clean
     color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1

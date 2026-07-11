@@ -2,11 +2,27 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Runtime.InteropServices;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace EduGame
 {
     public class GameManager : MonoBehaviour
     {
+        // Import the JavaScript functions
+        [DllImport("__Internal")]
+        private static extern string GetParentURL();
+
+        [DllImport("__Internal")]
+        private static extern string GetSelfURL();
+
+        [DllImport("__Internal")]
+        private static extern void RedirectParentWindow(string url);
+
+        [DllImport("__Internal")]
+        private static extern void LogToBrowser(string message);
+
         [Header("Frame")]
         [SerializeField] private TMP_Text title;
         [SerializeField] private TMP_Text category;
@@ -51,6 +67,15 @@ namespace EduGame
         private float recordedTime;
         private float startTime;
         private IEnumerator timerCo;
+        private string baseURL;
+        private string frameURL;
+        private string sessionId;
+        private string islandId;
+        private ResultItem[] result;
+        private APIManager apiManager;
+        private string APIInfoURL = "https://stg-be.kimee.io/api/v1/external/games";
+        private string APIResultURL = "https://stg-be.kimee.io/api/v1/external/games/progress";
+        private string gameURL = "https://stg.kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
 
         public Canvas Canvas { get; private set; }
         public AudioSource AudioSource => audioSource;
@@ -75,6 +100,74 @@ namespace EduGame
 
         void Start()
         {
+            #if !UNITY_EDITOR && UNITY_WEBGL
+                baseURL = GetParentURL();
+                frameURL = GetSelfURL();
+            #else
+                baseURL = "";
+                frameURL = "";
+            #endif
+            
+            #if !UNITY_EDITOR && UNITY_WEBGL
+                LogToBrowser("Base URL: " + baseURL);
+                LogToBrowser("Frame URL: " + frameURL);
+            #endif
+
+            if(!string.IsNullOrEmpty(baseURL))
+            {
+                if(baseURL.Contains("gamesid", System.StringComparison.OrdinalIgnoreCase))
+                    baseURL = URIHelper.RemoveQueryParam(baseURL, "gamesid");
+                else
+                    baseURL = URIHelper.GetBaseUrl(baseURL);
+            }
+
+            #if !UNITY_EDITOR && UNITY_WEBGL
+                LogToBrowser("Home URL: " + baseURL);
+            #endif
+
+            if(!string.IsNullOrEmpty(frameURL))
+            {
+                Dictionary<string, string> param = URIHelper.GetParameters(frameURL);
+
+                if(param.ContainsKey("session_id"))
+                    sessionId = param["session_id"];
+                else
+                    sessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+            }
+            else
+                sessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+
+            apiManager = GetComponent<APIManager>();
+
+            apiManager.FetchData(
+                url: APIInfoURL,
+                onSuccess: (jsonString) => 
+                {
+                    string targetKey = "islandId"; 
+                    string pattern = $"\"{targetKey}\"\\s*:\\s*(?:\"(?<value>[^\"]*)\"|(?<value>[^,\\s}}\\]]+))";
+
+                    Match match = Regex.Match(jsonString, pattern);
+
+                    if (match.Success)
+                    {
+                        // 3. Extract the clean value using the named regex group
+                        string extractedValue = match.Groups["value"].Value;
+                        Debug.Log($"Extracted '{targetKey}': {extractedValue}");
+
+                        islandId = extractedValue;
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Could not find the key '{targetKey}' in the JSON.");
+                    }
+                },
+                onFailure: (errorMessage) => 
+                {
+                    // Handle UI updates or retries here if things go wrong
+                    Debug.LogWarning($"Failed to load data: {errorMessage}");
+                }
+            );
+
             if (questPrefabs.Length > 0)
             {
                 quests = new Quest[questPrefabs.Length];
@@ -87,6 +180,9 @@ namespace EduGame
 
                 quests[0].gameObject.SetActive(true);
 
+                if (background)
+                    background.sprite = quests[0].Background;
+
                 StartTimer();
             }
             else if (questPrefab)
@@ -96,10 +192,15 @@ namespace EduGame
                 quests[0] = InstantiateTemplate(questPrefab);
                 quests[0].gameObject.SetActive(true);
 
+                if (background)
+                    background.sprite = quests[0].Background;
+
                 StartTimer();
             }
             else
                 Debug.LogError("Failed to load data, challenge will return empty");
+
+            result = new ResultItem[quests.Length];
         }
 
         void StopTimer()
@@ -160,9 +261,6 @@ namespace EduGame
 
             ColorTheme = template.Color;
 
-            if (background && template.Background)
-                background.sprite = template.Background;
-
             return template;
         }
 
@@ -213,6 +311,9 @@ namespace EduGame
             
                 quests[nextIndex].gameObject.SetActive(true);
 
+                if (background)
+                    background.sprite = quests[nextIndex].Background;
+
                 currentIndex = nextIndex;
 
                 Reset();
@@ -234,6 +335,9 @@ namespace EduGame
 
             if (star == 3 && quests[currentIndex].Data.TresholdTime > 0 && recordedTime > quests[currentIndex].Data.TresholdTime)
                 star = 2;
+
+            if(currentIndex < result.Length)
+                result[currentIndex] = new ResultItem { stars = star, time = Mathf.RoundToInt(recordedTime) };
 
             ShowResult(star);
         }
@@ -294,11 +398,44 @@ namespace EduGame
             }
 
             if(currentIndex + 1 == quests.Length)
+            {
                 buttonNext.gameObject.SetActive(false);
+                SendResult();
+            }
             else
                 buttonNext.gameObject.SetActive(true);
             
         }
+
+        public virtual void GoHome()
+        {
+            if(!string.IsNullOrEmpty(islandId))
+            {
+                string previousURL = gameURL.Replace("[ISLAND_ID]", islandId);
+
+                Debug.Log(previousURL);
+
+                #if !UNITY_EDITOR && UNITY_WEBGL
+                    RedirectParentWindow(previousURL);
+                #endif
+            }
+        }
+
+        public virtual void SendResult()
+        {
+            Result compiledResult = new Result
+            {
+                session_id = sessionId,
+                result = result
+            };
+
+            string json = JsonUtility.ToJson(compiledResult);
+            Debug.Log(json); 
+
+            if(apiManager)
+                apiManager.SendData(APIResultURL, json);
+        }
+
 
         public virtual void CloseResult()
         {
