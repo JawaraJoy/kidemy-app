@@ -94,8 +94,8 @@ namespace EduGame
 
             if(success)
             {
-                if(clip && GameManager.Instance.AudioSource)
-                    GameManager.Instance.AudioSource.PlayOneShot(clip);
+                if(clip && QuestRythimMaker.AudioSource)
+                    QuestRythimMaker.AudioSource.PlayOneShot(clip);
                 
                 quest.OnAnswered(true);
             }

@@ -28,34 +28,34 @@ MonoBehaviour:
   - notePrefab: {fileID: -1886138623961233230, guid: 0ad11dbe5cf4c804a859b786e4086720, type: 3}
     delay: 0
     speedModifier: 1
-    clip: {fileID: 8300000, guid: a71e0c9653afb7941b8fc733b817b570, type: 3}
+    clip: {fileID: 8300000, guid: ab2b63edbaa7bd7c79f4521285751b62, type: 3}
   - notePrefab: {fileID: -1886138623961233230, guid: 0ad11dbe5cf4c804a859b786e4086720, type: 3}
     delay: 2
     speedModifier: 1
-    clip: {fileID: 8300000, guid: 6ab057fedc9284f41836fb5ecdc05b47, type: 3}
+    clip: {fileID: 8300000, guid: 5a6a1004d1ad98976a132d04a8d74a2f, type: 3}
   - notePrefab: {fileID: 3556553260390308215, guid: e111092594ab85c42b0aa7e304d73949, type: 3}
     delay: 4
     speedModifier: 1
-    clip: {fileID: 8300000, guid: 6cca2ebbd62a78f4d994f2ab6e893330, type: 3}
+    clip: {fileID: 8300000, guid: 112a9b62d7d2ad8ec86e05eb6f0334ba, type: 3}
   - notePrefab: {fileID: 3556553260390308215, guid: e111092594ab85c42b0aa7e304d73949, type: 3}
     delay: 6
     speedModifier: 1
-    clip: {fileID: 8300000, guid: f32e5c57c28ed1c4eae9e5aebdff830d, type: 3}
+    clip: {fileID: 8300000, guid: 21354f77baab82b788eea19e2b463abe, type: 3}
   - notePrefab: {fileID: -5770972901350114523, guid: a81f00ac2d352104ab15799273bbe169, type: 3}
     delay: 8
     speedModifier: 1
-    clip: {fileID: 8300000, guid: e37e2f2146931f441ac0ab6df146afac, type: 3}
+    clip: {fileID: 8300000, guid: 0c4f5e9d078da6cc580d5ba654f4d96d, type: 3}
   - notePrefab: {fileID: -5770972901350114523, guid: a81f00ac2d352104ab15799273bbe169, type: 3}
     delay: 10
     speedModifier: 1
-    clip: {fileID: 8300000, guid: ed4e505f789248045b65fc753c983b68, type: 3}
+    clip: {fileID: 8300000, guid: 716da1e3d9ec9d000aa0d8e37bf7bfec, type: 3}
   - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
     delay: 12
     speedModifier: 1
-    clip: {fileID: 8300000, guid: af5e4b3478185a74aa68bfeb9494a41f, type: 3}
+    clip: {fileID: 8300000, guid: 5f9dddfb125a3b88098ef39505686a88, type: 3}
   - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
     delay: 14
     speedModifier: 1
-    clip: {fileID: 8300000, guid: 5ee79bc57df81994db76a84320f997de, type: 3}
+    clip: {fileID: 8300000, guid: 652997d4077bb615db3193a55b48e96f, type: 3}
   timer: 0
   randomizeChoice: 0

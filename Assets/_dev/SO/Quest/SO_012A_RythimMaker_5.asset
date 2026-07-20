@@ -28,38 +28,34 @@ MonoBehaviour:
   - notePrefab: {fileID: -1886138623961233230, guid: 0ad11dbe5cf4c804a859b786e4086720, type: 3}
     delay: 0
     speedModifier: 1
-    clip: {fileID: 8300000, guid: c03a1fb36b8829fbf87add67d101de98, type: 3}
+    clip: {fileID: 8300000, guid: ab2b63edbaa7bd7c79f4521285751b62, type: 3}
   - notePrefab: {fileID: -1886138623961233230, guid: 0ad11dbe5cf4c804a859b786e4086720, type: 3}
-    delay: 0.75
+    delay: 2
     speedModifier: 1
-    clip: {fileID: 8300000, guid: feb22bf3793ce441e8df63f8d097abe6, type: 3}
+    clip: {fileID: 8300000, guid: 5a6a1004d1ad98976a132d04a8d74a2f, type: 3}
   - notePrefab: {fileID: 3556553260390308215, guid: e111092594ab85c42b0aa7e304d73949, type: 3}
-    delay: 1.5
+    delay: 4
     speedModifier: 1
-    clip: {fileID: 8300000, guid: 66ac9f0c59bf9c2af8cbf2a961cc0e72, type: 3}
+    clip: {fileID: 8300000, guid: 112a9b62d7d2ad8ec86e05eb6f0334ba, type: 3}
   - notePrefab: {fileID: 3556553260390308215, guid: e111092594ab85c42b0aa7e304d73949, type: 3}
-    delay: 2.25
+    delay: 6
     speedModifier: 1
-    clip: {fileID: 8300000, guid: 6789449289bdcb4c48ac6932c9237320, type: 3}
+    clip: {fileID: 8300000, guid: ab2b63edbaa7bd7c79f4521285751b62, type: 3}
   - notePrefab: {fileID: -5770972901350114523, guid: a81f00ac2d352104ab15799273bbe169, type: 3}
-    delay: 3
-    speedModifier: 1
-    clip: {fileID: 8300000, guid: 48d9dbf00f7effd21aac8a8ba7ca0b30, type: 3}
-  - notePrefab: {fileID: -5770972901350114523, guid: a81f00ac2d352104ab15799273bbe169, type: 3}
-    delay: 3.75
-    speedModifier: 1
-    clip: {fileID: 8300000, guid: 5304200e2abf0123386c71cc780724a4, type: 3}
-  - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
-    delay: 4.5
-    speedModifier: 1
-    clip: {fileID: 8300000, guid: 21293b8bd43abcd09ab5e9f751ad1062, type: 3}
-  - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
-    delay: 5.25
-    speedModifier: 1
-    clip: {fileID: 8300000, guid: 5cff6020305e78259abbd4fd7e304b7f, type: 3}
-  - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
     delay: 8
     speedModifier: 1
-    clip: {fileID: 8300000, guid: 3023972c2b87bbfaf980f9d10bb936a4, type: 3}
+    clip: {fileID: 8300000, guid: ab2b63edbaa7bd7c79f4521285751b62, type: 3}
+  - notePrefab: {fileID: -5770972901350114523, guid: a81f00ac2d352104ab15799273bbe169, type: 3}
+    delay: 10
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 112a9b62d7d2ad8ec86e05eb6f0334ba, type: 3}
+  - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
+    delay: 12
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: 5a6a1004d1ad98976a132d04a8d74a2f, type: 3}
+  - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}
+    delay: 14
+    speedModifier: 1
+    clip: {fileID: 8300000, guid: ab2b63edbaa7bd7c79f4521285751b62, type: 3}
   timer: 0
   randomizeChoice: 0

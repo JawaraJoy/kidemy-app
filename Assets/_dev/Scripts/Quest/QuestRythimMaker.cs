@@ -20,11 +20,18 @@ namespace EduGame
         private int unansweredNote = 0;
         private int remainingNote = 0;
 
+        public static AudioSource AudioSource { get; private set; }
+
         protected override void Start()
         {
             base.Start();
             
             dataRythimMaker = data as SO_QuestRythimMaker;
+
+            AudioSource = GetComponent<AudioSource>();
+
+            if(!AudioSource)
+                AudioSource = GameManager.Instance.AudioSource;
 
             if(!dataRythimMaker)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestRythimMaker");
