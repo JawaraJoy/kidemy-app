@@ -122,6 +122,15 @@ namespace EduGame
             }
 
             #if !UNITY_EDITOR && UNITY_WEBGL
+
+                if(!string.IsNullOrEmpty(frameURL))
+                {
+                    Dictionary<string, string> parameters = URIHelper.GetParameters(frameURL);
+                    if(parameters.ContainsKey("redirect_url"))
+                    {
+                        baseURL = parameters["redirect_url"];
+                    }
+                }
                 LogToBrowser("Home URL: " + baseURL);
             #endif
 
@@ -139,6 +148,7 @@ namespace EduGame
 
             apiManager = GetComponent<APIManager>();
 
+            /*
             apiManager.FetchData(
                 url: APIInfoURL,
                 onSuccess: (jsonString) => 
@@ -167,6 +177,7 @@ namespace EduGame
                     Debug.LogWarning($"Failed to load data: {errorMessage}");
                 }
             );
+            */
 
             if (questPrefabs.Length > 0)
             {
@@ -409,6 +420,7 @@ namespace EduGame
 
         public virtual void GoHome()
         {
+            /*
             if(!string.IsNullOrEmpty(islandId))
             {
                 string previousURL = gameURL.Replace("[ISLAND_ID]", islandId);
@@ -417,6 +429,14 @@ namespace EduGame
 
                 #if !UNITY_EDITOR && UNITY_WEBGL
                     RedirectParentWindow(previousURL);
+                #endif
+            }
+            */
+
+            if(!string.IsNullOrEmpty(baseURL))
+            {
+                #if !UNITY_EDITOR && UNITY_WEBGL
+                    RedirectParentWindow(baseURL);
                 #endif
             }
         }

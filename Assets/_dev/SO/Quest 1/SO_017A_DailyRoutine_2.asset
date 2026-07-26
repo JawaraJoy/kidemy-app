@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_017A_DailyRoutine_2
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: 017A
+  title: Routine
+  category: 4
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
+  question:
+    image: {fileID: 0}
+    text: Put the morning steps in the right order!
+    color: {r: 0, g: 0, b: 0, a: 0}
+    audio: {fileID: 0}
+  groups:
+  - label:
+      image: {fileID: 0}
+      text: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      audio: {fileID: 0}
+    limit: 6
+    labels:
+    - image: {fileID: 21300000, guid: faec26b660adf294ebcaf502164197df, type: 3}
+      text: Brush Teeth
+      color: {r: 1, g: 0.7529412, b: 0.3764706, a: 0}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 995bda8327167c9409211443240e4d0a, type: 3}
+      text: Put Pajama
+      color: {r: 1, g: 0.54509807, b: 0.8352941, a: 0}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: c696f271bf601724ebe27f4eb15510e7, type: 3}
+      text: Sleep
+      color: {r: 0, g: 0.84478456, b: 0.0411286, a: 0}
+      audio: {fileID: 0}
+  randomizeChoice: 1
+  answerInOrder: 1
+  timer: 0

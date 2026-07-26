@@ -19,12 +19,20 @@
     #unity-container {
       width: 100%;
       height: 100%;
-      position: relative;
+      position: absolute;
+      /* Menghilangkan ketergantungan posisi statis */
+      top: 0;
+      left: 0;
       display: grid;
       place-items: center;
+      /* Canvas otomatis di tengah */
+      background: #111;
+      /* Warna latar belakang area kosong (letterbox) */
     }
 
     #unity-canvas {
+      /* Hapus width: 100% dan height: 100% dari CSS bawaan */
+      display: block;
       background: #231f20;
     }
 
@@ -55,42 +63,36 @@
     };
 
     const doResize = (function () {
-      const widthScreen = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      const heightScreen = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      const targetRatio = refRes.width / refRes.height;
 
-      const deviceAspect = widthScreen / heightScreen;
-      const refAspect = refRes.width / refRes.height;
+      // 2. Ambil ukuran riil dari kontainer iframe tempat game berada
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+      const containerRatio = containerWidth / containerHeight;
 
       let finalWidth, finalHeight;
 
-      if (deviceAspect > refAspect) {
-        finalHeight = heightScreen;
-        finalWidth = refRes.width * (heightScreen / refRes.height);
-      } 
-      else {
-        finalWidth = widthScreen;
-        finalHeight = refRes.height * (widthScreen / refRes.width);
+      // 3. Hitung penskalaan yang pas tanpa merusak aspek rasio
+      if (containerRatio > targetRatio) {
+        // Jika iframe terlalu lebar (ada area kosong di kiri-kanan)
+        finalHeight = containerHeight;
+        finalWidth = containerHeight * targetRatio;
+      } else {
+        // Jika iframe terlalu tinggi (ada area kosong di atas-bawah)
+        finalWidth = containerWidth;
+        finalHeight = containerWidth / targetRatio;
       }
 
-      // Set the internal rendering buffer size
-      canvas.width = finalWidth;
-      canvas.height = finalHeight;
-
-      // FIX: Force the CSS display sizes to match the exact calculations
+      // 4. Set ukuran baru ke style canvas agar proporsional
       canvas.style.width = finalWidth + "px";
       canvas.style.height = finalHeight + "px";
-      
-      // Optional: Center the canvas in the 100% x 100% iframe if desired
-      container.style.display = "flex";
-      container.style.justifyContent = "center";
-      container.style.alignItems = "center";
     });
 
     doResize();
 
-    window.onresize = () => {
-      doResize();
-    };
+    // Daftarkan event listener bawaan browser
+    window.addEventListener('resize', doResize);
+    window.addEventListener('orientationchange', doResize);
 
     var buildUrl = "Build";
     var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";

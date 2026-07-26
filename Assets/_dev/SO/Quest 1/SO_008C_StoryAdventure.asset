@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_008C_StoryAdventure
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 008CSSS
+  title: StoryAdventure
+  category: 1
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 20
+  question:
+    image: {fileID: 0}
+    text: What flavor is the popsicle?
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+  choices:
+  - image: {fileID: 21300000, guid: cb48a88b0d0c7724eaff099f9c007434, type: 3}
+    text: Strawberry
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: a93b74c316410e34a8144457c52b48cf, type: 3}
+    text: Orange
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: dcba83527e540b94b9e2d8921cbc5e0d, type: 3}
+    text: Melon
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 01540d18261e4d448bdbe7b16f8c54f1, type: 3}
+    text: Watermelon
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 1

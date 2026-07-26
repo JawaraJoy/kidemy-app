@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_019C_SafetyPuzzles
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 019C
+  title: Safety Puzzles
+  category: 3
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 20
+  question:
+    image: {fileID: 2940056856077486740, guid: ecb34116cce352a4087de4c1179d0e76, type: 3}
+    text: Which is not safe?
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+  choices:
+  - image: {fileID: -1511764753, guid: ecb34116cce352a4087de4c1179d0e76, type: 3}
+    text: Talk to the others
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: -1089056022, guid: ecb34116cce352a4087de4c1179d0e76, type: 3}
+    text: Sleep
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: -151368726, guid: ecb34116cce352a4087de4c1179d0e76, type: 3}
+    text: Sticking head outside
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 1
+  timer: 0
+  randomizeChoice: 1

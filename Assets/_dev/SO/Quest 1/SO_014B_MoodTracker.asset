@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_014B_MoodTracker
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 014B
+  title: Mood Tracker
+  category: 3
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  question:
+    image: {fileID: 0}
+    text: How is Bobo's feeling?
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+  choices:
+  - image: {fileID: 21300000, guid: c290233326fe28641bee8d9dceeb1974, type: 3}
+    text: Excited
+    color: {r: 0.5137255, g: 0.7921569, b: 0.4627451, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 8d8042a02f7291e468bf9489ebf3ba25, type: 3}
+    text: Worried
+    color: {r: 1, g: 0.85490197, b: 0.47843137, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 25ffc18ca67478d4581699d8fa003dfd, type: 3}
+    text: Calm
+    color: {r: 0.47843137, g: 0.94509804, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 77218257dd6747e43bdabf70d2bb5b4b, type: 3}
+    text: Sad
+    color: {r: 1, g: 0.6666667, b: 0.6666667, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 1
+  timer: 0
+  randomizeChoice: 1

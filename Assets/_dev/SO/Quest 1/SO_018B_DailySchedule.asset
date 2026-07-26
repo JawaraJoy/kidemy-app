@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_018B_DailySchedule
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: 018B
+  title: Daily Schedule
+  category: 4
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
+  question:
+    image: {fileID: 0}
+    text: Categorize the activities
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+  groups:
+  - label:
+      image: {fileID: 21300000, guid: 84c9fc5e5de83f143991a927d4a13dde, type: 3}
+      text: Morning
+      color: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 4
+    labels:
+    - image: {fileID: 21300000, guid: e9d428977dd6d8e4e94a6c9addf6ae6f, type: 3}
+      text: Get Dressed
+      color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 82d8027ffc339e347ba58e6ba3a2cff3, type: 3}
+      text: Breakfast
+      color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: b06acd95387066e468c477a6ce06fa3d, type: 3}
+      text: School
+      color: {r: 1, g: 0.54509807, b: 0.8352941, a: 1}
+      audio: {fileID: 0}
+  - label:
+      image: {fileID: 21300000, guid: f81dd1b79d243d34db956465bce50339, type: 3}
+      text: Afternoon
+      color: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 4
+    labels:
+    - image: {fileID: 21300000, guid: 1114ba327ba01a94f9c04e973bd35752, type: 3}
+      text: Go Home
+      color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 3cd2804cf30c3004caf2d4d74eddc942, type: 3}
+      text: Lunch
+      color: {r: 0, g: 0.84313726, b: 0.039215688, a: 1}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 4ed0adb871115ed40a3feb5aca3c7108, type: 3}
+      text: Play Outside
+      color: {r: 0.83137256, g: 0.6392157, b: 0.5803922, a: 1}
+      audio: {fileID: 0}
+  - label:
+      image: {fileID: 21300000, guid: a57a0fbe42aebca45b9cd4b618ef0980, type: 3}
+      text: Night
+      color: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 4
+    labels:
+    - image: {fileID: 21300000, guid: f2361592f247301449a425516208f649, type: 3}
+      text: Dinner
+      color: {r: 0.8862745, g: 0.95686275, b: 0.5803922, a: 1}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 72f336e5f13535a42a412ddba2df6300, type: 3}
+      text: Study
+      color: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: c696f271bf601724ebe27f4eb15510e7, type: 3}
+      text: Sleep
+      color: {r: 0.8627451, g: 0.6392157, b: 1, a: 1}
+      audio: {fileID: 0}
+  randomizeChoice: 1
+  answerInOrder: 0
+  timer: 0

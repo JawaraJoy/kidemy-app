@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_017A_DailyRoutine_5
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: 017A
+  title: Routine
+  category: 4
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
+  question:
+    image: {fileID: 0}
+    text: Put the morning steps in the right order!
+    color: {r: 0, g: 0, b: 0, a: 0}
+    audio: {fileID: 0}
+  groups:
+  - label:
+      image: {fileID: 0}
+      text: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      audio: {fileID: 0}
+    limit: 6
+    labels:
+    - image: {fileID: 21300000, guid: f7baab1dd47b4bc4e9c61a3955cc20e0, type: 3}
+      text: Wash Hand
+      color: {r: 1, g: 0.54509807, b: 0.8352941, a: 0}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: cb3245d5f20cd4040aaa25b39c222f6c, type: 3}
+      text: Eat Snack
+      color: {r: 1, g: 0.7529412, b: 0.3764706, a: 0}
+      audio: {fileID: 0}
+    - image: {fileID: 21300000, guid: 3d779e1d297471d41af9e6b4646e4af2, type: 3}
+      text: Throw trash away
+      color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 0}
+      audio: {fileID: 0}
+  randomizeChoice: 1
+  answerInOrder: 1
+  timer: 0

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_dev/Scenes/Dev_001_FrogsCount_A_rev.unity
     guid: c74b6fc5f46bd7445b91ee47b7c1306d
   - enabled: 1
-    path: Assets/_dev/Scenes/Dev_001_FrogsCount_B.unity
+    path: Assets/_dev/Scenes/Dev_001_FrogsCount_B_rev.unity
     guid: dc7b28b6869a99d4893e615482651b72
   - enabled: 1
     path: Assets/_dev/Scenes/Dev_001_FrogsCount_C.unity
@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/_dev/Scenes/Dev_002_AdditionTrek_A_rev.unity
     guid: 55a9a3b42a363904bb8794399e4d97e9
   - enabled: 1
-    path: Assets/_dev/Scenes/Dev_002_AdditionTrek_B.unity
+    path: Assets/_dev/Scenes/Dev_002_AdditionTrek_B_rev.unity
     guid: 098508509674c0940bec2bb0ef96acd9
   - enabled: 1
     path: Assets/_dev/Scenes/Dev_002_AdditionTrek_C.unity
@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/_dev/Scenes/Dev_003_PatternJungle_A_rev.unity
     guid: 5bedef139b18c72429590da28e35bafa
   - enabled: 1
-    path: Assets/_dev/Scenes/Dev_003_PatternJungle_B.unity
+    path: Assets/_dev/Scenes/Dev_003_PatternJungle_B_rev.unity
     guid: cc8dd19d2708c694cb49247c5874a4ac
   - enabled: 1
     path: Assets/_dev/Scenes/Dev_003_PatternJungle_C.unity

@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_QuestMultipleChoice_PROTO_SEL_002
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: PROTO_SEL_002
+  category: 3
+  autoSubmit: 0
+  question:
+    image: {fileID: 0}
+    text: Which one is match with audio?
+    audio: {fileID: 8300000, guid: 3659a5e56efaea142abb19d3c98a25c0, type: 3}
+  choices:
+  - image: {fileID: 3210277829683252377, guid: cf792b40ab5a726489ccaff8635d9b22, type: 3}
+    text: 
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: -406730303290658105, guid: cf792b40ab5a726489ccaff8635d9b22, type: 3}
+    text: 
+    audio: {fileID: 0}
+    isAnswer: 1
+  - image: {fileID: 4890873540639362747, guid: cf792b40ab5a726489ccaff8635d9b22, type: 3}
+    text: 
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: -7438871042963938866, guid: cf792b40ab5a726489ccaff8635d9b22, type: 3}
+    text: 
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: -8065205498179057001, guid: cf792b40ab5a726489ccaff8635d9b22, type: 3}
+    text: 
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 3254159209724570747, guid: cf792b40ab5a726489ccaff8635d9b22, type: 3}
+    text: 
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 8133863489549260175, guid: cf792b40ab5a726489ccaff8635d9b22, type: 3}
+    text: 
+    audio: {fileID: 0}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 1

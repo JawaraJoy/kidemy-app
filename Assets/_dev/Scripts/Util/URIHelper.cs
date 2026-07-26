@@ -25,7 +25,7 @@ namespace EduGame
                         string[] d3 = d.Split("=");
 
                         if (d3.Length > 1)
-                            res.Add(d3[0], d3[1]);
+                            res.Add(d3[0], System.Uri.UnescapeDataString(d3[1]));
                     }
                 }
             }
