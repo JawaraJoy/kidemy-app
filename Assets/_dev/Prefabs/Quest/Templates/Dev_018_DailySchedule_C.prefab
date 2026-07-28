@@ -306,6 +306,7 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: ad1d42159c5e4e844acb078db299559c, type: 3}
   color: {r: 0.742257, g: 0.6279722, b: 0.6279722, a: 0}
   npcController: {fileID: 9100000, guid: defcd960c152b1844bcf8d9e38ad9c2e, type: 2}
+  character: {fileID: 11400000, guid: 3ffdcd2a59f2a934e8cbef1f048d8760, type: 2}
   score: 10
   questionImage: {fileID: 0}
   questionAudio: {fileID: 0}

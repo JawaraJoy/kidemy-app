@@ -11,6 +11,7 @@ namespace EduGame
         [SerializeField] protected Sprite background;
         [SerializeField] protected Color color;
         [SerializeField] protected RuntimeAnimatorController npcController;
+        [SerializeField] protected SO_Character character;
         
         [Header("Rules")]
         [SerializeField] protected int score = 10;
@@ -20,7 +21,6 @@ namespace EduGame
 
         public Sprite Background => background;
         public Color Color => color;
-        public RuntimeAnimatorController NPCController => npcController;
         
         public SO_Quest Data => data;
         
@@ -29,12 +29,25 @@ namespace EduGame
             if(!data)
                 Debug.LogError("Quest not set");
             
-            if(npcController)
-                GameManager.Instance.SetNPC(npcController);
+            //if(npcController)
+            //    GameManager.Instance.SetNPC(npcController);
+
+            if(character && character.CharacterController)
+                GameManager.Instance.SetNPC(character.CharacterController);
 
             GameManager.Instance.InitQuest(data);
 
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
+
+        public virtual void Setup()
+        {
+            
+        }
+
+        public virtual void PlayQuestionVoice()
+        {
+            
         }
 
         public virtual void OnAnswered(bool result, bool submit = true)

@@ -112,9 +112,23 @@
     script.src = loaderUrl;
     script.onload = () => {
       createUnityInstance(canvas, config, (progress) => {
-        progressSpan.textContent = Math.floor(100 * progress) + "%";
+        // 1. First Phase: Loading Unity engine files (0% to 100%)
+        progressSpan.textContent = "Loading Engine: " + Math.floor(100 * progress) + "%";
       }).then((unityInstance) => {
-        loadingBar.style.display = "none";
+        // DO NOT hide loadingBar yet!
+        progressSpan.textContent = "Preparing voice assets...";
+
+        // 2. Global JS functions exposed for C# to call
+        window.UpdateVoiceProgress = function (current, total) {
+          var percentage = Math.floor((current / total) * 100);
+          progressSpan.textContent = "Downloading Voices: " + percentage + "% (" + current + "/" + total + ")";
+        };
+
+        window.OnVoiceDownloadComplete = function () {
+          progressSpan.textContent = "Complete!";
+          loadingBar.style.display = "none"; // Hide loading bar ONLY when C# finishes
+        };
+
       }).catch((message) => {
         alert(message);
       });

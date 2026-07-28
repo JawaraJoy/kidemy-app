@@ -21,12 +21,12 @@ namespace EduGame
         private QuestMultipleChoicesItem[] choices;
         private int unansweredCorrect = 0;
 
+        private VoiceRequest voiceQuestionRequest = new VoiceRequest();
+
         protected override void Start()
         {
             base.Start();
             
-            dataMultipleChoice = data as SO_QuestMultipleChoice;
-
             if(!dataMultipleChoice)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoice");
 
@@ -79,6 +79,36 @@ namespace EduGame
             }
 
             SetDialog();
+        }
+
+        public override void Setup()
+        {
+            dataMultipleChoice = data as SO_QuestMultipleChoice;
+
+            Debug.Log(dataMultipleChoice);
+
+            voiceQuestionRequest.id = dataMultipleChoice.name + "_question";
+            voiceQuestionRequest.text = dataMultipleChoice.Question.Text;
+            voiceQuestionRequest.voice_id = character ? character.CharacterId : "";
+
+            GameManager.Instance.Asset.AddVoiceRequest(voiceQuestionRequest);
+        }
+
+        public override void PlayQuestionVoice()
+        {
+            AssetManager.Instance.GetCachedAudio(
+                voiceId: voiceQuestionRequest.id,
+                onSuccess: (clip) =>
+                {
+                    GameManager.Instance.AudioSource.PlayOneShot(clip);
+
+                    Debug.Log($"[Quest] Playing voice clip for ID: {dataMultipleChoice.name + "_question"}");
+                },
+                onError: (error) =>
+                {
+                    Debug.LogError($"[Quest] Failed to play voice for ID '{dataMultipleChoice.name + "_question"}': {error}");
+                }
+            );
         }
 
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)

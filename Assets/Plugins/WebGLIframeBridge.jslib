@@ -52,6 +52,26 @@ mergeInto(LibraryManager.library, {
         }
     },
 
+    JS_FileSystem_Sync: function () {
+        FS.syncfs(false, function (err) {
+            if (err) {
+                console.error("IndexedDB sync error: ", err);
+            }
+        });
+    },
+
+    JS_UpdateVoiceProgress: function (current, total) {
+        if (typeof window.UpdateVoiceProgress === "function") {
+            window.UpdateVoiceProgress(current, total);
+        }
+    },
+
+    JS_OnVoiceDownloadComplete: function () {
+        if (typeof window.OnVoiceDownloadComplete === "function") {
+            window.OnVoiceDownloadComplete();
+        }
+    },
+
     LogToBrowser: function (message) {
         console.log(UTF8ToString(message));
     }

@@ -196,10 +196,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: questPrefab
-      value: 
-      objectReference: {fileID: 8344063676491614192, guid: 3d02ff19c9bb06f43971c340ddd19fb4, type: 3}
-    - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: questPrefabs.Array.size
       value: 5
       objectReference: {fileID: 0}

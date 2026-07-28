@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4d65b5b7241e94a9197cd42f4dd850, type: 3}
+  m_Name: SO_Melo
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_Character
+  characterId: loY1uopAz31XyhAEhNSa
+  characterName: Melo
+  characterImage: {fileID: 21300000, guid: d4bd816c567ed0f46909c0735d26e919, type: 3}
+  characterController: {fileID: 9100000, guid: 87da3143e33dd9d4e8098a520f7f61e8, type: 2}

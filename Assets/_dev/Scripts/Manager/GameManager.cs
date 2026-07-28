@@ -73,6 +73,7 @@ namespace EduGame
         private string islandId;
         private ResultItem[] result;
         private APIManager apiManager;
+        private AssetManager assetManager;
         private string APIInfoURL = "https://stg-be.kimee.io/api/v1/external/games";
         private string APIResultURL = "https://stg-be.kimee.io/api/v1/external/games/progress";
         private string gameURL = "https://stg.kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
@@ -81,6 +82,8 @@ namespace EduGame
         public AudioSource AudioSource => audioSource;
         public float ResultTime => recordedTime;
         public Color ColorTheme { get; private set; }
+        public APIManager API => apiManager;
+        public AssetManager Asset => assetManager;
 
         public static GameManager Instance { get; private set; }
 
@@ -100,29 +103,23 @@ namespace EduGame
 
         void Start()
         {
-            #if !UNITY_EDITOR && UNITY_WEBGL
+            apiManager = GetComponent<APIManager>();
+            assetManager = GetComponent<AssetManager>();
+
+#if !UNITY_EDITOR && UNITY_WEBGL
                 baseURL = GetParentURL();
                 frameURL = GetSelfURL();
-            #else
-                baseURL = "";
-                frameURL = "";
-            #endif
-            
-            #if !UNITY_EDITOR && UNITY_WEBGL
+#else
+            baseURL = "";
+            frameURL = "";
+#endif
+
+#if !UNITY_EDITOR && UNITY_WEBGL
                 LogToBrowser("Base URL: " + baseURL);
                 LogToBrowser("Frame URL: " + frameURL);
-            #endif
+#endif
 
-            if(!string.IsNullOrEmpty(baseURL))
-            {
-                if(baseURL.Contains("gamesid", System.StringComparison.OrdinalIgnoreCase))
-                    baseURL = URIHelper.RemoveQueryParam(baseURL, "gamesid");
-                else
-                    baseURL = URIHelper.GetBaseUrl(baseURL);
-            }
-
-            #if !UNITY_EDITOR && UNITY_WEBGL
-
+#if !UNITY_EDITOR && UNITY_WEBGL
                 if(!string.IsNullOrEmpty(frameURL))
                 {
                     Dictionary<string, string> parameters = URIHelper.GetParameters(frameURL);
@@ -132,52 +129,19 @@ namespace EduGame
                     }
                 }
                 LogToBrowser("Home URL: " + baseURL);
-            #endif
+#endif
 
-            if(!string.IsNullOrEmpty(frameURL))
+            if (!string.IsNullOrEmpty(frameURL))
             {
                 Dictionary<string, string> param = URIHelper.GetParameters(frameURL);
 
-                if(param.ContainsKey("session_id"))
+                if (param.ContainsKey("session_id"))
                     sessionId = param["session_id"];
                 else
                     sessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
             }
             else
                 sessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
-
-            apiManager = GetComponent<APIManager>();
-
-            /*
-            apiManager.FetchData(
-                url: APIInfoURL,
-                onSuccess: (jsonString) => 
-                {
-                    string targetKey = "islandId"; 
-                    string pattern = $"\"{targetKey}\"\\s*:\\s*(?:\"(?<value>[^\"]*)\"|(?<value>[^,\\s}}\\]]+))";
-
-                    Match match = Regex.Match(jsonString, pattern);
-
-                    if (match.Success)
-                    {
-                        // 3. Extract the clean value using the named regex group
-                        string extractedValue = match.Groups["value"].Value;
-                        Debug.Log($"Extracted '{targetKey}': {extractedValue}");
-
-                        islandId = extractedValue;
-                    }
-                    else
-                    {
-                        Debug.LogWarning($"Could not find the key '{targetKey}' in the JSON.");
-                    }
-                },
-                onFailure: (errorMessage) => 
-                {
-                    // Handle UI updates or retries here if things go wrong
-                    Debug.LogWarning($"Failed to load data: {errorMessage}");
-                }
-            );
-            */
 
             if (questPrefabs.Length > 0)
             {
@@ -189,27 +153,27 @@ namespace EduGame
                     quests[i].gameObject.SetActive(false);
                 }
 
-                quests[0].gameObject.SetActive(true);
-
-                if (background)
-                    background.sprite = quests[0].Background;
-
-                StartTimer();
             }
             else if (questPrefab)
             {
                 quests = new Quest[1];
 
                 quests[0] = InstantiateTemplate(questPrefab);
-                quests[0].gameObject.SetActive(true);
-
-                if (background)
-                    background.sprite = quests[0].Background;
-
-                StartTimer();
             }
             else
                 Debug.LogError("Failed to load data, challenge will return empty");
+
+            //quests[0].gameObject.SetActive(true);
+
+            if (background)
+                background.sprite = quests[0].Background;
+
+            StartTimer();
+
+            foreach (var quest in quests)
+                quest.Setup();
+
+            assetManager.DownloadMissingVoices();
 
             result = new ResultItem[quests.Length];
         }
@@ -263,18 +227,6 @@ namespace EduGame
             yield return null;
         }
 
-        Quest InstantiateTemplate(Quest templatePrefab)
-        {
-            Quest template = Instantiate(templatePrefab, transform);
-
-            template.transform.localPosition = Vector3.zero;
-            template.transform.localScale = Vector3.one;
-
-            ColorTheme = template.Color;
-
-            return template;
-        }
-
         public virtual void SetNPC(RuntimeAnimatorController controller)
         {
             Animator animator = npc.GetComponent<Animator>();
@@ -287,6 +239,18 @@ namespace EduGame
         {
             if (npcDialog)
                 npcDialog.text = dialog;
+        }
+        
+        Quest InstantiateTemplate(Quest templatePrefab)
+        {
+            Quest template = Instantiate(templatePrefab, transform);
+
+            template.transform.localPosition = Vector3.zero;
+            template.transform.localScale = Vector3.one;
+
+            ColorTheme = template.Color;
+
+            return template;
         }
 
         protected virtual void InstantiateStar()
@@ -312,26 +276,34 @@ namespace EduGame
                 category.text = questData.Category.ToString().Replace('_', ' ');
         }
 
+        public void PlayQuestionVoice()
+        {
+            quests[currentIndex].PlayQuestionVoice();
+        }
+
+        public void Play()
+        {
+            currentIndex = -1;
+            Next();
+        }
+
         void Next()
         {
             int nextIndex = currentIndex + 1;
 
-            if(quests.Length > 0 && nextIndex < quests.Length)
+            if (quests.Length > 0 && nextIndex < quests.Length)
             {
-                quests[currentIndex].gameObject.SetActive(false);
-            
-                quests[nextIndex].gameObject.SetActive(true);
+                if (currentIndex >= 0)
+                    quests[currentIndex].gameObject.SetActive(false);
 
+                quests[nextIndex].gameObject.SetActive(true);
+                
                 if (background)
                     background.sprite = quests[nextIndex].Background;
 
                 currentIndex = nextIndex;
 
                 Reset();
-            }
-            else
-            {
-                
             }
         }
 
@@ -347,7 +319,7 @@ namespace EduGame
             if (star == 3 && quests[currentIndex].Data.TresholdTime > 0 && recordedTime > quests[currentIndex].Data.TresholdTime)
                 star = 2;
 
-            if(currentIndex < result.Length)
+            if (currentIndex < result.Length)
                 result[currentIndex] = new ResultItem { stars = star, time = Mathf.RoundToInt(recordedTime) };
 
             ShowResult(star);
@@ -358,6 +330,8 @@ namespace EduGame
             CloseResult();
             StopTimer();
             StartTimer();
+
+            PlayQuestionVoice();
         }
 
         public virtual void ResetQuest()
@@ -408,36 +382,23 @@ namespace EduGame
                 }
             }
 
-            if(currentIndex + 1 == quests.Length)
+            if (currentIndex + 1 == quests.Length)
             {
                 buttonNext.gameObject.SetActive(false);
                 SendResult();
             }
             else
                 buttonNext.gameObject.SetActive(true);
-            
+
         }
 
         public virtual void GoHome()
         {
-            /*
-            if(!string.IsNullOrEmpty(islandId))
+            if (!string.IsNullOrEmpty(baseURL))
             {
-                string previousURL = gameURL.Replace("[ISLAND_ID]", islandId);
-
-                Debug.Log(previousURL);
-
-                #if !UNITY_EDITOR && UNITY_WEBGL
-                    RedirectParentWindow(previousURL);
-                #endif
-            }
-            */
-
-            if(!string.IsNullOrEmpty(baseURL))
-            {
-                #if !UNITY_EDITOR && UNITY_WEBGL
+#if !UNITY_EDITOR && UNITY_WEBGL
                     RedirectParentWindow(baseURL);
-                #endif
+#endif
             }
         }
 
@@ -450,9 +411,9 @@ namespace EduGame
             };
 
             string json = JsonUtility.ToJson(compiledResult);
-            Debug.Log(json); 
+            Debug.Log(json);
 
-            if(apiManager)
+            if (apiManager)
                 apiManager.SendData(APIResultURL, json);
         }
 

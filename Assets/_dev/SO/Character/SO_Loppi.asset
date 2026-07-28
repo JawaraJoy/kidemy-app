@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4d65b5b7241e94a9197cd42f4dd850, type: 3}
+  m_Name: SO_Loppi
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_Character
+  characterId: Nggzl2QAXh3OijoXD116
+  characterName: Loppi
+  characterImage: {fileID: 21300000, guid: 3daf1efeab87dc44eb3c517f88f9edbb, type: 3}
+  characterController: {fileID: 9100000, guid: 8813f0802c58c5842b04c5613205aa2c, type: 2}

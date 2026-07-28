@@ -315,6 +315,7 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 6fcd064ad665f6a44bcb6d08ae6aba7c, type: 3}
   color: {r: 0, g: 0.8666667, b: 1, a: 0}
   npcController: {fileID: 9100000, guid: 8813f0802c58c5842b04c5613205aa2c, type: 2}
+  character: {fileID: 11400000, guid: 835a5f97fe91ead4390fef37675e7290, type: 2}
   score: 10
   colorOptions:
   - {r: 0, g: 0.15138769, b: 1, a: 0}
