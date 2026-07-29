@@ -13,9 +13,9 @@ namespace Rush
         [SerializeField]
         private float m_FlexibleHight = 0f;
 
-        public void Config(GameObject compo)
+        public void Config(Extenable exten)
         {
-            if (compo.TryGetComponent(out LayoutElement layoutElement))
+            if (exten.HasExtention(out LayoutElement layoutElement))
             {
                 layoutElement.ignoreLayout = m_IgnoreLayout;
                 layoutElement.flexibleWidth = m_FlexibleWidht;

@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4626644bdfce7c24f84f478984dd80bd, type: 3}
-  m_Name: Canvas_Screen
+  m_Name: Canvas_Gameplay
   m_EditorClassIdentifier: Assembly-CSharp::Rush.CanvasConfig
   m_Info:
-    m_Id: canvasscreen
-    m_Name: Canvas Screen
+    m_Id: canvasgameplay
+    m_Name: 
     m_Description: 
+  m_MainSprite: {fileID: 0}
+  m_BaseColor: {r: 1, g: 1, b: 1, a: 1}

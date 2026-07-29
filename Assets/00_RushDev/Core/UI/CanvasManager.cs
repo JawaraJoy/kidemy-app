@@ -40,7 +40,8 @@ namespace Rush
                 }
             }
             return null;
-        }   
+        }  
+
         protected bool HasCanvasInternal(CanvasConfig canvasConfig, out CanvasView canvas)
         {
             canvas = GetCanvasViewInternal(canvasConfig);
@@ -59,6 +60,7 @@ namespace Rush
             else
             {
                 m_CanvasViews.Add(canvasView);
+                Configurate();
             }
         }
         public void UnRegisterCanvasView(CanvasView canvasView)

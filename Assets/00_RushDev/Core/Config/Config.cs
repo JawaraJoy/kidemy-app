@@ -19,7 +19,13 @@ namespace Rush
         }
 
         [SerializeField]
-        private BasicInfo m_Info;
+        protected BasicInfo m_Info;
+        [SerializeField]
+        protected Sprite m_MainSprite;
+        [SerializeField]
+        private Color m_BaseColor = Color.white;
         public BasicInfo Info => m_Info;
+        public Sprite MainSprite => m_MainSprite;
+        public Color BaseColor => m_BaseColor;
     }
 }

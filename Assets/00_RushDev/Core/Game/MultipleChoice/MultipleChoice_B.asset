@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601cb3bbc6c094d41bef0029e67cac34, type: 3}
+  m_Name: MultipleChoice_B
+  m_EditorClassIdentifier: Assembly-CSharp::Rush.MultipleChoiceConfig
+  m_Info:
+    m_Id: questb
+    m_Name: 
+    m_Description: 
+  m_MainSprite: {fileID: 0}
+  m_BaseColor: {r: 1, g: 1, b: 1, a: 1}
+  m_PanelUsed: {fileID: 0}
+  m_Category: {fileID: 0}
+  m_ScoreAmount: 0
+  m_KeyViewPrefab: {fileID: 0}
+  m_QuestKeys: []
+  m_RightKeys: []
+  m_ClearCondition: 0
+  m_DialogueMode: 0
+  m_QuestGroupContentSetting: {fileID: 0}
+  m_KeyGroupContentSetting: {fileID: 0}

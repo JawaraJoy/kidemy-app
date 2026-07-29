@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Rush
 {
-    public abstract class PanelView : View
+    public class PanelView : UIView
     {
         [SerializeField]
         private PanelConfig m_PanelConfig;
