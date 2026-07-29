@@ -216,7 +216,7 @@ namespace EduGame
 
                 if (www.result == UnityWebRequest.Result.Success)
                 {
-                    string fileName = $"{voiceId}.mp3";
+                    string fileName = $"{voiceId}.wav";
                     string localPath = Path.Combine(Application.persistentDataPath, fileName);
 
                     // File.WriteAllBytes automatically overwrites existing files
@@ -236,17 +236,13 @@ namespace EduGame
             currentRequestFinished = true;
         }
 
-        /// <summary>
-        /// Fetches a stored audio file from cache as an AudioClip.
+        // <summary>
+        /// Fetches a stored WAV audio file from cache as an AudioClip directly without UnityWebRequest.
         /// </summary>
         public void GetCachedAudio(string voiceId, Action<AudioClip> onSuccess, Action<string> onError = null)
         {
-            StartCoroutine(Routine_GetCachedAudio(voiceId, onSuccess, onError));
-        }
-
-        private IEnumerator Routine_GetCachedAudio(string voiceId, Action<AudioClip> onSuccess, Action<string> onError)
-        {
-            string fileName = $"{voiceId}.mp3";
+            // Make sure file extension matches what you save (.wav)
+            string fileName = $"{voiceId}.wav";
             string localPath = Path.Combine(Application.persistentDataPath, fileName);
 
             if (!File.Exists(localPath))
@@ -254,26 +250,31 @@ namespace EduGame
                 string errorMessage = $"[AssetManager] Audio file for ID '{voiceId}' does not exist in local cache.";
                 Debug.LogError(errorMessage);
                 onError?.Invoke(errorMessage);
-                yield break;
+                return;
             }
 
-            string fileUri = "file://" + localPath;
-
-            using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(fileUri, AudioType.MPEG))
+            try
             {
-                yield return www.SendWebRequest();
+                // Direct C# read from WebGL virtual memory (MEMFS / IndexedDB)
+                byte[] wavBytes = File.ReadAllBytes(localPath);
+                AudioClip clip = WavUtility.ToAudioClip(wavBytes, voiceId);
 
-                if (www.result == UnityWebRequest.Result.Success)
+                if (clip != null)
                 {
-                    AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
                     onSuccess?.Invoke(clip);
                 }
                 else
                 {
-                    string errorMessage = $"[AssetManager] Failed to load cached clip for ID '{voiceId}': {www.error}";
+                    string errorMessage = $"[AssetManager] Failed to parse WAV bytes for ID '{voiceId}'.";
                     Debug.LogError(errorMessage);
                     onError?.Invoke(errorMessage);
                 }
+            }
+            catch (Exception e)
+            {
+                string errorMessage = $"[AssetManager] Exception reading cached file '{voiceId}': {e.Message}";
+                Debug.LogError(errorMessage);
+                onError?.Invoke(errorMessage);
             }
         }
     }
