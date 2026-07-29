@@ -160,15 +160,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 33485730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc6e958e2775fb243a8ef158757bb266, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ec8d80f1e6f1094f827a1e7dd066e9e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDropItem
-  text: {fileID: 0}
-  audioPlayer: {fileID: 0}
-  image: {fileID: 0}
-  tint: {fileID: 0}
-  correct: {fileID: 0}
-  wrong: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::Rush.QuestManager
+  m_DialoguePanel: {fileID: 11400000, guid: 5f76bd0e022845746aa322dc490e9801, type: 2}
+  m_UseCanvasForGameplay: {fileID: 11400000, guid: 4f9b2dd00bd9b8d49876ae24a3e64c86, type: 2}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: 590b42f14d9bdb14eb0bcc66b2e10c89, type: 2}
+  m_Quests: []
+  m_CurrentQuestPlaying:
+    m_State: 0
+    m_Scored: 0
+    m_KeySelecteds: []
+    m_QuestConfig: {fileID: 0}
+    m_UsedPanel: {fileID: 0}
+  m_AllQuestScore: 0
+  m_ClearedQuestScore: 0
+  m_OnQuestPlayed:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnCleareQuest:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &94084300
 GameObject:
   m_ObjectHideFlags: 0

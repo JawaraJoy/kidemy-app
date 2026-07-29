@@ -26,7 +26,7 @@ namespace Rush
         [SerializeField]
         private UnityEvent<Quest> m_OnQuestPlayed;
         [SerializeField]
-        private UnityEvent<Quest> m_OnCleareQuest;
+        private UnityEvent<Quest> m_OnQuestCleared;
 
         private DialoguePresenter m_DialoguePresenter;
         public DialoguePresenter DialoguePresenter => m_DialoguePresenter;
@@ -118,7 +118,7 @@ namespace Rush
                 AddClearedQuestScore(m_CurrentQuestPlaying.Scored);
                 m_CurrentQuestPlaying.AddScore(quest.QuestConfig.ScoreAmount);
             }
-            m_OnCleareQuest?.Invoke(quest);
+            m_OnQuestCleared?.Invoke(quest);
         }
     }
 }
