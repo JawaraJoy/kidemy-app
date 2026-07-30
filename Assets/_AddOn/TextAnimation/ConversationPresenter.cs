@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TextToVoice
+namespace AddOn.TextAnimation
 {
     public class ConversationPresenter : MonoBehaviour
     {

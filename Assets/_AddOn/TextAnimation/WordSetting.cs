@@ -1,7 +1,7 @@
 using EasyTextEffects.Effects;
 using UnityEngine;
 
-namespace TextToVoice
+namespace AddOn.TextAnimation
 {
     [System.Serializable]
     public class WordSetting

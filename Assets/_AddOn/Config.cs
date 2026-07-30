@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TextToVoice
+namespace AddOn
 {
     public abstract class Config : ScriptableObject
     {

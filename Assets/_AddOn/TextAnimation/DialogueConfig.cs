@@ -2,7 +2,7 @@ using EasyTextEffects;
 using TMPro;
 using UnityEngine;
 
-namespace TextToVoice
+namespace AddOn.TextAnimation
 {
     [CreateAssetMenu(fileName = "Dialogue_", menuName = "AddOn/TextToVoice/Dialogue")]
     public class DialogueConfig : Config
