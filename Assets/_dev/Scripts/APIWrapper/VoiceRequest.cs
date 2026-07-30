@@ -9,5 +9,6 @@ namespace EduGame
         public string id;
         public string text;
         public string voice_id;
+        public string format = "wav";
     }
 }
