@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe99ace52ee110469853422c88e340f, type: 3}
+  m_Name: Dialogue_Areyouready
+  m_EditorClassIdentifier: Assembly-CSharp::TextToVoice.DialogueConfig
+  m_Identic:
+    m_Id: koala
+    m_Name: Koala
+    m_Description: 
+  m_Potrait: {fileID: 21300000, guid: c290233326fe28641bee8d9dceeb1974, type: 3}
+  m_EffectPreset: {fileID: 11400000, guid: 4ce9908ccf7134c95bb64f24bc3ab9c9, type: 2}
+  m_WordSettings:
+  - m_Words: Are you
+    m_AddSpaceForNext: 1
+    m_Effects: []
+  - m_Words: Ready
+    m_AddSpaceForNext: 0
+    m_Effects:
+    - {fileID: 11400000, guid: b0181322eec2e4155a59b5d71636e181, type: 2}
+  - m_Words: '?'
+    m_AddSpaceForNext: 0
+    m_Effects: []
