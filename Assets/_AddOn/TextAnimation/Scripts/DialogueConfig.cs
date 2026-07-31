@@ -14,12 +14,12 @@ namespace AddOn.TextAnimation
         [SerializeField]
         private WordSetting[] m_WordSettings;
         [SerializeField]
-        private AudioClip m_VoiceClip;
+        private AudioClip m_VoiceClip; // generate audio to this
 
         public Sprite Potrait => m_Potrait;
         public TagEffectsPreset EffectPreset => m_EffectPreset;
         public AudioClip VoiceClip => m_VoiceClip;
-        public string GetFormattedText()
+        public string GetFormattedText() // use this to show in UI
         {
             StringBuilder builder = new();
 
@@ -30,7 +30,7 @@ namespace AddOn.TextAnimation
 
             return builder.ToString();
         }
-        public string GetPlainText()
+        public string GetPlainText() // use this to generate to audio
         {
             StringBuilder builder = new();
 
