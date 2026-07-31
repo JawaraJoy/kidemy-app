@@ -176,11 +176,13 @@ namespace EduGame
 
         public override void Reset()
         {
-            if(fields.Length > 0)
+            if(fields != null && fields.Length > 0)
             {
                 foreach (var field in fields)
                     field.Reset();
             }
+
+            base.Reset();
         }
 
         void SetDialog()

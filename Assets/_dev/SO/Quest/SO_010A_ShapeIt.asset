@@ -15,13 +15,14 @@ MonoBehaviour:
   id: 010A
   title: Shape It
   category: 2
+  question:
+    image: {fileID: 0}
+    text: Arrange the shape on the right to complete the picture
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 1d5aae26c9c2a56138afeef540b6b583, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
-  question:
-    image: {fileID: 0}
-    text: Arrange the shape on the right to create house
-    audio: {fileID: 0}
   canvas: {fileID: 0}
   timer: 0
   randomizeChoice: 0

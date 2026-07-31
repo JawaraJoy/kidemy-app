@@ -15,6 +15,11 @@ MonoBehaviour:
   id: 009A
   title: Color the Island
   category: 2
+  question:
+    image: {fileID: 0}
+    text: Color the picture, press button 'SUBMIT' when done
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: ad2cb90f1c8c9abd6ba2a7cb39667b50, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0

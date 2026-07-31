@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 014A
   title: Mood Tracker
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: 'How is the character feeling? '
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: fd8a73f25f4ee135694b36f82e6d3805, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: aae34c3faab2781b181a242c6942110d, type: 3}
     text: Calm
     color: {r: 0.5125027, g: 0.7935208, b: 0.46116865, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: f074374d7abb95c088b8a1059ec4f3f0, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 05162f20fd0c0aa83a23d3d568891540, type: 3}
     text: Happy
     color: {r: 0.47864014, g: 0.9442153, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 1b90180015721bc359ec40b4dc6da8e0, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: f28f37479be678df7a5023400587fbc9, type: 3}
     text: Scared
     color: {r: 1, g: 0.6666074, b: 0.6666074, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 9f69f696bcb133e1db81b111f9a07d65, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 86956e77b8302d1bba53b552864b1424, type: 3}
     text: Tired
     color: {r: 1, g: 0.853639, b: 0.47864014, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 673f57122a778b74487b36e4516b2cd4, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

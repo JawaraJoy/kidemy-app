@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 020C
   title: StepSequence
   category: 4
-  autoSubmit: 1
-  score: 10
-  tresholdTime: 40
   question:
     image: {fileID: 0}
     text: Put the steps in order
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e85b9ef2fb1c3549584057e632bd08c1, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 40
   groups:
   - label:
       image: {fileID: 0}
@@ -34,23 +34,23 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: e9e9fc7d9149f9949b347578a3af0f16, type: 3}
       text: Duck and Cover Head
       color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 28b9d04dfb9069579b9120dbc715a0e6, type: 3}
     - image: {fileID: 21300000, guid: cf22fbf800d21ce4fbbfff9006bb39ca, type: 3}
       text: Crawl to sturdy table
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 4a2449c9bad1c89d9bdf4f465a531042, type: 3}
     - image: {fileID: 21300000, guid: 443e71909229e7741a0ececcc73f8834, type: 3}
       text: Wait until shake gone
       color: {r: 1, g: 0.54509807, b: 0.8352941, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: ab83cedcea9725513b9f60b113d54543, type: 3}
     - image: {fileID: 21300000, guid: 6d899a81e61a6d9408e015329b73e2a8, type: 3}
       text: Try to Get Out
       color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: fda7aa6e5f7996c7fb19de507c8c33be, type: 3}
     - image: {fileID: 21300000, guid: 1114ba327ba01a94f9c04e973bd35752, type: 3}
       text: Meet at Safe Spot
       color: {r: 0, g: 0.84313726, b: 0.039215688, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 81753053e9a88927d8aba4ff81c23f73, type: 3}
   randomizeChoice: 1
   answerInOrder: 1
   timer: 0

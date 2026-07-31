@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 011A
   title: TuneTheMusic
   category: 2
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Listen and choose the matching sound
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 2f72dbf010421bca6875701b11958911, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 0}
     text: DO

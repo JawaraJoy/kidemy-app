@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 014C
   title: Mood Tracker
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 20
   question:
     image: {fileID: 0}
     text: How is Loppi's feeling?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0f733a70f88e42462bac53dfb649a328, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 20
   choices:
   - image: {fileID: 21300000, guid: 254b2de9614a65b49ae47c1f091881e4, type: 3}
     text: Excited
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 21f771933426134d0bf59c6386923dd3, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 826a974a7daf6f64a98dc8925b4e0d1b, type: 3}
     text: Shock
     color: {r: 1, g: 0.85490197, b: 0.47843137, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0defa1cd59e52d138855cd09677d10cb, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: f018856afe6c4874d9ec8e67e8c33f76, type: 3}
     text: Scared
     color: {r: 0.47843137, g: 0.94509804, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ea6f146b386abc30da478a1aef4c8a5e, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: c921e70933a944b479a208417e447493, type: 3}
     text: Sad
     color: {r: 1, g: 0.6666667, b: 0.6666667, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 98d34fb28ced0fca2aa2b2e9fee84463, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

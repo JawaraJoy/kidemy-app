@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 004A
   title: PuzzleJungle
   category: 0
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Which one matches all the clues?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 220f185fc825cbbea99e727f01a52f6a, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 2636818156884432622, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
     text: 

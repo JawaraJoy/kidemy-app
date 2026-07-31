@@ -8,8 +8,6 @@ namespace EduGame
     public class SO_QuestWordBuilder : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private QuestUtilLabel question;
-        [Space()]
         [SerializeField] private string answer = "";
         [Space()]
         [SerializeField] private QuestUtilLabelValue[] values;
@@ -19,7 +17,6 @@ namespace EduGame
         [SerializeField] private float timer = 0;
         [SerializeField] private bool randomizeChoice;
 
-        public QuestUtilLabel Question => question;
         public string Answer => answer;
         public QuestUtilLabelValue[] Values => randomizeChoice ? GetRandomizedChoices() : values;
         public float Timer => timer;

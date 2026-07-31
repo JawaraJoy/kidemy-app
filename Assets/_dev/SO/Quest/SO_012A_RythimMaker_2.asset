@@ -15,14 +15,14 @@ MonoBehaviour:
   id: SO_012A
   title: Rythim Maker
   category: 2
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: When the animals pass by, tap the circle on the left
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8c32e0600344735d79bd6b9dcdc8e4a8, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   speed: 0.1
   notes:
   - notePrefab: {fileID: -5172288113852014893, guid: 21c3621c0c5e82240981de425f2925ee, type: 3}

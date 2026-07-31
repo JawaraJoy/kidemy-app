@@ -127,15 +127,23 @@ namespace EduGame
 
         public override void Reset()
         {
-            unansweredNote = dataRythimMaker.Items.Length;
-            remainingNote = dataRythimMaker.Items.Length;
-
-            foreach (var choice in notes)
-                choice.Reset();
-
+            if(dataRythimMaker != null)
+            {
+                unansweredNote = dataRythimMaker.Items.Length;
+                remainingNote = dataRythimMaker.Items.Length;
+            }
+            
+            if(notes != null)
+            {
+                foreach (var choice in notes)
+                    choice.Reset();
+            }
+            
             SetDialog();
 
             Invoke("StartPlay", 2);
+
+            base.Reset();
         }
 
         public override void Enabled()
@@ -147,7 +155,7 @@ namespace EduGame
 
         void SetDialog()
         {
-            if (!string.IsNullOrEmpty(dataRythimMaker.Question.Text))
+            if (dataRythimMaker != null && !string.IsNullOrEmpty(dataRythimMaker.Question.Text))
                 GameManager.Instance.SetNPCDialog(dataRythimMaker.Question.Text);
         }
     }

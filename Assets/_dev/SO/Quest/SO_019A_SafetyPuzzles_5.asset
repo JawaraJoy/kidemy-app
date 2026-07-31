@@ -15,29 +15,29 @@ MonoBehaviour:
   id: 019A
   title: Safety Puzzles
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 21300000, guid: cba0ddc6a5417a7938a35cf01d371fd8, type: 3}
     text: Which is the safest choice?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e358627a1448f9f50a59db8898695e30, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: 9300df90890c756a3b7e06085d369068, type: 3}
     text: 'Jump on it '
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 9b1fedef471b910aaba33a7f14f0b296, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 5e744176f981f5f78b73788f6f4fd553, type: 3}
     text: Run fast
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 3284e18fd768c9123807d9401f38e41b, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 7d6b3b0feb3dfa774821656bc3ab67c6, type: 3}
     text: Walk slowly and tell someone
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 30d613873399433cea2b651a6d2b9725, type: 3}
     isAnswer: 1
   timer: 0
   randomizeChoice: 0

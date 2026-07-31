@@ -1,4 +1,9 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -85,30 +90,37 @@ namespace EduGame
         {
             dataMultipleChoice = data as SO_QuestMultipleChoice;
 
-            Debug.Log(dataMultipleChoice);
-
-            voiceQuestionRequest.id = dataMultipleChoice.name + "_question";
-            voiceQuestionRequest.text = dataMultipleChoice.Question.Text;
-            voiceQuestionRequest.voice_id = character ? character.CharacterId : "";
-
-            GameManager.Instance.Asset.AddVoiceRequest(voiceQuestionRequest);
+            base.Setup();
         }
 
         public override void PlayQuestionVoice()
         {
-            AssetManager.Instance.GetCachedAudio(
-                voiceId: voiceQuestionRequest.id,
-                onSuccess: (clip) =>
-                {
-                    GameManager.Instance.AudioSource.PlayOneShot(clip);
+            base.PlayQuestionVoice();
 
-                    Debug.Log($"[Quest] Playing voice clip for ID: {dataMultipleChoice.name + "_question"}");
-                },
-                onError: (error) =>
+            StopAllCoroutines();
+
+            StartCoroutine(PlayChoicesVoiceCO());
+        }
+
+        IEnumerator PlayChoicesVoiceCO()
+        {
+            yield return new WaitWhile(() => audioSource.isPlaying);
+
+            yield return new WaitForSeconds(1);
+
+            foreach (var choice in dataMultipleChoice.Choices)
+            {
+                yield return new WaitWhile(() => audioSource.isPlaying);
+
+                if(choice.Audio)
                 {
-                    Debug.LogError($"[Quest] Failed to play voice for ID '{dataMultipleChoice.name + "_question"}': {error}");
+                    yield return new WaitForSeconds(0.5f);
+
+                    audioSource.PlayOneShot(choice.Audio);
                 }
-            );
+            }
+
+            yield return null;
         }
 
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)
@@ -149,6 +161,8 @@ namespace EduGame
             if(unansweredCorrect == 0)
                 star = 3;
 
+            StopAllCoroutines();
+
             GameManager.Instance.Submit(star);
         }
 
@@ -156,10 +170,15 @@ namespace EduGame
         {
             unansweredCorrect = dataMultipleChoice.TotalAnswer;
 
-            foreach (var choice in choices)
-                choice.Reset();
-
+            if(choices != null)
+            {
+                foreach (var choice in choices)
+                    choice.Reset();
+            }
+                
             SetDialog();
+
+            base.Reset();
         }
 
         void RecalculateChoiceContainer()
@@ -185,6 +204,77 @@ namespace EduGame
         {
             if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
                 GameManager.Instance.SetNPCDialog(dataMultipleChoice.Question.Text);
+        }
+
+        /// <summary>
+        /// Returns all VoiceRequests needed by this quest.
+        /// Reads question text from 'data' and voice_id from 'character'.
+        /// </summary>
+        public override VoiceRequest[] GetVoiceRequests()
+        {
+            Setup();
+
+            if (dataMultipleChoice != null && dataMultipleChoice.Choices.Length > 0)
+            {
+                List<VoiceRequest> voiceRequests = new List<VoiceRequest>();
+                
+                VoiceRequest[] baseVoiceRequest = base.GetVoiceRequests();
+
+                if(baseVoiceRequest.Length > 0)
+                    voiceRequests.Add(baseVoiceRequest[0]);
+
+                for (int i = 0; i < dataMultipleChoice.Choices.Length; i++)
+                {
+                    if(!string.IsNullOrEmpty(dataMultipleChoice.Choices[i].Text))
+                    {
+                        voiceRequests.Add(new VoiceRequest
+                        {
+                            id = name + "_choice_" + i,
+                            text = dataMultipleChoice.Choices[i].Text,
+                            voice_id = GetVoiceId()
+                        });
+                    }   
+                }
+
+                return voiceRequests.ToArray();
+            }
+
+            return Array.Empty<VoiceRequest>();
+        }
+
+        /// <summary>
+        /// Checks if a specific voice request already has an AudioClip assigned in 'data'.
+        /// </summary>
+        public override bool HasVoiceClip(string requestId)
+        {
+            if (requestId.IndexOf("_choice_") > 0)
+            {   
+                int index = StringHelper.ExtractId(requestId);
+
+                if(index >= 0)
+                    return dataMultipleChoice.Choices[index] != null && dataMultipleChoice.Choices[index].Audio != null;
+            }
+            else if (requestId.IndexOf("_question") > 0)
+                return dataMultipleChoice.Question.Audio != null;
+            
+            return false;
+        }
+
+        /// <summary>
+        /// Assigns the downloaded & imported AudioClip directly to the SO_Quest referenced in 'data'.
+        /// </summary>
+        public override void AssignVoiceClip(string requestId, AudioClip clip)
+        {
+            if (requestId.IndexOf("_choice_") > 0)
+            {
+
+                int index = StringHelper.ExtractId(requestId);
+
+                if(dataMultipleChoice.Choices[index] != null)
+                    dataMultipleChoice.Choices[index].SetAudio(clip);
+            }
+            else if (requestId.IndexOf("_question") > 0)
+                data.Question.SetAudio(clip);
         }
     }
 }

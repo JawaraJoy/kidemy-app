@@ -15,29 +15,29 @@ MonoBehaviour:
   id: 019C
   title: Safety Puzzles
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 20
   question:
     image: {fileID: 2940056856077486740, guid: ecb34116cce352a4087de4c1179d0e76, type: 3}
     text: Which is not safe?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 7d14507638d6e9030b5fdc56d834727e, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 20
   choices:
   - image: {fileID: -1511764753, guid: ecb34116cce352a4087de4c1179d0e76, type: 3}
     text: Talk to the others
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: bea90303d027d8bcba2a09a85126c006, type: 3}
     isAnswer: 0
   - image: {fileID: -1089056022, guid: ecb34116cce352a4087de4c1179d0e76, type: 3}
     text: Sleep
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: cb3e4246c202e819ea2b5f36bf1cd5ae, type: 3}
     isAnswer: 0
   - image: {fileID: -151368726, guid: ecb34116cce352a4087de4c1179d0e76, type: 3}
     text: Sticking head outside
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 4c6c6d26321124fba8f731090bdbde5c, type: 3}
     isAnswer: 1
   timer: 0
   randomizeChoice: 1

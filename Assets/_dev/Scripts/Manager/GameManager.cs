@@ -23,6 +23,9 @@ namespace EduGame
         [DllImport("__Internal")]
         private static extern void LogToBrowser(string message);
 
+        [DllImport("__Internal")]
+        private static extern void JS_OnVoiceDownloadComplete();
+
         [Header("Frame")]
         [SerializeField] private TMP_Text title;
         [SerializeField] private TMP_Text category;
@@ -173,9 +176,13 @@ namespace EduGame
             foreach (var quest in quests)
                 quest.Setup();
 
-            assetManager.DownloadMissingVoices();
-
             result = new ResultItem[quests.Length];
+
+#if !UNITY_EDITOR && UNITY_WEBGL
+            JS_OnVoiceDownloadComplete();
+#endif
+
+            Play();
         }
 
         void StopTimer()
@@ -303,7 +310,7 @@ namespace EduGame
 
                 currentIndex = nextIndex;
 
-                Reset();
+                ResetQuest();
             }
         }
 
@@ -330,8 +337,6 @@ namespace EduGame
             CloseResult();
             StopTimer();
             StartTimer();
-
-            PlayQuestionVoice();
         }
 
         public virtual void ResetQuest()

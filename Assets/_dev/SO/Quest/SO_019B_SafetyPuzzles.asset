@@ -15,29 +15,29 @@ MonoBehaviour:
   id: 019B
   title: Safety Puzzles
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: -7157002807564089418, guid: dfe088b7cd33be2429e7206be3dd5ed4, type: 3}
     text: Which is not safe?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 5770d34fc51c2918ab65a20c9a98a2df, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: -828715409, guid: dfe088b7cd33be2429e7206be3dd5ed4, type: 3}
     text: Stay in current position
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ef7de01c8c3da1579a8254cf0775d299, type: 3}
     isAnswer: 0
   - image: {fileID: 378467064, guid: dfe088b7cd33be2429e7206be3dd5ed4, type: 3}
     text: Follow Stranger
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 01611e10617d8137fbcf47c6cf3918f1, type: 3}
     isAnswer: 1
   - image: {fileID: 1961498582, guid: dfe088b7cd33be2429e7206be3dd5ed4, type: 3}
     text: Ask help to Mall Staff
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 3abe0a4d0e3a3cdaca2411d092f4c5cb, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

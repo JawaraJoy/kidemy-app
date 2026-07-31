@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 018B
   title: Daily Schedule
   category: 4
-  autoSubmit: 1
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Categorize the activities
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 83c4d7841f9b5e138be7f176895089fb, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
   groups:
   - label:
       image: {fileID: 21300000, guid: 84c9fc5e5de83f143991a927d4a13dde, type: 3}
@@ -34,15 +34,15 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: e9d428977dd6d8e4e94a6c9addf6ae6f, type: 3}
       text: Get Dressed
       color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 8bfde1dc14f0f633cbaed0708fbb5a07, type: 3}
     - image: {fileID: 21300000, guid: 82d8027ffc339e347ba58e6ba3a2cff3, type: 3}
       text: Breakfast
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 12b1a969a5358bc28b4ed851ecf726a5, type: 3}
     - image: {fileID: 21300000, guid: b06acd95387066e468c477a6ce06fa3d, type: 3}
       text: School
       color: {r: 1, g: 0.54509807, b: 0.8352941, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 0cc72a7cdf680e5da814ad336a58b873, type: 3}
   - label:
       image: {fileID: 21300000, guid: f81dd1b79d243d34db956465bce50339, type: 3}
       text: Afternoon
@@ -53,15 +53,15 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: 1114ba327ba01a94f9c04e973bd35752, type: 3}
       text: Go Home
       color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: ca94927024eac757fad9d1bc46cc032f, type: 3}
     - image: {fileID: 21300000, guid: 3cd2804cf30c3004caf2d4d74eddc942, type: 3}
       text: Lunch
       color: {r: 0, g: 0.84313726, b: 0.039215688, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 9bee165979a4d877389b6c6ff8b6e340, type: 3}
     - image: {fileID: 21300000, guid: 4ed0adb871115ed40a3feb5aca3c7108, type: 3}
       text: Play Outside
       color: {r: 0.83137256, g: 0.6392157, b: 0.5803922, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 402de504f00d79d5fbe01fa79f67008a, type: 3}
   - label:
       image: {fileID: 21300000, guid: a57a0fbe42aebca45b9cd4b618ef0980, type: 3}
       text: Night
@@ -72,15 +72,15 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: f2361592f247301449a425516208f649, type: 3}
       text: Dinner
       color: {r: 0.8862745, g: 0.95686275, b: 0.5803922, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 7bfcfdc7d3021660496a7d113afdd4c6, type: 3}
     - image: {fileID: 21300000, guid: 72f336e5f13535a42a412ddba2df6300, type: 3}
       text: Study
       color: {r: 1, g: 1, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 1185de92951bb1cb7bd8565427edf47f, type: 3}
     - image: {fileID: 21300000, guid: c696f271bf601724ebe27f4eb15510e7, type: 3}
       text: Sleep
       color: {r: 0.8627451, g: 0.6392157, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 81b67877b1a9fe5c7ae0b3668f924549, type: 3}
   randomizeChoice: 1
   answerInOrder: 0
   timer: 0

@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 016A
   title: Compassionate Choices
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 21300000, guid: a6a592bea09870b45a6d2458e3bbc3a6, type: 3}
     text: What is the compassionate choice?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 2053c98634858543cb88e8c1229d7834, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: 443e71909229e7741a0ececcc73f8834, type: 3}
     text: Wait Him
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: a4bea9539af52530abddd7834c610af4, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: b3a62046b3617694c99bd32a44c06467, type: 3}
     text: Push Him
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 6e1824d90e0980ddfae40dc79f31c496, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 93477e4bc6cb10c488e4f6d6a023b4f2, type: 3}
     text: Call Him Baby
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: d33e4f12ceeea669da8cb90dc2c04675, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: f5fef254fdec0bc4fb648843ed290051, type: 3}
     text: Leave Him Alone
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8679c71be3a5561379202fd4a57f7ec0, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

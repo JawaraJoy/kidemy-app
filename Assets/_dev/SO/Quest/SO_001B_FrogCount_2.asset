@@ -10,44 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
-  m_Name: SO_001B_FrogCount 2
+  m_Name: SO_001B_FrogCount_2
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
   id: 001B
   title: Frog Count
   category: 0
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: How many frogs are on the board?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 738d4f25a461d61898ea75704ceb1cce, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 0}
     text: 4
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 04aafd9093556d016a5671731339faa6, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 5
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 9a4193bcda85b768b8bcad243888bafc, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: 6
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0aa90b18fbe28fefbb134080bce90a9a, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 7
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: d1652feff3d05f31f82d65cfafbb144a, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 8
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: f5bdd848675da964d96b62b3a552d39e, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

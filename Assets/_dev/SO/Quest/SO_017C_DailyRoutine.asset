@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 017B
   title: Daily Routine
   category: 4
-  autoSubmit: 1
-  score: 10
-  tresholdTime: 40
   question:
     image: {fileID: 0}
     text: What you do when going for recreation?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8a20715d368d0234a9b3632f9d909b0c, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 40
   groups:
   - label:
       image: {fileID: 0}
@@ -34,23 +34,23 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: de57d52d23a6ea34294b3c125b6434ad, type: 3}
       text: Wake Up
       color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: a86ba6b2fa95294d38311ee9e0d579a8, type: 3}
     - image: {fileID: 21300000, guid: e7e9098c8d1563e46853ae9cd15ec34b, type: 3}
       text: Preparing
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 0f1c7afb8035051de98c5fb9cc3245ca, type: 3}
     - image: {fileID: 21300000, guid: e25329381e2fcba4e836ccbed811f0a1, type: 3}
       text: Travelling
       color: {r: 1, g: 0.54509807, b: 0.8352941, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 7130764921d2b1718b2eefddcad374b0, type: 3}
     - image: {fileID: 21300000, guid: 53687d35b6121cc4aa1f0e122c6a11ce, type: 3}
       text: Have Fun
       color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 7621f3051269b1f0abfade6244394dae, type: 3}
     - image: {fileID: 21300000, guid: 1114ba327ba01a94f9c04e973bd35752, type: 3}
       text: Back Home
       color: {r: 0, g: 0.84313726, b: 0.039215688, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 72069b73519b325d39102ed27c012f6f, type: 3}
   randomizeChoice: 1
   answerInOrder: 1
   timer: 0

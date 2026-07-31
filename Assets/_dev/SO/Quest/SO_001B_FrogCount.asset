@@ -15,39 +15,39 @@ MonoBehaviour:
   id: 001B
   title: Frog Count
   category: 0
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: How many frogs are there? Do not count the butterflies.
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 5393f97df1322c6539de4a6358862294, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 0}
     text: 4
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: a791482c617a6f17ba907984c2fb66a4, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 5
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: b250de7c37234db4d9ee610af016dc87, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 6
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 9dbdf18b33e045cc3a730ea504cec18f, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: 7
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: f111c9e55050d9936a4871b19e195477, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 8
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 329f007d36a687b59beab7472b289edc, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

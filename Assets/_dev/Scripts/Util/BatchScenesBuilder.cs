@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BatchScenesBuilder
 {
-    [MenuItem("Build/Build Scenes To HTML5")]
+    [MenuItem("Tools/Build/Build Scenes To HTML5")]
     public static void BuildAllScenesToSeparateFolders()
     {
         // Get all scenes in the build settings (or replace this to target a specific folder)
@@ -27,7 +27,7 @@ public class BatchScenesBuilder
             // Extract the scene name
             string sceneName = Path.GetFileNameWithoutExtension(buildScene.path);
 
-            if(sceneName.IndexOf("Dev_002_AdditionTrek_A_rev") < 0) continue;
+            if(sceneName.IndexOf("_rev") < 0) continue;
             
             // Define the path to build specifically for this scene
             string sceneOutputPath = Path.Combine(baseOutputPath, sceneName);

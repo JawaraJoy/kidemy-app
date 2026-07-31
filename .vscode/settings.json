@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "kidemy-app.slnx"
+    "dotnet.defaultSolution": "KidemyApp.slnx"
 }

@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 020A
   title: StepSequence
   category: 4
-  autoSubmit: 1
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Put the steps in order
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ac6c40963a7efd184b9765c13ed0c2f2, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
   groups:
   - label:
       image: {fileID: 0}
@@ -34,19 +34,19 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: a0f00951c163c9931afa345461a7bb7c, type: 3}
       text: Take bread
       color: {r: 1, g: 0.9508085, b: 0.7028302, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 8a84b42780dae436b898bdd455a7683b, type: 3}
     - image: {fileID: 21300000, guid: 4b5d6c25625223a86afa652d0b4112ec, type: 3}
       text: Add Filing
       color: {r: 1, g: 0.9529412, b: 0.7058824, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 86bf0c0402d22a536ad18bb948098199, type: 3}
     - image: {fileID: 21300000, guid: 5b31e2aa3c80e21bf9ea666d7b4a4201, type: 3}
       text: Close Sandwich
       color: {r: 1, g: 0.9529412, b: 0.7058824, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 07740e2af98d87895976020d16d19a3c, type: 3}
     - image: {fileID: 21300000, guid: dbead4ac72fc4eb029c8318ebfc872dd, type: 3}
       text: Eat
       color: {r: 1, g: 0.9529412, b: 0.7058824, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: a1291b20c8eb67cd8a2c6c0a6bb08597, type: 3}
   randomizeChoice: 1
   answerInOrder: 1
   timer: 0

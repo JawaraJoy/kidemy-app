@@ -85,6 +85,8 @@ namespace EduGame
                 Reset();
 
             SetDialog();
+
+            base.Reset();
         }
 
         QuestDragNDropItem InstantiateItem(QuestDragNDropItem item)

@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 003A
   title: PatternJungle
   category: 0
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Choose the missing piece
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: c791453f25d91d455802553badc564ae, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: -5228951897986173455, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
     text: 
