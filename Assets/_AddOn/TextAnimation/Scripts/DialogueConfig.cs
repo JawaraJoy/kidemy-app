@@ -16,14 +16,24 @@ namespace AddOn.TextAnimation
 
         public Sprite Potrait => m_Potrait;
         public TagEffectsPreset EffectPreset => m_EffectPreset;
-        public string GetWords()
+        public string GetFormatedText()
         {
             string words = string.Empty;
             foreach(WordSetting wordSetting in m_WordSettings)
             {
-                words += wordSetting.GetWords();
+                words += wordSetting.GetFormatedText();
             }
             return words;
         }
+        public string GetPlainText()
+        {
+            string text = string.Empty;
+            foreach(WordSetting wordSetting in m_WordSettings)
+            {
+                text += wordSetting.GetPlainText();
+            }
+            return text;
+        }
+
     }
 }

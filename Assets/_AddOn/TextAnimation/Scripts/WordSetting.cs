@@ -19,7 +19,7 @@ namespace AddOn.TextAnimation
         private const string c_EndEffect = ">";
         private const string c_EndFormat = "</link>";
 
-        public string GetWords()
+        public string GetFormatedText()
         {
             string wordEffects = WordSetting.c_StartFormat;
             for (int i = 0; i < m_Effects.Length; i++)
@@ -42,6 +42,10 @@ namespace AddOn.TextAnimation
                 wordEffects += " ";
             }
             return wordEffects;
+        }
+        public string GetPlainText()
+        {
+            return m_AddSpaceForNext? m_Words + " " : m_Words;
         }
     }
 }

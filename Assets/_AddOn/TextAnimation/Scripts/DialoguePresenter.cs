@@ -66,7 +66,7 @@ namespace AddOn.TextAnimation
         // mostly we use this function to play the specific dialogue from outside
         public void ApplyConversation(DialogueConfig dialogueConfig)
         {
-            ApplyConversation(dialogueConfig);
+            ApplyConversationInternal(dialogueConfig);
         }
 
         private void ApplyConversationInternal(DialogueConfig dialogueConfig)
@@ -75,7 +75,7 @@ namespace AddOn.TextAnimation
             m_Effects.preset = effectPreset;
             m_NameText.text = dialogueConfig.Identic.Name;
             m_Portrait.sprite = dialogueConfig.Potrait;
-            m_DialogueText.text = dialogueConfig.GetWords();
+            m_DialogueText.text = dialogueConfig.GetFormatedText();
             m_Effects.Refresh();
         }
         private void EndConversation()
