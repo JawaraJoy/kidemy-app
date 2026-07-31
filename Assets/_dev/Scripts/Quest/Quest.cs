@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace EduGame
@@ -18,6 +19,7 @@ namespace EduGame
 
         protected bool isAnswered = false;
         protected bool isCorrect = false;
+        protected AudioSource audioSource;
 
         public Sprite Background => background;
         public Color Color => color;
@@ -42,12 +44,22 @@ namespace EduGame
 
         public virtual void Setup()
         {
-            
+            if(GameManager.Instance)
+                audioSource = GameManager.Instance.AudioSource;
         }
 
         public virtual void PlayQuestionVoice()
         {
-            
+            Debug.Log(data.Question.Audio);
+
+            if(data.Question.Audio)
+                PlayQuestionVoice(data.Question.Audio);
+        }
+
+        public virtual void PlayQuestionVoice(AudioClip audioClip)
+        {
+            if(audioSource)
+                audioSource.PlayOneShot(audioClip);
         }
 
         public virtual void OnAnswered(bool result, bool submit = true)
@@ -65,7 +77,7 @@ namespace EduGame
 
         public virtual void Reset()
         {
-            
+            PlayQuestionVoice();
         }
 
         public virtual void Disabled()
@@ -76,6 +88,57 @@ namespace EduGame
         public virtual void Enabled()
         {
             gameObject.SetActive(true);
+        }
+
+        // --- Voice Request & Assignment Interface ---
+
+        /// <summary>
+        /// Retrieves the voice_id from the SO_Character assigned to this Quest prefab.
+        /// </summary>
+        public virtual string GetVoiceId()
+        {
+            return character != null ? character.CharacterId : "";
+        }
+
+        /// <summary>
+        /// Returns all VoiceRequests needed by this quest.
+        /// Reads question text from 'data' and voice_id from 'character'.
+        /// </summary>
+        public virtual VoiceRequest[] GetVoiceRequests()
+        {
+            if (data != null && data.Question != null && !string.IsNullOrEmpty(data.Question.Text))
+            {
+                return new VoiceRequest[]
+                {
+                    new VoiceRequest
+                    {
+                        id = name + "_question",
+                        text = data.Question.Text,
+                        voice_id = GetVoiceId()
+                    }
+                };
+            }
+
+            return Array.Empty<VoiceRequest>();
+        }
+
+        /// <summary>
+        /// Checks if a specific voice request already has an AudioClip assigned in 'data'.
+        /// </summary>
+        public virtual bool HasVoiceClip(string requestId)
+        {
+            return data.Question !=  null && data.Question.Audio != null;
+        }
+
+        /// <summary>
+        /// Assigns the downloaded & imported AudioClip directly to the SO_Quest referenced in 'data'.
+        /// </summary>
+        public virtual void AssignVoiceClip(string requestId, AudioClip clip)
+        {
+            if (requestId.IndexOf("_question") > 0)
+            {
+                data.Question.SetAudio(clip);
+            }
         }
     }
 }

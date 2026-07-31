@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 020A
   title: StepSequence
   category: 4
-  autoSubmit: 1
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Put the steps in order
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: d058a712d8a5d63d5ac1a40b745f72c0, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
   groups:
   - label:
       image: {fileID: 0}
@@ -34,23 +34,23 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: 2e97fbf14efdb844c912612c2879b6d7, type: 3}
       text: Stay in Position
       color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 1a1491cd90cedb0eea396f82f3d385b3, type: 3}
     - image: {fileID: 21300000, guid: 0a609229474f22e4792cfadc60d9cff3, type: 3}
       text: Find Mall Staff
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: dafdcb3acc71cbfcfab758aac487563d, type: 3}
     - image: {fileID: 21300000, guid: a1fee6cd0fa96e74c9ec37b054ee5075, type: 3}
       text: Ask Help to Mall Staff
       color: {r: 1, g: 0.54509807, b: 0.8352941, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 9fa4db5f7f06df0d3b20ef698489b190, type: 3}
     - image: {fileID: 21300000, guid: 15f466577c2c95543a0596499f089219, type: 3}
       text: Follow Mall Staff
       color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: e90ebb0eb7c62be5284a72de83738621, type: 3}
     - image: {fileID: 21300000, guid: 46a4664fdbe5e594dbb021944b189eab, type: 3}
       text: Meet Parents
       color: {r: 0, g: 0.84313726, b: 0.039215688, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: f325edb8dcdf9aee89f7cfb881f9f799, type: 3}
   randomizeChoice: 1
   answerInOrder: 1
   timer: 0

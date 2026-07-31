@@ -15,29 +15,29 @@ MonoBehaviour:
   id: 005B
   title: SoundQuest
   category: 1
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: What starts with this sound?
     color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 427d0db9d09472145b50d9a6798ee92a, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: de57d52d23a6ea34294b3c125b6434ad, type: 3}
     text: Alarm
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 791800cebf1718cc39df1e08a709209d, type: 3}
     isAnswer: 1
   - image: {fileID: 242832293293338683, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
     text: Bell
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0aa4c98fe3175f8738c69c69a2402227, type: 3}
     isAnswer: 0
   - image: {fileID: 5540683084973913184, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
     text: Bird
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 550f9f14099e56af081279c7ad4bee30, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

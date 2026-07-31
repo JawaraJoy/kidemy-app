@@ -15,29 +15,29 @@ MonoBehaviour:
   id: 015A
   title: Kindness Quest
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Which choice is the kindest?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 9b42be4916a7c9fd2b529645fd217e05, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: f3fd9452b9cb2811cbc80fd11d42b384, type: 3}
     text: Invite him to sit with you
     color: {r: 0.79476684, g: 0.94518614, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: f67922aa242726da8b5573df5414e0c5, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 5e814190e5da64b34b03f07cdbdcb0fc, type: 3}
     text: Wave from far away
     color: {r: 1, g: 0.867901, b: 0.6666074, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8d8a8fc2241e09574b18c9eedd56830a, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: ecab0e32d4cb2872da7488eb101e40f2, type: 3}
     text: Keep eating alone
     color: {r: 1, g: 0.76059103, b: 0.9133174, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e0ceca0535fb66fc68155b4213d5334b, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

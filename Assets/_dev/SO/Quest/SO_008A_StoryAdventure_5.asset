@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 008A
   title: StoryAdventure
   category: 1
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: What did Nola bring?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 66db574df537941b49825b53fb436dcb, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: cf94f4d3dcd379c6b9042701bdd54370, type: 3}
     text: Hat
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: a1913acaac0f281668c06b471ceed641, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 54ff80c2a4bc376eebb92ce5f30021b3, type: 3}
     text: Toy Car
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 35dac385d9701c9ea8793ca6f7efd1ca, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: fe848f35433b5845fb39b820fb8719e6, type: 3}
     text: Drum
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: f4da47dcd20f06cdd98778ee7505edda, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 898caee9f23f3e819aa3d8f3c0dfe9b9, type: 3}
     text: Water Bottle
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: a90781c5629dfa5d6ac507eb1ecaf3a5, type: 3}
     isAnswer: 1
   timer: 0
   randomizeChoice: 0

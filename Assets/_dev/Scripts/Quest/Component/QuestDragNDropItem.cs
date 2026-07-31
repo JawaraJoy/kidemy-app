@@ -63,6 +63,9 @@ namespace EduGame
                 imageRect.sizeDelta = originalSize;
             else
                 Rect.sizeDelta = originalSize;
+
+            if(quest)
+                quest.PlayQuestionVoice(ItemData.Audio);
         }
 
         public void OnDrag(PointerEventData eventData)

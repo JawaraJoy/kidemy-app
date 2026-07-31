@@ -9,7 +9,6 @@ namespace EduGame
     public class SO_QuestDragNDrop : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private QuestUtilLabel question;
         [SerializeField] private QuestUtilLabelGroup[] groups;
 
         [Header("Rule")]
@@ -17,8 +16,8 @@ namespace EduGame
         [SerializeField] private bool answerInOrder;
         [SerializeField] private float timer = 0;
         
-        public QuestUtilLabel Question => question;
         public QuestUtilLabel[] Items => GetItems();
+        public QuestUtilLabelGroup[] Groups => groups;
         public Dictionary<int, int> Index => compiledIndex;
         public Dictionary<int, int[]> CompiledMap => compiledMap;
         public QuestUtilLabelGroup[] Slots => slots;

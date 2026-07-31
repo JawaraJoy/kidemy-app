@@ -15,29 +15,29 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: How many frogs are there? Count it fast!
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 0}
     text: 1
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 2
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: 4
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 81a4900a6dcfe9a67a3504eca410f6a3, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 013
   title: Emotion Match
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: What emotion is Loppi feeling right now?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0ad34a6d433d49ec2a743e30fd378d46, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: 254b2de9614a65b49ae47c1f091881e4, type: 3}
     text: Happy
     color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: c86d1cec039cc3145bc1363bd0dec829, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: c921e70933a944b479a208417e447493, type: 3}
     text: Sad
     color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8f3948795072610debdd9430d8249363, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: f018856afe6c4874d9ec8e67e8c33f76, type: 3}
     text: Scared
     color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 6c0e65f21bf589857a5ed93efd9e558e, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 826a974a7daf6f64a98dc8925b4e0d1b, type: 3}
     text: Shock
     color: {r: 1, g: 0.54509807, b: 0.8352941, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: b44f90520d0cc92348aa599c0a19fdd3, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

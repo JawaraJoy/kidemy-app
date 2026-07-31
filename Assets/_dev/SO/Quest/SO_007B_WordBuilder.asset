@@ -15,33 +15,39 @@ MonoBehaviour:
   id: 007B
   title: WordBuilder
   category: 1
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Find the letter!
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 64e376502eff5f7299452bbb0d02e297, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 0}
     text: F
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: e8f5f977f7f8d2edbb814eb525bac49d, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: R
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: d4ec2ea75d5976551af4be910cff664a, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: P
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: be25cad99f8f7d3f7a35674916848284, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: H
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 536e412e2c9fff5b19bcd52a13076989, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: A
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: f050daeb3ea2f1a85be407d282963699, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

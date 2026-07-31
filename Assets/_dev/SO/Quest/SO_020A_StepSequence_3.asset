@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 020A
   title: StepSequence
   category: 4
-  autoSubmit: 1
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Put the steps in order
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 38acf422cbe1b5a02b38c4c45429fa0b, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
   groups:
   - label:
       image: {fileID: 0}
@@ -34,19 +34,19 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: b85c96f000fdb1e4388faadea36ac8c6, type: 3}
       text: Put soil
       color: {r: 0.740566, g: 0.9307102, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 1e6224ba6c2aaacb3a6b341557372061, type: 3}
     - image: {fileID: 21300000, guid: c0acea6cfeca3a74488ffc767f161016, type: 3}
       text: Place seed
       color: {r: 0.7411765, g: 0.93333334, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: b2ced30331dea056b9523b413ced8bf9, type: 3}
     - image: {fileID: 21300000, guid: bf85d34f6e9a7334aa80ce5a5d928b08, type: 3}
       text: Cover seed
       color: {r: 0.7411765, g: 0.93333334, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 3316e0f2ba31577478d40e7063f62b4a, type: 3}
     - image: {fileID: 21300000, guid: 061f566170904864ea3b1ab2318d8b3b, type: 3}
       text: Water seed
       color: {r: 0.7411765, g: 0.93333334, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: f9034f819f76f389ca3bf53049b36021, type: 3}
   randomizeChoice: 1
   answerInOrder: 1
   timer: 0

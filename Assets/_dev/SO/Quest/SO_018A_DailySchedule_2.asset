@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 018A
   title: Daily Schedule
   category: 4
-  autoSubmit: 1
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Categorize the activities
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 201b12ca6cea0d94293155b2c017e390, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
   groups:
   - label:
       image: {fileID: 21300000, guid: 84c9fc5e5de83f143991a927d4a13dde, type: 3}
@@ -34,7 +34,7 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: b06acd95387066e468c477a6ce06fa3d, type: 3}
       text: School
       color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 2acf48620cd11a5d9a154051e40d44d7, type: 3}
   - label:
       image: {fileID: 21300000, guid: f81dd1b79d243d34db956465bce50339, type: 3}
       text: Afternoon
@@ -45,7 +45,7 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: 3cd2804cf30c3004caf2d4d74eddc942, type: 3}
       text: Lunch
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 94899429bc95394ad9d97ee527a4281c, type: 3}
   - label:
       image: {fileID: 21300000, guid: a57a0fbe42aebca45b9cd4b618ef0980, type: 3}
       text: Night
@@ -56,7 +56,7 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: f2361592f247301449a425516208f649, type: 3}
       text: Dinner
       color: {r: 0.8608063, g: 0.64006275, b: 0.998576, a: 1}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: e3108622667a388e68e5fab3bbc3a9f7, type: 3}
   randomizeChoice: 1
   answerInOrder: 1
   timer: 0

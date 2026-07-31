@@ -15,61 +15,74 @@ MonoBehaviour:
   id: 006A
   title: LetterHunt
   category: 1
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Find the letter!
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 7c423b56ade905c6f83ec33f608e81e6, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 0}
     text: A
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 71de15018fb5094cab99bf18d3759030, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: B
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 50d7a5b06123075cfb5ad6ed90e6445b, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: C
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 5306ddf0d1fdeee209f2c72be901d05e, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: D
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: b7f77fe10cf8359198af1716801344f6, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: E
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 55ac3a505642ea130bf3ae0511f2a89a, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: F
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 47de02d5cfb251eaca9ad727ddde7ace, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: G
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 3059093f96b60198a98c8d644d942dc8, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: H
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 4d3228541c2320a9f887583920bb8bc7, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: I
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 07d58e05827eddd2abb43f985feef0de, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: J
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 4928a07b9c90ab7c0b0bad39d6a6a969, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: K
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: b24a19e75c14c426b937e264536ade25, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: L
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 4e37070a3fa38dbfb98424c7a9fdb3d0, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

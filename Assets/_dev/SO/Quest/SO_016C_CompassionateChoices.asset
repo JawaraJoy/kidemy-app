@@ -15,33 +15,34 @@ MonoBehaviour:
   id: 016C
   title: Compassionate Choices
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 20
   question:
     image: {fileID: 0}
     text: What is the compassionate choice?
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 1a49270497f116cfcb4d2bd65b393874, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 20
   choices:
   - image: {fileID: 21300000, guid: 637f9e1d520c0464da84b53cec13473b, type: 3}
     text: Take it
-    audio: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 90edc0c8a546c6102854f9ef637c2e46, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: f5fef254fdec0bc4fb648843ed290051, type: 3}
     text: Ignore it
-    audio: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: be4bd96551be99ab7a7ef8d0d191308b, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: f35285223987ec1429ad31d013131d2d, type: 3}
     text: Give it to someone
-    audio: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: dd8b1617e6f366c7e96a6048e8e84b15, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: aab2770d46a0d7a4f8df5872c7d2d353, type: 3}
     text: Bring it to the police
-    audio: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 312a899774d714498bfe6f85d591728e, type: 3}
     isAnswer: 1
   timer: 0
   randomizeChoice: 1

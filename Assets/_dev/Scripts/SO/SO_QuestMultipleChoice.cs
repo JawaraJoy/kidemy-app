@@ -8,8 +8,6 @@ namespace EduGame
     public class SO_QuestMultipleChoice : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private QuestUtilLabel question;
-        [Space()]
         [SerializeField] private QuestUtilLabelChoice[] choices;
         [Space()]
         
@@ -17,7 +15,6 @@ namespace EduGame
         [SerializeField] private float timer = 0;
         [SerializeField] private bool randomizeChoice;
 
-        public QuestUtilLabel Question => question;
         public QuestUtilLabelChoice[] Choices => randomizeChoice ? GetRandomizedChoices() : choices;
         public float Timer => timer;
         public int TotalAnswer => GetTotalAnswer();

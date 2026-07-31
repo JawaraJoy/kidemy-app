@@ -15,36 +15,43 @@ MonoBehaviour:
   id: 004A
   title: PuzzleJungle
   category: 0
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Which one matches all the clues?
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: d72531aed98b83d398026f4494a569b0, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 7225854274009255456, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
     text: 
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: -189036100167318605, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
     text: 
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: -3746023888126927267, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
     text: 
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
   - image: {fileID: 1387783136, guid: b2bde88cd595fbd499ab3cfc9d0763e5, type: 3}
     text: 
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: -1001862225, guid: b2bde88cd595fbd499ab3cfc9d0763e5, type: 3}
     text: 
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: -7989704848763042235, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
     text: 
+    color: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

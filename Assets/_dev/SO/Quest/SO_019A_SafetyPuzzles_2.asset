@@ -15,29 +15,29 @@ MonoBehaviour:
   id: 019A
   title: Safety Puzzles
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 21300000, guid: 9c1a3749c71be9db0a6dbbd4d2d85506, type: 3}
     text: Which is the safest choice?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: b55c769f5ce82067a918b2db83b13995, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: ba0edff167352acd987bff24643a4669, type: 3}
     text: Pull the tablecloth
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 52b8372070d86b100a1a868c805f5829, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 70511296e0c5c71279485e2b34b451e7, type: 3}
     text: Ask a grown-up to move it
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ab8ac2024e264306fbaadeb0451a6249, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 991fc6661c72b98a4aa83671d156ea4a, type: 3}
     text: Touch the cup
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: aec043cd8dd9661f59a7c4f4481d0531, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

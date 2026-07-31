@@ -10,44 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
-  m_Name: SO_001B_FrogCount 5
+  m_Name: SO_001B_FrogCount_5
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
   id: 001B
   title: Frog Count
   category: 0
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: How many frogs are in the bottom row?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0fb89f248e28c596b84a713e10cb4cff, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 0}
     text: 2
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: edf947775089bb39f955b963f435e497, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 3
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 52750a7a903a1b23f88d1781d716af86, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: 4
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 2009cbf79d4ed13418084ee1552928d7, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 5
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ae8555fccfa01be049bf32b4eb02fd78, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 6
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 440df84c58f1c1ce680ef9e89a2a1f83, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

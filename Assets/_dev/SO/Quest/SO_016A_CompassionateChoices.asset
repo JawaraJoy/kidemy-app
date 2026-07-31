@@ -15,33 +15,34 @@ MonoBehaviour:
   id: 016A
   title: Compassionate Choices
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: What is the compassionate choice?
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 3a30c0dcc15e3e893a18398acafcb183, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: 3f6cf1926282ba049acc72bc333d2e52, type: 3}
     text: Play together
-    audio: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 144b69c12e9c0351892af4bc1ea4315f, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: f5fef254fdec0bc4fb648843ed290051, type: 3}
     text: Walk away
-    audio: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 81a453151fa672521a695ca70cc87ecb, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: a4f89b28af8b46045b5e5405816490f0, type: 3}
     text: Tell a teacher
-    audio: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: f0de9affa07be836b913f420bb73b1eb, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 74ab6617b7a682c4e8d1bdb4f8da198d, type: 3}
     text: Hold the toy tighter
-    audio: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 8fd04df1f3c2e161e82d4db241f83ff8, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

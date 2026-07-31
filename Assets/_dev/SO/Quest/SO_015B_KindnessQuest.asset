@@ -15,29 +15,29 @@ MonoBehaviour:
   id: 015A
   title: Kindness Quest
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Which choice is the kindest?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ee16a20f41f0b730eabf74ffa53108f9, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: 72f336e5f13535a42a412ddba2df6300, type: 3}
     text: Give him your work
     color: {r: 1, g: 0.7607843, b: 0.9137255, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: daad850be0aa6465198c8f8ae3f4948f, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: f5fef254fdec0bc4fb648843ed290051, type: 3}
     text: Ignore him
     color: {r: 1, g: 0.8666667, b: 0.6666667, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 569442a7e9e99f122b877a12a751e696, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: f35285223987ec1429ad31d013131d2d, type: 3}
     text: Help him
     color: {r: 0.79607844, g: 0.94509804, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 69614f5d2b5ac02cd9dad733e3c1afa9, type: 3}
     isAnswer: 1
   timer: 0
   randomizeChoice: 0

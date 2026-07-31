@@ -15,39 +15,39 @@ MonoBehaviour:
   id: 002B
   title: Addition Trek
   category: 0
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: How many fruits are in the image?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0e30c9d9ad5b29b02b14e95442c9874d, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 0}
     text: 7
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e879e792e57e39df9a8e884fe67cbab9, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 8
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e021a7015c3d13bb4b6931d6d518b947, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 9
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8cfe32400b18e286c908a418049c742b, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: 10
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 3c6772ba7782cf5ac88283962f6cb497, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 11
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8ce3bf75c63ce64e3be3a7e81df7d171, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

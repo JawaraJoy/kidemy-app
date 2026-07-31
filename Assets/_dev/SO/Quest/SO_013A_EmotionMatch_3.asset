@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 013
   title: Emotion Match
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: What emotion is the character feeling right now
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 26835d75d674b91469431e5240285377, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: 2ca8c25689805da3b8131ebb5cad9859, type: 3}
     text: Excited
     color: {r: 0.36756855, g: 0.833057, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 6582cd47e70bd2bb5b718a8b28cfd53c, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: c2822f492e361f60e976e24bc6cdaaf6, type: 3}
     text: Sad
     color: {r: 0.8533286, g: 0.8533286, b: 0.8533286, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 72ee149a159d1fb88b24583ba71196cb, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 84a581296e42ca88398f969e2cf0ce63, type: 3}
     text: Sleepy
     color: {r: 1, g: 0.5469919, b: 0.8349893, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: cc8b13abfa612d833add9904119eed30, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: dfa2c1a6f2abf77e98128a02c40d8d91, type: 3}
     text: Scared
     color: {r: 1, g: 0.7510726, b: 0.37611258, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 929791efd9a935b77b432270e6738eb5, type: 3}
     isAnswer: 1
   timer: 0
   randomizeChoice: 0

@@ -15,14 +15,14 @@ MonoBehaviour:
   id: 017A
   title: Routine
   category: 4
-  autoSubmit: 1
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Put the morning steps in the right order!
     color: {r: 0, g: 0, b: 0, a: 0}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 490555c34b8a8042699e4f46197d0890, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
   groups:
   - label:
       image: {fileID: 0}
@@ -34,15 +34,15 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: de57d52d23a6ea34294b3c125b6434ad, type: 3}
       text: Wake Up
       color: {r: 0.36862746, g: 0.83137256, b: 1, a: 0}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 99579c7f1c8a63a9aa21ee31504789a1, type: 3}
     - image: {fileID: 21300000, guid: faec26b660adf294ebcaf502164197df, type: 3}
       text: Brush Teeth
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 0}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: bd5e3d033bafdb964b5557bbb8284d50, type: 3}
     - image: {fileID: 21300000, guid: 82d8027ffc339e347ba58e6ba3a2cff3, type: 3}
       text: Eat Breakfast
       color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 0}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 269dd9ae03028304abd5cab165879a3d, type: 3}
   randomizeChoice: 1
   answerInOrder: 1
   timer: 0

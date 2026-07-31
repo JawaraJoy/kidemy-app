@@ -15,45 +15,54 @@ MonoBehaviour:
   id: 001C
   title: Frog Count
   category: 0
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 20
   question:
     image: {fileID: 0}
     text: How many frogs are there? Count it fast!
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: a74850d26cb7cbe43aea36c3175beb19, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 20
   choices:
   - image: {fileID: 0}
     text: 16
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: e9f9d1f256c4d613cb00d51bcfdc414f, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 15
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 79b852b333972f7b3b38207622426221, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: 14
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 59094e90a28edb51e918ffbb4eb3fec5, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 17
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 06472277c6745088e9e4331450b5637b, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 18
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: c7974ed301188dea08c94a2fe6474375, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 12
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 2ece7820fa5ca3b2fbb0108a90bfdb02, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 13
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: e913b68bf6afe054ebe4db0e42b77fee, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 19
-    audio: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: d4e4f9a4ad8ae4719a20130d1867df68, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

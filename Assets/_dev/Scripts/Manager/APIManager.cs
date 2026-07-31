@@ -14,19 +14,26 @@ namespace EduGame
 
         public const string frogVoiceID = "n3tkGOcEribaYI5zg4pu";
 
+        public APIManager Instance;
+        
         public void RequestVoice(string text, string voiceId = "", Action<string> onSuccess = null, Action<string> onFailure = null)
         {
-            if (string.IsNullOrEmpty(voiceId))
-                voiceId = frogVoiceID;
-
-            string requestUrl = apiAIUrl + "v1/api/audio/generate";
-
-            VoiceRequest voiceRequest = new VoiceRequest() {
+            VoiceRequest request = new VoiceRequest() {
                 text = text,
                 voice_id = voiceId
             };
             
-            RequestData(requestUrl, JsonUtility.ToJson(voiceRequest), onSuccess, onFailure, false);
+            RequestVoice(request, onSuccess, onFailure);
+        }
+
+        public void RequestVoice(VoiceRequest request, Action<string> onSuccess = null, Action<string> onFailure = null)
+        {
+            if (string.IsNullOrEmpty(request.voice_id))
+                request.voice_id = frogVoiceID;
+
+            string requestUrl = apiAIUrl + "v1/api/audio/generate";
+
+            RequestData(requestUrl, JsonUtility.ToJson(request), onSuccess, onFailure, false);
         }
 
         public void SendData(string url, string jsonString)

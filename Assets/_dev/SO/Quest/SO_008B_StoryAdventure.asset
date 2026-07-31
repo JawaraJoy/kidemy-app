@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 008B
   title: StoryAdventure
   category: 1
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: What did Domba forget?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8b30022375f44755cbee3e3103e416c0, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: b63e7d431c6624b4da7cfc8975818fae, type: 3}
     text: Camera
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ce68604563135984d84ade20cbb0d6b6, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: ed94fa95c3f80f941917f285b85494e3, type: 3}
     text: Bag
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0b74bdbd173c19db4aa7adb572bfc347, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 46ab13be5b25b684793c9b26809abd81, type: 3}
     text: Binocular
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: fcbd214e97dcd4eeca82070e7c9773b3, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: d265f41cd4018514e8abd800d3a630c1, type: 3}
     text: Hat
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 516e80b2d5c39eaf69280b6284f772cf, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 016A
   title: Compassionate Choices
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: What is the compassionate choice?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 16513aa326a06820080767afae08b03d, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: f5fef254fdec0bc4fb648843ed290051, type: 3}
     text: Keep it all day
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 07b2cde34773fc0b6ad7e278f6513296, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 3d779e1d297471d41af9e6b4646e4af2, type: 3}
     text: Throw it away
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8b40e9169743903b0a47765d1bfe6ee8, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: b3a62046b3617694c99bd32a44c06467, type: 3}
     text: Say no forever
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 9eb2e47ff04f5c70da7d3b43a6bdcb5d, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 73da531ea26d6494b9335e628a02fd9f, type: 3}
     text: Give Bobo a turn
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: fd38d99a73eba40cea7840dfb42618a9, type: 3}
     isAnswer: 1
   timer: 0
   randomizeChoice: 0

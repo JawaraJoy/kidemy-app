@@ -8,7 +8,6 @@ namespace EduGame
     public class SO_QuestRythimMaker : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private QuestUtilLabel question;
         [SerializeField] private float speed = 1f;
         [SerializeField] private QuestRythimNoteItem[] notes;
         
@@ -16,7 +15,6 @@ namespace EduGame
         [SerializeField] private float timer = 0;
         [SerializeField] private bool randomizeChoice;
 
-        public QuestUtilLabel Question => question;
         public QuestRythimNoteItem[] Items => randomizeChoice ? GetRandomizedChoices() : notes;
         public float Timer => timer;
         public float Speed => speed;

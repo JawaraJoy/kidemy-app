@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 008CSSS
   title: StoryAdventure
   category: 1
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 20
   question:
     image: {fileID: 0}
     text: What flavor is the popsicle?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: d906518b70cbe73879115081ef1a7794, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 20
   choices:
   - image: {fileID: 21300000, guid: cb48a88b0d0c7724eaff099f9c007434, type: 3}
     text: Strawberry
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 49c51c665ef86a46fa335c4200ab92bb, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: a93b74c316410e34a8144457c52b48cf, type: 3}
     text: Orange
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: cfba99bb1cc5cfea298d2eb2c416ad88, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: dcba83527e540b94b9e2d8921cbc5e0d, type: 3}
     text: Melon
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: aba98554e6f23f823b0fcf3151db6b06, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 01540d18261e4d448bdbe7b16f8c54f1, type: 3}
     text: Watermelon
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 847ef93b75ffc8f6d916e61371ef93db, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

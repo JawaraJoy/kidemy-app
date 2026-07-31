@@ -17,6 +17,10 @@ namespace EduGame
         public Color Color => new Color(color.r, color.g, color.b, 1);
 
         public int Id { get; set; }
-    }
 
+        public void SetAudio(AudioClip clip)
+        {
+            audio = clip;
+        }
+    }
 }

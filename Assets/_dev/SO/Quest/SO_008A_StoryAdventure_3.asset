@@ -15,34 +15,34 @@ MonoBehaviour:
   id: 008A
   title: StoryAdventure
   category: 1
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: 'What was inside the lunch box? '
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 3c754b9aaec1c54018e35c3dff1f4200, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: 29049630dcfc1f8099b411da32f6ec7d, type: 3}
     text: Book
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 9cdcf76661cdcc1bc9e05013eb432a6c, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 769ca7d3aafac2b628fe896756398eb2, type: 3}
     text: Apple
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 39fc801023942b9f79098aa407c77551, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: ab45f9cae2c62f89a8095c98c04f5055, type: 3}
     text: Banana
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 2ab24d872a3b9904d9cb5051895c347b, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 8f780f2437cea33e3b159ab5751d69a6, type: 3}
     text: Ball
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: b1de5f955e0b4053691a20d797238753, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

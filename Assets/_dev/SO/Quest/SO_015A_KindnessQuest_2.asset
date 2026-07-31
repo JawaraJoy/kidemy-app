@@ -15,29 +15,29 @@ MonoBehaviour:
   id: 015A
   title: Kindness Quest
   category: 3
-  autoSubmit: 0
-  score: 10
-  tresholdTime: 0
   question:
     image: {fileID: 0}
     text: Which choice is the kindest?
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ccaafa4569c4d29a9957024a4d996e78, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: 85ffd77e819f5931fb00c0dcb1bb2055, type: 3}
     text: Hide your Pencil
     color: {r: 0.79476684, g: 0.94518614, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 6d4367e13307534cebff61448c3ac7b6, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: cd90d8d5c466c61e6ad8ecc470d345c0, type: 3}
     text: Share a Pencil
     color: {r: 1, g: 0.867901, b: 0.6666074, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 915607a79481cc37bbd93134709f1ebb, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 8b612a936c94e7bb2b247e38c8be6fe2, type: 3}
     text: 'Tell him he is silly '
     color: {r: 1, g: 0.76059103, b: 0.9133174, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 550e4e5166bb708a4a3332497eb66d76, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0
