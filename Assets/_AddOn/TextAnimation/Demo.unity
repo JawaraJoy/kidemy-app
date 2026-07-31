@@ -1080,12 +1080,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TextToVoice.ConversationControl
   m_Portrait: {fileID: 1839417398}
   m_NameText: {fileID: 1364196859}
-  m_ConversationText: {fileID: 1773678393}
+  m_DialogueText: {fileID: 1773678393}
   m_Effects: {fileID: 1741197575}
   m_Dialogues:
-  - {fileID: 11400000, guid: e015f41511d94804e89e5adf78e035d3, type: 2}
-  - {fileID: 11400000, guid: e49c9038e7013a6458abf36c1db66892, type: 2}
-  - {fileID: 11400000, guid: 2bb704bb2521c1745a8438c7bef9e360, type: 2}
+  - {fileID: 11400000, guid: e99c72fd165e5484ca78e35cc5560ca1, type: 2}
+  - {fileID: 11400000, guid: ea6b71caf63187e489f7d67b515fdbc2, type: 2}
 --- !u!114 &1741197575
 MonoBehaviour:
   m_ObjectHideFlags: 0

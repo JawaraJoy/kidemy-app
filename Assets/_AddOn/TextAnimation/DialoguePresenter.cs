@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 namespace AddOn.TextAnimation
 {
-    public class ConversationPresenter : MonoBehaviour
+    public class DialoguePresenter : MonoBehaviour
     {
         [SerializeField]
         private Image m_Portrait;
         [SerializeField]
         private TextMeshProUGUI m_NameText;
         [SerializeField]
-        private TextMeshProUGUI m_ConversationText;
+        private TextMeshProUGUI m_DialogueText;
         [SerializeField]
         private TextEffect m_Effects;
         [SerializeField]
@@ -50,7 +50,7 @@ namespace AddOn.TextAnimation
         public void StartConversation()
         {
             m_CurrentDialogueIndex = 0;
-            ApplyConversation(m_Dialogues[m_CurrentDialogueIndex]);
+            ApplyConversationInternal(m_Dialogues[m_CurrentDialogueIndex]);
 
         }
         [ContextMenu("NextConversation")]
@@ -60,26 +60,22 @@ namespace AddOn.TextAnimation
             if (m_CurrentDialogueIndex >= m_Dialogues.Length)
             {
                 EndConversation();
-                return;
             }
-            ApplyConversation(m_Dialogues[m_CurrentDialogueIndex]);
+            ApplyConversationInternal(m_Dialogues[m_CurrentDialogueIndex]);
         }
-        // mostly we use this function to play the specific dialogue
-        public void PlayConversation(DialogueConfig dialogueConfig)
+        // mostly we use this function to play the specific dialogue from outside
+        public void ApplyConversation(DialogueConfig dialogueConfig)
         {
-            if (HasDialogueInternal(dialogueConfig.Identic.Id, out DialogueConfig config)) 
-            {
-                ApplyConversation(config);
-            }
+            ApplyConversation(dialogueConfig);
         }
 
-        private void ApplyConversation(DialogueConfig dialogueConfig)
+        private void ApplyConversationInternal(DialogueConfig dialogueConfig)
         {
             TagEffectsPreset effectPreset = dialogueConfig.EffectPreset;
             m_Effects.preset = effectPreset;
             m_NameText.text = dialogueConfig.Identic.Name;
             m_Portrait.sprite = dialogueConfig.Potrait;
-            m_ConversationText.text = dialogueConfig.GetWords();
+            m_DialogueText.text = dialogueConfig.GetWords();
             m_Effects.Refresh();
         }
         private void EndConversation()

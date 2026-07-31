@@ -213,3 +213,13 @@ MonoBehaviour:
     onEffectCompleted:
       m_PersistentCalls:
         m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: 1f3a1ab985d79f342b1b505c622bba3f, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: ab0a9df08dc311d42b8f8d7fa05aba7c, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []

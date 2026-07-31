@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe99ace52ee110469853422c88e340f, type: 3}
+  m_Name: Dialogue_sepertipopcorn
+  m_EditorClassIdentifier: Assembly-CSharp::TextToVoice.DialogueConfig
+  m_Identic:
+    m_Id: porpcorn
+    m_Name: Wibu Akut
+    m_Description: 
+  m_Potrait: {fileID: 3210277829683252377, guid: cf792b40ab5a726489ccaff8635d9b22, type: 3}
+  m_EffectPreset: {fileID: 11400000, guid: 4ce9908ccf7134c95bb64f24bc3ab9c9, type: 2}
+  m_WordSettings:
+  - m_Words: Seperti
+    m_AddSpaceForNext: 1
+    m_Effects: []
+  - m_Words: Popcorn
+    m_AddSpaceForNext: 0
+    m_Effects:
+    - {fileID: 11400000, guid: d9c02d2dab50c4f439c3817dd756eff3, type: 2}
+    - {fileID: 11400000, guid: ab0a9df08dc311d42b8f8d7fa05aba7c, type: 2}
+  - m_Words: '! yang meletup-letup...'
+    m_AddSpaceForNext: 0
+    m_Effects: []
