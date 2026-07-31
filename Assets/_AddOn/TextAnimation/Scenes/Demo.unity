@@ -343,6 +343,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 416221171516503698, guid: 3459814bc2f6ef446b698b16a9abfd8e, type: 3}
+      propertyPath: m_text
+      value: <link=>Welcome in "</link><link=gradient+wave>Kimee</link><link=>"!
+        Kids</link>
+      objectReference: {fileID: 0}
+    - target: {fileID: 468755801920287191, guid: 3459814bc2f6ef446b698b16a9abfd8e, type: 3}
+      propertyPath: m_Dialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 468755801920287191, guid: 3459814bc2f6ef446b698b16a9abfd8e, type: 3}
+      propertyPath: 'm_Dialogues.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e015f41511d94804e89e5adf78e035d3, type: 2}
+    - target: {fileID: 468755801920287191, guid: 3459814bc2f6ef446b698b16a9abfd8e, type: 3}
+      propertyPath: 'm_Dialogues.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e49c9038e7013a6458abf36c1db66892, type: 2}
+    - target: {fileID: 468755801920287191, guid: 3459814bc2f6ef446b698b16a9abfd8e, type: 3}
+      propertyPath: 'm_Dialogues.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2bb704bb2521c1745a8438c7bef9e360, type: 2}
     - target: {fileID: 1298378174647206869, guid: 3459814bc2f6ef446b698b16a9abfd8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.47689
@@ -386,6 +407,10 @@ PrefabInstance:
     - target: {fileID: 5088789733924844378, guid: 3459814bc2f6ef446b698b16a9abfd8e, type: 3}
       propertyPath: m_Name
       value: Demo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693038281789815826, guid: 3459814bc2f6ef446b698b16a9abfd8e, type: 3}
+      propertyPath: m_text
+      value: Domba
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

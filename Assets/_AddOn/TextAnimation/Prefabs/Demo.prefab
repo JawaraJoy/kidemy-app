@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wibu Akut
+  m_text: Kodok
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3095a2f78aa7dd1498d291f4afeabc60, type: 2}
   m_sharedMaterial: {fileID: 6374459934122398197, guid: 3095a2f78aa7dd1498d291f4afeabc60, type: 2}
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3210277829683252377, guid: cf792b40ab5a726489ccaff8635d9b22, type: 3}
+  m_Sprite: {fileID: 7999677350396218593, guid: a88799db2e23837469aef657acf555fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <link=>Seperti</link> <link=shake+yellow>Popcorn</link><link=>! yang meletup-letup...</link>
+  m_text: <link=fadein>Let's the Game Begin!</link>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3095a2f78aa7dd1498d291f4afeabc60, type: 2}
   m_sharedMaterial: {fileID: 6374459934122398197, guid: 3095a2f78aa7dd1498d291f4afeabc60, type: 2}
@@ -1141,8 +1141,9 @@ MonoBehaviour:
   m_DialogueText: {fileID: 416221171516503698}
   m_Effects: {fileID: 2738315804930293085}
   m_Dialogues:
-  - {fileID: 11400000, guid: e99c72fd165e5484ca78e35cc5560ca1, type: 2}
-  - {fileID: 11400000, guid: ea6b71caf63187e489f7d67b515fdbc2, type: 2}
+  - {fileID: 11400000, guid: e015f41511d94804e89e5adf78e035d3, type: 2}
+  - {fileID: 11400000, guid: e49c9038e7013a6458abf36c1db66892, type: 2}
+  - {fileID: 11400000, guid: 2bb704bb2521c1745a8438c7bef9e360, type: 2}
 --- !u!114 &2738315804930293085
 MonoBehaviour:
   m_ObjectHideFlags: 0

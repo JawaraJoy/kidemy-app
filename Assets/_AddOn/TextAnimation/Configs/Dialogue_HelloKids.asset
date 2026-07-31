@@ -19,7 +19,7 @@ MonoBehaviour:
   m_Potrait: {fileID: 21300000, guid: 3a28332e97bbf8bd7986c6d8210e35a2, type: 3}
   m_EffectPreset: {fileID: 11400000, guid: 4ce9908ccf7134c95bb64f24bc3ab9c9, type: 2}
   m_WordSettings:
-  - m_Words: Welcome in "
+  - m_Words: Welcome to "
     m_AddSpaceForNext: 0
     m_Effects: []
   - m_Words: Kimee
@@ -30,3 +30,4 @@ MonoBehaviour:
   - m_Words: '"! Kids'
     m_AddSpaceForNext: 0
     m_Effects: []
+  m_VoiceClip: {fileID: 0}
