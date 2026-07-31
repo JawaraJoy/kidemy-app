@@ -5,17 +5,15 @@ namespace AddOn.TextToSpeech
         public string Id { get; }
         public string Text { get; }
         public string Voice { get; }
-        public string Model { get; }
 
-        public VoiceGenerationRequest(string id,
+        public VoiceGenerationRequest(
+            string id,
             string text,
-            string voice,
-            string model)
+            string voice)
         {
             Id = id;
             Text = text;
             Voice = voice;
-            Model = model;
         }
     }
 }

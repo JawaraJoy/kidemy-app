@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace AddOn
 {
-    public class VoiceGeneratorService : MonoBehaviour
+    public class KokoroProvider : MonoBehaviour
     {
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()

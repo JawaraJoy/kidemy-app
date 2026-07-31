@@ -1,5 +1,5 @@
 using EasyTextEffects;
-using TMPro;
+using System.Text;
 using UnityEngine;
 
 namespace AddOn.TextAnimation
@@ -13,26 +13,33 @@ namespace AddOn.TextAnimation
         private TagEffectsPreset m_EffectPreset;
         [SerializeField]
         private WordSetting[] m_WordSettings;
+        [SerializeField]
+        private AudioClip m_VoiceClip;
 
         public Sprite Potrait => m_Potrait;
         public TagEffectsPreset EffectPreset => m_EffectPreset;
-        public string GetFormatedText()
+        public AudioClip VoiceClip => m_VoiceClip;
+        public string GetFormattedText()
         {
-            string words = string.Empty;
-            foreach(WordSetting wordSetting in m_WordSettings)
+            StringBuilder builder = new();
+
+            foreach (WordSetting wordSetting in m_WordSettings)
             {
-                words += wordSetting.GetFormatedText();
+                builder.Append(wordSetting.GetFormattedText());
             }
-            return words;
+
+            return builder.ToString();
         }
         public string GetPlainText()
         {
-            string text = string.Empty;
-            foreach(WordSetting wordSetting in m_WordSettings)
+            StringBuilder builder = new();
+
+            foreach (WordSetting wordSetting in m_WordSettings)
             {
-                text += wordSetting.GetPlainText();
+                builder.Append(wordSetting.GetPlainText());
             }
-            return text;
+
+            return builder.ToString();
         }
 
     }

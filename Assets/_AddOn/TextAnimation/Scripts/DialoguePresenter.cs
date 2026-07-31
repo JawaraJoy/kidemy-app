@@ -75,7 +75,7 @@ namespace AddOn.TextAnimation
             m_Effects.preset = effectPreset;
             m_NameText.text = dialogueConfig.Identic.Name;
             m_Portrait.sprite = dialogueConfig.Potrait;
-            m_DialogueText.text = dialogueConfig.GetFormatedText();
+            m_DialogueText.text = dialogueConfig.GetFormattedText();
             m_Effects.Refresh();
         }
         private void EndConversation()
