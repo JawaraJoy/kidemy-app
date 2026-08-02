@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d80875dbbbf2642aecbdceeb8e21d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.AudioPlayer
-  audioClip: {fileID: 8300000, guid: 90c0a6ec0f82d124ea33a2d573f0a168, type: 3}
+  audioClip: {fileID: 8300000, guid: 89ead177ea407552db1077cf05dbac1c, type: 3}
 --- !u!1 &1275145668938466524
 GameObject:
   m_ObjectHideFlags: 0

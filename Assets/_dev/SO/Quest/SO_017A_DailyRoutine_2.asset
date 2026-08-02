@@ -17,7 +17,7 @@ MonoBehaviour:
   category: 4
   question:
     image: {fileID: 0}
-    text: Put the morning steps in the right order!
+    text: Put the steps in the right order!
     color: {r: 0, g: 0, b: 0, a: 0}
     audio: {fileID: 8300000, guid: 5caad5c2c4e8d263f9284b8f4bbd4b48, type: 3}
   autoSubmit: 1
