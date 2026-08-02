@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Script: {fileID: 11500000, guid: 7799a18163815e05380cf4f225a92a08, type: 3}
   m_Name: SO_014A_MoodTracker_2
-  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoiceNarrative
   id: 014A
   title: Mood Tracker
   category: 3
@@ -46,3 +46,4 @@ MonoBehaviour:
     isAnswer: 0
   timer: 0
   randomizeChoice: 0
+  narrative: 
