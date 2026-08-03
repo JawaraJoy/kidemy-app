@@ -188,6 +188,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_dev/Scenes/Dev_020_StepSequence_C.unity
     guid: e7aa6eeb9398eba48acb4db5a7704402
+  - enabled: 1
+    path: Assets/00_OtherDev/Quest/Scenes/OtherDev_BigOrSmall_A_001.unity
+    guid: c73f5bb2aae4e5e43b31a241c3f41ff4
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 57cd4d59be8adbf4894b91aafbbe14ba, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
