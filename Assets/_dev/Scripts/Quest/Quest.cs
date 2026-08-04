@@ -41,7 +41,10 @@ namespace EduGame
 
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
-
+        public void SetData(SO_Quest questData)
+        {
+            data = questData;
+        }
         public virtual void Setup()
         {
             if(GameManager.Instance)

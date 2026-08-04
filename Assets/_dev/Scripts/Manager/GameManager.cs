@@ -63,6 +63,10 @@ namespace EduGame
         [Header("Data")]
         [SerializeField] private Quest questPrefab;
         [SerializeField] private Quest[] questPrefabs;
+        [SerializeField]
+        private bool m_UseConfigInstead;
+        [SerializeField]
+        private ChallengeConfig m_ChallengeConfig;
 
         private Image[] stars;
         private Quest[] quests;
@@ -89,6 +93,8 @@ namespace EduGame
         public AssetManager Asset => assetManager;
 
         public static GameManager Instance { get; private set; }
+        public bool UseConfigInstead => m_UseConfigInstead;
+        public ChallengeConfig ChallengeConfig => m_ChallengeConfig;
 
         void Awake()
         {
@@ -146,25 +152,46 @@ namespace EduGame
             else
                 sessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
 
-            if (questPrefabs.Length > 0)
+            if (m_UseConfigInstead)
             {
-                quests = new Quest[questPrefabs.Length];
-
-                for (int i = 0; i < questPrefabs.Length; i++)
+                if (m_ChallengeConfig.QuestConfigs.Length > 0)
                 {
-                    quests[i] = InstantiateTemplate(questPrefabs[i]);
-                    quests[i].gameObject.SetActive(false);
+                    quests = new Quest[m_ChallengeConfig.QuestConfigs.Length];
+                    for (int i = 0; i < m_ChallengeConfig.QuestConfigs.Length; i++)
+                    {
+                        quests[i] = InstantiateTemplate(m_ChallengeConfig.QuestLayoutPrefabs);
+                        quests[i].SetData(m_ChallengeConfig.QuestConfigs[i]);
+                        quests[i].gameObject.SetActive(false);
+                    }
                 }
-
-            }
-            else if (questPrefab)
-            {
-                quests = new Quest[1];
-
-                quests[0] = InstantiateTemplate(questPrefab);
+                else
+                {
+                    Debug.LogError("Failed to load data, challenge will return empty");
+                }    
             }
             else
-                Debug.LogError("Failed to load data, challenge will return empty");
+            {
+                if (questPrefabs.Length > 0)
+                {
+                    quests = new Quest[questPrefabs.Length];
+
+                    for (int i = 0; i < questPrefabs.Length; i++)
+                    {
+                        quests[i] = InstantiateTemplate(questPrefabs[i]);
+                        quests[i].gameObject.SetActive(false);
+                    }
+
+                }
+                else if (questPrefab)
+                {
+                    quests = new Quest[1];
+
+                    quests[0] = InstantiateTemplate(questPrefab);
+                }
+                else
+                    Debug.LogError("Failed to load data, challenge will return empty");
+            }
+            
 
             //quests[0].gameObject.SetActive(true);
 

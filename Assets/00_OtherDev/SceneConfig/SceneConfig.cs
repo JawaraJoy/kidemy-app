@@ -15,7 +15,6 @@ namespace EduGame
 #endif
 
         private string m_SceneName;
-        public string SceneName => m_SceneName;
 #if UNITY_EDITOR
         private void OnValidate()
         {
