@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
-  m_Name: Challenge_BigOrSmall
+  m_Name: Challenge_MatchTheColor_A
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
-  m_SceneConfig: {fileID: 11400000, guid: a241d5f2e25ec5a41955448f3f4515f4, type: 2}
+  m_SceneConfig: {fileID: 11400000, guid: c21589a4faa25474d96abcb0faffaccb, type: 2}
   m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: a1be7a1f5a5026e458fc181803b41ffc, type: 3}
   m_QuestConfigs:
-  - {fileID: 11400000, guid: 5763e79c437c1ec409fbef07f1d84ac9, type: 2}
-  - {fileID: 11400000, guid: a84d4dce5c6000a4984318182da5440b, type: 2}
-  - {fileID: 11400000, guid: 3f399e790b5bde34386eec9a9b886491, type: 2}
-  - {fileID: 11400000, guid: 1acfd10484acdd54d8fc7398b4029c59, type: 2}
-  - {fileID: 11400000, guid: 988dcd97bd9e2054c93446248fcd14a8, type: 2}
+  - {fileID: 11400000, guid: 38040f97a44245f4b98543c7ff1e3fd0, type: 2}
+  - {fileID: 11400000, guid: cfd9889006bc1954c943458ae318adfd, type: 2}
+  - {fileID: 11400000, guid: e80db1e3c95264a4fa52f49ff2662549, type: 2}
+  - {fileID: 11400000, guid: f5480b3262fa5a44cb57973194745737, type: 2}
+  - {fileID: 11400000, guid: 8efb767ae83ee0942a37c0d524c24d97, type: 2}

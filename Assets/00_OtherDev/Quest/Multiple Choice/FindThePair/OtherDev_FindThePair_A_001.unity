@@ -3757,12 +3757,9 @@ MonoBehaviour:
   thinkFeedback: {fileID: 6177775187534155001}
   audioSource: {fileID: 4056242353919336290}
   questPrefab: {fileID: 8344063676491614192, guid: 077156e976b94b44cabd3d6ba5e993c5, type: 3}
-  questPrefabs:
-  - {fileID: 9102783833377469605, guid: acb4ecd3cf4110348b392ffb69753a26, type: 3}
-  - {fileID: 9102783833377469605, guid: f879459091351a444bc2e3f4211ecaa5, type: 3}
-  - {fileID: 9102783833377469605, guid: fd4d6c2f68206d745b46439dd1b4d65d, type: 3}
-  - {fileID: 9102783833377469605, guid: 332646443be27d84caa70bcc51c4cd2b, type: 3}
-  - {fileID: 9102783833377469605, guid: 432eea94fc1a5ed47b618adbfa54a173, type: 3}
+  questPrefabs: []
+  m_UseConfigInstead: 1
+  m_ChallengeConfig: {fileID: 11400000, guid: 046bb0c11779f2f4399621fc00c47c91, type: 2}
 --- !u!1 &5560929120177270617
 GameObject:
   m_ObjectHideFlags: 0

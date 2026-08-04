@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
-  m_Name: Challenge_BigOrSmall
+  m_Name: Challenge_WhichoneDifferent_A
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
-  m_SceneConfig: {fileID: 11400000, guid: a241d5f2e25ec5a41955448f3f4515f4, type: 2}
+  m_SceneConfig: {fileID: 11400000, guid: 8ce2d7075586e3c4a8b4d0433c0a1341, type: 2}
   m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: a1be7a1f5a5026e458fc181803b41ffc, type: 3}
   m_QuestConfigs:
-  - {fileID: 11400000, guid: 5763e79c437c1ec409fbef07f1d84ac9, type: 2}
-  - {fileID: 11400000, guid: a84d4dce5c6000a4984318182da5440b, type: 2}
-  - {fileID: 11400000, guid: 3f399e790b5bde34386eec9a9b886491, type: 2}
-  - {fileID: 11400000, guid: 1acfd10484acdd54d8fc7398b4029c59, type: 2}
-  - {fileID: 11400000, guid: 988dcd97bd9e2054c93446248fcd14a8, type: 2}
+  - {fileID: 11400000, guid: d7e114e50498ae648b543d172ae6d9d4, type: 2}
+  - {fileID: 11400000, guid: 971d472976c60354db868211a8c39e71, type: 2}
+  - {fileID: 11400000, guid: 038742f6562ae8649bf1451c297073f3, type: 2}
+  - {fileID: 11400000, guid: 7afd696e81cd97440b964b43c73ebf41, type: 2}
+  - {fileID: 11400000, guid: 0a5138412fd38f941a7991e6d67f915b, type: 2}

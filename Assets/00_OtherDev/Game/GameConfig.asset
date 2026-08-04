@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a187576c8837ca24c81940b18f345e8a, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.GameConfig
+  m_Note: Put all config here to handle Content Delivery in the future
+  m_ChallengeConfigs:
+  - {fileID: 11400000, guid: 0b39a487b231b0c45862f76c57f5f8ef, type: 2}
+  - {fileID: 11400000, guid: 046bb0c11779f2f4399621fc00c47c91, type: 2}
+  - {fileID: 11400000, guid: 6d1462060f6f7ff4b91cdd705c642579, type: 2}
+  - {fileID: 11400000, guid: 97279c3d07da3dc40be2507a7a33a4d5, type: 2}
+  - {fileID: 11400000, guid: 68f918a83ea595e48a0926d1b6e528a7, type: 2}
