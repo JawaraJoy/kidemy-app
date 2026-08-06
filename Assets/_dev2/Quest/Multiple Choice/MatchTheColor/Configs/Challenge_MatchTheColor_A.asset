@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
+  m_Name: Challenge_MatchTheColor_A
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
+  m_SceneConfig: {fileID: 11400000, guid: c21589a4faa25474d96abcb0faffaccb, type: 2}
+  m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: 2df55f3fe7971d444b1adec09da35341, type: 3}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: 38040f97a44245f4b98543c7ff1e3fd0, type: 2}
+  - {fileID: 11400000, guid: cfd9889006bc1954c943458ae318adfd, type: 2}
+  - {fileID: 11400000, guid: e80db1e3c95264a4fa52f49ff2662549, type: 2}
+  - {fileID: 11400000, guid: f5480b3262fa5a44cb57973194745737, type: 2}
+  - {fileID: 11400000, guid: 8efb767ae83ee0942a37c0d524c24d97, type: 2}

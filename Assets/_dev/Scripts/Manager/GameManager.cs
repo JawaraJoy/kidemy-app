@@ -161,6 +161,7 @@ namespace EduGame
                     {
                         quests[i] = InstantiateTemplate(m_ChallengeConfig.QuestLayoutPrefabs);
                         quests[i].SetData(m_ChallengeConfig.QuestConfigs[i]);
+                        quests[i].SetChallenge(m_ChallengeConfig);
                         quests[i].gameObject.SetActive(false);
                     }
                 }

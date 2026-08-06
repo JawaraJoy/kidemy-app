@@ -20,7 +20,8 @@ namespace EduGame
         protected bool isAnswered = false;
         protected bool isCorrect = false;
         protected AudioSource audioSource;
-
+        protected ChallengeConfig m_Challenged;
+        public ChallengeConfig Challenged => m_Challenged;
         public Sprite Background => background;
         public Color Color => color;
         
@@ -40,6 +41,10 @@ namespace EduGame
             GameManager.Instance.InitQuest(data);
 
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
+        public void SetChallenge(ChallengeConfig challenge)
+        {
+            m_Challenged = challenge;
         }
         public void SetData(SO_Quest questData)
         {

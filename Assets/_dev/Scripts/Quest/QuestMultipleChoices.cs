@@ -14,6 +14,8 @@ namespace EduGame
         [Header("Data")]
         
         [Header("Components")]
+        [SerializeField] 
+        private RectTransform m_MultipleImagesQuestionContainer;
         [SerializeField] private Image questionImage;
         [SerializeField] private AudioPlayer questionAudio;
         [SerializeField] private TMP_Text questionText;
@@ -28,6 +30,7 @@ namespace EduGame
 
         private VoiceRequest voiceQuestionRequest = new VoiceRequest();
 
+        private List<Image> m_SpawnedmultipleImages = new List<Image>();
         protected override void Start()
         {
             base.Start();
@@ -37,16 +40,51 @@ namespace EduGame
 
             unansweredCorrect = dataMultipleChoice.TotalAnswer;
 
-            if (questionImage)
+            // using the new multiple images question system
+            if (data.HasMultipleImages(out var multipleImages, out var prefab) && m_MultipleImagesQuestionContainer)
             {
-                if (dataMultipleChoice.Question.Image)
-                    questionImage.sprite = dataMultipleChoice.Question.Image;
-                else
+                m_MultipleImagesQuestionContainer.gameObject.SetActive(true);
+                questionImage.gameObject.SetActive(false);
+                questionImage.transform.parent.gameObject.SetActive(false);
+                foreach (var image in m_SpawnedmultipleImages)
                 {
-                    questionImage.gameObject.SetActive(false);
-                    questionImage.transform.parent.gameObject.SetActive(false);
+                    image.gameObject.SetActive(false);
+                }
+                for (int i = 0; i < multipleImages.Length; i++)
+                {
+                    if (i < m_SpawnedmultipleImages.Count)
+                    {
+                        m_SpawnedmultipleImages[i].sprite = multipleImages[i];
+                    }
+                    else
+                    {
+                        Image image = Instantiate(prefab, m_MultipleImagesQuestionContainer);
+                        image.sprite = multipleImages[i];
+                        m_SpawnedmultipleImages.Add(image);
+                        
+                    }
+                    m_SpawnedmultipleImages[i].gameObject.SetActive(true);
                 }
             }
+            else
+            {
+                m_MultipleImagesQuestionContainer.gameObject.SetActive(false);
+
+                // old code for single image question
+                if (questionImage)
+                {
+                    questionImage.gameObject.SetActive(true);
+                    if (dataMultipleChoice.Question.Image)
+                        questionImage.sprite = dataMultipleChoice.Question.Image;
+                    else
+                    {
+                        questionImage.gameObject.SetActive(false);
+                        questionImage.transform.parent.gameObject.SetActive(false);
+                    }
+                }
+
+            }
+            
 
             if (questionAudio)
             {
@@ -69,19 +107,36 @@ namespace EduGame
                     questionText.transform.parent.gameObject.SetActive(false);
                 }
             }
-
-            if (choicesContainer && choiceItemPrefab)
+            if (m_Challenged)
             {
-                choicesContainer.gameObject.SetActive(true);
-
-                choices = new QuestMultipleChoicesItem[dataMultipleChoice.Choices.Length];
-
-                for (int i = 0; i < dataMultipleChoice.Choices.Length; i++)
+                if (m_Challenged.ChoicePrefab is QuestMultipleChoicesItem choicePrefab)
                 {
-                    choices[i] = InstantiateItem(choices[0], i);
-                    choices[i].SetChoice(dataMultipleChoice.Choices[i]);
+                    choicesContainer.gameObject.SetActive(true);
+                    choices = new QuestMultipleChoicesItem[dataMultipleChoice.Choices.Length];
+                    for (int i = 0; i < dataMultipleChoice.Choices.Length; i++)
+                    {
+                        choices[i] = InstantiateItem(choicePrefab, i);
+                        choices[i].SetChoice(dataMultipleChoice.Choices[i]);
+                    }
                 }
             }
+            else
+            {
+                if (choicesContainer && choiceItemPrefab)
+                {
+                    choicesContainer.gameObject.SetActive(true);
+
+                    choices = new QuestMultipleChoicesItem[dataMultipleChoice.Choices.Length];
+
+                    for (int i = 0; i < dataMultipleChoice.Choices.Length; i++)
+                    {
+                        choices[i] = InstantiateItem(choices[0], i);
+                        choices[i].SetChoice(dataMultipleChoice.Choices[i]);
+                    }
+                }
+            }
+            
+
 
             SetDialog();
         }
