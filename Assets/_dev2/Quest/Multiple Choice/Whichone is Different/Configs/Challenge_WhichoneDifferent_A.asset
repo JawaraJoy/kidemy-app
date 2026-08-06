@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Challenge_WhichoneDifferent_A
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
   m_SceneConfig: {fileID: 11400000, guid: 8ce2d7075586e3c4a8b4d0433c0a1341, type: 2}
+  m_ChoicePrefab: {fileID: 8156987785838361269, guid: a10e6a122d86a704990aee09e44cdbe5, type: 3}
   m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: a1be7a1f5a5026e458fc181803b41ffc, type: 3}
   m_QuestConfigs:
   - {fileID: 11400000, guid: d7e114e50498ae648b543d172ae6d9d4, type: 2}

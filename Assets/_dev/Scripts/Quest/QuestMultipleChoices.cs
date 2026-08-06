@@ -68,8 +68,10 @@ namespace EduGame
             }
             else
             {
-                m_MultipleImagesQuestionContainer.gameObject.SetActive(false);
-
+                if (m_MultipleImagesQuestionContainer)
+                {
+                    m_MultipleImagesQuestionContainer.gameObject.SetActive(false);
+                }
                 // old code for single image question
                 if (questionImage)
                 {

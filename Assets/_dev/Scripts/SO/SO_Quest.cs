@@ -24,6 +24,10 @@ namespace EduGame
         [SerializeField] protected bool autoSubmit;
         [SerializeField] private int score = 10;
         [SerializeField] private float tresholdTime = 20;
+
+        /*[SerializeField]
+        private LayoutSettingField m_LayoutSetting;
+        public LayoutSettingField LayoutSetting => m_LayoutSetting;*/
         public string Id => id;
         public string Title => title;
         public QuestCategory Category => category;

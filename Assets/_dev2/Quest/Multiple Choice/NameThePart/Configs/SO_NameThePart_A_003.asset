@@ -15,10 +15,14 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
-    image: {fileID: 0}
-    text: Which one is bigger?
+    image: {fileID: 21300000, guid: b9c2eb1405d6f854d87c9d45ce22bb76, type: 3}
+    text: What is the name of this part?
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
   autoSubmit: 0
   score: 10
@@ -27,21 +31,29 @@ MonoBehaviour:
   - image: {fileID: 21300000, guid: b3a62046b3617694c99bd32a44c06467, type: 3}
     text: Ball
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
     text: Car
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
     text: Car
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
     text: Car
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 0
   timer: 0
