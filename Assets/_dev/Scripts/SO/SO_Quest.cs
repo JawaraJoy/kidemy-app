@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace EduGame
 {
@@ -13,6 +14,10 @@ namespace EduGame
         [SerializeField] protected QuestCategory category;
 
         [Header("Question")]
+        [SerializeField]
+        private Image m_ImagePrefab;
+        [SerializeField]
+        private Sprite[] m_MultipleQuestImages;
         [SerializeField] protected QuestUtilLabel question;
 
         [Header("Rule")]
@@ -20,13 +25,21 @@ namespace EduGame
         [SerializeField] private int score = 10;
         [SerializeField] private float tresholdTime = 20;
 
-
+        /*[SerializeField]
+        private LayoutSettingField m_LayoutSetting;
+        public LayoutSettingField LayoutSetting => m_LayoutSetting;*/
         public string Id => id;
         public string Title => title;
         public QuestCategory Category => category;
         public QuestUtilLabel Question => question;
         public bool AutoSubmit => autoSubmit;
         public int Score => score;
-        public float TresholdTime => tresholdTime; 
+        public float TresholdTime => tresholdTime;
+        public bool HasMultipleImages(out Sprite[] multipleImages, out Image prefab)
+        {
+            multipleImages = m_MultipleQuestImages;
+            prefab = m_ImagePrefab;
+            return multipleImages.Length > 0 && prefab != null;
+        }
     }
 }

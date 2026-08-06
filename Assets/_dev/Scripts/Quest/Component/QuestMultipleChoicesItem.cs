@@ -53,6 +53,10 @@ namespace EduGame
             {
                 if(text)
                     text.text = choice.Text;
+                if(choice.UseTextColor)
+                {
+                    text.color = choice.TextColor;
+                }
             }   
             else
             {
@@ -70,7 +74,6 @@ namespace EduGame
                 audioPlayer?.gameObject.SetActive(false);
                 audioPlayer?.transform.parent.gameObject.SetActive(false);   
             }
-
             if(choice.Image)
             {
                 if(image)

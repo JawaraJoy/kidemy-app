@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
+  m_Name: Challenge_FindMyShadow_A
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
+  m_SceneConfig: {fileID: 11400000, guid: c21589a4faa25474d96abcb0faffaccb, type: 2}
+  m_ChoicePrefab: {fileID: 8156987785838361269, guid: 9b79ee89d29d93c4a9cb9b2845bde327, type: 3}
+  m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: 2df55f3fe7971d444b1adec09da35341, type: 3}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: 06c0721921f2e1f4e9b75c71ccc2928d, type: 2}
+  - {fileID: 11400000, guid: 7389eefe54ffbe8488b640e57947a558, type: 2}
+  - {fileID: 11400000, guid: 068ccf3c52a6b694b9558822df76604f, type: 2}
+  - {fileID: 11400000, guid: db52a384075ae754b868ad24d198ee10, type: 2}
+  - {fileID: 11400000, guid: 774e1bfede352f145b700a8e6f445a06, type: 2}

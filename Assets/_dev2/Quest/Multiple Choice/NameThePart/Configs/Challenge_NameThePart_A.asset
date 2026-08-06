@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
+  m_Name: Challenge_NameThePart_A
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
+  m_SceneConfig: {fileID: 11400000, guid: 629a50bbc1fa1034bb44a8d62749ba78, type: 2}
+  m_ChoicePrefab: {fileID: 8156987785838361269, guid: 9e51241737158f74083a8bc99dfb9896, type: 3}
+  m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: 2df55f3fe7971d444b1adec09da35341, type: 3}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: dc4bc2470b23e2a4fa8470b07c225ddd, type: 2}
+  - {fileID: 11400000, guid: 9baada7c8b688934abda4a4e683e70e1, type: 2}
+  - {fileID: 11400000, guid: f4c0dad512ef6a642b1cb9f5d7137eb5, type: 2}
+  - {fileID: 11400000, guid: 6b9a9553a43e8a84a9c851324efd7175, type: 2}
+  - {fileID: 11400000, guid: 3559a24928b658349867275d69b3a201, type: 2}
