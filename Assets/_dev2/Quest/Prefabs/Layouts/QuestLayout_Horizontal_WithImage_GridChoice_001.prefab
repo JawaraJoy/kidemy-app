@@ -465,7 +465,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 400, y: 255}
+  m_CellSize: {x: 255, y: 255}
   m_Spacing: {x: 25, y: 25}
   m_Constraint: 2
   m_ConstraintCount: 2
@@ -614,6 +614,7 @@ MonoBehaviour:
   npcController: {fileID: 9100000, guid: ee0292fe0a32e0d4387871e6462a4a8d, type: 2}
   character: {fileID: 11400000, guid: 7300581e70cc4a4449ab43d226480236, type: 2}
   score: 10
+  m_MultipleImagesQuestionContainer: {fileID: 0}
   questionImage: {fileID: 648616099878991184}
   questionAudio: {fileID: 0}
   questionText: {fileID: 0}

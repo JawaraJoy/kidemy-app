@@ -16,8 +16,8 @@ MonoBehaviour:
   m_ChoicePrefab: {fileID: 8156987785838361269, guid: 9b79ee89d29d93c4a9cb9b2845bde327, type: 3}
   m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: 2df55f3fe7971d444b1adec09da35341, type: 3}
   m_QuestConfigs:
-  - {fileID: 11400000, guid: 38040f97a44245f4b98543c7ff1e3fd0, type: 2}
-  - {fileID: 11400000, guid: cfd9889006bc1954c943458ae318adfd, type: 2}
-  - {fileID: 11400000, guid: e80db1e3c95264a4fa52f49ff2662549, type: 2}
-  - {fileID: 11400000, guid: f5480b3262fa5a44cb57973194745737, type: 2}
-  - {fileID: 11400000, guid: 8efb767ae83ee0942a37c0d524c24d97, type: 2}
+  - {fileID: 11400000, guid: 06c0721921f2e1f4e9b75c71ccc2928d, type: 2}
+  - {fileID: 11400000, guid: 7389eefe54ffbe8488b640e57947a558, type: 2}
+  - {fileID: 11400000, guid: 068ccf3c52a6b694b9558822df76604f, type: 2}
+  - {fileID: 11400000, guid: db52a384075ae754b868ad24d198ee10, type: 2}
+  - {fileID: 11400000, guid: 774e1bfede352f145b700a8e6f445a06, type: 2}
