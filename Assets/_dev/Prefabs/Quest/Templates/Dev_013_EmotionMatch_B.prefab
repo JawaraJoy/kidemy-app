@@ -443,7 +443,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5788191407297288605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 395d84bf1697fe94ea351f2684fad354, type: 3}
+  m_Script: {fileID: 11500000, guid: 87b9658513028e33784187c55760cc04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestMultipleChoices
   data: {fileID: 11400000, guid: f74b81bbf3870d74a8b91d6882171f64, type: 2}
@@ -457,6 +457,7 @@ MonoBehaviour:
   questionText: {fileID: 0}
   choicesContainer: {fileID: 7822799790807822885}
   choiceItemPrefab: {fileID: -102638525429766386, guid: 4fabddf8a98c76c478b466612c249563, type: 3}
+  narrativeText: {fileID: 0}
 --- !u!1 &6882151055654120943
 GameObject:
   m_ObjectHideFlags: 0

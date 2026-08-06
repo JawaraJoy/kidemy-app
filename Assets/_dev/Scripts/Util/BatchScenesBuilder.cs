@@ -27,7 +27,7 @@ public class BatchScenesBuilder
             // Extract the scene name
             string sceneName = Path.GetFileNameWithoutExtension(buildScene.path);
 
-            if(sceneName.IndexOf("Dev_006_LetterHunt_A_rev") < 0 && sceneName.IndexOf("Dev_017_DailyRoutine_A_rev") < 0) continue;
+            if(sceneName.IndexOf("_rev") < 0) continue;
             
             // Define the path to build specifically for this scene
             string sceneOutputPath = Path.Combine(baseOutputPath, sceneName);
