@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using UnityEngine.Events;
 
 namespace EduGame
 {
@@ -63,10 +64,20 @@ namespace EduGame
         [Header("Data")]
         [SerializeField] private Quest questPrefab;
         [SerializeField] private Quest[] questPrefabs;
+
+        [Header("OtherDev")]
         [SerializeField]
         private bool m_UseConfigInstead;
         [SerializeField]
         private ChallengeConfig m_ChallengeConfig;
+        [SerializeField]
+        private GameObject m_Container;
+        [SerializeField]
+        private UnityEvent m_OnQuestStart;
+        [SerializeField]
+        private UnityEvent m_OnQuestNext;
+        [SerializeField]
+        private UnityEvent m_OnQuestEnd;
 
         private Image[] stars;
         private Quest[] quests;
@@ -162,6 +173,7 @@ namespace EduGame
                         quests[i] = InstantiateTemplate(m_ChallengeConfig.QuestLayoutPrefabs);
                         quests[i].SetData(m_ChallengeConfig.QuestConfigs[i]);
                         quests[i].SetChallenge(m_ChallengeConfig);
+                        quests[i].SetBackground(m_ChallengeConfig.Background);
                         quests[i].gameObject.SetActive(false);
                     }
                 }
@@ -278,7 +290,7 @@ namespace EduGame
         
         Quest InstantiateTemplate(Quest templatePrefab)
         {
-            Quest template = Instantiate(templatePrefab, transform);
+            Quest template = Instantiate(templatePrefab, m_Container != null ? m_Container.transform : transform);
 
             template.transform.localPosition = Vector3.zero;
             template.transform.localScale = Vector3.one;
@@ -309,6 +321,7 @@ namespace EduGame
 
             if (category != null)
                 category.text = questData.Category.ToString().Replace('_', ' ');
+            OnQuestStartInvoke();
         }
 
         public void PlayQuestionVoice()
@@ -341,7 +354,20 @@ namespace EduGame
                 ResetQuest();
             }
         }
-
+        private void OnQuestStartInvoke()
+        {
+            m_OnQuestStart?.Invoke();
+            Debug.Log("OnQuestStartInvoke called");
+        }
+        private void OnQuestEndInvoke()
+        {
+            m_OnQuestEnd?.Invoke();
+        }
+        private void OnQuestNextInvoke()
+        {
+            m_OnQuestNext?.Invoke();
+            Debug.Log("OnQuestNextInvoke called");
+        }
         public virtual void Submit(int star = 0)
         {
             StopTimer();
