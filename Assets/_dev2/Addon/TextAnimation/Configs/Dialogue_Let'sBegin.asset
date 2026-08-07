@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe99ace52ee110469853422c88e340f, type: 3}
+  m_Name: Dialogue_Let'sBegin
+  m_EditorClassIdentifier: Assembly-CSharp::TextToVoice.DialogueConfig
+  m_Identic:
+    m_Id: kodok
+    m_Name: Kodok
+    m_Description: 
+  m_Potrait: {fileID: 7999677350396218593, guid: a88799db2e23837469aef657acf555fd, type: 3}
+  m_EffectPreset: {fileID: 11400000, guid: 4ce9908ccf7134c95bb64f24bc3ab9c9, type: 2}
+  m_WordSettings:
+  - m_Words: Let's the Game Begin!
+    m_AddSpaceForNext: 0
+    m_Effects:
+    - {fileID: 11400000, guid: 6ec29d305290a42bbb78a72888025d57, type: 2}
