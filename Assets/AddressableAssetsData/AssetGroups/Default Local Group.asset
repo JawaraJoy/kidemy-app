@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Default Local Group
   m_GUID: 32bb0be7821fc5c419f8759423f9a7a8
-  m_SerializeEntries:
-  - m_GUID: 9c1c1ff675020be488b1adc663399ef1
-    m_Address: Assets/_dev/SO/Challenge/SO_Challenge_0001.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c54b7747870c27e499caa9facde38ee4, type: 2}
   m_SchemaSet:

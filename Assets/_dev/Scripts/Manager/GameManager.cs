@@ -202,6 +202,8 @@ namespace EduGame
 
             //quests[0].gameObject.SetActive(true);
 
+            Debug.Log(background);
+
             if (background)
                 background.sprite = quests[0].Background;
 

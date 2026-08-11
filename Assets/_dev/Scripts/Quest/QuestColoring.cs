@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
 
 namespace EduGame
 {
@@ -56,7 +55,7 @@ namespace EduGame
 
             dataQuestColoring = data as SO_QuestColoring;
 
-            if(!dataQuestColoring)
+            if (!dataQuestColoring)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestColoring");
 
             if (palettesContainer && palettePrefab)
@@ -95,8 +94,8 @@ namespace EduGame
             // Assign SelectedColor to brush
             brush.SetColor("_BrushColor", bindedColor);
             brush.SetFloat("_BrushSize", brushSize);
-            
-            if(coloringCursor)
+
+            if (coloringCursor)
                 coloringCursor.SetToCustom(color);
 
         }
@@ -135,9 +134,9 @@ namespace EduGame
 
         void OnGUI()
         {
-            if (bindedColor != EmptyColor && bindedCursor && Mouse.current != null)
+            if (bindedColor != EmptyColor && bindedCursor)
             {
-                Vector2 mousePosition = Mouse.current.position.ReadValue();
+                Vector2 mousePosition = Input.mousePosition;
 
                 Cursor.visible = false;
 
@@ -153,30 +152,30 @@ namespace EduGame
 
         public override void Submit(int star = 1)
         {
-            if(coloringCursor)
+            if (coloringCursor)
                 coloringCursor.ResetToDefault();
 
             float appraisal = 0;
 
-            if(fields.Length > 0)
+            if (fields.Length > 0)
             {
                 foreach (var field in fields)
                     appraisal += field.Result;
-                
-                appraisal = appraisal/fields.Length;
+
+                appraisal = appraisal / fields.Length;
             }
 
-            if(appraisal >= 0.85)
+            if (appraisal >= 0.85)
                 star = 3;
-            else if(appraisal >= 0.5)
+            else if (appraisal >= 0.5)
                 star = 2;
-            
+
             base.Submit(star);
         }
 
         public override void Reset()
         {
-            if(fields != null && fields.Length > 0)
+            if (fields != null && fields.Length > 0)
             {
                 foreach (var field in fields)
                     field.Reset();
