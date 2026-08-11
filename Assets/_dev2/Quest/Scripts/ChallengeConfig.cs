@@ -7,6 +7,7 @@ namespace EduGame
     {
         [SerializeField]
         private Sprite m_Background;
+        
         [Header("Prefabs")]
         [SerializeField]
         private ParticleSystem m_ConffetyVFXPrefab;
