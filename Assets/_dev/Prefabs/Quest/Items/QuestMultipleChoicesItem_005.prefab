@@ -156,6 +156,7 @@ MonoBehaviour:
   text: {fileID: 6545907981649278706}
   audioPlayer: {fileID: 0}
   image: {fileID: 409762447721034382}
+  tint: {fileID: 7606955882150920398}
   correct: {fileID: 0}
   wrong: {fileID: 0}
 --- !u!114 &-4894720009598946532

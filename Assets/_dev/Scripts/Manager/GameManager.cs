@@ -33,6 +33,7 @@ namespace EduGame
         [SerializeField] private TMP_Text category;
         [SerializeField] private TMP_Text timer;
         [SerializeField] private Image background;
+        [SerializeField] private AudioClip backgroundMusic;
         [SerializeField] private RectTransform npc;
         [SerializeField] private TMP_Text npcDialog;
 
@@ -139,6 +140,11 @@ namespace EduGame
         
         void Start()
         {
+            if(backgroundMusic)
+            {
+                audioSource.PlayOneShot(backgroundMusic);
+            }
+
             apiManager = GetComponent<APIManager>();
             assetManager = GetComponent<AssetManager>();
 
@@ -231,6 +237,8 @@ namespace EduGame
             
 
             //quests[0].gameObject.SetActive(true);
+
+            Debug.Log(background);
 
             if (background)
                 background.sprite = quests[0].Background;

@@ -200,6 +200,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1443337414653971488, guid: 40a6e721d3c26484db2f549bc602940b, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 0aed5662152203485b3d31a57a574f24, type: 3}
+    - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: questPrefabs.Array.size
       value: 5
       objectReference: {fileID: 0}
