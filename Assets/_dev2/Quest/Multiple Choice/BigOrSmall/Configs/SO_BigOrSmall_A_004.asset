@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
-    text: Which one is bigger?
+    text: Which one is Bigger?
+    m_FormatedText: {fileID: 11400000, guid: c85834526a2e35c40a17416bc2c76733, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
   autoSubmit: 0
   score: 10
@@ -26,12 +31,18 @@ MonoBehaviour:
   choices:
   - image: {fileID: 21300000, guid: 5e65203da8a5670b2ae1fda9fd37ef26, type: 3}
     text: Frog
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: bd0d2d093102f4a449bd8a6051cda121, type: 3}
     text: Bear
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 1
   timer: 0

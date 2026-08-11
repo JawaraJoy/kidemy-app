@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine.Events;
+using EasyTextEffects;
 
 namespace EduGame
 {
@@ -65,19 +66,27 @@ namespace EduGame
         [SerializeField] private Quest questPrefab;
         [SerializeField] private Quest[] questPrefabs;
 
-        [Header("OtherDev")]
-        [SerializeField]
-        private bool m_UseConfigInstead;
+        [Header("Other Dev")]
         [SerializeField]
         private ChallengeConfig m_ChallengeConfig;
         [SerializeField]
-        private GameObject m_Container;
+        private Transform m_ChallengeContainer;
+        [SerializeField]
+        private Transform m_PanelContainer;
+        private ReactionPanel m_ReactionPanel;
+        private ResultPanel m_ResultPanel;
         [SerializeField]
         private UnityEvent m_OnQuestStart;
         [SerializeField]
-        private UnityEvent m_OnQuestNext;
+        private UnityEvent m_OnQuestNext; // dimana tepatnya event ini dipanggil, apakah di submit atau next quest
         [SerializeField]
         private UnityEvent m_OnQuestEnd;
+
+        private ParticleSystem m_ConffetyVFX;
+        private int m_RightAnswerCount;
+        public int RightAnswerCount => m_RightAnswerCount;
+        public int QuestsCount => quests.Length;
+        public ResultPanel ResultPanel => m_ResultPanel;
 
         private Image[] stars;
         private Quest[] quests;
@@ -104,7 +113,6 @@ namespace EduGame
         public AssetManager Asset => assetManager;
 
         public static GameManager Instance { get; private set; }
-        public bool UseConfigInstead => m_UseConfigInstead;
         public ChallengeConfig ChallengeConfig => m_ChallengeConfig;
 
         void Awake()
@@ -119,8 +127,16 @@ namespace EduGame
 
             if (starPrefab)
                 InstantiateStar();
+
+            if (m_ChallengeConfig.ConffetyVFXPrefab)
+            {
+                m_ConffetyVFX = Instantiate(m_ChallengeConfig.ConffetyVFXPrefab, m_ChallengeContainer, false);
+            }
+            
+            m_RightAnswerCount = 0;
         }
 
+        
         void Start()
         {
             apiManager = GetComponent<APIManager>();
@@ -163,7 +179,7 @@ namespace EduGame
             else
                 sessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
 
-            if (m_UseConfigInstead)
+            if (m_ChallengeConfig)
             {
                 if (m_ChallengeConfig.QuestConfigs.Length > 0)
                 {
@@ -180,7 +196,15 @@ namespace EduGame
                 else
                 {
                     Debug.LogError("Failed to load data, challenge will return empty");
-                }    
+                }
+
+                m_ResultPanel = Instantiate(m_ChallengeConfig.ResultPanelPrefab, m_PanelContainer, false);
+                m_ReactionPanel = Instantiate(m_ChallengeConfig.ReactionPanelPrefab, m_PanelContainer, false);
+
+                if (m_ReactionPanel)
+                {
+                    m_ReactionPanel.Init(this);
+                }
             }
             else
             {
@@ -285,12 +309,18 @@ namespace EduGame
         public virtual void SetNPCDialog(string dialog)
         {
             if (npcDialog)
+            {
                 npcDialog.text = dialog;
+                if (npcDialog.TryGetComponent(out TextEffect textEffect))
+                {
+                    textEffect.Refresh();
+                }
+            }
         }
         
         Quest InstantiateTemplate(Quest templatePrefab)
         {
-            Quest template = Instantiate(templatePrefab, m_Container != null ? m_Container.transform : transform);
+            Quest template = Instantiate(templatePrefab, m_ChallengeContainer != null ? m_ChallengeContainer.transform : transform);
 
             template.transform.localPosition = Vector3.zero;
             template.transform.localScale = Vector3.one;
@@ -304,14 +334,22 @@ namespace EduGame
         {
             stars = new Image[3];
 
-            stars[0] = Instantiate(starPrefab, starContainer);
+            
+            /*stars[0] = Instantiate(starPrefab, starContainer);
             stars[0].gameObject.SetActive(false);
 
             stars[1] = Instantiate(stars[0], starContainer);
             stars[1].gameObject.SetActive(false);
 
             stars[2] = Instantiate(stars[0], starContainer);
-            stars[2].gameObject.SetActive(false);
+            stars[2].gameObject.SetActive(false);*/
+
+            // you should use for loop
+            for (int i = 0; i < stars.Length; i++)
+            {
+                Image star = Instantiate(starPrefab, starContainer);
+                stars[i] = star;
+            }
         }
 
         public virtual void InitQuest(SO_Quest questData)
@@ -335,7 +373,7 @@ namespace EduGame
             Next();
         }
 
-        void Next()
+        public void Next()
         {
             int nextIndex = currentIndex + 1;
 
@@ -353,6 +391,10 @@ namespace EduGame
 
                 ResetQuest();
             }
+        }
+        public void SetRightAsnwer(int set)
+        {
+            m_RightAnswerCount = set;
         }
         private void OnQuestStartInvoke()
         {
@@ -402,30 +444,58 @@ namespace EduGame
 
         public virtual void ShowResult(int star)
         {
-            if (popResult)
-                popResult.gameObject.SetActive(true);
-
-            if (star > 1)
+            if (m_ChallengeConfig && m_ReactionPanel)
             {
-                if (correctFeedback)
-                    correctFeedback.Play(npc ? npc : transform);
-
-                if (npcDialog)
-                    SetNPCDialog("Yaaay! Amazing!");
-
-                correctTitle.gameObject.SetActive(true);
-                correctNote.gameObject.SetActive(true);
+                if (popResult)
+                    popResult.gameObject.SetActive(false);
             }
             else
             {
-                if (wrongFeedback)
-                    wrongFeedback.Play(npc ? npc : transform);
+                if (popResult)
+                    popResult.gameObject.SetActive(true);
+            }
+            
 
-                if (npcDialog)
-                    SetNPCDialog("Oh no!");
+            if (star > 1) // jika bintang lebih dari 1 maka dianggap jawaban benar
+            {
+                m_RightAnswerCount++;
+                if (m_ChallengeConfig)
+                {
+                    m_ReactionPanel.ShowReaction(m_ChallengeConfig.RightReaction);
+                    if (m_ConffetyVFX)
+                    {
+                        m_ConffetyVFX.Play();
+                    }    
+                }
+                else
+                {
+                    if (correctFeedback)
+                        correctFeedback.Play(npc ? npc : transform);
 
-                wrongTitle.gameObject.SetActive(true);
-                wrongNote.gameObject.SetActive(true);
+                    if (npcDialog)
+                        SetNPCDialog("Yaaay! Amazing!");
+
+                    correctTitle.gameObject.SetActive(true);
+                    correctNote.gameObject.SetActive(true);
+                }
+            }
+            else
+            {
+                if (m_ChallengeConfig)
+                {
+                    m_ReactionPanel.ShowReaction(m_ChallengeConfig.WrongReaction);
+                }
+                else
+                {
+                    if (wrongFeedback)
+                        wrongFeedback.Play(npc ? npc : transform);
+
+                    if (npcDialog)
+                        SetNPCDialog("Oh no!");
+
+                    wrongTitle.gameObject.SetActive(true);
+                    wrongNote.gameObject.SetActive(true);
+                }
             }
 
             if (stars != null && stars.Length > 0)
@@ -441,7 +511,7 @@ namespace EduGame
                 }
             }
 
-            if (currentIndex + 1 == quests.Length)
+            if (IsLastQuestInternal())
             {
                 buttonNext.gameObject.SetActive(false);
                 SendResult();
@@ -449,6 +519,15 @@ namespace EduGame
             else
                 buttonNext.gameObject.SetActive(true);
 
+        }
+
+        private bool IsLastQuestInternal()
+        {
+            return currentIndex + 1 == quests.Length;
+        }
+        public bool IsLastQuest()
+        {
+            return IsLastQuestInternal();
         }
 
         public virtual void GoHome()

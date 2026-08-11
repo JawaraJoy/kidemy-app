@@ -1,3 +1,4 @@
+using AddOn.TextAnimation;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,10 +9,9 @@ namespace EduGame
     public class QuestUtilLabel
     {
         [SerializeField] private Sprite image;
-
-        
-        
         [SerializeField] private string text;
+        [SerializeField]
+        private DialogueConfig m_FormatedText;
         [SerializeField] private Color color = Color.white;
         [SerializeField]
         private bool m_UseTextColor = false;
@@ -26,6 +26,7 @@ namespace EduGame
         public int Id { get; set; }
         public bool UseTextColor => m_UseTextColor;
         public Color TextColor => m_TextColor;
+        public DialogueConfig FormatedText => m_FormatedText;
 
         public void SetAudio(AudioClip clip)
         {

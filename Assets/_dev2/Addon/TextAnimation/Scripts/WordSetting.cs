@@ -47,5 +47,26 @@ namespace AddOn.TextAnimation
         {
             return m_AddSpaceForNext? m_Words + " " : m_Words;
         }
+
+        public static string GetFormatedText(string text, TextEffectInstance[] textEffects)
+        {
+            string wordEffects = WordSetting.c_StartFormat;
+            for (int i = 0; i < textEffects.Length; i++)
+            {
+                string tag = textEffects[i].effectTag;
+                if (i > 0)
+                {
+                    wordEffects += $"{WordSetting.c_AddEffect}{tag}";
+                }
+                else
+                {
+                    wordEffects += tag;
+                }
+
+            }
+
+            wordEffects += $"{WordSetting.c_EndEffect}{text}{WordSetting.c_EndFormat}";
+            return wordEffects;
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace EduGame
             private string m_Id;
             [SerializeField]
             private string m_Name;
-            [SerializeField]
+            [SerializeField, TextArea]
             private string m_Description;
             public string Id => m_Id;
             public string Name => m_Name;
