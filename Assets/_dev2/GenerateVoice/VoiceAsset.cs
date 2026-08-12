@@ -32,8 +32,6 @@ namespace EduGame
         // DATA
         // ============================================================
 
-        [Header("Voice")]
-
         [TextArea(3, 10)]
         [SerializeField]
         private string m_Text;
@@ -45,8 +43,6 @@ namespace EduGame
         private AudioClip m_AudioClip;
 
 #if UNITY_EDITOR
-
-        [Header("API")]
 
         [SerializeField]
         private string m_ApiToken;
