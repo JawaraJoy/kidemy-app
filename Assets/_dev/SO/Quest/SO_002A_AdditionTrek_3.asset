@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 002A
   title: Addition Trek
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: How many fruits are in the image?
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 2b74fe5344ff0ed5780df6c246859524, type: 3}
   autoSubmit: 0
   score: 10
@@ -26,27 +31,42 @@ MonoBehaviour:
   choices:
   - image: {fileID: 0}
     text: 3
-    color: {r: 1, g: 1, b: 1, a: 1}
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0.13333334, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0, g: 0.13333334, b: 1, a: 1}
     audio: {fileID: 8300000, guid: dbff51bb6534d53749e7063116d2684a, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 4
-    color: {r: 1, g: 1, b: 1, a: 1}
+    m_FormatedText: {fileID: 0}
+    color: {r: 0.627451, g: 0, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0.627451, g: 0, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 20adf9da92c474a9090da9325fc3199e, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 5
-    color: {r: 1, g: 1, b: 1, a: 1}
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 0.80784315, b: 0, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 0.80784315, b: 0, a: 1}
     audio: {fileID: 8300000, guid: 2a5282044d587c39f875b4015d6dff38, type: 3}
     isAnswer: 1
   - image: {fileID: 0}
     text: 6
-    color: {r: 1, g: 1, b: 1, a: 1}
+    m_FormatedText: {fileID: 0}
+    color: {r: 0.078431375, g: 0.7372549, b: 0, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0.078431375, g: 0.7372549, b: 0, a: 1}
     audio: {fileID: 8300000, guid: 297e7b8f4e65b5456a3a97b487f98b28, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: 7
-    color: {r: 1, g: 1, b: 1, a: 1}
+    m_FormatedText: {fileID: 0}
+    color: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     audio: {fileID: 8300000, guid: 960b8344d1b09f848a7c9c6d483361d4, type: 3}
     isAnswer: 0
   timer: 0

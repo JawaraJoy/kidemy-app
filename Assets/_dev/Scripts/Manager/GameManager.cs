@@ -129,7 +129,7 @@ namespace EduGame
             if (starPrefab)
                 InstantiateStar();
 
-            if (m_ChallengeConfig.ConffetyVFXPrefab)
+            if (m_ChallengeConfig && m_ChallengeConfig.ConffetyVFXPrefab)
             {
                 m_ConffetyVFX = Instantiate(m_ChallengeConfig.ConffetyVFXPrefab, m_ChallengeContainer, false);
             }
