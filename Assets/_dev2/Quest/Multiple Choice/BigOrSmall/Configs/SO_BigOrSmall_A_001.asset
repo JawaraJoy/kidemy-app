@@ -29,16 +29,16 @@ MonoBehaviour:
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: 4ed0adb871115ed40a3feb5aca3c7108, type: 3}
-    text: Ball
+  - image: {fileID: 21300000, guid: efd1ff3e81819264c8fc2c61ac55f6bc, type: 3}
+    text: Rat
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: de66d927d6b273e47888f7420f3faef7, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
-    text: Car
+  - image: {fileID: 21300000, guid: 2c372a3924b58ea4082bbca220386493, type: 3}
+    text: Elephant
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0

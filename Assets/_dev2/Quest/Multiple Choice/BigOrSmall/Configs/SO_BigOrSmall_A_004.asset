@@ -29,16 +29,16 @@ MonoBehaviour:
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: 5e65203da8a5670b2ae1fda9fd37ef26, type: 3}
-    text: Frog
+  - image: {fileID: 21300000, guid: 96504800e78ed1941b98398624c970b8, type: 3}
+    text: Star
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: de66d927d6b273e47888f7420f3faef7, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: bd0d2d093102f4a449bd8a6051cda121, type: 3}
-    text: Bear
+  - image: {fileID: 21300000, guid: e689eadd6e4d1bf4c9bccc9912291f33, type: 3}
+    text: Castle
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0

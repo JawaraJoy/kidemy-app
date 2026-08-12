@@ -29,16 +29,16 @@ MonoBehaviour:
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: 3b0053bee9d565746b6ea58354b1e5d2, type: 3}
-    text: Shoes
+  - image: {fileID: 21300000, guid: 341ea051c0a559944abd387aca7032d3, type: 3}
+    text: House
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: de66d927d6b273e47888f7420f3faef7, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: cf22fbf800d21ce4fbbfff9006bb39ca, type: 3}
-    text: Table
+  - image: {fileID: 21300000, guid: 7593555a2a09a05438d2f24808bcfd9b, type: 3}
+    text: Manshion
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0

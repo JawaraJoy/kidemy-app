@@ -29,16 +29,16 @@ MonoBehaviour:
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: faec26b660adf294ebcaf502164197df, type: 3}
-    text: Toot Brush
+  - image: {fileID: 21300000, guid: b6603badbab18ff4faa68f32c0969dad, type: 3}
+    text: Sprout
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: de66d927d6b273e47888f7420f3faef7, type: 3}
     isAnswer: 1
-  - image: {fileID: -2479494404768115379, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: Umbrella
+  - image: {fileID: 21300000, guid: 7d93052115f7fde49bc0f1c33457f701, type: 3}
+    text: Tree
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0

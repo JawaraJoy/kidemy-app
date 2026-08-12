@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: 6f7bf11d1a95442cf9c3f99ff1e34f67
-AssetOrigin:
-  serializedVersion: 1
-  productId: 48850
-  packageName: Cartoon GUI Pack
-  packageVersion: 2.1.0
-  assetPath: Assets/GUIPackCartoon/Demo/Sprites/Particle Effects/Confetti.png
-  uploadId: 959196
+guid: f557216d420dbf14fa67c25ff6c31cd8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1783647722776349905
+    second: big 5_0
+  - first:
+      213: 294088324452864986
+    second: big 5_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -50,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,16 +71,16 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
+    compressionQuality: 18
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -130,89 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Confetti_0
+      name: big 5_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
+        x: 5
+        y: 1
+        width: 501
+        height: 510
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c33ce9d96cb41634d842de1c4de7f232
-      internalID: -679131177
+      spriteID: f233b77a8d53f37e0800000000000000
+      internalID: -1783647722776349905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Confetti_1
+      name: big 5_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c42c461fa575094e94445a4e4344d5b
-      internalID: 1371599567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Confetti_2
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 204
         y: 0
-        width: 64
-        height: 64
+        width: 22
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7efbd034064c4664d8635803d172556e
-      internalID: 1544631671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Confetti_3
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfa18612c4159f24a873fdd39cf153cf
-      internalID: -1103514549
+      spriteID: ad35a9fd5cfc41400800000000000000
+      internalID: 294088324452864986
       vertices: []
       indices: 
       edges: []
@@ -229,14 +184,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Confetti_0: -679131177
-      Confetti_1: 1371599567
-      Confetti_2: 1544631671
-      Confetti_3: -1103514549
+      big 5_0: -1783647722776349905
+      big 5_1: 294088324452864986
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
