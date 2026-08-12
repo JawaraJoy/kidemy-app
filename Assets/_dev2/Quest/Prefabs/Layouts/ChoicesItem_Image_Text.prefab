@@ -110,8 +110,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 2}
+  m_SizeDelta: {x: -50, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3114099664168904518
 CanvasRenderer:
@@ -143,15 +143,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ball
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dccaf103d9daf6a4bbaaa3d2a678d1f5, type: 2}
-  m_sharedMaterial: {fileID: -787206608761283808, guid: dccaf103d9daf6a4bbaaa3d2a678d1f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7ac3a10f3ede1c74ea4c26949b04a1c3, type: 2}
+  m_sharedMaterial: {fileID: 2872454883550864049, guid: 7ac3a10f3ede1c74ea4c26949b04a1c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281545523
+  m_fontColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -231,7 +231,7 @@ MonoBehaviour:
   tagEffects: []
   globalEffects:
   - triggerWhen: 0
-    effect: {fileID: 11400000, guid: 2abfac48fd7214505b0715ad6c08e117, type: 2}
+    effect: {fileID: 11400000, guid: bef25e39d4ad04412a2363b9e5251d94, type: 2}
     onEffectCompleted:
       m_PersistentCalls:
         m_Calls: []
@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 8734279371013584134}
   - component: {fileID: 6501583533071846523}
   - component: {fileID: 908839133965221296}
+  - component: {fileID: 1492805110124059020}
   m_Layer: 5
   m_Name: Container_2x1
   m_TagString: Untagged
@@ -585,7 +586,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5905939011796016697}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -598,9 +599,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: de2eca777c37a7c4cb59c84b4df14eb1, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 9b24f0dad1bdc4b0aafa08d265a04bcd, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -620,6 +621,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6aab3c114ee5f0459d037c7637ddc38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestContainer
+--- !u!114 &1492805110124059020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5905939011796016697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -6, y: -6}
+  m_UseGraphicAlpha: 1
 --- !u!1 &8717962757160328296
 GameObject:
   m_ObjectHideFlags: 0

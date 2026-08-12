@@ -74,6 +74,12 @@ namespace EduGame
         private Transform m_ChallengeContainer;
         [SerializeField]
         private Transform m_PanelContainer;
+        [SerializeField]
+        private AudioClip m_RightSFX;
+        [SerializeField]
+        private AudioClip m_WrongSFX;
+        [SerializeField]
+        private AudioSource m_SFXSource;
         private ReactionPanel m_ReactionPanel;
         private ResultPanel m_ResultPanel;
         [SerializeField]
@@ -129,7 +135,7 @@ namespace EduGame
             if (starPrefab)
                 InstantiateStar();
 
-            if (m_ChallengeConfig.ConffetyVFXPrefab)
+            if (m_ChallengeConfig && m_ChallengeConfig.ConffetyVFXPrefab)
             {
                 m_ConffetyVFX = Instantiate(m_ChallengeConfig.ConffetyVFXPrefab, m_ChallengeContainer, false);
             }
@@ -486,6 +492,7 @@ namespace EduGame
                     correctTitle.gameObject.SetActive(true);
                     correctNote.gameObject.SetActive(true);
                 }
+                m_SFXSource.PlayOneShot(m_RightSFX);
             }
             else
             {
@@ -504,6 +511,7 @@ namespace EduGame
                     wrongTitle.gameObject.SetActive(true);
                     wrongNote.gameObject.SetActive(true);
                 }
+                m_SFXSource.PlayOneShot(m_WrongSFX);
             }
 
             if (stars != null && stars.Length > 0)

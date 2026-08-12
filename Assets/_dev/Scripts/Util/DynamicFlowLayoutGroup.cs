@@ -10,39 +10,70 @@ public class DynamicFlowLayoutGroup : LayoutGroup
     public override void CalculateLayoutInputHorizontal()
     {
         base.CalculateLayoutInputHorizontal();
+        UpdateLayoutInput();
     }
 
-    public override void CalculateLayoutInputVertical() { }
+    public override void CalculateLayoutInputVertical()
+    {
+        UpdateLayoutInput();
+    }
+
+    // Memberi tahu Canvas/ContentSizeFitter berapa ukuran total yang dibutuhkan layout ini
+    private void UpdateLayoutInput()
+    {
+        int totalCount = GetActiveChildCount();
+        if (totalCount == 0) return;
+
+        float availableWidth = rectTransform.rect.width - padding.left - padding.right;
+        int columns = Mathf.Max(1, Mathf.FloorToInt((availableWidth + spacing.x) / (cellSize.x + spacing.x)));
+        int rows = Mathf.CeilToInt((float)totalCount / columns);
+
+        float totalWidth = padding.left + padding.right + (columns * cellSize.x) + ((columns - 1) * spacing.x);
+        float totalHeight = padding.top + padding.bottom + (rows * cellSize.y) + ((rows - 1) * spacing.y);
+
+        SetLayoutInputForAxis(totalWidth, totalWidth, -1, 0);
+        SetLayoutInputForAxis(totalHeight, totalHeight, -1, 1);
+    }
 
     public override void SetLayoutHorizontal() => LayoutChildren();
     public override void SetLayoutVertical() => LayoutChildren();
 
+    private int GetActiveChildCount()
+    {
+        int count = 0;
+        for (int i = 0; i < rectChildren.Count; i++)
+        {
+            if (rectChildren[i].gameObject.activeSelf) count++;
+        }
+        return count;
+    }
+
     private void LayoutChildren()
     {
+        int totalCount = GetActiveChildCount();
+        if (totalCount == 0) return;
+
         float width = rectTransform.rect.width;
-        
-        // Calculate total available horizontal space after subtracting left and right padding
         float availableWidth = width - padding.left - padding.right;
 
-        // Determine maximum columns that can fit in the padded area
         int columns = Mathf.FloorToInt((availableWidth + spacing.x) / (cellSize.x + spacing.x));
         columns = Mathf.Max(1, columns);
 
-        // Count only active children
-        int totalCount = 0;
-        for (int i = 0; i < rectChildren.Count; i++)
-        {
-            if (rectChildren[i].gameObject.activeSelf) totalCount++;
-        }
+        int rows = Mathf.CeilToInt((float)totalCount / columns);
+
+        // 1. Hitung total tinggi grid konten
+        float totalGridHeight = (rows * cellSize.y) + ((rows - 1) * spacing.y);
+
+        // 2. Gunakan GetStartOffset untuk sumbu Y (Vertical: Upper / Middle / Lower)
+        float startY = GetStartOffset(1, totalGridHeight);
 
         int currentColumn = 0;
         int currentRow = 0;
-        
-        // Setup initial row parameters
+
         int itemsInCurrentRow = Mathf.Min(columns, totalCount);
         float rowWidth = (itemsInCurrentRow * cellSize.x) + ((itemsInCurrentRow - 1) * spacing.x);
-        
-        // Center the row relative to the padded bounds
+
+        // Centering Horizontal bawaan script Anda
         float startX = padding.left + (availableWidth - rowWidth) / 2f;
 
         for (int i = 0; i < rectChildren.Count; i++)
@@ -50,23 +81,22 @@ public class DynamicFlowLayoutGroup : LayoutGroup
             var child = rectChildren[i];
             if (!child.gameObject.activeSelf) continue;
 
-            // Handle row wrapping
             if (currentColumn >= columns)
             {
                 currentColumn = 0;
                 currentRow++;
-                
+
                 int remainingItems = totalCount - (currentRow * columns);
                 itemsInCurrentRow = Mathf.Min(columns, remainingItems);
                 rowWidth = (itemsInCurrentRow * cellSize.x) + ((itemsInCurrentRow - 1) * spacing.x);
-                
-                // Recalculate centering for the new row
+
                 startX = padding.left + (availableWidth - rowWidth) / 2f;
             }
 
-            // Calculate precise positions accounting for paddings and spacing matrix
             float xPos = startX + (currentColumn * (cellSize.x + spacing.x));
-            float yPos = padding.top + (currentRow * (cellSize.y + spacing.y));
+            
+            // 3. Gunakan startY menggantikan padding.top
+            float yPos = startY + (currentRow * (cellSize.y + spacing.y));
 
             SetChildAlongAxis(child, 0, xPos, cellSize.x);
             SetChildAlongAxis(child, 1, yPos, cellSize.y);

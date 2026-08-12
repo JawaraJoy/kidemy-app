@@ -60,7 +60,7 @@ namespace EduGame
             string wrongCountText = WordSetting.GetFormatedText(wrongCount.ToString(), new TextEffectInstance[1] { m_WrongTextEffect });
             string rightCountText = WordSetting.GetFormatedText(rightCount.ToString(), new TextEffectInstance[1] {m_RightTextEffect});
 
-            string scoreText = $"{rightCountText} rights of {context.GetTotalQuest()}";
+            string scoreText = $"{rightCountText} right(s) of {context.GetTotalQuest()}";
             m_ScoreText.text = scoreText;
 
             if (m_ScoreTextEff != null)
