@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6147f87c576096a44b7adf443589e1af, type: 3}
   m_Name: VoiceAsset
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.VoiceAsset
-  m_Text: Hello World
-  m_AudioClip: {fileID: 0}
+  m_NameVoice: which is smaller
+  m_Text: Which one is the smaller?
+  m_VoiceId: n3tkGOcEribaYI5zg4pu
+  m_AudioClip: {fileID: 8300000, guid: 9b1f4778c7ca4364587b4e94bcfb755f, type: 3}
+  m_ApiToken: game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e
   m_IsGenerating: 0
