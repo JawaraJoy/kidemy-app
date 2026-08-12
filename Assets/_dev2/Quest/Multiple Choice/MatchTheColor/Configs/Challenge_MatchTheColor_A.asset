@@ -15,6 +15,7 @@ MonoBehaviour:
   m_SceneConfig: {fileID: 11400000, guid: c21589a4faa25474d96abcb0faffaccb, type: 2}
   m_ChoicePrefab: {fileID: 8156987785838361269, guid: 9b79ee89d29d93c4a9cb9b2845bde327, type: 3}
   m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: 2df55f3fe7971d444b1adec09da35341, type: 3}
+  m_Background: {fileID: 21300000, guid: f3f025012964be84e8901369f9eff94b, type: 3}
   m_QuestConfigs:
   - {fileID: 11400000, guid: 38040f97a44245f4b98543c7ff1e3fd0, type: 2}
   - {fileID: 11400000, guid: cfd9889006bc1954c943458ae318adfd, type: 2}

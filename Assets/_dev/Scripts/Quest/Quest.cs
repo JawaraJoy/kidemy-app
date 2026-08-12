@@ -41,6 +41,12 @@ namespace EduGame
             GameManager.Instance.InitQuest(data);
 
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
+            
+        }
+        public void SetBackground(Sprite sprite)
+        {
+            background = sprite;
         }
         public void SetChallenge(ChallengeConfig challenge)
         {

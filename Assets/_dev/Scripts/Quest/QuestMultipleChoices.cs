@@ -1,9 +1,8 @@
+using EasyTextEffects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,6 +30,8 @@ namespace EduGame
         private VoiceRequest voiceQuestionRequest = new VoiceRequest();
 
         private List<Image> m_SpawnedmultipleImages = new List<Image>();
+
+        private TextEffect m_TextEffect;
         protected override void Start()
         {
             base.Start();
@@ -61,7 +62,6 @@ namespace EduGame
                         Image image = Instantiate(prefab, m_MultipleImagesQuestionContainer);
                         image.sprite = multipleImages[i];
                         m_SpawnedmultipleImages.Add(image);
-                        
                     }
                     m_SpawnedmultipleImages[i].gameObject.SetActive(true);
                 }
@@ -101,13 +101,32 @@ namespace EduGame
 
             if (questionText)
             {
-                if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
-                    questionText.text = dataMultipleChoice.Question.Text;
+                if (dataMultipleChoice.Question.FormatedText)
+                {
+                    if (questionText.TryGetComponent(out TextEffect textEff))
+                    {
+                        m_TextEffect = textEff;
+                    }
+                    m_TextEffect.preset = dataMultipleChoice.Question.FormatedText.EffectPreset;
+                    questionText.text = dataMultipleChoice.Question.FormatedText.GetFormattedText();
+                    m_TextEffect.Refresh();
+                }
                 else
                 {
-                    questionText.gameObject.SetActive(false);
-                    questionText.transform.parent.gameObject.SetActive(false);
+                    // we can control color with formated text, maybe we should remove this option in the future
+                    if (dataMultipleChoice.Question.UseTextColor)
+                    {
+                        questionText.color = dataMultipleChoice.Question.TextColor;
+                    }
+                    if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
+                        questionText.text = dataMultipleChoice.Question.Text;
+                    else
+                    {
+                        questionText.gameObject.SetActive(false);
+                        questionText.transform.parent.gameObject.SetActive(false);
+                    }
                 }
+                
             }
             if (m_Challenged)
             {
@@ -254,13 +273,24 @@ namespace EduGame
 
             SetDialog();
 
-            Invoke("RecalculateChoiceContainer", 0.5f);
+            // use name of method to avoid hardcoding string
+            Invoke(nameof(RecalculateChoiceContainer), 0.5f);
         }
 
         void SetDialog()
         {
+            
             if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
-                GameManager.Instance.SetNPCDialog(dataMultipleChoice.Question.Text);
+            {
+                string dialog = dataMultipleChoice.Question.Text;
+                if (dataMultipleChoice.Question.FormatedText)
+                {
+                    dialog = dataMultipleChoice.Question.FormatedText.GetFormattedText();
+                    
+                }
+                GameManager.Instance.SetNPCDialog(dialog);
+            }
+                
         }
 
         /// <summary>

@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
-    text: Which one is smaller?
+    text: Which one is Smaller?
+    m_FormatedText: {fileID: 11400000, guid: 36c72adab8e393c4a8773c1c9ac3d8bd, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
   autoSubmit: 0
   score: 10
@@ -26,12 +31,18 @@ MonoBehaviour:
   choices:
   - image: {fileID: -9041508683981611798, guid: 872f62701a998de4083200924f128f5d, type: 3}
     text: Guitar
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: c696f271bf601724ebe27f4eb15510e7, type: 3}
     text: Bed
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 0
   timer: 0

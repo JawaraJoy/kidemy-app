@@ -1,3 +1,4 @@
+using EasyTextEffects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,8 +53,17 @@ namespace EduGame
             if(!string.IsNullOrEmpty(choice.Text))
             {
                 if(text)
+                {
                     text.text = choice.Text;
-                if(choice.UseTextColor)
+                    if (text.TryGetComponent(out TextEffect textEffects))
+                    {
+                        textEffects.Refresh();
+                    }
+                }
+
+                
+                    
+                if (choice.UseTextColor)
                 {
                     text.color = choice.TextColor;
                 }

@@ -72,7 +72,11 @@ mergeInto(LibraryManager.library, {
         }
     },
 
+    JS_Log_Dump: function (str) {
+        // Dummy function biar Unity WebGL ga complain DllNotFoundException
+    },
+
     LogToBrowser: function (message) {
         console.log(UTF8ToString(message));
-    }
+    },
 });

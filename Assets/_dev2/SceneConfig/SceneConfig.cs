@@ -34,6 +34,14 @@ namespace EduGame
 
             SceneManager.LoadScene(m_SceneName);
         }
+        public void RestartScene()
+        {
+            if (string.IsNullOrEmpty(m_SceneName))
+            {
+                Debug.LogError($"{name} has no scene assigned.");
+                return;
+            }
+        }
     }
 }
 

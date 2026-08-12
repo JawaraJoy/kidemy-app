@@ -1,0 +1,4 @@
+<linker>
+  <assembly fullname="UnityEngine.Physics2DModule" preserve="none" />
+  <assembly fullname="UnityEngine.PhysicsModule" preserve="none" />
+</linker>
