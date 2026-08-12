@@ -18,8 +18,10 @@ MonoBehaviour:
   m_ImagePrefab: {fileID: 0}
   m_MultipleQuestImages: []
   question:
-    image: {fileID: 21300000, guid: 991f9171d0ff8054f88c1f950f6bd496, type: 3}
+    image: {fileID: 21300000, guid: 27307017e133e574dadbf454ffac8fb8, type: 3}
     text: What is the shadow of this?
+    m_FormatedText: {fileID: 11400000, guid: 5caafd44372d0604f9e4595d3914ebae, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
@@ -28,33 +30,41 @@ MonoBehaviour:
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: b3a62046b3617694c99bd32a44c06467, type: 3}
+  - image: {fileID: 21300000, guid: d7ad774206a4a864e991bf779495f0fb, type: 3}
     text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 0, g: 0, b: 0, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
+  - image: {fileID: 21300000, guid: 1be441130e70e4b3685ef627940e48c1, type: 3}
     text: Car
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 0, g: 0, b: 0, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
+  - image: {fileID: 21300000, guid: 938949c3388c5d440bc1e4ca63062d93, type: 3}
     text: Car
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 0, g: 0, b: 0, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 27307017e133e574dadbf454ffac8fb8, type: 3}
+    text: Car
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 0, g: 0, b: 0, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 1
-  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
-    text: Car
-    color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 0
-    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
-    isAnswer: 0
   timer: 0
   randomizeChoice: 0

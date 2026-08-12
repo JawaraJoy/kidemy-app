@@ -86,8 +86,11 @@ namespace EduGame
             }
             if(choice.Image)
             {
-                if(image)
+                if(image)   
+                {
                     image.sprite = choice.Image;
+                    image.color = choice.ImageColor;
+                }
             }   
             else
             {
