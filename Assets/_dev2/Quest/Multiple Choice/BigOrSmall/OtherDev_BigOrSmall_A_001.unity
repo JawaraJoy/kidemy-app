@@ -131,30 +131,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage_OtherDev
       objectReference: {fileID: 0}
-    - target: {fileID: 2335853768344488024, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335853768344488024, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335853768344488024, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335853768344488024, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335853768344488024, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335853768344488024, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2659243052276867537, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -173,10 +149,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2659243052276867537, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3216478807956348711, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4322225338238807951, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}

@@ -18,7 +18,7 @@ namespace EduGame
     public class VoiceAsset : ScriptableObject
     {
         // ============================================================
-        // CONFIGURATION
+        // OUTPUT
         // ============================================================
 
 #if UNITY_EDITOR
@@ -29,8 +29,13 @@ namespace EduGame
 #endif
 
         // ============================================================
-        // DATA
+        // VOICE DATA
         // ============================================================
+
+        [Header("Voice")]
+
+        [SerializeField]
+        private string m_NameVoice;
 
         [TextArea(3, 10)]
         [SerializeField]
@@ -44,6 +49,12 @@ namespace EduGame
 
 #if UNITY_EDITOR
 
+        // ============================================================
+        // API
+        // ============================================================
+
+        [Header("API")]
+
         [SerializeField]
         private string m_ApiToken;
 
@@ -53,26 +64,29 @@ namespace EduGame
 #endif
 
         // ============================================================
-        // PUBLIC
+        // PUBLIC ACCESS
         // ============================================================
 
-        public string Text =>
-            m_Text;
+        public string NameVoice => m_NameVoice;
 
-        public string VoiceId =>
-            m_VoiceId;
+        public string Text => m_Text;
 
-        public AudioClip AudioClip =>
-            m_AudioClip;
+        public string VoiceId => m_VoiceId;
+
+        public AudioClip AudioClip => m_AudioClip;
 
         // ============================================================
-        // GENERATE
+        // GENERATE AUDIO
         // ============================================================
 
 #if UNITY_EDITOR
 
         public void GenerateAudio()
         {
+            // --------------------------------------------------------
+            // Already generating
+            // --------------------------------------------------------
+
             if (m_IsGenerating)
             {
                 Debug.LogWarning(
@@ -81,6 +95,23 @@ namespace EduGame
 
                 return;
             }
+
+            // --------------------------------------------------------
+            // Validate Name
+            // --------------------------------------------------------
+
+            if (string.IsNullOrWhiteSpace(m_NameVoice))
+            {
+                Debug.LogError(
+                    $"[VoiceAsset] Name Voice is empty on '{name}'."
+                );
+
+                return;
+            }
+
+            // --------------------------------------------------------
+            // Validate Text
+            // --------------------------------------------------------
 
             if (string.IsNullOrWhiteSpace(m_Text))
             {
@@ -91,6 +122,10 @@ namespace EduGame
                 return;
             }
 
+            // --------------------------------------------------------
+            // Validate API Token
+            // --------------------------------------------------------
+
             if (string.IsNullOrWhiteSpace(m_ApiToken))
             {
                 Debug.LogError(
@@ -100,11 +135,19 @@ namespace EduGame
                 return;
             }
 
+            // --------------------------------------------------------
+            // Start
+            // --------------------------------------------------------
+
             m_IsGenerating = true;
 
             EditorUtility.SetDirty(this);
 
             RepaintInspector();
+
+            // --------------------------------------------------------
+            // Voice ID
+            // --------------------------------------------------------
 
             string voiceId =
                 string.IsNullOrWhiteSpace(m_VoiceId)
@@ -112,16 +155,25 @@ namespace EduGame
                     : m_VoiceId;
 
             Debug.Log(
-                $"[VoiceAsset] Generating '{name}'...\n" +
-                $"Voice ID: {voiceId}"
+                $"[VoiceAsset] Starting generation...\n" +
+                $"Name      : {m_NameVoice}\n" +
+                $"Voice ID  : {voiceId}\n" +
+                $"Text      : {m_Text}"
             );
+
+            // --------------------------------------------------------
+            // Request API
+            // --------------------------------------------------------
 
             VoiceAPI.Generate(
                 m_Text,
                 voiceId,
                 m_ApiToken,
 
+                // ====================================================
                 // SUCCESS
+                // ====================================================
+
                 audioUrl =>
                 {
                     EditorCoroutineUtility.StartCoroutineOwnerless(
@@ -129,7 +181,10 @@ namespace EduGame
                     );
                 },
 
+                // ====================================================
                 // FAILURE
+                // ====================================================
+
                 error =>
                 {
                     Debug.LogError(
@@ -142,7 +197,7 @@ namespace EduGame
         }
 
         // ============================================================
-        // DOWNLOAD
+        // DOWNLOAD AUDIO
         // ============================================================
 
         private IEnumerator DownloadAudioRoutine(
@@ -150,13 +205,18 @@ namespace EduGame
         )
         {
             Debug.Log(
-                $"[VoiceAsset] Downloading audio..."
+                $"[VoiceAsset] Downloading audio...\n" +
+                $"{audioUrl}"
             );
 
             using UnityWebRequest request =
                 UnityWebRequest.Get(audioUrl);
 
             yield return request.SendWebRequest();
+
+            // --------------------------------------------------------
+            // Download error
+            // --------------------------------------------------------
 
             if (
                 request.result !=
@@ -172,6 +232,10 @@ namespace EduGame
 
                 yield break;
             }
+
+            // --------------------------------------------------------
+            // Get bytes
+            // --------------------------------------------------------
 
             byte[] audioData =
                 request.downloadHandler.data;
@@ -221,17 +285,22 @@ namespace EduGame
             // FILE NAME
             // ========================================================
 
+            string voiceName =
+                SanitizeFileName(
+                    m_NameVoice
+                );
+
             string fileName =
-                SanitizeFileName(name);
+                $"Voice_{voiceName}";
 
             string fullFilePath =
                 Path.Combine(
                     outputDirectory,
-                    fileName + ".mp3"
+                    $"{fileName}.mp3"
                 );
 
             // ========================================================
-            // SAVE FILE
+            // SAVE MP3
             // ========================================================
 
             try
@@ -259,12 +328,12 @@ namespace EduGame
             );
 
             // ========================================================
-            // IMPORT ASSET
+            // IMPORT INTO UNITY
             // ========================================================
 
             AssetDatabase.Refresh();
 
-            // Give Unity time to import.
+            // Give Unity a frame to import the MP3.
             yield return null;
 
             string unityAssetPath =
@@ -286,6 +355,10 @@ namespace EduGame
                     unityAssetPath
                 );
 
+            // --------------------------------------------------------
+            // Failed to import
+            // --------------------------------------------------------
+
             if (clip == null)
             {
                 Debug.LogError(
@@ -299,7 +372,7 @@ namespace EduGame
             }
 
             // ========================================================
-            // ASSIGN
+            // ASSIGN AUDIO CLIP
             // ========================================================
 
             Undo.RecordObject(
@@ -314,17 +387,24 @@ namespace EduGame
             AssetDatabase.SaveAssets();
 
             Debug.Log(
-                $"[VoiceAsset] SUCCESS!\n" +
-                $"Voice Asset : {name}\n" +
-                $"Audio Clip  : {clip.name}\n" +
-                $"Path        : {unityAssetPath}"
+                $"[VoiceAsset] ==============================\n" +
+                $"[VoiceAsset] GENERATION SUCCESS\n" +
+                $"[VoiceAsset] ==============================\n" +
+                $"Name      : {m_NameVoice}\n" +
+                $"Audio     : {clip.name}\n" +
+                $"Path      : {unityAssetPath}\n" +
+                $"=============================================="
             );
+
+            // ========================================================
+            // FINISH
+            // ========================================================
 
             FinishGeneration();
         }
 
         // ============================================================
-        // FINISH
+        // FINISH GENERATION
         // ============================================================
 
         private void FinishGeneration()
@@ -358,11 +438,11 @@ namespace EduGame
                     );
             }
 
-            return value;
+            return value.Trim();
         }
 
         // ============================================================
-        // REPAINT
+        // REPAINT INSPECTOR
         // ============================================================
 
         private void RepaintInspector()
@@ -378,14 +458,21 @@ namespace EduGame
         [CustomEditor(typeof(VoiceAsset))]
         private class VoiceAssetEditor : Editor
         {
+            private SerializedProperty m_NameVoice;
             private SerializedProperty m_Text;
             private SerializedProperty m_VoiceId;
             private SerializedProperty m_AudioClip;
+
             private SerializedProperty m_ApiToken;
             private SerializedProperty m_IsGenerating;
 
             private void OnEnable()
             {
+                m_NameVoice =
+                    serializedObject.FindProperty(
+                        "m_NameVoice"
+                    );
+
                 m_Text =
                     serializedObject.FindProperty(
                         "m_Text"
@@ -428,15 +515,38 @@ namespace EduGame
                     EditorStyles.boldLabel
                 );
 
+                EditorGUILayout.Space(3);
+
+                // ----------------------------------------------------
+                // NAME
+                // ----------------------------------------------------
+
+                EditorGUILayout.PropertyField(
+                    m_NameVoice,
+                    new GUIContent("Name Voice")
+                );
+
+                // ----------------------------------------------------
+                // TEXT
+                // ----------------------------------------------------
+
                 EditorGUILayout.PropertyField(
                     m_Text,
                     new GUIContent("Text")
                 );
 
+                // ----------------------------------------------------
+                // VOICE ID
+                // ----------------------------------------------------
+
                 EditorGUILayout.PropertyField(
                     m_VoiceId,
                     new GUIContent("Voice ID")
                 );
+
+                // ----------------------------------------------------
+                // AUDIO CLIP
+                // ----------------------------------------------------
 
                 EditorGUILayout.PropertyField(
                     m_AudioClip,
@@ -454,6 +564,8 @@ namespace EduGame
                     EditorStyles.boldLabel
                 );
 
+                EditorGUILayout.Space(3);
+
                 EditorGUILayout.PropertyField(
                     m_ApiToken,
                     new GUIContent("API Token")
@@ -462,11 +574,16 @@ namespace EduGame
                 EditorGUILayout.Space(10);
 
                 // ====================================================
-                // GENERATE
+                // GENERATE BUTTON
                 // ====================================================
 
-                bool generating =
+                bool isGenerating =
                     m_IsGenerating.boolValue;
+
+                bool hasName =
+                    !string.IsNullOrWhiteSpace(
+                        asset.NameVoice
+                    );
 
                 bool hasText =
                     !string.IsNullOrWhiteSpace(
@@ -478,14 +595,18 @@ namespace EduGame
                         m_ApiToken.stringValue
                     );
 
-                GUI.enabled =
-                    !generating &&
+                bool canGenerate =
+                    !isGenerating &&
+                    hasName &&
                     hasText &&
                     hasToken;
 
+                GUI.enabled =
+                    canGenerate;
+
                 if (
                     GUILayout.Button(
-                        generating
+                        isGenerating
                             ? "Generating..."
                             : "Generate Audio",
                         GUILayout.Height(40)
@@ -498,8 +619,16 @@ namespace EduGame
                 GUI.enabled = true;
 
                 // ====================================================
-                // WARNINGS
+                // VALIDATION
                 // ====================================================
+
+                if (!hasName)
+                {
+                    EditorGUILayout.HelpBox(
+                        "Name Voice is empty.",
+                        MessageType.Warning
+                    );
+                }
 
                 if (!hasText)
                 {
@@ -517,7 +646,7 @@ namespace EduGame
                     );
                 }
 
-                if (generating)
+                if (isGenerating)
                 {
                     EditorGUILayout.HelpBox(
                         "Generating audio...",
@@ -537,7 +666,7 @@ namespace EduGame
                 );
 
                 EditorGUILayout.SelectableLabel(
-                    OUTPUT_FOLDER,
+                    $"{OUTPUT_FOLDER}/Voice_{asset.NameVoice}.mp3",
                     EditorStyles.textField,
                     GUILayout.Height(18)
                 );
