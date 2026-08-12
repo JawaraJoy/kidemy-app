@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: e43fe595a60d1c449bdc0292d54575d4
+guid: 5286fbea7f654f54cb92e95979aff04a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6340620833672304180
-    second: SP_BunnySad_0
+      213: -2271725378651720758
+    second: SP_PuzzleStar_0
+  - first:
+      213: -6188904988920374014
+    second: SP_PuzzleStar_1
+  - first:
+      213: 2432085629683681172
+    second: SP_PuzzleStar_2
+  - first:
+      213: 7804750590586643849
+    second: SP_PuzzleStar_3
+  - first:
+      213: 8541021803699763115
+    second: SP_PuzzleStar_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,14 +58,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -126,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_BunnySad_0
+      name: SP_PuzzleStar_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 132
-        height: 169
+        x: 104
+        y: 276
+        width: 244
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +153,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc9658122f69108a0800000000000000
-      internalID: -6340620833672304180
+      spriteID: ac37932edc53970e0800000000000000
+      internalID: -2271725378651720758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_PuzzleStar_1
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 276
+        width: 244
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d12cae3b79c1aa0800000000000000
+      internalID: -6188904988920374014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_PuzzleStar_2
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 275
+        width: 244
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497c0a49ef080c120800000000000000
+      internalID: 2432085629683681172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_PuzzleStar_3
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 3
+        width: 247
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985ef609f4b005c60800000000000000
+      internalID: 7804750590586643849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_PuzzleStar_4
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 0
+        width: 251
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7f364041ec78670800000000000000
+      internalID: 8541021803699763115
       vertices: []
       indices: 
       edges: []
@@ -151,7 +251,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +261,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SP_BunnySad_0: -6340620833672304180
+      SP_PuzzleStar_0: -2271725378651720758
+      SP_PuzzleStar_1: -6188904988920374014
+      SP_PuzzleStar_2: 2432085629683681172
+      SP_PuzzleStar_3: 7804750590586643849
+      SP_PuzzleStar_4: 8541021803699763115
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
