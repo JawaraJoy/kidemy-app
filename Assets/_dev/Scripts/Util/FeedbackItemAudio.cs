@@ -13,6 +13,10 @@ namespace EduGame
 
         public override void ExecPlay()
         {
+            Debug.Log("oooowa");
+
+            Debug.Log(GameManager.Instance.AudioSource);
+
             if(audioClip && GameManager.Instance.AudioSource)
                 GameManager.Instance.AudioSource.PlayOneShot(audioClip);
         }

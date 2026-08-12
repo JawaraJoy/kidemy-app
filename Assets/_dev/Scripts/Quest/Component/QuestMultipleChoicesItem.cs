@@ -37,7 +37,7 @@ namespace EduGame
             base.Init();
 
             events = GetComponent<ButtonEvents> ();
-
+            
             if(events)
             {
                 events.AddEventOnPointerOver(FeedbackManager.Instance.ButtonOver.Play);
