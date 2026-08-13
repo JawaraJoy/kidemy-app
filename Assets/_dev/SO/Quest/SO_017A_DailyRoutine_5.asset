@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 017A
   title: Routine
   category: 4
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Put the steps in the right order!
+    m_FormatedText: {fileID: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 6437b47a2e73705709ffc441558031ea, type: 3}
   autoSubmit: 1
   score: 10
@@ -27,21 +32,53 @@ MonoBehaviour:
   - label:
       image: {fileID: 0}
       text: 1
+      m_FormatedText: {fileID: 0}
       color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
-    limit: 6
+    limit: 1
     labels:
     - image: {fileID: 21300000, guid: f7baab1dd47b4bc4e9c61a3955cc20e0, type: 3}
       text: Wash Hand
+      m_FormatedText: {fileID: 0}
       color: {r: 1, g: 0.54509807, b: 0.8352941, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 0b722989dc6b4c6a191247ea2817bd1e, type: 3}
+  - label:
+      image: {fileID: 0}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
     - image: {fileID: 21300000, guid: cb3245d5f20cd4040aaa25b39c222f6c, type: 3}
       text: Eat Snack
+      m_FormatedText: {fileID: 0}
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 96ebc13e461cebb638817ef21dbfb57e, type: 3}
+  - label:
+      image: {fileID: 0}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
     - image: {fileID: 21300000, guid: 3d779e1d297471d41af9e6b4646e4af2, type: 3}
       text: Throw trash away
+      m_FormatedText: {fileID: 0}
       color: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 774aa2ef044dd44b98506a39cca22f9a, type: 3}
   randomizeChoice: 1
   answerInOrder: 1

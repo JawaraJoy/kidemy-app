@@ -1,0 +1,1157 @@
+fileFormatVersion: 2
+guid: f6b145c9174a1310f9fa3dfbdcb3a680
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2670420955314808117
+    second: SP_DashBorder_0
+  - first:
+      213: -4416943274428224438
+    second: SP_DashBorder_1
+  - first:
+      213: 5790828485104068518
+    second: SP_DashBorder_2
+  - first:
+      213: -1433348179504688650
+    second: SP_DashBorder_3
+  - first:
+      213: -7384104634965473657
+    second: SP_DashBorder_4
+  - first:
+      213: 3676598861479917293
+    second: SP_DashBorder_5
+  - first:
+      213: 2766325710657876437
+    second: SP_DashBorder_6
+  - first:
+      213: 6568054279858754740
+    second: SP_DashBorder_7
+  - first:
+      213: 3422034043692764977
+    second: SP_DashBorder_8
+  - first:
+      213: 473055455807298053
+    second: SP_DashBorder_9
+  - first:
+      213: -811465431798284247
+    second: SP_DashBorder_10
+  - first:
+      213: -2958705120786760222
+    second: SP_DashBorder_11
+  - first:
+      213: 6373266641605133857
+    second: SP_DashBorder_12
+  - first:
+      213: 7316721138677082216
+    second: SP_DashBorder_13
+  - first:
+      213: -4672686109038267974
+    second: SP_DashBorder_14
+  - first:
+      213: 1982679566753316978
+    second: SP_DashBorder_15
+  - first:
+      213: -3791801730590772238
+    second: SP_DashBorder_16
+  - first:
+      213: -4978060183182386851
+    second: SP_DashBorder_17
+  - first:
+      213: -4149271726103763037
+    second: SP_DashBorder_18
+  - first:
+      213: 1321923787149570761
+    second: SP_DashBorder_19
+  - first:
+      213: -1597374231532953165
+    second: SP_DashBorder_20
+  - first:
+      213: 5386394951756796666
+    second: SP_DashBorder_21
+  - first:
+      213: -4524465548216753382
+    second: SP_DashBorder_22
+  - first:
+      213: 3769631205041037098
+    second: SP_DashBorder_23
+  - first:
+      213: -47741223538987409
+    second: SP_DashBorder_24
+  - first:
+      213: 4208800105285196199
+    second: SP_DashBorder_25
+  - first:
+      213: 6493629256316467512
+    second: SP_DashBorder_26
+  - first:
+      213: -7031762613839115715
+    second: SP_DashBorder_27
+  - first:
+      213: -6212581611731837257
+    second: SP_DashBorder_28
+  - first:
+      213: -1439152911245795160
+    second: SP_DashBorder_29
+  - first:
+      213: 2587356160520895061
+    second: SP_DashBorder_30
+  - first:
+      213: -6779508344226316338
+    second: SP_DashBorder_31
+  - first:
+      213: -2116204057509386946
+    second: SP_DashBorder_32
+  - first:
+      213: -5916049390528787814
+    second: SP_DashBorder_33
+  - first:
+      213: 8365164013295097498
+    second: SP_DashBorder_34
+  - first:
+      213: -7261011041507861998
+    second: SP_DashBorder_35
+  - first:
+      213: 8205525000830155564
+    second: SP_DashBorder_36
+  - first:
+      213: -909928707377741594
+    second: SP_DashBorder_37
+  - first:
+      213: -9157858393418989117
+    second: SP_DashBorder_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SP_DashBorder_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 777
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5356c4ad5bd3f0520800000000000000
+      internalID: 2670420955314808117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 770
+        width: 55
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ca7ae6e7dd3b2c0800000000000000
+      internalID: -4416943274428224438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_2
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 799
+        width: 61
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a767d973d72d5050800000000000000
+      internalID: 5790828485104068518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_3
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 787
+        width: 59
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f19b29cc69bb1ce0800000000000000
+      internalID: -1433348179504688650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 806
+        width: 94
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786419805f3668990800000000000000
+      internalID: -7384104634965473657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_5
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 804
+        width: 59
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6bd106f27e50330800000000000000
+      internalID: 3676598861479917293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_6
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 803
+        width: 127
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1fac4c396f36620800000000000000
+      internalID: 2766325710657876437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_7
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 808
+        width: 59
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b41778819a662b50800000000000000
+      internalID: 6568054279858754740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_8
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 804
+        width: 57
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13fc99ff4d18d7f20800000000000000
+      internalID: 3422034043692764977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_9
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 806
+        width: 62
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a54724e61a09600800000000000000
+      internalID: 473055455807298053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_10
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 803
+        width: 56
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92087263d781db4f0800000000000000
+      internalID: -811465431798284247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_11
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 810
+        width: 65
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed30685e5190f6d0800000000000000
+      internalID: -2958705120786760222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_12
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 811
+        width: 66
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12688b75e34627850800000000000000
+      internalID: 6373266641605133857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_13
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 805
+        width: 34
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86860772c173a8560800000000000000
+      internalID: 7316721138677082216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_14
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 662
+        width: 226
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab13fd3adb8472fb0800000000000000
+      internalID: -4672686109038267974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_15
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 805
+        width: 56
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270c1cfaf84e38b10800000000000000
+      internalID: 1982679566753316978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 535
+        width: 228
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3fc657a60d06bc0800000000000000
+      internalID: -3791801730590772238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_17
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 718
+        width: 45
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59d5e663a06aeab0800000000000000
+      internalID: -4978060183182386851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_18
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 674
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a763015953da66c0800000000000000
+      internalID: -4149271726103763037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 592
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c270393eaa685210800000000000000
+      internalID: 1321923787149570761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_20
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 436
+        width: 138
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1ad14899cf4d9e0800000000000000
+      internalID: -1597374231532953165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_21
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 597
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2db679ba150ca40800000000000000
+      internalID: 5386394951756796666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_22
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 531
+        width: 35
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a132c083e8ed531c0800000000000000
+      internalID: -4524465548216753382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_23
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 423
+        width: 141
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2fd2becb9b605430800000000000000
+      internalID: 3769631205041037098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_24
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 422
+        width: 164
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ee0d13c93665ff0800000000000000
+      internalID: -47741223538987409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 443
+        width: 77
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a996268569a86a30800000000000000
+      internalID: 4208800105285196199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 434
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839b3d567610e1a50800000000000000
+      internalID: 6493629256316467512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_27
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 420
+        width: 57
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a4f3998292a6e90800000000000000
+      internalID: -7031762613839115715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_28
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 423
+        width: 59
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be999690f978c9a0800000000000000
+      internalID: -6212581611731837257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_29
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 425
+        width: 70
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0a9bb5d0a170ce0800000000000000
+      internalID: -1439152911245795160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_30
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 425
+        width: 57
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a344738b228e320800000000000000
+      internalID: 2587356160520895061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_31
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 393
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecff79e84195ae1a0800000000000000
+      internalID: -6779508344226316338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_32
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 425
+        width: 58
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35a9ef2f9bb1a2e0800000000000000
+      internalID: -2116204057509386946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_33
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 421
+        width: 54
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a8dd38c68f5eda0800000000000000
+      internalID: -5916049390528787814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_34
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 425
+        width: 56
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96d55c7958071470800000000000000
+      internalID: 8365164013295097498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_35
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 422
+        width: 56
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a1cb0ade4bb3b90800000000000000
+      internalID: -7261011041507861998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_36
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 425
+        width: 56
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b71167381efd170800000000000000
+      internalID: 8205525000830155564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_37
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 345
+        width: 130
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0c1d169a84f53f0800000000000000
+      internalID: -909928707377741594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_DashBorder_38
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 423
+        width: 58
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c18ee4cf40c8e080800000000000000
+      internalID: -9157858393418989117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SP_DashBorder_0: 2670420955314808117
+      SP_DashBorder_1: -4416943274428224438
+      SP_DashBorder_10: -811465431798284247
+      SP_DashBorder_11: -2958705120786760222
+      SP_DashBorder_12: 6373266641605133857
+      SP_DashBorder_13: 7316721138677082216
+      SP_DashBorder_14: -4672686109038267974
+      SP_DashBorder_15: 1982679566753316978
+      SP_DashBorder_16: -3791801730590772238
+      SP_DashBorder_17: -4978060183182386851
+      SP_DashBorder_18: -4149271726103763037
+      SP_DashBorder_19: 1321923787149570761
+      SP_DashBorder_2: 5790828485104068518
+      SP_DashBorder_20: -1597374231532953165
+      SP_DashBorder_21: 5386394951756796666
+      SP_DashBorder_22: -4524465548216753382
+      SP_DashBorder_23: 3769631205041037098
+      SP_DashBorder_24: -47741223538987409
+      SP_DashBorder_25: 4208800105285196199
+      SP_DashBorder_26: 6493629256316467512
+      SP_DashBorder_27: -7031762613839115715
+      SP_DashBorder_28: -6212581611731837257
+      SP_DashBorder_29: -1439152911245795160
+      SP_DashBorder_3: -1433348179504688650
+      SP_DashBorder_30: 2587356160520895061
+      SP_DashBorder_31: -6779508344226316338
+      SP_DashBorder_32: -2116204057509386946
+      SP_DashBorder_33: -5916049390528787814
+      SP_DashBorder_34: 8365164013295097498
+      SP_DashBorder_35: -7261011041507861998
+      SP_DashBorder_36: 8205525000830155564
+      SP_DashBorder_37: -909928707377741594
+      SP_DashBorder_38: -9157858393418989117
+      SP_DashBorder_4: -7384104634965473657
+      SP_DashBorder_5: 3676598861479917293
+      SP_DashBorder_6: 2766325710657876437
+      SP_DashBorder_7: 6568054279858754740
+      SP_DashBorder_8: 3422034043692764977
+      SP_DashBorder_9: 473055455807298053
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

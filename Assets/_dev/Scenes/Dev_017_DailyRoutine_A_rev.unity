@@ -139,22 +139,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3079495263401239039, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -195,10 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: questPrefab
-      value: 
-      objectReference: {fileID: 3198629066879550302, guid: 485ec16010eec7343bd4a9fc2c510838, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: questPrefabs.Array.size
       value: 5

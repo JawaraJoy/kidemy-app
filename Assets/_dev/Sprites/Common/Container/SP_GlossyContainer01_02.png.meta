@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: 1a94f96e4996b51c19b08ff46b66145d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1784734387222400808
+    second: SP_GlossyContainer01_02_0
+  - first:
+      213: 5666867034140943804
+    second: SP_GlossyContainer01_02_1
+  - first:
+      213: 8961379253016827089
+    second: SP_GlossyContainer01_02_2
+  - first:
+      213: 4776699277282441444
+    second: SP_GlossyContainer01_02_3
+  - first:
+      213: -2587505493094184109
+    second: SP_GlossyContainer01_02_4
+  - first:
+      213: -3286195160009479960
+    second: SP_GlossyContainer01_02_5
+  - first:
+      213: -5819887722594210678
+    second: SP_GlossyContainer01_02_6
+  - first:
+      213: -285732275263844966
+    second: SP_GlossyContainer01_02_7
+  - first:
+      213: -7785658336595020401
+    second: SP_GlossyContainer01_02_8
+  - first:
+      213: -1917360459474290799
+    second: SP_GlossyContainer01_02_9
+  - first:
+      213: -1991261683296214704
+    second: SP_GlossyContainer01_02_10
+  - first:
+      213: -4493807467977277778
+    second: SP_GlossyContainer01_02_11
+  - first:
+      213: -7780461401981070799
+    second: SP_GlossyContainer01_02_12
+  - first:
+      213: -2335404318289637238
+    second: SP_GlossyContainer01_02_13
+  - first:
+      213: 253070115866354397
+    second: SP_GlossyContainer01_02_14
+  - first:
+      213: -3165339775261102499
+    second: SP_GlossyContainer01_02_15
+  - first:
+      213: 533612732653397875
+    second: SP_GlossyContainer01_02_16
+  - first:
+      213: 1471769465241545422
+    second: SP_GlossyContainer01_02_17
+  - first:
+      213: 2044411676221833110
+    second: SP_GlossyContainer01_02_18
+  - first:
+      213: 8602155632441922679
+    second: SP_GlossyContainer01_02_19
+  - first:
+      213: 1881307544674452700
+    second: SP_GlossyContainer01_02_20
+  - first:
+      213: -9042433896110580359
+    second: SP_GlossyContainer01_02_21
+  - first:
+      213: 8142688444647773727
+    second: SP_GlossyContainer01_02_22
+  - first:
+      213: 4407390550548128792
+    second: SP_GlossyContainer01_02_23
+  - first:
+      213: 1853274272335361261
+    second: SP_GlossyContainer01_02_24
+  - first:
+      213: 1216043664251614172
+    second: SP_GlossyContainer01_02_25
+  - first:
+      213: 6644702763807515490
+    second: SP_GlossyContainer01_02_26
+  - first:
+      213: 488350984645002332
+    second: SP_GlossyContainer01_02_27
+  - first:
+      213: -3723968783385307209
+    second: SP_GlossyContainer01_02_28
+  - first:
+      213: -8085281238767495271
+    second: SP_GlossyContainer01_02_29
+  - first:
+      213: 8037166396312429526
+    second: SP_GlossyContainer01_02_30
+  - first:
+      213: -9097497318392063064
+    second: SP_GlossyContainer01_02_31
+  - first:
+      213: -96247067453965230
+    second: SP_GlossyContainer01_02_32
+  - first:
+      213: -1901341662466101124
+    second: SP_GlossyContainer01_02_33
+  - first:
+      213: -1739620961705898185
+    second: SP_GlossyContainer01_02_34
+  - first:
+      213: 4272858151283328318
+    second: SP_GlossyContainer01_02_35
+  - first:
+      213: -8110488222580876788
+    second: SP_GlossyContainer01_02_36
+  - first:
+      213: 2821857605739762712
+    second: SP_GlossyContainer01_02_37
+  - first:
+      213: -5142235830384592422
+    second: SP_GlossyContainer01_02_38
+  - first:
+      213: -7221196160815345147
+    second: SP_GlossyContainer01_02_39
+  - first:
+      213: 2344083919555829000
+    second: SP_GlossyContainer01_02_40
+  - first:
+      213: -8452226139385239956
+    second: SP_GlossyContainer01_02_41
+  - first:
+      213: -7001425079827237098
+    second: SP_GlossyContainer01_02_42
+  - first:
+      213: 5920590009462556661
+    second: SP_GlossyContainer01_02_43
+  - first:
+      213: 4993086433205968469
+    second: SP_GlossyContainer01_02_44
+  - first:
+      213: -4152337720454930258
+    second: SP_GlossyContainer01_02_45
+  - first:
+      213: -8544249567965863851
+    second: SP_GlossyContainer01_02_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_0
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 263
+        width: 697
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d03f2fd7895b37e0800000000000000
+      internalID: -1784734387222400808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_1
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 496
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb5a75f0b81c4ae40800000000000000
+      internalID: 5666867034140943804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_2
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 351
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d49f9183f63d5c70800000000000000
+      internalID: 8961379253016827089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_3
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 568
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e8f8454fae3a4240800000000000000
+      internalID: 4776699277282441444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_4
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 423
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bcfb59675571cd0800000000000000
+      internalID: -2587505493094184109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_5
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 279
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8e609b9e61562d0800000000000000
+      internalID: -3286195160009479960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_6
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 641
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c6d1e83fa9b3fa0800000000000000
+      internalID: -5819887722594210678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_7
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 708
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9dc8007200e80cf0800000000000000
+      internalID: -285732275263844966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_8
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 637
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85f1b83ef8c3f390800000000000000
+      internalID: -7785658336595020401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_9
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 565
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197b7aa12da2465e0800000000000000
+      internalID: -1917360459474290799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_10
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 492
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05168489c0e9d54e0800000000000000
+      internalID: -1991261683296214704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_11
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 419
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae7736cae9c2a1c0800000000000000
+      internalID: -4493807467977277778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_12
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 347
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132d74ad39f360490800000000000000
+      internalID: -7780461401981070799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_13
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 275
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80de61652af69fd0800000000000000
+      internalID: -2335404318289637238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_14
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 635
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd22b77fde5138300800000000000000
+      internalID: 253070115866354397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_15
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 706
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ea52ebe347214d0800000000000000
+      internalID: -3165339775261102499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_16
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 562
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3776e6104f5c76700800000000000000
+      internalID: 533612732653397875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_17
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 489
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca2df6e786cc6410800000000000000
+      internalID: 1471769465241545422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_18
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 416
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ffcd776953f5c10800000000000000
+      internalID: 2044411676221833110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_19
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 343
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7749356b8fef06770800000000000000
+      internalID: 8602155632441922679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_20
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 271
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd445998e3fbb1a10800000000000000
+      internalID: 1881307544674452700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_21
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 702
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d9065c742d28280800000000000000
+      internalID: -9042433896110580359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_22
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 630
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1698e3aff3a00170800000000000000
+      internalID: 8142688444647773727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_23
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 558
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814a5d7ba523a2d30800000000000000
+      internalID: 4407390550548128792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_24
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 485
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de47be1b12728b910800000000000000
+      internalID: 1853274272335361261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_25
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 412
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3f41f054140e010800000000000000
+      internalID: 1216043664251614172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_26
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 339
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263adc265f9b63c50800000000000000
+      internalID: 6644702763807515490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_27
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 267
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c544a7512a8f6c600800000000000000
+      internalID: 488350984645002332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_28
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 699
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b7dca73f1ec15cc0800000000000000
+      internalID: -3723968783385307209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_29
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 628
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997122e0d8f4bcf80800000000000000
+      internalID: -8085281238767495271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_30
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 555
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3a8e43140c98f60800000000000000
+      internalID: 8037166396312429526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_31
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 481
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab1c28b3623fb180800000000000000
+      internalID: -9097497318392063064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_32
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 408
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25cbbb55dcf0aaef0800000000000000
+      internalID: -96247067453965230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_33
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 335
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70be0ce4d31d95e0800000000000000
+      internalID: -1901341662466101124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_34
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 262
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f42b5c3ff9bd7e0800000000000000
+      internalID: -1739620961705898185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_35
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 697
+        width: 61
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3500ea99dd3c4b30800000000000000
+      internalID: 4272858151283328318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_36
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 625
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ad31acee1c17f80800000000000000
+      internalID: -8110488222580876788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_37
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 552
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8145ad4aa80492720800000000000000
+      internalID: 2821857605739762712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_38
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 479
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9f3aac1cb13a8b0800000000000000
+      internalID: -5142235830384592422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_39
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 405
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502df2de95829cb90800000000000000
+      internalID: -7221196160815345147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_40
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 332
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d94d4c7ebd78020800000000000000
+      internalID: 2344083919555829000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_41
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 259
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66eba8ab19a3ba80800000000000000
+      internalID: -8452226139385239956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_42
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 331
+        width: 66
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617f26b2cf0f5de90800000000000000
+      internalID: -7001425079827237098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_43
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 552
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f70eb6be392a2250800000000000000
+      internalID: 5920590009462556661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_44
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 478
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e501018a10b4540800000000000000
+      internalID: 4993086433205968469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_45
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 404
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea024d0e7deef56c0800000000000000
+      internalID: -4152337720454930258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_GlossyContainer01_02_46
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 625
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5502c1d894abc6980800000000000000
+      internalID: -8544249567965863851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SP_GlossyContainer01_02_0: -1784734387222400808
+      SP_GlossyContainer01_02_1: 5666867034140943804
+      SP_GlossyContainer01_02_10: -1991261683296214704
+      SP_GlossyContainer01_02_11: -4493807467977277778
+      SP_GlossyContainer01_02_12: -7780461401981070799
+      SP_GlossyContainer01_02_13: -2335404318289637238
+      SP_GlossyContainer01_02_14: 253070115866354397
+      SP_GlossyContainer01_02_15: -3165339775261102499
+      SP_GlossyContainer01_02_16: 533612732653397875
+      SP_GlossyContainer01_02_17: 1471769465241545422
+      SP_GlossyContainer01_02_18: 2044411676221833110
+      SP_GlossyContainer01_02_19: 8602155632441922679
+      SP_GlossyContainer01_02_2: 8961379253016827089
+      SP_GlossyContainer01_02_20: 1881307544674452700
+      SP_GlossyContainer01_02_21: -9042433896110580359
+      SP_GlossyContainer01_02_22: 8142688444647773727
+      SP_GlossyContainer01_02_23: 4407390550548128792
+      SP_GlossyContainer01_02_24: 1853274272335361261
+      SP_GlossyContainer01_02_25: 1216043664251614172
+      SP_GlossyContainer01_02_26: 6644702763807515490
+      SP_GlossyContainer01_02_27: 488350984645002332
+      SP_GlossyContainer01_02_28: -3723968783385307209
+      SP_GlossyContainer01_02_29: -8085281238767495271
+      SP_GlossyContainer01_02_3: 4776699277282441444
+      SP_GlossyContainer01_02_30: 8037166396312429526
+      SP_GlossyContainer01_02_31: -9097497318392063064
+      SP_GlossyContainer01_02_32: -96247067453965230
+      SP_GlossyContainer01_02_33: -1901341662466101124
+      SP_GlossyContainer01_02_34: -1739620961705898185
+      SP_GlossyContainer01_02_35: 4272858151283328318
+      SP_GlossyContainer01_02_36: -8110488222580876788
+      SP_GlossyContainer01_02_37: 2821857605739762712
+      SP_GlossyContainer01_02_38: -5142235830384592422
+      SP_GlossyContainer01_02_39: -7221196160815345147
+      SP_GlossyContainer01_02_4: -2587505493094184109
+      SP_GlossyContainer01_02_40: 2344083919555829000
+      SP_GlossyContainer01_02_41: -8452226139385239956
+      SP_GlossyContainer01_02_42: -7001425079827237098
+      SP_GlossyContainer01_02_43: 5920590009462556661
+      SP_GlossyContainer01_02_44: 4993086433205968469
+      SP_GlossyContainer01_02_45: -4152337720454930258
+      SP_GlossyContainer01_02_46: -8544249567965863851
+      SP_GlossyContainer01_02_5: -3286195160009479960
+      SP_GlossyContainer01_02_6: -5819887722594210678
+      SP_GlossyContainer01_02_7: -285732275263844966
+      SP_GlossyContainer01_02_8: -7785658336595020401
+      SP_GlossyContainer01_02_9: -1917360459474290799
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,13 +10,23 @@ namespace EduGame
         [SerializeField] protected TMP_Text text;
         [SerializeField] private AudioPlayer audioPlayer;
         [SerializeField] private Image image;
+        [SerializeField] private Image tint;
         [SerializeField] private QuestDragNDropZone dropZone;
+        [SerializeField] private TMP_Text orderLabel;
+        [SerializeField] private Transform step;
         
         public QuestUtilLabelGroup GroupData { get; private set; }
 
         public QuestDragNDropZone DropZone => dropZone;
 
         private QuestDragNDrop questDragNDrop;
+
+        private Color[] labelColor = new Color[]
+        {
+            Color.green,
+            Color.orange,
+            Color.blue
+        };
 
         protected override void Start()
         {
@@ -33,7 +43,7 @@ namespace EduGame
                 Debug.LogError("QuestDragNDrop not found in parent");
         }
 
-        public virtual void SetSlot(QuestUtilLabelGroup item)
+        public virtual void SetSlot(QuestUtilLabelGroup item, int order = 0, bool isLast = false)
         {
             GroupData = item;
 
@@ -69,6 +79,15 @@ namespace EduGame
                 image?.gameObject.SetActive(false);
                 image?.transform.parent.gameObject.SetActive(false);   
             }
+
+            if(order > 0 && orderLabel)
+                orderLabel.SetText(order.ToString());
+            
+            if(tint)
+                tint.color = item.Label.Color;
+                
+            if(step && isLast)
+                step.gameObject.SetActive(false);
         }
     }
 }
