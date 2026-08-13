@@ -18,6 +18,8 @@ namespace EduGame
         [SerializeField] private Image questionImage;
         [SerializeField] private AudioPlayer questionAudio;
         [SerializeField] private TMP_Text questionText;
+        [SerializeField]
+        private TextMeshProUGUI m_QuestName;
         [SerializeField] private RectTransform choicesContainer;
 
         [Header("Prefab")]
@@ -127,6 +129,7 @@ namespace EduGame
                     }
                 }
                 
+                
             }
             if (m_Challenged)
             {
@@ -139,6 +142,10 @@ namespace EduGame
                         choices[i] = InstantiateItem(choicePrefab, i);
                         choices[i].SetChoice(dataMultipleChoice.Choices[i]);
                     }
+                }
+                if (m_QuestName)
+                {
+                    m_QuestName.text = dataMultipleChoice.Question.Text;
                 }
             }
             else

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe99ace52ee110469853422c88e340f, type: 3}
+  m_Name: Dialogue_Whatcolor
+  m_EditorClassIdentifier: Assembly-CSharp::AddOn.TextAnimation.DialogueConfig
+  m_Identic:
+    m_Id: whatcolor
+    m_Name: 
+    m_Description: 
+  m_Potrait: {fileID: 0}
+  m_EffectPreset: {fileID: 11400000, guid: 698c3cb4a6437f0428945215f02337d9, type: 2}
+  m_WordSettings:
+  - m_Words: What
+    m_AddSpaceForNext: 1
+    m_Effects: []
+  - m_Words: color
+    m_AddSpaceForNext: 1
+    m_Effects:
+    - {fileID: 11400000, guid: 64f0c6aad2a9fde4f82965844609bc47, type: 2}
+    - {fileID: 11400000, guid: bef25e39d4ad04412a2363b9e5251d94, type: 2}
+  - m_Words: is this?
+    m_AddSpaceForNext: 0
+    m_Effects: []
+  m_VoiceClip: {fileID: 0}

@@ -18,8 +18,10 @@ MonoBehaviour:
   m_ImagePrefab: {fileID: 0}
   m_MultipleQuestImages: []
   question:
-    image: {fileID: 21300000, guid: b9c2eb1405d6f854d87c9d45ce22bb76, type: 3}
-    text: What is the name of this part?
+    image: {fileID: 21300000, guid: f7e4881982b486942831c1426d5e2f4f, type: 3}
+    text: ???
+    m_FormatedText: {fileID: 11400000, guid: 8132cfde71d411f4f97ce5302b649b23, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
@@ -28,31 +30,39 @@ MonoBehaviour:
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: b3a62046b3617694c99bd32a44c06467, type: 3}
-    text: Ball
+  - image: {fileID: 21300000, guid: c7c03adb1a3438747a1a7256aeac88a0, type: 3}
+    text: Leg
+    m_FormatedText: {fileID: 11400000, guid: cb2957e7b8018024b80c6d00ba01f849, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 1
+    m_UseTextColor: 0
     m_TextColor: {r: 0.31271622, g: 0.5323337, b: 0.9924528, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
-    text: Car
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: 858caca78a8274e418ce9e1614b4a743, type: 3}
+    text: Mouth
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 1
+    m_UseTextColor: 0
     m_TextColor: {r: 0.9333334, g: 0.509804, b: 0.9333334, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
-    text: Car
+  - image: {fileID: 21300000, guid: 24adf5f2fb16e124592a13d4a355fa3b, type: 3}
+    text: Arm
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 1
+    m_UseTextColor: 0
     m_TextColor: {r: 1, g: 0, b: 0.20157957, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
-    isAnswer: 1
-  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
-    text: Car
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: e00bd0c788dd13d46a2bdac82993b952, type: 3}
+    text: Ear
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 1
+    m_UseTextColor: 0
     m_TextColor: {r: 0.5176471, g: 0.4392157, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 0

@@ -5,7 +5,7 @@ using EduGame;
 
 namespace AddOn.TextAnimation
 {
-    [CreateAssetMenu(fileName = "Dialogue_", menuName = "AddOn/TextToVoice/Dialogue")]
+    [CreateAssetMenu(fileName = "Dialogue_", menuName = "AddOn/TextAnimation/Dialogue")]
     public class DialogueConfig : Config
     {
         [SerializeField]

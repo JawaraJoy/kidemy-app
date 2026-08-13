@@ -19,15 +19,15 @@ MonoBehaviour:
   m_Potrait: {fileID: 0}
   m_EffectPreset: {fileID: 11400000, guid: 698c3cb4a6437f0428945215f02337d9, type: 2}
   m_WordSettings:
-  - m_Words: Which one is the "
-    m_AddSpaceForNext: 0
+  - m_Words: Choose the right
+    m_AddSpaceForNext: 1
     m_Effects: []
   - m_Words: shadow
     m_AddSpaceForNext: 0
     m_Effects:
     - {fileID: 11400000, guid: 64f0c6aad2a9fde4f82965844609bc47, type: 2}
     - {fileID: 11400000, guid: bef25e39d4ad04412a2363b9e5251d94, type: 2}
-  - m_Words: '" of this picture?'
+  - m_Words: '?'
     m_AddSpaceForNext: 0
     m_Effects: []
   m_VoiceClip: {fileID: 0}

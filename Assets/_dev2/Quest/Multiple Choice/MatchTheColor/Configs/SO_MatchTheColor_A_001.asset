@@ -19,38 +19,48 @@ MonoBehaviour:
   m_MultipleQuestImages: []
   question:
     image: {fileID: 21300000, guid: 769ca7d3aafac2b628fe896756398eb2, type: 3}
-    text: What is the color?
+    text: Apple
+    m_FormatedText: {fileID: 11400000, guid: a51e8cf042f6c8b41b5a88a4f5cc5acb, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+    audio: {fileID: 8300000, guid: e047cd337e4f9514ea1d6f827e8fc75d, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: b3a62046b3617694c99bd32a44c06467, type: 3}
-    text: Ball
+  - image: {fileID: 21300000, guid: bb824ece14ac979408dcb7f8b9d72c8e, type: 3}
+    text: Red
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 0, b: 0.20157957, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
-    isAnswer: 0
-  - image: {fileID: -1001862225, guid: b2bde88cd595fbd499ab3cfc9d0763e5, type: 3}
-    text: Car
-    color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 0
-    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
-    text: Car
-    color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 0
-    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
     isAnswer: 1
-  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
-    text: Car
+  - image: {fileID: 21300000, guid: bb824ece14ac979408dcb7f8b9d72c8e, type: 3}
+    text: Blue
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 0.25830537, g: 0.32592073, b: 0.98490566, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: bb824ece14ac979408dcb7f8b9d72c8e, type: 3}
+    text: Yellow
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 0.8431373, b: 0, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: bb824ece14ac979408dcb7f8b9d72c8e, type: 3}
+    text: Black
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
