@@ -15,28 +15,55 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Which one is not music Instrument?
+    m_FormatedText: {fileID: 11400000, guid: e9a09cb4f5730e54a8c730ed0dbc757e, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: c383a6fc2c03fb64b953edc4310f55c5, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: -9041508683981611798, guid: 872f62701a998de4083200924f128f5d, type: 3}
-    text: Guitar
+  - image: {fileID: 21300000, guid: 26354376ff1ef8b41b7dc2ada08ee3f7, type: 3}
+    text: Dog
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 54ff80c2a4bc376eebb92ce5f30021b3, type: 3}
-    text: Car
+  - image: {fileID: 21300000, guid: 55e4b5c6acb900e4f8688004d5aca962, type: 3}
+    text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 1
-  - image: {fileID: 1325350862766022879, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
-    text: Suling
+  - image: {fileID: 21300000, guid: b6a73173a52270c4883e6817d926ade7, type: 3}
+    text: Bear
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: da88f096d05b78641a1946419ec27507, type: 3}
+    text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
   timer: 0

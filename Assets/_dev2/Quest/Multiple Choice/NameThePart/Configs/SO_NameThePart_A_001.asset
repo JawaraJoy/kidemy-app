@@ -25,7 +25,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+    audio: {fileID: 8300000, guid: 385777e1bf34bbb47a28e3a60dd19966, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0

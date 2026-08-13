@@ -15,28 +15,55 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Which one is not animal?
+    m_FormatedText: {fileID: 11400000, guid: f812a1727d762bd42a3e1ac12e2a83d0, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 96d313be905537c43b3387e7d47e6044, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: 0356e78798aa99dc4b0a836fd1dc0673, type: 3}
-    text: Lamb
+  - image: {fileID: 21300000, guid: fc11df3f2eed2a548b1138fd76c7fb9e, type: 3}
+    text: Dog
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: cd4df3955c696c44bb375d5f3be14ec1, type: 3}
+  - image: {fileID: 21300000, guid: ffaeaf39ac9d0d44d8deb4e4bdf53e97, type: 3}
     text: Bear
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 4ed0adb871115ed40a3feb5aca3c7108, type: 3}
+  - image: {fileID: 21300000, guid: fbb11195b9679684bb43c6f431d5c456, type: 3}
     text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 7d3341558ccb3f14287c0522b84e71d8, type: 3}
+    text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 1
   timer: 0

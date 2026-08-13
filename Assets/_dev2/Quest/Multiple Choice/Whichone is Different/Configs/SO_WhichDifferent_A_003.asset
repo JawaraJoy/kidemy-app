@@ -15,29 +15,56 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Which one is not mamalia?
+    m_FormatedText: {fileID: 11400000, guid: 87d3babbc44d1fe4b8f0ebae55d23541, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 5e05cac834440f546a12d6b19292ff98, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: ec1cecce4b4fe2c49b8825d7600840d1, type: 3}
-    text: Bear
+  - image: {fileID: 21300000, guid: 7969c842357dff743af3057632bf264b, type: 3}
+    text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
-    isAnswer: 0
-  - image: {fileID: 1172078138, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
-    text: Elephant
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: b14ba83aae80a21a3a83263cb5bc3925, type: 3}
-    text: Frog
-    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 1
+  - image: {fileID: 21300000, guid: 0a40434bc6ad79640831fcb647f8eb3d, type: 3}
+    text: Dog
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 117ffd7fcb64e0e48a4f4791eaf69cd8, type: 3}
+    text: Bear
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: c5ca3d8511dd0fb41887eaaf61578875, type: 3}
+    text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
   timer: 0
   randomizeChoice: 0

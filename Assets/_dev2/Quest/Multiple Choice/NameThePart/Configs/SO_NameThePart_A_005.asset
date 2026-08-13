@@ -25,13 +25,13 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+    audio: {fileID: 8300000, guid: 9d558b38eaaf0014a913494e4e5131f7, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: c7c03adb1a3438747a1a7256aeac88a0, type: 3}
-    text: Leg
+    text: Eye
     m_FormatedText: {fileID: 11400000, guid: cb2957e7b8018024b80c6d00ba01f849, type: 2}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}

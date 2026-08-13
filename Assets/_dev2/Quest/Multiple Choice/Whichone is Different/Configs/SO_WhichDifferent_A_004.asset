@@ -15,29 +15,56 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Which one is not a fruit?
+    m_FormatedText: {fileID: 11400000, guid: 03e9df53e9027954f87349e298f74c6a, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 9cbede750fadf9f4692adaab50b45596, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: 769ca7d3aafac2b628fe896756398eb2, type: 3}
-    text: Apple
+  - image: {fileID: 21300000, guid: bb824ece14ac979408dcb7f8b9d72c8e, type: 3}
+    text: Dog
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 0, b: 0.20157957, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
-  - image: {fileID: 1988533753, guid: d2c2756978b5bab49849f4b499fa8580, type: 3}
-    text: Butterfly
+  - image: {fileID: 21300000, guid: bb824ece14ac979408dcb7f8b9d72c8e, type: 3}
+    text: Bear
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 0.2352941, g: 0.7019608, b: 0.4431373, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: bb824ece14ac979408dcb7f8b9d72c8e, type: 3}
+    text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 0.25830537, g: 0.32592073, b: 0.98490566, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 71bfdea0e335d435da2fcc889bee8fc1, type: 3}
+    text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 0.63857037, b: 0, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 1
-  - image: {fileID: 21300000, guid: a93b74c316410e34a8144457c52b48cf, type: 3}
-    text: Orange
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
-    isAnswer: 0
   timer: 0
   randomizeChoice: 0

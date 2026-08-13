@@ -15,28 +15,55 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Which one is not a Building
+    m_FormatedText: {fileID: 11400000, guid: 24c3f204cfc7bd742a820a8d4eb1b67a, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 86e7c0d99972a6049952c3ea96a74c79, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: a6a592bea09870b45a6d2458e3bbc3a6, type: 3}
-    text: Slider
+  - image: {fileID: 21300000, guid: 461683758a1330847b4306e05e163bde, type: 3}
+    text: Dog
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
-    isAnswer: 1
-  - image: {fileID: 21300000, guid: b06acd95387066e468c477a6ce06fa3d, type: 3}
-    text: School
-    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 1114ba327ba01a94f9c04e973bd35752, type: 3}
-    text: House
+  - image: {fileID: 21300000, guid: ad62fed1b3cb3fa47964dddb30fc738d, type: 3}
+    text: Bear
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 9f9240fa985115041ac4aab17438a40e, type: 3}
+    text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: d00d49dc5398dea449157e846bac7d75, type: 3}
+    text: Ball
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
   timer: 0
