@@ -78,7 +78,8 @@ namespace EduGame
         }
         private void ResetQuest()
         {
-            m_GameManager.ResetQuest();
+            m_GameManager.ChallengeConfig.SceneConfig.Goto();
+            HideInternal();
         }
         private void Home()
         {

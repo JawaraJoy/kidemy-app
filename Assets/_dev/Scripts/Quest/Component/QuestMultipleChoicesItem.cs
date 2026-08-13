@@ -18,6 +18,8 @@ namespace EduGame
 
         protected QuestUtilLabelChoice choice;
         protected ButtonEvents events;
+
+        private TextEffect m_TextEffect;
         
         protected override void Awake()
         {
@@ -55,9 +57,16 @@ namespace EduGame
                 if(text)
                 {
                     text.text = choice.Text;
-                    if (text.TryGetComponent(out TextEffect textEffects))
+                    if (m_TextEffect == null)
                     {
-                        textEffects.Refresh();
+                        if (text.TryGetComponent(out TextEffect effect))
+                        {
+                            m_TextEffect = effect;
+                        }
+                    }
+                    if (m_TextEffect)
+                    {
+                        m_TextEffect.Refresh();
                     }
                 }
 

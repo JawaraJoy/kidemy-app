@@ -18,7 +18,7 @@ MonoBehaviour:
   m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: e3d525718371ab24ba3c62c97cc3b527, type: 3}
   m_ReactionPanelPrefab: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
   m_ResultPanelPrefab: {fileID: 4395721995340702901, guid: 82fc430240f383547805088edce2f7a3, type: 3}
-  m_SceneConfig: {fileID: 11400000, guid: c21589a4faa25474d96abcb0faffaccb, type: 2}
+  m_SceneConfig: {fileID: 11400000, guid: c37180a77a5582b40a7a120c44d70d97, type: 2}
   m_RightReaction: {fileID: 11400000, guid: 3d1c22da1d0e1f749b2276c891da35f4, type: 2}
   m_WrongReaction: {fileID: 11400000, guid: e600e5bc56a130642a96f8863fd26f79, type: 2}
   m_QuestConfigs:
