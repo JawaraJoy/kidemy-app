@@ -15,43 +15,50 @@ MonoBehaviour:
   id: 004A
   title: PuzzleJungle
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Which one matches all the clues?
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 0db549947c8bc2ec684c903bb8246ef4, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: -803859809, guid: b2bde88cd595fbd499ab3cfc9d0763e5, type: 3}
+  - image: {fileID: -1927201331245605252, guid: fe583005ca15987d78c160335c13d5db, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: -949995431, guid: b2bde88cd595fbd499ab3cfc9d0763e5, type: 3}
+  - image: {fileID: -5995522560094184866, guid: c77fd31f6ccd4ac61b1134f6506d4cb3, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: 965014436, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: 8598378098815649227, guid: 37054a1fe53e0061ba9f5b2782e65b9a, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 7225854274009255456, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: -6228765038483051561, guid: 37054a1fe53e0061ba9f5b2782e65b9a, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: -8813983396287401771, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
-    text: 
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
-    isAnswer: 0
-  - image: {fileID: -676451483, guid: b2bde88cd595fbd499ab3cfc9d0763e5, type: 3}
-    text: 
-    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

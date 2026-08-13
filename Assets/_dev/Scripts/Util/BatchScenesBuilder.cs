@@ -24,6 +24,8 @@ public class BatchScenesBuilder
         {
             if (!buildScene.enabled) continue;
 
+            Debug.Log("xxxxx");
+
             // Extract the scene name
             string sceneName = Path.GetFileNameWithoutExtension(buildScene.path);
 

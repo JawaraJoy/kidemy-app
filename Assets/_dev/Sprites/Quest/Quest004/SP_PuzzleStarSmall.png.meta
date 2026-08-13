@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 956cbf6af649b8b37b6ba410c47f2831
+guid: 6104c55279ae45f6594b9e8133d30850
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4144757494906343594
-    second: SP_PuzzleCircle_0
+      213: 867509347870811953
+    second: SP_PuzzleStarSmall_0
   - first:
-      213: -5999981215890914926
-    second: SP_PuzzleCircle_1
+      213: -5724606757692323961
+    second: SP_PuzzleStarSmall_1
   - first:
-      213: 2682593863791959459
-    second: SP_PuzzleCircle_2
+      213: 7223144339348729148
+    second: SP_PuzzleStarSmall_2
   - first:
-      213: -4172249739686955432
-    second: SP_PuzzleCircle_3
+      213: -5520328228272630242
+    second: SP_PuzzleStarSmall_3
   - first:
-      213: -6648434836049032596
-    second: SP_PuzzleCircle_4
+      213: -8226268552119910394
+    second: SP_PuzzleStarSmall_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 128
@@ -138,111 +138,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_PuzzleCircle_0
+      name: SP_PuzzleStarSmall_0
       rect:
         serializedVersion: 2
-        x: 100
-        y: 272
-        width: 245
-        height: 240
+        x: 52
+        y: 136
+        width: 122
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa0d7045bf2258930800000000000000
-      internalID: 4144757494906343594
+      spriteID: 137ab27d7230a0c00800000000000000
+      internalID: 867509347870811953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_PuzzleCircle_1
+      name: SP_PuzzleStarSmall_1
       rect:
         serializedVersion: 2
-        x: 388
-        y: 271
-        width: 245
-        height: 241
+        x: 195
+        y: 136
+        width: 125
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2914ec79fd8cbbca0800000000000000
-      internalID: -5999981215890914926
+      spriteID: 787c2f0fb7c1e80b0800000000000000
+      internalID: -5724606757692323961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_PuzzleCircle_2
+      name: SP_PuzzleStarSmall_2
       rect:
         serializedVersion: 2
-        x: 677
-        y: 271
-        width: 246
-        height: 241
+        x: 336
+        y: 138
+        width: 128
+        height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ad56f7f7ec7a3520800000000000000
-      internalID: 2682593863791959459
+      spriteID: c3d214cb183cd3460800000000000000
+      internalID: 7223144339348729148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_PuzzleCircle_3
+      name: SP_PuzzleStarSmall_3
       rect:
         serializedVersion: 2
-        x: 234
+        x: 119
         y: 0
-        width: 246
-        height: 241
+        width: 129
+        height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8563ebf97f03916c0800000000000000
-      internalID: -4172249739686955432
+      spriteID: e169f3e69bad363b0800000000000000
+      internalID: -5520328228272630242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_PuzzleCircle_4
+      name: SP_PuzzleStarSmall_4
       rect:
         serializedVersion: 2
-        x: 538
+        x: 272
         y: 0
-        width: 243
-        height: 240
+        width: 125
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6a07f4ddb30cb3a0800000000000000
-      internalID: -6648434836049032596
+      spriteID: 6000de3265c66dd80800000000000000
+      internalID: -8226268552119910394
       vertices: []
       indices: 
       edges: []
@@ -251,7 +251,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 49d69e4731994401294a3c7edcd68350
     internalID: 0
     vertices: []
     indices: 
@@ -259,13 +259,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      SP_PuzzleCircle_0: 4144757494906343594
-      SP_PuzzleCircle_1: -5999981215890914926
-      SP_PuzzleCircle_2: 2682593863791959459
-      SP_PuzzleCircle_3: -4172249739686955432
-      SP_PuzzleCircle_4: -6648434836049032596
+      SP_PuzzleStarSmall_0: 867509347870811953
+      SP_PuzzleStarSmall_1: -5724606757692323961
+      SP_PuzzleStarSmall_2: 7223144339348729148
+      SP_PuzzleStarSmall_3: -5520328228272630242
+      SP_PuzzleStarSmall_4: -8226268552119910394
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

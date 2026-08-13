@@ -1,46 +1,46 @@
 fileFormatVersion: 2
-guid: 781271008a4cf3341938a03a8b6bf346
+guid: b3554e17191cd9b6abc3a6190129c957
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8541774583555738855
-    second: SP_Puzzle_0
+      213: 7543061460187234262
+    second: SP_GlossyContainer03_01_0
   - first:
-      213: -8813983396287401771
-    second: SP_Puzzle_1
+      213: -5148704376214117464
+    second: SP_GlossyContainer03_01_1
   - first:
-      213: 2636818156884432622
-    second: SP_Puzzle_2
+      213: 1983859124860836695
+    second: SP_GlossyContainer03_01_2
   - first:
-      213: 5829783978376761729
-    second: SP_Puzzle_3
+      213: 4994909601175846276
+    second: SP_GlossyContainer03_01_3
   - first:
-      213: -1343217953028964262
-    second: SP_Puzzle_4
+      213: -1504772832378823568
+    second: SP_GlossyContainer03_01_4
   - first:
-      213: -7989704848763042235
-    second: SP_Puzzle_5
+      213: -8642849066866821375
+    second: SP_GlossyContainer03_01_5
   - first:
-      213: 7336169743798197220
-    second: SP_Puzzle_6
+      213: 2777838737046236769
+    second: SP_GlossyContainer03_01_6
   - first:
-      213: -780699655893307074
-    second: SP_Puzzle_7
+      213: -3293487615174659796
+    second: SP_GlossyContainer03_01_7
   - first:
-      213: 3767370976281722754
-    second: SP_Puzzle_8
+      213: 2875842997628450560
+    second: SP_GlossyContainer03_01_8
   - first:
-      213: -5228951897986173455
-    second: SP_Puzzle_9
+      213: 5778384248599771966
+    second: SP_GlossyContainer03_01_9
   - first:
-      213: -189036100167318605
-    second: SP_Puzzle_10
+      213: -7549414752582596925
+    second: SP_GlossyContainer03_01_10
   - first:
-      213: -3746023888126927267
-    second: SP_Puzzle_11
+      213: -901665348587644948
+    second: SP_GlossyContainer03_01_11
   - first:
-      213: 7225854274009255456
-    second: SP_Puzzle_12
+      213: -7554158186307914927
+    second: SP_GlossyContainer03_01_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -82,7 +82,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -162,353 +162,287 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_Puzzle_0
+      name: SP_GlossyContainer03_01_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 600
-        width: 200
-        height: 200
+        x: 75
+        y: 492
+        width: 57
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91333b3c545857980800000000000000
-      internalID: -8541774583555738855
+      spriteID: 6df3665ee665ea860800000000000000
+      internalID: 7543061460187234262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_1
+      name: SP_GlossyContainer03_01_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 600
-        width: 200
-        height: 200
+        x: 114
+        y: 487
+        width: 8
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d03910bcc07ea580800000000000000
-      internalID: -8813983396287401771
+      spriteID: 8a3224a16a02c88b0800000000000000
+      internalID: -5148704376214117464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_2
+      name: SP_GlossyContainer03_01_2
       rect:
         serializedVersion: 2
-        x: 400
-        y: 600
-        width: 200
-        height: 200
+        x: 358
+        y: 475
+        width: 35
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee6956aa42cd79420800000000000000
-      internalID: 2636818156884432622
+      spriteID: 75b5fb5fc55188b10800000000000000
+      internalID: 1983859124860836695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_3
+      name: SP_GlossyContainer03_01_3
       rect:
         serializedVersion: 2
-        x: 600
-        y: 600
-        width: 200
-        height: 200
+        x: 374
+        y: 488
+        width: 8
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 181196c04ad87e050800000000000000
-      internalID: 5829783978376761729
+      spriteID: 48d364f61db715540800000000000000
+      internalID: 4994909601175846276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_4
+      name: SP_GlossyContainer03_01_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 400
-        width: 200
-        height: 200
+        x: 18
+        y: 35
+        width: 473
+        height: 445
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5008cd636eeb5de0800000000000000
-      internalID: -1343217953028964262
+      spriteID: 07cd662e419fd1be0800000000000000
+      internalID: -1504772832378823568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_5
+      name: SP_GlossyContainer03_01_5
       rect:
         serializedVersion: 2
-        x: 200
-        y: 400
-        width: 200
-        height: 200
+        x: 113
+        y: 475
+        width: 12
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 546434575cdde1190800000000000000
-      internalID: -7989704848763042235
+      spriteID: 1073612c09e6e0880800000000000000
+      internalID: -8642849066866821375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_6
+      name: SP_GlossyContainer03_01_6
       rect:
         serializedVersion: 2
-        x: 400
-        y: 400
-        width: 200
-        height: 200
+        x: 152
+        y: 475
+        width: 65
+        height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4eb5f07638f4fc560800000000000000
-      internalID: 7336169743798197220
+      spriteID: 16ee5fc1d9ddc8620800000000000000
+      internalID: 2777838737046236769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_7
+      name: SP_GlossyContainer03_01_7
       rect:
         serializedVersion: 2
-        x: 600
-        y: 400
-        width: 200
-        height: 200
+        x: 226
+        y: 475
+        width: 66
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e31b53e9cc56a25f0800000000000000
-      internalID: -780699655893307074
+      spriteID: c21bd51b67e2b42d0800000000000000
+      internalID: -3293487615174659796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_8
+      name: SP_GlossyContainer03_01_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 200
-        width: 200
-        height: 200
+        x: 294
+        y: 475
+        width: 22
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28f736a41f3684430800000000000000
-      internalID: 3767370976281722754
+      spriteID: 007307f28fb09e720800000000000000
+      internalID: 2875842997628450560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_9
+      name: SP_GlossyContainer03_01_9
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 200
-        height: 200
+        x: 323
+        y: 475
+        width: 32
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f5fde4f3f70f67b0800000000000000
-      internalID: -5228951897986173455
+      spriteID: e3b7081ebd1f03050800000000000000
+      internalID: 5778384248599771966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_10
+      name: SP_GlossyContainer03_01_10
       rect:
         serializedVersion: 2
-        x: 400
-        y: 200
-        width: 200
-        height: 200
+        x: 386
+        y: 477
+        width: 6
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b34dcf1ba8606df0800000000000000
-      internalID: -189036100167318605
+      spriteID: 3c68832f7471b3790800000000000000
+      internalID: -7549414752582596925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_11
+      name: SP_GlossyContainer03_01_11
       rect:
         serializedVersion: 2
-        x: 600
-        y: 200
-        width: 200
-        height: 200
+        x: 13
+        y: 341
+        width: 7
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5e111cfe13730cc0800000000000000
-      internalID: -3746023888126927267
+      spriteID: ce797278424ac73f0800000000000000
+      internalID: -901665348587644948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SP_Puzzle_12
+      name: SP_GlossyContainer03_01_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 200
-        height: 200
+        x: 8
+        y: 242
+        width: 6
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02e4f019d24674460800000000000000
-      internalID: 7225854274009255456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SP_Puzzle_13
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbd3e54b33eb0494fa12baae2b2b6c26
-      internalID: 1155573605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SP_Puzzle_14
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e637a24f6def3a447b69291cfac47c70
-      internalID: 965014436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SP_Puzzle_15
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b712bbc6d184155408cbba643d703412
-      internalID: 501514657
+      spriteID: 153f108372d3a2790800000000000000
+      internalID: -7554158186307914927
       vertices: []
       indices: 
       edges: []
@@ -517,7 +451,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7bd31b3be01798c499b14aeb25ed2532
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -525,26 +459,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":200.0,"y":200.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      SP_Puzzle_0: -8541774583555738855
-      SP_Puzzle_1: -8813983396287401771
-      SP_Puzzle_10: -189036100167318605
-      SP_Puzzle_11: -3746023888126927267
-      SP_Puzzle_12: 7225854274009255456
-      SP_Puzzle_13: 1155573605
-      SP_Puzzle_14: 965014436
-      SP_Puzzle_15: 501514657
-      SP_Puzzle_2: 2636818156884432622
-      SP_Puzzle_3: 5829783978376761729
-      SP_Puzzle_4: -1343217953028964262
-      SP_Puzzle_5: -7989704848763042235
-      SP_Puzzle_6: 7336169743798197220
-      SP_Puzzle_7: -780699655893307074
-      SP_Puzzle_8: 3767370976281722754
-      SP_Puzzle_9: -5228951897986173455
+      SP_GlossyContainer03_01_0: 7543061460187234262
+      SP_GlossyContainer03_01_1: -5148704376214117464
+      SP_GlossyContainer03_01_10: -7549414752582596925
+      SP_GlossyContainer03_01_11: -901665348587644948
+      SP_GlossyContainer03_01_12: -7554158186307914927
+      SP_GlossyContainer03_01_2: 1983859124860836695
+      SP_GlossyContainer03_01_3: 4994909601175846276
+      SP_GlossyContainer03_01_4: -1504772832378823568
+      SP_GlossyContainer03_01_5: -8642849066866821375
+      SP_GlossyContainer03_01_6: 2777838737046236769
+      SP_GlossyContainer03_01_7: -3293487615174659796
+      SP_GlossyContainer03_01_8: 2875842997628450560
+      SP_GlossyContainer03_01_9: 5778384248599771966
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
