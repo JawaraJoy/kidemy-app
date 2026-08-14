@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aa0d5d3831383cb4eb3e4521ff71396f
+guid: d5b15b65e34f60551912bee7a9668c0f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7040895370089211987
-    second: SP_BunnyScared_0
+      213: 8267198903398339971
+    second: SP_Quest02_Banana_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,14 +46,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -113,12 +113,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 29
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_BunnyScared_0
+      name: SP_Quest02_Banana_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 173
-        height: 206
+        y: 11
+        width: 256
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3582cdae80946b160800000000000000
-      internalID: 7040895370089211987
+      spriteID: 3859e84e99dfab270800000000000000
+      internalID: 8267198903398339971
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SP_BunnyScared_0: 7040895370089211987
+      SP_Quest02_Banana_0: 8267198903398339971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

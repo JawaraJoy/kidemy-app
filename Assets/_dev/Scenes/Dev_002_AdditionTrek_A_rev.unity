@@ -139,22 +139,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3079495263401239039, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -196,9 +180,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: questPrefab
+      propertyPath: backgroundMusic
       value: 
-      objectReference: {fileID: 8344063676491614192, guid: 511865ee10448864d8d26cb8619e0147, type: 3}
+      objectReference: {fileID: 8300000, guid: fdf1375ccf71b6b93a05cd9ffae980fd, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: questPrefabs.Array.size
       value: 5
@@ -210,19 +194,19 @@ PrefabInstance:
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 8344063676491614192, guid: 89e11e8aae65cb446a34dc15cb5c9583, type: 3}
+      objectReference: {fileID: 8344063676491614192, guid: 6752952d99929e586922e7d78e5d48a0, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 8344063676491614192, guid: f3077119e0aab464b95148947b33c04c, type: 3}
+      objectReference: {fileID: 8344063676491614192, guid: 3ca9d19da552a544bae1f3b0361c5ccb, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[3]'
       value: 
-      objectReference: {fileID: 8344063676491614192, guid: 561d62465e66c3f4d80bba9da8e7cadf, type: 3}
+      objectReference: {fileID: 8344063676491614192, guid: 879b9b7cb420a29a59c21c94be1669ef, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[4]'
       value: 
-      objectReference: {fileID: 8344063676491614192, guid: 30731b1e9269b2c42b93adf28b750a14, type: 3}
+      objectReference: {fileID: 8344063676491614192, guid: f37d0ac8b799793f1b7c860979920d52, type: 3}
     - target: {fileID: 7069886483629464305, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: m_Name
       value: Stage
@@ -243,11 +227,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8269293218450831837, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
+      propertyPath: Instance
+      value: 
+      objectReference: {fileID: 1916615594}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
+--- !u!114 &1916615594 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8269293218450831837, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
+  m_PrefabInstance: {fileID: 524166109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d76637fa534666ebab15c154353a130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::APIManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

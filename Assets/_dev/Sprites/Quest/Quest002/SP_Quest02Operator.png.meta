@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: be72bd80224c8184babacca0e00d2710
+guid: 6f701118aa81cfedaabbe5c36f830063
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7725318868361087789
-    second: SP_BunnyAngry_0
+      213: 8502108378889470646
+    second: SP_Quest02Operator_0
+  - first:
+      213: 2539619829395173267
+    second: SP_Quest02Operator_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -113,12 +116,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 29
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -126,23 +129,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_BunnyAngry_0
+      name: SP_Quest02Operator_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 133
-        height: 173
+        x: 27
+        y: 27
+        width: 333
+        height: 389
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d4f6b27b672ac490800000000000000
-      internalID: -7725318868361087789
+      spriteID: 6b24495468e8df570800000000000000
+      internalID: 8502108378889470646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Quest02Operator_1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 104
+        width: 295
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f23a387ca8e3320800000000000000
+      internalID: 2539619829395173267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Quest02Operator_2
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 104
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc1784a63638815eadd101578027f91
+      internalID: -71471701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Quest02Operator_3
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 0
+        width: 349
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdb90588e210259f81439ac283b0ca6
+      internalID: -1948989780
       vertices: []
       indices: 
       edges: []
@@ -159,9 +228,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      SP_BunnyAngry_0: -7725318868361087789
+      SP_Quest02Operator_0: 8502108378889470646
+      SP_Quest02Operator_1: 2539619829395173267
+      SP_Quest02Operator_2: -71471701
+      SP_Quest02Operator_3: -1948989780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
