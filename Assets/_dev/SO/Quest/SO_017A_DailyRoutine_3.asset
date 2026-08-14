@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 017A
   title: Routine
   category: 4
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Put the steps in the right order!
+    m_FormatedText: {fileID: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 4000abe4d8fd86084bd8dedddbe3cb41, type: 3}
   autoSubmit: 1
   score: 10
@@ -27,21 +32,53 @@ MonoBehaviour:
   - label:
       image: {fileID: 0}
       text: 1
+      m_FormatedText: {fileID: 0}
       color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
-    limit: 6
+    limit: 1
     labels:
     - image: {fileID: 21300000, guid: 3b0053bee9d565746b6ea58354b1e5d2, type: 3}
       text: Put Shoes
+      m_FormatedText: {fileID: 0}
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 9ca21c9397fb0e00ca3ce48a7b5b5529, type: 3}
+  - label:
+      image: {fileID: 0}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
     - image: {fileID: 21300000, guid: f7baab1dd47b4bc4e9c61a3955cc20e0, type: 3}
       text: Wash Hand
+      m_FormatedText: {fileID: 0}
       color: {r: 1, g: 0.54509807, b: 0.8352941, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 5facec16c362e98279c4c11083919b87, type: 3}
+  - label:
+      image: {fileID: 0}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
     - image: {fileID: 21300000, guid: 4619cceae9b50ce4ab5c8fc95f11a526, type: 3}
       text: Drink Water
+      m_FormatedText: {fileID: 0}
       color: {r: 0, g: 0.84478456, b: 0.0411286, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: c1e85f7db5a80127987b87b232eba4c3, type: 3}
   randomizeChoice: 1
   answerInOrder: 1

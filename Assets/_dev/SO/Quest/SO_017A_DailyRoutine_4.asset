@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 017A
   title: Routine
   category: 4
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Put the steps in the right order!
+    m_FormatedText: {fileID: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 74cfb0b29aad2817bb4f10edb6683679, type: 3}
   autoSubmit: 1
   score: 10
@@ -27,21 +32,53 @@ MonoBehaviour:
   - label:
       image: {fileID: 0}
       text: 1
+      m_FormatedText: {fileID: 0}
       color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
-    limit: 6
+    limit: 1
     labels:
     - image: {fileID: 21300000, guid: 6e85724f618218f40b7b558d95bd2109, type: 3}
       text: Pack Bag
+      m_FormatedText: {fileID: 0}
       color: {r: 0, g: 0.84478456, b: 0.0411286, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 19ee0432a52112f4dacb9638bf9d6051, type: 3}
+  - label:
+      image: {fileID: 0}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
     - image: {fileID: 21300000, guid: 3b0053bee9d565746b6ea58354b1e5d2, type: 3}
       text: Wear Shoes
+      m_FormatedText: {fileID: 0}
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 3ad09b76f3f399700aa4e05ef57f4878, type: 3}
+  - label:
+      image: {fileID: 0}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
     - image: {fileID: 21300000, guid: b06acd95387066e468c477a6ce06fa3d, type: 3}
       text: Go to School
+      m_FormatedText: {fileID: 0}
       color: {r: 0.36862746, g: 0.83137256, b: 1, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 38c6fe0326f5d07169122e71341d6588, type: 3}
   randomizeChoice: 1
   answerInOrder: 1

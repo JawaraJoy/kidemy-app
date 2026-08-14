@@ -15,10 +15,15 @@ MonoBehaviour:
   id: SO_012A
   title: Rythim Maker
   category: 2
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
-    text: When the animals pass by, tap the circle on the left
+    text: Tap the circle on the left
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 993f5f3542039099b90e3451dbbd35cf, type: 3}
   autoSubmit: 0
   score: 10

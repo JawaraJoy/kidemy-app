@@ -15,47 +15,70 @@ MonoBehaviour:
   id: 018A
   title: Daily Schedule
   category: 4
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Categorize the activities
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: d8930a788e4572ae7806ffa7288051f6, type: 3}
   autoSubmit: 1
   score: 10
   tresholdTime: 0
   groups:
   - label:
-      image: {fileID: 21300000, guid: 84c9fc5e5de83f143991a927d4a13dde, type: 3}
+      image: {fileID: 0}
       text: Morning
-      color: {r: 1, g: 1, b: 1, a: 1}
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.9882353, g: 0.9529412, b: 0.8117647, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
     limit: 4
     labels:
     - image: {fileID: 21300000, guid: de57d52d23a6ea34294b3c125b6434ad, type: 3}
       text: Wake Up
+      m_FormatedText: {fileID: 0}
       color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: d0f9645e1f6aec80dbe9eda94293b050, type: 3}
   - label:
-      image: {fileID: 21300000, guid: f81dd1b79d243d34db956465bce50339, type: 3}
+      image: {fileID: 0}
       text: Afternoon
-      color: {r: 1, g: 1, b: 1, a: 1}
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.90588236, g: 0.95686275, b: 0.9882353, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
     limit: 4
     labels:
     - image: {fileID: 21300000, guid: 3cd2804cf30c3004caf2d4d74eddc942, type: 3}
       text: Lunch
+      m_FormatedText: {fileID: 0}
       color: {r: 1, g: 0.7529412, b: 0.3764706, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 2f1151f0ab91dbe94a81164bf483648b, type: 3}
   - label:
-      image: {fileID: 21300000, guid: a57a0fbe42aebca45b9cd4b618ef0980, type: 3}
+      image: {fileID: 0}
       text: Night
-      color: {r: 1, g: 1, b: 1, a: 1}
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.9411765, g: 0.89411765, b: 0.9764706, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
     limit: 4
     labels:
     - image: {fileID: 21300000, guid: 5b01e843573908f47a85c66d5cf2609e, type: 3}
       text: Bedtime Story
+      m_FormatedText: {fileID: 0}
       color: {r: 0.8608063, g: 0.64006275, b: 0.998576, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: cae86b5e9d8959de89a97fbea68958e7, type: 3}
   randomizeChoice: 1
   answerInOrder: 1

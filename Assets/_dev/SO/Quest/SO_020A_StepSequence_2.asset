@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 020A
   title: StepSequence
   category: 4
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Put the steps in order
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: d2965c75053cd845e919c6b1d13b3310, type: 3}
   autoSubmit: 1
   score: 10
@@ -27,26 +32,54 @@ MonoBehaviour:
   - label:
       image: {fileID: 0}
       text: 1
-      color: {r: 1, g: 1, b: 1, a: 1}
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.41568628, g: 0.70980394, b: 0.24705882, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 0}
-    limit: 5
+    limit: 1
     labels:
     - image: {fileID: 21300000, guid: 447cb6f465476c84f96d39e797d7ec33, type: 3}
       text: Put toothpaste
-      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.18039216, g: 0.69411767, b: 0.9843137, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 98704d47032c28800a3bce5689a5b556, type: 3}
+  - label:
+      image: {fileID: 0}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.9843137, g: 0.69411767, b: 0.101960786, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
     - image: {fileID: 21300000, guid: eb088f5ea357a5549a7fcf226a6129e3, type: 3}
       text: Brush teeth
-      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.41568628, g: 0.70980394, b: 0.24705882, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: fec5cc3dd89f256d5ad326f73583f99c, type: 3}
+  - label:
+      image: {fileID: 0}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.18039216, g: 0.69411767, b: 0.9843137, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
     - image: {fileID: 21300000, guid: 991f9171d0ff8054f88c1f950f6bd496, type: 3}
-      text: Rinse mouth
-      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
+      text: Rinse Mouth
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.9843137, g: 0.69411767, b: 0.101960786, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
       audio: {fileID: 8300000, guid: 3c2a5db6f5db0b6f99fe80901520085e, type: 3}
-    - image: {fileID: 21300000, guid: 141f9a78e2f9d3a4ebf471c9c9427bf3, type: 3}
-      text: 'Put brush away '
-      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
-      audio: {fileID: 8300000, guid: 11d6b478639880d418d950943081005b, type: 3}
   randomizeChoice: 1
   answerInOrder: 1
   timer: 0
