@@ -139,22 +139,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3079495263401239039, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -210,19 +194,19 @@ PrefabInstance:
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 7826825245496287589, guid: cbf1fa9066b42851c8557506b12ec199, type: 3}
+      objectReference: {fileID: 7826825245496287589, guid: 6c6538ef37203df0a807fff4a9b6eee6, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 7826825245496287589, guid: c69e5567d94d979268d9c5ad99abfc51, type: 3}
+      objectReference: {fileID: 7826825245496287589, guid: c2679ab94a38c8ef1974a7b5bd1b249e, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[3]'
       value: 
-      objectReference: {fileID: 7826825245496287589, guid: 97bb8e2030c11f203b180e2f8a87b092, type: 3}
+      objectReference: {fileID: 7826825245496287589, guid: 216bef26a82564464b61bdec80923fd6, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[4]'
       value: 
-      objectReference: {fileID: 7826825245496287589, guid: 9eb9ba373a9490102802ce010912137a, type: 3}
+      objectReference: {fileID: 7826825245496287589, guid: 07818a46b49c1802db5a184f863f5212, type: 3}
     - target: {fileID: 7069886483629464305, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: m_Name
       value: Stage
