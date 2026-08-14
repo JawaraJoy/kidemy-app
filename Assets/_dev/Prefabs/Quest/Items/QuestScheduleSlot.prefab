@@ -79,8 +79,8 @@ MonoBehaviour:
   dropInfo: {fileID: 0}
   verify: 0
   answer: 1
-  acceptSound: {fileID: 0}
-  rejectSound: {fileID: 0}
+  acceptSound: {fileID: 8300000, guid: b7dc1aa5c205a911987e349799fd39dc, type: 3}
+  rejectSound: {fileID: 8300000, guid: 5fd87f7e120faba549b3f2a8f6a7d675, type: 3}
 --- !u!222 &8619170346981442651
 CanvasRenderer:
   m_ObjectHideFlags: 0

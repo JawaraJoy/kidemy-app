@@ -20,7 +20,7 @@ MonoBehaviour:
   question:
     image: {fileID: 0}
     text: Which one matches all the clues?
-    m_FormatedText: {fileID: 0}
+    m_FormatedText: {fileID: 11400000, guid: 24e09e5066e308c8599419516d85ef5b, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
