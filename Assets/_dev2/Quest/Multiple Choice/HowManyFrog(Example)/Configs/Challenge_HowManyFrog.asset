@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
   m_Name: Challenge_HowManyFrog
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
-  m_SceneConfig: {fileID: 11400000, guid: 9fa723b64e1bf92499f3c26f6be55ba9, type: 2}
+  m_Background: {fileID: 21300000, guid: f3f025012964be84e8901369f9eff94b, type: 3}
+  m_ConffetyVFXPrefab: {fileID: 6391076248617746661, guid: 9c831dc923a84ea4f81165339485f098, type: 3}
   m_ChoicePrefab: {fileID: 8156987785838361269, guid: 9e51241737158f74083a8bc99dfb9896, type: 3}
   m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: b332991fac4b0be42b41601caee3c84f, type: 3}
-  m_Background: {fileID: 21300000, guid: f3f025012964be84e8901369f9eff94b, type: 3}
+  m_ReactionPanelPrefab: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
+  m_ResultPanelPrefab: {fileID: 4395721995340702901, guid: 82fc430240f383547805088edce2f7a3, type: 3}
+  m_SceneConfig: {fileID: 11400000, guid: 9fa723b64e1bf92499f3c26f6be55ba9, type: 2}
+  m_RightReaction: {fileID: 11400000, guid: 3d1c22da1d0e1f749b2276c891da35f4, type: 2}
+  m_WrongReaction: {fileID: 11400000, guid: e600e5bc56a130642a96f8863fd26f79, type: 2}
   m_QuestConfigs:
   - {fileID: 11400000, guid: 30b5fc1b26c48624eb3c71841fe49a43, type: 2}
   - {fileID: 11400000, guid: 55ef97aa0dd8cb847befd781355cbc19, type: 2}
