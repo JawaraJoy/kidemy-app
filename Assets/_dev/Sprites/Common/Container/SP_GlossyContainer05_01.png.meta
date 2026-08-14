@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 953df57f1184854eaa0b64a88a913333
+guid: 4a96449f7a50f4208b626068246bb6eb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7684385594241391748
-    second: SP_BackgroundIsland_2_0
+      213: -491302429190082213
+    second: SP_GlossyContainer05_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +87,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 28
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -113,7 +113,7 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 28
+    textureFormat: 29
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_BackgroundIsland_2_0
+      name: SP_GlossyContainer05_01_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2048
-        height: 1024
+        x: 11
+        y: 10
+        width: 235
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c73ec1204049b5590800000000000000
-      internalID: -7684385594241391748
+      spriteID: b51b6de2b0b8e29f0800000000000000
+      internalID: -491302429190082213
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SP_BackgroundIsland_2_0: -7684385594241391748
+      SP_GlossyContainer05_01_0: -491302429190082213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

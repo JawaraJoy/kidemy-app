@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 3d234b9315cb40ebc880a044b1429788
+guid: 261e8b46f62b0ae15a66629a56c0c1a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7965169908771874270
-    second: SP_GlossyContainer01_00_0
-  - first:
-      213: 406162579088318486
-    second: SP_GlossyContainer01_00_1
+      213: 6348897901808151218
+    second: SP_GlossyContainer05_02_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,14 +46,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -116,12 +113,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 29
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -129,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_GlossyContainer01_00_0
+      name: SP_GlossyContainer05_02_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 97
-        width: 1536
-        height: 859
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed56afba4d7f98e60800000000000000
-      internalID: 7965169908771874270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SP_GlossyContainer01_00_1
-      rect:
-        serializedVersion: 2
-        x: 354
-        y: 263
-        width: 13
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 610ad97b6baf2a500800000000000000
-      internalID: 406162579088318486
+      spriteID: 2ba6f78f001db1850800000000000000
+      internalID: 6348897901808151218
       vertices: []
       indices: 
       edges: []
@@ -176,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -186,8 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SP_GlossyContainer01_00_0: 7965169908771874270
-      SP_GlossyContainer01_00_1: 406162579088318486
+      SP_GlossyContainer05_02_0: 6348897901808151218
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

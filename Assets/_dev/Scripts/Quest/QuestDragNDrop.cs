@@ -159,7 +159,6 @@ namespace EduGame
             if (dataDragNDrop.AutoSubmit)
             {
                 int answereds = 0;
-                int totalLimit = 0;
 
                 foreach (var slot in slots)
                 {
@@ -175,8 +174,6 @@ namespace EduGame
         public override void Submit(int star = 1)
         {
             int totalAnswers = dataDragNDrop.AnswerInOrder ? Sort() : Check();
-
-            Debug.Log(totalAnswers + " - " + totalLimit);
 
             if (totalAnswers == dataDragNDrop.Items.Length || totalAnswers >= totalLimit)
                 star = 3;

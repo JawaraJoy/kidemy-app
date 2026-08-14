@@ -521,7 +521,8 @@ MonoBehaviour:
   text: {fileID: 4505471050031153898}
   audioPlayer: {fileID: 0}
   image: {fileID: 5689032602024095994}
-  tint: {fileID: 1150920087618759031}
+  tints:
+  - {fileID: 1150920087618759031}
   dropZone: {fileID: 8057335785929559729}
   orderLabel: {fileID: 0}
   step: {fileID: 0}

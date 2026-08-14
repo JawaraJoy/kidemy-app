@@ -139,22 +139,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341022202585374223, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3079495263401239039, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -196,10 +180,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
-      propertyPath: questPrefab
-      value: 
-      objectReference: {fileID: 3198629066879550302, guid: cbcf16f1d48add55fada6794748bbeea, type: 3}
-    - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: questPrefabs.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -210,19 +190,19 @@ PrefabInstance:
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 3198629066879550302, guid: b0209523853c4be69b7a43d820a57460, type: 3}
+      objectReference: {fileID: 3198629066879550302, guid: e15b6bff072123df09b1a0ec99e122cd, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 3198629066879550302, guid: ccdb477591f3cb0ac9f33c0780f4cbc1, type: 3}
+      objectReference: {fileID: 3198629066879550302, guid: 88e0cb7d1ef9f90db9654a87b89b572c, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[3]'
       value: 
-      objectReference: {fileID: 3198629066879550302, guid: 03e7f172ccc3ed09694807fea4a4d8fd, type: 3}
+      objectReference: {fileID: 3198629066879550302, guid: 8212fd13143e3470fb4e3d59c659afde, type: 3}
     - target: {fileID: 5551957968048432706, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: 'questPrefabs.Array.data[4]'
       value: 
-      objectReference: {fileID: 3198629066879550302, guid: cbcf16f1d48add55fada6794748bbeea, type: 3}
+      objectReference: {fileID: 3198629066879550302, guid: f4e8fd8bb061c86c285fd55c49add2a5, type: 3}
     - target: {fileID: 7069886483629464305, guid: 863f64727a9bfa348b44c7b566d27ff3, type: 3}
       propertyPath: m_Name
       value: Stage

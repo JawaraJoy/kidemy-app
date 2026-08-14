@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 953df57f1184854eaa0b64a88a913333
+guid: 13007efb7d4c6fc5f863daf2f2267874
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7684385594241391748
-    second: SP_BackgroundIsland_2_0
+      213: -2400645720495287425
+    second: SP_StepArrow02_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +87,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 28
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -113,7 +113,7 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 28
+    textureFormat: 29
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_BackgroundIsland_2_0
+      name: SP_StepArrow02_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 0
-        width: 2048
-        height: 1024
+        width: 220
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c73ec1204049b5590800000000000000
-      internalID: -7684385594241391748
+      spriteID: f731156bf613faed0800000000000000
+      internalID: -2400645720495287425
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SP_BackgroundIsland_2_0: -7684385594241391748
+      SP_StepArrow02_0: -2400645720495287425
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

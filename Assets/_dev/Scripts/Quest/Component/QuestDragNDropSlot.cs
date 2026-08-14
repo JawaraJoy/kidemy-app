@@ -10,7 +10,7 @@ namespace EduGame
         [SerializeField] protected TMP_Text text;
         [SerializeField] private AudioPlayer audioPlayer;
         [SerializeField] private Image image;
-        [SerializeField] private Image tint;
+        [SerializeField] private Image[] tints;
         [SerializeField] private QuestDragNDropZone dropZone;
         [SerializeField] private TMP_Text orderLabel;
         [SerializeField] private Transform step;
@@ -83,8 +83,9 @@ namespace EduGame
             if(order > 0 && orderLabel)
                 orderLabel.SetText(order.ToString());
             
-            if(tint)
-                tint.color = item.Label.Color;
+            if(tints.Length > 0)
+                foreach(var tint in tints)
+                    tint.color = item.Label.Color;
                 
             if(step && isLast)
                 step.gameObject.SetActive(false);
