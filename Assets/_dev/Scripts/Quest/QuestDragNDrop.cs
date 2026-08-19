@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using EasyTextEffects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,6 +26,8 @@ namespace EduGame
         private QuestDragNDropItem[] items;
         private QuestDragNDropSlot[] slots;
         private int totalLimit = 0;
+
+        private TextEffect m_TextEffect;
 
         protected override void Start()
         {
@@ -57,12 +60,25 @@ namespace EduGame
 
             if (questionText)
             {
-                if (!string.IsNullOrEmpty(dataDragNDrop.Question.Text))
-                    questionText.text = dataDragNDrop.Question.Text;
+                if (dataDragNDrop.Question.FormatedText)
+                {
+                    if (questionText.TryGetComponent(out TextEffect textEff))
+                    {
+                        m_TextEffect = textEff;
+                    }
+                    m_TextEffect.preset = dataDragNDrop.Question.FormatedText.EffectPreset;
+                    questionText.text = dataDragNDrop.Question.FormatedText.GetFormattedText();
+                    m_TextEffect.Refresh();
+                }
                 else
                 {
-                    questionText.gameObject.SetActive(false);
-                    questionText.transform.parent.gameObject.SetActive(false);
+                    if (!string.IsNullOrEmpty(dataDragNDrop.Question.Text))
+                        questionText.text = dataDragNDrop.Question.Text;
+                    else
+                    {
+                        questionText.gameObject.SetActive(false);
+                        questionText.transform.parent.gameObject.SetActive(false);
+                    }   
                 }
             }
 

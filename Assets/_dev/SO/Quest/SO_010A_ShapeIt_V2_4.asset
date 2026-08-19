@@ -20,11 +20,11 @@ MonoBehaviour:
   question:
     image: {fileID: 0}
     text: Pick the correct shape
-    m_FormatedText: {fileID: 0}
+    m_FormatedText: {fileID: 11400000, guid: 266cff7d253b9c59dbe4ee796e3a819d, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8d5d61f7db435d394a8bb1a70b86a689, type: 3}
   autoSubmit: 1
   score: 10
   tresholdTime: 0

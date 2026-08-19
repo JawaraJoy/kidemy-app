@@ -20,7 +20,7 @@ MonoBehaviour:
   question:
     image: {fileID: 0}
     text: How many fruits are in the image?
-    m_FormatedText: {fileID: 0}
+    m_FormatedText: {fileID: 11400000, guid: d490826863af967b18a2cb25ffbc81cd, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}

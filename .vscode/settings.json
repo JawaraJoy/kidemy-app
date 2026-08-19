@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "KimeeApp_URP.slnx"
+    "dotnet.defaultSolution": "KidemyApp-backup.slnx"
 }

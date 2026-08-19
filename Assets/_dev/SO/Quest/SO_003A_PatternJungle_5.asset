@@ -20,7 +20,7 @@ MonoBehaviour:
   question:
     image: {fileID: 0}
     text: Choose the missing piece
-    m_FormatedText: {fileID: 0}
+    m_FormatedText: {fileID: 11400000, guid: 1852e8782cb76757fb89eeb9ed4b3441, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}

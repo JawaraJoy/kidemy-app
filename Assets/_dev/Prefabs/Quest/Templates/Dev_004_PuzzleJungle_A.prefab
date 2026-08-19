@@ -795,7 +795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestMultipleChoices
   data: {fileID: 11400000, guid: 556bd0da52ef9aa4ca515a0be8462681, type: 2}
-  background: {fileID: 21300000, guid: e669b2decd815094bbb44d98b7d12ad0, type: 3}
+  background: {fileID: 21300000, guid: 7591fd12999cebe63a89e714f4dbd30a, type: 3}
   color: {r: 0.21960784, g: 0.5568628, b: 0.34117648, a: 0}
   npcController: {fileID: 9100000, guid: ee0292fe0a32e0d4387871e6462a4a8d, type: 2}
   character: {fileID: 11400000, guid: 7300581e70cc4a4449ab43d226480236, type: 2}

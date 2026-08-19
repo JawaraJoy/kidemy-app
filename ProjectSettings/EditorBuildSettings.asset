@@ -6,6 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_dev/Scenes/Test/Dev_Frontend.unity
+    guid: caf67ebef74adc746aca65ae9a7dd159
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_002_AdditionTrek_A_rewrite.unity
+    guid: fa9270a9e54ba0573bc57a69404cee65
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_003_PatternJungle_A_rewrite.unity
+    guid: 4634e4efd8ebb2f2d8a1df236678fe06
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_004_PuzzleJungle_A_rewrite.unity
+    guid: b0f0e68badad026b28bc52e5b0900701
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rewrite.unity
+    guid: aae4eb897422c1794b6730c4a1073530
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_010_ShapeIt_A_rewrite.unity
+    guid: 37e3a4342a308a16ab1dc180aa09565f
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_017_DailyRoutine_A_rewrite.unity
+    guid: 2e48f65a4193a440cbffe4584bd2251b
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_018_DailySchedule_A_rewrite.unity
+    guid: c53a2c053c5544947bc60a0b0845d75c
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_020_StepSequence_A_rewrite.unity
+    guid: eea4fc0f587dfcfd49c9198f1cc25b59
+  - enabled: 1
     path: Assets/_dev2/Quest/Multiple Choice/BigOrSmall/OtherDev_BigOrSmall_A_001.unity
     guid: c8da40d06659f6e479ac565ee8efd372
   m_configObjects:

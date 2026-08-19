@@ -24,11 +24,10 @@ public class BatchScenesBuilder
         {
             if (!buildScene.enabled) continue;
 
-            Debug.Log("xxxxx");
-
             // Extract the scene name
             string sceneName = Path.GetFileNameWithoutExtension(buildScene.path);
 
+            //if(sceneName.IndexOf("OtherDev_BigOrSmall_A_001") < 0) continue;
             //if(sceneName.IndexOf("Dev_001_FrogsCount_A_rev") < 0) continue;
             
             // Define the path to build specifically for this scene
