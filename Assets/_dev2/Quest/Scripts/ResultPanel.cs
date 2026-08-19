@@ -78,7 +78,7 @@ namespace EduGame
         }
         private void ResetQuest()
         {
-            m_GameManager.ResetQuest();
+            m_GameManager.ReloadScene();
         }
         private void Home()
         {

@@ -76,6 +76,10 @@ mergeInto(LibraryManager.library, {
         // Dummy function biar Unity WebGL ga complain DllNotFoundException
     },
 
+    ReloadIframe: function () {
+        window.location.reload();
+    },
+
     LogToBrowser: function (message) {
         console.log(UTF8ToString(message));
     },

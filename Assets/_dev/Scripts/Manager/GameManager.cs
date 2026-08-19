@@ -28,6 +28,9 @@ namespace EduGame
         [DllImport("__Internal")]
         private static extern void JS_OnVoiceDownloadComplete();
 
+        [DllImport("__Internal")]
+        private static extern void ReloadIframe();
+
         [Header("Frame")]
         [SerializeField] private TMP_Text title;
         [SerializeField] private TMP_Text category;
@@ -606,6 +609,11 @@ namespace EduGame
                 for (int i = 0; i < stars.Length; i++)
                     stars[i].gameObject.SetActive(false);
             }
+        }
+
+        public virtual void ReloadScene()
+        {
+            ReloadIframe();
         }
     }
 }

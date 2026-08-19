@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_dev/Scenes/Test/Dev_Frontend.unity
+    guid: caf67ebef74adc746aca65ae9a7dd159
+  - enabled: 1
     path: Assets/_dev/Scenes/Dev_002_AdditionTrek_A_rewrite.unity
     guid: fa9270a9e54ba0573bc57a69404cee65
   - enabled: 1
@@ -21,9 +24,6 @@ EditorBuildSettings:
     path: Assets/_dev/Scenes/Dev_010_ShapeIt_A_rewrite.unity
     guid: 37e3a4342a308a16ab1dc180aa09565f
   - enabled: 1
-    path: Assets/_dev/Scenes/Dev_012_RythimMaker_A_rewrite.unity
-    guid: e628f6b7a3349a3d6b483e2dd7ce0d2f
-  - enabled: 1
     path: Assets/_dev/Scenes/Dev_017_DailyRoutine_A_rewrite.unity
     guid: 2e48f65a4193a440cbffe4584bd2251b
   - enabled: 1
@@ -35,21 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_dev2/Quest/Multiple Choice/BigOrSmall/OtherDev_BigOrSmall_A_001.unity
     guid: c8da40d06659f6e479ac565ee8efd372
-  - enabled: 1
-    path: Assets/_dev2/Quest/Multiple Choice/Find My Shadow/OtherDev_FindMyShadow_A_001.unity
-    guid: 18b1b31b59f6408438ad1a9735ab8c42
-  - enabled: 1
-    path: Assets/_dev2/Quest/Multiple Choice/FindThePair/OtherDev_FindThePair_A_001.unity
-    guid: d09257ed79e2f4140bc62bd2b7ab0f11
-  - enabled: 1
-    path: Assets/_dev2/Quest/Multiple Choice/MatchTheColor/OtherDev_MatchTheColor_A_001.unity
-    guid: 844ad534c590c5c43a3620e4c917f5a3
-  - enabled: 1
-    path: Assets/_dev2/Quest/Multiple Choice/NameThePart/OtherDev_NameThePart_A_001.unity
-    guid: 6a29c1bab15eb0f4ab0c789a0a049296
-  - enabled: 1
-    path: Assets/_dev2/Quest/Multiple Choice/Whichone is Different/OtherDev_WhichOneIs_A_001.unity
-    guid: c73f5bb2aae4e5e43b31a241c3f41ff4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0
