@@ -93,6 +93,7 @@ namespace EduGame
                 audioSource.PlayOneShot(audioClip);
                 if (data is SO_QuestMultipleChoice quest)
                 {
+                    if (quest.SoundQuest == null) return;
                     float clipduration = quest.SoundQuest.length;
                     StartCoroutine(PlaySoundQuestAfterQuestionVoiceDone(clipduration));
                 }

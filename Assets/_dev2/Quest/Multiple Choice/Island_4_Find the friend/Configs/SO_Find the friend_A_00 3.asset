@@ -40,7 +40,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: -754731375412097694, guid: 64e7ff555ba7fc7408dddb6ac4fadc21, type: 3}
+  - image: {fileID: 21300000, guid: c845515025f7daf469734ec0f3f46859, type: 3}
     text: Seed
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

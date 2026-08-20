@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
-  m_Name: SO_Find the friend_A_00
+  m_Name: SO_Sound Quest_A_00
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
   id: 001A
   title: Frog Count
@@ -18,30 +18,21 @@ MonoBehaviour:
   m_ImagePrefab: {fileID: 0}
   m_MultipleQuestImages: []
   question:
-    image: {fileID: 21300000, guid: 30df53421bd30e8449835b8c5351cb73, type: 3}
-    text: Bird
-    m_FormatedText: {fileID: 11400000, guid: f8309eca3063f3042a874727dd99d41b, type: 2}
+    image: {fileID: 21300000, guid: 769ca7d3aafac2b628fe896756398eb2, type: 3}
+    text: Apple
+    m_FormatedText: {fileID: 11400000, guid: dfbe779dd34483548b2583c92402ec6c, type: 2}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: e97caff21fcc45246b2ba0789858d8a3, type: 3}
+    audio: {fileID: 8300000, guid: 8daae0e151826544584d6313f87a29f9, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
-  m_SoundQuest: {fileID: 0}
+  m_SoundQuest: {fileID: 8300000, guid: c05e9bbcff024c204bb78379064bcbe3, type: 3}
   choices:
-  - image: {fileID: 21300000, guid: 30df53421bd30e8449835b8c5351cb73, type: 3}
-    text: Carrot
-    m_FormatedText: {fileID: 0}
-    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 0
-    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
-    isAnswer: 1
-  - image: {fileID: 21300000, guid: b44c7021c02283444a3ffd31b4a58157, type: 3}
-    text: Seed
+  - image: {fileID: 21300000, guid: c845515025f7daf469734ec0f3f46859, type: 3}
+    text: Blue
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
@@ -49,8 +40,26 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: c845515025f7daf469734ec0f3f46859, type: 3}
-    text: Bone
+  - image: {fileID: 21300000, guid: 195ac7610f4a6d2419ae2ed5407e8681, type: 3}
+    text: Blue
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: b44c7021c02283444a3ffd31b4a58157, type: 3}
+    text: Dog
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 0}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: 367357bac7d2c7149b7ddb6d437d89e0, type: 3}
+    text: Blue
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}

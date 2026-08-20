@@ -6,9 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_dev2/Quest/Multiple Choice/Island_4_Find the friend/OtherDev_Find
-      the friend_A_001.unity
-    guid: b539b143ffe2dc24bacb3601cd3f3199
+    path: Assets/_dev2/Quest/Multiple Choice/Island_1_BigOrSmall/OtherDev_BigOrSmall_A_001.unity
+    guid: c8da40d06659f6e479ac565ee8efd372
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0
