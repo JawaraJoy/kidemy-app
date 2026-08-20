@@ -15,33 +15,50 @@ MonoBehaviour:
   id: 003A
   title: PatternJungle
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Choose the missing piece
+    m_FormatedText: {fileID: 11400000, guid: 1852e8782cb76757fb89eeb9ed4b3441, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 30c3263c41c4dd6fc99b7d0f32d53523, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: -8541774583555738855, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: 4144757494906343594, guid: 956cbf6af649b8b37b6ba410c47f2831, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: -8813983396287401771, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: 2682593863791959459, guid: 956cbf6af649b8b37b6ba410c47f2831, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: 2636818156884432622, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: -4172249739686955432, guid: 956cbf6af649b8b37b6ba410c47f2831, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 5829783978376761729, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: -5999981215890914926, guid: 956cbf6af649b8b37b6ba410c47f2831, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

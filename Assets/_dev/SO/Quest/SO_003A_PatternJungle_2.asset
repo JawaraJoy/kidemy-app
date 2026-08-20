@@ -15,33 +15,50 @@ MonoBehaviour:
   id: 003A
   title: PatternJungle
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Choose the missing piece
+    m_FormatedText: {fileID: 11400000, guid: 1852e8782cb76757fb89eeb9ed4b3441, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 19009d1bce24ab0f3996ebffdec9ce79, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: -780699655893307074, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: 5210937331224358259, guid: b62333b6e8bfc7c08bd01d859b9adec5, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
-  - image: {fileID: 7336169743798197220, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: -6179342952343231636, guid: b62333b6e8bfc7c08bd01d859b9adec5, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: -1343217953028964262, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: 2686520005477714746, guid: b62333b6e8bfc7c08bd01d859b9adec5, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: -7989704848763042235, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: 5934043852188685043, guid: b62333b6e8bfc7c08bd01d859b9adec5, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
   timer: 0

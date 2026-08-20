@@ -28,6 +28,9 @@ namespace EduGame
         [DllImport("__Internal")]
         private static extern void JS_OnVoiceDownloadComplete();
 
+        [DllImport("__Internal")]
+        private static extern void ReloadIframe();
+
         [Header("Frame")]
         [SerializeField] private TMP_Text title;
         [SerializeField] private TMP_Text category;
@@ -66,7 +69,12 @@ namespace EduGame
         [Header("Data")]
         [SerializeField] private Quest questPrefab;
         [SerializeField] private Quest[] questPrefabs;
-
+        [SerializeField] private ParticleSystem m_ConffetyVFXPrefab;
+        [SerializeField] private ReactionPanel m_ReactionPanelPrefab;
+        [SerializeField] private ResultPanel m_ResultPanelPrefab;
+        [SerializeField] private ReactionConfig m_RightReaction;
+        [SerializeField] private ReactionConfig m_WrongReaction;
+        
         [Header("Other Dev")]
         [SerializeField]
         private ChallengeConfig m_ChallengeConfig;
@@ -135,10 +143,10 @@ namespace EduGame
             if (starPrefab)
                 InstantiateStar();
 
-            if (m_ChallengeConfig && m_ChallengeConfig.ConffetyVFXPrefab)
-            {
+            if (m_ConffetyVFXPrefab)
+                m_ConffetyVFX = Instantiate(m_ConffetyVFXPrefab, m_ChallengeContainer, false);
+            else if (m_ChallengeConfig && m_ChallengeConfig.ConffetyVFXPrefab)
                 m_ConffetyVFX = Instantiate(m_ChallengeConfig.ConffetyVFXPrefab, m_ChallengeContainer, false);
-            }
             
             m_RightAnswerCount = 0;
         }
@@ -209,7 +217,7 @@ namespace EduGame
                 {
                     Debug.LogError("Failed to load data, challenge will return empty");
                 }
-
+                
                 m_ResultPanel = Instantiate(m_ChallengeConfig.ResultPanelPrefab, m_PanelContainer, false);
                 m_ReactionPanel = Instantiate(m_ChallengeConfig.ReactionPanelPrefab, m_PanelContainer, false);
 
@@ -239,6 +247,12 @@ namespace EduGame
                 }
                 else
                     Debug.LogError("Failed to load data, challenge will return empty");
+
+                if(m_ResultPanelPrefab) m_ResultPanel = Instantiate(m_ResultPanelPrefab, m_PanelContainer, false);
+                    
+                if(m_ReactionPanelPrefab) m_ReactionPanel = Instantiate(m_ReactionPanelPrefab, m_PanelContainer, false);
+
+                if (m_ReactionPanel) m_ReactionPanel.Init(this);
             }
             
 
@@ -462,7 +476,7 @@ namespace EduGame
 
         public virtual void ShowResult(int star)
         {
-            if (m_ChallengeConfig && m_ReactionPanel)
+            if (m_ReactionPanel)
             {
                 if (popResult)
                     popResult.gameObject.SetActive(false);
@@ -485,6 +499,10 @@ namespace EduGame
                         m_ConffetyVFX.Play();
                     }    
                 }
+                else if (m_RightReaction)
+                {
+                    m_ReactionPanel.ShowReaction(m_RightReaction);
+                }
                 else
                 {
                     if (correctFeedback)
@@ -503,6 +521,10 @@ namespace EduGame
                 if (m_ChallengeConfig)
                 {
                     m_ReactionPanel.ShowReaction(m_ChallengeConfig.WrongReaction);
+                }
+                else if (m_WrongReaction)
+                {
+                    m_ReactionPanel.ShowReaction(m_WrongReaction);
                 }
                 else
                 {
@@ -591,6 +613,11 @@ namespace EduGame
                 for (int i = 0; i < stars.Length; i++)
                     stars[i].gameObject.SetActive(false);
             }
+        }
+
+        public virtual void ReloadScene()
+        {
+            ReloadIframe();
         }
     }
 }

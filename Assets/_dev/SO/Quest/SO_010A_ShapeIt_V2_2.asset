@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_010A_ShapeIt_V2_2
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: 020A
+  title: Shape It
+  category: 4
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 0}
+    text: Pick the correct shape
+    m_FormatedText: {fileID: 11400000, guid: 266cff7d253b9c59dbe4ee796e3a819d, type: 2}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: fd93e9101d3fe677e8c435b48f48c0d8, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
+  groups:
+  - label:
+      image: {fileID: -6648434836049032596, guid: 956cbf6af649b8b37b6ba410c47f2831, type: 3}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
+    - image: {fileID: -5999981215890914926, guid: 956cbf6af649b8b37b6ba410c47f2831, type: 3}
+      text: 
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+  - label:
+      image: {fileID: 0}
+      text: 1
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 0
+    labels:
+    - image: {fileID: 8475566247342066060, guid: 37054a1fe53e0061ba9f5b2782e65b9a, type: 3}
+      text: 
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    - image: {fileID: -6228765038483051561, guid: 37054a1fe53e0061ba9f5b2782e65b9a, type: 3}
+      text: 
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.80784315, g: 1, b: 0.8156863, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+  randomizeChoice: 1
+  answerInOrder: 0
+  timer: 0

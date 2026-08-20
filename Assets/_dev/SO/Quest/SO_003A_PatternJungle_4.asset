@@ -15,33 +15,50 @@ MonoBehaviour:
   id: 003A
   title: PatternJungle
   category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Choose the missing piece
+    m_FormatedText: {fileID: 11400000, guid: 1852e8782cb76757fb89eeb9ed4b3441, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 87a514fbed181a0dab2c0ec8f8f5b641, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: -5228951897986173455, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: 2432085629683681172, guid: 5286fbea7f654f54cb92e95979aff04a, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 501514657, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: 8475566247342066060, guid: 37054a1fe53e0061ba9f5b2782e65b9a, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 2636818156884432622, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: -4172249739686955432, guid: 956cbf6af649b8b37b6ba410c47f2831, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 0
-  - image: {fileID: 965014436, guid: 781271008a4cf3341938a03a8b6bf346, type: 3}
+  - image: {fileID: 8598378098815649227, guid: 37054a1fe53e0061ba9f5b2782e65b9a, type: 3}
     text: 
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 0}
     isAnswer: 1
   timer: 0

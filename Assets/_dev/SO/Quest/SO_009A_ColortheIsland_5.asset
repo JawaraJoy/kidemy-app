@@ -15,13 +15,18 @@ MonoBehaviour:
   id: 009A
   title: Color the Island
   category: 2
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
-    text: Color the picture, press button 'SUBMIT' when done
+    text: Color the picture, press 'SUBMIT' when done
+    m_FormatedText: {fileID: 11400000, guid: a7ac8ba9507240f16a9dbdb37de74d10, type: 2}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: b5e6366d31c823b30b45d859f7c5bb6f, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
-  text: Color the picture, press button 'SUBMIT' when done
+  text: Color the picture
   canvas: {fileID: 2854874389893677318, guid: c7e88b64130b32e4e84d0d9553c3a756, type: 3}

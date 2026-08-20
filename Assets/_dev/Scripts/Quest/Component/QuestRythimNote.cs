@@ -22,8 +22,6 @@ namespace EduGame
         private float delay = 0;
         private AudioClip clip;
 
-        private Vector3 originalPosition;
-
         protected override void Awake()
         {
             base.Awake();        
@@ -42,8 +40,6 @@ namespace EduGame
 
             Rect.localScale = Vector3.one;
             Rect.anchoredPosition = Vector2.zero;
-
-            originalPosition = rb.position;
         }
 
         public void Setup(float speed, float delay, AudioClip clip = null)
@@ -68,13 +64,11 @@ namespace EduGame
             if(delay > 0)
                 yield return new WaitForSeconds(delay);
 
-            originalPosition = rb.position;
-        
             while (!isDone)
             {
                 // 1. Calculate the next target position using fixedDeltaTime
                 Vector2 currentPosition = rb.position;
-                Vector2 targetPosition = currentPosition + (Vector2.left * (speed * 60) * Time.fixedDeltaTime);
+                Vector2 targetPosition = currentPosition + (Vector2.left * (speed * 5000) * Time.fixedDeltaTime);
 
                 // 2. Teleport the physics body smoothly to the new position
                 rb.MovePosition(targetPosition);
@@ -101,7 +95,7 @@ namespace EduGame
             }
 
             
-            rb.MovePosition(originalPosition);
+            Rect.anchoredPosition = new Vector2(0, 0);
         }
 
         void OnTriggerEnter2D(Collider2D collision)
