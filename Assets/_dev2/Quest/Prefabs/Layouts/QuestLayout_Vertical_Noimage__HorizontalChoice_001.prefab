@@ -895,12 +895,12 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -1049,9 +1049,11 @@ MonoBehaviour:
   npcController: {fileID: 9100000, guid: ee0292fe0a32e0d4387871e6462a4a8d, type: 2}
   character: {fileID: 11400000, guid: 7300581e70cc4a4449ab43d226480236, type: 2}
   score: 10
+  m_MultipleImagesQuestionContainer: {fileID: 0}
   questionImage: {fileID: 0}
   questionAudio: {fileID: 0}
   questionText: {fileID: 0}
+  m_QuestName: {fileID: 0}
   choicesContainer: {fileID: 6427968901849508403}
   choiceItemPrefab: {fileID: 8156987785838361269, guid: a10e6a122d86a704990aee09e44cdbe5, type: 3}
 --- !u!1 &9080917371053460374

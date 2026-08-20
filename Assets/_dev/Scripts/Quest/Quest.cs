@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace EduGame
@@ -69,11 +70,39 @@ namespace EduGame
             if(data.Question.Audio)
                 PlayQuestionVoice(data.Question.Audio);
         }
+        public virtual void PlaySoundQuest()
+        {
+            PlaySoundQuestInternal();
+        }
+
+        protected virtual void PlaySoundQuestInternal()
+        {
+            if (data is SO_QuestMultipleChoice quest)
+            {
+                if (quest.SoundQuest)
+                {
+                    audioSource.PlayOneShot(quest.SoundQuest);
+                }
+            }
+        }
 
         public virtual void PlayQuestionVoice(AudioClip audioClip)
         {
             if(audioSource)
+            {
                 audioSource.PlayOneShot(audioClip);
+                if (data is SO_QuestMultipleChoice quest)
+                {
+                    float clipduration = quest.SoundQuest.length;
+                    StartCoroutine(PlaySoundQuestAfterQuestionVoiceDone(clipduration));
+                }
+            }
+        }
+
+        private IEnumerator PlaySoundQuestAfterQuestionVoiceDone(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            PlaySoundQuestInternal();
         }
 
         public virtual void OnAnswered(bool result, bool submit = true)

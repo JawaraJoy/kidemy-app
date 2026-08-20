@@ -206,7 +206,7 @@ PrefabInstance:
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_ChallengeConfig
       value: 
-      objectReference: {fileID: 11400000, guid: 68f918a83ea595e48a0926d1b6e528a7, type: 2}
+      objectReference: {fileID: 11400000, guid: 0fa53f7d3f2dbad4fb44f72dc16c8202, type: 2}
     - target: {fileID: 7898963286924964138, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

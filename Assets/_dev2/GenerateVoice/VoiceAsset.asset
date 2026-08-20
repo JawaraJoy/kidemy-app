@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6147f87c576096a44b7adf443589e1af, type: 3}
   m_Name: VoiceAsset
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.VoiceAsset
-  m_NameVoice: sayaakanlawan
-  m_Text: Saya akan lawan?
+  m_NameVoice: whatstartsound
+  m_Text: What starts with this sound?
   m_VoiceId: n3tkGOcEribaYI5zg4pu
-  m_AudioClip: {fileID: 8300000, guid: c69b8c20a3ffa0744955cbdd00a82fc4, type: 3}
+  m_AudioClip: {fileID: 8300000, guid: 8daae0e151826544584d6313f87a29f9, type: 3}
   m_ApiToken: game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e
   m_IsGenerating: 0

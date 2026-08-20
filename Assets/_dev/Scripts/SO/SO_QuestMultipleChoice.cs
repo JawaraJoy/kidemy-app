@@ -7,7 +7,10 @@ namespace EduGame
     [CreateAssetMenu(fileName = "SO_QuestMultipleChoice", menuName = "EduGame/Quest/MultipleChoice")]
     public class SO_QuestMultipleChoice : SO_Quest
     {
-        [Header("Question")]
+        [Space]
+        [SerializeField]
+        private AudioClip m_SoundQuest;
+        [Space]
         [SerializeField] private QuestUtilLabelChoice[] choices;
         [Space()]
         
@@ -21,6 +24,8 @@ namespace EduGame
 
         [NonSerialized] private int totalAnswer = 0;
         [NonSerialized] private QuestUtilLabelChoice[] randomizedChoices;
+
+        public AudioClip SoundQuest => m_SoundQuest;
 
         QuestUtilLabelChoice[] GetRandomizedChoices()
         {

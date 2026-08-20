@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
+  m_Name: Challenge_Sound Quest_A
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
+  m_Background: {fileID: 21300000, guid: afa24b0ab0191034087c64760a740e79, type: 3}
+  m_ConffetyVFXPrefab: {fileID: 6391076248617746661, guid: 9c831dc923a84ea4f81165339485f098, type: 3}
+  m_ChoicePrefab: {fileID: 8156987785838361269, guid: 9b79ee89d29d93c4a9cb9b2845bde327, type: 3}
+  m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: b07d4fd4c3e246642821f1cee41cf5b9, type: 3}
+  m_ReactionPanelPrefab: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
+  m_ResultPanelPrefab: {fileID: 4395721995340702901, guid: 82fc430240f383547805088edce2f7a3, type: 3}
+  m_SceneConfig: {fileID: 11400000, guid: bcc3fb9ea7d039741b5f841cd9bd7b8d, type: 2}
+  m_RightReaction: {fileID: 11400000, guid: 3d1c22da1d0e1f749b2276c891da35f4, type: 2}
+  m_WrongReaction: {fileID: 11400000, guid: e600e5bc56a130642a96f8863fd26f79, type: 2}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: ffeeeaa2e1121304db49d52d60571e65, type: 2}
+  - {fileID: 11400000, guid: a5c3fa3e313122e4c95d20faad656061, type: 2}
+  - {fileID: 11400000, guid: 5e4bce5403456fd4a915743f6d57ebc3, type: 2}
+  - {fileID: 11400000, guid: ef5de05c47bc43e478e56b30f7c34d2a, type: 2}
+  - {fileID: 11400000, guid: c924e2514ee796e429ddc9a086e627a8, type: 2}

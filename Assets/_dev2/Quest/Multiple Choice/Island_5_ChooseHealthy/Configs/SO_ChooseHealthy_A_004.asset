@@ -20,18 +20,19 @@ MonoBehaviour:
   question:
     image: {fileID: 0}
     text: Which one is not animal?
-    m_FormatedText: {fileID: 11400000, guid: f812a1727d762bd42a3e1ac12e2a83d0, type: 2}
+    m_FormatedText: {fileID: 11400000, guid: f028b212e996c4248b53681456446f55, type: 2}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 96d313be905537c43b3387e7d47e6044, type: 3}
+    audio: {fileID: 8300000, guid: ef91f3b7d328f1b4cb2513afaad87c74, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
+  m_SoundQuest: {fileID: 0}
   choices:
-  - image: {fileID: 21300000, guid: fc11df3f2eed2a548b1138fd76c7fb9e, type: 3}
-    text: Dog
+  - image: {fileID: 21300000, guid: 7969c842357dff743af3057632bf264b, type: 3}
+    text: Pizza
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
@@ -39,26 +40,8 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: ffaeaf39ac9d0d44d8deb4e4bdf53e97, type: 3}
-    text: Bear
-    m_FormatedText: {fileID: 0}
-    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 0
-    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: fbb11195b9679684bb43c6f431d5c456, type: 3}
-    text: Ball
-    m_FormatedText: {fileID: 0}
-    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 0
-    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: 7d3341558ccb3f14287c0522b84e71d8, type: 3}
-    text: Ball
+  - image: {fileID: 21300000, guid: 2c77895283ab94843a02eb29ae24b82d, type: 3}
+    text: Banana
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
@@ -66,5 +49,14 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
     isAnswer: 1
+  - image: {fileID: 21300000, guid: 761d9a64a5d66694e94d2062ebb459ea, type: 3}
+    text: Soda
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
   timer: 0
   randomizeChoice: 0

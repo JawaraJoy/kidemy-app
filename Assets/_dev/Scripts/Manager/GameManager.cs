@@ -380,6 +380,10 @@ namespace EduGame
         {
             quests[currentIndex].PlayQuestionVoice();
         }
+        public void PlaySoundQuest()
+        {
+            quests[currentIndex].PlaySoundQuest();
+        }
 
         public void Play()
         {

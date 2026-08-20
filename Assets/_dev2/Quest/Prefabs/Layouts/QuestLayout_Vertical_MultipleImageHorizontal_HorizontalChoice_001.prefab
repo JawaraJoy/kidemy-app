@@ -621,6 +621,7 @@ MonoBehaviour:
   questionImage: {fileID: 648616099878991184}
   questionAudio: {fileID: 0}
   questionText: {fileID: 0}
+  m_QuestName: {fileID: 0}
   choicesContainer: {fileID: 6427968901849508403}
   choiceItemPrefab: {fileID: 8156987785838361269, guid: 9b79ee89d29d93c4a9cb9b2845bde327, type: 3}
 --- !u!1 &9080917371053460374
@@ -716,10 +717,10 @@ MonoBehaviour:
     m_Top: 5
     m_Bottom: 5
   m_ChildAlignment: 4
-  m_Spacing: -125
+  m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
+  m_ChildControlWidth: 0
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0

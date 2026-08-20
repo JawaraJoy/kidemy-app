@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_HowManyFrog_A_002
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 001A
+  title: Frog Count
+  category: 0
+  m_ImagePrefab: {fileID: 4144160539785527233, guid: e6d0dc116708a374b8715475ad88d9f8, type: 3}
+  m_MultipleQuestImages:
+  - {fileID: 21300000, guid: 6b4e364c497ba7648ae3f66cbdce32e9, type: 3}
+  - {fileID: 21300000, guid: 95a8350de8beab64497285887fb29c84, type: 3}
+  - {fileID: 21300000, guid: 6b4e364c497ba7648ae3f66cbdce32e9, type: 3}
+  question:
+    image: {fileID: 0}
+    text: How Many Frogs are they?
+    m_FormatedText: {fileID: 11400000, guid: 613e1d294d7ef1843acd4bef840d0a67, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  choices:
+  - image: {fileID: 21300000, guid: 4ed0adb871115ed40a3feb5aca3c7108, type: 3}
+    text: 1
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0.5176471, g: 0.4392157, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
+    text: 2
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0, g: 0.7490196, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
+    text: 3
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 0.3915094, b: 0.99545044, a: 1}
+    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
+    text: 4
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0.7294118, g: 0.3333333, b: 0.8274511, a: 1}
+    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 0

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
+  m_Name: Challenge_Find the friend_A
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
+  m_Background: {fileID: 21300000, guid: 0bc67f436810ee841a93de47682a6c0c, type: 3}
+  m_ConffetyVFXPrefab: {fileID: 6391076248617746661, guid: 9c831dc923a84ea4f81165339485f098, type: 3}
+  m_ChoicePrefab: {fileID: 8156987785838361269, guid: 9b79ee89d29d93c4a9cb9b2845bde327, type: 3}
+  m_QuestLayoutPrefabs: {fileID: 9102783833377469605, guid: a1be7a1f5a5026e458fc181803b41ffc, type: 3}
+  m_ReactionPanelPrefab: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
+  m_ResultPanelPrefab: {fileID: 4395721995340702901, guid: 82fc430240f383547805088edce2f7a3, type: 3}
+  m_SceneConfig: {fileID: 11400000, guid: ae53c093d58dedf47bd405ca87b4ad9d, type: 2}
+  m_RightReaction: {fileID: 11400000, guid: 3d1c22da1d0e1f749b2276c891da35f4, type: 2}
+  m_WrongReaction: {fileID: 11400000, guid: e600e5bc56a130642a96f8863fd26f79, type: 2}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: e7943d8b2da9dc8479ffc5a0fff5994b, type: 2}
+  - {fileID: 11400000, guid: 92c4184e6457bad438afd8523489a23e, type: 2}
+  - {fileID: 11400000, guid: ab00a9ff7a2d8724b98d65f79283360c, type: 2}
+  - {fileID: 11400000, guid: 7fa2730800097a148af790e4a5e362db, type: 2}
+  - {fileID: 11400000, guid: 1588215615d2d3a43b11bd98195a6dfa, type: 2}
