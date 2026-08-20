@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_dev/Audio/Voices/SO_010A_ShapeIt_V2.meta
 guid: 26bf9eaae3aa93d9b8b515555e698256
+========
+guid: 64591c38d29288e4cb89156210cae3ed
+>>>>>>>> dev:Assets/_dev2/Images/Characters.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

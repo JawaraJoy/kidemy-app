@@ -1,10 +1,19 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/GUIPackCartoon/Demo/Sprites/Icons/Icons Colored/Animals/CAT 1.png.meta
 guid: 64e7ff555ba7fc7408dddb6ac4fadc21
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -754731375412097694
     second: CAT 1_0
+========
+guid: 43a528430c45e5f6f9fa62b85e5a12ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6256416768569661031
+    second: ChatGPT Image Aug 12, 2026, 05_40_00 PM_0
+>>>>>>>> dev:Assets/_dev/Sprites/Common/Container/SP_Sound.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +135,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/GUIPackCartoon/Demo/Sprites/Icons/Icons Colored/Animals/CAT 1.png.meta
       name: CAT 1_0
+========
+      name: ChatGPT Image Aug 12, 2026, 05_40_00 PM_0
+>>>>>>>> dev:Assets/_dev/Sprites/Common/Container/SP_Sound.png.meta
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 0
+<<<<<<<< HEAD:Assets/GUIPackCartoon/Demo/Sprites/Icons/Icons Colored/Animals/CAT 1.png.meta
         width: 398
         height: 510
+========
+        width: 1277
+        height: 989
+>>>>>>>> dev:Assets/_dev/Sprites/Common/Container/SP_Sound.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +159,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:Assets/GUIPackCartoon/Demo/Sprites/Icons/Icons Colored/Animals/CAT 1.png.meta
       spriteID: 26d48b310d7a685f0800000000000000
       internalID: -754731375412097694
+========
+      spriteID: 766546137e143d650800000000000000
+      internalID: 6256416768569661031
+>>>>>>>> dev:Assets/_dev/Sprites/Common/Container/SP_Sound.png.meta
       vertices: []
       indices: 
       edges: []
@@ -161,7 +184,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:Assets/GUIPackCartoon/Demo/Sprites/Icons/Icons Colored/Animals/CAT 1.png.meta
       CAT 1_0: -754731375412097694
+========
+      ChatGPT Image Aug 12, 2026, 05_40_00 PM_0: 6256416768569661031
+>>>>>>>> dev:Assets/_dev/Sprites/Common/Container/SP_Sound.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
