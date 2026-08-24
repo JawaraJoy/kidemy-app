@@ -393,6 +393,7 @@ namespace EduGame
         public void PlayQuestionVoice()
         {
             quests[currentIndex].PlayQuestionVoice();
+            StartCoroutine(WaitToPlaySoundQuest());
         }
         public void PlaySoundQuest()
         {
@@ -432,6 +433,13 @@ namespace EduGame
         {
             m_OnQuestStart?.Invoke();
             Debug.Log("OnQuestStartInvoke called");
+            StartCoroutine(WaitToPlaySoundQuest());
+        }
+
+        private IEnumerator WaitToPlaySoundQuest()
+        {
+            yield return new WaitForSeconds(2f);
+            PlaySoundQuest();
         }
         private void OnQuestEndInvoke()
         {

@@ -264,12 +264,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 15
+    m_Right: 15
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 65
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 275, y: 275}
-  m_Spacing: {x: 0, y: 0}
+  m_Spacing: {x: 25, y: 25}
   m_Constraint: 2
   m_ConstraintCount: 2
 --- !u!1 &7572452938000677660
@@ -634,6 +634,7 @@ MonoBehaviour:
   questionImage: {fileID: 648616099878991184}
   questionAudio: {fileID: 0}
   questionText: {fileID: 0}
+  m_QuestName: {fileID: 0}
   choicesContainer: {fileID: 6427968901849508403}
   choiceItemPrefab: {fileID: 8156987785838361269, guid: 9b79ee89d29d93c4a9cb9b2845bde327, type: 3}
 --- !u!1 &9080917371053460374

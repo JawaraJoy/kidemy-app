@@ -29,6 +29,7 @@ MonoBehaviour:
   autoSubmit: 0
   score: 10
   tresholdTime: 0
+  m_RepeatSoundQuest: 1
   m_SoundQuest: {fileID: 8300000, guid: e85eef6e75f45cf0995359051002b621, type: 3}
   choices:
   - image: {fileID: 21300000, guid: 195ac7610f4a6d2419ae2ed5407e8681, type: 3}

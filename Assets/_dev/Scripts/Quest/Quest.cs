@@ -81,8 +81,22 @@ namespace EduGame
             {
                 if (quest.SoundQuest)
                 {
-                    audioSource.PlayOneShot(quest.SoundQuest);
+                    StartCoroutine(PlayingSoundQuest(quest));
                 }
+            }
+        }
+
+        private IEnumerator PlayingSoundQuest(SO_QuestMultipleChoice quest)
+        {
+            int repeat = quest.RepeatSoundQuest;
+            if (repeat <= 0)
+            {
+                repeat = 1;
+            }
+            for (int i = 0; i < repeat; i++)
+            {
+                audioSource.PlayOneShot(quest.SoundQuest);
+                yield return new WaitForSeconds(quest.SoundQuest.length);
             }
         }
 

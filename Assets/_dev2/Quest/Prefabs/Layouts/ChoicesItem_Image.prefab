@@ -342,7 +342,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 420}
+  m_SizeDelta: {x: 0, y: 425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &829108708217101060
 CanvasRenderer:
@@ -423,7 +423,7 @@ MonoBehaviour:
   text: {fileID: 2837175006251857845}
   audioPlayer: {fileID: 0}
   image: {fileID: 8845682762914753326}
-  tint: {fileID: 0}
+  tint: {fileID: 6501583533071846523}
   correct: {fileID: 0}
   wrong: {fileID: 0}
 --- !u!114 &6049820194856722755

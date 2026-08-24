@@ -8,6 +8,8 @@ namespace EduGame
     public class SO_QuestMultipleChoice : SO_Quest
     {
         [Space]
+        [SerializeField, Min(1)]
+        private int m_RepeatSoundQuest = 1;
         [SerializeField]
         private AudioClip m_SoundQuest;
         [Space]
@@ -26,6 +28,7 @@ namespace EduGame
         [NonSerialized] private QuestUtilLabelChoice[] randomizedChoices;
 
         public AudioClip SoundQuest => m_SoundQuest;
+        public int RepeatSoundQuest => m_RepeatSoundQuest;
 
         QuestUtilLabelChoice[] GetRandomizedChoices()
         {

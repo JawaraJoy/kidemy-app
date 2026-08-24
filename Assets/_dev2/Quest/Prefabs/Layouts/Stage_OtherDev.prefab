@@ -948,6 +948,11 @@ MonoBehaviour:
   audioSource: {fileID: 3216478807956348711}
   questPrefab: {fileID: 8344063676491614192, guid: 077156e976b94b44cabd3d6ba5e993c5, type: 3}
   questPrefabs: []
+  m_ConffetyVFXPrefab: {fileID: 0}
+  m_ReactionPanelPrefab: {fileID: 0}
+  m_ResultPanelPrefab: {fileID: 0}
+  m_RightReaction: {fileID: 0}
+  m_WrongReaction: {fileID: 0}
   m_ChallengeConfig: {fileID: 11400000, guid: 0b39a487b231b0c45862f76c57f5f8ef, type: 2}
   m_ChallengeContainer: {fileID: 8316537704964092079}
   m_PanelContainer: {fileID: 8068046501265830782}
@@ -9371,7 +9376,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0

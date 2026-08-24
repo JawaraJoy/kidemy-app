@@ -107,11 +107,12 @@ namespace EduGame
                 image?.transform.parent.gameObject.SetActive(false);   
             }
 
-            if(choice.Color != Color.white && choice.Color != Color.black)
+            if (choice.Color != Color.white && choice.Color != Color.black)
             {
-                if(tint)
-                    tint.color = choice.Color;
-            }   
+                
+            }
+            if (tint)
+                tint.color = choice.Color;
         }
 
         public override void OnClick()
