@@ -77,6 +77,7 @@ namespace EduGame
         [SerializeField] private ResultPanel m_ResultPanelPrefab;
         [SerializeField] private ReactionConfig m_RightReaction;
         [SerializeField] private ReactionConfig m_WrongReaction;
+        [SerializeField] private ReactionConfig m_NeutralReaction;
         
         [Header("Other Dev")]
         [SerializeField]
@@ -89,6 +90,8 @@ namespace EduGame
         private AudioClip m_RightSFX;
         [SerializeField]
         private AudioClip m_WrongSFX;
+        [SerializeField]
+        private AudioClip m_NeutralSFX;
         [SerializeField]
         private AudioSource m_SFXSource;
         private ReactionPanel m_ReactionPanel;
@@ -145,7 +148,7 @@ namespace EduGame
 
             if (starPrefab)
                 InstantiateStar();
-
+            
             if (m_ConffetyVFXPrefab)
                 m_ConffetyVFX = Instantiate(m_ConffetyVFXPrefab, m_ChallengeContainer, false);
             else if (m_ChallengeConfig && m_ChallengeConfig.ConffetyVFXPrefab)
@@ -160,6 +163,7 @@ namespace EduGame
             if(backgroundMusic && m_Music)
             {
                 m_Music.PlayOneShot(backgroundMusic);
+
             }
 
             apiManager = GetComponent<APIManager>();
@@ -185,6 +189,18 @@ namespace EduGame
                     if(parameters.ContainsKey("redirect_url"))
                     {
                         baseURL = parameters["redirect_url"];
+                    }
+
+                    if(parameters.ContainsKey("bgm_volume"))
+                    {
+                        int volume = int.Parse(parameters["bgm_volume"]);
+                        bgmSource.volume = volume / 10f;
+                        audioSource.volume = volume / 10f;
+                    }
+                    else
+                    {
+                        bgmSource.volume = 1f;
+                        audioSource.volume = 1f;
                     }
                 }
                 LogToBrowser("Home URL: " + baseURL);
@@ -476,8 +492,11 @@ namespace EduGame
                 star = 2;
 
             if (currentIndex < result.Length)
+            {
+                Debug.Log($"Submitting result for quest {currentIndex}: stars={star}, time={Mathf.RoundToInt(recordedTime)}");
                 result[currentIndex] = new ResultItem { stars = star, time = Mathf.RoundToInt(recordedTime) };
-
+            }
+                
             ShowResult(star);
         }
 
@@ -508,8 +527,15 @@ namespace EduGame
                     popResult.gameObject.SetActive(true);
             }
             
-
-            if (star > 1) // jika bintang lebih dari 1 maka dianggap jawaban benar
+            if (m_NeutralReaction && quests[currentIndex].name.IndexOf("ColortheIsland") > -1)
+            {
+                if(star > 1)
+                    m_RightAnswerCount++;
+                
+                m_ReactionPanel.ShowReaction(m_NeutralReaction);
+                m_SFXSource.PlayOneShot(m_NeutralSFX);
+            }
+            else if (star > 1) // jika bintang lebih dari 1 maka dianggap jawaban benar
             {
                 m_RightAnswerCount++;
                 if (m_ChallengeConfig)
@@ -523,6 +549,10 @@ namespace EduGame
                 else if (m_RightReaction)
                 {
                     m_ReactionPanel.ShowReaction(m_RightReaction);
+                    if (m_ConffetyVFX)
+                    {
+                        m_ConffetyVFX.Play();
+                    }   
                 }
                 else
                 {
@@ -612,7 +642,6 @@ namespace EduGame
             };
 
             string json = JsonUtility.ToJson(compiledResult);
-            Debug.Log(json);
 
             if (apiManager)
                 apiManager.SendData(APIResultURL, json);
