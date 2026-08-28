@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68479bc92b2f5c74c928d0d475a50f1e, type: 3}
+  m_Name: Clip_Clap
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.AnimatorClipConfig
+  m_Identic:
+    m_Id: bunyi
+    m_Name: 
+    m_Description: 
+  m_StartingSprite: {fileID: 4677486222735346023, guid: dc34f718e03f1194fa419cb997a4fc5b, type: 3}
+  m_LoopTime: 3
+  m_Controller: {fileID: 9100000, guid: 4dc757cedd333b742921c0139371eed0, type: 2}
+  m_SoundSFX: {fileID: 8300000, guid: 607396e93411dca4f8679c68e7c71562, type: 3}

@@ -100,20 +100,23 @@ namespace EduGame
             }
         }
 
+        // direct no delay
         public virtual void PlayQuestionVoice(AudioClip audioClip)
         {
-            if(audioSource)
+            //StartCoroutine(PlayingQuestionVoice(audioClip));
+            if (audioSource)
             {
                 audioSource.PlayOneShot(audioClip);
                 if (data is SO_QuestMultipleChoice quest)
                 {
-                    if (quest.SoundQuest == null) return;
-                    float clipduration = quest.SoundQuest.length;
-                    StartCoroutine(PlaySoundQuestAfterQuestionVoiceDone(clipduration));
+                    if (quest.SoundQuest != null)
+                    {
+                        float clipduration = quest.SoundQuest.length;
+                        StartCoroutine(PlaySoundQuestAfterQuestionVoiceDone(clipduration));
+                    }
                 }
             }
         }
-
         private IEnumerator PlaySoundQuestAfterQuestionVoiceDone(float delay)
         {
             yield return new WaitForSeconds(delay);
@@ -135,7 +138,7 @@ namespace EduGame
 
         public virtual void Reset()
         {
-            PlayQuestionVoice();
+            //PlayQuestionVoice();
         }
 
         public virtual void Disabled()

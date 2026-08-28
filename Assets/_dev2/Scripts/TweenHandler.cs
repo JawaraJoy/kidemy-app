@@ -477,6 +477,13 @@ namespace Rush
             return tw;
         }
 
+        public void PlayAllTween()
+        {
+            foreach (var tween in m_TweenList)
+            {
+                tween.PlayTween();
+            }
+        }
         public void PlayTween(string id, bool isReverse)
         {
             TweenField tw = GetTween(id);
@@ -510,6 +517,10 @@ namespace Rush
         private void Awake()
         {
             m_TweenHandlerField.Init();
+        }
+        public void PlayAll()
+        {
+            m_TweenHandlerField.PlayAllTween();
         }
         public void StartTween(string id)
         {

@@ -12,6 +12,8 @@ namespace EduGame
         private int m_RepeatSoundQuest = 1;
         [SerializeField]
         private AudioClip m_SoundQuest;
+        [SerializeField]
+        private AnimatorClipConfig m_HowManySoundConfig;
         [Space]
         [SerializeField] private QuestUtilLabelChoice[] choices;
         [Space()]
@@ -28,6 +30,7 @@ namespace EduGame
         [NonSerialized] private QuestUtilLabelChoice[] randomizedChoices;
 
         public AudioClip SoundQuest => m_SoundQuest;
+        public AnimatorClipConfig HowManySoundConfig => m_HowManySoundConfig;
         public int RepeatSoundQuest => m_RepeatSoundQuest;
 
         QuestUtilLabelChoice[] GetRandomizedChoices()

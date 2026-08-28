@@ -456,7 +456,7 @@ namespace EduGame
         // ============================================================
 
         [CustomEditor(typeof(VoiceAsset))]
-        private class VoiceAssetEditor : Editor
+        private class VoiceAssetEditor : UnityEditor.Editor
         {
             private SerializedProperty m_NameVoice;
             private SerializedProperty m_Text;

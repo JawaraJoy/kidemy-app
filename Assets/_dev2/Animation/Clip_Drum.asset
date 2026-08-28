@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68479bc92b2f5c74c928d0d475a50f1e, type: 3}
+  m_Name: Clip_Drum
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.AnimatorClipConfig
+  m_Identic:
+    m_Id: bunyi
+    m_Name: 
+    m_Description: 
+  m_StartingSprite: {fileID: 7845810274951805102, guid: 9cc20af7deeb0b54b9f318f7039abb66, type: 3}
+  m_LoopTime: 2
+  m_Controller: {fileID: 9100000, guid: 83358de3e0a90fd4cbfe685b47460f98, type: 2}
+  m_SoundSFX: {fileID: 8300000, guid: 3b8c2892aa7def545b0004156d8fdbaf, type: 3}

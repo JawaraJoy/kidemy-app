@@ -21,12 +21,15 @@ namespace EduGame
         [SerializeField]
         private TextMeshProUGUI m_QuestName;
         [SerializeField] private RectTransform choicesContainer;
+        [SerializeField]
+        private AnimationHandler m_QuestAnimationHandler;
 
         [Header("Prefab")]
         [SerializeField] private QuestMultipleChoicesItem choiceItemPrefab;
 
         private SO_QuestMultipleChoice dataMultipleChoice;
         private QuestMultipleChoicesItem[] choices;
+        public AnimationHandler QuestAnimationHandler => m_QuestAnimationHandler;
         private int unansweredCorrect = 0;
 
         private VoiceRequest voiceQuestionRequest = new VoiceRequest();
@@ -297,7 +300,13 @@ namespace EduGame
                 }
                 GameManager.Instance.SetNPCDialog(dialog);
             }
-                
+            if (m_Challenged)
+            {
+                if (dataMultipleChoice.HowManySoundConfig && m_QuestAnimationHandler)
+                {
+                    m_QuestAnimationHandler.SetClip(dataMultipleChoice.HowManySoundConfig);
+                }
+            }
         }
 
         /// <summary>

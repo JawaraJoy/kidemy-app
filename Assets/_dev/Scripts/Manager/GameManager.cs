@@ -65,6 +65,9 @@ namespace EduGame
 
         [Header("Audio")]
         [SerializeField] private AudioSource audioSource;
+        [SerializeField]
+        private AudioSource m_Music;
+        public AudioSource Music => m_Music;
 
         [Header("Data")]
         [SerializeField] private Quest questPrefab;
@@ -156,7 +159,7 @@ namespace EduGame
         {
             if(backgroundMusic)
             {
-                audioSource.PlayOneShot(backgroundMusic);
+                m_Music.PlayOneShot(backgroundMusic);
             }
 
             apiManager = GetComponent<APIManager>();
@@ -225,6 +228,7 @@ namespace EduGame
                 {
                     m_ReactionPanel.Init(this);
                 }
+                
             }
             else
             {
@@ -394,6 +398,15 @@ namespace EduGame
         {
             quests[currentIndex].PlayQuestionVoice();
             StartCoroutine(WaitToPlaySoundQuest());
+            PlayHowManySound(quests[currentIndex]);
+        }
+        private void PlayHowManySound(Quest quest)
+        {
+            if (quest is QuestMultipleChoices multipleChoices)
+            {
+                if (multipleChoices.QuestAnimationHandler == null) return;
+                multipleChoices.QuestAnimationHandler.PlayAnimation();
+            }
         }
         public void PlaySoundQuest()
         {
@@ -626,6 +639,10 @@ namespace EduGame
         public virtual void ReloadScene()
         {
             ReloadIframe();
+        }
+        public void PlaySFX(AudioClip audioClip)
+        {
+            m_SFXSource.PlayOneShot(audioClip);
         }
     }
 }

@@ -1,0 +1,687 @@
+fileFormatVersion: 2
+guid: b64fa7581a6d31e48a2e84b363283440
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2501120149625004644
+    second: Bell Hands_0
+  - first:
+      213: -1554860324768848406
+    second: Bell Hands_1
+  - first:
+      213: -4557815271824441210
+    second: Bell Hands_2
+  - first:
+      213: -3519171001205251534
+    second: Bell Hands_3
+  - first:
+      213: 2209526053558529838
+    second: Bell Hands_4
+  - first:
+      213: 9189608891313411274
+    second: Bell Hands_5
+  - first:
+      213: -5081401157529403369
+    second: Bell Hands_6
+  - first:
+      213: 360198966751013641
+    second: Bell Hands_7
+  - first:
+      213: -5921935623936678849
+    second: Bell Hands_8
+  - first:
+      213: 490088039406948718
+    second: Bell Hands_9
+  - first:
+      213: 6753316529783303588
+    second: Bell Hands_10
+  - first:
+      213: -3826450851675452155
+    second: Bell Hands_11
+  - first:
+      213: 1237187218044642010
+    second: Bell Hands_12
+  - first:
+      213: -7953365446736549455
+    second: Bell Hands_13
+  - first:
+      213: 6479634583120264182
+    second: Bell Hands_14
+  - first:
+      213: -8450742377854168174
+    second: Bell Hands_15
+  - first:
+      213: -454536170175001251
+    second: Bell Hands_16
+  - first:
+      213: -6207903279054617977
+    second: Bell Hands_17
+  - first:
+      213: 1231181816431310224
+    second: Bell Hands_18
+  - first:
+      213: 7460171778251728008
+    second: Bell Hands_19
+  - first:
+      213: -5106301681810711010
+    second: Bell Hands_20
+  - first:
+      213: -3425594134446779447
+    second: Bell Hands_21
+  - first:
+      213: 7547579582043264804
+    second: Bell Hands_22
+  - first:
+      213: -3740607509724807222
+    second: Bell Hands_23
+  - first:
+      213: -6035824572269036891
+    second: Bell Hands_24
+  - first:
+      213: 1794355067655679789
+    second: Bell Hands_25
+  - first:
+      213: -7140207108155616256
+    second: Bell Hands_26
+  - first:
+      213: -790583906157296040
+    second: Bell Hands_27
+  - first:
+      213: -8991632971959124958
+    second: Bell Hands_28
+  - first:
+      213: 6866437612294848095
+    second: Bell Hands_29
+  - first:
+      213: -4957666679133969492
+    second: Bell Hands_30
+  - first:
+      213: 6264136807595346935
+    second: Bell Hands_31
+  - first:
+      213: 2892956235544765494
+    second: Bell Hands_32
+  - first:
+      213: 8254550522644865929
+    second: Bell Hands_33
+  - first:
+      213: -8237176160981966236
+    second: Bell Hands_34
+  - first:
+      213: 4801909744149778602
+    second: Bell Hands_35
+  - first:
+      213: 7343699724448390660
+    second: Bell Hands_36
+  - first:
+      213: 283704459932296435
+    second: Bell Hands_37
+  - first:
+      213: -3149568528558738724
+    second: Bell Hands_38
+  - first:
+      213: -8642104876522848230
+    second: Bell Hands_39
+  - first:
+      213: 1412473775664895360
+    second: Bell Hands_40
+  - first:
+      213: 2599826845477993993
+    second: Bell Hands_41
+  - first:
+      213: 3570277667751195305
+    second: Bell Hands_42
+  - first:
+      213: 6564797118808068051
+    second: Bell Hands_43
+  - first:
+      213: 7533491455220338296
+    second: Bell Hands_44
+  - first:
+      213: 5706773167311731393
+    second: Bell Hands_45
+  - first:
+      213: -378304965863014769
+    second: Bell Hands_46
+  - first:
+      213: -1735508689605425935
+    second: Bell Hands_47
+  - first:
+      213: -6334050228192968828
+    second: Bell Hands_48
+  - first:
+      213: 7987304812350566640
+    second: Bell Hands_49
+  - first:
+      213: -528303477428349232
+    second: Bell Hands_50
+  - first:
+      213: -6881458595513527659
+    second: Bell Hands_51
+  - first:
+      213: 7706158887230838270
+    second: Bell Hands_52
+  - first:
+      213: 1031405001938214851
+    second: Bell Hands_53
+  - first:
+      213: -6286078354449951759
+    second: Bell Hands_54
+  - first:
+      213: -1706831643849421651
+    second: Bell Hands_55
+  - first:
+      213: 7835933857412014765
+    second: Bell Hands_56
+  - first:
+      213: -83625087148802205
+    second: Bell Hands_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bell Hands_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1956
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d9705b97c3a4dd0800000000000000
+      internalID: -2501120149625004644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_1
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1956
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae5edcac5c60c6ae0800000000000000
+      internalID: -1554860324768848406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_2
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 1956
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680cd0b98236fb0c0800000000000000
+      internalID: -4557815271824441210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_3
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 1956
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2322e49ae94692fc0800000000000000
+      internalID: -3519171001205251534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1304
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fa3583d30d9ae10800000000000000
+      internalID: 2209526053558529838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_5
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1304
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac4d187199c088f70800000000000000
+      internalID: 9189608891313411274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_6
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 1304
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7108334d19c3b79b0800000000000000
+      internalID: -5081401157529403369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_7
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 1304
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b28a54d0faff400800000000000000
+      internalID: 360198966751013641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 652
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34e5800dee01dda0800000000000000
+      internalID: -5921935623936678849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_9
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 652
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61d489a9742dc600800000000000000
+      internalID: 490088039406948718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_10
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 652
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ade18d6a9998bd50800000000000000
+      internalID: 6753316529783303588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_11
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 652
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50dc46b4937b5eac0800000000000000
+      internalID: -3826450851675452155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad2643c483f5b2110800000000000000
+      internalID: 1237187218044642010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_13
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 0
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9e662d348ff9190800000000000000
+      internalID: -7953365446736549455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_14
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 0
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb3831a2594ce950800000000000000
+      internalID: 6479634583120264182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bell Hands_15
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 0
+        width: 657
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29399afc49ee8ba80800000000000000
+      internalID: -8450742377854168174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5b7c148725d858247ba20772345ca226
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":657.0,"y":652.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Bell Hands_0: -2501120149625004644
+      Bell Hands_1: -1554860324768848406
+      Bell Hands_10: 6753316529783303588
+      Bell Hands_11: -3826450851675452155
+      Bell Hands_12: 1237187218044642010
+      Bell Hands_13: -7953365446736549455
+      Bell Hands_14: 6479634583120264182
+      Bell Hands_15: -8450742377854168174
+      Bell Hands_2: -4557815271824441210
+      Bell Hands_3: -3519171001205251534
+      Bell Hands_4: 2209526053558529838
+      Bell Hands_5: 9189608891313411274
+      Bell Hands_6: -5081401157529403369
+      Bell Hands_7: 360198966751013641
+      Bell Hands_8: -5921935623936678849
+      Bell Hands_9: 490088039406948718
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

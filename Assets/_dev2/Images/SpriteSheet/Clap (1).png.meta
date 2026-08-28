@@ -1,0 +1,766 @@
+fileFormatVersion: 2
+guid: dc34f718e03f1194fa419cb997a4fc5b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4677486222735346023
+    second: Clap (1)_0
+  - first:
+      213: 5518366295914169480
+    second: Clap (1)_1
+  - first:
+      213: -6302993585852964251
+    second: Clap (1)_2
+  - first:
+      213: -7275117646232363219
+    second: Clap (1)_3
+  - first:
+      213: 5162322497777474895
+    second: Clap (1)_4
+  - first:
+      213: 8661847674723909140
+    second: Clap (1)_5
+  - first:
+      213: 4148685415702600923
+    second: Clap (1)_6
+  - first:
+      213: -7449664016264951189
+    second: Clap (1)_7
+  - first:
+      213: 1415606010701013559
+    second: Clap (1)_8
+  - first:
+      213: -3782677252437174994
+    second: Clap (1)_9
+  - first:
+      213: 2849328688931358454
+    second: Clap (1)_10
+  - first:
+      213: -877971530893900180
+    second: Clap (1)_11
+  - first:
+      213: 7499775466884556247
+    second: Clap (1)_12
+  - first:
+      213: -291525139488594854
+    second: Clap (1)_13
+  - first:
+      213: 3141902592350323610
+    second: Clap (1)_14
+  - first:
+      213: 7346487970984733218
+    second: Clap (1)_15
+  - first:
+      213: -3835416152184540391
+    second: Clap (1)_16
+  - first:
+      213: 8593574289684323342
+    second: Clap (1)_17
+  - first:
+      213: -823720912341214780
+    second: Clap (1)_18
+  - first:
+      213: 5680478421353754022
+    second: Clap (1)_19
+  - first:
+      213: 8667453024479412352
+    second: Clap (1)_20
+  - first:
+      213: -3022501399568198023
+    second: Clap (1)_21
+  - first:
+      213: 1009368838369559787
+    second: Clap (1)_22
+  - first:
+      213: 2969854386573664738
+    second: Clap (1)_23
+  - first:
+      213: -3701291157240378992
+    second: Clap (1)_24
+  - first:
+      213: -7227343811015269752
+    second: Clap (1)_25
+  - first:
+      213: 755352324071680795
+    second: Clap (1)_26
+  - first:
+      213: 737949033979333475
+    second: Clap (1)_27
+  - first:
+      213: 4535419144218850323
+    second: Clap (1)_28
+  - first:
+      213: -7019631305073953149
+    second: Clap (1)_29
+  - first:
+      213: -1813481926985968124
+    second: Clap (1)_30
+  - first:
+      213: 1713979750430979118
+    second: Clap (1)_31
+  - first:
+      213: 9213300882097854144
+    second: Clap (1)_32
+  - first:
+      213: -1516363043848447814
+    second: Clap (1)_33
+  - first:
+      213: 1226693346570607806
+    second: Clap (1)_34
+  - first:
+      213: -6514794246262828844
+    second: Clap (1)_35
+  - first:
+      213: -7557660029055028467
+    second: Clap (1)_36
+  - first:
+      213: 2718478738072510518
+    second: Clap (1)_37
+  - first:
+      213: -2675352392735714167
+    second: Clap (1)_38
+  - first:
+      213: -6158790583932565724
+    second: Clap (1)_39
+  - first:
+      213: -4936128536387782321
+    second: Clap (1)_40
+  - first:
+      213: 674428776771081211
+    second: Clap (1)_41
+  - first:
+      213: 1732356351294095659
+    second: Clap (1)_42
+  - first:
+      213: -4182165690995026907
+    second: Clap (1)_43
+  - first:
+      213: -8407698844085199689
+    second: Clap (1)_44
+  - first:
+      213: -1707381039651968383
+    second: Clap (1)_45
+  - first:
+      213: 381655150196541773
+    second: Clap (1)_46
+  - first:
+      213: 6918801718708851218
+    second: Clap (1)_47
+  - first:
+      213: 834043873550522535
+    second: Clap (1)_48
+  - first:
+      213: -7382878366077237667
+    second: Clap (1)_49
+  - first:
+      213: -6521461349712922987
+    second: Clap (1)_50
+  - first:
+      213: 1880385300837635556
+    second: Clap (1)_51
+  - first:
+      213: -8489330074786632277
+    second: Clap (1)_52
+  - first:
+      213: -9083415555381482881
+    second: Clap (1)_53
+  - first:
+      213: 8826142235959624903
+    second: Clap (1)_54
+  - first:
+      213: 7154586513796978420
+    second: Clap (1)_55
+  - first:
+      213: 3970119948890227051
+    second: Clap (1)_56
+  - first:
+      213: 128121158670881313
+    second: Clap (1)_57
+  - first:
+      213: 2660508718010344782
+    second: Clap (1)_58
+  - first:
+      213: -243697468969306310
+    second: Clap (1)_59
+  - first:
+      213: -1095865553696790746
+    second: Clap (1)_60
+  - first:
+      213: -1142968463062499631
+    second: Clap (1)_61
+  - first:
+      213: 3156224785309417117
+    second: Clap (1)_62
+  - first:
+      213: 2844489369333931367
+    second: Clap (1)_63
+  - first:
+      213: -624127855770180018
+    second: Clap (1)_64
+  - first:
+      213: 8687176112119827036
+    second: Clap (1)_65
+  - first:
+      213: 2747105862576340834
+    second: Clap (1)_66
+  - first:
+      213: -3771503243453298953
+    second: Clap (1)_67
+  - first:
+      213: 5541897991878596454
+    second: Clap (1)_68
+  - first:
+      213: -1604896416215648192
+    second: Clap (1)_69
+  - first:
+      213: 1415093226077608820
+    second: Clap (1)_70
+  - first:
+      213: -9171179661341535549
+    second: Clap (1)_71
+  - first:
+      213: 7394737576734920523
+    second: Clap (1)_72
+  - first:
+      213: -4572668444247988449
+    second: Clap (1)_73
+  - first:
+      213: -5437461680306086867
+    second: Clap (1)_74
+  - first:
+      213: 3017368985375155606
+    second: Clap (1)_75
+  - first:
+      213: -6116962051551764667
+    second: Clap (1)_76
+  - first:
+      213: 4739668246873116334
+    second: Clap (1)_77
+  - first:
+      213: -196714977329678112
+    second: Clap (1)_78
+  - first:
+      213: 3688572636729956212
+    second: Clap (1)_79
+  - first:
+      213: 7070237215750331451
+    second: Clap (1)_80
+  - first:
+      213: 5665357700100685517
+    second: Clap (1)_81
+  - first:
+      213: -2365749879540283736
+    second: Clap (1)_82
+  - first:
+      213: 9006690107851204204
+    second: Clap (1)_83
+  - first:
+      213: -1546626098970376521
+    second: Clap (1)_84
+  - first:
+      213: 1346309097344802025
+    second: Clap (1)_85
+  - first:
+      213: 3774175710140302117
+    second: Clap (1)_86
+  - first:
+      213: -5035212407053366035
+    second: Clap (1)_87
+  - first:
+      213: -3929454260141763892
+    second: Clap (1)_88
+  - first:
+      213: 9099657670275738565
+    second: Clap (1)_89
+  - first:
+      213: -1175084757306889969
+    second: Clap (1)_90
+  - first:
+      213: 6711378287209688900
+    second: Clap (1)_91
+  - first:
+      213: 289541034012423000
+    second: Clap (1)_92
+  - first:
+      213: -5932485865100426949
+    second: Clap (1)_93
+  - first:
+      213: -3352392320623900487
+    second: Clap (1)_94
+  - first:
+      213: 1091787754779394856
+    second: Clap (1)_95
+  - first:
+      213: -4927188711574984947
+    second: Clap (1)_96
+  - first:
+      213: -3816366863297458025
+    second: Clap (1)_97
+  - first:
+      213: -5994857780523463177
+    second: Clap (1)_98
+  - first:
+      213: 3275898612509214397
+    second: Clap (1)_99
+  - first:
+      213: 4575060112298528198
+    second: Clap (1)_100
+  - first:
+      213: 508742547978753758
+    second: Clap (1)_101
+  - first:
+      213: 3226210434582157702
+    second: Clap (1)_102
+  - first:
+      213: -1635055076299702027
+    second: Clap (1)_103
+  - first:
+      213: 5336791503315577071
+    second: Clap (1)_104
+  - first:
+      213: -5395265026332117174
+    second: Clap (1)_105
+  - first:
+      213: -7679240805733205113
+    second: Clap (1)_106
+  - first:
+      213: -836820386384199291
+    second: Clap (1)_107
+  - first:
+      213: 6907025902110458925
+    second: Clap (1)_108
+  - first:
+      213: -3432179207475089920
+    second: Clap (1)_109
+  - first:
+      213: 2974684288032606764
+    second: Clap (1)_110
+  - first:
+      213: 4047068771399637583
+    second: Clap (1)_111
+  - first:
+      213: -2236970556417887366
+    second: Clap (1)_112
+  - first:
+      213: 8048566371740935648
+    second: Clap (1)_113
+  - first:
+      213: 8511961112777536114
+    second: Clap (1)_114
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Clap (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2034
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7698cebefe4c9e040800000000000000
+      internalID: 4677486222735346023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_1
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 2034
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 884c37898ec259c40800000000000000
+      internalID: 5518366295914169480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_2
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 2034
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5622ba57ab44788a0800000000000000
+      internalID: -6302993585852964251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1356
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2fd425cb07990b90800000000000000
+      internalID: -7275117646232363219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_4
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 1356
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d9808e5f044a740800000000000000
+      internalID: 5162322497777474895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 1356
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e36765190153870800000000000000
+      internalID: 8661847674723909140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 678
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc1cc7a767139930800000000000000
+      internalID: 4148685415702600923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_7
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 678
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a84861c0a7d9890800000000000000
+      internalID: -7449664016264951189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 678
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732edb1aa2e35a310800000000000000
+      internalID: 1415606010701013559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e251884941b318bc0800000000000000
+      internalID: -3782677252437174994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_10
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 0
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f64510a859da8720800000000000000
+      internalID: 2849328688931358454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clap (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 0
+        width: 965
+        height: 678
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66c92a5b81d0d3f0800000000000000
+      internalID: -877971530893900180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ef97347ebee781149ab388f078038679
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":4.0},"gridSpriteSize":{"x":965.0,"y":678.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Clap (1)_0: 4677486222735346023
+      Clap (1)_1: 5518366295914169480
+      Clap (1)_10: 2849328688931358454
+      Clap (1)_11: -877971530893900180
+      Clap (1)_2: -6302993585852964251
+      Clap (1)_3: -7275117646232363219
+      Clap (1)_4: 5162322497777474895
+      Clap (1)_5: 8661847674723909140
+      Clap (1)_6: 4148685415702600923
+      Clap (1)_7: -7449664016264951189
+      Clap (1)_8: 1415606010701013559
+      Clap (1)_9: -3782677252437174994
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
