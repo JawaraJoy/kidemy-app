@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 008A
   title: StoryAdventure
   category: 1
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: 'What did Bobo put on his head? '
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 0cb9351c87093d5ac99fe62a0f4be082, type: 3}
   autoSubmit: 0
   score: 10
@@ -26,22 +31,26 @@ MonoBehaviour:
   choices:
   - image: {fileID: 21300000, guid: cf94f4d3dcd379c6b9042701bdd54370, type: 3}
     text: Hat
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 130065d133ff4d7dd86a14caf39c34fd, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 0ec545cc67f39c9a9a63e89909fae3bc, type: 3}
     text: Shoes
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: b5ea97238fb27a34eb314bb1f87171ca, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: b4953e5ae00f1354fbdb2edac75ce939, type: 3}
-    text: Stick
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 33579c494f651541ebf46d6d110d37ab, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: e865230cdd0ed6ecda2e83f745524201, type: 3}
     text: Bag
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 356c14cd13aff90d388ecba22186b0b8, type: 3}
     isAnswer: 0
   timer: 0

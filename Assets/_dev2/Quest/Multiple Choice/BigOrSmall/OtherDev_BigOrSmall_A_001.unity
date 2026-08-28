@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!82 &486638627 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3216478807956348711, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-  m_PrefabInstance: {fileID: 1920977810}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1920977810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,22 +130,6 @@ PrefabInstance:
     - target: {fileID: 25798673193593684, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_Name
       value: Stage_OtherDev
-      objectReference: {fileID: 0}
-    - target: {fileID: 2218919526186486032, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2218919526186486032, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2218919526186486032, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -77.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2218919526186486032, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2659243052276867537, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -216,26 +195,6 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 35
       objectReference: {fileID: 0}
-    - target: {fileID: 6877973999667196023, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6877973999667196023, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_RightSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 437852055461a7f40ae4efe7cb9dda56, type: 3}
-    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_WrongSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 01f4952eed488f9419d400c81386b808, type: 3}
-    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
-      propertyPath: m_SFXSource
-      value: 
-      objectReference: {fileID: 486638627}
     - target: {fileID: 7898963286924964138, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

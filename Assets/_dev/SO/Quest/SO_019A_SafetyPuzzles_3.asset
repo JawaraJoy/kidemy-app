@@ -15,29 +15,35 @@ MonoBehaviour:
   id: 019A
   title: Safety Puzzles
   category: 3
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 21300000, guid: 8c34520ddef300ddb910bc710e4cd828, type: 3}
     text: Which is the safest choice?
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: a41b84f2bf9de2ec9a66444f71d815c9, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: a7cec4879cb4f64a68543ebeed635a70, type: 3}
+  - image: {fileID: 21300000, guid: 767554dac250b9f9ba038fffb99b9550, type: 3}
     text: Ask a grown-up for help
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 97e8791842436d1ed88824d4e33cae41, type: 3}
     isAnswer: 1
-  - image: {fileID: 21300000, guid: e7d9678a073efbeb992fd5caf801dde7, type: 3}
+  - image: {fileID: 21300000, guid: 759ac299fad563aefa4c0cad044141d0, type: 3}
     text: Run into the street
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 51ca7db9b1ae872b2bf83d91249cbc5c, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: c65259814b41a76c886b447387569791, type: 3}
-    text: Close your eyes and cross
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 69c61c81539f106d0823308968e8577a, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

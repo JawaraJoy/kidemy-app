@@ -73,7 +73,11 @@ namespace EduGame
         public virtual void PlayQuestionVoice(AudioClip audioClip)
         {
             if(audioSource)
+            {
+                if(audioSource.isPlaying) audioSource.Stop();
+
                 audioSource.PlayOneShot(audioClip);
+            }
         }
 
         public virtual void OnAnswered(bool result, bool submit = true)
@@ -91,7 +95,7 @@ namespace EduGame
 
         public virtual void Reset()
         {
-            PlayQuestionVoice();
+            Invoke(nameof(PlayQuestionVoice), 1f);
         }
 
         public virtual void Disabled()

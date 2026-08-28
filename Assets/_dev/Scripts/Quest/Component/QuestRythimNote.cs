@@ -68,7 +68,7 @@ namespace EduGame
             {
                 // 1. Calculate the next target position using fixedDeltaTime
                 Vector2 currentPosition = rb.position;
-                Vector2 targetPosition = currentPosition + (Vector2.left * (speed * 5000) * Time.fixedDeltaTime);
+                Vector2 targetPosition = currentPosition + (Vector2.left * (speed * 50) * Time.fixedDeltaTime);
 
                 // 2. Teleport the physics body smoothly to the new position
                 rb.MovePosition(targetPosition);

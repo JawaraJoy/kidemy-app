@@ -170,6 +170,8 @@ namespace EduGame
             else if (appraisal >= 0.5)
                 star = 2;
 
+            Debug.Log("QuestColoring appraisal: " + appraisal + " => star: " + star);
+
             base.Submit(star);
         }
 
