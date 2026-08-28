@@ -108,7 +108,7 @@ namespace EduGame
             yield return new WaitForSeconds(1.5f);
             int loopCount = clipConfig.LoopTime;
             AudioSource music = GameManager.Instance.Music;
-            music.volume = 0.2f;
+            music.volume = 0.4f;
             for (int i = 0; i < loopCount; i++)
             {
                 m_Animator.Play(animationState.StateHash);

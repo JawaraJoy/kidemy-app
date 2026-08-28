@@ -6,8 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_dev2/Quest/Multiple Choice/Island_3_HowManySound/OtherDev_Island_3_HowManySound_A_001.unity
-    guid: 12446c6a9043cee479b1180363f4c3e2
+    path: Assets/_dev2/Quest/Multiple Choice/Island_5_Sound Quest/OtherDev_Sound
+      Quest_A_001.unity
+    guid: 95c9c7b8f4f2b074a8e30ba24a27eaac
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

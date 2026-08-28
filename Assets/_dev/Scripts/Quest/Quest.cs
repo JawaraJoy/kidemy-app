@@ -99,14 +99,14 @@ namespace EduGame
                 yield return new WaitForSeconds(quest.SoundQuest.length);
             }
         }
-
-        // direct no delay
+        
         public virtual void PlayQuestionVoice(AudioClip audioClip)
         {
             //StartCoroutine(PlayingQuestionVoice(audioClip));
             if (audioSource)
             {
                 audioSource.PlayOneShot(audioClip);
+                GameManager.Instance.StartCoroutine(ReduceMusicAWhile(audioClip));
                 if (data is SO_QuestMultipleChoice quest)
                 {
                     if (quest.SoundQuest != null)
@@ -116,6 +116,14 @@ namespace EduGame
                     }
                 }
             }
+        }
+        private IEnumerator ReduceMusicAWhile(AudioClip audioClip)
+        {
+            AudioSource music = GameManager.Instance.Music;
+            float durationvoice = audioClip.length;
+            music.volume = 0.4f;
+            yield return new WaitForSeconds(durationvoice);
+            music.volume = 1f;
         }
         private IEnumerator PlaySoundQuestAfterQuestionVoiceDone(float delay)
         {

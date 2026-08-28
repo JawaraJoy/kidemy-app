@@ -194,12 +194,12 @@ namespace EduGame
                     if(parameters.ContainsKey("bgm_volume"))
                     {
                         int volume = int.Parse(parameters["bgm_volume"]);
-                        bgmSource.volume = volume / 10f;
+                        m_Music.volume = volume / 10f;
                         audioSource.volume = volume / 10f;
                     }
                     else
                     {
-                        bgmSource.volume = 1f;
+                        m_Music.volume = 1f;
                         audioSource.volume = 1f;
                     }
                 }
