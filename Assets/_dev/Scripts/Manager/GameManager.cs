@@ -157,7 +157,7 @@ namespace EduGame
         
         void Start()
         {
-            if(backgroundMusic)
+            if(backgroundMusic && m_Music)
             {
                 m_Music.PlayOneShot(backgroundMusic);
             }
