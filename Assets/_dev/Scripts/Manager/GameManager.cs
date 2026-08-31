@@ -125,6 +125,7 @@ namespace EduGame
         private string APIInfoURL = "https://stg-be.kimee.io/api/v1/external/games";
         private string APIResultURL = "https://stg-be.kimee.io/api/v1/external/games/progress";
         private string gameURL = "https://stg.kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
+        private HandTutorial m_HandTutorial;
 
         public Canvas Canvas { get; private set; }
         public AudioSource AudioSource => audioSource;
@@ -139,6 +140,8 @@ namespace EduGame
         void Awake()
         {
             Canvas = GetComponentInParent<Canvas>();
+
+            m_HandTutorial = GetComponentInChildren<HandTutorial>();
 
             if (!Instance)
                 Instance = this;
@@ -481,6 +484,9 @@ namespace EduGame
         }
         public virtual void Submit(int star = 0)
         {
+            if(m_HandTutorial)
+                m_HandTutorial.Disable();
+            
             StopTimer();
 
             if (star < 1)
@@ -672,6 +678,19 @@ namespace EduGame
         public void PlaySFX(AudioClip audioClip)
         {
             m_SFXSource.PlayOneShot(audioClip);
+        }
+
+        public void ShowTutorial(RectTransform endPos)
+        {
+            ShowTutorial(npcDialog.rectTransform, endPos);
+        }
+
+        public void ShowTutorial(RectTransform startPos, RectTransform endPos)
+        {
+            if (m_HandTutorial && currentIndex == 0)
+            {
+                m_HandTutorial.PlayTutorial(startPos, endPos, Canvas.transform);
+            }
         }
     }
 }

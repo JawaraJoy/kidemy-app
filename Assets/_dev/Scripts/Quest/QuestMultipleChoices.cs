@@ -36,6 +36,8 @@ namespace EduGame
 
         private List<Image> m_SpawnedmultipleImages = new List<Image>();
 
+        private QuestMultipleChoicesItem correctChoice;
+
         private TextEffect m_TextEffect;
         protected override void Start()
         {
@@ -144,6 +146,10 @@ namespace EduGame
                     {
                         choices[i] = InstantiateItem(choicePrefab, i);
                         choices[i].SetChoice(dataMultipleChoice.Choices[i]);
+
+                        if(dataMultipleChoice.Choices[i].IsAnswer)
+                            correctChoice = choices[i];
+                    
                     }
                 }
                 if (m_QuestName)
@@ -163,6 +169,9 @@ namespace EduGame
                     {
                         choices[i] = InstantiateItem(choices[0], i);
                         choices[i].SetChoice(dataMultipleChoice.Choices[i]);
+
+                        if(dataMultipleChoice.Choices[i].IsAnswer)
+                            correctChoice = choices[i];
                     }
                 }
             }
@@ -378,6 +387,11 @@ namespace EduGame
             }
             else if (requestId.IndexOf("_question") > 0)
                 data.Question.SetAudio(clip);
+        }
+
+        public override void ShowTutorial()
+        {
+            GameManager.Instance.ShowTutorial(correctChoice ? correctChoice.Rect : choices[0].Rect);
         }
     }
 }

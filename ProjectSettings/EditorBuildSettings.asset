@@ -6,9 +6,56 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_1_BigOrSmall/OtherDev_BigOrSmall_A_001.unity
+    guid: c8da40d06659f6e479ac565ee8efd372
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_5_ChooseHealthy/OtherDev_ChooseHealthy_A_001.unity
+    guid: 57c35143a00dc5f40ac03d3b8cc23a0f
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_4_CompassionateChoice/OtherDev_CompassionateChoice_A_001.unity
+    guid: 6271fdd32c5be374ab00210c11f4b2d1
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_4_Feed My Friend/OtherDev_Feed
+      My Friend_A_001.unity
+    guid: dd4acb19491815049913fb74325c37cf
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_4_Find the friend/OtherDev_Find
+      the friend_A_001.unity
+    guid: b539b143ffe2dc24bacb3601cd3f3199
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_3_Find My Shadow/OtherDev_FindMyShadow_A_001.unity
+    guid: 18b1b31b59f6408438ad1a9735ab8c42
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_2_FindThePair/OtherDev_FindThePair_A_001.unity
+    guid: d09257ed79e2f4140bc62bd2b7ab0f11
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_1_HowManyFrog/OtherDev_HowManyFrog_A_001.unity
+    guid: 969dfc02c15fc9f4d8a9436bd5c1c14a
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_3_HowManySound/OtherDev_Island_3_HowManySound_A_001.unity
+    guid: 12446c6a9043cee479b1180363f4c3e2
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_4_KIndnessQuest/OtherDev_KIndnessQuest_A_001.unity
+    guid: 0c9defe0b4e2a2f4582504514d489e00
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_2_Letter Hunt/OtherDev_LetterHunt_A_001.unity
+    guid: fab35969f63eec646887c8718f974d9d
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_3_MatchTheColor/OtherDev_MatchTheColor_A_001.unity
+    guid: 844ad534c590c5c43a3620e4c917f5a3
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_2_NameThePart/OtherDev_NameThePart_A_001.unity
+    guid: 6a29c1bab15eb0f4ab0c789a0a049296
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_5_Sort Color/OtherDev_Sort Color_A_001.unity
+    guid: 4e041f3a878d26b449f7103dbca1a7fc
+  - enabled: 1
     path: Assets/_dev2/Quest/Multiple Choice/Island_5_Sound Quest/OtherDev_Sound
       Quest_A_001.unity
     guid: 95c9c7b8f4f2b074a8e30ba24a27eaac
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_1_Whichone is Different/OtherDev_WhichOneIs_A_001.unity
+    guid: c73f5bb2aae4e5e43b31a241c3f41ff4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

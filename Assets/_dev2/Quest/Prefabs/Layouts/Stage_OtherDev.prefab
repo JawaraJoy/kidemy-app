@@ -883,6 +883,7 @@ GameObject:
   - component: {fileID: 4351858467139440870}
   - component: {fileID: 4122820320026329903}
   - component: {fileID: 1186740115548988749}
+  - component: {fileID: 3890148015257257948}
   m_Layer: 5
   m_Name: Challenge
   m_TagString: Untagged
@@ -955,11 +956,13 @@ MonoBehaviour:
   m_ResultPanelPrefab: {fileID: 0}
   m_RightReaction: {fileID: 0}
   m_WrongReaction: {fileID: 0}
+  m_NeutralReaction: {fileID: 0}
   m_ChallengeConfig: {fileID: 11400000, guid: 0b39a487b231b0c45862f76c57f5f8ef, type: 2}
   m_ChallengeContainer: {fileID: 8316537704964092079}
   m_PanelContainer: {fileID: 8068046501265830782}
   m_RightSFX: {fileID: 8300000, guid: 437852055461a7f40ae4efe7cb9dda56, type: 3}
   m_WrongSFX: {fileID: 8300000, guid: 01f4952eed488f9419d400c81386b808, type: 3}
+  m_NeutralSFX: {fileID: 0}
   m_SFXSource: {fileID: 3216478807956348711}
   m_OnQuestStart:
     m_PersistentCalls:
@@ -1125,6 +1128,22 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+--- !u!114 &3890148015257257948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249691630089632020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432ef62a8a3ef5c65987f1f63e5276d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandTutorial
+  handImagePrefab: {fileID: 3862303149021580110, guid: 132752680a4ebba42a68ba80113f1e60, type: 3}
+  repeat: 5
+  moveDuration: 1.2
+  fadeDuration: 0.4
 --- !u!1 &1529650648428675418
 GameObject:
   m_ObjectHideFlags: 0

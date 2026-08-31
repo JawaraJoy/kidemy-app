@@ -144,9 +144,16 @@ namespace EduGame
             GameManager.Instance.Submit(star);
         }
 
+        public virtual void ShowTutorial()
+        {
+            GameManager.Instance.ShowTutorial(null);
+        }
+
         public virtual void Reset()
         {
             //PlayQuestionVoice();
+
+            Invoke(nameof(ShowTutorial), 2f);
         }
 
         public virtual void Disabled()
