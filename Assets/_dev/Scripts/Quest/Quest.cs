@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace EduGame
@@ -67,7 +68,10 @@ namespace EduGame
             Debug.Log(data.Question.Audio);
 
             if(data.Question.Audio)
+            {
                 PlayQuestionVoice(data.Question.Audio);
+                StartCoroutine(LowerBGMVolume(data.Question.Audio.length));
+            }
         }
 
         public virtual void PlayQuestionVoice(AudioClip audioClip)
@@ -77,7 +81,20 @@ namespace EduGame
                 if(audioSource.isPlaying) audioSource.Stop();
 
                 audioSource.PlayOneShot(audioClip);
+
+                StartCoroutine(LowerBGMVolume(audioClip.length));
             }
+        }
+
+        private IEnumerator LowerBGMVolume(float duration = 2f)
+        {
+            GameManager.Instance.BGMSource.volume = 0.2f;
+
+            yield return new WaitForSeconds(duration + 0.2f);
+            
+            GameManager.Instance.BGMSource.volume = 1f;
+
+            yield return null;
         }
 
         public virtual void OnAnswered(bool result, bool submit = true)
@@ -96,6 +113,12 @@ namespace EduGame
         public virtual void Reset()
         {
             Invoke(nameof(PlayQuestionVoice), 1f);
+            Invoke(nameof(ShowTutorial), 1f);
+        }
+
+        public virtual void ShowTutorial()
+        {
+            GameManager.Instance.ShowTutorial(null);
         }
 
         public virtual void Disabled()

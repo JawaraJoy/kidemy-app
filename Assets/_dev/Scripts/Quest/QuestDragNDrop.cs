@@ -345,5 +345,13 @@ namespace EduGame
             else if (requestId.IndexOf("_question") > 0)
                 data.Question.SetAudio(clip);
         }
+
+        public override void ShowTutorial()
+        {
+            if(slots != null && slots.Length > 0 && items != null && items.Length > 0)
+            {
+                GameManager.Instance.ShowTutorial(items[0].Rect, slots[0].Rect);
+            }
+        }
     }
 }

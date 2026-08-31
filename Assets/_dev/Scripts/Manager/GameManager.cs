@@ -124,20 +124,24 @@ namespace EduGame
         private string APIInfoURL = "https://stg-be.kimee.io/api/v1/external/games";
         private string APIResultURL = "https://stg-be.kimee.io/api/v1/external/games/progress";
         private string gameURL = "https://stg.kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
+        private HandTutorial tutorial;
 
         public Canvas Canvas { get; private set; }
+        public AudioSource BGMSource => bgmSource;
         public AudioSource AudioSource => audioSource;
         public float ResultTime => recordedTime;
         public Color ColorTheme { get; private set; }
         public APIManager API => apiManager;
         public AssetManager Asset => assetManager;
-
+        
         public static GameManager Instance { get; private set; }
         public ChallengeConfig ChallengeConfig => m_ChallengeConfig;
 
         void Awake()
         {
             Canvas = GetComponentInParent<Canvas>();
+
+            tutorial = GetComponentInChildren<HandTutorial>();
 
             if (!Instance)
                 Instance = this;
@@ -159,8 +163,6 @@ namespace EduGame
         
         void Start()
         {
-            Debug.Log(backgroundMusic);
-
             if(backgroundMusic)
             {
                 bgmSource.clip = backgroundMusic;
@@ -195,12 +197,12 @@ namespace EduGame
                     if(parameters.ContainsKey("bgm_volume"))
                     {
                         int volume = int.Parse(parameters["bgm_volume"]);
-                        bgmSource.volume = volume / 10f;
-                        audioSource.volume = volume / 10f;
+                        bgmSource.volume = volume * 0.07f;
+                        audioSource.volume = (volume / 10f);
                     }
                     else
                     {
-                        bgmSource.volume = 1f;
+                        bgmSource.volume = 0.7f;
                         audioSource.volume = 1f;
                     }
                 }
@@ -460,6 +462,9 @@ namespace EduGame
         }
         public virtual void Submit(int star = 0)
         {
+            if(tutorial)
+                tutorial.Disable();
+
             StopTimer();
 
             if (star < 1)
@@ -647,6 +652,19 @@ namespace EduGame
         public virtual void ReloadScene()
         {
             ReloadIframe();
+        }
+
+        public void ShowTutorial(RectTransform endPos)
+        {
+            ShowTutorial(npcDialog.rectTransform, endPos);
+        }
+
+        public void ShowTutorial(RectTransform startPos, RectTransform endPos)
+        {
+            if (tutorial && currentIndex == 0)
+            {
+                tutorial.PlayTutorial(startPos, endPos, Canvas.transform);
+            }
         }
     }
 }

@@ -883,6 +883,7 @@ GameObject:
   - component: {fileID: 4351858467139440870}
   - component: {fileID: 4122820320026329903}
   - component: {fileID: 1186740115548988749}
+  - component: {fileID: 8173494594886890959}
   m_Layer: 5
   m_Name: Challenge
   m_TagString: Untagged
@@ -1115,6 +1116,21 @@ MonoBehaviour:
       m_OnCompleteTweening:
         m_PersistentCalls:
           m_Calls: []
+--- !u!114 &8173494594886890959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249691630089632020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48863350a2e1acf78b21a6c5d7bb1a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandTutorial
+  handImagePrefab: {fileID: 3862303149021580110, guid: 132752680a4ebba42a68ba80113f1e60, type: 3}
+  moveDuration: 1.2
+  fadeDuration: 0.4
 --- !u!1 &1529650648428675418
 GameObject:
   m_ObjectHideFlags: 0
@@ -9376,7 +9392,7 @@ AudioSource:
   m_GameObject: {fileID: 7265077916082229067}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: c0cd647da6a7d16e39b7b997a1dc9882, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -9736,7 +9752,7 @@ AudioSource:
   m_GameObject: {fileID: 7578329266500023178}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: c0cd647da6a7d16e39b7b997a1dc9882, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0

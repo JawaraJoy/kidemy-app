@@ -26,6 +26,8 @@ namespace EduGame
         private SO_QuestMultipleChoice dataMultipleChoice;
         private QuestMultipleChoicesItem[] choices;
         private int unansweredCorrect = 0;
+        private QuestMultipleChoicesItem correctChoice;
+
 
         private VoiceRequest voiceQuestionRequest = new VoiceRequest();
 
@@ -153,6 +155,9 @@ namespace EduGame
                     {
                         choices[i] = InstantiateItem(choices[0], i);
                         choices[i].SetChoice(dataMultipleChoice.Choices[i]);
+
+                        if(dataMultipleChoice.Choices[i].IsAnswer)
+                            correctChoice = choices[i];
                     }
                 }
             }
@@ -180,6 +185,8 @@ namespace EduGame
 
         IEnumerator PlayChoicesVoiceCO()
         {
+            GameManager.Instance.BGMSource.volume = 0.4f;
+
             yield return new WaitWhile(() => audioSource.isPlaying);
 
             yield return new WaitForSeconds(1);
@@ -193,10 +200,21 @@ namespace EduGame
                     yield return new WaitForSeconds(0.5f);
 
                     audioSource.PlayOneShot(choice.Audio);
+
+                    yield return new WaitForSeconds(choice.Audio.length);
                 }
             }
 
+            yield return new WaitForSeconds(0.4f);
+
+            GameManager.Instance.BGMSource.volume = 1f;
+
             yield return null;
+        }
+
+        public override void ShowTutorial()
+        {
+            GameManager.Instance.ShowTutorial(correctChoice.Rect);
         }
 
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)

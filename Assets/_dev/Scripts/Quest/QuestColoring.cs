@@ -191,5 +191,15 @@ namespace EduGame
             if (!string.IsNullOrEmpty(dataQuestColoring.Text))
                 GameManager.Instance.SetNPCDialog(dataQuestColoring.Text);
         }
+
+        public override void ShowTutorial()
+        {
+            if(palettes != null && palettes.Length > 0 && fields != null && fields.Length > 0)
+            {
+                RectTransform fieldRect = fields[0].transform.GetComponent<RectTransform>();
+
+                GameManager.Instance.ShowTutorial(palettes[0].Rect, fieldRect);
+            }
+        }
     }
 }

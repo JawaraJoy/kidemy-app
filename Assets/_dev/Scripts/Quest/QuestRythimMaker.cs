@@ -158,5 +158,16 @@ namespace EduGame
             if (dataRythimMaker != null && !string.IsNullOrEmpty(dataRythimMaker.Question.Text))
                 GameManager.Instance.SetNPCDialog(dataRythimMaker.Question.Text);
         }
+
+        public override void ShowTutorial()
+        {
+            QuestRythimBeat beat = GetComponentInChildren<QuestRythimBeat>();
+            
+            if(beat)
+            {
+                RectTransform buttonRect = beat.GetComponent<RectTransform>();
+                GameManager.Instance.ShowTutorial(buttonRect);
+            }
+        }
     }
 }
