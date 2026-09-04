@@ -126,6 +126,7 @@ namespace EduGame
         private string gameURL = "https://stg.kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
         private HandTutorial tutorial;
 
+        public float Volume { get; private set; } = 1f;
         public Canvas Canvas { get; private set; }
         public AudioSource BGMSource => bgmSource;
         public AudioSource AudioSource => audioSource;
@@ -196,15 +197,15 @@ namespace EduGame
 
                     if(parameters.ContainsKey("bgm_volume"))
                     {
-                        int volume = int.Parse(parameters["bgm_volume"]);
-                        bgmSource.volume = volume * 0.07f;
-                        audioSource.volume = (volume / 10f);
+                        Volume = int.Parse(parameters["bgm_volume"]) / 10;    
                     }
                     else
                     {
-                        bgmSource.volume = 0.7f;
-                        audioSource.volume = 1f;
+                        Volume = 1f;
                     }
+
+                    bgmSource.volume = Volume;
+                    audioSource.volume = Volume;
                 }
                 LogToBrowser("Home URL: " + baseURL);
 #endif

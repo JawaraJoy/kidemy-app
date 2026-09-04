@@ -88,11 +88,11 @@ namespace EduGame
 
         private IEnumerator LowerBGMVolume(float duration = 2f)
         {
-            GameManager.Instance.BGMSource.volume = 0.2f;
+            GameManager.Instance.BGMSource.volume = 0.4f;
 
             yield return new WaitForSeconds(duration + 0.2f);
             
-            GameManager.Instance.BGMSource.volume = 1f;
+            GameManager.Instance.BGMSource.volume = GameManager.Instance.Volume;
 
             yield return null;
         }
