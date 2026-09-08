@@ -121,9 +121,9 @@ namespace EduGame
         private ResultItem[] result;
         private APIManager apiManager;
         private AssetManager assetManager;
-        private string APIInfoURL = "https://stg-be.kimee.io/api/v1/external/games";
-        private string APIResultURL = "https://stg-be.kimee.io/api/v1/external/games/progress";
-        private string gameURL = "https://stg.kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
+        private string APIInfoURL = "https://be.kimee.io/api/v1/external/games";
+        private string APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
+        private string gameURL = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
         private HandTutorial tutorial;
 
         public float Volume { get; private set; } = 1f;
