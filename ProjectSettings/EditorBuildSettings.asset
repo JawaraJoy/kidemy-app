@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/_dev2/Quest/Multiple Choice/Island_5_ChooseHealthy/OtherDev_ChooseHealthy_A_001.unity
     guid: 57c35143a00dc5f40ac03d3b8cc23a0f
   - enabled: 1
-    path: Assets/_dev2/Quest/Multiple Choice/Island_4_CompassionateChoice/OtherDev_CompassionateChoice_A_001.unity
-    guid: 6271fdd32c5be374ab00210c11f4b2d1
-  - enabled: 1
     path: Assets/_dev2/Quest/Multiple Choice/Island_4_Feed My Friend/OtherDev_Feed
       My Friend_A_001.unity
     guid: dd4acb19491815049913fb74325c37cf

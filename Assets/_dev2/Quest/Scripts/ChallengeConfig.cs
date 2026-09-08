@@ -21,6 +21,8 @@ namespace EduGame
         private ResultPanel m_ResultPanelPrefab;
         [Header("Configs")]
         [SerializeField]
+        private SO_Character m_Character;
+        [SerializeField]
         private SceneConfig m_SceneConfig;
         [SerializeField]
         private ReactionConfig m_RightReaction;
@@ -29,6 +31,7 @@ namespace EduGame
         [SerializeField]
         private SO_Quest[] m_QuestConfigs;
 
+        public SO_Character Character => m_Character;
         public QuestComponent ChoicePrefab => m_ChoicePrefab;
         public SceneConfig SceneConfig => m_SceneConfig;
         public Sprite Background => m_Background;

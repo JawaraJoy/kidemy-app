@@ -29,6 +29,9 @@ MonoBehaviour:
   autoSubmit: 0
   score: 10
   tresholdTime: 0
+  m_RepeatSoundQuest: 1
+  m_SoundQuest: {fileID: 0}
+  m_HowManySoundConfig: {fileID: 0}
   choices:
   - image: {fileID: 21300000, guid: 96eef00ea1980404d9c19d4d906abdb9, type: 3}
     text: Leg
@@ -37,7 +40,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 0.31271622, g: 0.5323337, b: 0.9924528, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 858caca78a8274e418ce9e1614b4a743, type: 3}
     text: Mouth
@@ -46,7 +49,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 0.9333334, g: 0.509804, b: 0.9333334, a: 1}
-    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 21300000, guid: e00bd0c788dd13d46a2bdac82993b952, type: 3}
     text: Ear
@@ -55,7 +58,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 0.5176471, g: 0.4392157, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    audio: {fileID: 0}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 24adf5f2fb16e124592a13d4a355fa3b, type: 3}
     text: Hand
@@ -64,7 +67,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 0, b: 0.20157957, a: 1}
-    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

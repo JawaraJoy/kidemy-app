@@ -29,7 +29,9 @@ MonoBehaviour:
   autoSubmit: 0
   score: 10
   tresholdTime: 0
+  m_RepeatSoundQuest: 1
   m_SoundQuest: {fileID: 0}
+  m_HowManySoundConfig: {fileID: 0}
   choices:
   - image: {fileID: 21300000, guid: 7969c842357dff743af3057632bf264b, type: 3}
     text: Pizza
@@ -38,7 +40,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 2c77895283ab94843a02eb29ae24b82d, type: 3}
     text: Banana
@@ -47,7 +49,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    audio: {fileID: 0}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 761d9a64a5d66694e94d2062ebb459ea, type: 3}
     text: Soda
@@ -56,7 +58,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

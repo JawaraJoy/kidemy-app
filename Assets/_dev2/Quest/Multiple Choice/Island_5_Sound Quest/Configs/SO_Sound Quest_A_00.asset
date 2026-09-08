@@ -29,7 +29,9 @@ MonoBehaviour:
   autoSubmit: 0
   score: 10
   tresholdTime: 0
+  m_RepeatSoundQuest: 1
   m_SoundQuest: {fileID: 8300000, guid: c05e9bbcff024c204bb78379064bcbe3, type: 3}
+  m_HowManySoundConfig: {fileID: 0}
   choices:
   - image: {fileID: 21300000, guid: c845515025f7daf469734ec0f3f46859, type: 3}
     text: Blue

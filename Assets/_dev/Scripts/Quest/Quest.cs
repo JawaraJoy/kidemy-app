@@ -35,10 +35,18 @@ namespace EduGame
             
             //if(npcController)
             //    GameManager.Instance.SetNPC(npcController);
-
-            if(character && character.CharacterController)
-                GameManager.Instance.SetNPC(character.CharacterController);
-
+            if (m_Challenged != null)
+            {
+                if (m_Challenged.Character != null)
+                {
+                    GameManager.Instance.SetNPC(m_Challenged.Character.CharacterController);
+                }
+            }
+            else
+            {
+                if (character && character.CharacterController)
+                    GameManager.Instance.SetNPC(character.CharacterController);
+            }
             GameManager.Instance.InitQuest(data);
 
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);

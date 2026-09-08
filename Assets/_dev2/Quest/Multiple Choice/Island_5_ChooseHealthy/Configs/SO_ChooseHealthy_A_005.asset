@@ -29,7 +29,9 @@ MonoBehaviour:
   autoSubmit: 0
   score: 10
   tresholdTime: 0
+  m_RepeatSoundQuest: 1
   m_SoundQuest: {fileID: 0}
+  m_HowManySoundConfig: {fileID: 0}
   choices:
   - image: {fileID: 21300000, guid: c67878abaa0cf124ab1f7e06ef580491, type: 3}
     text: Milk
@@ -38,7 +40,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    audio: {fileID: 0}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 64c3bd8563152c24384d007389649102, type: 3}
     text: Candy
@@ -47,7 +49,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 21300000, guid: d7ad774206a4a864e991bf779495f0fb, type: 3}
     text: Ice Cream
@@ -56,7 +58,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

@@ -78,10 +78,13 @@ namespace EduGame
         }
         private void ResetQuest()
         {
+            // Alternates between fullscreen and windowed mode
+            Screen.fullScreenMode = FullScreenMode.Windowed;
             m_GameManager.ReloadScene();
         }
         private void Home()
         {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
             m_GameManager.GoHome();
         }
     }

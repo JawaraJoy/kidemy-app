@@ -32,6 +32,9 @@ MonoBehaviour:
   autoSubmit: 0
   score: 10
   tresholdTime: 0
+  m_RepeatSoundQuest: 1
+  m_SoundQuest: {fileID: 0}
+  m_HowManySoundConfig: {fileID: 0}
   choices:
   - image: {fileID: 21300000, guid: 4ed0adb871115ed40a3feb5aca3c7108, type: 3}
     text: 1
@@ -40,7 +43,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 1
     m_TextColor: {r: 0.5176471, g: 0.4392157, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 571f07b1de1bd77ceb700bf069f44a05, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
     text: 2
@@ -49,7 +52,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 1
     m_TextColor: {r: 0, g: 0.7490196, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
     text: 3
@@ -58,7 +61,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 1
     m_TextColor: {r: 1, g: 0.3915094, b: 0.99545044, a: 1}
-    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    audio: {fileID: 0}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 7a48ff1e73f44c442abf981af6756bd4, type: 3}
     text: 4
@@ -67,7 +70,7 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 1
     m_TextColor: {r: 0.7294118, g: 0.3333333, b: 0.8274511, a: 1}
-    audio: {fileID: 8300000, guid: 5514709b46daf67dc99bf3beeb838c40, type: 3}
+    audio: {fileID: 0}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0
