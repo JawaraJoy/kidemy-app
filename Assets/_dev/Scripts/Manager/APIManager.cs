@@ -43,6 +43,7 @@ namespace EduGame
 
         private IEnumerator SendDataCo(string url, string jsonString)
         {
+            Debug.Log($"Sending Data to {url} with payload: {jsonString}");
             // Convert string payload into raw binary data
             byte[] rawBodyData = Encoding.UTF8.GetBytes(jsonString);
 
