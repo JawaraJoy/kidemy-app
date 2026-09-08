@@ -1,8 +1,8 @@
 ﻿<Solution>
+  <Project Path="spine-unity.csproj" />
   <Project Path="spine-unity-examples.csproj" />
   <Project Path="NaughtyAttributes.Test.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="spine-unity.csproj" />
   <Project Path="spine-unity-editor.csproj" />
   <Project Path="NaughtyAttributes.Core.csproj" />
   <Project Path="NaughtyAttributes.Editor.csproj" />

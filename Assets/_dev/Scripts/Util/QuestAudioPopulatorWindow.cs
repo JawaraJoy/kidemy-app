@@ -1,5 +1,6 @@
 #if UNITY_EDITOR
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
@@ -8,7 +9,7 @@ using EduGame; // Matches your project namespace
 
 public class QuestAudioPopulatorWindow : EditorWindow
 {
-    private const string TARGET_PREFAB_FOLDER = "Assets/_dev/Prefabs/Quest/Templates";
+    [SerializeField] private SO_Quest[] targetQuests = new SO_Quest[0];
     private bool forceRedownload = false;
     private bool isProcessing = false;
 
@@ -20,17 +21,27 @@ public class QuestAudioPopulatorWindow : EditorWindow
 
     private void OnGUI()
     {
-        GUILayout.Label("Quest Prefab Audio Batch Populator", EditorStyles.boldLabel);
+        GUILayout.Label("Quest Audio Batch Populator", EditorStyles.boldLabel);
         EditorGUILayout.Space(5);
 
-        EditorGUILayout.HelpBox($"Target Prefab Folder:\n{TARGET_PREFAB_FOLDER}", MessageType.Info);
+        SerializedObject serializedWindow = new SerializedObject(this);
+        serializedWindow.Update();
+        EditorGUILayout.PropertyField(
+            serializedWindow.FindProperty(nameof(targetQuests)),
+            new GUIContent("Quest Assets"),
+            true);
+        serializedWindow.ApplyModifiedProperties();
+
+        EditorGUILayout.HelpBox(
+            "Add the SO_Quest assets that should have their audio populated.",
+            MessageType.Info);
 
         forceRedownload = EditorGUILayout.Toggle("Force Redownload Existing", forceRedownload);
 
         EditorGUILayout.Space(10);
 
         GUI.enabled = !isProcessing;
-        if (GUILayout.Button("Scan Prefabs & Populate Audio", GUILayout.Height(35)))
+        if (GUILayout.Button("Populate Selected Quest Audio", GUILayout.Height(35)))
         {
             // Start coroutine cleanly in Edit Mode without MonoBehaviour!
             EditorCoroutineUtility.StartCoroutineOwnerless(Routine_PopulateAllQuests());
@@ -63,53 +74,39 @@ public class QuestAudioPopulatorWindow : EditorWindow
 
         isProcessing = true;
 
-        if (!Directory.Exists(TARGET_PREFAB_FOLDER))
+        if (targetQuests == null || targetQuests.Length == 0)
         {
-            Debug.LogError($"[QuestAudioPopulator] Folder missing: {TARGET_PREFAB_FOLDER}");
+            Debug.LogWarning("[QuestAudioPopulator] No SO_Quest assets were assigned.");
             isProcessing = false;
             yield break;
         }
 
-        // 2. Scan for all prefabs in the target directory
-        string[] guids = AssetDatabase.FindAssets("t:Prefab", new[] { TARGET_PREFAB_FOLDER });
-        Debug.Log($"[QuestAudioPopulator] Found {guids.Length} prefabs in {TARGET_PREFAB_FOLDER}");
+        Debug.Log($"[QuestAudioPopulator] Processing {targetQuests.Length} assigned SO_Quest slots.");
+        HashSet<SO_Quest> processedQuests = new HashSet<SO_Quest>();
 
-        foreach (string guid in guids)
+        foreach (SO_Quest targetSO in targetQuests)
         {
-            string path = AssetDatabase.GUIDToAssetPath(guid);
-            GameObject prefabGO = AssetDatabase.LoadAssetAtPath<GameObject>(path);
-
-            if (prefabGO == null) continue;
-
-            // 3. Retrieve Quest component (or child classes)
-            Quest questComponent = prefabGO.GetComponent<Quest>();
-            if (questComponent == null) continue;
-
-            if (questComponent.Data == null)
-            {
-                Debug.LogWarning($"[QuestAudioPopulator] Prefab '{prefabGO.name}' has no SO_Quest 'data' assigned. Skipping.");
+            if (targetSO == null || !processedQuests.Add(targetSO))
                 continue;
-            }
 
-            // 4. Get VoiceRequests (Question text + Voice ID from linked SO_Character)
-            VoiceRequest[] requests = questComponent.GetVoiceRequests();
+            // Get VoiceRequests directly from the assigned ScriptableObject.
+            VoiceRequest[] requests = targetSO.GetVoiceRequests();
             if (requests == null || requests.Length == 0) continue;
 
             bool isSOModified = false;
-            SO_Quest targetSO = questComponent.Data;
 
             foreach (var req in requests)
             {
                 // Skip existing audio clips unless Force Redownload is checked
-                if (!forceRedownload && questComponent.HasVoiceClip(req.id))
+                if (!forceRedownload && targetSO.HasVoiceClip(req.id))
                 {
-                    Debug.Log($"[QuestAudioPopulator] Skipping '{prefabGO.name}' -> ID '{req.id}' (Audio exists)");
+                    Debug.Log($"[QuestAudioPopulator] Skipping '{targetSO.name}' -> ID '{req.id}' (Audio exists)");
                     continue;
                 }
 
                 if (string.IsNullOrEmpty(req.text)) continue;
 
-                Debug.Log($"[QuestAudioPopulator] Requesting Audio for '{prefabGO.name}' | VoiceID: '{req.voice_id}' | ID: '{req.id}'");
+                Debug.Log($"[QuestAudioPopulator] Requesting Audio for '{targetSO.name}' | VoiceID: '{req.voice_id}' | ID: '{req.id}'");
 
                 bool requestComplete = false;
                 string audioUrl = null;
@@ -176,7 +173,7 @@ public class QuestAudioPopulatorWindow : EditorWindow
                         AudioClip importedClip = AssetDatabase.LoadAssetAtPath<AudioClip>(relativeFilePath);
                         if (importedClip != null)
                         {
-                            questComponent.AssignVoiceClip(req.id, importedClip);
+                            targetSO.AssignVoiceClip(req.id, importedClip);
                             isSOModified = true;
                             Debug.Log($"[QuestAudioPopulator] Successfully assigned '{req.id}' to '{targetSO.name}'!");
                         }
@@ -202,5 +199,6 @@ public class QuestAudioPopulatorWindow : EditorWindow
         Debug.Log("[QuestAudioPopulator] Audio population complete!");
         isProcessing = false;
     }
+
 }
 #endif

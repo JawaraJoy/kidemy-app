@@ -14,6 +14,7 @@ namespace EduGame
         [SerializeField] protected QuestCategory category;
 
         [Header("Question")]
+        [SerializeField] protected SO_Character character;
         [SerializeField]
         private Image m_ImagePrefab;
         [SerializeField]
@@ -31,10 +32,45 @@ namespace EduGame
         public string Id => id;
         public string Title => title;
         public QuestCategory Category => category;
+        public SO_Character Character => character;
         public QuestUtilLabel Question => question;
         public bool AutoSubmit => autoSubmit;
         public int Score => score;
         public float TresholdTime => tresholdTime;
+
+        public virtual string GetVoiceId()
+        {
+            return character != null ? character.CharacterId : string.Empty;
+        }
+
+        public virtual VoiceRequest[] GetVoiceRequests()
+        {
+            if (question != null && !string.IsNullOrEmpty(question.Text))
+            {
+                return new[]
+                {
+                    new VoiceRequest
+                    {
+                        id = name + "_question",
+                        text = question.Text,
+                        voice_id = GetVoiceId()
+                    }
+                };
+            }
+
+            return Array.Empty<VoiceRequest>();
+        }
+
+        public virtual bool HasVoiceClip(string requestId)
+        {
+            return question != null && question.Audio != null;
+        }
+
+        public virtual void AssignVoiceClip(string requestId, AudioClip clip)
+        {
+            if (!string.IsNullOrEmpty(requestId) && requestId.Contains("_question"))
+                question?.SetAudio(clip);
+        }
         public bool HasMultipleImages(out Sprite[] multipleImages, out Image prefab)
         {
             multipleImages = m_MultipleQuestImages;

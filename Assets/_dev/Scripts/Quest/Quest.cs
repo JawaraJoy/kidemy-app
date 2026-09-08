@@ -181,7 +181,7 @@ namespace EduGame
         /// </summary>
         public virtual string GetVoiceId()
         {
-            return character != null ? character.CharacterId : "";
+            return data != null ? data.GetVoiceId() : "";
         }
 
         /// <summary>
@@ -190,20 +190,7 @@ namespace EduGame
         /// </summary>
         public virtual VoiceRequest[] GetVoiceRequests()
         {
-            if (data != null && data.Question != null && !string.IsNullOrEmpty(data.Question.Text))
-            {
-                return new VoiceRequest[]
-                {
-                    new VoiceRequest
-                    {
-                        id = name + "_question",
-                        text = data.Question.Text,
-                        voice_id = GetVoiceId()
-                    }
-                };
-            }
-
-            return Array.Empty<VoiceRequest>();
+            return data != null ? data.GetVoiceRequests() : Array.Empty<VoiceRequest>();
         }
 
         /// <summary>
@@ -211,7 +198,7 @@ namespace EduGame
         /// </summary>
         public virtual bool HasVoiceClip(string requestId)
         {
-            return data.Question !=  null && data.Question.Audio != null;
+            return data != null && data.HasVoiceClip(requestId);
         }
 
         /// <summary>
@@ -219,10 +206,8 @@ namespace EduGame
         /// </summary>
         public virtual void AssignVoiceClip(string requestId, AudioClip clip)
         {
-            if (requestId.IndexOf("_question") > 0)
-            {
-                data.Question.SetAudio(clip);
-            }
+            if (data != null)
+                data.AssignVoiceClip(requestId, clip);
         }
     }
 }
