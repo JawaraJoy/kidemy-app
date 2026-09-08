@@ -5,28 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_002_AdditionTrek_B_rewrite.unity
     guid: 8acb77628921ee12c9dfefc1cc1f9bf7
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_003_PatternJungle_A_rewrite.unity
     guid: 4634e4efd8ebb2f2d8a1df236678fe06
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_004_PuzzleJungle_A_rewrite.unity
     guid: b0f0e68badad026b28bc52e5b0900701
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_007_WordBuilder_A_rewrite.unity
     guid: 4afa0daf2e364af17bd0773d8b831e09
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_008_StoryAdventure_A_rewrite.unity
     guid: 227ca749a120239319fb499a5058d548
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rewrite.unity
     guid: aae4eb897422c1794b6730c4a1073530
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_010_ShapeIt_A_rewrite.unity
     guid: 37e3a4342a308a16ab1dc180aa09565f
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_012_RythimMaker_A_rewrite.unity
     guid: e628f6b7a3349a3d6b483e2dd7ce0d2f
   - enabled: 1
@@ -35,16 +35,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_dev/Scenes/Dev_014_MoodTracker_A_rewrite.unity
     guid: 3f7836ebf26f0367bb3ea3d91b3f662e
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_017_DailyRoutine_A_rewrite.unity
     guid: 2e48f65a4193a440cbffe4584bd2251b
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_018_DailySchedule_A_rewrite.unity
     guid: c53a2c053c5544947bc60a0b0845d75c
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_019_Safety Puzzles_A_rewrite.unity
     guid: a46f93405f4b0aa108f66e55670b4fb0
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_020_StepSequence_A_rewrite.unity
     guid: eea4fc0f587dfcfd49c9198f1cc25b59
   m_configObjects:

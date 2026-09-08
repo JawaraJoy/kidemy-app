@@ -1129,6 +1129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandTutorial
   handImagePrefab: {fileID: 3862303149021580110, guid: 132752680a4ebba42a68ba80113f1e60, type: 3}
+  repeat: 5
   moveDuration: 1.2
   fadeDuration: 0.4
 --- !u!1 &1529650648428675418
