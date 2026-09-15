@@ -15,4 +15,7 @@ MonoBehaviour:
   characterId: ocZQ262SsZb9RIxcQBOj
   characterName: Nola
   characterImage: {fileID: 21300000, guid: 16de8bda49a194345a8c13a3efa8fb91, type: 3}
+  m_RightReaction: {fileID: 11400000, guid: 899db104bf6b53a47898e9d9e3769922, type: 2}
+  m_WrongReaction: {fileID: 11400000, guid: c85af2830c5afe2408b05f49dd493dba, type: 2}
+  m_ResultCharacterImage: {fileID: 21300000, guid: 3a28332e97bbf8bd7986c6d8210e35a2, type: 3}
   characterController: {fileID: 9100000, guid: 1c5fbce6609d4044ab36f556d84d9310, type: 2}

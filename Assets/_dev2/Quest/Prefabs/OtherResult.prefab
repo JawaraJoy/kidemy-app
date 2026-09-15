@@ -3168,6 +3168,7 @@ MonoBehaviour:
   m_OnHide:
     m_PersistentCalls:
       m_Calls: []
+  m_NPCIcon: {fileID: 2777342832575614427}
   m_LabelText: {fileID: 6526662684514811613}
   m_ScoreText: {fileID: 2015113659945419701}
   m_WrongTextEffect: {fileID: 11400000, guid: 3bd14e28753b0f74186ef88ffd399da1, type: 2}

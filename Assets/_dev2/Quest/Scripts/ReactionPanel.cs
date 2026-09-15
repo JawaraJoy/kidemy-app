@@ -28,6 +28,8 @@ namespace EduGame
             m_GameManager = gameManager;
             m_NextButton.onClick.AddListener(Next);
             m_ResetButton.onClick.AddListener(Home);
+
+            
         }
         public void ShowReaction(ReactionConfig reactionConfig)
         {

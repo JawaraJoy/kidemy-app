@@ -10,6 +10,8 @@ namespace EduGame
     public class ResultPanel : PanelView
     {
         [SerializeField]
+        private Image m_NPCIcon;
+        [SerializeField]
         private TextMeshProUGUI m_LabelText;
         [SerializeField]
         private TextMeshProUGUI m_ScoreText;
@@ -33,6 +35,7 @@ namespace EduGame
         {
             m_GameManager = GameManager.Instance;
 
+            m_NPCIcon.sprite = m_GameManager.ChallengeConfig.Character.ResultCharacterImage;
             m_ResetButton.onClick.AddListener(ResetQuest);
             m_HomeButton.onClick.AddListener(Home);
             if (m_LabelText.TryGetComponent(out TextEffect textEffect))

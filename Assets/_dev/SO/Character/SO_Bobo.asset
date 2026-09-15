@@ -15,4 +15,7 @@ MonoBehaviour:
   characterId: XjGYkUkzth8BPs29fmcV
   characterName: Bobo
   characterImage: {fileID: 21300000, guid: 87ae5c05a85e3844cad6528d16944b47, type: 3}
+  m_RightReaction: {fileID: 11400000, guid: 10b1d72349e422c43abc26100c36bb6c, type: 2}
+  m_WrongReaction: {fileID: 11400000, guid: b0c4410cd53222849af9ea7bc8d911d3, type: 2}
+  m_ResultCharacterImage: {fileID: 21300000, guid: bd0d2d093102f4a449bd8a6051cda121, type: 3}
   characterController: {fileID: 9100000, guid: defcd960c152b1844bcf8d9e38ad9c2e, type: 2}

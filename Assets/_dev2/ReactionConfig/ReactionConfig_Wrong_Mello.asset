@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9543550d054fad449bc40a93da2304dd, type: 3}
-  m_Name: ReactionConfig_Right
+  m_Name: ReactionConfig_Wrong_Mello
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.ReactionConfig
   m_Identic:
-    m_Id: right
+    m_Id: wrong
     m_Name: 
     m_Description: 
-  m_NPCPotrait: {fileID: 21300000, guid: 8cd796c9593393246bdfb6b865086752, type: 3}
-  m_ConfirmationImage: {fileID: 21300000, guid: 112ae89acb8614f84a737a5e2079b290, type: 3}
-  m_FeelColor: {r: 0.42075467, g: 1, b: 0.58604336, a: 1}
-  m_DialogueConfig: {fileID: 11400000, guid: 4bc9fa39051472a4fb337c1200efdf13, type: 2}
+  m_NPCPotrait: {fileID: 21300000, guid: f914dee29ee6a0e40aa0be386ce6e6cd, type: 3}
+  m_ConfirmationImage: {fileID: 21300000, guid: 296eb9e672cc340c69f6070f6b31a6bb, type: 3}
+  m_FeelColor: {r: 1, g: 0.38304034, b: 0.26981127, a: 1}
+  m_DialogueConfig: {fileID: 11400000, guid: bc3649a7b389df94a91e8df9ec557364, type: 2}

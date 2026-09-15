@@ -15,4 +15,7 @@ MonoBehaviour:
   characterId: loY1uopAz31XyhAEhNSa
   characterName: Melo
   characterImage: {fileID: 21300000, guid: d4bd816c567ed0f46909c0735d26e919, type: 3}
+  m_RightReaction: {fileID: 11400000, guid: d6267545711ef034f84033842613b32b, type: 2}
+  m_WrongReaction: {fileID: 11400000, guid: fdf3a35933c04b94d92194f63294c7ae, type: 2}
+  m_ResultCharacterImage: {fileID: 21300000, guid: c290233326fe28641bee8d9dceeb1974, type: 3}
   characterController: {fileID: 9100000, guid: 87da3143e33dd9d4e8098a520f7f61e8, type: 2}
