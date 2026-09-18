@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9024468847d81fc906089870eb4d47, type: 3}
+  m_Name: SO_SepA_PictureGraphExplorer_3
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoiceStats
+  id: 
+  title: 
+  category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 0}
+    text: Which drink was chosen more?
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: ff7b235d6a7e1a6b0850d03283a2bb4b, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 20
+  choices:
+  - image: {fileID: 21300000, guid: 6c2b6212bc8469eeb84a58c95f82cd4d, type: 3}
+    text: Milk
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 0.6443302, b: 0, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 0.6431373, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: c445f690900c38e7e91e02b60265b523, type: 3}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: 4de99f188a1c2795280876e40ae846c6, type: 3}
+    text: Juice
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0.60588074, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0, g: 0.6039216, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 2d517dbb7e7c159688ef43848eb88915, type: 3}
+    isAnswer: 0
+  - image: {fileID: 2539619829395173267, guid: 6f701118aa81cfedaabbe5c36f830063, type: 3}
+    text: Same
+    m_FormatedText: {fileID: 0}
+    color: {r: 0.18574174, g: 0.6981132, b: 0, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0.18431373, g: 0.69803923, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: 5be5bc28891e967f3a7b8ff899b462b3, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 0
+  stats:
+  - image: {fileID: 21300000, guid: 6c2b6212bc8469eeb84a58c95f82cd4d, type: 3}
+    text: 5
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0, b: 0, a: 0}
+    audio: {fileID: 0}
+  - image: {fileID: 21300000, guid: 4de99f188a1c2795280876e40ae846c6, type: 3}
+    text: 3
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0, b: 0, a: 0}
+    audio: {fileID: 0}

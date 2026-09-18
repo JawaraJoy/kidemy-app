@@ -244,6 +244,11 @@ namespace EduGame
             return totalAnswers;
         }
 
+        public override bool Verify( QuestDragNDropItem item, QuestDragNDropZone zone)
+        {
+            return dataDragNDrop.Index[item.ItemData.Id] == zone.Slot.GroupData.Id;
+        }
+
         public override void Reset()
         {
             if(items != null)

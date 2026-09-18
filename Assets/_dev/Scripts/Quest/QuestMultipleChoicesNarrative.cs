@@ -44,7 +44,7 @@ namespace EduGame
             {
                 string textVoice = data.Question.Text;
                 
-                TMP_Text narrative = GetComponentInChildren<TMP_Text>();
+                TMP_Text narrative = GetComponentInChildren<TMP_Text>(true);
                 
                 if (narrative && !string.IsNullOrEmpty(narrative.text))
                     textVoice = narrative.text + "." + textVoice;

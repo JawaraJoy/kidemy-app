@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestMultipleChoicesItemWithScale
   text: {fileID: 6545907981649278706}
   audioPlayer: {fileID: 0}
-  image: {fileID: 409762447721034382}
+  image: {fileID: 471025321878030279}
   tint: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}

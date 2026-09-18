@@ -7,7 +7,7 @@ namespace EduGame
 {
     public class QuestDragNDropZone : MonoBehaviour, IDropHandler
     {
-        public enum DisplayMode { Normal, Dynamic, Sticky, Fill, ScaledUp, ScaledDown, ScaledDown2, FollowParent }
+        public enum DisplayMode { Normal, Dynamic, Sticky, Fill, Hide, ScaledUp, ScaledDown, ScaledDown2, FollowParent }
 
         [SerializeField] private DisplayMode displayMode;
         [SerializeField] private TMP_Text dropInfo;
@@ -26,6 +26,7 @@ namespace EduGame
 
         public QuestDragNDropItem[] Items => items;
         public DisplayMode CurrentDisplayMode => displayMode;
+        public QuestDragNDropSlot Slot => slot;
 
         void Awake()
         {
@@ -79,6 +80,8 @@ namespace EduGame
                     FollowParent(item);
                 else if (displayMode == DisplayMode.Normal)
                     Normal(item);
+                else if (displayMode == DisplayMode.Hide)
+                    Hide(item);
 
                 RegisterItems();
             }
@@ -136,6 +139,8 @@ namespace EduGame
                 {
                     bool slotLimitVerification = !slot || (slot.GroupData.Limit < 0 || (items.Length < slot.GroupData.Limit));
 
+                    Debug.Log("Slot Limit Verification: " + slotLimitVerification + " | Verify: " + verify + " | Quest Verify: " + quest.Verify(draggedItem, this));
+
                     if (slotLimitVerification && (!verify || quest.Verify(draggedItem, this)))
                     {
                         AddItem(draggedItem);
@@ -178,6 +183,8 @@ namespace EduGame
                 FollowParent(item);
             else if (displayMode == DisplayMode.Normal)
                 Normal(item);
+            else if (displayMode == DisplayMode.Hide)
+                Hide(item);
 
             RegisterItems();
         }
@@ -218,6 +225,11 @@ namespace EduGame
 
             rect.anchoredPosition = Vector2.zero;
             */
+        }
+
+        public void Hide(QuestDragNDropItem item)
+        {
+            item.transform.GetChild(0).gameObject.SetActive(false);
         }
 
         public void Sticky(QuestDragNDropItem item)

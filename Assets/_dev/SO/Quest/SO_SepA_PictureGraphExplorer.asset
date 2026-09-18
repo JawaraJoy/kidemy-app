@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9024468847d81fc906089870eb4d47, type: 3}
+  m_Name: SO_SepA_PictureGraphExplorer
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoiceStats
+  id: 
+  title: 
+  category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 0}
+    text: How many the apples?
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 4bbc1074430e9c505a2a2fb07cc37f7a, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 20
+  choices:
+  - image: {fileID: 0}
+    text: 2
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 0.6443302, b: 0, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 0.6431373, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: e7bf257209fcdf654ac58524694dce09, type: 3}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 3
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0.60588074, b: 1, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0, g: 0.6039216, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 63b6c46ae6bd567b29107372895c4124, type: 3}
+    isAnswer: 1
+  - image: {fileID: 0}
+    text: 4
+    m_FormatedText: {fileID: 0}
+    color: {r: 0.18574174, g: 0.6981132, b: 0, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0.18431373, g: 0.69803923, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: 536d4be20053b79298027165c6e4a71b, type: 3}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: 1
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 0.3537736, b: 0.8271425, a: 1}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 0.3529412, b: 0.827451, a: 1}
+    audio: {fileID: 8300000, guid: 0524787c11c890a2a94e3baa4fde9358, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 0
+  stats:
+  - image: {fileID: 21300000, guid: fb18707c0e55f19f699ae8e533d744da, type: 3}
+    text: 3
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0, b: 0, a: 0}
+    audio: {fileID: 0}
+  - image: {fileID: 21300000, guid: d5b15b65e34f60551912bee7a9668c0f, type: 3}
+    text: 2
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0, b: 0, a: 0}
+    audio: {fileID: 0}
+  - image: {fileID: 21300000, guid: 3419e0e13d048a678aa2c24dcafd83cb, type: 3}
+    text: 1
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0, b: 0, a: 0}
+    audio: {fileID: 0}

@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_SepA_CleanUpCrew_5
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: 018A
+  title: Daily Schedule
+  category: 4
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 0}
+    text: Categorize the activities
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: a6c5442f4a4214d0e8194c3801b6393e, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
+  groups:
+  - label:
+      image: {fileID: -7081164655510904996, guid: c89c6ff02a20223aeb66a809e6797ffc, type: 3}
+      text: Paper
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.9882353, g: 0.9529412, b: 0.8117647, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 4
+    labels:
+    - image: {fileID: 21300000, guid: f3b20fd317bfa8c3498e1c6ee0de4462, type: 3}
+      text: Newspaper
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: 35007810a226f9588abb833cc1ee4a74, type: 3}
+    - image: {fileID: 21300000, guid: 6a39602527f1184d69440a959e7028da, type: 3}
+      text: Cardboard Box
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: 35007810a226f9588abb833cc1ee4a74, type: 3}
+  - label:
+      image: {fileID: -2956194926794246013, guid: 5bd94f67bd6b075cd958e06055e21357, type: 3}
+      text: Plastic
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.90588236, g: 0.95686275, b: 0.9882353, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 4
+    labels:
+    - image: {fileID: 21300000, guid: 37c0af7a930bc77e6a7e82590d037996, type: 3}
+      text: Bottle Water
+      m_FormatedText: {fileID: 0}
+      color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 0, g: 0, b: 0, a: 0}
+      audio: {fileID: 8300000, guid: 61e515ee00a98b61fb2c797523782969, type: 3}
+    - image: {fileID: 21300000, guid: a23915a9262ab61f39375081041c8291, type: 3}
+      text: Plastic Cup
+      m_FormatedText: {fileID: 0}
+      color: {r: 0, g: 0, b: 0, a: 0}
+      m_UseTextColor: 0
+      m_TextColor: {r: 0, g: 0, b: 0, a: 0}
+      audio: {fileID: 8300000, guid: 1470ab597927f9d46a0b2cbebea13782, type: 3}
+  randomizeChoice: 1
+  answerInOrder: 0
+  timer: 0

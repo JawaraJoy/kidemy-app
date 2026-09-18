@@ -73,4 +73,13 @@ public static class StringHelper
 
         return null; // Returns null if the digits were fake or malformed
     }
+
+    public static int ToInt(string text, out bool success)
+    {
+        int result = -999999; // Default error value
+        
+        success = int.TryParse(text, out result);
+
+        return result;
+    }
 }

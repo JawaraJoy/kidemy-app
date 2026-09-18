@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_SepA_WordInScene_5
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 002B
+  title: WordInScene
+  category: 1
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 21300000, guid: 9377f9c51ca354293b24b67494ca26a3, type: 3}
+    text: Choose the correct word
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 92208cf1ab6df8dd1bcf6234e1e230b5, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  choices:
+  - image: {fileID: 0}
+    text: Drinks
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0, g: 0.6075771, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 81a41d78e15791b95b56791e5f84e62a, type: 3}
+    isAnswer: 1
+  - image: {fileID: 0}
+    text: Draw
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0, g: 0.7169812, b: 0.11626253, a: 1}
+    audio: {fileID: 8300000, guid: 80d856098835ca4ab829244a63dc57b0, type: 3}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: Kicks
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 0.6060061, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: e7d13f7842bc85aad9d036edcaaaea91, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 1

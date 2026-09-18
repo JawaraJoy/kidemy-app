@@ -140,6 +140,7 @@ namespace EduGame
             //Invoke("RecalculateContainer", 0.5f);
         }
 
+        /*
         public override bool Verify(QuestDragNDropItem item, QuestDragNDropZone zone)
         {
             bool ret = false;
@@ -151,6 +152,7 @@ namespace EduGame
 
             return ret;
         }
+        */
 
         public override void OnAnswered(bool answer, bool submit = true)
         {
