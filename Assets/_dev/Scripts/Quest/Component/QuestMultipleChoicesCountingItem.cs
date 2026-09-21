@@ -1,5 +1,3 @@
-using EasyTextEffects;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,9 +17,12 @@ namespace EduGame
 
                 if(container && success)
                 {
+                    for (int i = container.childCount - 1; i >= 0; i--)
+                        Destroy(container.GetChild(i).gameObject);
+                    
                     for(int i = 0; i < num; i++)
                     {
-                        GameObject go = new GameObject("Image_" + i);
+                        GameObject go = new GameObject("Image_" + container.name + "_" + i);
                         go.transform.SetParent(container);
                         go.transform.localScale = Vector3.one;
                         go.transform.localPosition = Vector3.zero;

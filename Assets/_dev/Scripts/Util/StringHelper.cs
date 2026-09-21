@@ -1,5 +1,6 @@
 using System.Text;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 
 public static class StringHelper
 {
@@ -77,8 +78,10 @@ public static class StringHelper
     public static int ToInt(string text, out bool success)
     {
         int result = -999999; // Default error value
+
+        string numberOnly = Regex.Match(text, @"\d+").Value;
         
-        success = int.TryParse(text, out result);
+        success = int.TryParse(numberOnly, out result);
 
         return result;
     }

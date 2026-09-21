@@ -123,13 +123,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicFlowLayoutGroup
   m_Padding:
-    m_Left: 25
-    m_Right: 25
-    m_Top: 50
+    m_Left: 10
+    m_Right: 10
+    m_Top: 20
     m_Bottom: 0
-  m_ChildAlignment: 1
-  cellSize: {x: 150, y: 150}
-  spacing: {x: 20, y: 20}
+  m_ChildAlignment: 4
+  cellSize: {x: 260, y: 260}
+  spacing: {x: 10, y: 0}
 --- !u!114 &7344745938716369192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 80
+  m_Spacing: 30
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -358,7 +358,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 420, y: 512}
+  m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6748606750034946267
 CanvasRenderer:

@@ -19,12 +19,12 @@ MonoBehaviour:
   m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
-    text: Categorize the activities
+    text: Drag items to the right bin
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: a6c5442f4a4214d0e8194c3801b6393e, type: 3}
+    audio: {fileID: 8300000, guid: bd63835b3a4bb49d6b649b6d4e1df86a, type: 3}
   autoSubmit: 1
   score: 10
   tresholdTime: 0
@@ -42,17 +42,17 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: f3b20fd317bfa8c3498e1c6ee0de4462, type: 3}
       text: Newspaper
       m_FormatedText: {fileID: 0}
-      color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
+      color: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
       m_UseTextColor: 0
       m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-      audio: {fileID: 8300000, guid: 35007810a226f9588abb833cc1ee4a74, type: 3}
+      audio: {fileID: 8300000, guid: 697700c4fa8b8f71a8799aed5c4c5ca0, type: 3}
     - image: {fileID: 21300000, guid: 6a39602527f1184d69440a959e7028da, type: 3}
       text: Cardboard Box
       m_FormatedText: {fileID: 0}
-      color: {r: 0.36862746, g: 0.83137256, b: 1, a: 1}
+      color: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
       m_UseTextColor: 0
       m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-      audio: {fileID: 8300000, guid: 35007810a226f9588abb833cc1ee4a74, type: 3}
+      audio: {fileID: 8300000, guid: 773213af06d582a53b2f452257eeaf76, type: 3}
   - label:
       image: {fileID: -2956194926794246013, guid: 5bd94f67bd6b075cd958e06055e21357, type: 3}
       text: Plastic
@@ -66,14 +66,14 @@ MonoBehaviour:
     - image: {fileID: 21300000, guid: 37c0af7a930bc77e6a7e82590d037996, type: 3}
       text: Bottle Water
       m_FormatedText: {fileID: 0}
-      color: {r: 0, g: 0, b: 0, a: 0}
+      color: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 0}
       m_UseTextColor: 0
       m_TextColor: {r: 0, g: 0, b: 0, a: 0}
       audio: {fileID: 8300000, guid: 61e515ee00a98b61fb2c797523782969, type: 3}
     - image: {fileID: 21300000, guid: a23915a9262ab61f39375081041c8291, type: 3}
       text: Plastic Cup
       m_FormatedText: {fileID: 0}
-      color: {r: 0, g: 0, b: 0, a: 0}
+      color: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 0}
       m_UseTextColor: 0
       m_TextColor: {r: 0, g: 0, b: 0, a: 0}
       audio: {fileID: 8300000, guid: 1470ab597927f9d46a0b2cbebea13782, type: 3}

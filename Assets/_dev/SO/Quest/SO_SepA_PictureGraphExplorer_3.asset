@@ -19,7 +19,7 @@ MonoBehaviour:
   m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
-    text: Which drink was chosen more?
+    text: Which drink appears most frequently?
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0

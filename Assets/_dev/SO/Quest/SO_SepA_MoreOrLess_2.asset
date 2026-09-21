@@ -30,20 +30,20 @@ MonoBehaviour:
   tresholdTime: 0
   choices:
   - image: {fileID: 21300000, guid: d5b15b65e34f60551912bee7a9668c0f, type: 3}
-    text: 1
-    m_FormatedText: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseTextColor: 0
-    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: f475eeeff7e61c4788ab5aecb634dcd8, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: d5b15b65e34f60551912bee7a9668c0f, type: 3}
-    text: 4
+    text: 1 Banana
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 7cf73c87e89016ae18dcb812df476882, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: d5b15b65e34f60551912bee7a9668c0f, type: 3}
+    text: 4 Bananas
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: f475eeeff7e61c4788ab5aecb634dcd8, type: 3}
     isAnswer: 1
   timer: 0
   randomizeChoice: 1

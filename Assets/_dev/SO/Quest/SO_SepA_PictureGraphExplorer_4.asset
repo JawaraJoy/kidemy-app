@@ -19,7 +19,7 @@ MonoBehaviour:
   m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
-    text: What is the difference between fruits
+    text: Which fruit appears most frequently?
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
@@ -29,37 +29,29 @@ MonoBehaviour:
   score: 10
   tresholdTime: 20
   choices:
-  - image: {fileID: 0}
-    text: 1
+  - image: {fileID: 2539619829395173267, guid: 6f701118aa81cfedaabbe5c36f830063, type: 3}
+    text: Same
     m_FormatedText: {fileID: 0}
     color: {r: 1, g: 0.6443302, b: 0, a: 1}
     m_UseTextColor: 1
     m_TextColor: {r: 1, g: 0.6431373, b: 0, a: 1}
     audio: {fileID: 8300000, guid: e2efc3249581dd5eeb23d7e4538865f8, type: 3}
     isAnswer: 0
-  - image: {fileID: 0}
-    text: 2
+  - image: {fileID: 21300000, guid: fb18707c0e55f19f699ae8e533d744da, type: 3}
+    text: Apple
     m_FormatedText: {fileID: 0}
     color: {r: 0, g: 0.60588074, b: 1, a: 1}
     m_UseTextColor: 1
     m_TextColor: {r: 0, g: 0.6039216, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 4cbc31a7b955db1f5aa54affbc8f31bd, type: 3}
     isAnswer: 1
-  - image: {fileID: 0}
-    text: 3
+  - image: {fileID: 21300000, guid: d5b15b65e34f60551912bee7a9668c0f, type: 3}
+    text: Banana
     m_FormatedText: {fileID: 0}
     color: {r: 0.18574174, g: 0.6981132, b: 0, a: 1}
     m_UseTextColor: 1
     m_TextColor: {r: 0.18431373, g: 0.69803923, b: 0, a: 1}
     audio: {fileID: 8300000, guid: 1cecc8eb8925c310682d2bf62154e125, type: 3}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: 4
-    m_FormatedText: {fileID: 0}
-    color: {r: 1, g: 0.3537736, b: 0.8271425, a: 1}
-    m_UseTextColor: 1
-    m_TextColor: {r: 1, g: 0.3529412, b: 0.827451, a: 1}
-    audio: {fileID: 8300000, guid: 883704662b6111df2a8694323002dd9b, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

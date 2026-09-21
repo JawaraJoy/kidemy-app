@@ -220,7 +220,7 @@ MonoBehaviour:
   questionAudio: {fileID: 0}
   questionText: {fileID: 0}
   choicesContainer: {fileID: 5923519886998363787}
-  choiceItemPrefab: {fileID: -102638525429766386, guid: 0125298a462356210bd1e11b610347a1, type: 3}
+  choiceItemPrefab: {fileID: -102638525429766386, guid: 4fabddf8a98c76c478b466612c249563, type: 3}
   statPanels:
   - {fileID: 6520295695435145182}
   - {fileID: 6175227692775005956}
