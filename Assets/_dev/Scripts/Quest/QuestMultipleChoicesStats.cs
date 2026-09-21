@@ -60,10 +60,5 @@ namespace EduGame
 
             base.Setup();
         }
-
-        public override void ShowTutorial()
-        {
-            //GameManager.Instance.ShowTutorial(correctChoice.Rect);
-        }
     }
 }

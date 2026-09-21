@@ -657,16 +657,16 @@ namespace EduGame
             ReloadIframe();
         }
 
-        public void ShowTutorial(RectTransform endPos)
+        public void ShowTutorial(RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Normal)
         {
-            ShowTutorial(npcDialog.rectTransform, endPos);
+            ShowTutorial(npcDialog.rectTransform, endPos, mode);
         }
 
-        public void ShowTutorial(RectTransform startPos, RectTransform endPos)
+        public void ShowTutorial(RectTransform startPos, RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Normal)
         {
             if (tutorial && currentIndex == 0)
             {
-                tutorial.PlayTutorial(startPos, endPos, Canvas.transform);
+                tutorial.PlayTutorial(startPos, endPos, Canvas.transform, mode);
             }
         }
     }

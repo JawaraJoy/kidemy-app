@@ -198,7 +198,7 @@ namespace EduGame
             {
                 RectTransform fieldRect = fields[0].transform.GetComponent<RectTransform>();
 
-                GameManager.Instance.ShowTutorial(palettes[0].Rect, fieldRect);
+                GameManager.Instance.ShowTutorial(palettes[0].Rect, fieldRect, HandTutorial.TutorialMode.Swipe);
             }
         }
     }

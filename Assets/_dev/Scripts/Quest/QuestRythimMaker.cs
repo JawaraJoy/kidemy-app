@@ -166,7 +166,7 @@ namespace EduGame
             if(beat)
             {
                 RectTransform buttonRect = beat.GetComponent<RectTransform>();
-                GameManager.Instance.ShowTutorial(buttonRect);
+                GameManager.Instance.ShowTutorial(buttonRect, HandTutorial.TutorialMode.Click);
             }
         }
     }

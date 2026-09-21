@@ -355,7 +355,7 @@ namespace EduGame
         {
             if(slots != null && slots.Length > 0 && items != null && items.Length > 0)
             {
-                GameManager.Instance.ShowTutorial(items[0].Rect, slots[0].Rect);
+                GameManager.Instance.ShowTutorial(items[0].Rect, slots[0].Rect, HandTutorial.TutorialMode.Swipe);
             }
         }
     }

@@ -214,7 +214,7 @@ namespace EduGame
 
         public override void ShowTutorial()
         {
-            GameManager.Instance.ShowTutorial(correctChoice.Rect);
+            GameManager.Instance.ShowTutorial(correctChoice.Rect, HandTutorial.TutorialMode.Click);
         }
 
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)
