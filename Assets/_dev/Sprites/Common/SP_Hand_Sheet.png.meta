@@ -1,0 +1,551 @@
+fileFormatVersion: 2
+guid: d0d3062a1e6bd07ed8236ebb97f00b73
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5847263441085021877
+    second: SP_Hand_Sheet_0
+  - first:
+      213: 3989909733055802458
+    second: SP_Hand_Sheet_1
+  - first:
+      213: 2466910794087912054
+    second: SP_Hand_Sheet_2
+  - first:
+      213: 5227732210446181010
+    second: SP_Hand_Sheet_3
+  - first:
+      213: -1204296571355327829
+    second: SP_Hand_Sheet_4
+  - first:
+      213: -3195427973289687152
+    second: SP_Hand_Sheet_5
+  - first:
+      213: -2299328481521823105
+    second: SP_Hand_Sheet_6
+  - first:
+      213: -1525866426809204864
+    second: SP_Hand_Sheet_7
+  - first:
+      213: 5609228002404842854
+    second: SP_Hand_Sheet_8
+  - first:
+      213: 4070862111275993220
+    second: SP_Hand_Sheet_9
+  - first:
+      213: 2051313535281768960
+    second: SP_Hand_Sheet_10
+  - first:
+      213: -3377678639470511091
+    second: SP_Hand_Sheet_11
+  - first:
+      213: 1314376886686654066
+    second: SP_Hand_Sheet_12
+  - first:
+      213: -4866847119659699512
+    second: SP_Hand_Sheet_13
+  - first:
+      213: 4959694179752005205
+    second: SP_Hand_Sheet_14
+  - first:
+      213: -2305943413552445452
+    second: SP_Hand_Sheet_15
+  - first:
+      213: 6904942061746652659
+    second: SP_Hand_Sheet_16
+  - first:
+      213: 3538433958714836570
+    second: SP_Hand_Sheet_17
+  - first:
+      213: -3814603603524452653
+    second: SP_Hand_Sheet_18
+  - first:
+      213: 890783727065890408
+    second: SP_Hand_Sheet_19
+  - first:
+      213: 3150578383446657173
+    second: SP_Hand_Sheet_20
+  - first:
+      213: 3875495224525289407
+    second: SP_Hand_Sheet_21
+  - first:
+      213: -9155832601081406127
+    second: SP_Hand_Sheet_22
+  - first:
+      213: -1007294572917572277
+    second: SP_Hand_Sheet_23
+  - first:
+      213: -8512748067625421701
+    second: SP_Hand_Sheet_24
+  - first:
+      213: -2713751342154945352
+    second: SP_Hand_Sheet_25
+  - first:
+      213: 370502182789724617
+    second: SP_Hand_Sheet_26
+  - first:
+      213: 654294608056572851
+    second: SP_Hand_Sheet_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 29
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 355
+        width: 98
+        height: 146
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812950b243b6022f39e0532a5226e5b9
+      internalID: 5847263441085021877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 358
+        width: 105
+        height: 139
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406bccc9267144d6f89cb0761c0cc2f0
+      internalID: 3989909733055802458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 359
+        width: 98
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5527cbadd5ce4c8faed31c0f60ca8ad
+      internalID: 2466910794087912054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 359
+        width: 100
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dbbfc980334e2e681dc3f66fa9f8e9
+      internalID: 5227732210446181010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 356
+        width: 97
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8873ddfd803226c13a17b55949111e77
+      internalID: -1204296571355327829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 180
+        width: 104
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79906b14ac811cc489cab5206b0794d7
+      internalID: -3195427973289687152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 179
+        width: 104
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934324c833a6108c78223e71d0c29112
+      internalID: -2299328481521823105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 180
+        width: 108
+        height: 162
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7376cb6a284ff75806d017da35c999
+      internalID: -1525866426809204864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 178
+        width: 100
+        height: 163
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17f1cc1697abf7c4acfaeddfcdd096a
+      internalID: 5609228002404842854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 175
+        width: 98
+        height: 166
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0279af5be11572fa28590a52c1a4ef50
+      internalID: 4070862111275993220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 182
+        width: 102
+        height: 152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb29a6f60dcb1bbb9a23628ed8d02be
+      internalID: 2051313535281768960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 19
+        width: 127
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79aab6451ee2d7137ade1daab063ad74
+      internalID: -3377678639470511091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 16
+        width: 109
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5731cee4f663e369a9d47a3bbcf5b552
+      internalID: 1314376886686654066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_Hand_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 15
+        width: 128
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7920b0fe558ec65bc08a5ec42b2fa1
+      internalID: -4866847119659699512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dcc6b6f951f396ff9816f408d40651ae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      SP_Hand_Sheet_0: 5847263441085021877
+      SP_Hand_Sheet_1: 3989909733055802458
+      SP_Hand_Sheet_10: 2051313535281768960
+      SP_Hand_Sheet_11: -3377678639470511091
+      SP_Hand_Sheet_12: 1314376886686654066
+      SP_Hand_Sheet_13: -4866847119659699512
+      SP_Hand_Sheet_2: 2466910794087912054
+      SP_Hand_Sheet_3: 5227732210446181010
+      SP_Hand_Sheet_4: -1204296571355327829
+      SP_Hand_Sheet_5: -3195427973289687152
+      SP_Hand_Sheet_6: -2299328481521823105
+      SP_Hand_Sheet_7: -1525866426809204864
+      SP_Hand_Sheet_8: 5609228002404842854
+      SP_Hand_Sheet_9: 4070862111275993220
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
