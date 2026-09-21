@@ -53,6 +53,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_dev2/Quest/Multiple Choice/Island_1_Whichone is Different/OtherDev_WhichOneIs_A_001.unity
     guid: c73f5bb2aae4e5e43b31a241c3f41ff4
+  - enabled: 1
+    path: Assets/_dev2/Quest/Multiple Choice/Island_4_What do they Need/OtherDev_What
+      do they need_A_001.unity
+    guid: 2116635f1f2dda04f8ae0bc7900c14e3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

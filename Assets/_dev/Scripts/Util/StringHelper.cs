@@ -1,5 +1,6 @@
 using System.Text;
 using System.Security.Cryptography;
+using System.Globalization;
 
 public static class StringHelper
 {
@@ -72,5 +73,31 @@ public static class StringHelper
         }
 
         return null; // Returns null if the digits were fake or malformed
+    }
+
+    public static string RemoveUnsupportedSymbols(string value)
+    {
+        if (string.IsNullOrEmpty(value))
+            return string.Empty;
+
+        var result = new StringBuilder();
+
+        for (int i = 0; i < value.Length;)
+        {
+            UnicodeCategory category =
+                CharUnicodeInfo.GetUnicodeCategory(value, i);
+
+            int charCount = char.IsSurrogatePair(value, i) ? 2 : 1;
+
+            if (category != UnicodeCategory.OtherSymbol &&
+                category != UnicodeCategory.Surrogate)
+            {
+                result.Append(value, i, charCount);
+            }
+
+            i += charCount;
+        }
+
+        return result.ToString().Trim();
     }
 }

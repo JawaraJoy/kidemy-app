@@ -361,7 +361,7 @@ namespace EduGame
         {
             if (npcDialog)
             {
-                npcDialog.text = dialog;
+                npcDialog.text = StringHelper.RemoveUnsupportedSymbols(dialog);
                 if (npcDialog.TryGetComponent(out TextEffect textEffect))
                 {
                     textEffect.Refresh();
@@ -680,16 +680,16 @@ namespace EduGame
             m_SFXSource.PlayOneShot(audioClip);
         }
 
-        public void ShowTutorial(RectTransform endPos)
+        public void ShowTutorial(RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Click)
         {
-            ShowTutorial(npcDialog.rectTransform, endPos);
+            ShowTutorial(npcDialog.rectTransform, endPos, mode);
         }
 
-        public void ShowTutorial(RectTransform startPos, RectTransform endPos)
+        public void ShowTutorial(RectTransform startPos, RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Click)
         {
             if (m_HandTutorial && currentIndex == 0)
             {
-                m_HandTutorial.PlayTutorial(startPos, endPos, Canvas.transform);
+                m_HandTutorial.PlayTutorial(startPos, endPos, Canvas.transform, mode);
             }
         }
     }
