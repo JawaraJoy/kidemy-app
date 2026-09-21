@@ -146,8 +146,18 @@ namespace EduGame
                         AddItem(draggedItem);
 
                         if(answer)
+                        {
                             quest.OnAnswered(true);
 
+                            if(draggedItem.Container)
+                                draggedItem.Container.enabled = false;
+                        }
+                        else
+                        {
+                            if(draggedItem.Container)
+                                draggedItem.Container.enabled = true;
+                        }
+                            
                         OnAccept();
                     }
                     else

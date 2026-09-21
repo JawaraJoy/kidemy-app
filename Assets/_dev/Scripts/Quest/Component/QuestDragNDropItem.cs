@@ -12,6 +12,7 @@ namespace EduGame
         [SerializeField] private AudioPlayer audioPlayer;
         [SerializeField] private Image image;
         [SerializeField] private Image tint;
+        [SerializeField] private Image container;
         
         protected LayoutElement layoutElement;
         protected Vector2 originalPosition; 
@@ -25,6 +26,7 @@ namespace EduGame
 
         public QuestUtilLabel ItemData { get; private set; }
         public QuestDragNDropZone OriginalZone => originalParent;
+        public Image Container => container;
 
         protected override void Awake()
         {
@@ -66,6 +68,9 @@ namespace EduGame
 
             if(quest)
                 quest.PlayQuestionVoice(ItemData.Audio);
+            
+            if(container)
+                container.enabled = false;
         }
 
         public void OnDrag(PointerEventData eventData)

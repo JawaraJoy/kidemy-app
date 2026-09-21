@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 052bb81ca3a9a2f3b9cfdd0d1593523f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -669140425759823452
+    second: SOAL-3_0
+  - first:
+      213: 5856712270899732110
+    second: SOAL-3_1
+  - first:
+      213: -2511774142758452708
+    second: SOAL-3_2
+  - first:
+      213: -1719466559865661463
+    second: SOAL-3_3
+  - first:
+      213: 2785897326930599364
+    second: SOAL-3_4
+  - first:
+      213: 40223186157972159
+    second: SOAL-3_5
+  - first:
+      213: 2092573488417715375
+    second: SOAL-3_6
+  - first:
+      213: 6067476671897770298
+    second: SOAL-3_7
+  - first:
+      213: -38111499947251448
+    second: SOAL-3_8
+  - first:
+      213: 6993905384863866601
+    second: SOAL-3_9
+  - first:
+      213: 4698415414088490908
+    second: SOAL-3_10
+  - first:
+      213: -6326183718784230498
+    second: SOAL-3_11
+  - first:
+      213: -697900346631457956
+    second: SOAL-3_12
+  - first:
+      213: 1515682578209915646
+    second: SOAL-3_13
+  - first:
+      213: 7294581761906213379
+    second: SOAL-3_14
+  - first:
+      213: -4905959898054188039
+    second: SOAL-3_15
+  - first:
+      213: 320866676241502
+    second: SOAL-3_16
+  - first:
+      213: 49476871893162358
+    second: SOAL-3_17
+  - first:
+      213: -3813415340461376579
+    second: SOAL-3_18
+  - first:
+      213: 7951359871906668030
+    second: SOAL-3_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 29
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SOAL-3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 277
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a96bb9f35cb6b6f0800000000000000
+      internalID: -669140425759823452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_1
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 500
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e56aab7c8374150800000000000000
+      internalID: 5856712270899732110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_2
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 490
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c120fd0a9b2642dd0800000000000000
+      internalID: -2511774142758452708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_3
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 474
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e75b00264a3328e0800000000000000
+      internalID: -1719466559865661463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 452
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd9868cbde79a620800000000000000
+      internalID: 2785897326930599364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_5
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 426
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba2ea256c6ee8000800000000000000
+      internalID: 40223186157972159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_6
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 395
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4b98330805a0d10800000000000000
+      internalID: 2092573488417715375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 361
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a399f6fd2e1043450800000000000000
+      internalID: 6067476671897770298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_8
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 324
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80969cfeac9987ff0800000000000000
+      internalID: -38111499947251448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_9
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 286
+        width: 12
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee908964e75f0160800000000000000
+      internalID: 6993905384863866601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_10
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 246
+        width: 8
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9fd6f30def143140800000000000000
+      internalID: 4698415414088490908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_11
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 207
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b9102ec61e438a0800000000000000
+      internalID: -6326183718784230498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_12
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 169
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c53f866155f8056f0800000000000000
+      internalID: -697900346631457956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_13
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 133
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef243724649c80510800000000000000
+      internalID: 1515682578209915646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_14
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 99
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 302867fc67f8b3560800000000000000
+      internalID: 7294581761906213379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_15
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 70
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f32b2237778aebb0800000000000000
+      internalID: -4905959898054188039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_16
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 45
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54f14893d3210000800000000000000
+      internalID: 320866676241502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_17
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 10
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6791acde3f6cfa000800000000000000
+      internalID: 49476871893162358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_18
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 24
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb36c2c3f6041bc0800000000000000
+      internalID: -3813415340461376579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-3_19
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdda46eca7e85e60800000000000000
+      internalID: 7951359871906668030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SOAL-3_0: -669140425759823452
+      SOAL-3_1: 5856712270899732110
+      SOAL-3_10: 4698415414088490908
+      SOAL-3_11: -6326183718784230498
+      SOAL-3_12: -697900346631457956
+      SOAL-3_13: 1515682578209915646
+      SOAL-3_14: 7294581761906213379
+      SOAL-3_15: -4905959898054188039
+      SOAL-3_16: 320866676241502
+      SOAL-3_17: 49476871893162358
+      SOAL-3_18: -3813415340461376579
+      SOAL-3_19: 7951359871906668030
+      SOAL-3_2: -2511774142758452708
+      SOAL-3_3: -1719466559865661463
+      SOAL-3_4: 2785897326930599364
+      SOAL-3_5: 40223186157972159
+      SOAL-3_6: 2092573488417715375
+      SOAL-3_7: 6067476671897770298
+      SOAL-3_8: -38111499947251448
+      SOAL-3_9: 6993905384863866601
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
