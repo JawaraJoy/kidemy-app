@@ -55,6 +55,105 @@ public class HandTutorial : MonoBehaviour
         StartCoroutine(AnimateHand(handInstance, handRect, handImage, animator, canvas, startTarget, endTarget, mode));
     }
 
+    public void PlayTutorialCustom(RectTransform[] targets, Transform canvasTransform)
+    {
+        if (handImagePrefab == null || targets == null || targets.Length < 2 || canvasTransform == null)
+            return;
+
+        for (int i = 0; i < targets.Length; i++)
+        {
+            if (targets[i] == null)
+                return;
+        }
+
+        handInstance = Instantiate(handImagePrefab, canvasTransform);
+        RectTransform handRect = handInstance.GetComponent<RectTransform>();
+        Image handImage = handInstance.GetComponent<Image>();
+        Animator animator = handInstance.GetComponentInChildren<Animator>();
+        Canvas canvas = canvasTransform.GetComponent<Canvas>();
+
+        foreach (TrailRenderer trail in handInstance.GetComponentsInChildren<TrailRenderer>(true))
+            trail.enabled = false;
+
+        if (canvas)
+        {
+            Canvas handCanvas = handInstance.GetComponent<Canvas>();
+            if (!handCanvas)
+                handCanvas = handInstance.AddComponent<Canvas>();
+
+            handCanvas.overrideSorting = true;
+            handCanvas.sortingLayerID = canvas.sortingLayerID;
+            handCanvas.sortingOrder = canvas.sortingOrder + 2;
+        }
+
+        StartCoroutine(AnimateCustomHand(handInstance, handRect, handImage, animator, targets));
+    }
+
+    private IEnumerator AnimateCustomHand(GameObject handObj, RectTransform handRect, Image handImage, Animator animator, RectTransform[] targets)
+    {
+        for (int repeatIndex = 0; repeatIndex < repeat; repeatIndex++)
+        {
+            handRect.position = targets[0].position;
+            SetAlpha(handImage, 1f);
+
+            for (int targetIndex = 1; targetIndex < targets.Length; targetIndex++)
+            {
+                yield return MoveHand(handRect, targets[targetIndex].position);
+                yield return PlayClick(animator);
+                yield return new WaitForSeconds(0.5f);
+                animator?.Play("Idle", 0, 0f);
+            }
+
+            yield return FadeHand(handImage);
+            yield return new WaitForSeconds(1f);
+        }
+
+        Destroy(handObj);
+    }
+
+    private IEnumerator MoveHand(RectTransform handRect, Vector3 targetPosition)
+    {
+        Vector3 startPosition = handRect.position;
+        float elapsed = 0f;
+
+        while (elapsed < moveDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / moveDuration);
+            handRect.position = Vector3.Lerp(startPosition, targetPosition, Mathf.SmoothStep(0f, 1f, t));
+            yield return null;
+        }
+
+        handRect.position = targetPosition;
+    }
+
+    private IEnumerator PlayClick(Animator animator)
+    {
+        if (!animator)
+            yield break;
+
+        animator.Play("Click", 0, 0f);
+        yield return null;
+
+        while (animator.GetCurrentAnimatorStateInfo(0).IsName("Click") &&
+               animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+        {
+            yield return null;
+        }
+    }
+
+    private IEnumerator FadeHand(Image handImage)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            SetAlpha(handImage, Mathf.Lerp(1f, 0f, elapsed / fadeDuration));
+            yield return null;
+        }
+    }
+
     private IEnumerator AnimateHand(GameObject handObj, RectTransform handRect, Image handImage, Animator animator, Canvas canvas, RectTransform startTarget, RectTransform endTarget, TutorialMode mode)
     {
         Vector3 startPos = startTarget.position;

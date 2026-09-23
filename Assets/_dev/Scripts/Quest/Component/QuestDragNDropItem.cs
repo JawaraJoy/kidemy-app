@@ -66,7 +66,7 @@ namespace EduGame
             else
                 Rect.sizeDelta = originalSize;
 
-            if(quest)
+            if(quest && ItemData != null && ItemData.Audio)
                 quest.PlayQuestionVoice(ItemData.Audio);
             
             if(container)

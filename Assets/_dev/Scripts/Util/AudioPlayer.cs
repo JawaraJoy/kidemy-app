@@ -26,7 +26,10 @@ namespace EduGame
         public void OnClick()
         {
             if(audioClip && GameManager.Instance.AudioSource)
+            {
+                GameManager.Instance.AudioSource.Stop();
                 GameManager.Instance.AudioSource.PlayOneShot(audioClip);
+            }
         }
     }
 }

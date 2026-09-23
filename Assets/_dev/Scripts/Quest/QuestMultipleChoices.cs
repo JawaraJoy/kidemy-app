@@ -14,26 +14,26 @@ namespace EduGame
         
         [Header("Components")]
         [SerializeField] 
-        private RectTransform m_MultipleImagesQuestionContainer;
-        [SerializeField] private Image questionImage;
-        [SerializeField] private AudioPlayer questionAudio;
-        [SerializeField] private TMP_Text questionText;
-        [SerializeField] private RectTransform choicesContainer;
+        protected RectTransform m_MultipleImagesQuestionContainer;
+        [SerializeField] protected Image questionImage;
+        [SerializeField] protected AudioPlayer questionAudio;
+        [SerializeField] protected TMP_Text questionText;
+        [SerializeField] protected RectTransform choicesContainer;
 
         [Header("Prefab")]
-        [SerializeField] private QuestMultipleChoicesItem choiceItemPrefab;
+        [SerializeField] protected QuestMultipleChoicesItem choiceItemPrefab;
 
-        private SO_QuestMultipleChoice dataMultipleChoice;
-        private QuestMultipleChoicesItem[] choices;
-        private int unansweredCorrect = 0;
-        private QuestMultipleChoicesItem correctChoice;
+        protected SO_QuestMultipleChoice dataMultipleChoice;
+        protected QuestMultipleChoicesItem[] choices;
+        protected int unansweredCorrect = 0;
+        protected QuestMultipleChoicesItem correctChoice;
 
 
-        private VoiceRequest voiceQuestionRequest = new VoiceRequest();
+        protected VoiceRequest voiceQuestionRequest = new VoiceRequest();
 
-        private List<Image> m_SpawnedmultipleImages = new List<Image>();
+        protected List<Image> m_SpawnedmultipleImages = new List<Image>();
 
-        private TextEffect m_TextEffect;
+        protected TextEffect m_TextEffect;
         protected override void Start()
         {
             base.Start();
@@ -89,7 +89,6 @@ namespace EduGame
 
             }
             
-
             if (questionAudio)
             {
                 if (dataMultipleChoice.Question.Audio)

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_SepA_FeelingInVoices_4
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 002B
+  title: MoreOrLess
+  category: 0
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 0}
+    text: Listen to the voice. Choose the feeling.
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: f16237dc5ba0c2d2fb58aa0298279554, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  choices:
+  - image: {fileID: 21300000, guid: 758c373b91cc8bf649c84ea4f8f48cb1, type: 3}
+    text: Surprised
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 83e233618747b931db3e5d2fe322a0ec, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: a05ea64a52d2e7d2e844b5ff0f732c04, type: 3}
+    text: Calm
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 1cd51f87f13627e2a93c381735df8cab, type: 3}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: 76c119623e9525b1f936de9bf12b6ba0, type: 3}
+    text: Angry
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: a0b757d3a12ac553e80e3f314d924118, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 1

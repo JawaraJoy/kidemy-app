@@ -373,6 +373,8 @@ namespace EduGame
         
         Quest InstantiateTemplate(Quest templatePrefab)
         {
+            Debug.Log("Instantiating template: " + templatePrefab);
+
             Quest template = Instantiate(templatePrefab, m_ChallengeContainer != null ? m_ChallengeContainer.transform : transform);
 
             template.transform.localPosition = Vector3.zero;
@@ -667,6 +669,22 @@ namespace EduGame
             if (tutorial && currentIndex == 0)
             {
                 tutorial.PlayTutorial(startPos, endPos, Canvas.transform, mode);
+            }
+        }
+
+        public void ShowTutorialCustom(RectTransform[] targets, bool startFromDialog = true)
+        {
+            if (tutorial && Canvas && currentIndex == 0 && targets != null)
+            {
+                if (startFromDialog && npcDialog)
+                {
+                    RectTransform[] targetsWithDialog = new RectTransform[targets.Length + 1];
+                    targetsWithDialog[0] = npcDialog.rectTransform;
+                    System.Array.Copy(targets, 0, targetsWithDialog, 1, targets.Length);
+                    targets = targetsWithDialog;
+                }
+
+                tutorial.PlayTutorialCustom(targets, Canvas.transform);
             }
         }
     }

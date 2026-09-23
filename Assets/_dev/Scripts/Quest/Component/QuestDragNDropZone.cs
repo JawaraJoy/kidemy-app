@@ -139,8 +139,6 @@ namespace EduGame
                 {
                     bool slotLimitVerification = !slot || (slot.GroupData.Limit < 0 || (items.Length < slot.GroupData.Limit));
 
-                    Debug.Log("Slot Limit Verification: " + slotLimitVerification + " | Verify: " + verify + " | Quest Verify: " + quest.Verify(draggedItem, this));
-
                     if (slotLimitVerification && (!verify || quest.Verify(draggedItem, this)))
                     {
                         AddItem(draggedItem);

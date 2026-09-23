@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: questPrefabs.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: 'questPrefabs.Array.data[0]'
@@ -338,19 +338,19 @@ PrefabInstance:
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: 'questPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 3198629066879550302, guid: 941d944a2728bf4a0ae2a6f1e74a4ea7, type: 3}
+      objectReference: {fileID: 3198629066879550302, guid: 3d94aa482571ad82980efac7c175c1a4, type: 3}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: 'questPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 8344063676491614192, guid: 426ca37d5471b653b9ca79413815430b, type: 3}
+      objectReference: {fileID: 3198629066879550302, guid: 5803741c7c801ae8ba9c92dd419372bd, type: 3}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: 'questPrefabs.Array.data[3]'
       value: 
-      objectReference: {fileID: 8344063676491614192, guid: 9ac317aebdeabfbe7af8f93f0cd9facc, type: 3}
+      objectReference: {fileID: 3198629066879550302, guid: 23640fd9f5a343aaea90539f6ca2fdfd, type: 3}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: 'questPrefabs.Array.data[4]'
       value: 
-      objectReference: {fileID: 8344063676491614192, guid: 7ae3913a17e71b24fb089090b66fd6e4, type: 3}
+      objectReference: {fileID: 3198629066879550302, guid: 10bcbe99905e8b2e0afe9ce8165e4649, type: 3}
     - target: {fileID: 7672696211634173981, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad1539f349426c4e8f1b07095f2488f, type: 3}
+  m_Name: SO_SepA_MirrorArt
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestDragNDrop
+  id: 018A
+  title: Daily Schedule
+  category: 4
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 0}
+    text: Complete the patterns
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: f167e9d593e075baa99ad59239463225, type: 3}
+  autoSubmit: 1
+  score: 10
+  tresholdTime: 0
+  groups:
+  - label:
+      image: {fileID: 0}
+      text: 
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.9882353, g: 0.9529412, b: 0.8117647, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 1
+    labels:
+    - image: {fileID: 21300000, guid: 382004e252c6e9877b1f5b7141d0245b, type: 3}
+      text: Red Circle
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: c577f9709467a7721a8295f3ebe78117, type: 3}
+  - label:
+      image: {fileID: 0}
+      text: 
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.9882353, g: 0.9529412, b: 0.8117647, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
+    limit: 0
+    labels:
+    - image: {fileID: 21300000, guid: 543859dd727a9a151ad2d8962e3d3188, type: 3}
+      text: Red Triangle
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: d980c2903f29f46e1972f328d8e8b3c5, type: 3}
+    - image: {fileID: 21300000, guid: 785ff65d170efda25ad01b6b39424bd8, type: 3}
+      text: Blue Circle
+      m_FormatedText: {fileID: 0}
+      color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: 1a5326b9b11cf2372a0530c92db94d6c, type: 3}
+  randomizeChoice: 1
+  answerInOrder: 0
+  timer: 0

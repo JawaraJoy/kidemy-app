@@ -12,22 +12,22 @@ namespace EduGame
         [Header("Data")]
 
         [Header("Components")]
-        [SerializeField] private Image questionImage;
-        [SerializeField] private AudioPlayer questionAudio;
-        [SerializeField] private TMP_Text questionText;
-        [SerializeField] private RectTransform itemsContainer;
-        [SerializeField] private RectTransform slotsContainer;
+        [SerializeField] protected Image questionImage;
+        [SerializeField] protected AudioPlayer questionAudio;
+        [SerializeField] protected TMP_Text questionText;
+        [SerializeField] protected RectTransform itemsContainer;
+        [SerializeField] protected RectTransform slotsContainer;
 
         [Header("Prefab")]
-        [SerializeField] private QuestDragNDropItem itemPrefab;
-        [SerializeField] private QuestDragNDropSlot slotPrefab;
+        [SerializeField] protected QuestDragNDropItem itemPrefab;
+        [SerializeField] protected QuestDragNDropSlot slotPrefab;
 
-        private SO_QuestDragNDrop dataDragNDrop;
-        private QuestDragNDropItem[] items;
-        private QuestDragNDropSlot[] slots;
-        private int totalLimit = 0;
+        protected SO_QuestDragNDrop dataDragNDrop;
+        protected QuestDragNDropItem[] items;
+        protected QuestDragNDropSlot[] slots;
+        protected int totalLimit = 0;
 
-        private TextEffect m_TextEffect;
+        protected TextEffect m_TextEffect;
 
         protected override void Start()
         {
@@ -119,7 +119,7 @@ namespace EduGame
             base.Setup();
         }
 
-        QuestDragNDropItem InstantiateItem(QuestDragNDropItem prefab)
+        protected virtual QuestDragNDropItem InstantiateItem(QuestDragNDropItem prefab)
         {
             QuestDragNDropItem item = Instantiate(prefab ? prefab : itemPrefab, itemsContainer);
 
@@ -129,9 +129,9 @@ namespace EduGame
             return item;
         }
 
-        QuestDragNDropSlot InstantiateSlot(QuestDragNDropSlot prefab)
+        protected virtual QuestDragNDropSlot InstantiateSlot(QuestDragNDropSlot prefab, RectTransform parent = null)
         {
-            QuestDragNDropSlot slot = Instantiate(prefab ? prefab : slotPrefab, slotsContainer);
+            QuestDragNDropSlot slot = Instantiate(prefab ? prefab : slotPrefab, parent ?? slotsContainer);
 
             slot.transform.localPosition = Vector3.zero;
             slot.Rect.localScale = Vector3.one;
