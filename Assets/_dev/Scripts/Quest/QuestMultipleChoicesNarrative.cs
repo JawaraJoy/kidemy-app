@@ -16,8 +16,10 @@ namespace EduGame
         {
             base.Start();
 
+            /*
             if (!dataMultipleChoiceNarrative)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoiceNarrative");
+            */
 
             if (narrativeText)
                 narrativeText.text = dataMultipleChoiceNarrative.Narrative;
@@ -43,9 +45,9 @@ namespace EduGame
             if (voiceRequests.Length > 0 && data != null && data.Question != null && !string.IsNullOrEmpty(data.Question.Text))
             {
                 string textVoice = data.Question.Text;
-                
+
                 TMP_Text narrative = GetComponentInChildren<TMP_Text>(true);
-                
+
                 if (narrative && !string.IsNullOrEmpty(narrative.text))
                     textVoice = narrative.text + "." + textVoice;
 
@@ -58,6 +60,13 @@ namespace EduGame
             }
 
             return voiceRequests;
+        }
+
+        public override void ShowTutorial()
+        {
+            Debug.Log("Show Tutorial QuestMultipleChoicesNarrative");
+
+            base.ShowTutorial();
         }
     }
 }

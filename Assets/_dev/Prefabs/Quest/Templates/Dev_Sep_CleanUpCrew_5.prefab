@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestDragNDrop
   data: {fileID: 11400000, guid: e3fa981e6c7e0e283bd2e10cc5592f3d, type: 2}
-  background: {fileID: 21300000, guid: cf45d2cde343f13ed87fd98a1b1163be, type: 3}
+  background: {fileID: 21300000, guid: 6a8d9dcc13efcf8d6862df2a47bb33ed, type: 3}
   color: {r: 0.742257, g: 0.6279722, b: 0.6279722, a: 0}
   npcController: {fileID: 9100000, guid: defcd960c152b1844bcf8d9e38ad9c2e, type: 2}
   character: {fileID: 11400000, guid: 3ffdcd2a59f2a934e8cbef1f048d8760, type: 2}

@@ -15,4 +15,7 @@ MonoBehaviour:
   characterId: Nggzl2QAXh3OijoXD116
   characterName: Loppi
   characterImage: {fileID: 21300000, guid: 3daf1efeab87dc44eb3c517f88f9edbb, type: 3}
+  m_RightReaction: {fileID: 11400000, guid: 04f1e5b33166a6d43b034cc7be182d2e, type: 2}
+  m_WrongReaction: {fileID: 11400000, guid: 531f4a9955d22fd48bb17d4940548c04, type: 2}
+  m_ResultCharacterImage: {fileID: 21300000, guid: d602b45309a45227fad57350a281b966, type: 3}
   characterController: {fileID: 9100000, guid: 8813f0802c58c5842b04c5613205aa2c, type: 2}

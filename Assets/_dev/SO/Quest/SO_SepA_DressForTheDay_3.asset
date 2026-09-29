@@ -43,7 +43,7 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
     m_UseTextColor: 0
     m_TextColor: {r: 0, g: 0.7169812, b: 0.11626253, a: 1}
-    audio: {fileID: 8300000, guid: 3d50f853423d6749eb59ddf26adc50a8, type: 3}
+    audio: {fileID: 8300000, guid: dba534cec720b0e0ea56b6c088beeb65, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 7131fe0045ae0626bac5c5ac941769e9, type: 3}
     text: Rain Boots
@@ -51,7 +51,7 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 0.6060061, b: 0, a: 1}
-    audio: {fileID: 8300000, guid: dba534cec720b0e0ea56b6c088beeb65, type: 3}
+    audio: {fileID: 8300000, guid: 3d50f853423d6749eb59ddf26adc50a8, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

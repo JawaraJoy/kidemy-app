@@ -137,6 +137,7 @@ namespace EduGame
         
         public static GameManager Instance { get; private set; }
         public ChallengeConfig ChallengeConfig => m_ChallengeConfig;
+        public Quest CurrentQuest => quests[currentIndex];
 
         void Awake()
         {
@@ -166,8 +167,14 @@ namespace EduGame
         {
             if(backgroundMusic)
             {
-                bgmSource.clip = backgroundMusic;
-                bgmSource.Play();
+                if(bgmSource == null)
+                    bgmSource = GameObject.Find("AudioSource_Music")?.GetComponent<AudioSource>();
+                
+                if(bgmSource != null)
+                {
+                    bgmSource.clip = backgroundMusic;
+                    bgmSource.Play();
+                }
             }
 
             apiManager = GetComponent<APIManager>();
@@ -275,7 +282,12 @@ namespace EduGame
 
                 if(m_ResultPanelPrefab) m_ResultPanel = Instantiate(m_ResultPanelPrefab, m_PanelContainer, false);
                     
-                if(m_ReactionPanelPrefab) m_ReactionPanel = Instantiate(m_ReactionPanelPrefab, m_PanelContainer, false);
+                if(m_ReactionPanelPrefab)
+                {
+                    m_RightReaction = quests[0].Character.RightReaction;
+                    m_WrongReaction = quests[0].Character.WrongReaction;
+                    m_ReactionPanel = Instantiate(m_ReactionPanelPrefab, m_PanelContainer, false);
+                } 
 
                 if (m_ReactionPanel) m_ReactionPanel.Init(this);
             }
@@ -419,7 +431,7 @@ namespace EduGame
 
         public void PlayQuestionVoice()
         {
-            quests[currentIndex].PlayQuestionVoice();
+            //quests[currentIndex].PlayQuestionVoice();
         }
 
         public void Play()
@@ -686,6 +698,11 @@ namespace EduGame
 
                 tutorial.PlayTutorialCustom(targets, Canvas.transform);
             }
+        }
+
+        public void PlaySoundQuest()
+        {
+            quests[currentIndex].PlaySoundQuest();
         }
     }
 }

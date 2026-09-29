@@ -25,6 +25,7 @@ namespace EduGame
         public ChallengeConfig Challenged => m_Challenged;
         public Sprite Background => background;
         public Color Color => color;
+        public SO_Character Character => character;
         
         public SO_Quest Data => data;
         
@@ -112,6 +113,8 @@ namespace EduGame
 
         public virtual void Reset()
         {
+            Debug.Log("Reset Quest");
+
             Invoke(nameof(PlayQuestionVoice), 1f);
             Invoke(nameof(ShowTutorial), 1f);
         }
@@ -181,5 +184,37 @@ namespace EduGame
                 data.Question.SetAudio(clip);
             }
         }
+
+        public virtual void PlaySoundQuest()
+        {
+            //PlaySoundQuestInternal();
+        }
+
+        /*
+        protected virtual void PlaySoundQuestInternal()
+        {
+            if (data is SO_QuestMultipleChoice quest)
+            {
+                if (quest.SoundQuest)
+                {
+                    StartCoroutine(PlayingSoundQuest(quest));
+                }
+            }
+        }
+
+        private IEnumerator PlayingSoundQuest(SO_QuestMultipleChoice quest)
+        {
+            int repeat = quest.RepeatSoundQuest;
+            if (repeat <= 0)
+            {
+                repeat = 1;
+            }
+            for (int i = 0; i < repeat; i++)
+            {
+                audioSource.PlayOneShot(quest.SoundQuest);
+                yield return new WaitForSeconds(quest.SoundQuest.length);
+            }
+        }
+        */
     }
 }

@@ -51,7 +51,7 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 0.6060061, b: 0, a: 1}
-    audio: {fileID: 8300000, guid: c6ebfc6afbab580b0b61637041c6f3ed, type: 3}
+    audio: {fileID: 8300000, guid: 09d14e0ee018a434fb21d605591381a6, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1

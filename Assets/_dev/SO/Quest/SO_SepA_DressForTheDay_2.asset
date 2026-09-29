@@ -35,7 +35,7 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
     m_UseTextColor: 0
     m_TextColor: {r: 0, g: 0.6075771, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: c981e559971ea73bab50cec53dfeb424, type: 3}
+    audio: {fileID: 8300000, guid: 84f0121cc4b7577008fd48c74cc6733f, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: dadcc08aad3bb4878968b09f84113055, type: 3}
     text: Swimsuit
@@ -51,7 +51,7 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 0.6060061, b: 0, a: 1}
-    audio: {fileID: 8300000, guid: 84f0121cc4b7577008fd48c74cc6733f, type: 3}
+    audio: {fileID: 8300000, guid: c981e559971ea73bab50cec53dfeb424, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 1
