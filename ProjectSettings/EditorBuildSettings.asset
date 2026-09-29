@@ -47,7 +47,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_dev/Scenes/Dev_019_Safety Puzzles_A_rewrite.unity
     guid: a46f93405f4b0aa108f66e55670b4fb0
-  - enabled: 0
+  - enabled: 1
     path: Assets/_dev/Scenes/Dev_020_StepSequence_A_rewrite.unity
     guid: eea4fc0f587dfcfd49c9198f1cc25b59
   - enabled: 0
@@ -59,12 +59,24 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_dev/Scenes/Dev_Sep_MoreOrLess_A_rewrite.unity
     guid: 0741d9bcbfbf6efe5852f9f4c1b483a3
-  - enabled: 1
+  - enabled: 0
     path: Assets/_dev/Scenes/Dev_Sep_PictureGraphExplorer_B_rewrite.unity
     guid: e5f9d2d14f849cff2a1853567a972328
   - enabled: 0
     path: Assets/_dev/Scenes/Dev_Sep_WordInScene_B_rewrite.unity
     guid: 8ac0ab5ec47b50658ac5e7ad1d77d612
+  - enabled: 0
+    path: Assets/_dev/Scenes/Dev_Sep_FeelingInVoices_B_rewrite.unity
+    guid: 32868cc285ee2959082411666f98abf1
+  - enabled: 0
+    path: Assets/_dev/Scenes/Dev_Sep_MirrorArt_B_rewrite.unity
+    guid: 402de581cb9436b85adc44740fb406a4
+  - enabled: 0
+    path: Assets/_dev/Scenes/Dev_Sep_WholeOrHalf_Rewrite.unity
+    guid: cb44312cc3e010633867ea70953ee79c
+  - enabled: 0
+    path: Assets/_dev/Scenes/Dev_Sep_DressForTheDay_A_rewrite.unity
+    guid: 01a1650988c987970b72ecc47d196cae
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

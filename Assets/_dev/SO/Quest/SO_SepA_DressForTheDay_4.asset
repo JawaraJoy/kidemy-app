@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_SepA_DressForTheDay_4
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 002B
+  title: WordInScene
+  category: 1
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 21300000, guid: 371b35cf8ef6084debeea008da469ba1, type: 3}
+    text: It is sleep time. Which clothes are suitable?
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 3c6fe390baa78200a90608d7ed881fba, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  choices:
+  - image: {fileID: 21300000, guid: 0f5cbcf5a444fc81d96c4ae8382ba010, type: 3}
+    text: Pajamas
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0.7169812, b: 0.11626253, a: 1}
+    audio: {fileID: 8300000, guid: a8554b03a5451eccfb526cd10e199fc3, type: 3}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: 72eb996eaeadec38cb37b5ba7a34a668, type: 3}
+    text: Raincoat
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0.6075771, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: c6ebfc6afbab580b0b61637041c6f3ed, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: f5157fc14840b9d63aef27ed2b66ab1a, type: 3}
+    text: Uniform
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 0.6060061, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: c6ebfc6afbab580b0b61637041c6f3ed, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 1

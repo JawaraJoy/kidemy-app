@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_SepA_DressForTheDay_3
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 002B
+  title: WordInScene
+  category: 1
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 21300000, guid: 5b1ffdc0b226aeb738d5436f16bb2ff0, type: 3}
+    text: It is sunny. Which clothes are suitable?
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 6114f1999b834257abbd150377556cae, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  choices:
+  - image: {fileID: 21300000, guid: 2a2990e5a8ca3fd40bb7c126dd4c28ab, type: 3}
+    text: Sun Hat
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0.6075771, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 8b7aad23e0e1f2a11953da4351fdc7f5, type: 3}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: bcdb92dae0b35c859b563782bec60dcf, type: 3}
+    text: Scarf
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0.7169812, b: 0.11626253, a: 1}
+    audio: {fileID: 8300000, guid: 3d50f853423d6749eb59ddf26adc50a8, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 7131fe0045ae0626bac5c5ac941769e9, type: 3}
+    text: Rain Boots
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 0.6060061, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: dba534cec720b0e0ea56b6c088beeb65, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 1

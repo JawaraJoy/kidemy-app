@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_SepA_DressForTheDay_2
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 002B
+  title: WordInScene
+  category: 1
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 21300000, guid: 385f67475d8748456b3d8cbc32fd6cfc, type: 3}
+    text: It is cold. Which clothes are suitable?
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: e99a185d88a3496bbb239e05fba2f3df, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  choices:
+  - image: {fileID: 21300000, guid: c529105da899f8b32bcec917e0431868, type: 3}
+    text: Jacket
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0.6075771, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: c981e559971ea73bab50cec53dfeb424, type: 3}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: dadcc08aad3bb4878968b09f84113055, type: 3}
+    text: Swimsuit
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0.7169812, b: 0.11626253, a: 1}
+    audio: {fileID: 8300000, guid: 10551331cc91aba27908766661826aed, type: 3}
+    isAnswer: 0
+  - image: {fileID: 21300000, guid: 376a1670f3d3b62b7ba45abf70c28598, type: 3}
+    text: Shorts
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 0.6060061, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: 84f0121cc4b7577008fd48c74cc6733f, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 1
