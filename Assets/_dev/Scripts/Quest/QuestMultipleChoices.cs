@@ -325,33 +325,9 @@ namespace EduGame
         public override VoiceRequest[] GetVoiceRequests()
         {
             Setup();
-
-            if (dataMultipleChoice != null && dataMultipleChoice.Choices.Length > 0)
-            {
-                List<VoiceRequest> voiceRequests = new List<VoiceRequest>();
-                
-                VoiceRequest[] baseVoiceRequest = base.GetVoiceRequests();
-
-                if(baseVoiceRequest.Length > 0)
-                    voiceRequests.Add(baseVoiceRequest[0]);
-
-                for (int i = 0; i < dataMultipleChoice.Choices.Length; i++)
-                {
-                    if(!string.IsNullOrEmpty(dataMultipleChoice.Choices[i].Text))
-                    {
-                        voiceRequests.Add(new VoiceRequest
-                        {
-                            id = name + "_choice_" + i,
-                            text = dataMultipleChoice.Choices[i].Text,
-                            voice_id = GetVoiceId()
-                        });
-                    }   
-                }
-
-                return voiceRequests.ToArray();
-            }
-
-            return Array.Empty<VoiceRequest>();
+            return dataMultipleChoice != null
+                ? dataMultipleChoice.GetVoiceRequests()
+                : Array.Empty<VoiceRequest>();
         }
 
         /// <summary>
@@ -359,17 +335,7 @@ namespace EduGame
         /// </summary>
         public override bool HasVoiceClip(string requestId)
         {
-            if (requestId.IndexOf("_choice_") > 0)
-            {   
-                int index = StringHelper.ExtractId(requestId);
-
-                if(index >= 0)
-                    return dataMultipleChoice.Choices[index] != null && dataMultipleChoice.Choices[index].Audio != null;
-            }
-            else if (requestId.IndexOf("_question") > 0)
-                return dataMultipleChoice.Question.Audio != null;
-            
-            return false;
+            return dataMultipleChoice != null && dataMultipleChoice.HasVoiceClip(requestId);
         }
 
         /// <summary>
@@ -377,16 +343,8 @@ namespace EduGame
         /// </summary>
         public override void AssignVoiceClip(string requestId, AudioClip clip)
         {
-            if (requestId.IndexOf("_choice_") > 0)
-            {
-
-                int index = StringHelper.ExtractId(requestId);
-
-                if(dataMultipleChoice.Choices[index] != null)
-                    dataMultipleChoice.Choices[index].SetAudio(clip);
-            }
-            else if (requestId.IndexOf("_question") > 0)
-                data.Question.SetAudio(clip);
+            if (dataMultipleChoice != null)
+                dataMultipleChoice.AssignVoiceClip(requestId, clip);
         }
 
         public override void ShowTutorial()

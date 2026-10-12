@@ -15,6 +15,7 @@ MonoBehaviour:
   id: 001A
   title: Frog Count
   category: 0
+  character: {fileID: 11400000, guid: 835a5f97fe91ead4390fef37675e7290, type: 2}
   m_ImagePrefab: {fileID: 0}
   m_MultipleQuestImages: []
   question:
