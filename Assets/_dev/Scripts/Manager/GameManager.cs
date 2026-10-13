@@ -318,7 +318,10 @@ namespace EduGame
                 startTime = Time.time;
 
                 timerCo = TimerCo();
-                StartCoroutine(timerCo);
+                if (timerCo != null)
+                {
+                    StartCoroutine(timerCo);
+                }
             }
         }
 

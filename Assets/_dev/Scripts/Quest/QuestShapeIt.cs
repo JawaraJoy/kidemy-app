@@ -20,7 +20,7 @@ namespace EduGame
         [SerializeField] private AudioClip rotateSound;
 
         private SO_QuestShapeIt dataShapeIt;
-        private Dictionary<int, int> itemIndex = new Dictionary<int, int>();
+        private Dictionary<EntityId, EntityId> itemIndex = new Dictionary<EntityId, EntityId>();
         private int unansweredQuestion = 0;
         private IEnumerator rotateCo;
 
@@ -107,10 +107,10 @@ namespace EduGame
 
                 if (shapeZone)
                 {
-                    if(!itemIndex.ContainsKey(shape.transform.GetInstanceID()))
+                    if(!itemIndex.ContainsKey(shape.transform.GetEntityId()))
                     {
                         shape.RegisterZone();
-                        itemIndex.Add(shape.transform.GetInstanceID(), shapeZone.transform.GetInstanceID());
+                        itemIndex.Add(shape.transform.GetEntityId(), shapeZone.transform.GetEntityId());
                     }
 
                     itemsContainer.AddItem(shape);
@@ -144,10 +144,10 @@ namespace EduGame
         {
             bool ret = false;
 
-            int id = item.transform.GetInstanceID();
+            var id = item.transform.GetEntityId();
 
             if(itemIndex.ContainsKey(id))
-                ret = itemIndex[id] == zone.transform.GetInstanceID() && item.Rect.eulerAngles.z < 0.01f;
+                ret = itemIndex[id] == zone.transform.GetEntityId() && item.Rect.eulerAngles.z < 0.01f;
 
             return ret;
         }
@@ -181,7 +181,7 @@ namespace EduGame
             {
                 foreach (var item in canvas.Items)
                 {
-                    if(!item.CanBeRotated || item.transform.parent.GetInstanceID() != itemsContainer.transform.GetInstanceID())
+                    if(!item.CanBeRotated || item.transform.parent.GetEntityId() != itemsContainer.transform.GetEntityId())
                         continue;
 
                     item.Rect.localRotation = Quaternion.Euler(Vector3.forward * (item.Rect.eulerAngles.z + 3));

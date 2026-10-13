@@ -19,6 +19,9 @@ public class HandTutorial : MonoBehaviour
     [SerializeField] private float moveDuration = 1.2f;
     [SerializeField] private float fadeDuration = 0.4f;
 
+    private readonly string m_IdleAnimationName = "Idle";
+    private readonly string m_ClickAnimationName = "Click";
+
     private GameObject handInstance;
 
     /// <summary>
@@ -98,19 +101,20 @@ public class HandTutorial : MonoBehaviour
         for (int i = 0; i < repeat; i++)
         {
             float elapsed = 0f;
+            if (handRect == null) yield break;
             handRect.position = startPos;
             SetAlpha(handImage, 1f);
 
             if (mode == TutorialMode.Click)
-                animator?.Play("Idle", 0, 0f);
+                animator?.Play(m_IdleAnimationName, 0, 0f);
             else if (mode == TutorialMode.Swipe)
             {
                 trail.Clear();
                 trail.enabled = false;
-                animator?.Play("Idle", 0, 0f);
+                animator?.Play(m_IdleAnimationName, 0, 0f);
                 yield return new WaitForSeconds(0.5f);
                 yield return null;
-                animator?.Play("Click", 0, 0f);
+                animator?.Play(m_ClickAnimationName, 0, 0f);
                 yield return new WaitForSeconds(0.5f);
                 trail.enabled = true;
             }
@@ -121,23 +125,27 @@ public class HandTutorial : MonoBehaviour
                 float t = elapsed / moveDuration;
                 
                 // Bergerak halus dari Pertanyaan ke Jawaban
-                handRect.position = Vector3.Lerp(startPos, endPos, Mathf.SmoothStep(0f, 1f, t));
+                if (handRect != null)
+                {
+                    handRect.position = Vector3.Lerp(startPos, endPos, Mathf.SmoothStep(0f, 1f, t));
+                }
+                
                 yield return null;
             }
 
             if (mode == TutorialMode.Swipe)
             {
                 trail.enabled = false;
-                animator?.Play("Idle", 0, 0f);
+                animator?.Play(m_IdleAnimationName, 0, 0f);
                 yield return new WaitForSeconds(1f);
             }
 
             if (mode == TutorialMode.Click && animator)
             {
-                animator.Play("Click", 0, 0f);
+                animator.Play(m_ClickAnimationName, 0, 0f);
                 yield return null;
 
-                while (animator.GetCurrentAnimatorStateInfo(0).IsName("Click") &&
+                while (animator.GetCurrentAnimatorStateInfo(0).IsName(m_ClickAnimationName) &&
                        animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
                 {
                     yield return null;

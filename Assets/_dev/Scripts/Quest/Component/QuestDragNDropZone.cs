@@ -46,7 +46,7 @@ namespace EduGame
                 int itemIndex = items.Length;
                 bool isSameZone = false;
 
-                if (item.OriginalZone && item.OriginalZone.GetInstanceID() == transform.GetInstanceID())
+                if (item.OriginalZone && item.OriginalZone.GetEntityId() == transform.GetEntityId())
                 {
                     itemIndex = GetItemIndex(item);
                     isSameZone = true;
@@ -116,7 +116,7 @@ namespace EduGame
             {
                 foreach (var item in items)
                 {
-                    if (seekItem.transform.GetInstanceID() != item.transform.GetInstanceID())
+                    if (seekItem.transform.GetEntityId() != item.transform.GetEntityId())
                         i++;
                     else
                         break;

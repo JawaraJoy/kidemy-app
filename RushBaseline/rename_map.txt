@@ -1,0 +1,4 @@
+# Declared renames for the snapshot gate. Format:
+# Class|Old.Full.Name|New.Full.Name
+# Field|Declaring.Type.NewFullName|oldField|newField
+# Path|Assets/old/prefix|Assets/new/prefix

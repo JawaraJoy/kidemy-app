@@ -37,7 +37,7 @@ namespace EduGame
         {
             Animator res = null;
 
-            int id = transform.GetInstanceID();
+            int id = transform.GetEntityId().GetHashCode();
 
             if(!cachedAnimator.ContainsKey(id))
             {

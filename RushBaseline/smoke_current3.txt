@@ -1,0 +1,3 @@
+SCENE	Assets/_dev/Scenes/Dev_018_DailySchedule_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=16
+ERR	Assets/_dev/Scenes/Dev_018_DailySchedule_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
+DONE	DONE

@@ -13,8 +13,16 @@ namespace EduGame
 
         public virtual void Play(Transform transform)
         {
+            if (feedbackItems == null) return;
+            if (transform == null) return;
             foreach (var feedbackItem in feedbackItems)
-                feedbackItem.Play(transform);
+            {
+                if (feedbackItem != null)
+                {
+                    feedbackItem.Play(transform);
+                }
+            }
+                
         }
     }
 }

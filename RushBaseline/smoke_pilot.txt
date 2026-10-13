@@ -1,0 +1,8 @@
+SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=14
+ERR	Assets/_dev/Scenes/Dev_001_FrogsCount_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
+SCENE	Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rev.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+ERR	Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
+SCENE	Assets/_dev/Scenes/Dev_010_ShapeIt_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+ERR	Assets/_dev/Scenes/Dev_010_ShapeIt_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_1_HowManyFrog/OtherDev_HowManyFrog_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+DONE	DONE

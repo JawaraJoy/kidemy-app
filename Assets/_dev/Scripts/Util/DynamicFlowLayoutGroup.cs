@@ -31,8 +31,8 @@ public class DynamicFlowLayoutGroup : LayoutGroup
         float totalWidth = padding.left + padding.right + (columns * cellSize.x) + ((columns - 1) * spacing.x);
         float totalHeight = padding.top + padding.bottom + (rows * cellSize.y) + ((rows - 1) * spacing.y);
 
-        SetLayoutInputForAxis(totalWidth, totalWidth, -1, 0);
-        SetLayoutInputForAxis(totalHeight, totalHeight, -1, 1);
+        SetLayoutInputForAxis(totalWidth, totalWidth, 1, -1, 0);
+        SetLayoutInputForAxis(totalHeight, totalHeight, 1, -1, 1);
     }
 
     public override void SetLayoutHorizontal() => LayoutChildren();
