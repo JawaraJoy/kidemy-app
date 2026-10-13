@@ -26,12 +26,12 @@ namespace EduGame
 
         void Start()
         {
-            m_Image = GetComponent<RawImage>();
+            TryGetComponent<RawImage>(out m_Image);
 
             if (!m_Image)
                 Debug.LogError("Image Component not found!");
 
-            m_RectTransform = GetComponent<RectTransform>();
+            TryGetComponent<RectTransform>(out m_RectTransform);
 
             if (!m_RectTransform)
                 Debug.LogError("RectTransform Component not found!");

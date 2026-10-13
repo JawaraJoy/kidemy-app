@@ -38,7 +38,7 @@ namespace EduGame
 
         void Awake()
         {
-            m_ColoringCursor = GetComponent<QuestColoringCursor>();
+            TryGetComponent<QuestColoringCursor>(out m_ColoringCursor);
 
             if (!m_CanvasContainer)
                 Debug.LogError("Canvas not set");
@@ -127,7 +127,7 @@ namespace EduGame
         {
             if (m_Palettes[0].Rect.sizeDelta.x > 0 && m_Palettes[0].Rect.sizeDelta.y > 0)
             {
-                GridLayoutGroup gridLayoutGroup = m_PalettesContainer.GetComponent<GridLayoutGroup>();
+                m_PalettesContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
                 if (gridLayoutGroup)
                     gridLayoutGroup.cellSize = m_Palettes[0].Rect.sizeDelta;
             }

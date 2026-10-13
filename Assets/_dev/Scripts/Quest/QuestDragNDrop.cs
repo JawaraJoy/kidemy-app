@@ -144,21 +144,21 @@ namespace EduGame
         {
             if (m_Items[0].Rect.sizeDelta.x > 0 && m_Items[0].Rect.sizeDelta.y > 0)
             {
-                GridLayoutGroup gridLayoutGroup = m_ItemsContainer.GetComponent<GridLayoutGroup>();
+                m_ItemsContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
                 if (gridLayoutGroup)
                     gridLayoutGroup.cellSize = m_Items[0].Rect.sizeDelta;
             }
 
             if (m_Slots[0].Rect.sizeDelta.x > 0 && m_Slots[0].Rect.sizeDelta.y > 0)
             {
-                GridLayoutGroup gridLayoutGroup = m_SlotsContainer.GetComponent<GridLayoutGroup>();
+                m_SlotsContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
                 if (gridLayoutGroup)
                     gridLayoutGroup.cellSize = m_Slots[0].Rect.sizeDelta;
 
                 m_SlotsContainer.sizeDelta = new Vector2(m_SlotsContainer.sizeDelta.x * m_Slots.Length, m_SlotsContainer.sizeDelta.y);
             }
 
-            QuestDragNDropZone questDragNDropZone = m_ItemsContainer.GetComponent<QuestDragNDropZone>();
+            m_ItemsContainer.TryGetComponent<QuestDragNDropZone>(out QuestDragNDropZone questDragNDropZone);
 
             if (questDragNDropZone)
                 questDragNDropZone.RegisterItems();

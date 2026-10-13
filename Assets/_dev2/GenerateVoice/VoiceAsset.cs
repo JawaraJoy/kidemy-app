@@ -165,7 +165,7 @@ namespace EduGame
             // Request API
             // --------------------------------------------------------
 
-            VoiceAPI.Generate(
+            new VoiceAPI().Generate(
                 m_Text,
                 voiceId,
                 m_ApiToken,

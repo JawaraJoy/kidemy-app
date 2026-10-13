@@ -14,7 +14,7 @@ namespace EduGame
 
         void Start()
         {
-            m_Image = GetComponent<Image>();
+            TryGetComponent<Image>(out m_Image);
 
             // Set the threshold. Pixels with alpha less than 0.5 will be ignored by clicks.
             if (m_Image != null)
@@ -29,7 +29,7 @@ namespace EduGame
         public void OnPointerClick(PointerEventData eventData)
         {
             // Get the RectTransform of the clicked element
-            RectTransform clickedRectTransform = GetComponent<RectTransform>();
+            TryGetComponent<RectTransform>(out RectTransform clickedRectTransform);
 
             // Convert the screen point to a local point within the RectTransform's rectangle
             Vector2 localCursor;

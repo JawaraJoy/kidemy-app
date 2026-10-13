@@ -14,9 +14,9 @@ namespace EduGame
 
         protected override void Awake()
         {
-            m_Image = GetComponent<Image>();
+            TryGetComponent<Image>(out m_Image);
             m_QuestColoring = GetComponentInParent<QuestColoring>();
-            m_RegionalClick = GetComponent<QuestUtilRegionalClick>();
+            TryGetComponent<QuestUtilRegionalClick>(out m_RegionalClick);
 
             if (!m_Image)
                 Debug.LogError("Image Component not found");

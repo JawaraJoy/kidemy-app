@@ -1,0 +1,87 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Serialization;
+
+namespace EduGame
+{
+    [RequireComponent(typeof(Button))]
+
+    public class QuestRythimBeat : QuestComponent
+    {   
+        [SerializeField] [FormerlySerializedAs("audioSource")] private AudioSource m_AudioSource;
+        [SerializeField] [FormerlySerializedAs("clip")] private AudioClip m_Clip;
+        
+        private Collider2D m_Col;
+        private Animator m_Animator;
+
+        private bool m_IsOnBeat;
+
+        private bool m_IsSuccess;
+        
+        protected override void Awake()
+        {
+            base.Awake();
+
+            m_Col = GetComponent<Collider2D>();
+            m_Animator = GetComponentInChildren<Animator>();
+
+            if(!m_AudioSource)
+                m_AudioSource = GameManager.Instance.AudioSource;
+
+            if(m_Col)
+                m_Col.enabled = false;
+            else
+                Debug.LogError("Collider not found");
+
+            if(Button)
+                Button.onClick.AddListener(Onclick);
+            else
+                Debug.LogError("Button not found");
+        }
+
+        void Onclick()
+        {
+            if(!m_IsOnBeat)
+            {
+                m_IsOnBeat = true;
+
+                if(m_Animator)
+                    m_Animator.Play("Tap");
+
+                StartCoroutine(BeatCo());
+            }
+        }
+
+        IEnumerator BeatCo()
+        {
+            m_Col.enabled = true;
+
+            yield return new WaitForSeconds(0.1f);
+
+            if(m_Clip && !m_IsSuccess)
+                m_AudioSource.PlayOneShot(m_Clip);
+
+            yield return new WaitForSeconds(0.1f);
+
+            m_Col.enabled = false;
+
+            m_IsOnBeat = false;
+
+            m_IsSuccess = false;
+        }
+
+        void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.tag == "NoteHead" && !m_IsSuccess)
+            {
+                m_IsSuccess = true;
+                
+                QuestRythimNote note = collision.GetComponent<QuestRythimNote>();
+                
+                if(note)
+                    note.OnBeat(true);
+            }
+        }
+    }
+}

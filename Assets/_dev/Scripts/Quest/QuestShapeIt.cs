@@ -72,7 +72,7 @@ namespace EduGame
 
             if(m_RotateButton)
             {
-                ButtonEvents buttonEvents = m_RotateButton.GetComponent<ButtonEvents>();
+                m_RotateButton.TryGetComponent<ButtonEvents>(out ButtonEvents buttonEvents);
 
                 if(buttonEvents)
                 {
@@ -104,7 +104,7 @@ namespace EduGame
             foreach (var shape in m_Canvas.Items)
             {
                 Transform shapeParent = shape.transform.parent;
-                QuestDragNDropZone shapeZone = shapeParent.GetComponent<QuestDragNDropZone>();
+                shapeParent.TryGetComponent<QuestDragNDropZone>(out QuestDragNDropZone shapeZone);
 
                 if (shapeZone)
                 {
@@ -128,7 +128,7 @@ namespace EduGame
 
         void RecalculateContainer()
         {
-            QuestDragNDropZone questDragNDropZone = m_ItemsContainer.GetComponent<QuestDragNDropZone>();
+            m_ItemsContainer.TryGetComponent<QuestDragNDropZone>(out QuestDragNDropZone questDragNDropZone);
                 
             if(questDragNDropZone)
                 questDragNDropZone.RegisterItems();

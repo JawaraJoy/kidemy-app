@@ -1,0 +1,218 @@
+# TryGetComponent conversion DRY RUN batch=s3_b4
+# GetComponent<T>() calls seen: 57 | convertible: 56 | manual: 1
+
+SITE Assets/_dev/Scripts/Manager/ContentManager.cs:23  EduGame.ContentManager.Awake
+  - m_CanvasScaler = GetComponent<CanvasScaler>();
+  + TryGetComponent<CanvasScaler>(out m_CanvasScaler);
+SITE Assets/_dev/Scripts/Manager/GameManager.cs:176  EduGame.GameManager.Start
+  - m_ApiManager = GetComponent<APIManager>();
+  + TryGetComponent<APIManager>(out m_ApiManager);
+SITE Assets/_dev/Scripts/Manager/GameManager.cs:177  EduGame.GameManager.Start
+  - m_AssetManager = GetComponent<AssetManager>();
+  + TryGetComponent<AssetManager>(out m_AssetManager);
+SITE Assets/_dev/Scripts/Manager/GameManager.cs:361  EduGame.GameManager.SetNPC
+  - Animator animator = m_Npc.GetComponent<Animator>();
+  + m_Npc.TryGetComponent<Animator>(out Animator animator);
+SITE Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:24  EduGame.QuestColoringField.Start
+  - RawImage image = GetComponent<RawImage>();
+  + TryGetComponent<RawImage>(out RawImage image);
+SITE Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:26  EduGame.QuestColoringField.Start
+  - m_Rect = GetComponent<RectTransform>();
+  + TryGetComponent<RectTransform>(out m_Rect);
+SITE Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:28  EduGame.QuestColoringField.Start
+  - m_E = GetComponent<QuestUtilRegionalDrag>();
+  + TryGetComponent<QuestUtilRegionalDrag>(out m_E);
+SITE Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs:17  EduGame.QuestColoringItem.Awake
+  - m_Image = GetComponent<Image>();
+  + TryGetComponent<Image>(out m_Image);
+SITE Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs:19  EduGame.QuestColoringItem.Awake
+  - m_RegionalClick = GetComponent<QuestUtilRegionalClick>();
+  + TryGetComponent<QuestUtilRegionalClick>(out m_RegionalClick);
+SITE Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:34  EduGame.QuestComponent.InitInternal
+  - m_CachedRect = GetComponent<RectTransform>();
+  + TryGetComponent<RectTransform>(out m_CachedRect);
+SITE Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:36  EduGame.QuestComponent.InitInternal
+  - m_CachedImage = GetComponent<Image>();
+  + TryGetComponent<Image>(out m_CachedImage);
+SITE Assets/_dev/Scripts/Quest/Component/QuestContainer.cs:15  EduGame.QuestContainer.Start
+  - Image shadowImage = shadow.GetComponent<Image>();
+  + shadow.TryGetComponent<Image>(out Image shadowImage);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:40  EduGame.QuestDragNDropItem.Awake
+  - m_ImageRect = m_Image.transform.GetComponent<RectTransform>();
+  + m_Image.transform.TryGetComponent<RectTransform>(out m_ImageRect);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:52  EduGame.QuestDragNDropItem.Start
+  - m_CanvasGroup = GetComponent<CanvasGroup>();
+  + TryGetComponent<CanvasGroup>(out m_CanvasGroup);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:156  EduGame.QuestDragNDropItem.RegisterZoneInternal
+  - m_OriginalParent = transform.parent.GetComponent<QuestDragNDropZone>();
+  + transform.parent.TryGetComponent<QuestDragNDropZone>(out m_OriginalParent);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:37  EduGame.QuestDragNDropZone.Awake
+  - m_Animator = GetComponent<Animator>();
+  + TryGetComponent<Animator>(out m_Animator);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:108  EduGame.QuestDragNDropZone.RegisterItemsInternal
+  - m_Items[x] = child.GetComponent<QuestDragNDropItem>();
+  + child.TryGetComponent<QuestDragNDropItem>(out m_Items[x]);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:144  EduGame.QuestDragNDropZone.OnDrop
+  - QuestDragNDropItem draggedItem = eventData.pointerDrag.GetComponent<QuestDragNDropItem>();
+  + eventData.pointerDrag.TryGetComponent<QuestDragNDropItem>(out QuestDragNDropItem draggedItem);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:198  EduGame.QuestDragNDropZone.Dynamic
+  - RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+  + item.transform.GetChild(0).TryGetComponent<RectTransform>(out RectTransform rect);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:236  EduGame.QuestDragNDropZone.Sticky
+  - RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+  + item.transform.GetChild(0).TryGetComponent<RectTransform>(out RectTransform rect);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:237  EduGame.QuestDragNDropZone.Sticky
+  - RectTransform rectParent = item.transform.GetComponent<RectTransform>();
+  + item.transform.TryGetComponent<RectTransform>(out RectTransform rectParent);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:268  EduGame.QuestDragNDropZone.Scaled
+  - RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+  + item.transform.GetChild(0).TryGetComponent<RectTransform>(out RectTransform rect);
+SITE Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:281  EduGame.QuestDragNDropZone.FollowParent
+  - RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+  + item.transform.GetChild(0).TryGetComponent<RectTransform>(out RectTransform rect);
+SITE Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:43  EduGame.QuestMultipleChoicesItem.InitInternal
+  - m_Events = GetComponent<ButtonEvents> ();
+  + TryGetComponent<ButtonEvents>(out m_Events);
+SITE Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItemWithScale.cs:39  EduGame.QuestMultipleChoicesItemWithScale.SetChoice
+  - RectTransform imageRect = m_Image.transform.GetComponent<RectTransform>();
+  + m_Image.transform.TryGetComponent<RectTransform>(out RectTransform imageRect);
+SITE Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:26  EduGame.QuestRythimBeat.Awake
+  - m_Col = GetComponent<Collider2D>();
+  + TryGetComponent<Collider2D>(out m_Col);
+SITE Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:80  EduGame.QuestRythimBeat.OnTriggerEnter2D
+  - QuestRythimNote note = collision.GetComponent<QuestRythimNote>();
+  + collision.TryGetComponent<QuestRythimNote>(out QuestRythimNote note);
+SITE Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:35  EduGame.QuestRythimNote.InitInternal
+  - m_Rb = GetComponent<Rigidbody2D>();
+  + TryGetComponent<Rigidbody2D>(out m_Rb);
+SITE Assets/_dev/Scripts/Quest/QuestColoring.cs:41  EduGame.QuestColoring.Awake
+  - m_ColoringCursor = GetComponent<QuestColoringCursor>();
+  + TryGetComponent<QuestColoringCursor>(out m_ColoringCursor);
+SITE Assets/_dev/Scripts/Quest/QuestColoring.cs:130  EduGame.QuestColoring.RecalculatePalettesContainer
+  - GridLayoutGroup gridLayoutGroup = m_PalettesContainer.GetComponent<GridLayoutGroup>();
+  + m_PalettesContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
+SITE Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:147  EduGame.QuestDragNDrop.RecalculateContainer
+  - GridLayoutGroup gridLayoutGroup = m_ItemsContainer.GetComponent<GridLayoutGroup>();
+  + m_ItemsContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
+SITE Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:154  EduGame.QuestDragNDrop.RecalculateContainer
+  - GridLayoutGroup gridLayoutGroup = m_SlotsContainer.GetComponent<GridLayoutGroup>();
+  + m_SlotsContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
+SITE Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:161  EduGame.QuestDragNDrop.RecalculateContainer
+  - QuestDragNDropZone questDragNDropZone = m_ItemsContainer.GetComponent<QuestDragNDropZone>();
+  + m_ItemsContainer.TryGetComponent<QuestDragNDropZone>(out QuestDragNDropZone questDragNDropZone);
+SITE Assets/_dev/Scripts/Quest/QuestMatching.cs:130  EduGame.QuestMatching.RecalculateChoiceContainer
+  - GridLayoutGroup gridLayoutGroup = m_CardsContainer.GetComponent<GridLayoutGroup>();
+  + m_CardsContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
+SITE Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:284  EduGame.QuestMultipleChoices.RecalculateChoiceContainer
+  - GridLayoutGroup gridLayoutGroup = m_ChoicesContainer.GetComponent<GridLayoutGroup>();
+  + m_ChoicesContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
+SITE Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:33  EduGame.QuestRythimMaker.Start
+  - s_AudioSource = GetComponent<AudioSource>();
+  + TryGetComponent<AudioSource>(out s_AudioSource);
+SITE Assets/_dev/Scripts/Quest/QuestShapeIt.cs:75  EduGame.QuestShapeIt.Start
+  - ButtonEvents buttonEvents = m_RotateButton.GetComponent<ButtonEvents>();
+  + m_RotateButton.TryGetComponent<ButtonEvents>(out ButtonEvents buttonEvents);
+SITE Assets/_dev/Scripts/Quest/QuestShapeIt.cs:107  EduGame.QuestShapeIt.ResetInternal
+  - QuestDragNDropZone shapeZone = shapeParent.GetComponent<QuestDragNDropZone>();
+  + shapeParent.TryGetComponent<QuestDragNDropZone>(out QuestDragNDropZone shapeZone);
+SITE Assets/_dev/Scripts/Quest/QuestShapeIt.cs:131  EduGame.QuestShapeIt.RecalculateContainer
+  - QuestDragNDropZone questDragNDropZone = m_ItemsContainer.GetComponent<QuestDragNDropZone>();
+  + m_ItemsContainer.TryGetComponent<QuestDragNDropZone>(out QuestDragNDropZone questDragNDropZone);
+SITE Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:100  EduGame.QuestWordBuilder.RecalculateChoiceContainer
+  - GridLayoutGroup gridLayoutGroup = m_ChoicesContainer.GetComponent<GridLayoutGroup>();
+  + m_ChoicesContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
+SITE Assets/_dev/Scripts/Quest/Util/QuestUtilButton.cs:17  EduGame.QuestUtilButton.Awake
+  - m_Button = GetComponent<Button>();
+  + TryGetComponent<Button>(out m_Button);
+SITE Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:17  EduGame.QuestUtilGameObject.Awake
+  - m_Rect = GetComponent<RectTransform>();
+  + TryGetComponent<RectTransform>(out m_Rect);
+SITE Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalClick.cs:17  EduGame.QuestUtilRegionalClick.Start
+  - m_Image = GetComponent<Image>();
+  + TryGetComponent<Image>(out m_Image);
+SITE Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalClick.cs:32  EduGame.QuestUtilRegionalClick.OnPointerClick
+  - RectTransform clickedRectTransform = GetComponent<RectTransform>();
+  + TryGetComponent<RectTransform>(out RectTransform clickedRectTransform);
+SITE Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalDrag.cs:29  EduGame.QuestUtilRegionalDrag.Start
+  - m_Image = GetComponent<RawImage>();
+  + TryGetComponent<RawImage>(out m_Image);
+SITE Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalDrag.cs:34  EduGame.QuestUtilRegionalDrag.Start
+  - m_RectTransform = GetComponent<RectTransform>();
+  + TryGetComponent<RectTransform>(out m_RectTransform);
+SITE Assets/_dev/Scripts/Util/AudioPlayer.cs:16  EduGame.AudioPlayer.Start
+  - m_Button = GetComponent<Button>();
+  + TryGetComponent<Button>(out m_Button);
+SITE Assets/_dev/Scripts/Util/FeedbackItemAnimation.cs:45  EduGame.FeedbackItemAnimation.GetAnimator
+  - Animator tAnimator = transform.GetComponent<Animator>();
+  + transform.TryGetComponent<Animator>(out Animator tAnimator);
+SITE Assets/_dev/Scripts/Util/HandTutorial.cs:37  HandTutorial.PlayTutorial
+  - RectTransform handRect = m_HandInstance.GetComponent<RectTransform>();
+  + m_HandInstance.TryGetComponent<RectTransform>(out RectTransform handRect);
+SITE Assets/_dev/Scripts/Util/HandTutorial.cs:38  HandTutorial.PlayTutorial
+  - Image handImage = m_HandInstance.GetComponent<Image>();
+  + m_HandInstance.TryGetComponent<Image>(out Image handImage);
+SITE Assets/_dev/Scripts/Util/HandTutorial.cs:40  HandTutorial.PlayTutorial
+  - Canvas canvas = canvasTransform.GetComponent<Canvas>();
+  + canvasTransform.TryGetComponent<Canvas>(out Canvas canvas);
+SITE Assets/_dev/Scripts/Util/HandTutorial.cs:50  HandTutorial.PlayTutorial
+  - Canvas handCanvas = m_HandInstance.GetComponent<Canvas>();
+  + m_HandInstance.TryGetComponent<Canvas>(out Canvas handCanvas);
+SITE Assets/_dev/Scripts/Util/RawImageAlphaFilter.cs:18  RawImageAlphaFilter.Awake
+  - m_RawImage = GetComponent<RawImage>();
+  + TryGetComponent<RawImage>(out m_RawImage);
+SITE Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:86  SceneButtonGenerator.GenerateButtonsInEditor
+  - Image btnImage = newButtonObj.GetComponent<Image>();
+  + newButtonObj.TryGetComponent<Image>(out Image btnImage);
+SITE Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:110  SceneButtonGenerator.GenerateButtonsInEditor
+  - SceneLoader loader = newButtonObj.GetComponent<SceneLoader>();
+  + newButtonObj.TryGetComponent<SceneLoader>(out SceneLoader loader);
+SITE Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:117  SceneButtonGenerator.GenerateButtonsInEditor
+  - Button btnComponent = newButtonObj.GetComponent<Button>();
+  + newButtonObj.TryGetComponent<Button>(out Button btnComponent);
+
+# MANUAL (left unchanged)
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:87	not a plain call statement	if(eventData.pointerEnter == null || !eventData.pointerEnter.GetComponent<QuestDragNDropZone>())
+
+# IL map rules (42)
+Reviewed|EduGame.AudioPlayer|Start|
+Reviewed|EduGame.ContentManager|Awake|
+Reviewed|EduGame.FeedbackItemAnimation|GetAnimator|
+Reviewed|EduGame.GameManager|SetNPC|
+Reviewed|EduGame.GameManager|Start|
+Reviewed|EduGame.QuestColoringField|Start|
+Reviewed|EduGame.QuestColoringItem|Awake|
+Reviewed|EduGame.QuestColoring|Awake|
+Reviewed|EduGame.QuestColoring|RecalculatePalettesContainer|
+Reviewed|EduGame.QuestComponent|Init|
+Reviewed|EduGame.QuestContainer|Start|
+Reviewed|EduGame.QuestDragNDropItem|Awake|
+Reviewed|EduGame.QuestDragNDropItem|RegisterZone|
+Reviewed|EduGame.QuestDragNDropItem|Start|
+Reviewed|EduGame.QuestDragNDropZone|Awake|
+Reviewed|EduGame.QuestDragNDropZone|Dynamic|
+Reviewed|EduGame.QuestDragNDropZone|FollowParent|
+Reviewed|EduGame.QuestDragNDropZone|OnDrop|
+Reviewed|EduGame.QuestDragNDropZone|RegisterItems|
+Reviewed|EduGame.QuestDragNDropZone|Scaled|
+Reviewed|EduGame.QuestDragNDropZone|Sticky|
+Reviewed|EduGame.QuestDragNDrop|RecalculateContainer|
+Reviewed|EduGame.QuestMatching|RecalculateChoiceContainer|
+Reviewed|EduGame.QuestMultipleChoicesItemWithScale|SetChoice|
+Reviewed|EduGame.QuestMultipleChoicesItem|Init|
+Reviewed|EduGame.QuestMultipleChoices|RecalculateChoiceContainer|
+Reviewed|EduGame.QuestRythimBeat|Awake|
+Reviewed|EduGame.QuestRythimBeat|OnTriggerEnter2D|
+Reviewed|EduGame.QuestRythimMaker|Start|
+Reviewed|EduGame.QuestRythimNote|Init|
+Reviewed|EduGame.QuestShapeIt|RecalculateContainer|
+Reviewed|EduGame.QuestShapeIt|Reset|
+Reviewed|EduGame.QuestShapeIt|Start|
+Reviewed|EduGame.QuestUtilButton|Awake|
+Reviewed|EduGame.QuestUtilGameObject|Awake|
+Reviewed|EduGame.QuestUtilRegionalClick|OnPointerClick|
+Reviewed|EduGame.QuestUtilRegionalClick|Start|
+Reviewed|EduGame.QuestUtilRegionalDrag|Start|
+Reviewed|EduGame.QuestWordBuilder|RecalculateChoiceContainer|
+Reviewed|HandTutorial|PlayTutorial|
+Reviewed|RawImageAlphaFilter|Awake|
+Reviewed|SceneButtonGenerator|GenerateButtonsInEditor|

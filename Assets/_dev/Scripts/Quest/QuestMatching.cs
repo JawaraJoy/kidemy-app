@@ -127,7 +127,7 @@ namespace EduGame
         {
             if (m_Cards[0].Rect.sizeDelta.x > 0 && m_Cards[0].Rect.sizeDelta.y > 0)
             {
-                GridLayoutGroup gridLayoutGroup = m_CardsContainer.GetComponent<GridLayoutGroup>();
+                m_CardsContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
                 if (gridLayoutGroup)
                     gridLayoutGroup.cellSize = m_Cards[0].Rect.sizeDelta;
             }

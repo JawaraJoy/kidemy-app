@@ -13,7 +13,7 @@ namespace EduGame
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            m_Button = GetComponent<Button>();
+            TryGetComponent<Button>(out m_Button);
 
             if(!m_Button)
                 Debug.LogError("Button Component not found");

@@ -173,8 +173,8 @@ namespace EduGame
 
             }
 
-            m_ApiManager = GetComponent<APIManager>();
-            m_AssetManager = GetComponent<AssetManager>();
+            TryGetComponent<APIManager>(out m_ApiManager);
+            TryGetComponent<AssetManager>(out m_AssetManager);
 
 #if !UNITY_EDITOR && UNITY_WEBGL
                 m_BaseURL = GetParentURL();
@@ -358,7 +358,7 @@ namespace EduGame
 
         public virtual void SetNPC(RuntimeAnimatorController controller)
         {
-            Animator animator = m_Npc.GetComponent<Animator>();
+            m_Npc.TryGetComponent<Animator>(out Animator animator);
 
             if (animator)
                 animator.runtimeAnimatorController = controller;

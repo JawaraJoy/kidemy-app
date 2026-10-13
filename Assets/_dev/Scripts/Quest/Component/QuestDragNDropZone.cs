@@ -34,7 +34,7 @@ namespace EduGame
 
             m_Quest = GetComponentInParent<QuestZonePairing>();
 
-            m_Animator = GetComponent<Animator>();
+            TryGetComponent<Animator>(out m_Animator);
             m_Grid = GetComponentInChildren<GridLayoutGroup>();
 
             RegisterItemsInternal();
@@ -105,7 +105,7 @@ namespace EduGame
             {
                 foreach (Transform child in transform)
                 {
-                    m_Items[x] = child.GetComponent<QuestDragNDropItem>();
+                    child.TryGetComponent<QuestDragNDropItem>(out m_Items[x]);
                     x++;
                 }
                 
@@ -141,7 +141,7 @@ namespace EduGame
         {
             if (eventData.pointerDrag != null)
             {
-                QuestDragNDropItem draggedItem = eventData.pointerDrag.GetComponent<QuestDragNDropItem>();
+                eventData.pointerDrag.TryGetComponent<QuestDragNDropItem>(out QuestDragNDropItem draggedItem);
 
                 if (draggedItem)
                 {
@@ -195,7 +195,7 @@ namespace EduGame
 
         private void Dynamic(QuestDragNDropItem item)
         {
-            RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+            item.transform.GetChild(0).TryGetComponent<RectTransform>(out RectTransform rect);
 
             if(m_Grid)
             {
@@ -233,8 +233,8 @@ namespace EduGame
 
         private void Sticky(QuestDragNDropItem item)
         {
-            RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
-            RectTransform rectParent = item.transform.GetComponent<RectTransform>();
+            item.transform.GetChild(0).TryGetComponent<RectTransform>(out RectTransform rect);
+            item.transform.TryGetComponent<RectTransform>(out RectTransform rectParent);
 
             rectParent.pivot = Vector2.one * 0.5f;
             rectParent.anchorMax = Vector2.one * 0.5f;
@@ -265,7 +265,7 @@ namespace EduGame
         private void Scaled(QuestDragNDropItem item, float scale)
         {
             Debug.Log(scale);
-            RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+            item.transform.GetChild(0).TryGetComponent<RectTransform>(out RectTransform rect);
 
             rect.pivot = Vector2.one * 0.5f;
             rect.anchorMax = Vector2.one * 0.5f;
@@ -278,7 +278,7 @@ namespace EduGame
 
         private void FollowParent(QuestDragNDropItem item)
         {
-            RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+            item.transform.GetChild(0).TryGetComponent<RectTransform>(out RectTransform rect);
             GridLayoutGroup grid = item.transform.GetComponentInParent<GridLayoutGroup>();
 
             rect.pivot = Vector2.one * 0.5f;

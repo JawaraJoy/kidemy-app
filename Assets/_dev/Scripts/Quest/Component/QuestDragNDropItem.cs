@@ -37,7 +37,7 @@ namespace EduGame
             ResetInternal();
 
             if(m_Image)
-                m_ImageRect = m_Image.transform.GetComponent<RectTransform>();
+                m_Image.transform.TryGetComponent<RectTransform>(out m_ImageRect);
 
             if(m_ImageRect)
                 m_OriginalSize = m_ImageRect.sizeDelta;
@@ -49,7 +49,7 @@ namespace EduGame
         {
             base.Start();
 
-            m_CanvasGroup = GetComponent<CanvasGroup>();
+            TryGetComponent<CanvasGroup>(out m_CanvasGroup);
         }
 
         public void OnBeginDrag(PointerEventData eventData)
@@ -84,7 +84,7 @@ namespace EduGame
         {
             m_CanvasGroup.blocksRaycasts = true;
 
-            if(eventData.pointerEnter == null || !eventData.pointerEnter.GetComponent<QuestDragNDropZone>())
+            if(eventData.pointerEnter == null || !eventData.pointerEnter.TryGetComponent<QuestDragNDropZone>(out _))
                 OriginalZone.ReInsertItem(this);
         }
 
@@ -153,7 +153,7 @@ namespace EduGame
 
         protected virtual void RegisterZoneInternal()
         {
-            m_OriginalParent = transform.parent.GetComponent<QuestDragNDropZone>();
+            transform.parent.TryGetComponent<QuestDragNDropZone>(out m_OriginalParent);
         }
     }
 }

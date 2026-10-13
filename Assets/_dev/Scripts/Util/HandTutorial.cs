@@ -34,10 +34,10 @@ public class HandTutorial : MonoBehaviour
 
         // Instantiate prefab tangan di Canvas
         m_HandInstance = Instantiate(m_HandImagePrefab, canvasTransform);
-        RectTransform handRect = m_HandInstance.GetComponent<RectTransform>();
-        Image handImage = m_HandInstance.GetComponent<Image>();
+        m_HandInstance.TryGetComponent<RectTransform>(out RectTransform handRect);
+        m_HandInstance.TryGetComponent<Image>(out Image handImage);
         Animator animator = m_HandInstance.GetComponentInChildren<Animator>();
-        Canvas canvas = canvasTransform.GetComponent<Canvas>();
+        canvasTransform.TryGetComponent<Canvas>(out Canvas canvas);
 
         if (mode != TutorialMode.Swipe)
         {
@@ -47,7 +47,7 @@ public class HandTutorial : MonoBehaviour
 
         if (canvas)
         {
-            Canvas handCanvas = m_HandInstance.GetComponent<Canvas>();
+            m_HandInstance.TryGetComponent<Canvas>(out Canvas handCanvas);
             if (!handCanvas)
                 handCanvas = m_HandInstance.AddComponent<Canvas>();
 

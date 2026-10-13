@@ -14,7 +14,7 @@ namespace EduGame
         {
             base.Awake();
 
-            m_Button = GetComponent<Button>();
+            TryGetComponent<Button>(out m_Button);
         }
 
         protected override void Enable()

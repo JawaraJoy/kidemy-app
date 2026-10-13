@@ -33,32 +33,67 @@ namespace Rush
     [Serializable]
     public struct FadeTweenStruct
     {
-        public float Start;
-        public float End;
+        [SerializeField]
+        [FormerlySerializedAs("Start")]
+        private float m_Start;
+        [SerializeField]
+        [FormerlySerializedAs("End")]
+        private float m_End;
+
+        public float Start => m_Start;
+        public float End => m_End;
     }
     [Serializable]
     public struct RectPosStruct
     {
-        public Vector2 StartRectPosition;
-        public Vector2 EndRectPosition;
+        [SerializeField]
+        [FormerlySerializedAs("StartRectPosition")]
+        private Vector2 m_StartRectPosition;
+        [SerializeField]
+        [FormerlySerializedAs("EndRectPosition")]
+        private Vector2 m_EndRectPosition;
+
+        public Vector2 StartRectPosition => m_StartRectPosition;
+        public Vector2 EndRectPosition => m_EndRectPosition;
     }
     [Serializable]
     public struct PositionStruct
     {
-        public Vector3 StartPosition;
-        public Vector3 EndPosition;
+        [SerializeField]
+        [FormerlySerializedAs("StartPosition")]
+        private Vector3 m_StartPosition;
+        [SerializeField]
+        [FormerlySerializedAs("EndPosition")]
+        private Vector3 m_EndPosition;
+
+        public Vector3 StartPosition => m_StartPosition;
+        public Vector3 EndPosition => m_EndPosition;
     }
     [Serializable]
     public struct ScaleStruct
     {
-        public Vector3 StartScale;
-        public Vector3 EndScale;
+        [SerializeField]
+        [FormerlySerializedAs("StartScale")]
+        private Vector3 m_StartScale;
+        [SerializeField]
+        [FormerlySerializedAs("EndScale")]
+        private Vector3 m_EndScale;
+
+        public Vector3 StartScale => m_StartScale;
+        public Vector3 EndScale => m_EndScale;
     }
     [Serializable]
     public struct ColorStruct
     {
-        public Color StartColor;
-        public Color EndColor;
+        [SerializeField]
+        [FormerlySerializedAs("StartColor")]
+        private Color m_StartColor;
+        [SerializeField]
+        [FormerlySerializedAs("EndColor")]
+        private Color m_EndColor;
+
+        public Color StartColor => m_StartColor;
+        public Color EndColor => m_EndColor;
     }
     [Serializable]
     public class LoopTweenField

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
@@ -14,16 +15,20 @@ public class SceneButtonGenerator : MonoBehaviour
 {
     [Header("UI Parent & Prefab")]
     [Tooltip("Parent transform tempat tombol akan ditempatkan (misal: Panel dengan Vertical/Grid Layout Group)")]
-    public Transform container;
+    [SerializeField]
+    [FormerlySerializedAs("container")]
+    private Transform m_Container;
 
     [Tooltip("Optional: Prefab UI Button kustom. Jika dikosongkan, akan memakai UI Button default Unity.")]
-    public GameObject buttonPrefab;
+    [SerializeField]
+    [FormerlySerializedAs("buttonPrefab")]
+    private GameObject m_ButtonPrefab;
 
 #if UNITY_EDITOR
     [ContextMenu("Generate Scene Buttons")]
     public void GenerateButtonsInEditor()
     {
-        if (container == null)
+        if (m_Container == null)
         {
             Debug.LogError("[SceneButtonGenerator] Tolong assign 'Container' terlebih dahulu di Inspector!");
             return;
@@ -33,9 +38,9 @@ public class SceneButtonGenerator : MonoBehaviour
         EnsureEventSystemExists();
 
         // 2. Hapus tombol-tombol lama
-        while (container.childCount > 0)
+        while (m_Container.childCount > 0)
         {
-            Undo.DestroyObjectImmediate(container.GetChild(0).gameObject);
+            Undo.DestroyObjectImmediate(m_Container.GetChild(0).gameObject);
         }
 
         // 3. Ambil daftar scene dari Build Settings
@@ -66,19 +71,19 @@ public class SceneButtonGenerator : MonoBehaviour
 
             // 5. Instantiate Button
             GameObject newButtonObj;
-            if (buttonPrefab != null)
+            if (m_ButtonPrefab != null)
             {
-                newButtonObj = (GameObject)PrefabUtility.InstantiatePrefab(buttonPrefab, container);
+                newButtonObj = (GameObject)PrefabUtility.InstantiatePrefab(m_ButtonPrefab, m_Container);
             }
             else
             {
                 newButtonObj = DefaultControls.CreateButton(new DefaultControls.Resources());
-                newButtonObj.transform.SetParent(container, false);
+                newButtonObj.transform.SetParent(m_Container, false);
             }
 
             newButtonObj.name = "Btn_" + rawName;
 
-            Image btnImage = newButtonObj.GetComponent<Image>();
+            newButtonObj.TryGetComponent<Image>(out Image btnImage);
             if (btnImage != null)
             {
                 btnImage.raycastTarget = true;
@@ -102,14 +107,14 @@ public class SceneButtonGenerator : MonoBehaviour
             }
 
             // 7. Pasang SceneLoader & daftarkan Event
-            SceneLoader loader = newButtonObj.GetComponent<SceneLoader>();
+            newButtonObj.TryGetComponent<SceneLoader>(out SceneLoader loader);
             if (loader == null)
             {
                 loader = newButtonObj.AddComponent<SceneLoader>();
             }
-            loader.targetSceneName = rawName;
+            loader.SetTargetSceneName(rawName);
 
-            Button btnComponent = newButtonObj.GetComponent<Button>();
+            newButtonObj.TryGetComponent<Button>(out Button btnComponent);
             if (btnComponent != null)
             {
                 btnComponent.interactable = true;

@@ -12,7 +12,7 @@ namespace EduGame
 
             if(shadow)
             {
-                Image shadowImage = shadow.GetComponent<Image>();
+                shadow.TryGetComponent<Image>(out Image shadowImage);
 
                 if(shadowImage && GameManager.Instance)
                 {

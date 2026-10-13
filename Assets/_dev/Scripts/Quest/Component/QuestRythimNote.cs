@@ -32,7 +32,7 @@ namespace EduGame
         {
             base.InitInternal();
 
-            m_Rb = GetComponent<Rigidbody2D>();
+            TryGetComponent<Rigidbody2D>(out m_Rb);
 
             if(m_Rb)
                 m_Rb.gravityScale = 0;

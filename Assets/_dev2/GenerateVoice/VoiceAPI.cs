@@ -10,17 +10,19 @@ using Unity.EditorCoroutines.Editor;
 
 namespace EduGame
 {
-    public static class VoiceAPI
+    public sealed class VoiceAPI
     {
         private const string c_ApiUrl =
             "https://kimee-ai-stg.linkit360.ai/v1/api/audio/generate";
 
-        public const string DefaultVoiceId =
+        private const string c_DefaultVoiceId =
             "n3tkGOcEribaYI5zg4pu";
+
+        public static string DefaultVoiceId => c_DefaultVoiceId;
 
 #if UNITY_EDITOR
 
-        public static void Generate(
+        public void Generate(
             string text,
             string voiceId,
             string apiToken,
@@ -41,7 +43,7 @@ namespace EduGame
 
             if (string.IsNullOrWhiteSpace(voiceId))
             {
-                voiceId = DefaultVoiceId;
+                voiceId = c_DefaultVoiceId;
             }
 
             EditorCoroutineUtility.StartCoroutineOwnerless(

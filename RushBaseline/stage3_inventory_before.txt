@@ -1,0 +1,682 @@
+# STAGE 3 INVENTORY (read-only)
+
+# [A] PUBLIC/INTERNAL FIELDS (rule #1)  file:line | type | typeKind | vis | flags | fieldType | name | attrs | refs~ | writes~
+Assets/_dev/Scripts/APIWrapper/Result.cs:10	EduGame.Result	plain+Serializable	public		ResultItem[]	result		refs~7	writes~0
+Assets/_dev/Scripts/APIWrapper/Result.cs:16	EduGame.ResultItem	plain+Serializable	public		int	stars		refs~0	writes~0
+Assets/_dev/Scripts/APIWrapper/Result.cs:17	EduGame.ResultItem	plain+Serializable	public		int	time		refs~5	writes~1
+Assets/_dev/Scripts/APIWrapper/Result.cs:9	EduGame.Result	plain+Serializable	public		string	session_id		refs~0	writes~0
+Assets/_dev/Scripts/APIWrapper/VoiceRequest.cs:10	EduGame.VoiceRequest	plain+Serializable	public		string	text		refs~36	writes~27
+Assets/_dev/Scripts/APIWrapper/VoiceRequest.cs:11	EduGame.VoiceRequest	plain+Serializable	public		string	voice_id		refs~4	writes~1
+Assets/_dev/Scripts/APIWrapper/VoiceRequest.cs:12	EduGame.VoiceRequest	plain+Serializable	public		string	format		refs~0	writes~0
+Assets/_dev/Scripts/APIWrapper/VoiceRequest.cs:9	EduGame.VoiceRequest	plain+Serializable	public		string	id		refs~15	writes~0
+Assets/_dev/Scripts/APIWrapper/VoiceResult.cs:10	EduGame.VoiceResult	plain+Serializable	public		string	cache_key		refs~0	writes~0
+Assets/_dev/Scripts/APIWrapper/VoiceResult.cs:9	EduGame.VoiceResult	plain+Serializable	public		string	audio_url		refs~5	writes~0
+Assets/_dev/Scripts/APIWrapper/VoiceResultError.cs:14	EduGame.VoiceResultError+VoiceResultErrorDetail	plain+Serializable	public		string[]	loc		refs~0	writes~0
+Assets/_dev/Scripts/APIWrapper/VoiceResultError.cs:15	EduGame.VoiceResultError+VoiceResultErrorDetail	plain+Serializable	public		string	msg		refs~1	writes~0
+Assets/_dev/Scripts/APIWrapper/VoiceResultError.cs:16	EduGame.VoiceResultError+VoiceResultErrorDetail	plain+Serializable	public		string	type		refs~1	writes~0
+Assets/_dev/Scripts/APIWrapper/VoiceResultError.cs:17	EduGame.VoiceResultError+VoiceResultErrorDetail	plain+Serializable	public		string	input		refs~0	writes~0
+Assets/_dev/Scripts/APIWrapper/VoiceResultError.cs:9	EduGame.VoiceResultError	plain+Serializable	public		VoiceResultErrorDetail[]	detail		refs~2	writes~0
+Assets/_dev/Scripts/Global.cs:10	EduGame.Global	plain	public	static	string	CHALLENGE_DATA_NAME		refs~0	writes~0
+Assets/_dev/Scripts/Global.cs:9	EduGame.Global	plain	public	static	string	CHALLENGE_DATA_DIR		refs~0	writes~0
+Assets/_dev/Scripts/Manager/APIManager.cs:15	EduGame.APIManager	MonoBehaviour	public	const	string	frogVoiceID		refs~0	writes~0
+Assets/_dev/Scripts/Manager/APIManager.cs:17	EduGame.APIManager	MonoBehaviour	public		APIManager	Instance		refs~48	writes~0
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:7	DynamicFlowLayoutGroup	MonoBehaviour	public		Vector2	cellSize		refs~12	writes~6
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:8	DynamicFlowLayoutGroup	MonoBehaviour	public		Vector2	spacing		refs~0	writes~0
+Assets/_dev/Scripts/Util/RawImageAlphaFilter.cs:7	RawImageAlphaFilter	MonoBehaviour	public		float	alphaThreshold	[Range(0, 1)]	refs~0	writes~0
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:17	SceneButtonGenerator	MonoBehaviour	public		Transform	container	[Header("UI Parent & Prefab")] [Tooltip("Parent transform tempat tombol akan ditempatkan (misal: Panel dengan Vertical/Grid Layout Group)")]	refs~0	writes~0
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:20	SceneButtonGenerator	MonoBehaviour	public		GameObject	buttonPrefab	[Tooltip("Optional: Prefab UI Button kustom. Jika dikosongkan, akan memakai UI Button default Unity.")]	refs~0	writes~0
+Assets/_dev/Scripts/Util/SceneLoader.cs:7	SceneLoader	MonoBehaviour	public		string	targetSceneName	[HideInInspector]	refs~1	writes~1
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:18	EduGame.VoiceAPI	plain	public	const	string	DefaultVoiceId		refs~1	writes~0
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:225	EduGame.VoiceAPI+VoiceRequest	plain+Serializable	public		string	text		refs~36	writes~27
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:226	EduGame.VoiceAPI+VoiceRequest	plain+Serializable	public		string	voice_id		refs~4	writes~1
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:236	EduGame.VoiceAPI+VoiceResponse	plain+Serializable	public		string	audio_url		refs~5	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:36	Rush.FadeTweenStruct	struct+Serializable	public		float	Start		refs~11	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:37	Rush.FadeTweenStruct	struct+Serializable	public		float	End		refs~2	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:42	Rush.RectPosStruct	struct+Serializable	public		Vector2	StartRectPosition		refs~2	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:43	Rush.RectPosStruct	struct+Serializable	public		Vector2	EndRectPosition		refs~2	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:48	Rush.PositionStruct	struct+Serializable	public		Vector3	StartPosition		refs~2	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:49	Rush.PositionStruct	struct+Serializable	public		Vector3	EndPosition		refs~2	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:54	Rush.ScaleStruct	struct+Serializable	public		Vector3	StartScale		refs~2	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:55	Rush.ScaleStruct	struct+Serializable	public		Vector3	EndScale		refs~2	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:60	Rush.ColorStruct	struct+Serializable	public		Color	StartColor		refs~4	writes~0
+Assets/_dev2/Scripts/TweenHandler.cs:61	Rush.ColorStruct	struct+Serializable	public		Color	EndColor		refs~4	writes~0
+
+# [B] STATIC METHODS (rule #7)  file:line | type | typeKind | vis | class | signature | refs~
+Assets/_dev/Scripts/Manager/AssetManager.cs:24	EduGame.AssetManager	MonoBehaviour	private	VOID	void JS_FileSystem_Sync	refs~0
+Assets/_dev/Scripts/Manager/AssetManager.cs:28	EduGame.AssetManager	MonoBehaviour	private	VOID	void JS_UpdateVoiceProgress	refs~0
+Assets/_dev/Scripts/Manager/AssetManager.cs:31	EduGame.AssetManager	MonoBehaviour	private	VOID	void JS_OnVoiceDownloadComplete	refs~0
+Assets/_dev/Scripts/Manager/ContentManager.cs:13	EduGame.ContentManager	MonoBehaviour	private	get-like	int GetBrowserWidth	refs~0
+Assets/_dev/Scripts/Manager/ContentManager.cs:16	EduGame.ContentManager	MonoBehaviour	private	get-like	int GetBrowserHeight	refs~0
+Assets/_dev/Scripts/Manager/GameManager.cs:18	EduGame.GameManager	MonoBehaviour	private	get-like	string GetParentURL	refs~0
+Assets/_dev/Scripts/Manager/GameManager.cs:21	EduGame.GameManager	MonoBehaviour	private	get-like	string GetSelfURL	refs~0
+Assets/_dev/Scripts/Manager/GameManager.cs:24	EduGame.GameManager	MonoBehaviour	private	VOID	void RedirectParentWindow	refs~0
+Assets/_dev/Scripts/Manager/GameManager.cs:27	EduGame.GameManager	MonoBehaviour	private	VOID	void LogToBrowser	refs~0
+Assets/_dev/Scripts/Manager/GameManager.cs:30	EduGame.GameManager	MonoBehaviour	private	VOID	void JS_OnVoiceDownloadComplete	refs~0
+Assets/_dev/Scripts/Manager/GameManager.cs:33	EduGame.GameManager	MonoBehaviour	private	VOID	void ReloadIframe	refs~0
+Assets/_dev/Scripts/Util/BatchScenesBuilder.cs:9	BatchScenesBuilder	plain	public	VOID	void BuildAllScenesToSeparateFolders	refs~0
+Assets/_dev/Scripts/Util/Editor/MissingScriptFinder.cs:8	MissingScriptFinder	ScriptableObject	public	VOID	void FindMissingScripts	refs~0
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:10	QuestConverter	plain	private	VOID	void ConvertQuestToNarrative	refs~0
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:66	QuestConverter	plain	private	non-get	MonoScript FindScriptAsset	refs~0
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:83	QuestConverter	plain	private	non-get	bool ValidateConvertQuestToNarrative	refs~0
+Assets/_dev/Scripts/Util/Editor/UpdateMultipleChoiceToNarrative.cs:11	UpdateMultipleChoiceToNarrative	ScriptableObject	public	VOID	void UpdateSelectedToNarrative	refs~0
+Assets/_dev/Scripts/Util/Editor/UpdateMultipleChoiceToNarrative.cs:54	UpdateMultipleChoiceToNarrative	ScriptableObject	private	VOID	void CopyMatchingSerializedProperties	refs~0
+Assets/_dev/Scripts/Util/Editor/UpdateMultipleChoiceToNarrative.cs:84	UpdateMultipleChoiceToNarrative	ScriptableObject	private	non-get	bool ValidateUpdateSelectedToNarrative	refs~0
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:18	QuestAudioPopulatorWindow	ScriptableObject	public	VOID	void ShowWindow	refs~0
+Assets/_dev/Scripts/Util/StringHelper.cs:10	StringHelper	plain	public	non-get	string TextToId	refs~0
+Assets/_dev/Scripts/Util/StringHelper.cs:32	StringHelper	plain	public	non-get	int ExtractId	refs~1
+Assets/_dev/Scripts/Util/StringHelper.cs:51	StringHelper	plain	public	non-get	int[] ExtractItemAndLabelIds	refs~2
+Assets/_dev/Scripts/Util/StringHelper.cs:78	StringHelper	plain	public	non-get	string RemoveUnsupportedSymbols	refs~1
+Assets/_dev/Scripts/Util/URIHelper.cs:10	EduGame.URIHelper	plain	public	get-like	Dictionary<string, string> GetParameters	refs~2
+Assets/_dev/Scripts/Util/URIHelper.cs:36	EduGame.URIHelper	plain	public	get-like	string GetBaseUrl	refs~0
+Assets/_dev/Scripts/Util/URIHelper.cs:77	EduGame.URIHelper	plain	public	non-get	string RemoveQueryParam	refs~0
+Assets/_dev/Scripts/Util/WavUtility.cs:6	WavUtility	plain	public	non-get	AudioClip ToAudioClip	refs~1
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:51	AddOn.TextAnimation.WordSetting	plain+Serializable	public	get-like	string GetFormatedText	refs~2
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:23	EduGame.VoiceAPI	plain	public	VOID	void Generate	refs~1
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:58	EduGame.VoiceAPI	plain	private	non-get	IEnumerator GenerateRoutine	refs~0
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:425	EduGame.VoiceAsset	ScriptableObject	private	non-get	string SanitizeFileName	refs~0
+
+# [B2] STATIC 'Instance' MEMBERS
+Assets/_dev/Scripts/Manager/AssetManager.cs:34	EduGame.AssetManager	MonoBehaviour	public	Property
+Assets/_dev/Scripts/Manager/FeedbackManager.cs:13	EduGame.FeedbackManager	MonoBehaviour	public	Property
+Assets/_dev/Scripts/Manager/GameManager.cs:141	EduGame.GameManager	MonoBehaviour	public	Property
+
+# [C] GetComponent* CALLS (rule #8)  file:line | owner | method | generic | receiver | source line
+Assets/_dev/Scripts/Manager/ContentManager.cs:23	ContentManager.Awake	GetComponent	<CanvasScaler>	recv=(this)	m_CanvasScaler = GetComponent<CanvasScaler>();
+Assets/_dev/Scripts/Manager/GameManager.cs:146	GameManager.Awake	GetComponentInParent	<Canvas>	recv=(this)	m_Canvas = GetComponentInParent<Canvas>();
+Assets/_dev/Scripts/Manager/GameManager.cs:148	GameManager.Awake	GetComponentInChildren	<HandTutorial>	recv=(this)	m_HandTutorial = GetComponentInChildren<HandTutorial>();
+Assets/_dev/Scripts/Manager/GameManager.cs:176	GameManager.Start	GetComponent	<APIManager>	recv=(this)	m_ApiManager = GetComponent<APIManager>();
+Assets/_dev/Scripts/Manager/GameManager.cs:177	GameManager.Start	GetComponent	<AssetManager>	recv=(this)	m_AssetManager = GetComponent<AssetManager>();
+Assets/_dev/Scripts/Manager/GameManager.cs:361	GameManager.SetNPC	GetComponent	<Animator>	recv=m_Npc	Animator animator = m_Npc.GetComponent<Animator>();
+Assets/_dev/Scripts/Manager/GameManager.cs:377	GameManager.SetNPCDialogInternal	TryGetComponent	<>	recv=m_NpcDialog	if (m_NpcDialog.TryGetComponent(out TextEffect textEffect))
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:24	QuestColoringField.Start	GetComponent	<RawImage>	recv=(this)	RawImage image = GetComponent<RawImage>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:26	QuestColoringField.Start	GetComponent	<RectTransform>	recv=(this)	m_Rect = GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:28	QuestColoringField.Start	GetComponent	<QuestUtilRegionalDrag>	recv=(this)	m_E = GetComponent<QuestUtilRegionalDrag>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:30	QuestColoringField.Start	GetComponentInParent	<QuestColoring>	recv=(this)	m_QuestColoring = GetComponentInParent<QuestColoring>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs:17	QuestColoringItem.Awake	GetComponent	<Image>	recv=(this)	m_Image = GetComponent<Image>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs:18	QuestColoringItem.Awake	GetComponentInParent	<QuestColoring>	recv=(this)	m_QuestColoring = GetComponentInParent<QuestColoring>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs:19	QuestColoringItem.Awake	GetComponent	<QuestUtilRegionalClick>	recv=(this)	m_RegionalClick = GetComponent<QuestUtilRegionalClick>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringPalette.cs:17	QuestColoringPalette.Start	GetComponentInParent	<QuestColoring>	recv=(this)	m_QuestColoring = GetComponentInParent<QuestColoring>();
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:34	QuestComponent.InitInternal	GetComponent	<RectTransform>	recv=(this)	m_CachedRect = GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:35	QuestComponent.InitInternal	GetComponentInChildren	<Button>	recv=(this)	m_CachedButton = GetComponentInChildren<Button>();
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:36	QuestComponent.InitInternal	GetComponent	<Image>	recv=(this)	m_CachedImage = GetComponent<Image>();
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:44	QuestComponent.Start	GetComponentInParent	<Quest>	recv=(this)	m_Quest = GetComponentInParent<Quest>();
+Assets/_dev/Scripts/Quest/Component/QuestContainer.cs:15	QuestContainer.Start	GetComponent	<Image>	recv=shadow	Image shadowImage = shadow.GetComponent<Image>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:156	QuestDragNDropItem.RegisterZoneInternal	GetComponent	<QuestDragNDropZone>	recv=parent	m_OriginalParent = transform.parent.GetComponent<QuestDragNDropZone>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:40	QuestDragNDropItem.Awake	GetComponent	<RectTransform>	recv=transform	m_ImageRect = m_Image.transform.GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:52	QuestDragNDropItem.Start	GetComponent	<CanvasGroup>	recv=(this)	m_CanvasGroup = GetComponent<CanvasGroup>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:87	QuestDragNDropItem.OnEndDrag	GetComponent	<QuestDragNDropZone>	recv=pointerEnter	if(eventData.pointerEnter == null || !eventData.pointerEnter.GetComponent<QuestDragNDropZone>())
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs:35	QuestDragNDropSlot.Start	GetComponentInParent	<QuestDragNDrop>	recv=(this)	m_QuestDragNDrop = GetComponentInParent<QuestDragNDrop>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs:37	QuestDragNDropSlot.Start	GetComponentInChildren	<QuestDragNDropZone>	recv=(this)	m_DropZone = GetComponentInChildren<QuestDragNDropZone>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:108	QuestDragNDropZone.RegisterItemsInternal	GetComponent	<QuestDragNDropItem>	recv=child	m_Items[x] = child.GetComponent<QuestDragNDropItem>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:144	QuestDragNDropZone.OnDrop	GetComponent	<QuestDragNDropItem>	recv=pointerDrag	QuestDragNDropItem draggedItem = eventData.pointerDrag.GetComponent<QuestDragNDropItem>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:198	QuestDragNDropZone.Dynamic	GetComponent	<RectTransform>	recv=)	RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:236	QuestDragNDropZone.Sticky	GetComponent	<RectTransform>	recv=)	RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:237	QuestDragNDropZone.Sticky	GetComponent	<RectTransform>	recv=transform	RectTransform rectParent = item.transform.GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:268	QuestDragNDropZone.Scaled	GetComponent	<RectTransform>	recv=)	RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:281	QuestDragNDropZone.FollowParent	GetComponent	<RectTransform>	recv=)	RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:282	QuestDragNDropZone.FollowParent	GetComponentInParent	<GridLayoutGroup>	recv=transform	GridLayoutGroup grid = item.transform.GetComponentInParent<GridLayoutGroup>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:33	QuestDragNDropZone.Awake	GetComponentInParent	<QuestDragNDropSlot>	recv=(this)	m_Slot = GetComponentInParent<QuestDragNDropSlot>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:35	QuestDragNDropZone.Awake	GetComponentInParent	<QuestZonePairing>	recv=(this)	m_Quest = GetComponentInParent<QuestZonePairing>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:37	QuestDragNDropZone.Awake	GetComponent	<Animator>	recv=(this)	m_Animator = GetComponent<Animator>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:38	QuestDragNDropZone.Awake	GetComponentInChildren	<GridLayoutGroup>	recv=(this)	m_Grid = GetComponentInChildren<GridLayoutGroup>();
+Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:20	QuestMatchingCard.Start	GetComponentInParent	<QuestMatching>	recv=(this)	m_Matching = GetComponentInParent<QuestMatching>();
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:43	QuestMultipleChoicesItem.InitInternal	GetComponent	<ButtonEvents>	recv=(this)	m_Events = GetComponent<ButtonEvents> ();
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:64	QuestMultipleChoicesItem.SetChoice	TryGetComponent	<>	recv=m_Text	if (m_Text.TryGetComponent(out TextEffect effect))
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItemWithScale.cs:39	QuestMultipleChoicesItemWithScale.SetChoice	GetComponent	<RectTransform>	recv=transform	RectTransform imageRect = m_Image.transform.GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:26	QuestRythimBeat.Awake	GetComponent	<Collider2D>	recv=(this)	m_Col = GetComponent<Collider2D>();
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:27	QuestRythimBeat.Awake	GetComponentInChildren	<Animator>	recv=(this)	m_Animator = GetComponentInChildren<Animator>();
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:80	QuestRythimBeat.OnTriggerEnter2D	GetComponent	<QuestRythimNote>	recv=collision	QuestRythimNote note = collision.GetComponent<QuestRythimNote>();
+Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:35	QuestRythimNote.InitInternal	GetComponent	<Rigidbody2D>	recv=(this)	m_Rb = GetComponent<Rigidbody2D>();
+Assets/_dev/Scripts/Quest/Component/QuestShapeItCanvas.cs:19	QuestShapeItCanvas.Awake	GetComponentsInChildren	<QuestShapeItItem>	recv=(this)	m_Items = GetComponentsInChildren<QuestShapeItItem>();
+Assets/_dev/Scripts/Quest/Component/QuestShapeItCanvas.cs:20	QuestShapeItCanvas.Awake	GetComponentsInChildren	<QuestDragNDropZone>	recv=(this)	m_Zones = GetComponentsInChildren<QuestDragNDropZone>();
+Assets/_dev/Scripts/Quest/QuestColoring.cs:130	QuestColoring.RecalculatePalettesContainer	GetComponent	<GridLayoutGroup>	recv=m_PalettesContainer	GridLayoutGroup gridLayoutGroup = m_PalettesContainer.GetComponent<GridLayoutGroup>();
+Assets/_dev/Scripts/Quest/QuestColoring.cs:41	QuestColoring.Awake	GetComponent	<QuestColoringCursor>	recv=(this)	m_ColoringCursor = GetComponent<QuestColoringCursor>();
+Assets/_dev/Scripts/Quest/QuestColoring.cs:79	QuestColoring.Start	GetComponentsInChildren	<QuestColoringField>	recv=m_CanvasContainer	m_Fields = m_CanvasContainer.GetComponentsInChildren<QuestColoringField>();
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:147	QuestDragNDrop.RecalculateContainer	GetComponent	<GridLayoutGroup>	recv=m_ItemsContainer	GridLayoutGroup gridLayoutGroup = m_ItemsContainer.GetComponent<GridLayoutGroup>();
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:154	QuestDragNDrop.RecalculateContainer	GetComponent	<GridLayoutGroup>	recv=m_SlotsContainer	GridLayoutGroup gridLayoutGroup = m_SlotsContainer.GetComponent<GridLayoutGroup>();
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:161	QuestDragNDrop.RecalculateContainer	GetComponent	<QuestDragNDropZone>	recv=m_ItemsContainer	QuestDragNDropZone questDragNDropZone = m_ItemsContainer.GetComponent<QuestDragNDropZone>();
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:213	QuestDragNDrop.Sort	GetComponentsInChildren	<QuestDragNDropItem>	recv=slot	QuestDragNDropItem[] answereds = slot.GetComponentsInChildren<QuestDragNDropItem>();
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:66	QuestDragNDrop.Start	TryGetComponent	<>	recv=m_QuestionText	if (m_QuestionText.TryGetComponent(out TextEffect textEff))
+Assets/_dev/Scripts/Quest/QuestMatching.cs:130	QuestMatching.RecalculateChoiceContainer	GetComponent	<GridLayoutGroup>	recv=m_CardsContainer	GridLayoutGroup gridLayoutGroup = m_CardsContainer.GetComponent<GridLayoutGroup>();
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:114	QuestMultipleChoices.Start	TryGetComponent	<>	recv=m_QuestionText	if (m_QuestionText.TryGetComponent(out TextEffect textEff))
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:284	QuestMultipleChoices.RecalculateChoiceContainer	GetComponent	<GridLayoutGroup>	recv=m_ChoicesContainer	GridLayoutGroup gridLayoutGroup = m_ChoicesContainer.GetComponent<GridLayoutGroup>();
+Assets/_dev/Scripts/Quest/QuestMultipleChoicesNarrative.cs:48	QuestMultipleChoicesNarrative.GetVoiceRequests	GetComponentInChildren	<TMP_Text>	recv=(this)	TMP_Text narrative = GetComponentInChildren<TMP_Text>();
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:33	QuestRythimMaker.Start	GetComponent	<AudioSource>	recv=(this)	s_AudioSource = GetComponent<AudioSource>();
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:107	QuestShapeIt.ResetInternal	GetComponent	<QuestDragNDropZone>	recv=shapeParent	QuestDragNDropZone shapeZone = shapeParent.GetComponent<QuestDragNDropZone>();
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:131	QuestShapeIt.RecalculateContainer	GetComponent	<QuestDragNDropZone>	recv=m_ItemsContainer	QuestDragNDropZone questDragNDropZone = m_ItemsContainer.GetComponent<QuestDragNDropZone>();
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:75	QuestShapeIt.Start	GetComponent	<ButtonEvents>	recv=m_RotateButton	ButtonEvents buttonEvents = m_RotateButton.GetComponent<ButtonEvents>();
+Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:100	QuestWordBuilder.RecalculateChoiceContainer	GetComponent	<GridLayoutGroup>	recv=m_ChoicesContainer	GridLayoutGroup gridLayoutGroup = m_ChoicesContainer.GetComponent<GridLayoutGroup>();
+Assets/_dev/Scripts/Quest/Util/QuestUtilButton.cs:17	QuestUtilButton.Awake	GetComponent	<Button>	recv=(this)	m_Button = GetComponent<Button>();
+Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:17	QuestUtilGameObject.Awake	GetComponent	<RectTransform>	recv=(this)	m_Rect = GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalClick.cs:17	QuestUtilRegionalClick.Start	GetComponent	<Image>	recv=(this)	m_Image = GetComponent<Image>();
+Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalClick.cs:32	QuestUtilRegionalClick.OnPointerClick	GetComponent	<RectTransform>	recv=(this)	RectTransform clickedRectTransform = GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalDrag.cs:29	QuestUtilRegionalDrag.Start	GetComponent	<RawImage>	recv=(this)	m_Image = GetComponent<RawImage>();
+Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalDrag.cs:34	QuestUtilRegionalDrag.Start	GetComponent	<RectTransform>	recv=(this)	m_RectTransform = GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalDrag.cs:40	QuestUtilRegionalDrag.Start	GetComponentInParent	<Canvas>	recv=(this)	m_ParentCanvas = GetComponentInParent<Canvas>();
+Assets/_dev/Scripts/Util/AudioPlayer.cs:16	AudioPlayer.Start	GetComponent	<Button>	recv=(this)	m_Button = GetComponent<Button>();
+Assets/_dev/Scripts/Util/Editor/MissingScriptFinder.cs:16	MissingScriptFinder.FindMissingScripts	GetComponents	<Component>	recv=go	Component[] components = go.GetComponents<Component>();
+Assets/_dev/Scripts/Util/Editor/MissingScriptFinder.cs:35	MissingScriptFinder.FindMissingScripts	GetComponentsInChildren	<Component>	recv=prefab	Component[] components = prefab.GetComponentsInChildren<Component>(true);
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:32	QuestConverter.ConvertQuestToNarrative	GetComponentsInChildren	<QuestMultipleChoices>	recv=prefabRoot	QuestMultipleChoices[] components = prefabRoot.GetComponentsInChildren<QuestMultipleChoices>(true);
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:95	QuestConverter.ValidateConvertQuestToNarrative	GetComponentInChildren	<QuestMultipleChoices>	recv=prefab	QuestMultipleChoices comp = prefab.GetComponentInChildren<QuestMultipleChoices>(true);
+Assets/_dev/Scripts/Util/Feedback.cs:11	Feedback.Start	GetComponentsInChildren	<FeedbackItem>	recv=(this)	m_FeedbackItems = GetComponentsInChildren<FeedbackItem>();
+Assets/_dev/Scripts/Util/FeedbackItemAnimation.cs:45	FeedbackItemAnimation.GetAnimator	GetComponent	<Animator>	recv=transform	Animator tAnimator = transform.GetComponent<Animator>();
+Assets/_dev/Scripts/Util/HandTutorial.cs:37	HandTutorial.PlayTutorial	GetComponent	<RectTransform>	recv=m_HandInstance	RectTransform handRect = m_HandInstance.GetComponent<RectTransform>();
+Assets/_dev/Scripts/Util/HandTutorial.cs:38	HandTutorial.PlayTutorial	GetComponent	<Image>	recv=m_HandInstance	Image handImage = m_HandInstance.GetComponent<Image>();
+Assets/_dev/Scripts/Util/HandTutorial.cs:39	HandTutorial.PlayTutorial	GetComponentInChildren	<Animator>	recv=m_HandInstance	Animator animator = m_HandInstance.GetComponentInChildren<Animator>();
+Assets/_dev/Scripts/Util/HandTutorial.cs:40	HandTutorial.PlayTutorial	GetComponent	<Canvas>	recv=canvasTransform	Canvas canvas = canvasTransform.GetComponent<Canvas>();
+Assets/_dev/Scripts/Util/HandTutorial.cs:44	HandTutorial.PlayTutorial	GetComponentsInChildren	<TrailRenderer>	recv=m_HandInstance	foreach (TrailRenderer trail in m_HandInstance.GetComponentsInChildren<TrailRenderer>(true))
+Assets/_dev/Scripts/Util/HandTutorial.cs:50	HandTutorial.PlayTutorial	GetComponent	<Canvas>	recv=m_HandInstance	Canvas handCanvas = m_HandInstance.GetComponent<Canvas>();
+Assets/_dev/Scripts/Util/HandTutorial.cs:70	HandTutorial.AnimateHand	GetComponentInChildren	<TrailRenderer>	recv=handObj	TrailRenderer prefabTrail = handObj.GetComponentInChildren<TrailRenderer>();
+Assets/_dev/Scripts/Util/RawImageAlphaFilter.cs:15	RawImageAlphaFilter.Awake	GetComponent	<RawImage>	recv=(this)	m_RawImage = GetComponent<RawImage>();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:105	SceneButtonGenerator.GenerateButtonsInEditor	GetComponent	<SceneLoader>	recv=newButtonObj	SceneLoader loader = newButtonObj.GetComponent<SceneLoader>();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:112	SceneButtonGenerator.GenerateButtonsInEditor	GetComponent	<Button>	recv=newButtonObj	Button btnComponent = newButtonObj.GetComponent<Button>();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:81	SceneButtonGenerator.GenerateButtonsInEditor	GetComponent	<Image>	recv=newButtonObj	Image btnImage = newButtonObj.GetComponent<Image>();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:88	SceneButtonGenerator.GenerateButtonsInEditor	GetComponentInChildren	<Text>	recv=newButtonObj	Text legacyText = newButtonObj.GetComponentInChildren<Text>();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:96	SceneButtonGenerator.GenerateButtonsInEditor	GetComponentInChildren	<TMPro.TMP_Text>	recv=newButtonObj	TMPro.TMP_Text tmpText = newButtonObj.GetComponentInChildren<TMPro.TMP_Text>();
+Assets/_dev2/Quest/Scripts/ResultPanel.cs:41	ResultPanel.Start	TryGetComponent	<>	recv=m_LabelText	if (m_LabelText.TryGetComponent(out TextEffect textEffect))
+Assets/_dev2/Quest/Scripts/ResultPanel.cs:45	ResultPanel.Start	TryGetComponent	<>	recv=m_ScoreText	if (m_ScoreText.TryGetComponent(out TextEffect scoreTextEff))
+Assets/_dev2/Scripts/TweenHandler.cs:195	TweenField.Init	TryGetComponent	<>	recv=m_Content	if (m_Content.TryGetComponent(out CanvasGroup cg))
+Assets/_dev2/Scripts/TweenHandler.cs:205	TweenField.Init	TryGetComponent	<>	recv=m_Content	if (m_Content.TryGetComponent(out Renderer ren))
+Assets/_dev2/Scripts/TweenHandler.cs:211	TweenField.Init	TryGetComponent	<>	recv=m_Content	if (m_Content.TryGetComponent(out Image im))
+Assets/_dev2/Scripts/TweenHandler.cs:221	TweenField.Init	TryGetComponent	<>	recv=m_Content	if (m_Content.TryGetComponent(out RectTransform rt))
+
+# [D] COUPLING CANDIDATES (rule #5)  file:line | owner | kind | source line
+Assets/_dev/Scripts/Manager/AssetManager.cs:120	AssetManager.Routine_DownloadMissingVoices	GameManager.Instance	GameManager.Instance.API.RequestVoice(
+Assets/_dev/Scripts/Manager/AssetManager.cs:149	AssetManager.ReportComplete	GameManager.Instance	if (GameManager.Instance != null)
+Assets/_dev/Scripts/Manager/AssetManager.cs:152	AssetManager.ReportComplete	GameManager.Instance	GameManager.Instance.Play();
+Assets/_dev/Scripts/Manager/GameManager.cs:146	GameManager.Awake	GetComponentInParent	m_Canvas = GetComponentInParent<Canvas>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:30	QuestColoringField.Start	GetComponentInParent	m_QuestColoring = GetComponentInParent<QuestColoring>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs:18	QuestColoringItem.Awake	GetComponentInParent	m_QuestColoring = GetComponentInParent<QuestColoring>();
+Assets/_dev/Scripts/Quest/Component/QuestColoringPalette.cs:17	QuestColoringPalette.Start	GetComponentInParent	m_QuestColoring = GetComponentInParent<QuestColoring>();
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:44	QuestComponent.Start	GetComponentInParent	m_Quest = GetComponentInParent<Quest>();
+Assets/_dev/Scripts/Quest/Component/QuestContainer.cs:11	QuestContainer.Start	Find(by name)	Transform shadow = transform.Find("Shadow");
+Assets/_dev/Scripts/Quest/Component/QuestContainer.cs:17	QuestContainer.Start	GameManager.Instance	if(shadowImage && GameManager.Instance)
+Assets/_dev/Scripts/Quest/Component/QuestContainer.cs:19	QuestContainer.Start	GameManager.Instance	Color newColor = GameManager.Instance.ColorTheme;
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:108	QuestDragNDropItem.SetItem	transform.parent	m_Text?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:119	QuestDragNDropItem.SetItem	transform.parent	m_AudioPlayer?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:130	QuestDragNDropItem.SetItem	transform.parent	m_Image?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:156	QuestDragNDropItem.RegisterZoneInternal	transform.parent	m_OriginalParent = transform.parent.GetComponent<QuestDragNDropZone>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:57	QuestDragNDropItem.OnBeginDrag	GameManager.Instance	if(GameManager.Instance)
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:58	QuestDragNDropItem.OnBeginDrag	GameManager.Instance	transform.SetParent(GameManager.Instance.Canvas.transform);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:58	QuestDragNDropItem.OnBeginDrag	SetParent	transform.SetParent(GameManager.Instance.Canvas.transform);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:77	QuestDragNDropItem.OnDrag	GameManager.Instance	if(GameManager.Instance)
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:78	QuestDragNDropItem.OnDrag	GameManager.Instance	modifier = GameManager.Instance.Canvas.scaleFactor;
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs:35	QuestDragNDropSlot.Start	GetComponentInParent	m_QuestDragNDrop = GetComponentInParent<QuestDragNDrop>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs:60	QuestDragNDropSlot.SetSlot	transform.parent	m_Text?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs:71	QuestDragNDropSlot.SetSlot	transform.parent	m_AudioPlayer?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs:82	QuestDragNDropSlot.SetSlot	transform.parent	m_Image?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:173	QuestDragNDropZone.ReInsertItem	SetParent	item.transform.SetParent(transform);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:198	QuestDragNDropZone.Dynamic	GetChild	RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:236	QuestDragNDropZone.Sticky	GetChild	RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:268	QuestDragNDropZone.Scaled	GetChild	RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:281	QuestDragNDropZone.FollowParent	GetChild	RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:282	QuestDragNDropZone.FollowParent	GetComponentInParent	GridLayoutGroup grid = item.transform.GetComponentInParent<GridLayoutGroup>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:297	QuestDragNDropZone.OnAccept	GameManager.Instance	GameManager.Instance.AudioSource.PlayOneShot(m_AcceptSound);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:306	QuestDragNDropZone.OnReject	GameManager.Instance	GameManager.Instance.AudioSource.PlayOneShot(m_RejectSound);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:33	QuestDragNDropZone.Awake	GetComponentInParent	m_Slot = GetComponentInParent<QuestDragNDropSlot>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:35	QuestDragNDropZone.Awake	GetComponentInParent	m_Quest = GetComponentInParent<QuestZonePairing>();
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:61	QuestDragNDropZone.AddItemInternal	SetParent	item.transform.SetParent(transform);
+Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:20	QuestMatchingCard.Start	GetComponentInParent	m_Matching = GetComponentInParent<QuestMatching>();
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:109	QuestMultipleChoicesItem.SetChoice	transform.parent	m_Image?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:47	QuestMultipleChoicesItem.InitInternal	FeedbackManager.Instance	m_Events.AddEventOnPointerOver(FeedbackManager.Instance.ButtonOver.Play);
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:48	QuestMultipleChoicesItem.InitInternal	FeedbackManager.Instance	m_Events.AddEventOnPointerExit(FeedbackManager.Instance.ButtonExit.Play);
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:49	QuestMultipleChoicesItem.InitInternal	FeedbackManager.Instance	m_Events.AddEventOnPointerClick(FeedbackManager.Instance.ButtonClick.Play);
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:85	QuestMultipleChoicesItem.SetChoice	transform.parent	m_Text?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:96	QuestMultipleChoicesItem.SetChoice	transform.parent	m_AudioPlayer?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItemWithScale.cs:21	QuestMultipleChoicesItemWithScale.SetChoice	transform.parent	m_Text?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItemWithScale.cs:32	QuestMultipleChoicesItemWithScale.SetChoice	transform.parent	m_AudioPlayer?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItemWithScale.cs:59	QuestMultipleChoicesItemWithScale.SetChoice	transform.parent	m_Image?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:30	QuestRythimBeat.Awake	GameManager.Instance	m_AudioSource = GameManager.Instance.AudioSource;
+Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:47	QuestWordBuilderItem.SetChoice	transform.parent	m_Text?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:58	QuestWordBuilderItem.SetChoice	transform.parent	m_AudioPlayer?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:69	QuestWordBuilderItem.SetChoice	transform.parent	m_Image?.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/Quest.cs:133	Quest.PlayQuestionVoiceInternal	GameManager.Instance	GameManager.Instance.StartCoroutine(ReduceMusicAWhile(audioClip));
+Assets/_dev/Scripts/Quest/Quest.cs:146	Quest.ReduceMusicAWhile	GameManager.Instance	AudioSource music = GameManager.Instance.Music;
+Assets/_dev/Scripts/Quest/Quest.cs:173	Quest.SubmitInternal	GameManager.Instance	GameManager.Instance.Submit(star);
+Assets/_dev/Scripts/Quest/Quest.cs:178	Quest.ShowTutorial	GameManager.Instance	GameManager.Instance.ShowTutorial(null);
+Assets/_dev/Scripts/Quest/Quest.cs:43	Quest.Start	GameManager.Instance	GameManager.Instance.SetNPC(m_Challenged.Character.CharacterController);
+Assets/_dev/Scripts/Quest/Quest.cs:49	Quest.Start	GameManager.Instance	GameManager.Instance.SetNPC(m_Character.CharacterController);
+Assets/_dev/Scripts/Quest/Quest.cs:51	Quest.Start	GameManager.Instance	GameManager.Instance.InitQuest(m_Data);
+Assets/_dev/Scripts/Quest/Quest.cs:76	Quest.SetupInternal	GameManager.Instance	if(GameManager.Instance)
+Assets/_dev/Scripts/Quest/Quest.cs:77	Quest.SetupInternal	GameManager.Instance	m_AudioSource = GameManager.Instance.AudioSource;
+Assets/_dev/Scripts/Quest/QuestColoring.cs:108	QuestColoring.InstantiatePalette	SetParent	palette.transform.SetParent(m_PalettesContainer);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:191	QuestColoring.SetDialog	GameManager.Instance	GameManager.Instance.SetNPCDialog(m_DataQuestColoring.Text);
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:200	QuestDragNDrop.SubmitInternal	GameManager.Instance	GameManager.Instance.Submit(star);
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:253	QuestDragNDrop.ResetInternal	SetParent	choice.transform.SetParent(m_ItemsContainer);
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:271	QuestDragNDrop.SetDialog	GameManager.Instance	GameManager.Instance.SetNPCDialog(m_DataDragNDrop.Question.Text);
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:47	QuestDragNDrop.Start	transform.parent	m_QuestionImage.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:58	QuestDragNDrop.Start	transform.parent	m_QuestionAudio.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:81	QuestDragNDrop.Start	transform.parent	m_QuestionText.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestMatching.cs:47	QuestMatching.Start	transform.parent	m_QuestionText.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestMatching.cs:69	QuestMatching.InstantiateCard	SetParent	card.transform.SetParent(m_CardsContainer);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:106	QuestMultipleChoices.Start	transform.parent	m_QuestionAudio.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:134	QuestMultipleChoices.Start	transform.parent	m_QuestionText.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:226	QuestMultipleChoices.InstantiateItem	SetParent	choiceItem.transform.SetParent(m_ChoicesContainer);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:262	QuestMultipleChoices.SubmitInternal	GameManager.Instance	GameManager.Instance.Submit(star);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:311	QuestMultipleChoices.SetDialog	GameManager.Instance	GameManager.Instance.SetNPCDialog(dialog);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:353	QuestMultipleChoices.ShowTutorial	GameManager.Instance	GameManager.Instance.ShowTutorial(m_CorrectChoice ? m_CorrectChoice.Rect : m_Choices[0].Rect);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:57	QuestMultipleChoices.Start	transform.parent	m_QuestionImage.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:92	QuestMultipleChoices.Start	transform.parent	m_QuestionImage.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:127	QuestRythimMaker.SubmitInternal	GameManager.Instance	GameManager.Instance.Submit(star);
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:161	QuestRythimMaker.SetDialog	GameManager.Instance	GameManager.Instance.SetNPCDialog(m_DataRythimMaker.Question.Text);
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:36	QuestRythimMaker.Start	GameManager.Instance	s_AudioSource = GameManager.Instance.AudioSource;
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:52	QuestRythimMaker.Start	transform.parent	m_QuestionImage.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:63	QuestRythimMaker.Start	transform.parent	m_QuestionAudio.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:74	QuestRythimMaker.Start	transform.parent	m_QuestionText.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:106	QuestShapeIt.ResetInternal	transform.parent	Transform shapeParent = shape.transform.parent;
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:179	QuestShapeIt.RotateCo	GameManager.Instance	GameManager.Instance.AudioSource.PlayOneShot(m_RotateSound);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:185	QuestShapeIt.RotateCo	transform.parent	if(!item.CanBeRotated || item.transform.parent.GetEntityId() != m_ItemsContainer.transform.GetEntityId())
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:205	QuestShapeIt.SetDialog	GameManager.Instance	GameManager.Instance.SetNPCDialog(m_DataShapeIt.Question.Text);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:47	QuestShapeIt.Start	transform.parent	m_QuestionImage.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:58	QuestShapeIt.Start	transform.parent	m_QuestionAudio.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:69	QuestShapeIt.Start	transform.parent	m_QuestionText.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:79	QuestShapeIt.Start	FeedbackManager.Instance	buttonEvents.AddEventOnPointerOver(FeedbackManager.Instance.ButtonOver.Play);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:80	QuestShapeIt.Start	FeedbackManager.Instance	buttonEvents.AddEventOnPointerExit(FeedbackManager.Instance.ButtonExit.Play);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:81	QuestShapeIt.Start	FeedbackManager.Instance	buttonEvents.AddEventOnPointerClick(FeedbackManager.Instance.ButtonClick.Play);
+Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:41	QuestWordBuilder.Start	transform.parent	m_QuestionImage.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:52	QuestWordBuilder.Start	transform.parent	m_QuestionAudio.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:63	QuestWordBuilder.Start	transform.parent	m_QuestionText.transform.parent.gameObject.SetActive(false);
+Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:83	QuestWordBuilder.InstantiateItem	SetParent	choiceItem.transform.SetParent(m_ChoicesContainer);
+Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:93	QuestWordBuilder.ResetInternal	transform.parent	child.transform.parent = m_ChoicesContainer.transform;
+Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalDrag.cs:40	QuestUtilRegionalDrag.Start	GetComponentInParent	m_ParentCanvas = GetComponentInParent<Canvas>();
+Assets/_dev/Scripts/Util/AudioPlayer.cs:29	AudioPlayer.OnClick	GameManager.Instance	if(m_AudioClip && GameManager.Instance.AudioSource)
+Assets/_dev/Scripts/Util/AudioPlayer.cs:30	AudioPlayer.OnClick	GameManager.Instance	GameManager.Instance.AudioSource.PlayOneShot(m_AudioClip);
+Assets/_dev/Scripts/Util/Editor/MissingScriptFinder.cs:13	MissingScriptFinder.FindMissingScripts	FindObjectsByType	GameObject[] sceneObjects = GameObject.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+Assets/_dev/Scripts/Util/FeedbackItemAudio.cs:19	FeedbackItemAudio.ExecPlayInternal	GameManager.Instance	Debug.Log(GameManager.Instance.AudioSource);
+Assets/_dev/Scripts/Util/FeedbackItemAudio.cs:21	FeedbackItemAudio.ExecPlayInternal	GameManager.Instance	if(m_AudioClip && GameManager.Instance.AudioSource)
+Assets/_dev/Scripts/Util/FeedbackItemAudio.cs:22	FeedbackItemAudio.ExecPlayInternal	GameManager.Instance	GameManager.Instance.AudioSource.PlayOneShot(m_AudioClip);
+Assets/_dev/Scripts/Util/HandTutorial.cs:74	HandTutorial.AnimateHand	SetParent	trailOrigin.transform.SetParent(handObj.transform, false);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:56	QuestAudioPopulatorWindow.FindAPIManagerInScene	FindAnyObjectByType	APIManager apiManager = Object.FindAnyObjectByType<APIManager>();
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:69	QuestAudioPopulatorWindow.Routine_PopulateAllQuests	FindAnyObjectByType	APIManager apiManager = Object.FindAnyObjectByType<APIManager>();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:136	SceneButtonGenerator.EnsureEventSystemExists	FindObjectOfType	if (FindObjectOfType<EventSystem>() == null)
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:38	SceneButtonGenerator.GenerateButtonsInEditor	GetChild	Undo.DestroyObjectImmediate(container.GetChild(0).gameObject);
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:76	SceneButtonGenerator.GenerateButtonsInEditor	SetParent	newButtonObj.transform.SetParent(container, false);
+Assets/_dev2/Quest/Scripts/AnimationHandler.cs:110	AnimationHandler.Playing	GameManager.Instance	AudioSource music = GameManager.Instance.Music;
+Assets/_dev2/Quest/Scripts/GameManagerAgent.cs:13	GameManagerAgent.PlaySoundQuest	GameManager.Instance	GameManager.Instance.PlaySoundQuest();
+Assets/_dev2/Quest/Scripts/GameManagerAgent.cs:9	GameManagerAgent.PlayQuestionVoice	GameManager.Instance	GameManager.Instance.PlayQuestionVoice();
+Assets/_dev2/Quest/Scripts/ResultPanel.cs:36	ResultPanel.Start	GameManager.Instance	m_GameManager = GameManager.Instance;
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:99	StarPresenter.SetActiveStars	GameManager.Instance	GameManager.Instance.SetRightAsnwer(0);
+
+# [E] HARD-CODED LITERALS (rule #6; trivial 0/1/2/0.5, empty strings, Debug lines, attributes, const, array indexes excluded)  file:line | owner | STR/NUM | value | callee | where | source line
+Assets/_dev/Scripts/APIWrapper/VoiceRequest.cs:12	VoiceRequest.format	STR	"		field-init	public string format = "wav";
+Assets/_dev/Scripts/Global.cs:7	Global.s_FalseVector	NUM	100000		field-init	private static Vector2 s_FalseVector = Vector2.one * 100000;
+Assets/_dev/Scripts/Global.cs:9	Global.CHALLENGE_DATA_DIR	STR	"		field-init	public static string CHALLENGE_DATA_DIR = "Assets/_dev/SO/Challenge/";
+Assets/_dev/Scripts/Global.cs:10	Global.CHALLENGE_DATA_NAME	STR	"		field-init	public static string CHALLENGE_DATA_NAME = "SO_Challenge_$$.asset";
+Assets/_dev/Scripts/Manager/APIManager.cs:11	APIManager.m_ApiToken	STR	"		field-init	private string m_ApiToken = "game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e";
+Assets/_dev/Scripts/Manager/APIManager.cs:12	APIManager.m_ApiUrl	STR	"		field-init	private string m_ApiUrl = "";
+Assets/_dev/Scripts/Manager/APIManager.cs:13	APIManager.m_ApiAIUrl	STR	"		field-init	private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
+Assets/_dev/Scripts/Manager/APIManager.cs:19	APIManager.RequestVoice	STR	"	RequestVoice	code	public void RequestVoice(string text, string voiceId = "", Action<string> onSuccess = null, Action<string> onFailure = null)
+Assets/_dev/Scripts/Manager/APIManager.cs:44	APIManager.RequestVoiceInternal	STR	"		code	string requestUrl = m_ApiAIUrl + "v1/api/audio/generate";
+Assets/_dev/Scripts/Manager/APIManager.cs:60	APIManager.SendDataCo	STR	"	UnityWebRequest	code	using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+Assets/_dev/Scripts/Manager/APIManager.cs:67	APIManager.SendDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:67	APIManager.SendDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:68	APIManager.SendDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Content-Type", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:68	APIManager.SendDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Content-Type", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:69	APIManager.SendDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Accept", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:69	APIManager.SendDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Accept", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:99	APIManager.FetchDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:99	APIManager.FetchDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:133	APIManager.RequestDataCo	STR	"	UnityWebRequest	code	using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+Assets/_dev/Scripts/Manager/APIManager.cs:140	APIManager.RequestDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:140	APIManager.RequestDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:141	APIManager.RequestDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Content-Type", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:141	APIManager.RequestDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Content-Type", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:142	APIManager.RequestDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Accept", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:142	APIManager.RequestDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Accept", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:145	APIManager.RequestDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:145	APIManager.RequestDataCo	STR	"	SetRequestHeader	code	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/AssetManager.cs:96	AssetManager.Routine_DownloadMissingVoices	STR	"		code	string fileName = $"{req.id}.mp3";
+Assets/_dev/Scripts/Manager/AssetManager.cs:221	AssetManager.Routine_DownloadAndCacheAudio	STR	"		code	string fileName = $"{voiceId}.wav";
+Assets/_dev/Scripts/Manager/AssetManager.cs:247	AssetManager.GetCachedAudio	STR	"		code	string fileName = $"{voiceId}.wav";
+Assets/_dev/Scripts/Manager/AssetManager.cs:252	AssetManager.GetCachedAudio	STR	"		code	string errorMessage = $"[AssetManager] Audio file for ID '{voiceId}' does not exist in local cache.";
+Assets/_dev/Scripts/Manager/AssetManager.cs:270	AssetManager.GetCachedAudio	STR	"		code	string errorMessage = $"[AssetManager] Failed to parse WAV bytes for ID '{voiceId}'.";
+Assets/_dev/Scripts/Manager/AssetManager.cs:277	AssetManager.GetCachedAudio	STR	"		code	string errorMessage = $"[AssetManager] Exception reading cached file '{voiceId}': {e.Message}";
+Assets/_dev/Scripts/Manager/ContentManager.cs:25	ContentManager.Awake	NUM	200		code	m_RefRes = m_CanvasScaler.referenceResolution + Vector2.up * 200;
+Assets/_dev/Scripts/Manager/GameManager.cs:126	GameManager.m_APIInfoURL	STR	"		field-init	private string m_APIInfoURL = "https://be.kimee.io/api/v1/external/games";
+Assets/_dev/Scripts/Manager/GameManager.cs:127	GameManager.m_APIResultURL	STR	"		field-init	private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
+Assets/_dev/Scripts/Manager/GameManager.cs:128	GameManager.m_GameURL	STR	"		field-init	private string m_GameURL = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
+Assets/_dev/Scripts/Manager/GameManager.cs:183	GameManager.Start	STR	"		code	m_BaseURL = "";
+Assets/_dev/Scripts/Manager/GameManager.cs:184	GameManager.Start	STR	"		code	m_FrameURL = "";
+Assets/_dev/Scripts/Manager/GameManager.cs:188	GameManager.Start	STR	"	LogToBrowser	code	LogToBrowser("Base URL: " + m_BaseURL);
+Assets/_dev/Scripts/Manager/GameManager.cs:189	GameManager.Start	STR	"	LogToBrowser	code	LogToBrowser("Frame URL: " + m_FrameURL);
+Assets/_dev/Scripts/Manager/GameManager.cs:196	GameManager.Start	STR	"	ContainsKey	code	if(parameters.ContainsKey("redirect_url"))
+Assets/_dev/Scripts/Manager/GameManager.cs:198	GameManager.Start	STR	"		code	m_BaseURL = parameters["redirect_url"];
+Assets/_dev/Scripts/Manager/GameManager.cs:201	GameManager.Start	STR	"	ContainsKey	code	if(parameters.ContainsKey("bgm_volume"))
+Assets/_dev/Scripts/Manager/GameManager.cs:203	GameManager.Start	STR	"		code	int volume = int.Parse(parameters["bgm_volume"]);
+Assets/_dev/Scripts/Manager/GameManager.cs:204	GameManager.Start	NUM	10f		code	m_Music.volume = volume / 10f;
+Assets/_dev/Scripts/Manager/GameManager.cs:205	GameManager.Start	NUM	10f		code	m_AudioSource.volume = volume / 10f;
+Assets/_dev/Scripts/Manager/GameManager.cs:213	GameManager.Start	STR	"	LogToBrowser	code	LogToBrowser("Home URL: " + m_BaseURL);
+Assets/_dev/Scripts/Manager/GameManager.cs:220	GameManager.Start	STR	"	ContainsKey	code	if (param.ContainsKey("session_id"))
+Assets/_dev/Scripts/Manager/GameManager.cs:221	GameManager.Start	STR	"		code	m_SessionId = param["session_id"];
+Assets/_dev/Scripts/Manager/GameManager.cs:223	GameManager.Start	STR	"		code	m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+Assets/_dev/Scripts/Manager/GameManager.cs:226	GameManager.Start	STR	"		code	m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+Assets/_dev/Scripts/Manager/GameManager.cs:340	GameManager.TimerCo	NUM	60	FloorToInt	code	float m = Mathf.FloorToInt(elapsedTime / 60);
+Assets/_dev/Scripts/Manager/GameManager.cs:341	GameManager.TimerCo	NUM	60	FloorToInt	code	float s = Mathf.FloorToInt(elapsedTime % 60);
+Assets/_dev/Scripts/Manager/GameManager.cs:343	GameManager.TimerCo	STR	"		code	string timerText = m.ToString().PadLeft(2, '0') + ":" + s.ToString().PadLeft(2, '0');
+Assets/_dev/Scripts/Manager/GameManager.cs:345	GameManager.TimerCo	NUM	10	if	code	if (s % 10 == 0)
+Assets/_dev/Scripts/Manager/GameManager.cs:347	GameManager.TimerCo	NUM	5	if	code	else if (s % 5 == 0)
+Assets/_dev/Scripts/Manager/GameManager.cs:521	GameManager.Submit	NUM	3	if	code	else if (star > 3)
+Assets/_dev/Scripts/Manager/GameManager.cs:522	GameManager.Submit	NUM	3		code	star = 3;
+Assets/_dev/Scripts/Manager/GameManager.cs:524	GameManager.Submit	NUM	3	if	code	if (star == 3 && m_Quests[m_CurrentIndex].Data.TresholdTime > 0 && m_RecordedTime > m_Quests[m_CurrentIndex].Data.TresholdTime)
+Assets/_dev/Scripts/Manager/GameManager.cs:578	GameManager.ShowResultInternal	STR	"	IndexOf	code	if (m_NeutralReaction && m_Quests[m_CurrentIndex].name.IndexOf("ColortheIsland") > -1)
+Assets/_dev/Scripts/Manager/GameManager.cs:611	GameManager.ShowResultInternal	STR	"	SetNPCDialogInternal	code	SetNPCDialogInternal("Yaaay! Amazing!");
+Assets/_dev/Scripts/Manager/GameManager.cs:634	GameManager.ShowResultInternal	STR	"	SetNPCDialogInternal	code	SetNPCDialogInternal("Oh no!");
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:51	QuestColoringField.Start	STR	"		code	m_Cb = new CommandBuffer { name = "UIPainter" };
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:90	QuestColoringField.Draw	STR	"	SetVector	code	m_QuestColoring.Brush.SetVector("_BrushPos", uv);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:117	QuestColoringField.GetPaintedPercentage	NUM	64	GetTemporary	code	RenderTexture smallRT = RenderTexture.GetTemporary(64, 64);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:117	QuestColoringField.GetPaintedPercentage	NUM	64	GetTemporary	code	RenderTexture smallRT = RenderTexture.GetTemporary(64, 64);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:125	QuestColoringField.GetPaintedPercentage	NUM	64	Texture2D	code	Texture2D tex = new Texture2D(64, 64, TextureFormat.ARGB32, false);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:125	QuestColoringField.GetPaintedPercentage	NUM	64	Texture2D	code	Texture2D tex = new Texture2D(64, 64, TextureFormat.ARGB32, false);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:127	QuestColoringField.GetPaintedPercentage	NUM	64	Rect	code	tex.ReadPixels(new Rect(0, 0, 64, 64), 0, 0);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:127	QuestColoringField.GetPaintedPercentage	NUM	64	Rect	code	tex.ReadPixels(new Rect(0, 0, 64, 64), 0, 0);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:138	QuestColoringField.GetPaintedPercentage	NUM	20f	if	code	if(pixels[i].a > 20f)
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:143	QuestColoringField.GetPaintedPercentage	NUM	250	if	code	if (pixels[i].r < 250 || pixels[i].g < 250 || pixels[i].b < 250)
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:143	QuestColoringField.GetPaintedPercentage	NUM	250	if	code	if (pixels[i].r < 250 || pixels[i].g < 250 || pixels[i].b < 250)
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:143	QuestColoringField.GetPaintedPercentage	NUM	250	if	code	if (pixels[i].r < 250 || pixels[i].g < 250 || pixels[i].b < 250)
+Assets/_dev/Scripts/Quest/Component/QuestContainer.cs:11	QuestContainer.Start	STR	"	Find	code	Transform shadow = transform.Find("Shadow");
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:83	QuestDragNDropZone.AddItemInternal	NUM	0.75f	Scaled	code	Scaled(item, 0.75f);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:187	QuestDragNDropZone.ReInsertItem	NUM	0.75f	Scaled	code	Scaled(item, 0.75f);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:294	QuestDragNDropZone.OnAccept	STR	"	Play	code	m_Animator.Play("Accept");
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:303	QuestDragNDropZone.OnReject	STR	"	Play	code	m_Animator.Play("Reject");
+Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:73	QuestMatchingCard.Complete	STR	"	Invoke	code	Invoke("Hide", m_Matching.PeekDuration);
+Assets/_dev/Scripts/Quest/Component/QuestPaginator.cs:95	QuestPaginator.ChangePage	STR	"		code	m_PageIndicator.text = "Page " + (m_CurrentPageIndex + 1) + " of " + m_TotalPages;
+Assets/_dev/Scripts/Quest/Component/QuestPaginator.cs:95	QuestPaginator.ChangePage	STR	"		code	m_PageIndicator.text = "Page " + (m_CurrentPageIndex + 1) + " of " + m_TotalPages;
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:50	QuestRythimBeat.Onclick	STR	"	Play	code	m_Animator.Play("Tap");
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:60	QuestRythimBeat.BeatCo	NUM	0.1f	WaitForSeconds	code	yield return new WaitForSeconds(0.1f);
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:65	QuestRythimBeat.BeatCo	NUM	0.1f	WaitForSeconds	code	yield return new WaitForSeconds(0.1f);
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:76	QuestRythimBeat.OnTriggerEnter2D	STR	"	if	code	if(collision.tag == "NoteHead" && !m_IsSuccess)
+Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:72	QuestRythimNote.PlayCo	NUM	5000		code	Vector2 targetPosition = currentPosition + (Vector2.left * (m_Speed * 5000) * Time.fixedDeltaTime);
+Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:109	QuestRythimNote.OnTriggerEnter2D	STR	"	if	code	if(collision.tag == "NoteEnd")
+Assets/_dev/Scripts/Quest/Quest.cs:20	Quest.m_Score	NUM	10		field-init	[SerializeField] [FormerlySerializedAs("score")] protected int m_Score = 10;
+Assets/_dev/Scripts/Quest/Quest.cs:148	Quest.ReduceMusicAWhile	NUM	0.4f		code	music.volume = 0.4f;
+Assets/_dev/Scripts/Quest/Quest.cs:163	Quest.OnAnswered	NUM	3	SubmitInternal	code	SubmitInternal(result ? 3 : 1);
+Assets/_dev/Scripts/Quest/Quest.cs:210	Quest.GetVoiceId	STR	"		code	return m_Data != null ? m_Data.GetVoiceId() : "";
+Assets/_dev/Scripts/Quest/QuestColoring.cs:15	QuestColoring.m_BrushSize	NUM	0.1f		field-init	[SerializeField] [FormerlySerializedAs("brushSize")] private float m_BrushSize = 0.1f;
+Assets/_dev/Scripts/Quest/QuestColoring.cs:72	QuestColoring.Start	STR	"	Invoke	code	Invoke("RecalculatePalettesContainer", 0.5f);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:96	QuestColoring.BindColor	STR	"	SetColor	code	m_Brush.SetColor("_BrushColor", m_BindedColor);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:97	QuestColoring.BindColor	STR	"	SetFloat	code	m_Brush.SetFloat("_BrushSize", m_BrushSize);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:145	QuestColoring.OnGUI	NUM	26	Rect	code	GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:145	QuestColoring.OnGUI	NUM	26	Rect	code	GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:145	QuestColoring.OnGUI	NUM	32	Rect	code	GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:145	QuestColoring.OnGUI	NUM	32	Rect	code	GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:169	QuestColoring.SubmitInternal	NUM	0.85	if	code	if (appraisal >= 0.85)
+Assets/_dev/Scripts/Quest/QuestColoring.cs:170	QuestColoring.SubmitInternal	NUM	3		code	star = 3;
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:171	QuestDragNDrop.Enabled	STR	"	Invoke	code	Invoke("RecalculateContainer", 0.5f);
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:196	QuestDragNDrop.SubmitInternal	NUM	3		code	star = 3;
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:302	QuestDragNDrop.GetVoiceRequests	STR	"		code	id = name + "_group_" + i + "_label_" + j,
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:302	QuestDragNDrop.GetVoiceRequests	STR	"		code	id = name + "_group_" + i + "_label_" + j,
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:321	QuestDragNDrop.HasVoiceClip	STR	"	IndexOf	code	if (requestId.IndexOf("_group_") > 0)
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:328	QuestDragNDrop.HasVoiceClip	STR	"	IndexOf	code	else if (requestId.IndexOf("_question") > 0)
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:339	QuestDragNDrop.AssignVoiceClip	STR	"	IndexOf	code	if (requestId.IndexOf("_group_") > 0)
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:346	QuestDragNDrop.AssignVoiceClip	STR	"	IndexOf	code	else if (requestId.IndexOf("_question") > 0)
+Assets/_dev/Scripts/Quest/QuestMatching.cs:90	QuestMatching.Open	STR	"	Invoke	code	Invoke("Success", m_PeekDuration);
+Assets/_dev/Scripts/Quest/QuestMatching.cs:97	QuestMatching.Open	STR	"	Invoke	code	Invoke("CloaseAllCard", m_PeekDuration);
+Assets/_dev/Scripts/Quest/QuestMatching.cs:154	QuestMatching.Enabled	STR	"	Invoke	code	Invoke("RecalculateChoiceContainer", 0.5f);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:258	QuestMultipleChoices.SubmitInternal	NUM	3		code	star = 3;
+Assets/_dev/Scripts/Quest/QuestMultipleChoicesNarrative.cs:51	QuestMultipleChoicesNarrative.GetVoiceRequests	STR	"		code	textVoice = narrative.text + "." + textVoice;
+Assets/_dev/Scripts/Quest/QuestMultipleChoicesNarrative.cs:55	QuestMultipleChoicesNarrative.GetVoiceRequests	STR	"		code	id = name + "_question",
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:88	QuestRythimMaker.Start	STR	"	Invoke	code	Invoke("StartPlay", 2);
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:123	QuestRythimMaker.SubmitInternal	NUM	3		code	star = 3;
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:146	QuestRythimMaker.ResetInternal	STR	"	Invoke	code	Invoke("StartPlay", 2);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:120	QuestShapeIt.ResetInternal	NUM	4	Range	code	shape.Rect.localRotation = Quaternion.Euler(Vector3.forward * (Random.Range(0, 4) * 90));
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:120	QuestShapeIt.ResetInternal	NUM	90		code	shape.Rect.localRotation = Quaternion.Euler(Vector3.forward * (Random.Range(0, 4) * 90));
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:151	QuestShapeIt.Verify	NUM	0.01f		code	ret = m_ItemIndex[id] == zone.transform.GetEntityId() && item.Rect.eulerAngles.z < 0.01f;
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:161	QuestShapeIt.OnAnswered	NUM	3	Submit	code	Submit(3);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:176	QuestShapeIt.RotateCo	NUM	90f		code	float rotateValue = 90f;
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:188	QuestShapeIt.RotateCo	NUM	3		code	item.Rect.localRotation = Quaternion.Euler(Vector3.forward * (item.Rect.eulerAngles.z + 3));
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:190	QuestShapeIt.RotateCo	NUM	360	if	code	if(item.Rect.eulerAngles.z == 360)
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:194	QuestShapeIt.RotateCo	NUM	3		code	rotateValue -= 3;
+Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:110	QuestWordBuilder.Enabled	STR	"	Invoke	code	Invoke("RecalculateChoiceContainer", 0.5f);
+Assets/_dev/Scripts/Quest/Util/QuestColoringCursor.cs:13	QuestColoringCursor.m_WhiteThreshold	NUM	0.9f		field-init	[SerializeField] [FormerlySerializedAs("whiteThreshold")] private float m_WhiteThreshold = 0.9f;
+Assets/_dev/Scripts/SO/SO_Quest.cs:27	SO_Quest.m_Score	NUM	10		field-init	[SerializeField] [FormerlySerializedAs("score")] private int m_Score = 10;
+Assets/_dev/Scripts/SO/SO_Quest.cs:28	SO_Quest.m_TresholdTime	NUM	20		field-init	[SerializeField] [FormerlySerializedAs("tresholdTime")] private float m_TresholdTime = 20;
+Assets/_dev/Scripts/SO/SO_Quest.cs:60	SO_Quest.GetVoiceRequests	STR	"		code	id = name + "_question",
+Assets/_dev/Scripts/SO/SO_Quest.cs:77	SO_Quest.AssignVoiceClip	STR	"	Contains	code	if (!string.IsNullOrEmpty(requestId) && requestId.Contains("_question"))
+Assets/_dev/Scripts/SO/SO_QuestMultipleChoice.cs:51	SO_QuestMultipleChoice.GetVoiceRequests	STR	"		code	id = name + "_choice_" + i,
+Assets/_dev/Scripts/SO/SO_QuestMultipleChoice.cs:86	SO_QuestMultipleChoice.TryGetChoiceIndex	STR	"	Contains	code	if (string.IsNullOrEmpty(requestId) || !requestId.Contains("_choice_"))
+Assets/_dev/Scripts/SO/SO_QuestWordBuilder.cs:12	SO_QuestWordBuilder.m_Answer	STR	"		field-init	[SerializeField] [FormerlySerializedAs("answer")] private string m_Answer = "";
+Assets/_dev/Scripts/Util/BatchScenesBuilder.cs:21	BatchScenesBuilder.BuildAllScenesToSeparateFolders	STR	"	Combine	code	string baseOutputPath = Path.Combine(Application.dataPath, "../Builds/HTML5");
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:7	DynamicFlowLayoutGroup.cellSize	NUM	100	Vector2	field-init	public Vector2 cellSize = new Vector2(100, 100);
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:7	DynamicFlowLayoutGroup.cellSize	NUM	100	Vector2	field-init	public Vector2 cellSize = new Vector2(100, 100);
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:8	DynamicFlowLayoutGroup.spacing	NUM	10	Vector2	field-init	public Vector2 spacing = new Vector2(10, 10);
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:8	DynamicFlowLayoutGroup.spacing	NUM	10	Vector2	field-init	public Vector2 spacing = new Vector2(10, 10);
+Assets/_dev/Scripts/Util/Editor/MissingScriptFinder.cs:28	MissingScriptFinder.FindMissingScripts	STR	"	FindAssets	code	string[] prefabPaths = AssetDatabase.FindAssets("t:Prefab");
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:26	QuestConverter.ConvertQuestToNarrative	STR	"	EndsWith	code	if (string.IsNullOrEmpty(path) || !path.EndsWith(".prefab")) continue;
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:42	QuestConverter.ConvertQuestToNarrative	STR	"	FindProperty	code	SerializedProperty scriptProperty = so.FindProperty("m_Script");
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:68	QuestConverter.FindScriptAsset	STR	"	FindAssets	code	string[] guids = AssetDatabase.FindAssets($"t:MonoScript {type.Name}");
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:90	QuestConverter.ValidateConvertQuestToNarrative	STR	"	EndsWith	code	if (path != null && path.EndsWith(".prefab"))
+Assets/_dev/Scripts/Util/Editor/UpdateMultipleChoiceToNarrative.cs:67	UpdateMultipleChoiceToNarrative.CopyMatchingSerializedProperties	STR	"	if	code	if (prop.name == "m_Script") continue;
+Assets/_dev/Scripts/Util/FeedbackItem.cs:14	FeedbackItem.Play	STR	"	Invoke	code	Invoke("ExecPlay", m_Delay);
+Assets/_dev/Scripts/Util/FeedbackItem.cs:22	FeedbackItem.Stop	STR	"	Invoke	code	Invoke("ExecStop", m_Delay);
+Assets/_dev/Scripts/Util/FeedbackItemAnimation.cs:30	FeedbackItemAnimation.ExecPlayInternal	STR	"	Play	code	m_PreviousAnimator.Play("Idle");
+Assets/_dev/Scripts/Util/HandTutorial.cs:17	HandTutorial.m_Repeat	NUM	5		field-init	[SerializeField] [FormerlySerializedAs("repeat")] private int m_Repeat = 5;
+Assets/_dev/Scripts/Util/HandTutorial.cs:20	HandTutorial.m_MoveDuration	NUM	1.2f		field-init	[SerializeField] [FormerlySerializedAs("moveDuration")] private float m_MoveDuration = 1.2f;
+Assets/_dev/Scripts/Util/HandTutorial.cs:21	HandTutorial.m_FadeDuration	NUM	0.4f		field-init	[SerializeField] [FormerlySerializedAs("fadeDuration")] private float m_FadeDuration = 0.4f;
+Assets/_dev/Scripts/Util/HandTutorial.cs:23	HandTutorial.m_IdleAnimationName	STR	"		field-init	private readonly string m_IdleAnimationName = "Idle";
+Assets/_dev/Scripts/Util/HandTutorial.cs:24	HandTutorial.m_ClickAnimationName	STR	"		field-init	private readonly string m_ClickAnimationName = "Click";
+Assets/_dev/Scripts/Util/HandTutorial.cs:73	HandTutorial.AnimateHand	STR	"	GameObject	code	GameObject trailOrigin = new GameObject("TrailOrigin");
+Assets/_dev/Scripts/Util/HandTutorial.cs:165	HandTutorial.AnimateHand	NUM	0.2f	WaitForSeconds	code	yield return new WaitForSeconds(mode == TutorialMode.Click ? 1f : 0.2f);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:20	QuestAudioPopulatorWindow.ShowWindow	STR	"		code	GetWindow<QuestAudioPopulatorWindow>("Quest Audio Populator");
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:25	QuestAudioPopulatorWindow.OnGUI	STR	"	Label	code	GUILayout.Label("Quest Audio Batch Populator", EditorStyles.boldLabel);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:26	QuestAudioPopulatorWindow.OnGUI	NUM	5	Space	code	EditorGUILayout.Space(5);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:32	QuestAudioPopulatorWindow.OnGUI	STR	"	GUIContent	code	new GUIContent("Quest Assets"),
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:37	QuestAudioPopulatorWindow.OnGUI	STR	"	HelpBox	code	"Add the SO_Quest assets that should have their audio populated.",
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:40	QuestAudioPopulatorWindow.OnGUI	STR	"	Toggle	code	m_ForceRedownload = EditorGUILayout.Toggle("Force Redownload Existing", m_ForceRedownload);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:42	QuestAudioPopulatorWindow.OnGUI	NUM	10	Space	code	EditorGUILayout.Space(10);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:45	QuestAudioPopulatorWindow.OnGUI	STR	"	Button	code	if (GUILayout.Button("Populate Selected Quest Audio", GUILayout.Height(35)))
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:45	QuestAudioPopulatorWindow.OnGUI	NUM	35	Height	code	if (GUILayout.Button("Populate Selected Quest Audio", GUILayout.Height(35)))
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:158	QuestAudioPopulatorWindow.Routine_PopulateAllQuests	STR	"		code	string relativeFolder = $"Assets/_dev/Audio/Voices/{targetSO.name}";
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:159	QuestAudioPopulatorWindow.Routine_PopulateAllQuests	STR	"	Combine	code	string fullFolder = Path.Combine(Application.dataPath, $"_dev/Audio/Voices/{targetSO.name}");
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:166	QuestAudioPopulatorWindow.Routine_PopulateAllQuests	STR	"		code	string relativeFilePath = $"{relativeFolder}/{req.id}.mp3";
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:167	QuestAudioPopulatorWindow.Routine_PopulateAllQuests	STR	"	Combine	code	string fullFilePath = Path.Combine(fullFolder, $"{req.id}.mp3");
+Assets/_dev/Scripts/Util/RawImageAlphaFilter.cs:7	RawImageAlphaFilter.alphaThreshold	NUM	0.1f		field-init	public float alphaThreshold = 0.1f;
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:57	SceneButtonGenerator.GenerateButtonsInEditor	STR	"		code	string pattern = @"(rewrite|otherdev|dev|_|\d+|\[\d+\])";
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:58	SceneButtonGenerator.GenerateButtonsInEditor	STR	"	Replace	code	string cleanedName = Regex.Replace(rawName, pattern, "", RegexOptions.IgnoreCase);
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:59	SceneButtonGenerator.GenerateButtonsInEditor	STR	"	Replace	code	cleanedName = Regex.Replace(cleanedName, @"(?<=[a-z])(?=[A-Z])", " ");
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:59	SceneButtonGenerator.GenerateButtonsInEditor	STR	"	Replace	code	cleanedName = Regex.Replace(cleanedName, @"(?<=[a-z])(?=[A-Z])", " ");
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:60	SceneButtonGenerator.GenerateButtonsInEditor	STR	"	Replace	code	cleanedName = Regex.Replace(cleanedName, @"\s+", " ").Trim();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:60	SceneButtonGenerator.GenerateButtonsInEditor	STR	"	Replace	code	cleanedName = Regex.Replace(cleanedName, @"\s+", " ").Trim();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:79	SceneButtonGenerator.GenerateButtonsInEditor	STR	"		code	newButtonObj.name = "Btn_" + rawName;
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:127	SceneButtonGenerator.GenerateButtonsInEditor	STR	"	RegisterCreatedObjectUndo	code	Undo.RegisterCreatedObjectUndo(newButtonObj, "Generate Scene Button");
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:138	SceneButtonGenerator.EnsureEventSystemExists	STR	"	GameObject	code	GameObject eventSystemObj = new GameObject("EventSystem");
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:141	SceneButtonGenerator.EnsureEventSystemExists	STR	"	RegisterCreatedObjectUndo	code	Undo.RegisterCreatedObjectUndo(eventSystemObj, "Create EventSystem");
+Assets/_dev/Scripts/Util/StringHelper.cs:13	StringHelper.TextToId	STR	"		code	string combinedInput = $"{text.Trim().ToLowerInvariant()}";
+Assets/_dev/Scripts/Util/StringHelper.cs:25	StringHelper.TextToId	STR	"	ToString	code	sb.Append(b.ToString("x2"));
+Assets/_dev/Scripts/Util/StringHelper.cs:60	StringHelper.ExtractItemAndLabelIds	NUM	5	if	code	if (length < 5) return null;
+Assets/_dev/Scripts/Util/StringHelper.cs:63	StringHelper.ExtractItemAndLabelIds	STR	"	if	code	if (segments[length - 2] != "label" || segments[length - 4] != "group")
+Assets/_dev/Scripts/Util/StringHelper.cs:63	StringHelper.ExtractItemAndLabelIds	STR	"	if	code	if (segments[length - 2] != "label" || segments[length - 4] != "group")
+Assets/_dev/Scripts/Util/URIHelper.cs:14	URIHelper.GetParameters	STR	"	Split	code	string[] d1 = url.Split("?");
+Assets/_dev/Scripts/Util/URIHelper.cs:19	URIHelper.GetParameters	STR	"	Split	code	string[] d2 = v.Split("&");
+Assets/_dev/Scripts/Util/URIHelper.cs:25	URIHelper.GetParameters	STR	"	Split	code	string[] d3 = d.Split("=");
+Assets/_dev/Scripts/Util/URIHelper.cs:47	URIHelper.GetBaseUrl	STR	"	Contains	code	if (!urlInput.Contains("://"))
+Assets/_dev/Scripts/Util/URIHelper.cs:62	URIHelper.GetBaseUrl	STR	"		code	return basePart + "/";
+Assets/_dev/Scripts/Util/URIHelper.cs:110	URIHelper.RemoveQueryParam	STR	"		code	return basePath + "?" + string.Join("&", remainingPairs);
+Assets/_dev/Scripts/Util/URIHelper.cs:110	URIHelper.RemoveQueryParam	STR	"	Join	code	return basePath + "?" + string.Join("&", remainingPairs);
+Assets/_dev/Scripts/Util/WavUtility.cs:6	WavUtility.ToAudioClip	STR	"	ToAudioClip	code	public static AudioClip ToAudioClip(byte[] wavFileBytes, string clipName = "wavClip")
+Assets/_dev/Scripts/Util/WavUtility.cs:8	WavUtility.ToAudioClip	NUM	44	if	code	if (wavFileBytes == null || wavFileBytes.Length < 44)
+Assets/_dev/Scripts/Util/WavUtility.cs:15	WavUtility.ToAudioClip	NUM	22	ToInt16	code	int channels = BitConverter.ToInt16(wavFileBytes, 22);
+Assets/_dev/Scripts/Util/WavUtility.cs:16	WavUtility.ToAudioClip	NUM	24	ToInt32	code	int sampleRate = BitConverter.ToInt32(wavFileBytes, 24);
+Assets/_dev/Scripts/Util/WavUtility.cs:17	WavUtility.ToAudioClip	NUM	34	ToInt16	code	int bitDepth = BitConverter.ToInt16(wavFileBytes, 34);
+Assets/_dev/Scripts/Util/WavUtility.cs:20	WavUtility.ToAudioClip	NUM	12		code	int pos = 12;
+Assets/_dev/Scripts/Util/WavUtility.cs:21	WavUtility.ToAudioClip	NUM	8	while	code	while (pos < wavFileBytes.Length - 8)
+Assets/_dev/Scripts/Util/WavUtility.cs:23	WavUtility.ToAudioClip	NUM	4	GetString	code	string chunkId = System.Text.Encoding.ASCII.GetString(wavFileBytes, pos, 4);
+Assets/_dev/Scripts/Util/WavUtility.cs:24	WavUtility.ToAudioClip	NUM	4	ToInt32	code	int chunkSize = BitConverter.ToInt32(wavFileBytes, pos + 4);
+Assets/_dev/Scripts/Util/WavUtility.cs:26	WavUtility.ToAudioClip	STR	"	if	code	if (chunkId == "data")
+Assets/_dev/Scripts/Util/WavUtility.cs:28	WavUtility.ToAudioClip	NUM	8		code	pos += 8; // Move past header to actual audio bytes
+Assets/_dev/Scripts/Util/WavUtility.cs:31	WavUtility.ToAudioClip	NUM	8		code	pos += 8 + chunkSize;
+Assets/_dev/Scripts/Util/WavUtility.cs:35	WavUtility.ToAudioClip	NUM	8		code	int bytesPerSample = bitDepth / 8;
+Assets/_dev/Scripts/Util/WavUtility.cs:45	WavUtility.ToAudioClip	NUM	16	if	code	if (bitDepth == 16)
+Assets/_dev/Scripts/Util/WavUtility.cs:48	WavUtility.ToAudioClip	NUM	32768f		code	audioData[sampleIndex] = sample16 / 32768f;
+Assets/_dev/Scripts/Util/WavUtility.cs:50	WavUtility.ToAudioClip	NUM	8	if	code	else if (bitDepth == 8)
+Assets/_dev/Scripts/Util/WavUtility.cs:52	WavUtility.ToAudioClip	NUM	128		code	audioData[sampleIndex] = (wavFileBytes[i] - 128) / 128f;
+Assets/_dev/Scripts/Util/WavUtility.cs:52	WavUtility.ToAudioClip	NUM	128f		code	audioData[sampleIndex] = (wavFileBytes[i] - 128) / 128f;
+Assets/_dev/Scripts/Util/WavUtility.cs:54	WavUtility.ToAudioClip	NUM	32	if	code	else if (bitDepth == 32)
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:10	WordSetting.m_Words	STR	"		field-init	private string m_Words = "Hello";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:30	WordSetting.GetFormattedText	STR	"		code	wordEffects += $"{WordSetting.c_AddEffect}{tag}";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:39	WordSetting.GetFormattedText	STR	"		code	wordEffects += $"{WordSetting.c_EndEffect}{m_Words}{WordSetting.c_EndFormat}";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:42	WordSetting.GetFormattedText	STR	"		code	wordEffects += " ";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:48	WordSetting.GetPlainText	STR	"		code	return m_AddSpaceForNext? m_Words + " " : m_Words;
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:59	WordSetting.GetFormatedText	STR	"		code	wordEffects += $"{WordSetting.c_AddEffect}{tag}";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:68	WordSetting.GetFormatedText	STR	"		code	wordEffects += $"{WordSetting.c_EndEffect}{text}{WordSetting.c_EndFormat}";
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:32	VoiceAPI.Generate	STR	"	Invoke	code	onFailure?.Invoke("Text is empty.");
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:38	VoiceAPI.Generate	STR	"	Invoke	code	onFailure?.Invoke("API Token is empty.");
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:79	VoiceAPI.GenerateRoutine	STR	"	Log	code	$"[VoiceAPI] Requesting voice...\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:80	VoiceAPI.GenerateRoutine	STR	"	Log	code	$"Voice ID: {voiceId}\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:81	VoiceAPI.GenerateRoutine	STR	"	Log	code	$"Text: {text}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:104	VoiceAPI.GenerateRoutine	STR	"	SetRequestHeader	code	"Authorization",
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:105	VoiceAPI.GenerateRoutine	STR	"	SetRequestHeader	code	"Bearer " + apiToken
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:109	VoiceAPI.GenerateRoutine	STR	"	SetRequestHeader	code	"Content-Type",
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:110	VoiceAPI.GenerateRoutine	STR	"	SetRequestHeader	code	"application/json"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:114	VoiceAPI.GenerateRoutine	STR	"	SetRequestHeader	code	"Accept",
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:115	VoiceAPI.GenerateRoutine	STR	"	SetRequestHeader	code	"application/json"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:134	VoiceAPI.GenerateRoutine	STR	"		code	$"HTTP {request.responseCode}: " +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:135	VoiceAPI.GenerateRoutine	STR	"		code	$"{request.error}\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:136	VoiceAPI.GenerateRoutine	STR	"		code	$"Response: {request.downloadHandler.text}";
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:139	VoiceAPI.GenerateRoutine	STR	"	LogError	code	$"[VoiceAPI] Request failed:\n{error}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:155	VoiceAPI.GenerateRoutine	STR	"	Log	code	$"[VoiceAPI] Response:\n{response}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:170	VoiceAPI.GenerateRoutine	STR	"		code	$"Failed to parse API response.\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:171	VoiceAPI.GenerateRoutine	STR	"		code	$"{exception.Message}\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:172	VoiceAPI.GenerateRoutine	STR	"		code	$"Response: {response}";
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:175	VoiceAPI.GenerateRoutine	STR	"	LogError	code	$"[VoiceAPI] {error}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:186	VoiceAPI.GenerateRoutine	STR	"	Invoke	code	"API response could not be parsed."
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:199	VoiceAPI.GenerateRoutine	STR	"	Invoke	code	"API response does not contain audio_url.\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:200	VoiceAPI.GenerateRoutine	STR	"	Invoke	code	$"Response: {response}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:207	VoiceAPI.GenerateRoutine	STR	"	Log	code	$"[VoiceAPI] Audio URL received:\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:208	VoiceAPI.GenerateRoutine	STR	"	Log	code	$"{voiceResponse.audio_url}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:93	VoiceAsset.GenerateAudio	STR	"	LogWarning	code	$"[VoiceAsset] '{name}' is already generating."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:106	VoiceAsset.GenerateAudio	STR	"	LogError	code	$"[VoiceAsset] Name Voice is empty on '{name}'."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:119	VoiceAsset.GenerateAudio	STR	"	LogError	code	$"[VoiceAsset] Text is empty on '{name}'."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:132	VoiceAsset.GenerateAudio	STR	"	LogError	code	$"[VoiceAsset] API Token is empty on '{name}'."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:158	VoiceAsset.GenerateAudio	STR	"	Log	code	$"[VoiceAsset] Starting generation...\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:159	VoiceAsset.GenerateAudio	STR	"	Log	code	$"Name      : {m_NameVoice}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:160	VoiceAsset.GenerateAudio	STR	"	Log	code	$"Voice ID  : {voiceId}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:161	VoiceAsset.GenerateAudio	STR	"	Log	code	$"Text      : {m_Text}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:191	VoiceAsset.GenerateAudio	STR	"	LogError	code	$"[VoiceAsset] Generation failed:\n{error}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:208	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"[VoiceAsset] Downloading audio...\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:209	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"{audioUrl}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:227	VoiceAsset.DownloadAudioRoutine	STR	"	LogError	code	$"[VoiceAsset] Audio download failed:\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:228	VoiceAsset.DownloadAudioRoutine	STR	"	LogError	code	$"{request.error}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:249	VoiceAsset.DownloadAudioRoutine	STR	"	LogError	code	"[VoiceAsset] Downloaded audio is empty."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:294	VoiceAsset.DownloadAudioRoutine	STR	"		code	$"Voice_{voiceName}";
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:299	VoiceAsset.DownloadAudioRoutine	STR	"	Combine	code	$"{fileName}.mp3"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:316	VoiceAsset.DownloadAudioRoutine	STR	"	LogError	code	$"[VoiceAsset] Failed to save audio:\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:317	VoiceAsset.DownloadAudioRoutine	STR	"	LogError	code	$"{exception}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:326	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"[VoiceAsset] Audio saved:\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:327	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"{fullFilePath}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:340	VoiceAsset.DownloadAudioRoutine	STR	"		code	$"{c_OutputFolder}/{fileName}.mp3";
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:344	VoiceAsset.DownloadAudioRoutine	STR	"	Replace	code	"\\",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:345	VoiceAsset.DownloadAudioRoutine	STR	"	Replace	code	"/"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:349	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"[VoiceAsset] Loading AudioClip:\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:350	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"{unityAssetPath}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:365	VoiceAsset.DownloadAudioRoutine	STR	"	LogError	code	$"[VoiceAsset] Unity could not load " +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:366	VoiceAsset.DownloadAudioRoutine	STR	"	LogError	code	$"AudioClip:\n{unityAssetPath}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:380	VoiceAsset.DownloadAudioRoutine	STR	"	RecordObject	code	"Generate Voice Audio"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:390	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"[VoiceAsset] ==============================\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:391	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"[VoiceAsset] GENERATION SUCCESS\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:392	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"[VoiceAsset] ==============================\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:393	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"Name      : {m_NameVoice}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:394	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"Audio     : {clip.name}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:395	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"Path      : {unityAssetPath}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:396	VoiceAsset.DownloadAudioRoutine	STR	"	Log	code	$"=============================================="
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:437	VoiceAsset.SanitizeFileName	STR	"	Replace	code	"_"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:473	VoiceAssetEditor.OnEnable	STR	"	FindProperty	code	"m_NameVoice"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:478	VoiceAssetEditor.OnEnable	STR	"	FindProperty	code	"m_Text"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:483	VoiceAssetEditor.OnEnable	STR	"	FindProperty	code	"m_VoiceId"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:488	VoiceAssetEditor.OnEnable	STR	"	FindProperty	code	"m_AudioClip"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:493	VoiceAssetEditor.OnEnable	STR	"	FindProperty	code	"m_ApiToken"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:498	VoiceAssetEditor.OnEnable	STR	"	FindProperty	code	"m_IsGenerating"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:514	VoiceAssetEditor.OnInspectorGUI	STR	"	LabelField	code	"Voice",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:518	VoiceAssetEditor.OnInspectorGUI	NUM	3	Space	code	EditorGUILayout.Space(3);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:526	VoiceAssetEditor.OnInspectorGUI	STR	"	GUIContent	code	new GUIContent("Name Voice")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:535	VoiceAssetEditor.OnInspectorGUI	STR	"	GUIContent	code	new GUIContent("Text")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:544	VoiceAssetEditor.OnInspectorGUI	STR	"	GUIContent	code	new GUIContent("Voice ID")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:553	VoiceAssetEditor.OnInspectorGUI	STR	"	GUIContent	code	new GUIContent("Audio Clip")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:556	VoiceAssetEditor.OnInspectorGUI	NUM	10	Space	code	EditorGUILayout.Space(10);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:563	VoiceAssetEditor.OnInspectorGUI	STR	"	LabelField	code	"API",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:567	VoiceAssetEditor.OnInspectorGUI	NUM	3	Space	code	EditorGUILayout.Space(3);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:571	VoiceAssetEditor.OnInspectorGUI	STR	"	GUIContent	code	new GUIContent("API Token")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:574	VoiceAssetEditor.OnInspectorGUI	NUM	10	Space	code	EditorGUILayout.Space(10);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:610	VoiceAssetEditor.OnInspectorGUI	STR	"	Button	code	? "Generating..."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:611	VoiceAssetEditor.OnInspectorGUI	STR	"	Button	code	: "Generate Audio",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:612	VoiceAssetEditor.OnInspectorGUI	NUM	40	Height	code	GUILayout.Height(40)
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:628	VoiceAssetEditor.OnInspectorGUI	STR	"	HelpBox	code	"Name Voice is empty.",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:636	VoiceAssetEditor.OnInspectorGUI	STR	"	HelpBox	code	"Text is empty.",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:644	VoiceAssetEditor.OnInspectorGUI	STR	"	HelpBox	code	"API Token is empty.",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:652	VoiceAssetEditor.OnInspectorGUI	STR	"	HelpBox	code	"Generating audio...",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:661	VoiceAssetEditor.OnInspectorGUI	NUM	10	Space	code	EditorGUILayout.Space(10);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:664	VoiceAssetEditor.OnInspectorGUI	STR	"	LabelField	code	"Output",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:669	VoiceAssetEditor.OnInspectorGUI	STR	"	SelectableLabel	code	$"{c_OutputFolder}/Voice_{asset.NameVoice}.mp3",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:671	VoiceAssetEditor.OnInspectorGUI	NUM	18	Height	code	GUILayout.Height(18)
+Assets/_dev2/Quest/Scripts/AnimationHandler.cs:108	AnimationHandler.Playing	NUM	1.5f	WaitForSeconds	code	yield return new WaitForSeconds(1.5f);
+Assets/_dev2/Quest/Scripts/AnimationHandler.cs:111	AnimationHandler.Playing	NUM	0.4f		code	music.volume = 0.4f;
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:32	AnimationStateBehaviourEditor.OnEnable	STR	"	FindProperty	code	serializedObject.FindProperty("m_ClipConfig");
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:35	AnimationStateBehaviourEditor.OnEnable	STR	"	FindProperty	code	serializedObject.FindProperty("m_StateHash");
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:38	AnimationStateBehaviourEditor.OnEnable	STR	"	FindProperty	code	serializedObject.FindProperty("m_ClipLength");
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:57	AnimationStateBehaviourEditor.OnInspectorGUI	STR	"	Button	code	if (GUILayout.Button("Refresh"))
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:70	AnimationStateBehaviourEditor.DrawStateInfo	STR	"	HelpBox	code	"Animator State could not be detected.",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:78	AnimationStateBehaviourEditor.DrawStateInfo	STR	"	LabelField	code	"State",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:83	AnimationStateBehaviourEditor.DrawStateInfo	STR	"	LabelField	code	"State Path",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:88	AnimationStateBehaviourEditor.DrawStateInfo	STR	"	LabelField	code	"State Hash",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:93	AnimationStateBehaviourEditor.DrawStateInfo	STR	"	LabelField	code	"Clip Length",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:94	AnimationStateBehaviourEditor.DrawStateInfo	STR	"	LabelField	code	$"{m_ClipLength.floatValue:F3} seconds"
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:236	AnimationStateBehaviourEditor.FindStatePath	STR	"		code	return $"{currentPath}.{state.name}";
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:244	AnimationStateBehaviourEditor.FindStatePath	STR	"		code	$"{currentPath}." +
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:245	AnimationStateBehaviourEditor.FindStatePath	STR	"		code	$"{childStateMachine.stateMachine.name}";
+Assets/_dev2/Quest/Scripts/ResultPanel.cs:62	ResultPanel.ShowResult	NUM	100f		code	float rate = context.GetRate() * 100f;
+Assets/_dev2/Quest/Scripts/ResultPanel.cs:66	ResultPanel.ShowResult	STR	"		code	string scoreText = $"{rightCountText} right(s) of {context.GetTotalQuest()}";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:65	StarPresenter.StarsResult	STR	"		code	string reactionWord = "Oh nooo";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:69	StarPresenter.StarsResult	STR	"		code	reactionWord = "Good Job!";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:74	StarPresenter.StarsResult	STR	"		code	reactionWord = "Excellent!!";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:79	StarPresenter.StarsResult	STR	"		code	reactionWord = "Smart Kid!!!";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:92	StarPresenter.SetActiveStars	NUM	0.2f	WaitForSeconds	code	yield return new WaitForSeconds(0.2f);
+Assets/_dev2/Scripts/TweenHandler.cs:108	TweenField.m_Delay	NUM	0.1f		field-init	private float m_Delay = 0.1f;
+Assets/_dev2/Scripts/TweenHandler.cs:110	TweenField.m_EaseDuration	NUM	0.3f		field-init	private float m_EaseDuration = 0.3f;
+Assets/_dev2/Scripts/TweenHandler.cs:230	TweenField.Init	NUM	1000	Range	code	int random = UnityEngine.Random.Range(1000, 9999);
+Assets/_dev2/Scripts/TweenHandler.cs:230	TweenField.Init	NUM	9999	Range	code	int random = UnityEngine.Random.Range(1000, 9999);
+Assets/_dev2/Scripts/TweenHandler.cs:402	TweenField.ColorImageTween	NUM	0.1f	value	code	m_ColorTween = LeanTween.value(m_Content, 0.1f, 1f, m_EaseDuration);
+
+# [F] PROJECT INHERITANCE (rule #9)  base | derived | file | abstract | virtual/abstract | override | members
+Config	AnimatorClipConfig	Assets/_dev2/Quest/Scripts/AnimatorClipConfig.cs	abstract=False	virtual/abstract=0	override=0	members=8
+Config	DialogueConfig	Assets/_dev2/Addon/TextAnimation/Scripts/DialogueConfig.cs	abstract=False	virtual/abstract=0	override=0	members=9
+Config	ReactionConfig	Assets/_dev2/Quest/Scripts/ReactionConfig.cs	abstract=False	virtual/abstract=0	override=0	members=8
+FeedbackItem	FeedbackItemAnimation	Assets/_dev/Scripts/Util/FeedbackItemAnimation.cs	abstract=False	virtual/abstract=0	override=2	members=7
+FeedbackItem	FeedbackItemAudio	Assets/_dev/Scripts/Util/FeedbackItemAudio.cs	abstract=False	virtual/abstract=0	override=1	members=3
+FeedbackItem	FeedbackItemParticle	Assets/_dev/Scripts/Util/FeedbackItemParticles.cs	abstract=False	virtual/abstract=0	override=1	members=3
+PanelView	ReactionPanel	Assets/_dev2/Quest/Scripts/ReactionPanel.cs	abstract=False	virtual/abstract=0	override=0	members=13
+PanelView	ResultPanel	Assets/_dev2/Quest/Scripts/ResultPanel.cs	abstract=False	virtual/abstract=0	override=0	members=16
+Quest	QuestColoring	Assets/_dev/Scripts/Quest/QuestColoring.cs	abstract=False	virtual/abstract=0	override=3	members=27
+Quest	QuestMatching	Assets/_dev/Scripts/Quest/QuestMatching.cs	abstract=False	virtual/abstract=1	override=3	members=20
+Quest	QuestMultipleChoices	Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs	abstract=False	virtual/abstract=0	override=11	members=31
+Quest	QuestRythimMaker	Assets/_dev/Scripts/Quest/QuestRythimMaker.cs	abstract=False	virtual/abstract=0	override=5	members=19
+Quest	QuestWordBuilder	Assets/_dev/Scripts/Quest/QuestWordBuilder.cs	abstract=False	virtual/abstract=0	override=3	members=13
+Quest	QuestZonePairing	Assets/_dev/Scripts/Quest/QuestZonePairing.cs	abstract=True	virtual/abstract=1	override=0	members=1
+QuestComponent	QuestColoringItem	Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs	abstract=False	virtual/abstract=0	override=1	members=8
+QuestComponent	QuestColoringPalette	Assets/_dev/Scripts/Quest/Component/QuestColoringPalette.cs	abstract=False	virtual/abstract=0	override=1	members=7
+QuestComponent	QuestDragNDropItem	Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs	abstract=False	virtual/abstract=2	override=3	members=25
+QuestComponent	QuestDragNDropSlot	Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs	abstract=False	virtual/abstract=1	override=1	members=14
+QuestComponent	QuestMatchingCard	Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs	abstract=False	virtual/abstract=4	override=4	members=15
+QuestComponent	QuestMultipleChoicesItem	Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs	abstract=False	virtual/abstract=1	override=5	members=17
+QuestComponent	QuestRythimBeat	Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs	abstract=False	virtual/abstract=0	override=1	members=10
+QuestComponent	QuestRythimNote	Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs	abstract=False	virtual/abstract=0	override=3	members=17
+QuestComponent	QuestShapeItCanvas	Assets/_dev/Scripts/Quest/Component/QuestShapeItCanvas.cs	abstract=False	virtual/abstract=0	override=1	members=5
+QuestComponent	QuestWordBuilderItem	Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs	abstract=False	virtual/abstract=1	override=4	members=13
+QuestDragNDropItem	QuestShapeItItem	Assets/_dev/Scripts/Quest/Component/QuestShapeItItem.cs	abstract=False	virtual/abstract=0	override=0	members=2
+QuestMultipleChoices	QuestMultipleChoicesNarrative	Assets/_dev/Scripts/Quest/QuestMultipleChoicesNarrative.cs	abstract=False	virtual/abstract=0	override=3	members=5
+QuestMultipleChoicesItem	QuestMultipleChoicesItemWithScale	Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItemWithScale.cs	abstract=False	virtual/abstract=0	override=1	members=1
+QuestUtilGameObject	QuestUtilButton	Assets/_dev/Scripts/Quest/Util/QuestUtilButton.cs	abstract=False	virtual/abstract=0	override=3	members=5
+QuestUtilLabel	QuestUtilLabelChoice	Assets/_dev/Scripts/Quest/Util/QuestUtilLabelChoice.cs	abstract=False	virtual/abstract=0	override=0	members=2
+QuestUtilLabel	QuestUtilLabelMatching	Assets/_dev/Scripts/Quest/Util/QuestUtilLabelMatching.cs	abstract=False	virtual/abstract=0	override=0	members=0
+QuestUtilLabel	QuestUtilLabelValue	Assets/_dev/Scripts/Quest/Util/QuestUtilLabelValue.cs	abstract=False	virtual/abstract=0	override=0	members=2
+QuestZonePairing	QuestDragNDrop	Assets/_dev/Scripts/Quest/QuestDragNDrop.cs	abstract=False	virtual/abstract=2	override=9	members=27
+QuestZonePairing	QuestShapeIt	Assets/_dev/Scripts/Quest/QuestShapeIt.cs	abstract=False	virtual/abstract=1	override=5	members=21
+SO_Quest	SO_QuestColoring	Assets/_dev/Scripts/SO/SO_QuestColoring.cs	abstract=False	virtual/abstract=0	override=0	members=4
+SO_Quest	SO_QuestDragNDrop	Assets/_dev/Scripts/SO/SO_QuestDragNDrop.cs	abstract=False	virtual/abstract=0	override=0	members=16
+SO_Quest	SO_QuestMatching	Assets/_dev/Scripts/SO/SO_QuestMatching.cs	abstract=False	virtual/abstract=0	override=0	members=6
+SO_Quest	SO_QuestMultipleChoice	Assets/_dev/Scripts/SO/SO_QuestMultipleChoice.cs	abstract=False	virtual/abstract=0	override=3	members=20
+SO_Quest	SO_QuestMultipleChoiceFinder	Assets/_dev/Scripts/SO/SO_QuestMultipleChoiceFinder.cs	abstract=False	virtual/abstract=0	override=0	members=1
+SO_Quest	SO_QuestRythimMaker	Assets/_dev/Scripts/SO/SO_QuestRythimMaker.cs	abstract=False	virtual/abstract=0	override=0	members=9
+SO_Quest	SO_QuestShapeIt	Assets/_dev/Scripts/SO/SO_QuestShapeIt.cs	abstract=False	virtual/abstract=0	override=0	members=8
+SO_Quest	SO_QuestWordBuilder	Assets/_dev/Scripts/SO/SO_QuestWordBuilder.cs	abstract=False	virtual/abstract=0	override=0	members=9
+SO_QuestMultipleChoice	SO_QuestMultipleChoiceNarrative	Assets/_dev/Scripts/SO/SO_QuestMultipleChoiceNarrative.cs	abstract=False	virtual/abstract=0	override=0	members=2
+
+# unparsable files: 

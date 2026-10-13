@@ -20,7 +20,7 @@ namespace EduGame
 
         void Awake()
         {
-            m_CanvasScaler = GetComponent<CanvasScaler>();
+            TryGetComponent<CanvasScaler>(out m_CanvasScaler);
 
             m_RefRes = m_CanvasScaler.referenceResolution + Vector2.up * 200;
 

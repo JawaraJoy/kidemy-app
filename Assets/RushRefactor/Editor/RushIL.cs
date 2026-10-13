@@ -31,7 +31,7 @@ namespace RushRefactor
     ///   Gone|Type|name      method removed (for example a private auto-property setter).
     ///   Field|Type|m_Field  stfld/stsfld to this field counts as the call to the removed setter it replaced.
     /// </summary>
-    public static class RushIL
+    public static partial class RushIL
     {
         const string c_EditorBaseline = "il_editor_baseline.txt";
         const string c_PlayerBaseline = "il_player_baseline.txt";
@@ -99,7 +99,7 @@ namespace RushRefactor
             return "IL BASELINES SAVED (editor=" + editor.Count + " methods, player=" + player.Count + " methods)";
         }
 
-        public static string CheckAll()
+        static string CheckAllCore()
         {
             string stale = StaleReason();
             if (stale != null) return "IL ABORT: " + stale;
@@ -320,6 +320,7 @@ namespace RushRefactor
 
         static void ApplyRules(Dictionary<string, string> b, Dictionary<string, string> c, List<MapRule> rules, Result r)
         {
+            s_Renamed.Clear();
             if (rules == null) return;
             foreach (MapRule rule in rules)
             {
@@ -354,9 +355,11 @@ namespace RushRefactor
                     string val = c[key];
                     c.Remove(key);
                     c[target] = val;
+                    s_Renamed[target] = key;
                     r.Mapped++;
                 }
             }
+            ApplyReviewed(b, c, rules, r);
         }
 
         // Roslyn numbers compiler generated types and methods (closures, iterators, lambdas, local functions) by the ordinal of
@@ -473,6 +476,7 @@ namespace RushRefactor
                                 byte[] il = pe.GetMethodBody(m.RelativeVirtualAddress).GetILBytes();
                                 string wt = ThinWrapperTarget(il, md);
                                 fp = (wt != null && wt == name + "Internal" && splitMethods != null && splitMethods.Contains(full + "::" + name)) ? c_WrapperPrefix + wt : Fingerprint(il, md, setterFields, splitMethods);
+                                if (s_RevSink != null) s_RevSink[tag + ":" + full + "::" + name + "#" + ord] = ReviewedSig(il, md);
                             }
                             catch (Exception) { fp = "unreadable"; }
                         }
@@ -556,6 +560,11 @@ namespace RushRefactor
                 {
                     string mk = MethodKey(md, BitConverter.ToInt32(il, i));
                     if (mk != null && splitMethods.Contains(mk)) val = OpCodes.Callvirt.Value; // the former virtual method is now a non-virtual wrapper: call instead of callvirt
+                }
+                if (s_Getters != null && s_Getters.Count > 0 && (op == OpCodes.Call || op == OpCodes.Callvirt) && i + 4 <= il.Length)
+                {
+                    string gk = MethodKey(md, BitConverter.ToInt32(il, i));
+                    if (gk != null && s_Getters.Contains(gk)) val = OpCodes.Ldfld.Value; // a former read of the public field is now the getter call
                 }
                 ops.Append(val).Append(';');
                 count++;

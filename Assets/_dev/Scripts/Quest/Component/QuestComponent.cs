@@ -31,9 +31,9 @@ namespace EduGame
         {
             if(!m_IsInit)
             {
-                m_CachedRect = GetComponent<RectTransform>();
+                TryGetComponent<RectTransform>(out m_CachedRect);
                 m_CachedButton = GetComponentInChildren<Button>();
-                m_CachedImage = GetComponent<Image>();
+                TryGetComponent<Image>(out m_CachedImage);
 
                 m_IsInit = true;   
             }

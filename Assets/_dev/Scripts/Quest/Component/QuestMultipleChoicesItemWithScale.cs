@@ -36,7 +36,7 @@ namespace EduGame
             {
                 if(m_Image)
                 {
-                    RectTransform imageRect = m_Image.transform.GetComponent<RectTransform>();
+                    m_Image.transform.TryGetComponent<RectTransform>(out RectTransform imageRect);
 
                     if(imageRect)
                     {

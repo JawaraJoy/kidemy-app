@@ -40,7 +40,7 @@ namespace EduGame
         {
             base.InitInternal();
 
-            m_Events = GetComponent<ButtonEvents> ();
+            TryGetComponent<ButtonEvents>(out m_Events);
             
             if(m_Events)
             {

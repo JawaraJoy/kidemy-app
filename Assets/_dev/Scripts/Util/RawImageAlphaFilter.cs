@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class RawImageAlphaFilter : MonoBehaviour, ICanvasRaycastFilter
 {
     [Range(0, 1)]
-    public float alphaThreshold = 0.1f;
+    [SerializeField]
+    [FormerlySerializedAs("alphaThreshold")]
+    private float m_AlphaThreshold = 0.1f;
     
     // We will use the original static texture for the "hit test"
     private Texture2D m_MaskTexture;
@@ -12,7 +15,7 @@ public class RawImageAlphaFilter : MonoBehaviour, ICanvasRaycastFilter
 
     void Awake()
     {
-        m_RawImage = GetComponent<RawImage>();
+        TryGetComponent<RawImage>(out m_RawImage);
         
         // IMPORTANT: Grab the texture BEFORE it gets swapped with the RenderTexture
         // Or assign the base texture manually in the inspector.
@@ -24,7 +27,7 @@ public class RawImageAlphaFilter : MonoBehaviour, ICanvasRaycastFilter
 
     public bool IsRaycastLocationValid(Vector2 screenPoint, Camera eventCamera)
     {
-        if (m_MaskTexture == null || alphaThreshold <= 0) return true;
+        if (m_MaskTexture == null || m_AlphaThreshold <= 0) return true;
 
         Vector2 localPoint;
         if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(
@@ -42,7 +45,7 @@ public class RawImageAlphaFilter : MonoBehaviour, ICanvasRaycastFilter
         // We sample the STATIC texture (CPU-accessible) instead of the RenderTexture
         try
         {
-            return m_MaskTexture.GetPixelBilinear(normalizedUV.x, normalizedUV.y).a >= alphaThreshold;
+            return m_MaskTexture.GetPixelBilinear(normalizedUV.x, normalizedUV.y).a >= m_AlphaThreshold;
         }
         catch (UnityException)
         {

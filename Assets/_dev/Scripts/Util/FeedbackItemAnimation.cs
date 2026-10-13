@@ -42,7 +42,7 @@ namespace EduGame
 
             if(!s_CachedAnimator.ContainsKey(id))
             {
-                Animator tAnimator = transform.GetComponent<Animator>();
+                transform.TryGetComponent<Animator>(out Animator tAnimator);
 
                 if(tAnimator)
                 {

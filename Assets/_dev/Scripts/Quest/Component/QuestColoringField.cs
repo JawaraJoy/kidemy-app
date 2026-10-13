@@ -21,11 +21,11 @@ namespace EduGame
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            RawImage image = GetComponent<RawImage>();
+            TryGetComponent<RawImage>(out RawImage image);
 
-            m_Rect = GetComponent<RectTransform>();
+            TryGetComponent<RectTransform>(out m_Rect);
 
-            m_E = GetComponent<QuestUtilRegionalDrag>();
+            TryGetComponent<QuestUtilRegionalDrag>(out m_E);
 
             m_QuestColoring = GetComponentInParent<QuestColoring>();
 

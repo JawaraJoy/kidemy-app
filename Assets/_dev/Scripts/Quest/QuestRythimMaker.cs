@@ -30,7 +30,7 @@ namespace EduGame
             
             m_DataRythimMaker = m_Data as SO_QuestRythimMaker;
 
-            s_AudioSource = GetComponent<AudioSource>();
+            TryGetComponent<AudioSource>(out s_AudioSource);
 
             if(!AudioSource)
                 s_AudioSource = GameManager.Instance.AudioSource;

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Text;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Networking;
 
 namespace EduGame
@@ -12,9 +13,11 @@ namespace EduGame
         private string m_ApiUrl = "";
         private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
 
-        public const string frogVoiceID = "n3tkGOcEribaYI5zg4pu";
+        private const string c_FrogVoiceId = "n3tkGOcEribaYI5zg4pu";
 
-        public APIManager Instance;
+        [SerializeField]
+        [FormerlySerializedAs("Instance")]
+        private APIManager m_Instance;
         
         public void RequestVoice(string text, string voiceId = "", Action<string> onSuccess = null, Action<string> onFailure = null)
         {
@@ -39,7 +42,7 @@ namespace EduGame
         private void RequestVoiceInternal(VoiceRequest request, Action<string> onSuccess, Action<string> onFailure)
         {
             if (string.IsNullOrEmpty(request.voice_id))
-                request.voice_id = frogVoiceID;
+                request.voice_id = c_FrogVoiceId;
 
             string requestUrl = m_ApiAIUrl + "v1/api/audio/generate";
 

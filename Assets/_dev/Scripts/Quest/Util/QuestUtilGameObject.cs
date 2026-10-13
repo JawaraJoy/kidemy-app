@@ -14,7 +14,7 @@ namespace EduGame
 
         protected virtual void Awake()
         {
-            m_Rect = GetComponent<RectTransform>();
+            TryGetComponent<RectTransform>(out m_Rect);
         }
 
         public void SetId(int value)

@@ -23,7 +23,7 @@ namespace EduGame
         {
             base.Awake();
 
-            m_Col = GetComponent<Collider2D>();
+            TryGetComponent<Collider2D>(out m_Col);
             m_Animator = GetComponentInChildren<Animator>();
 
             if(!m_AudioSource)
@@ -77,7 +77,7 @@ namespace EduGame
             {
                 m_IsSuccess = true;
                 
-                QuestRythimNote note = collision.GetComponent<QuestRythimNote>();
+                collision.TryGetComponent<QuestRythimNote>(out QuestRythimNote note);
                 
                 if(note)
                     note.OnBeat(true);
