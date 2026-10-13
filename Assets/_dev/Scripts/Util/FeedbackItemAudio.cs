@@ -12,7 +12,7 @@ namespace EduGame
             
         }
 
-        public override void ExecPlay()
+        protected override void ExecPlayInternal()
         {
             Debug.Log("oooowa");
 

@@ -37,10 +37,15 @@ namespace EduGame
             m_Animator = GetComponent<Animator>();
             m_Grid = GetComponentInChildren<GridLayoutGroup>();
 
-            RegisterItems();
+            RegisterItemsInternal();
         }
 
         public void AddItem(QuestDragNDropItem item)
+        {
+            AddItemInternal(item);
+        }
+
+        private void AddItemInternal(QuestDragNDropItem item)
         {
             if (item)
             {
@@ -81,11 +86,16 @@ namespace EduGame
                 else if (m_DisplayMode == DisplayMode.Normal)
                     Normal(item);
 
-                RegisterItems();
+                RegisterItemsInternal();
             }
         }
 
         public void RegisterItems()
+        {
+            RegisterItemsInternal();
+        }
+
+        private void RegisterItemsInternal()
         {
             m_Items = new QuestDragNDropItem[transform.childCount];
 
@@ -139,7 +149,7 @@ namespace EduGame
 
                     if (slotLimitVerification && (!m_Verify || m_Quest.Verify(draggedItem, this)))
                     {
-                        AddItem(draggedItem);
+                        AddItemInternal(draggedItem);
 
                         if(m_Answer)
                             m_Quest.OnAnswered(true);
@@ -180,10 +190,10 @@ namespace EduGame
             else if (m_DisplayMode == DisplayMode.Normal)
                 Normal(item);
 
-            RegisterItems();
+            RegisterItemsInternal();
         }
 
-        public void Dynamic(QuestDragNDropItem item)
+        private void Dynamic(QuestDragNDropItem item)
         {
             RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
 
@@ -201,7 +211,7 @@ namespace EduGame
                 Normal(item);
         }
 
-        public void Normal(QuestDragNDropItem item)
+        private void Normal(QuestDragNDropItem item)
         {
             /*
             RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
@@ -221,7 +231,7 @@ namespace EduGame
             */
         }
 
-        public void Sticky(QuestDragNDropItem item)
+        private void Sticky(QuestDragNDropItem item)
         {
             RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
             RectTransform rectParent = item.transform.GetComponent<RectTransform>();
@@ -241,7 +251,7 @@ namespace EduGame
             rect.anchoredPosition = Vector2.zero;
         }
 
-        public void FillZone(QuestDragNDropItem item)
+        private void FillZone(QuestDragNDropItem item)
         {
             item.Rect.anchorMax = Vector2.one;
             item.Rect.anchorMin = Vector2.zero;
@@ -252,7 +262,7 @@ namespace EduGame
             item.Rect.offsetMax = Vector2.zero;
         }
 
-        public void Scaled(QuestDragNDropItem item, float scale)
+        private void Scaled(QuestDragNDropItem item, float scale)
         {
             Debug.Log(scale);
             RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
@@ -266,7 +276,7 @@ namespace EduGame
             rect.localScale = Vector3.one * scale;
         }
 
-        public void FollowParent(QuestDragNDropItem item)
+        private void FollowParent(QuestDragNDropItem item)
         {
             RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
             GridLayoutGroup grid = item.transform.GetComponentInParent<GridLayoutGroup>();
@@ -278,7 +288,7 @@ namespace EduGame
             rect.sizeDelta = grid.cellSize;
         }
 
-        public void OnAccept()
+        private void OnAccept()
         {
             if(m_Animator)
                 m_Animator.Play("Accept");
@@ -287,7 +297,7 @@ namespace EduGame
                 GameManager.Instance.AudioSource.PlayOneShot(m_AcceptSound);
         }
 
-        public void OnReject()
+        private void OnReject()
         {
             if(m_Animator)
                 m_Animator.Play("Reject");

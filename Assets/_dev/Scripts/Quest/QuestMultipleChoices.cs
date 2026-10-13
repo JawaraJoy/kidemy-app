@@ -182,16 +182,16 @@ namespace EduGame
             SetDialog();
         }
 
-        public override void Setup()
+        protected override void SetupInternal()
         {
             m_DataMultipleChoice = m_Data as SO_QuestMultipleChoice;
 
-            base.Setup();
+            base.SetupInternal();
         }
 
-        public override void PlayQuestionVoice()
+        protected override void PlayQuestionVoiceInternal()
         {
-            base.PlayQuestionVoice();
+            base.PlayQuestionVoiceInternal();
 
             StopAllCoroutines();
 
@@ -248,11 +248,11 @@ namespace EduGame
                 foreach (var choice in m_Choices)
                     choice.Disable();
 
-                Submit();
+                SubmitInternal();
             }
         }
 
-        public override void Submit(int star = 1)
+        protected override void SubmitInternal(int star = 1)
         {
             if(m_UnansweredCorrect == 0)
                 star = 3;
@@ -262,7 +262,7 @@ namespace EduGame
             GameManager.Instance.Submit(star);
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             m_UnansweredCorrect = m_DataMultipleChoice.TotalAnswer;
 
@@ -274,7 +274,7 @@ namespace EduGame
                 
             SetDialog();
 
-            base.Reset();
+            base.ResetInternal();
         }
 
         void RecalculateChoiceContainer()
@@ -325,7 +325,7 @@ namespace EduGame
         /// </summary>
         public override VoiceRequest[] GetVoiceRequests()
         {
-            Setup();
+            SetupInternal();
             return m_DataMultipleChoice != null
                 ? m_DataMultipleChoice.GetVoiceRequests()
                 : Array.Empty<VoiceRequest>();

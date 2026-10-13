@@ -232,14 +232,14 @@ namespace Rush
             }
         }
 
-        public void OnStartTween()
+        private void OnStartTween()
         {
             //_isComplete = false;
             m_OnStartTweening?.Invoke();
             Debug.Log($"{m_Id} is StartTween");
         }
 
-        public void OnCompleteTween()
+        private void OnCompleteTween()
         {
             m_LeanTweenId = -1;
             m_OnCompleteTweening?.Invoke();

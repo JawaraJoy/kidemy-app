@@ -87,7 +87,7 @@ namespace EduGame
             return choiceItem;
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             foreach (Transform child in m_AnswerContainer)
                 child.transform.parent = m_ChoicesContainer.transform;

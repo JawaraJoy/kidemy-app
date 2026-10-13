@@ -24,16 +24,17 @@ namespace EduGame
         [SerializeField] [FormerlySerializedAs("correct")] protected GameObject m_Correct;
         [SerializeField] [FormerlySerializedAs("wrong")] protected GameObject m_Wrong;
 
-        public QuestUtilLabel ItemData { get; private set; }
+        private QuestUtilLabel m_ItemData;
+        public QuestUtilLabel ItemData => m_ItemData;
         public QuestDragNDropZone OriginalZone => m_OriginalParent;
 
         protected override void Awake()
         {
             base.Awake();
 
-            RegisterZone();
+            RegisterZoneInternal();
 
-            Reset();
+            ResetInternal();
 
             if(m_Image)
                 m_ImageRect = m_Image.transform.GetComponent<RectTransform>();
@@ -94,7 +95,7 @@ namespace EduGame
 
         public virtual void SetItem(QuestUtilLabel item)
         {
-            ItemData = item;
+            m_ItemData = item;
 
             if(!string.IsNullOrEmpty(item.Text))
             {
@@ -136,7 +137,7 @@ namespace EduGame
             }   
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             if(m_Correct)
                 m_Correct.SetActive(false);
@@ -145,7 +146,12 @@ namespace EduGame
                 m_Wrong.SetActive(false);
         }
 
-        public virtual void RegisterZone()
+        public void RegisterZone()
+        {
+            RegisterZoneInternal();
+        }
+
+        protected virtual void RegisterZoneInternal()
         {
             m_OriginalParent = transform.parent.GetComponent<QuestDragNDropZone>();
         }

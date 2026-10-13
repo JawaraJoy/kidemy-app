@@ -6,15 +6,23 @@ namespace EduGame
     [Serializable]
     public class QuestUtilGameObject : MonoBehaviour
     {
-        public RectTransform Rect { get; private set; }
-        public int Id { get; set; }
+        private RectTransform m_Rect;
+        private int m_Id;
+
+        public RectTransform Rect => m_Rect;
+        public int Id => m_Id;
 
         protected virtual void Awake()
         {
-            Rect = GetComponent<RectTransform>();
+            m_Rect = GetComponent<RectTransform>();
         }
 
-        public virtual void Enable()
+        public void SetId(int value)
+        {
+            m_Id = value;
+        }
+
+        protected virtual void Enable()
         {
             gameObject.SetActive(true);
         }

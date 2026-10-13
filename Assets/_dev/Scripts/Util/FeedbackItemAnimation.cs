@@ -22,7 +22,7 @@ namespace EduGame
             base.Play(transform);
         }
 
-        public override void ExecPlay()
+        protected override void ExecPlayInternal()
         {
             if(m_SelectedAnimator)
             {

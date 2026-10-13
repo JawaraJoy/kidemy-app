@@ -28,9 +28,9 @@ namespace EduGame
             base.Awake();        
         }
 
-        public override void Init()
+        protected override void InitInternal()
         {
-            base.Init();
+            base.InitInternal();
 
             m_Rb = GetComponent<Rigidbody2D>();
 
@@ -84,6 +84,11 @@ namespace EduGame
         
         public void OnBeat(bool success = true)
         {
+            OnBeatInternal(success);
+        }
+
+        private void OnBeatInternal(bool success)
+        {
             m_IsDone = true;
             StopAllCoroutines();
 
@@ -105,11 +110,11 @@ namespace EduGame
             {
                 m_Quest.OnAnswered(false);
 
-                OnBeat(false);
+                OnBeatInternal(false);
             }
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             m_IsPlaying = false;
             m_IsDone = false;

@@ -127,25 +127,28 @@ namespace EduGame
         private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
         private string m_GameURL = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
         private HandTutorial m_HandTutorial;
+        private Canvas m_Canvas;
+        private Color m_ColorTheme;
+        private static GameManager s_Instance;
 
-        public Canvas Canvas { get; private set; }
+        public Canvas Canvas => m_Canvas;
         public AudioSource AudioSource => m_AudioSource;
         public float ResultTime => m_RecordedTime;
-        public Color ColorTheme { get; private set; }
+        public Color ColorTheme => m_ColorTheme;
         public APIManager API => m_ApiManager;
         public AssetManager Asset => m_AssetManager;
 
-        public static GameManager Instance { get; private set; }
+        public static GameManager Instance => s_Instance;
         public ChallengeConfig ChallengeConfig => m_ChallengeConfig;
 
         void Awake()
         {
-            Canvas = GetComponentInParent<Canvas>();
+            m_Canvas = GetComponentInParent<Canvas>();
 
             m_HandTutorial = GetComponentInChildren<HandTutorial>();
 
             if (!Instance)
-                Instance = this;
+                s_Instance = this;
 
             if (!Canvas)
                 Debug.LogError("Canvas is not found");
@@ -298,7 +301,7 @@ namespace EduGame
             JS_OnVoiceDownloadComplete();
 #endif
 
-            Play();
+            PlayInternal();
         }
 
         void StopTimer()
@@ -361,7 +364,12 @@ namespace EduGame
                 animator.runtimeAnimatorController = controller;
         }
 
-        public virtual void SetNPCDialog(string dialog)
+        public void SetNPCDialog(string dialog)
+        {
+            SetNPCDialogInternal(dialog);
+        }
+
+        protected virtual void SetNPCDialogInternal(string dialog)
         {
             if (m_NpcDialog)
             {
@@ -380,7 +388,7 @@ namespace EduGame
             template.transform.localPosition = Vector3.zero;
             template.transform.localScale = Vector3.one;
 
-            ColorTheme = template.Color;
+            m_ColorTheme = template.Color;
 
             return template;
         }
@@ -433,16 +441,31 @@ namespace EduGame
         }
         public void PlaySoundQuest()
         {
+            PlaySoundQuestInternal();
+        }
+
+        private void PlaySoundQuestInternal()
+        {
             m_Quests[m_CurrentIndex].PlaySoundQuest();
         }
 
         public void Play()
         {
+            PlayInternal();
+        }
+
+        private void PlayInternal()
+        {
             m_CurrentIndex = -1;
-            Next();
+            NextInternal();
         }
 
         public void Next()
+        {
+            NextInternal();
+        }
+
+        private void NextInternal()
         {
             int nextIndex = m_CurrentIndex + 1;
 
@@ -458,7 +481,7 @@ namespace EduGame
 
                 m_CurrentIndex = nextIndex;
 
-                ResetQuest();
+                ResetQuestInternal();
             }
         }
         public void SetRightAsnwer(int set)
@@ -475,7 +498,7 @@ namespace EduGame
         private IEnumerator WaitToPlaySoundQuest()
         {
             yield return new WaitForSeconds(2f);
-            PlaySoundQuest();
+            PlaySoundQuestInternal();
         }
         private void OnQuestEndInvoke()
         {
@@ -507,24 +530,39 @@ namespace EduGame
                 m_Result[m_CurrentIndex] = new ResultItem { stars = star, time = Mathf.RoundToInt(m_RecordedTime) };
             }
                 
-            ShowResult(star);
+            ShowResultInternal(star);
         }
 
-        public virtual void Reset()
+        public void Reset()
         {
-            CloseResult();
+            ResetInternal();
+        }
+
+        protected virtual void ResetInternal()
+        {
+            CloseResultInternal();
             StopTimer();
             StartTimer();
         }
 
-        public virtual void ResetQuest()
+        public void ResetQuest()
         {
-            Reset();
+            ResetQuestInternal();
+        }
+
+        protected virtual void ResetQuestInternal()
+        {
+            ResetInternal();
 
             m_Quests[m_CurrentIndex].Reset();
         }
 
-        public virtual void ShowResult(int star)
+        public void ShowResult(int star)
+        {
+            ShowResultInternal(star);
+        }
+
+        protected virtual void ShowResultInternal(int star)
         {
             if (m_ReactionPanel)
             {
@@ -570,7 +608,7 @@ namespace EduGame
                         m_CorrectFeedback.Play(m_Npc ? m_Npc : transform);
 
                     if (m_NpcDialog)
-                        SetNPCDialog("Yaaay! Amazing!");
+                        SetNPCDialogInternal("Yaaay! Amazing!");
 
                     m_CorrectTitle.gameObject.SetActive(true);
                     m_CorrectNote.gameObject.SetActive(true);
@@ -593,7 +631,7 @@ namespace EduGame
                         m_WrongFeedback.Play(m_Npc ? m_Npc : transform);
 
                     if (m_NpcDialog)
-                        SetNPCDialog("Oh no!");
+                        SetNPCDialogInternal("Oh no!");
 
                     m_WrongTitle.gameObject.SetActive(true);
                     m_WrongNote.gameObject.SetActive(true);
@@ -617,7 +655,7 @@ namespace EduGame
             if (IsLastQuestInternal())
             {
                 m_ButtonNext.gameObject.SetActive(false);
-                SendResult();
+                SendResultInternal();
             }
             else
                 m_ButtonNext.gameObject.SetActive(true);
@@ -643,7 +681,12 @@ namespace EduGame
             }
         }
 
-        public virtual void SendResult()
+        public void SendResult()
+        {
+            SendResultInternal();
+        }
+
+        protected virtual void SendResultInternal()
         {
             Result compiledResult = new Result
             {
@@ -658,7 +701,12 @@ namespace EduGame
         }
 
 
-        public virtual void CloseResult()
+        public void CloseResult()
+        {
+            CloseResultInternal();
+        }
+
+        protected virtual void CloseResultInternal()
         {
             if (m_PopResult)
                 m_PopResult.gameObject.SetActive(false);
@@ -686,10 +734,20 @@ namespace EduGame
 
         public void ShowTutorial(RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Click)
         {
-            ShowTutorial(m_NpcDialog.rectTransform, endPos, mode);
+            ShowTutorialInternal(endPos, mode);
+        }
+
+        private void ShowTutorialInternal(RectTransform endPos, HandTutorial.TutorialMode mode)
+        {
+            ShowTutorialInternal(m_NpcDialog.rectTransform, endPos, mode);
         }
 
         public void ShowTutorial(RectTransform startPos, RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Click)
+        {
+            ShowTutorialInternal(startPos, endPos, mode);
+        }
+
+        private void ShowTutorialInternal(RectTransform startPos, RectTransform endPos, HandTutorial.TutorialMode mode)
         {
             if (m_HandTutorial && m_CurrentIndex == 0)
             {

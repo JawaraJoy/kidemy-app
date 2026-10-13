@@ -17,11 +17,16 @@ namespace EduGame
 
         public void ToggleCursor(Color tintColor)
         {
-            if (m_IsCustomCursorActive) ResetToDefault();
-            else SetToCustom(tintColor);
+            if (m_IsCustomCursorActive) ResetToDefaultInternal();
+            else SetToCustomInternal(tintColor);
         }
 
         public void SetToCustom(Color tintColor)
+        {
+            SetToCustomInternal(tintColor);
+        }
+
+        private void SetToCustomInternal(Color tintColor)
         {
             if (m_BaseCursorTexture == null) return;
 
@@ -58,6 +63,11 @@ namespace EduGame
 
         public void ResetToDefault()
         {
+            ResetToDefaultInternal();
+        }
+
+        private void ResetToDefaultInternal()
+        {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             m_IsCustomCursorActive = false;
             ClearTintedTexture();
@@ -74,7 +84,7 @@ namespace EduGame
 
         private void OnDisable()
         {
-            ResetToDefault();
+            ResetToDefaultInternal();
         }
     }
 }

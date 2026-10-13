@@ -5,9 +5,13 @@ namespace EduGame
 {
     public abstract class QuestComponent : MonoBehaviour
     {
-        public RectTransform Rect { get; private set; }
-        public Button Button { get; private set; }
-        public Image Image { get; private set; }
+        private RectTransform m_CachedRect;
+        private Button m_CachedButton;
+        private Image m_CachedImage;
+
+        public RectTransform Rect => m_CachedRect;
+        public Button Button => m_CachedButton;
+        public Image Image => m_CachedImage;
 
         protected Quest m_Quest;
 
@@ -15,16 +19,21 @@ namespace EduGame
 
         protected virtual void Awake()
         {
-            Init();
+            InitInternal();
         }
 
-        public virtual void Init()
+        public void Init()
+        {
+            InitInternal();
+        }
+
+        protected virtual void InitInternal()
         {
             if(!m_IsInit)
             {
-                Rect = GetComponent<RectTransform>();
-                Button = GetComponentInChildren<Button>();
-                Image = GetComponent<Image>();
+                m_CachedRect = GetComponent<RectTransform>();
+                m_CachedButton = GetComponentInChildren<Button>();
+                m_CachedImage = GetComponent<Image>();
 
                 m_IsInit = true;   
             }
@@ -40,12 +49,22 @@ namespace EduGame
             
         }
 
-        public virtual void Disable()
+        public void Disable()
+        {
+            DisableInternal();
+        }
+
+        protected virtual void DisableInternal()
         {
             
         }
 
-        public virtual void Reset()
+        public void Reset()
+        {
+            ResetInternal();
+        }
+
+        protected virtual void ResetInternal()
         {
             
         }

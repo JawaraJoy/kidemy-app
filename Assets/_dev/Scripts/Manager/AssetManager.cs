@@ -30,7 +30,8 @@ namespace EduGame
         [DllImport("__Internal")]
         private static extern void JS_OnVoiceDownloadComplete();
 
-        public static AssetManager Instance { get; private set; }
+        private static AssetManager s_Instance;
+        public static AssetManager Instance => s_Instance;
 
         [Header("Debug Settings")]
         [Tooltip("Check this in the Inspector to force API downloads and overwrite existing files.")]
@@ -47,7 +48,7 @@ namespace EduGame
                 Destroy(gameObject);
                 return;
             }
-            Instance = this;
+            s_Instance = this;
         }
 
         /// <summary>

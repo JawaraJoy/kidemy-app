@@ -59,7 +59,7 @@ namespace EduGame
                 }
             }
                 
-            Reset();
+            ResetInternal();
         }
 
         QuestMatchingCard InstantiateCard(QuestMatchingCard prefab)
@@ -103,7 +103,7 @@ namespace EduGame
                 m_OpenedCard = card;
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             m_UnansweredCorrect = m_DataQuestMatching.Matches.Length/2;
 

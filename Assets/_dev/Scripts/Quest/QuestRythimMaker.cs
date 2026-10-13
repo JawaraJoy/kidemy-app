@@ -21,7 +21,8 @@ namespace EduGame
         private int m_UnansweredNote = 0;
         private int m_RemainingNote = 0;
 
-        public static AudioSource AudioSource { get; private set; }
+        private static AudioSource s_AudioSource;
+        public static AudioSource AudioSource => s_AudioSource;
 
         protected override void Start()
         {
@@ -29,10 +30,10 @@ namespace EduGame
             
             m_DataRythimMaker = m_Data as SO_QuestRythimMaker;
 
-            AudioSource = GetComponent<AudioSource>();
+            s_AudioSource = GetComponent<AudioSource>();
 
             if(!AudioSource)
-                AudioSource = GameManager.Instance.AudioSource;
+                s_AudioSource = GameManager.Instance.AudioSource;
 
             if(!m_DataRythimMaker)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestRythimMaker");
@@ -116,7 +117,7 @@ namespace EduGame
                 base.OnAnswered(m_UnansweredNote < Mathf.CeilToInt(m_Notes.Length / 2), true);
         }
 
-        public override void Submit(int star = 1)
+        protected override void SubmitInternal(int star = 1)
         {
             if(m_UnansweredNote <= 1)
                 star = 3;
@@ -126,7 +127,7 @@ namespace EduGame
             GameManager.Instance.Submit(star);
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             if(m_DataRythimMaker != null)
             {
@@ -144,7 +145,7 @@ namespace EduGame
 
             Invoke("StartPlay", 2);
 
-            base.Reset();
+            base.ResetInternal();
         }
 
         public override void Enabled()

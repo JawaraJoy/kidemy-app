@@ -18,15 +18,25 @@ namespace EduGame
         
         public void RequestVoice(string text, string voiceId = "", Action<string> onSuccess = null, Action<string> onFailure = null)
         {
+            RequestVoiceInternal(text, voiceId, onSuccess, onFailure);
+        }
+
+        private void RequestVoiceInternal(string text, string voiceId, Action<string> onSuccess, Action<string> onFailure)
+        {
             VoiceRequest request = new VoiceRequest() {
                 text = text,
                 voice_id = voiceId
             };
             
-            RequestVoice(request, onSuccess, onFailure);
+            RequestVoiceInternal(request, onSuccess, onFailure);
         }
 
         public void RequestVoice(VoiceRequest request, Action<string> onSuccess = null, Action<string> onFailure = null)
+        {
+            RequestVoiceInternal(request, onSuccess, onFailure);
+        }
+
+        private void RequestVoiceInternal(VoiceRequest request, Action<string> onSuccess, Action<string> onFailure)
         {
             if (string.IsNullOrEmpty(request.voice_id))
                 request.voice_id = frogVoiceID;
@@ -110,7 +120,7 @@ namespace EduGame
             }
         }
 
-        public void RequestData(string url, string jsonString, Action<string> onSuccess, Action<string> onFailure = null, bool auth = false)
+        private void RequestData(string url, string jsonString, Action<string> onSuccess, Action<string> onFailure = null, bool auth = false)
         {
             StartCoroutine(RequestDataCo(url, jsonString, onSuccess, onFailure, auth));
         }

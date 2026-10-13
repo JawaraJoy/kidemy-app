@@ -9,7 +9,8 @@ namespace EduGame
         [SerializeField] [FormerlySerializedAs("buttonOver")] private Feedback m_ButtonOver;
         [SerializeField] [FormerlySerializedAs("buttonExit")] private Feedback m_ButtonExit;
 
-        public static FeedbackManager Instance { get; private set; }
+        private static FeedbackManager s_Instance;
+        public static FeedbackManager Instance => s_Instance;
         public Feedback ButtonClick => m_ButtonClick;
         public Feedback ButtonOver => m_ButtonOver;
         public Feedback ButtonExit => m_ButtonExit;
@@ -17,7 +18,7 @@ namespace EduGame
         void Awake()
         {
             if(!Instance)
-                Instance = this;
+                s_Instance = this;
         }
     }
 }

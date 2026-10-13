@@ -7,16 +7,17 @@ namespace EduGame
     [Serializable]
     public class QuestUtilButton : QuestUtilGameObject
     {
-        public Button Button { get; private set; }
+        private Button m_Button;
+        public Button Button => m_Button;
 
         protected override void Awake()
         {
             base.Awake();
 
-            Button = GetComponent<Button>();
+            m_Button = GetComponent<Button>();
         }
 
-        public override void Enable()
+        protected override void Enable()
         {
             Button.interactable = true;
         }

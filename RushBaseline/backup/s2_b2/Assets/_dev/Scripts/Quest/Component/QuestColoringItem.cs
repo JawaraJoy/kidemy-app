@@ -1,0 +1,51 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace EduGame
+{
+    public class QuestColoringItem : QuestComponent
+    {
+        private Image m_Image;
+        private Texture2D m_Texture;
+        private Color m_DefaultColor;
+
+        private QuestColoring m_QuestColoring;
+        private QuestUtilRegionalClick m_RegionalClick;
+
+        protected override void Awake()
+        {
+            m_Image = GetComponent<Image>();
+            m_QuestColoring = GetComponentInParent<QuestColoring>();
+            m_RegionalClick = GetComponent<QuestUtilRegionalClick>();
+
+            if (!m_Image)
+                Debug.LogError("Image Component not found");
+            
+            if(!m_QuestColoring)
+                Debug.LogError("Quest Component not found");
+
+            if(!m_RegionalClick)
+                Debug.LogError("QuestUtilRegionalEvent Component not found");
+
+            m_DefaultColor = m_Image.color;
+
+            m_QuestColoring.AddColor(m_DefaultColor);
+
+            m_RegionalClick.AddClickEvent(ChangeColor);
+
+            ChangeColor(Color.white);    
+        }
+
+        public void ChangeColor(Color color)
+        {
+            if(m_Image.color != color)
+                m_Image.color = new Color(color.r, color.g, color.b, 1);
+        }
+
+        public void ChangeColor()
+        {
+            if(m_QuestColoring.SelectedColor.a > 0.5f)
+                ChangeColor(m_QuestColoring.SelectedColor);
+        }
+    }
+}

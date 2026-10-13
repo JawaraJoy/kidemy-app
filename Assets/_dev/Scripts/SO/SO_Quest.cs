@@ -39,7 +39,12 @@ namespace EduGame
         public int Score => m_Score;
         public float TresholdTime => m_TresholdTime;
 
-        public virtual string GetVoiceId()
+        public string GetVoiceId()
+        {
+            return GetVoiceIdInternal();
+        }
+
+        protected virtual string GetVoiceIdInternal()
         {
             return m_Character != null ? m_Character.CharacterId : string.Empty;
         }
@@ -54,7 +59,7 @@ namespace EduGame
                     {
                         id = name + "_question",
                         text = m_Question.Text,
-                        voice_id = GetVoiceId()
+                        voice_id = GetVoiceIdInternal()
                     }
                 };
             }

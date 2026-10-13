@@ -83,11 +83,11 @@ namespace EduGame
             }
 
             if (m_Canvas && m_ItemsContainer)
-                Reset();
+                ResetInternal();
 
             SetDialog();
 
-            base.Reset();
+            base.ResetInternal();
         }
 
         QuestDragNDropItem InstantiateItem(QuestDragNDropItem item)
@@ -99,7 +99,7 @@ namespace EduGame
             return item;
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             foreach (var shape in m_Canvas.Items)
             {

@@ -43,7 +43,7 @@ namespace EduGame
 
                 foreach (var group in m_Groups)
                 {
-                    group.Id = groupIndex;
+                    group.SetId(groupIndex);
                     m_Slots[group.Id] = group;
                     
                     if(!m_CompiledMap.ContainsKey(group.Id))
@@ -53,7 +53,7 @@ namespace EduGame
 
                     foreach (var item in group.Labels)
                     {
-                        item.Id = totalItem + itemIndex;
+                        item.SetId(totalItem + itemIndex);
                     
                         items.Add(item);
                         m_CompiledIndex.Add(item.Id, group.Id);

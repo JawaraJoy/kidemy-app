@@ -16,7 +16,8 @@ namespace EduGame
         [SerializeField] [FormerlySerializedAs("orderLabel")] private TMP_Text m_OrderLabel;
         [SerializeField] [FormerlySerializedAs("step")] private Transform m_Step;
         
-        public QuestUtilLabelGroup GroupData { get; private set; }
+        private QuestUtilLabelGroup m_GroupData;
+        public QuestUtilLabelGroup GroupData => m_GroupData;
 
         public QuestDragNDropZone DropZone => m_DropZone;
 
@@ -46,7 +47,7 @@ namespace EduGame
 
         public virtual void SetSlot(QuestUtilLabelGroup item, int order = 0, bool isLast = false)
         {
-            GroupData = item;
+            m_GroupData = item;
 
             if(!string.IsNullOrEmpty(item.Label.Text))
             {

@@ -16,7 +16,7 @@ namespace EduGame
             }
         }
 
-        public override void ExecPlay()
+        protected override void ExecPlayInternal()
         {
             if(m_Particles)
                 m_Particles.Play();

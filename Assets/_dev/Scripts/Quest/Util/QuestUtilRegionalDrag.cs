@@ -18,8 +18,11 @@ namespace EduGame
         private RectTransform m_RectTransform;
         private Canvas m_ParentCanvas;
 
-        public bool Dragged { get; private set; }
-        public PointerEventData PointerData { get; private set; }
+        private bool m_Dragged;
+        private PointerEventData m_PointerData;
+
+        public bool Dragged => m_Dragged;
+        public PointerEventData PointerData => m_PointerData;
 
         void Start()
         {
@@ -42,19 +45,19 @@ namespace EduGame
 
         void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
         {
-            Dragged = true;
-            PointerData = eventData;
+            m_Dragged = true;
+            m_PointerData = eventData;
         }
 
         void IDragHandler.OnDrag(PointerEventData eventData)
         {
-            Dragged = true;
-            PointerData = eventData;
+            m_Dragged = true;
+            m_PointerData = eventData;
         }
 
         void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
         {
-            Dragged = false;
+            m_Dragged = false;
         }
     }
 }

@@ -66,18 +66,28 @@ namespace EduGame
         {
             m_Data = questData;
         }
-        public virtual void Setup()
+        public void Setup()
+        {
+            SetupInternal();
+        }
+
+        protected virtual void SetupInternal()
         {
             if(GameManager.Instance)
                 m_AudioSource = GameManager.Instance.AudioSource;
         }
 
-        public virtual void PlayQuestionVoice()
+        public void PlayQuestionVoice()
+        {
+            PlayQuestionVoiceInternal();
+        }
+
+        protected virtual void PlayQuestionVoiceInternal()
         {
             Debug.Log(m_Data.Question.Audio);
 
             if(m_Data.Question.Audio)
-                PlayQuestionVoice(m_Data.Question.Audio);
+                PlayQuestionVoiceInternal(m_Data.Question.Audio);
         }
         public virtual void PlaySoundQuest()
         {
@@ -109,7 +119,12 @@ namespace EduGame
             }
         }
         
-        public virtual void PlayQuestionVoice(AudioClip audioClip)
+        public void PlayQuestionVoice(AudioClip audioClip)
+        {
+            PlayQuestionVoiceInternal(audioClip);
+        }
+
+        protected virtual void PlayQuestionVoiceInternal(AudioClip audioClip)
         {
             //StartCoroutine(PlayingQuestionVoice(audioClip));
             if (m_AudioSource)
@@ -145,10 +160,15 @@ namespace EduGame
             m_IsAnswered = true;
 
             if(submit)
-                Submit(result ? 3 : 1);
+                SubmitInternal(result ? 3 : 1);
         }
 
-        public virtual void Submit(int star = 1)
+        public void Submit(int star = 1)
+        {
+            SubmitInternal(star);
+        }
+
+        protected virtual void SubmitInternal(int star = 1)
         {
             GameManager.Instance.Submit(star);
         }
@@ -158,7 +178,12 @@ namespace EduGame
             GameManager.Instance.ShowTutorial(null);
         }
 
-        public virtual void Reset()
+        public void Reset()
+        {
+            ResetInternal();
+        }
+
+        protected virtual void ResetInternal()
         {
             //PlayQuestionVoice();
 

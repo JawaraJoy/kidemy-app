@@ -24,11 +24,11 @@ namespace EduGame
                 m_NarrativeText.text = m_DataMultipleChoiceNarrative.Narrative;
         }
 
-        public override void Setup()
+        protected override void SetupInternal()
         {
             m_DataMultipleChoiceNarrative = m_Data as SO_QuestMultipleChoiceNarrative;
 
-            base.Setup();
+            base.SetupInternal();
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace EduGame
         /// </summary>
         public override VoiceRequest[] GetVoiceRequests()
         {
-            Setup();
+            SetupInternal();
 
             VoiceRequest[] voiceRequests = base.GetVoiceRequests();
 

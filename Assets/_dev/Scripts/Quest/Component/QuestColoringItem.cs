@@ -36,13 +36,13 @@ namespace EduGame
             ChangeColor(Color.white);    
         }
 
-        public void ChangeColor(Color color)
+        private void ChangeColor(Color color)
         {
             if(m_Image.color != color)
                 m_Image.color = new Color(color.r, color.g, color.b, 1);
         }
 
-        public void ChangeColor()
+        private void ChangeColor()
         {
             if(m_QuestColoring.SelectedColor.a > 0.5f)
                 ChangeColor(m_QuestColoring.SelectedColor);

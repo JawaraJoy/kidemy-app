@@ -44,7 +44,12 @@ namespace EduGame
             m_Matching.Open(this);
         }
 
-        public virtual void Close()
+        public void Close()
+        {
+            CloseInternal();
+        }
+
+        protected virtual void CloseInternal()
         {
             if(!m_IsComplete)
             {
@@ -54,7 +59,7 @@ namespace EduGame
             }
         }
 
-        public override void Disable()
+        protected override void DisableInternal()
         {
             Button.interactable = false;
         }
@@ -73,13 +78,13 @@ namespace EduGame
             Image.enabled = false;
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             m_IsComplete = false;
 
             Button.interactable = true;
 
-            Close();
+            CloseInternal();
         }
     }
 }

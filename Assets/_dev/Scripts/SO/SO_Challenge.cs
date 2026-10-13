@@ -13,7 +13,12 @@ namespace EduGame
         private int m_Difficulty = 1;
 
         public QuestItem[] Quests => m_Quests;
-        public int Difficulty { get => m_Difficulty; set { m_Difficulty = value; } }
+        public int Difficulty => m_Difficulty;
+
+        public void SetDifficulty(int value)
+        {
+            m_Difficulty = value;
+        }
     }
 
     [Serializable]

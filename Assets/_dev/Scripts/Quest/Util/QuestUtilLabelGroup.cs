@@ -12,10 +12,16 @@ namespace EduGame
         [SerializeField] [FormerlySerializedAs("limit")] private int m_Limit = -1;
         [SerializeField] [FormerlySerializedAs("labels")] private QuestUtilLabel[] m_Labels;
 
-        public int Id { get; set; }
+        private int m_Id;
+        public int Id => m_Id;
         public QuestUtilLabel Label => m_Label;
         public int Limit => m_Limit;
         public QuestUtilLabel[] Labels => m_Labels;
+
+        public void SetId(int value)
+        {
+            m_Id = value;
+        }
         
     }
 

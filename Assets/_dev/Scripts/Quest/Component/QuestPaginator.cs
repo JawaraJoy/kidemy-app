@@ -74,7 +74,7 @@ namespace EduGame
                 m_NextButton.interactable = true;
         }
 
-        public void ChangePage(int index)
+        private void ChangePage(int index)
         {
             int i = 0;
 

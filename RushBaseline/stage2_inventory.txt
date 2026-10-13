@@ -1,185 +1,127 @@
 # PROPERTIES with get AND set (rule #2)
 # file:line	type	name	propType	vis	setVis	auto	static	init	externalWrites(approx by name)
-Assets/_dev/Scripts/Global.cs:7	Global	FALSE_VECTOR	Vector2	public	private	True	True	False	0
-Assets/_dev/Scripts/Manager/AssetManager.cs:33	AssetManager	Instance	AssetManager	public	private	True	True	False	0
-Assets/_dev/Scripts/Manager/FeedbackManager.cs:12	FeedbackManager	Instance	FeedbackManager	public	private	True	True	False	0
-Assets/_dev/Scripts/Manager/GameManager.cs:131	GameManager	Canvas	Canvas	public	private	True	False	False	0
-Assets/_dev/Scripts/Manager/GameManager.cs:134	GameManager	ColorTheme	Color	public	private	True	False	False	0
-Assets/_dev/Scripts/Manager/GameManager.cs:138	GameManager	Instance	GameManager	public	private	True	True	False	0
-Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:8	QuestComponent	Rect	RectTransform	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:9	QuestComponent	Button	Button	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:10	QuestComponent	Image	Image	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:27	QuestDragNDropItem	ItemData	QuestUtilLabel	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs:19	QuestDragNDropSlot	GroupData	QuestUtilLabelGroup	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:18	QuestMultipleChoicesItem	IsRightAnswer	bool	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:17	QuestWordBuilderItem	IsRightAnswer	bool	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:24	QuestRythimMaker	AudioSource	AudioSource	public	private	True	True	False	0
-Assets/_dev/Scripts/Quest/Util/QuestUtilButton.cs:10	QuestUtilButton	Button	Button	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:9	QuestUtilGameObject	Rect	RectTransform	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:10	QuestUtilGameObject	Id	int	public	same	True	False	False	2
-Assets/_dev/Scripts/Quest/Util/QuestUtilLabel.cs:30	QuestUtilLabel	Id	int	public	same	True	False	False	2
-Assets/_dev/Scripts/Quest/Util/QuestUtilLabelGroup.cs:15	QuestUtilLabelGroup	Id	int	public	same	True	False	False	2
-Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalDrag.cs:21	QuestUtilRegionalDrag	Dragged	bool	public	private	True	False	False	0
-Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalDrag.cs:22	QuestUtilRegionalDrag	PointerData	PointerEventData	public	private	True	False	False	0
-Assets/_dev/Scripts/SO/SO_Challenge.cs:16	SO_Challenge	Difficulty	int	public	same	False	False	False	0
 
 # PUBLIC METHODS (rule #3)
 # file:line	type	name	flags	overloads	localCalls	groupRefs	externalCalls(approx by name)
-Assets/_dev/Scripts/Manager/APIManager.cs:19	APIManager	RequestVoice		2	1	0	2
-Assets/_dev/Scripts/Manager/APIManager.cs:29	APIManager	RequestVoice		2	1	0	2
-Assets/_dev/Scripts/Manager/APIManager.cs:39	APIManager	SendData		1	0	0	1
-Assets/_dev/Scripts/Manager/APIManager.cs:79	APIManager	FetchData		1	0	0	0
-Assets/_dev/Scripts/Manager/APIManager.cs:113	APIManager	RequestData		1	1	0	0
-Assets/_dev/Scripts/Manager/AssetManager.cs:56	AssetManager	AddVoiceRequest		1	0	0	0
-Assets/_dev/Scripts/Manager/AssetManager.cs:71	AssetManager	DownloadMissingVoices		1	0	0	0
-Assets/_dev/Scripts/Manager/AssetManager.cs:243	AssetManager	GetCachedAudio		1	0	0	0
-Assets/_dev/Scripts/Manager/GameManager.cs:356	GameManager	SetNPC	virtual	1	0	0	2
-Assets/_dev/Scripts/Manager/GameManager.cs:364	GameManager	SetNPCDialog	virtual	1	2	0	5
-Assets/_dev/Scripts/Manager/GameManager.cs:410	GameManager	InitQuest	virtual	1	0	0	1
-Assets/_dev/Scripts/Manager/GameManager.cs:420	GameManager	PlayQuestionVoice		1	0	0	4
-Assets/_dev/Scripts/Manager/GameManager.cs:434	GameManager	PlaySoundQuest		1	1	0	2
-Assets/_dev/Scripts/Manager/GameManager.cs:439	GameManager	Play		1	1	0	18
-Assets/_dev/Scripts/Manager/GameManager.cs:445	GameManager	Next		1	1	0	7
-Assets/_dev/Scripts/Manager/GameManager.cs:464	GameManager	SetRightAsnwer		1	0	0	1
-Assets/_dev/Scripts/Manager/GameManager.cs:489	GameManager	Submit	virtual	1	0	0	5
-Assets/_dev/Scripts/Manager/GameManager.cs:513	GameManager	Reset	virtual	1	1	0	11
-Assets/_dev/Scripts/Manager/GameManager.cs:520	GameManager	ResetQuest	virtual	1	1	0	0
-Assets/_dev/Scripts/Manager/GameManager.cs:527	GameManager	ShowResult	virtual	1	1	0	1
-Assets/_dev/Scripts/Manager/GameManager.cs:631	GameManager	IsLastQuest		1	0	0	1
-Assets/_dev/Scripts/Manager/GameManager.cs:636	GameManager	GoHome	virtual	1	0	0	2
-Assets/_dev/Scripts/Manager/GameManager.cs:646	GameManager	SendResult	virtual	1	1	0	0
-Assets/_dev/Scripts/Manager/GameManager.cs:661	GameManager	CloseResult	virtual	1	1	0	0
-Assets/_dev/Scripts/Manager/GameManager.cs:678	GameManager	ReloadScene	virtual	1	0	0	1
-Assets/_dev/Scripts/Manager/GameManager.cs:682	GameManager	PlaySFX		1	0	0	0
-Assets/_dev/Scripts/Manager/GameManager.cs:687	GameManager	ShowTutorial		2	1	0	2
-Assets/_dev/Scripts/Manager/GameManager.cs:692	GameManager	ShowTutorial		2	1	0	2
-Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:102	QuestColoringField	Reset		1	0	0	11
-Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs:39	QuestColoringItem	ChangeColor		2	2	1	0
-Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs:45	QuestColoringItem	ChangeColor		2	2	1	0
+Assets/_dev/Scripts/Manager/APIManager.cs:19	APIManager	RequestVoice		2	0	0	2
+Assets/_dev/Scripts/Manager/APIManager.cs:34	APIManager	RequestVoice		2	0	0	2
+Assets/_dev/Scripts/Manager/APIManager.cs:49	APIManager	SendData		1	0	0	1
+Assets/_dev/Scripts/Manager/APIManager.cs:89	APIManager	FetchData		1	0	0	0
+Assets/_dev/Scripts/Manager/AssetManager.cs:57	AssetManager	AddVoiceRequest		1	0	0	0
+Assets/_dev/Scripts/Manager/AssetManager.cs:72	AssetManager	DownloadMissingVoices		1	0	0	0
+Assets/_dev/Scripts/Manager/AssetManager.cs:244	AssetManager	GetCachedAudio		1	0	0	0
+Assets/_dev/Scripts/Manager/GameManager.cs:359	GameManager	SetNPC	virtual	1	0	0	2
+Assets/_dev/Scripts/Manager/GameManager.cs:367	GameManager	SetNPCDialog		1	0	0	5
+Assets/_dev/Scripts/Manager/GameManager.cs:418	GameManager	InitQuest	virtual	1	0	0	1
+Assets/_dev/Scripts/Manager/GameManager.cs:428	GameManager	PlayQuestionVoice		1	0	0	3
+Assets/_dev/Scripts/Manager/GameManager.cs:442	GameManager	PlaySoundQuest		1	0	0	2
+Assets/_dev/Scripts/Manager/GameManager.cs:452	GameManager	Play		1	0	0	18
+Assets/_dev/Scripts/Manager/GameManager.cs:463	GameManager	Next		1	0	0	7
+Assets/_dev/Scripts/Manager/GameManager.cs:487	GameManager	SetRightAsnwer		1	0	0	1
+Assets/_dev/Scripts/Manager/GameManager.cs:512	GameManager	Submit	virtual	1	0	0	4
+Assets/_dev/Scripts/Manager/GameManager.cs:536	GameManager	Reset		1	0	0	6
+Assets/_dev/Scripts/Manager/GameManager.cs:548	GameManager	ResetQuest		1	0	0	0
+Assets/_dev/Scripts/Manager/GameManager.cs:560	GameManager	ShowResult		1	0	0	1
+Assets/_dev/Scripts/Manager/GameManager.cs:669	GameManager	IsLastQuest		1	0	0	1
+Assets/_dev/Scripts/Manager/GameManager.cs:674	GameManager	GoHome	virtual	1	0	0	2
+Assets/_dev/Scripts/Manager/GameManager.cs:684	GameManager	SendResult		1	0	0	0
+Assets/_dev/Scripts/Manager/GameManager.cs:704	GameManager	CloseResult		1	0	0	0
+Assets/_dev/Scripts/Manager/GameManager.cs:726	GameManager	ReloadScene	virtual	1	0	0	1
+Assets/_dev/Scripts/Manager/GameManager.cs:730	GameManager	PlaySFX		1	0	0	0
+Assets/_dev/Scripts/Manager/GameManager.cs:735	GameManager	ShowTutorial		2	0	0	2
+Assets/_dev/Scripts/Manager/GameManager.cs:745	GameManager	ShowTutorial		2	0	0	2
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:102	QuestColoringField	Reset		1	0	0	6
 Assets/_dev/Scripts/Quest/Component/QuestColoringPalette.cs:29	QuestColoringPalette	SetPaletteColor		1	0	0	1
 Assets/_dev/Scripts/Quest/Component/QuestColoringPalette.cs:36	QuestColoringPalette	BindColor		1	0	0	1
-Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:21	QuestComponent	Init	virtual	1	1	0	8
-Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:38	QuestComponent	OnClick	virtual	1	0	0	0
-Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:43	QuestComponent	Disable	virtual	1	0	0	3
-Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:48	QuestComponent	Reset	virtual	1	0	0	11
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:54	QuestDragNDropItem	OnBeginDrag	iface	1	0	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:72	QuestDragNDropItem	OnDrag	iface	1	0	0	1
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:82	QuestDragNDropItem	OnEndDrag	iface	1	0	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:90	QuestDragNDropItem	OnPointerDown	iface	1	0	0	1
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:95	QuestDragNDropItem	SetItem	virtual	1	0	0	1
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:139	QuestDragNDropItem	Reset	override	1	1	0	11
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:148	QuestDragNDropItem	RegisterZone	virtual	1	1	0	2
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs:47	QuestDragNDropSlot	SetSlot	virtual	1	0	0	1
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:43	QuestDragNDropZone	AddItem		1	1	0	1
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:88	QuestDragNDropZone	RegisterItems		1	3	0	4
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:130	QuestDragNDropZone	OnDrop	iface	1	0	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:160	QuestDragNDropZone	ReInsertItem		1	0	0	3
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:186	QuestDragNDropZone	Dynamic		1	2	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:204	QuestDragNDropZone	Normal		1	3	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:224	QuestDragNDropZone	Sticky		1	3	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:244	QuestDragNDropZone	FillZone		1	2	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:255	QuestDragNDropZone	Scaled		1	8	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:269	QuestDragNDropZone	FollowParent		1	2	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:281	QuestDragNDropZone	OnAccept		1	1	0	0
-Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:290	QuestDragNDropZone	OnReject		1	1	0	0
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:25	QuestComponent	Init		1	0	0	6
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:47	QuestComponent	OnClick	virtual	1	0	0	0
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:52	QuestComponent	Disable		1	0	0	3
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs:62	QuestComponent	Reset		1	0	0	6
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:55	QuestDragNDropItem	OnBeginDrag	iface	1	0	0	0
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:73	QuestDragNDropItem	OnDrag	iface	1	0	0	1
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:83	QuestDragNDropItem	OnEndDrag	iface	1	0	0	0
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:91	QuestDragNDropItem	OnPointerDown	iface	1	0	0	1
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:96	QuestDragNDropItem	SetItem	virtual	1	0	0	1
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs:149	QuestDragNDropItem	RegisterZone		1	0	0	2
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs:48	QuestDragNDropSlot	SetSlot	virtual	1	0	0	1
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:43	QuestDragNDropZone	AddItem		1	0	0	1
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:93	QuestDragNDropZone	RegisterItems		1	0	0	4
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:140	QuestDragNDropZone	OnDrop	iface	1	0	0	0
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:170	QuestDragNDropZone	ReInsertItem		1	0	0	3
 Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:33	QuestMatchingCard	SetMatch	virtual	1	0	0	1
 Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:40	QuestMatchingCard	OnClick	override	1	0	0	0
-Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:47	QuestMatchingCard	Close	virtual	1	1	0	1
-Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:57	QuestMatchingCard	Disable	override	1	0	0	3
-Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:62	QuestMatchingCard	Complete	virtual	1	0	0	2
-Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:71	QuestMatchingCard	Hide	virtual	1	0	0	0
-Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:76	QuestMatchingCard	Reset	override	1	0	0	11
-Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:38	QuestMultipleChoicesItem	Init	override	1	0	0	8
-Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:52	QuestMultipleChoicesItem	SetChoice	virtual	1	0	0	3
-Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:119	QuestMultipleChoicesItem	OnClick	override	1	0	0	0
-Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:129	QuestMultipleChoicesItem	Disable	override	1	1	0	3
-Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:134	QuestMultipleChoicesItem	Reset	override	1	1	0	11
+Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:47	QuestMatchingCard	Close		1	0	0	1
+Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:67	QuestMatchingCard	Complete	virtual	1	0	0	2
+Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:76	QuestMatchingCard	Hide	virtual	1	0	0	0
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:53	QuestMultipleChoicesItem	SetChoice	virtual	1	0	0	3
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:120	QuestMultipleChoicesItem	OnClick	override	1	0	0	0
 Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItemWithScale.cs:9	QuestMultipleChoicesItemWithScale	SetChoice	override	1	0	0	3
 Assets/_dev/Scripts/Quest/Component/QuestPaginator.cs:39	QuestPaginator	Next		1	0	0	7
 Assets/_dev/Scripts/Quest/Component/QuestPaginator.cs:58	QuestPaginator	Previous		1	0	0	0
-Assets/_dev/Scripts/Quest/Component/QuestPaginator.cs:77	QuestPaginator	ChangePage		1	2	0	0
-Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:31	QuestRythimNote	Init	override	1	0	0	8
-Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:46	QuestRythimNote	Setup		1	0	0	5
+Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:46	QuestRythimNote	Setup		1	0	0	2
 Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:53	QuestRythimNote	Play		1	0	0	18
-Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:85	QuestRythimNote	OnBeat		1	1	0	1
-Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:112	QuestRythimNote	Reset	override	1	0	0	11
-Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:34	QuestWordBuilderItem	SetChoice	virtual	1	0	0	3
-Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:72	QuestWordBuilderItem	OnClick	override	1	0	0	0
-Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:77	QuestWordBuilderItem	Disable	override	1	0	0	3
-Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:82	QuestWordBuilderItem	Reset	override	1	1	0	11
+Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:85	QuestRythimNote	OnBeat		1	0	0	1
+Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:35	QuestWordBuilderItem	SetChoice	virtual	1	0	0	3
+Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:73	QuestWordBuilderItem	OnClick	override	1	0	0	0
 Assets/_dev/Scripts/Quest/Quest.cs:57	Quest	SetBackground		1	0	0	1
 Assets/_dev/Scripts/Quest/Quest.cs:61	Quest	SetChallenge		1	0	0	1
 Assets/_dev/Scripts/Quest/Quest.cs:65	Quest	SetData		1	0	0	2
-Assets/_dev/Scripts/Quest/Quest.cs:69	Quest	Setup	virtual	1	0	0	5
-Assets/_dev/Scripts/Quest/Quest.cs:75	Quest	PlayQuestionVoice	virtual	2	1	0	4
-Assets/_dev/Scripts/Quest/Quest.cs:82	Quest	PlaySoundQuest	virtual	1	0	0	2
-Assets/_dev/Scripts/Quest/Quest.cs:112	Quest	PlayQuestionVoice	virtual	2	1	0	4
-Assets/_dev/Scripts/Quest/Quest.cs:143	Quest	OnAnswered	virtual	1	0	0	5
-Assets/_dev/Scripts/Quest/Quest.cs:151	Quest	Submit	virtual	1	1	0	5
-Assets/_dev/Scripts/Quest/Quest.cs:156	Quest	ShowTutorial	virtual	1	0	0	2
-Assets/_dev/Scripts/Quest/Quest.cs:161	Quest	Reset	virtual	1	0	0	11
-Assets/_dev/Scripts/Quest/Quest.cs:168	Quest	Disabled	virtual	1	0	0	0
-Assets/_dev/Scripts/Quest/Quest.cs:173	Quest	Enabled	virtual	1	0	0	6
-Assets/_dev/Scripts/Quest/Quest.cs:183	Quest	GetVoiceId	virtual	1	0	0	1
-Assets/_dev/Scripts/Quest/Quest.cs:192	Quest	GetVoiceRequests	virtual	1	0	0	6
-Assets/_dev/Scripts/Quest/Quest.cs:200	Quest	HasVoiceClip	virtual	1	0	0	4
-Assets/_dev/Scripts/Quest/Quest.cs:208	Quest	AssignVoiceClip	virtual	1	0	0	4
+Assets/_dev/Scripts/Quest/Quest.cs:69	Quest	Setup		1	0	0	2
+Assets/_dev/Scripts/Quest/Quest.cs:80	Quest	PlayQuestionVoice		2	0	0	3
+Assets/_dev/Scripts/Quest/Quest.cs:92	Quest	PlaySoundQuest	virtual	1	0	0	2
+Assets/_dev/Scripts/Quest/Quest.cs:122	Quest	PlayQuestionVoice		2	0	0	3
+Assets/_dev/Scripts/Quest/Quest.cs:158	Quest	OnAnswered	virtual	1	0	0	5
+Assets/_dev/Scripts/Quest/Quest.cs:166	Quest	Submit		1	0	0	4
+Assets/_dev/Scripts/Quest/Quest.cs:176	Quest	ShowTutorial	virtual	1	0	0	2
+Assets/_dev/Scripts/Quest/Quest.cs:181	Quest	Reset		1	0	0	6
+Assets/_dev/Scripts/Quest/Quest.cs:193	Quest	Disabled	virtual	1	0	0	0
+Assets/_dev/Scripts/Quest/Quest.cs:198	Quest	Enabled	virtual	1	0	0	6
+Assets/_dev/Scripts/Quest/Quest.cs:208	Quest	GetVoiceId	virtual	1	0	0	1
+Assets/_dev/Scripts/Quest/Quest.cs:217	Quest	GetVoiceRequests	virtual	1	0	0	6
+Assets/_dev/Scripts/Quest/Quest.cs:225	Quest	HasVoiceClip	virtual	1	0	0	4
+Assets/_dev/Scripts/Quest/Quest.cs:233	Quest	AssignVoiceClip	virtual	1	0	0	4
 Assets/_dev/Scripts/Quest/QuestColoring.cs:85	QuestColoring	AddColor		1	0	0	1
 Assets/_dev/Scripts/Quest/QuestColoring.cs:91	QuestColoring	BindColor		1	0	0	1
-Assets/_dev/Scripts/Quest/QuestColoring.cs:154	QuestColoring	Submit	override	1	0	0	5
-Assets/_dev/Scripts/Quest/QuestColoring.cs:177	QuestColoring	Reset	override	1	0	0	11
-Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:116	QuestDragNDrop	Setup	override	1	1	0	5
 Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:167	QuestDragNDrop	Enabled	override	1	0	0	6
 Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:174	QuestDragNDrop	OnAnswered	override	1	0	0	5
-Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:191	QuestDragNDrop	Submit	override	1	1	0	5
-Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:248	QuestDragNDrop	Reset	override	1	0	0	11
 Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:279	QuestDragNDrop	GetVoiceRequests	override	1	0	0	6
 Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:319	QuestDragNDrop	HasVoiceClip	override	1	0	0	4
 Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:337	QuestDragNDrop	AssignVoiceClip	override	1	0	0	4
 Assets/_dev/Scripts/Quest/QuestMatching.cs:76	QuestMatching	Open	virtual	1	0	0	1
-Assets/_dev/Scripts/Quest/QuestMatching.cs:106	QuestMatching	Reset	override	1	1	0	11
 Assets/_dev/Scripts/Quest/QuestMatching.cs:150	QuestMatching	Enabled	override	1	0	0	6
-Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:185	QuestMultipleChoices	Setup	override	1	1	0	5
-Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:192	QuestMultipleChoices	PlayQuestionVoice	override	1	0	0	4
 Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:235	QuestMultipleChoices	OnAnswered	override	1	0	0	5
-Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:255	QuestMultipleChoices	Submit	override	1	1	0	5
-Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:265	QuestMultipleChoices	Reset	override	1	0	0	11
 Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:290	QuestMultipleChoices	Enabled	override	1	0	0	6
 Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:326	QuestMultipleChoices	GetVoiceRequests	override	1	0	0	6
 Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:337	QuestMultipleChoices	HasVoiceClip	override	1	0	0	4
 Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:345	QuestMultipleChoices	AssignVoiceClip	override	1	0	0	4
 Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:351	QuestMultipleChoices	ShowTutorial	override	1	0	0	2
-Assets/_dev/Scripts/Quest/QuestMultipleChoicesNarrative.cs:27	QuestMultipleChoicesNarrative	Setup	override	1	1	0	5
 Assets/_dev/Scripts/Quest/QuestMultipleChoicesNarrative.cs:38	QuestMultipleChoicesNarrative	GetVoiceRequests	override	1	0	0	6
-Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:108	QuestRythimMaker	OnAnswered	override	1	0	0	5
-Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:119	QuestRythimMaker	Submit	override	1	0	0	5
-Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:129	QuestRythimMaker	Reset	override	1	0	0	11
-Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:150	QuestRythimMaker	Enabled	override	1	0	0	6
-Assets/_dev/Scripts/Quest/QuestShapeIt.cs:102	QuestShapeIt	Reset	override	1	1	0	11
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:109	QuestRythimMaker	OnAnswered	override	1	0	0	5
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:151	QuestRythimMaker	Enabled	override	1	0	0	6
 Assets/_dev/Scripts/Quest/QuestShapeIt.cs:137	QuestShapeIt	Enabled	override	1	0	0	6
 Assets/_dev/Scripts/Quest/QuestShapeIt.cs:144	QuestShapeIt	Verify	override	1	0	0	1
 Assets/_dev/Scripts/Quest/QuestShapeIt.cs:156	QuestShapeIt	OnAnswered	override	1	0	0	5
 Assets/_dev/Scripts/Quest/QuestShapeIt.cs:164	QuestShapeIt	Rotate	virtual	1	0	0	0
-Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:90	QuestWordBuilder	Reset	override	1	0	0	11
 Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:106	QuestWordBuilder	Enabled	override	1	0	0	6
 Assets/_dev/Scripts/Quest/QuestZonePairing.cs:6	QuestZonePairing	Verify	virtual	1	0	0	1
 Assets/_dev/Scripts/Quest/Util/QuestColoringCursor.cs:18	QuestColoringCursor	ToggleCursor		1	0	0	0
-Assets/_dev/Scripts/Quest/Util/QuestColoringCursor.cs:24	QuestColoringCursor	SetToCustom		1	1	0	1
-Assets/_dev/Scripts/Quest/Util/QuestColoringCursor.cs:59	QuestColoringCursor	ResetToDefault		1	2	0	1
-Assets/_dev/Scripts/Quest/Util/QuestUtilButton.cs:19	QuestUtilButton	Enable	override	1	0	0	0
-Assets/_dev/Scripts/Quest/Util/QuestUtilButton.cs:24	QuestUtilButton	Disable	override	1	0	0	3
-Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:17	QuestUtilGameObject	Enable	virtual	1	1	0	0
-Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:22	QuestUtilGameObject	Disable	virtual	1	0	0	3
-Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:27	QuestUtilGameObject	Reset	virtual	1	0	0	11
-Assets/_dev/Scripts/Quest/Util/QuestUtilLabel.cs:35	QuestUtilLabel	SetAudio		1	0	0	3
-Assets/_dev/Scripts/Quest/Util/QuestUtilLabelMatching.cs:10	QuestUtilLabelMatching	SetId		1	0	0	1
+Assets/_dev/Scripts/Quest/Util/QuestColoringCursor.cs:24	QuestColoringCursor	SetToCustom		1	0	0	1
+Assets/_dev/Scripts/Quest/Util/QuestColoringCursor.cs:64	QuestColoringCursor	ResetToDefault		1	0	0	1
+Assets/_dev/Scripts/Quest/Util/QuestUtilButton.cs:25	QuestUtilButton	Disable	override	1	0	0	3
+Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:20	QuestUtilGameObject	SetId		1	0	0	3
+Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:30	QuestUtilGameObject	Disable	virtual	1	0	0	3
+Assets/_dev/Scripts/Quest/Util/QuestUtilGameObject.cs:35	QuestUtilGameObject	Reset	virtual	1	0	0	6
+Assets/_dev/Scripts/Quest/Util/QuestUtilLabel.cs:36	QuestUtilLabel	SetAudio		1	0	0	3
+Assets/_dev/Scripts/Quest/Util/QuestUtilLabel.cs:41	QuestUtilLabel	SetId		1	0	0	3
+Assets/_dev/Scripts/Quest/Util/QuestUtilLabelGroup.cs:21	QuestUtilLabelGroup	SetId		1	0	0	3
 Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalClick.cs:24	QuestUtilRegionalClick	AddClickEvent		1	0	0	1
 Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalClick.cs:29	QuestUtilRegionalClick	OnPointerClick	iface	1	0	0	0
-Assets/_dev/Scripts/SO/SO_Quest.cs:42	SO_Quest	GetVoiceId	virtual	1	1	0	1
-Assets/_dev/Scripts/SO/SO_Quest.cs:47	SO_Quest	GetVoiceRequests	virtual	1	0	0	6
-Assets/_dev/Scripts/SO/SO_Quest.cs:65	SO_Quest	HasVoiceClip	virtual	1	0	0	4
-Assets/_dev/Scripts/SO/SO_Quest.cs:70	SO_Quest	AssignVoiceClip	virtual	1	0	0	4
-Assets/_dev/Scripts/SO/SO_Quest.cs:75	SO_Quest	HasMultipleImages		1	0	0	1
+Assets/_dev/Scripts/SO/SO_Challenge.cs:18	SO_Challenge	SetDifficulty		1	0	0	0
+Assets/_dev/Scripts/SO/SO_Quest.cs:42	SO_Quest	GetVoiceId		1	0	0	1
+Assets/_dev/Scripts/SO/SO_Quest.cs:52	SO_Quest	GetVoiceRequests	virtual	1	0	0	6
+Assets/_dev/Scripts/SO/SO_Quest.cs:70	SO_Quest	HasVoiceClip	virtual	1	0	0	4
+Assets/_dev/Scripts/SO/SO_Quest.cs:75	SO_Quest	AssignVoiceClip	virtual	1	0	0	4
+Assets/_dev/Scripts/SO/SO_Quest.cs:80	SO_Quest	HasMultipleImages		1	0	0	1
 Assets/_dev/Scripts/SO/SO_QuestMultipleChoice.cs:38	SO_QuestMultipleChoice	GetVoiceRequests	override	1	0	0	6
 Assets/_dev/Scripts/SO/SO_QuestMultipleChoice.cs:61	SO_QuestMultipleChoice	HasVoiceClip	override	1	0	0	4
 Assets/_dev/Scripts/SO/SO_QuestMultipleChoice.cs:69	SO_QuestMultipleChoice	AssignVoiceClip	override	1	0	0	4
@@ -201,12 +143,9 @@ Assets/_dev/Scripts/Util/Editor/UpdateMultipleChoiceToNarrative.cs:11	UpdateMult
 Assets/_dev/Scripts/Util/Feedback.cs:14	Feedback	Play	virtual	1	0	0	18
 Assets/_dev/Scripts/Util/FeedbackItem.cs:11	FeedbackItem	Play	virtual	1	0	0	18
 Assets/_dev/Scripts/Util/FeedbackItem.cs:19	FeedbackItem	Stop	virtual	1	0	0	0
-Assets/_dev/Scripts/Util/FeedbackItem.cs:27	FeedbackItem	ExecPlay	virtual	1	1	0	0
-Assets/_dev/Scripts/Util/FeedbackItem.cs:32	FeedbackItem	ExecStop	virtual	1	1	0	0
+Assets/_dev/Scripts/Util/FeedbackItem.cs:27	FeedbackItem	ExecPlay		1	0	0	0
+Assets/_dev/Scripts/Util/FeedbackItem.cs:37	FeedbackItem	ExecStop		1	0	0	0
 Assets/_dev/Scripts/Util/FeedbackItemAnimation.cs:15	FeedbackItemAnimation	Play	override	1	0	0	18
-Assets/_dev/Scripts/Util/FeedbackItemAnimation.cs:25	FeedbackItemAnimation	ExecPlay	override	1	0	0	0
-Assets/_dev/Scripts/Util/FeedbackItemAudio.cs:15	FeedbackItemAudio	ExecPlay	override	1	0	0	0
-Assets/_dev/Scripts/Util/FeedbackItemParticles.cs:19	FeedbackItemParticle	ExecPlay	override	1	0	0	0
 Assets/_dev/Scripts/Util/Frontend.cs:7	Frontend	Goto		1	0	0	0
 Assets/_dev/Scripts/Util/FullscreenToggle.cs:21	FullscreenToggle	ToggleFullscreen		1	0	0	0
 Assets/_dev/Scripts/Util/HandTutorial.cs:31	HandTutorial	PlayTutorial		1	0	0	1
@@ -241,11 +180,11 @@ Assets/_dev2/Quest/Scripts/AnimationEventCapture.cs:24	AnimationEventCapture	Set
 Assets/_dev2/Quest/Scripts/AnimationHandler.cs:26	AnimationHandler	SetClip		1	0	0	1
 Assets/_dev2/Quest/Scripts/AnimationHandler.cs:86	AnimationHandler	PlayAnimation		1	0	0	1
 Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:43	AnimationStateBehaviourEditor	OnInspectorGUI	override	1	0	0	0
-Assets/_dev2/Quest/Scripts/GameManagerAgent.cs:7	GameManagerAgent	PlayQuestionVoice		1	0	0	4
+Assets/_dev2/Quest/Scripts/GameManagerAgent.cs:7	GameManagerAgent	PlayQuestionVoice		1	0	0	3
 Assets/_dev2/Quest/Scripts/GameManagerAgent.cs:11	GameManagerAgent	PlaySoundQuest		1	0	0	2
 Assets/_dev2/Quest/Scripts/PanelView.cs:16	PanelView	Show		1	0	0	0
 Assets/_dev2/Quest/Scripts/PanelView.cs:20	PanelView	Hide		1	0	0	0
-Assets/_dev2/Quest/Scripts/ReactionPanel.cs:27	ReactionPanel	Init		1	0	0	8
+Assets/_dev2/Quest/Scripts/ReactionPanel.cs:27	ReactionPanel	Init		1	0	0	6
 Assets/_dev2/Quest/Scripts/ReactionPanel.cs:35	ReactionPanel	ShowReaction		1	0	0	5
 Assets/_dev2/Quest/Scripts/ResultContext.cs:18	ResultContext	GetRate		1	0	0	2
 Assets/_dev2/Quest/Scripts/ResultContext.cs:24	ResultContext	GetTotalQuest		1	0	0	1
@@ -262,12 +201,10 @@ Assets/_dev2/Scripts/TweenHandler.cs:72	LoopTweenField	LoopControl		1	0	0	1
 Assets/_dev2/Scripts/TweenHandler.cs:187	TweenField	GetId		1	0	0	1
 Assets/_dev2/Scripts/TweenHandler.cs:188	TweenField	GetGroup		1	0	0	2
 Assets/_dev2/Scripts/TweenHandler.cs:189	TweenField	SetIsReverse		1	0	0	1
-Assets/_dev2/Scripts/TweenHandler.cs:190	TweenField	Init		1	0	0	8
-Assets/_dev2/Scripts/TweenHandler.cs:235	TweenField	OnStartTween		1	1	0	0
-Assets/_dev2/Scripts/TweenHandler.cs:242	TweenField	OnCompleteTween		1	0	1	0
+Assets/_dev2/Scripts/TweenHandler.cs:190	TweenField	Init		1	0	0	6
 Assets/_dev2/Scripts/TweenHandler.cs:250	TweenField	CancelTween		1	0	0	3
 Assets/_dev2/Scripts/TweenHandler.cs:264	TweenField	PlayTween		1	0	0	5
-Assets/_dev2/Scripts/TweenHandler.cs:468	TweenHandlerField	Init		1	0	0	8
+Assets/_dev2/Scripts/TweenHandler.cs:468	TweenHandlerField	Init		1	0	0	6
 Assets/_dev2/Scripts/TweenHandler.cs:481	TweenHandlerField	PlayAllTween		1	0	0	1
 Assets/_dev2/Scripts/TweenHandler.cs:488	TweenHandlerField	PlayTween		1	0	0	5
 Assets/_dev2/Scripts/TweenHandler.cs:501	TweenHandlerField	CancelTween		1	0	0	3

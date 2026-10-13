@@ -15,7 +15,8 @@ namespace EduGame
         [SerializeField] [FormerlySerializedAs("correct")] protected GameObject m_Correct;
         [SerializeField] [FormerlySerializedAs("wrong")] protected GameObject m_Wrong;
         
-        public bool IsRightAnswer { get; private set; } = false;
+        private bool m_IsRightAnswer = false;
+        public bool IsRightAnswer => m_IsRightAnswer;
 
         protected QuestUtilLabelChoice m_Choice;
         protected ButtonEvents m_Events;
@@ -32,12 +33,12 @@ namespace EduGame
             if(!Button)
                 Debug.LogError("Button Component not found");
 
-            Reset();
+            ResetInternal();
         }
 
-        public override void Init()
+        protected override void InitInternal()
         {
-            base.Init();
+            base.InitInternal();
 
             m_Events = GetComponent<ButtonEvents> ();
             
@@ -118,7 +119,7 @@ namespace EduGame
 
         public override void OnClick()
         {
-            Disable();
+            DisableInternal();
 
             if(m_Choice.IsAnswer)
                 m_Quest?.OnAnswered(true);
@@ -126,12 +127,12 @@ namespace EduGame
                 m_Quest?.OnAnswered(false);
         }
 
-        public override void Disable()
+        protected override void DisableInternal()
         {
             Button.interactable = false;
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             Button.interactable = true;
 

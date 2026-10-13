@@ -13,7 +13,7 @@ namespace EduGame
             if(m_Delay > 0)
                 Invoke("ExecPlay", m_Delay);
             else
-                ExecPlay();
+                ExecPlayInternal();
         }
 
         public virtual void Stop(Transform transform)
@@ -21,15 +21,25 @@ namespace EduGame
             if(m_Delay > 0)
                 Invoke("ExecStop", m_Delay);
             else
-                ExecStop();
+                ExecStopInternal();
         }
 
-        public virtual void ExecPlay()
+        public void ExecPlay()
+        {
+            ExecPlayInternal();
+        }
+
+        protected virtual void ExecPlayInternal()
         {
             
         }
 
-        public virtual void ExecStop()
+        public void ExecStop()
+        {
+            ExecStopInternal();
+        }
+
+        protected virtual void ExecStopInternal()
         {
             
         }

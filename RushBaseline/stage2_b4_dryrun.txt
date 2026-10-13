@@ -1,0 +1,141 @@
+DRY RUN OK
+V Assets/_dev/Scripts/Manager/GameManager.cs | GameManager.ResetQuest
+  call   line 479: ResetQuest();   ->  ResetQuestInternal
+  split  line 538: public virtual void ResetQuest()  =>  wrapper + protected virtual ResetQuestInternal
+V Assets/_dev/Scripts/Manager/GameManager.cs | GameManager.ShowResult
+  call   line 528: ShowResult(star);   ->  ShowResultInternal
+  split  line 550: public virtual void ShowResult(int star)  =>  wrapper + protected virtual ShowResultInternal
+V Assets/_dev/Scripts/Manager/GameManager.cs | GameManager.CloseResult
+  call   line 533: CloseResult();   ->  CloseResultInternal
+  split  line 689: public virtual void CloseResult()  =>  wrapper + protected virtual CloseResultInternal
+V Assets/_dev/Scripts/Manager/GameManager.cs | GameManager.Reset
+  call   line 545: Reset();   ->  ResetInternal
+  keep   line 547 (other receiver, stays on the public wrapper): m_Quests[m_CurrentIndex].Reset();
+  split  line 531: public virtual void Reset()  =>  wrapper + protected virtual ResetInternal
+V Assets/_dev/Scripts/Manager/GameManager.cs | GameManager.SetNPCDialog
+  call   line 606: SetNPCDialog("Yaaay! Amazing!");   ->  SetNPCDialogInternal
+  call   line 629: SetNPCDialog("Oh no!");   ->  SetNPCDialogInternal
+  split  line 367: public virtual void SetNPCDialog(string dialog)  =>  wrapper + protected virtual SetNPCDialogInternal
+V Assets/_dev/Scripts/Manager/GameManager.cs | GameManager.SendResult
+  call   line 658: SendResult();   ->  SendResultInternal
+  split  line 684: public virtual void SendResult()  =>  wrapper + protected virtual SendResultInternal
+V Assets/_dev/Scripts/Quest/Component/QuestComponent.cs | QuestComponent.Init
+  call   line 22: Init();   ->  InitInternal
+  split  line 25: public virtual void Init()  =>  wrapper + protected virtual InitInternal
+V Assets/_dev/Scripts/Quest/Component/QuestComponent.cs | QuestComponent.Reset
+  split  line 57: public virtual void Reset()  =>  wrapper + protected virtual ResetInternal
+V Assets/_dev/Scripts/Quest/Component/QuestComponent.cs | QuestComponent.Disable
+  split  line 52: public virtual void Disable()  =>  wrapper + protected virtual DisableInternal
+V Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs | QuestDragNDropItem.RegisterZone
+  call   line 35: RegisterZone();   ->  RegisterZoneInternal
+  split  line 149: public virtual void RegisterZone()  =>  wrapper + protected virtual RegisterZoneInternal
+O Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs | QuestDragNDropItem.Reset
+  call   line 37: Reset();   ->  ResetInternal
+  move   line 140: public override void Reset()  =>  protected override void ResetInternal(...)
+V Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs | QuestMatchingCard.Close
+  call   line 82: Close();   ->  CloseInternal
+  split  line 47: public virtual void Close()  =>  wrapper + protected virtual CloseInternal
+O Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs | QuestMatchingCard.Reset
+  move   line 81: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs | QuestMatchingCard.Disable
+  move   line 62: public override void Disable()  =>  protected override void DisableInternal(...)
+V Assets/_dev/Scripts/Quest/Quest.cs | Quest.PlayQuestionVoice
+  call   line 80: PlayQuestionVoice(m_Data.Question.Audio);   ->  PlayQuestionVoiceInternal
+  split  line 112: public virtual void PlayQuestionVoice(AudioClip audioClip)  =>  wrapper + protected virtual PlayQuestionVoiceInternal
+  split  line 75: public virtual void PlayQuestionVoice()  =>  wrapper + protected virtual PlayQuestionVoiceInternal
+V Assets/_dev/Scripts/Quest/Quest.cs | Quest.Submit
+  call   line 158: Submit(result ? 3 : 1);   ->  SubmitInternal
+  keep   line 163 (other receiver, stays on the public wrapper): GameManager.Instance.Submit(star);
+  split  line 161: public virtual void Submit(int star = 1)  =>  wrapper + protected virtual SubmitInternal
+V Assets/_dev/Scripts/Quest/Quest.cs | Quest.Setup
+  split  line 69: public virtual void Setup()  =>  wrapper + protected virtual SetupInternal
+V Assets/_dev/Scripts/Quest/Quest.cs | Quest.Reset
+  split  line 181: public virtual void Reset()  =>  wrapper + protected virtual ResetInternal
+V Assets/_dev/Scripts/SO/SO_Quest.cs | SO_Quest.GetVoiceId
+  call   line 57: voice_id = GetVoiceId()   ->  GetVoiceIdInternal
+  split  line 42: public virtual string GetVoiceId()  =>  wrapper + protected virtual GetVoiceIdInternal
+V Assets/_dev/Scripts/Util/FeedbackItem.cs | FeedbackItem.ExecPlay
+  call   line 16: ExecPlay();   ->  ExecPlayInternal
+  split  line 27: public virtual void ExecPlay()  =>  wrapper + protected virtual ExecPlayInternal
+V Assets/_dev/Scripts/Util/FeedbackItem.cs | FeedbackItem.ExecStop
+  call   line 24: ExecStop();   ->  ExecStopInternal
+  split  line 37: public virtual void ExecStop()  =>  wrapper + protected virtual ExecStopInternal
+O Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs | QuestMultipleChoicesItem.Init
+  call   line 41: base.Init();   ->  InitInternal
+  move   line 39: public override void Init()  =>  protected override void InitInternal(...)
+O Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs | QuestMultipleChoicesItem.Reset
+  call   line 36: Reset();   ->  ResetInternal
+  move   line 135: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs | QuestMultipleChoicesItem.Disable
+  call   line 122: Disable();   ->  DisableInternal
+  move   line 130: public override void Disable()  =>  protected override void DisableInternal(...)
+O Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs | QuestRythimNote.Init
+  call   line 33: base.Init();   ->  InitInternal
+  move   line 31: public override void Init()  =>  protected override void InitInternal(...)
+O Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs | QuestRythimNote.Reset
+  move   line 117: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs | QuestWordBuilderItem.Reset
+  call   line 32: Reset();   ->  ResetInternal
+  move   line 83: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs | QuestWordBuilderItem.Disable
+  move   line 78: public override void Disable()  =>  protected override void DisableInternal(...)
+O Assets/_dev/Scripts/Quest/QuestColoring.cs | QuestColoring.Submit
+  call   line 174: base.Submit(star);   ->  SubmitInternal
+  move   line 154: public override void Submit(int star = 1)  =>  protected override void SubmitInternal(...)
+O Assets/_dev/Scripts/Quest/QuestColoring.cs | QuestColoring.Reset
+  keep   line 182 (other receiver, stays on the public wrapper): field.Reset();
+  call   line 185: base.Reset();   ->  ResetInternal
+  move   line 177: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/QuestDragNDrop.cs | QuestDragNDrop.Setup
+  call   line 120: base.Setup();   ->  SetupInternal
+  call   line 281: Setup();   ->  SetupInternal
+  move   line 116: public override void Setup()  =>  protected override void SetupInternal(...)
+O Assets/_dev/Scripts/Quest/QuestDragNDrop.cs | QuestDragNDrop.Submit
+  call   line 187: Submit();   ->  SubmitInternal
+  keep   line 200 (other receiver, stays on the public wrapper): GameManager.Instance.Submit(star);
+  move   line 191: public override void Submit(int star = 1)  =>  protected override void SubmitInternal(...)
+O Assets/_dev/Scripts/Quest/QuestDragNDrop.cs | QuestDragNDrop.Reset
+  call   line 265: base.Reset();   ->  ResetInternal
+  move   line 248: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/QuestMatching.cs | QuestMatching.Reset
+  call   line 62: Reset();   ->  ResetInternal
+  keep   line 111 (other receiver, stays on the public wrapper): card.Reset();
+  move   line 106: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs | QuestMultipleChoices.Setup
+  call   line 189: base.Setup();   ->  SetupInternal
+  call   line 328: Setup();   ->  SetupInternal
+  move   line 185: public override void Setup()  =>  protected override void SetupInternal(...)
+O Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs | QuestMultipleChoices.PlayQuestionVoice
+  call   line 194: base.PlayQuestionVoice();   ->  PlayQuestionVoiceInternal
+  move   line 192: public override void PlayQuestionVoice()  =>  protected override void PlayQuestionVoiceInternal(...)
+O Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs | QuestMultipleChoices.Submit
+  call   line 251: Submit();   ->  SubmitInternal
+  keep   line 262 (other receiver, stays on the public wrapper): GameManager.Instance.Submit(star);
+  move   line 255: public override void Submit(int star = 1)  =>  protected override void SubmitInternal(...)
+O Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs | QuestMultipleChoices.Reset
+  keep   line 272 (other receiver, stays on the public wrapper): choice.Reset();
+  call   line 277: base.Reset();   ->  ResetInternal
+  move   line 265: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/QuestMultipleChoicesNarrative.cs | QuestMultipleChoicesNarrative.Setup
+  call   line 31: base.Setup();   ->  SetupInternal
+  call   line 40: Setup();   ->  SetupInternal
+  move   line 27: public override void Setup()  =>  protected override void SetupInternal(...)
+O Assets/_dev/Scripts/Quest/QuestRythimMaker.cs | QuestRythimMaker.Submit
+  keep   line 127 (other receiver, stays on the public wrapper): GameManager.Instance.Submit(star);
+  move   line 120: public override void Submit(int star = 1)  =>  protected override void SubmitInternal(...)
+O Assets/_dev/Scripts/Quest/QuestRythimMaker.cs | QuestRythimMaker.Reset
+  keep   line 141 (other receiver, stays on the public wrapper): choice.Reset();
+  call   line 148: base.Reset();   ->  ResetInternal
+  move   line 130: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/QuestShapeIt.cs | QuestShapeIt.Reset
+  call   line 86: Reset();   ->  ResetInternal
+  call   line 90: base.Reset();   ->  ResetInternal
+  move   line 102: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Quest/QuestWordBuilder.cs | QuestWordBuilder.Reset
+  move   line 90: public override void Reset()  =>  protected override void ResetInternal(...)
+O Assets/_dev/Scripts/Util/FeedbackItemAnimation.cs | FeedbackItemAnimation.ExecPlay
+  move   line 25: public override void ExecPlay()  =>  protected override void ExecPlayInternal(...)
+O Assets/_dev/Scripts/Util/FeedbackItemAudio.cs | FeedbackItemAudio.ExecPlay
+  move   line 15: public override void ExecPlay()  =>  protected override void ExecPlayInternal(...)
+O Assets/_dev/Scripts/Util/FeedbackItemParticles.cs | FeedbackItemParticle.ExecPlay
+  move   line 19: public override void ExecPlay()  =>  protected override void ExecPlayInternal(...)

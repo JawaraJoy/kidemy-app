@@ -151,7 +151,7 @@ namespace EduGame
             }
         }
 
-        public override void Submit(int star = 1)
+        protected override void SubmitInternal(int star = 1)
         {
             if (m_ColoringCursor)
                 m_ColoringCursor.ResetToDefault();
@@ -171,10 +171,10 @@ namespace EduGame
             else if (appraisal >= 0.5)
                 star = 2;
 
-            base.Submit(star);
+            base.SubmitInternal(star);
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             if (m_Fields != null && m_Fields.Length > 0)
             {
@@ -182,7 +182,7 @@ namespace EduGame
                     field.Reset();
             }
 
-            base.Reset();
+            base.ResetInternal();
         }
 
         void SetDialog()

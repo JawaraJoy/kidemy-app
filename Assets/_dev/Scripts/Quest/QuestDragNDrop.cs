@@ -113,11 +113,11 @@ namespace EduGame
             SetDialog();
         }
 
-        public override void Setup()
+        protected override void SetupInternal()
         {
             m_DataDragNDrop = m_Data as SO_QuestDragNDrop;
 
-            base.Setup();
+            base.SetupInternal();
         }
 
         QuestDragNDropItem InstantiateItem(QuestDragNDropItem prefab)
@@ -184,11 +184,11 @@ namespace EduGame
                 }
 
                 if (answereds >= m_DataDragNDrop.Items.Length || answereds >= m_TotalLimit)
-                    Submit();
+                    SubmitInternal();
             }
         }
 
-        public override void Submit(int star = 1)
+        protected override void SubmitInternal(int star = 1)
         {
             int totalAnswers = m_DataDragNDrop.AnswerInOrder ? Sort() : Check();
 
@@ -245,7 +245,7 @@ namespace EduGame
             return totalAnswers;
         }
 
-        public override void Reset()
+        protected override void ResetInternal()
         {
             if(m_Items != null)
             {
@@ -262,7 +262,7 @@ namespace EduGame
             
             SetDialog();
 
-            base.Reset();
+            base.ResetInternal();
         }
 
         void SetDialog()
@@ -278,7 +278,7 @@ namespace EduGame
         /// </summary>
         public override VoiceRequest[] GetVoiceRequests()
         {
-            Setup();
+            SetupInternal();
 
             if (m_DataDragNDrop != null && m_DataDragNDrop.Groups.Length > 0)
             {

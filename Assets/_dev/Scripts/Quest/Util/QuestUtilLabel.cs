@@ -27,7 +27,8 @@ namespace EduGame
         public AudioClip Audio => m_Audio;
         public Color Color => new Color(m_Color.r, m_Color.g, m_Color.b, 1);
         public Color ImageColor => m_ImageColor;
-        public int Id { get; set; }
+        private int m_Id;
+        public int Id => m_Id;
         public bool UseTextColor => m_UseTextColor;
         public Color TextColor => m_TextColor;
         public DialogueConfig FormatedText => m_FormatedText;
@@ -35,6 +36,11 @@ namespace EduGame
         public void SetAudio(AudioClip clip)
         {
             m_Audio = clip;
+        }
+
+        public void SetId(int value)
+        {
+            m_Id = value;
         }
 
         
