@@ -1,0 +1,5 @@
+RENAME PLAN: targets=0 (auto=0, manual=0), serialized=0, protected=0, files to edit=0, edits=0, shadow-skipped=0, inside #if=0, unparsable files=0, warnings=0
+
+=== MANUAL ===
+
+=== AUTOMATIC ===

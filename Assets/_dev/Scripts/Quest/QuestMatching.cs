@@ -1,60 +1,61 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestMatching : Quest
     {
         [Header("Data")]
-        [SerializeField] private TMP_Text questionText;
-        [SerializeField] private RectTransform cardsContainer;
-        [SerializeField] private RectTransform success;
-        [SerializeField] private RectTransform failed;
+        [SerializeField] [FormerlySerializedAs("questionText")] private TMP_Text m_QuestionText;
+        [SerializeField] [FormerlySerializedAs("cardsContainer")] private RectTransform m_CardsContainer;
+        [SerializeField] [FormerlySerializedAs("success")] private RectTransform m_Success;
+        [SerializeField] [FormerlySerializedAs("failed")] private RectTransform m_Failed;
 
         [Header("Prefab")]
-        [SerializeField] private QuestMatchingCard cardPrefab;
+        [SerializeField] [FormerlySerializedAs("cardPrefab")] private QuestMatchingCard m_CardPrefab;
 
         [Header("Rules")]
-        [SerializeField] private float peekDuration = 1f;
+        [SerializeField] [FormerlySerializedAs("peekDuration")] private float m_PeekDuration = 1f;
 
-        public float PeekDuration => peekDuration;
+        public float PeekDuration => m_PeekDuration;
 
-        private SO_QuestMatching dataQuestMatching;
-        private QuestMatchingCard[] cards;
-        private int unansweredCorrect = 0;
-        private QuestMatchingCard openedCard = null;
+        private SO_QuestMatching m_DataQuestMatching;
+        private QuestMatchingCard[] m_Cards;
+        private int m_UnansweredCorrect = 0;
+        private QuestMatchingCard m_OpenedCard = null;
 
         protected override void Start()
         {
             base.Start();
 
-            dataQuestMatching = data as SO_QuestMatching;
+            m_DataQuestMatching = m_Data as SO_QuestMatching;
 
-            if(!dataQuestMatching)
+            if(!m_DataQuestMatching)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMatching");
 
-            unansweredCorrect = dataQuestMatching.Matches.Length/2;
+            m_UnansweredCorrect = m_DataQuestMatching.Matches.Length/2;
 
-            if (questionText)
+            if (m_QuestionText)
             {
-                if (!string.IsNullOrEmpty(dataQuestMatching.Text))
-                    questionText.text = dataQuestMatching.Text;
+                if (!string.IsNullOrEmpty(m_DataQuestMatching.Text))
+                    m_QuestionText.text = m_DataQuestMatching.Text;
                 else
                 {
-                    questionText.gameObject.SetActive(false);
-                    questionText.transform.parent.gameObject.SetActive(false);
+                    m_QuestionText.gameObject.SetActive(false);
+                    m_QuestionText.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (cardsContainer && cardPrefab)
+            if (m_CardsContainer && m_CardPrefab)
             {
-                cards = new QuestMatchingCard[dataQuestMatching.Matches.Length];
+                m_Cards = new QuestMatchingCard[m_DataQuestMatching.Matches.Length];
 
-                for (int i = 0; i < dataQuestMatching.Matches.Length; i++)
+                for (int i = 0; i < m_DataQuestMatching.Matches.Length; i++)
                 {
-                    cards[i] = InstantiateCard(cards[0]);
-                    cards[i].SetMatch(dataQuestMatching.Matches[i]);
+                    m_Cards[i] = InstantiateCard(m_Cards[0]);
+                    m_Cards[i].SetMatch(m_DataQuestMatching.Matches[i]);
                 }
             }
                 
@@ -63,9 +64,9 @@ namespace EduGame
 
         QuestMatchingCard InstantiateCard(QuestMatchingCard prefab)
         {
-            QuestMatchingCard card = Instantiate(prefab ? prefab : cardPrefab);
+            QuestMatchingCard card = Instantiate(prefab ? prefab : m_CardPrefab);
 
-            card.transform.SetParent(cardsContainer);
+            card.transform.SetParent(m_CardsContainer);
             card.transform.localPosition = Vector3.zero;
             card.Rect.localScale = Vector3.one;
 
@@ -74,76 +75,76 @@ namespace EduGame
 
         public virtual void Open(QuestMatchingCard card)
         {
-            if(openedCard)
+            if(m_OpenedCard)
             {
-                bool res = openedCard.Match.Id == card.Match.Id;
+                bool res = m_OpenedCard.Match.Id == card.Match.Id;
 
                 if(res)
                 {
                     card.Complete();
-                    openedCard.Complete();
+                    m_OpenedCard.Complete();
 
-                    unansweredCorrect--;
+                    m_UnansweredCorrect--;
                     
-                    if(unansweredCorrect <= 0)
-                        Invoke("Success", peekDuration);
+                    if(m_UnansweredCorrect <= 0)
+                        Invoke("Success", m_PeekDuration);
                 }
                 else
                 {
-                    foreach (var c in cards)
+                    foreach (var c in m_Cards)
                         c.Disable();
 
-                    Invoke("CloaseAllCard", peekDuration);
+                    Invoke("CloaseAllCard", m_PeekDuration);
                 }
 
-                openedCard = null;    
+                m_OpenedCard = null;    
             }
             else
-                openedCard = card;
+                m_OpenedCard = card;
         }
 
         public override void Reset()
         {
-            unansweredCorrect = dataQuestMatching.Matches.Length/2;
+            m_UnansweredCorrect = m_DataQuestMatching.Matches.Length/2;
 
-            foreach (var card in cards)
+            foreach (var card in m_Cards)
                 card.Reset();
             
-            if(success)
-                success.gameObject.SetActive(false);
+            if(m_Success)
+                m_Success.gameObject.SetActive(false);
 
-            if(failed)
-                failed.gameObject.SetActive(false);
+            if(m_Failed)
+                m_Failed.gameObject.SetActive(false);
         }
 
         void CloaseAllCard()
         {
-            foreach (var card in cards)
+            foreach (var card in m_Cards)
                 card.Close();
         }
 
         void RecalculateChoiceContainer()
         {
-            if (cards[0].Rect.sizeDelta.x > 0 && cards[0].Rect.sizeDelta.y > 0)
+            if (m_Cards[0].Rect.sizeDelta.x > 0 && m_Cards[0].Rect.sizeDelta.y > 0)
             {
-                GridLayoutGroup gridLayoutGroup = cardsContainer.GetComponent<GridLayoutGroup>();
+                GridLayoutGroup gridLayoutGroup = m_CardsContainer.GetComponent<GridLayoutGroup>();
                 if (gridLayoutGroup)
-                    gridLayoutGroup.cellSize = cards[0].Rect.sizeDelta;
+                    gridLayoutGroup.cellSize = m_Cards[0].Rect.sizeDelta;
             }
         }
 
         void Success()
         {
-            if(success)
-                success.gameObject.SetActive(true);
+            if(m_Success)
+                m_Success.gameObject.SetActive(true);
             
             base.OnAnswered(true);
         }
 
         void Failed()
         {
-            if(failed)
-                failed.gameObject.SetActive(true);
+            if(m_Failed)
+                m_Failed.gameObject.SetActive(true);
         }
 
         public override void Enabled()

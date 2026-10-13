@@ -12,7 +12,7 @@ namespace EduGame
 {
     public static class VoiceAPI
     {
-        private const string API_URL =
+        private const string c_ApiUrl =
             "https://kimee-ai-stg.linkit360.ai/v1/api/audio/generate";
 
         public const string DefaultVoiceId =
@@ -90,7 +90,7 @@ namespace EduGame
 
             using UnityWebRequest request =
                 new UnityWebRequest(
-                    API_URL,
+                    c_ApiUrl,
                     UnityWebRequest.kHttpVerbPOST
                 );
 

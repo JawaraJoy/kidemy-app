@@ -1,20 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class FullscreenToggle : MonoBehaviour
     {
-        [SerializeField] private Sprite toggleSprite;
+        [SerializeField] [FormerlySerializedAs("toggleSprite")] private Sprite m_ToggleSprite;
 
-        [SerializeField] private Image icon;
+        [SerializeField] [FormerlySerializedAs("icon")] private Image m_Icon;
 
-        private Sprite originalSprite;
+        private Sprite m_OriginalSprite;
 
         void Awake()
         {
-            if(icon)
-                originalSprite = icon.sprite;
+            if(m_Icon)
+                m_OriginalSprite = m_Icon.sprite;
         }
 
         public void ToggleFullscreen()
@@ -22,8 +23,8 @@ namespace EduGame
             // Alternates between fullscreen and windowed mode
             Screen.fullScreen = !Screen.fullScreen;
 
-            if(toggleSprite && originalSprite)
-                icon.sprite = Screen.fullScreen? toggleSprite : originalSprite;
+            if(m_ToggleSprite && m_OriginalSprite)
+                m_Icon.sprite = Screen.fullScreen? m_ToggleSprite : m_OriginalSprite;
         }
     }
 }

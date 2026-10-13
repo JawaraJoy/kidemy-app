@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -9,16 +10,16 @@ namespace EduGame
         [Header("Data")]
         
         [Header("Components")]
-        [SerializeField] private Image questionImage;
-        [SerializeField] private AudioPlayer questionAudio;
-        [SerializeField] private TMP_Text questionText;
-        [SerializeField] private RectTransform notesContainer;
-        [SerializeField] private Collider2D beatButton;
+        [SerializeField] [FormerlySerializedAs("questionImage")] private Image m_QuestionImage;
+        [SerializeField] [FormerlySerializedAs("questionAudio")] private AudioPlayer m_QuestionAudio;
+        [SerializeField] [FormerlySerializedAs("questionText")] private TMP_Text m_QuestionText;
+        [SerializeField] [FormerlySerializedAs("notesContainer")] private RectTransform m_NotesContainer;
+        [SerializeField] [FormerlySerializedAs("beatButton")] private Collider2D m_BeatButton;
 
-        private SO_QuestRythimMaker dataRythimMaker;
-        private QuestRythimNote[] notes;
-        private int unansweredNote = 0;
-        private int remainingNote = 0;
+        private SO_QuestRythimMaker m_DataRythimMaker;
+        private QuestRythimNote[] m_Notes;
+        private int m_UnansweredNote = 0;
+        private int m_RemainingNote = 0;
 
         public static AudioSource AudioSource { get; private set; }
 
@@ -26,59 +27,59 @@ namespace EduGame
         {
             base.Start();
             
-            dataRythimMaker = data as SO_QuestRythimMaker;
+            m_DataRythimMaker = m_Data as SO_QuestRythimMaker;
 
             AudioSource = GetComponent<AudioSource>();
 
             if(!AudioSource)
                 AudioSource = GameManager.Instance.AudioSource;
 
-            if(!dataRythimMaker)
+            if(!m_DataRythimMaker)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestRythimMaker");
 
-            unansweredNote = dataRythimMaker.Items.Length;
-            remainingNote = unansweredNote;
+            m_UnansweredNote = m_DataRythimMaker.Items.Length;
+            m_RemainingNote = m_UnansweredNote;
             
 
-            if (questionImage)
+            if (m_QuestionImage)
             {
-                if (dataRythimMaker.Question.Image)
-                    questionImage.sprite = dataRythimMaker.Question.Image;
+                if (m_DataRythimMaker.Question.Image)
+                    m_QuestionImage.sprite = m_DataRythimMaker.Question.Image;
                 else
                 {
-                    questionImage.gameObject.SetActive(false);
-                    questionImage.transform.parent.gameObject.SetActive(false);
+                    m_QuestionImage.gameObject.SetActive(false);
+                    m_QuestionImage.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (questionAudio)
+            if (m_QuestionAudio)
             {
-                if (dataRythimMaker.Question.Audio)
-                    questionAudio.SetAudioClip(dataRythimMaker.Question.Audio);
+                if (m_DataRythimMaker.Question.Audio)
+                    m_QuestionAudio.SetAudioClip(m_DataRythimMaker.Question.Audio);
                 else
                 {
-                    questionAudio.gameObject.SetActive(false);
-                    questionAudio.transform.parent.gameObject.SetActive(false);
+                    m_QuestionAudio.gameObject.SetActive(false);
+                    m_QuestionAudio.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (questionText)
+            if (m_QuestionText)
             {
-                if (!string.IsNullOrEmpty(dataRythimMaker.Question.Text))
-                    questionText.text = dataRythimMaker.Question.Text;
+                if (!string.IsNullOrEmpty(m_DataRythimMaker.Question.Text))
+                    m_QuestionText.text = m_DataRythimMaker.Question.Text;
                 else
                 {
-                    questionText.gameObject.SetActive(false);
-                    questionText.transform.parent.gameObject.SetActive(false);
+                    m_QuestionText.gameObject.SetActive(false);
+                    m_QuestionText.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (notesContainer)
+            if (m_NotesContainer)
             {
-                notes = new QuestRythimNote[dataRythimMaker.Items.Length];
+                m_Notes = new QuestRythimNote[m_DataRythimMaker.Items.Length];
 
-                for (int i = 0; i < dataRythimMaker.Items.Length; i++)
-                    notes[i] = InstantiateItem(dataRythimMaker.Items[i]);
+                for (int i = 0; i < m_DataRythimMaker.Items.Length; i++)
+                    m_Notes[i] = InstantiateItem(m_DataRythimMaker.Items[i]);
             }
 
             SetDialog();
@@ -88,11 +89,11 @@ namespace EduGame
 
         QuestRythimNote InstantiateItem(QuestRythimNoteItem item)
         {
-            QuestRythimNote note = Instantiate(item.Note, notesContainer);
+            QuestRythimNote note = Instantiate(item.Note, m_NotesContainer);
 
             note.transform.localPosition = Vector3.zero;
             note.Init();
-            note.Setup(item.SpeedModifier * dataRythimMaker.Speed, item.Delay, item.Clip);
+            note.Setup(item.SpeedModifier * m_DataRythimMaker.Speed, item.Delay, item.Clip);
             note.gameObject.SetActive(true);
 
             return note;
@@ -100,26 +101,26 @@ namespace EduGame
 
         void StartPlay()
         {
-            foreach (var note in notes)
+            foreach (var note in m_Notes)
                 note.Play();
         }
 
         public override void OnAnswered(bool result, bool submit = false)
         {
             if (result == true)
-                unansweredNote--;
+                m_UnansweredNote--;
             
-            remainingNote--;
+            m_RemainingNote--;
 
-            if (remainingNote <= 0)
-                base.OnAnswered(unansweredNote < Mathf.CeilToInt(notes.Length / 2), true);
+            if (m_RemainingNote <= 0)
+                base.OnAnswered(m_UnansweredNote < Mathf.CeilToInt(m_Notes.Length / 2), true);
         }
 
         public override void Submit(int star = 1)
         {
-            if(unansweredNote <= 1)
+            if(m_UnansweredNote <= 1)
                 star = 3;
-            else if(unansweredNote < Mathf.CeilToInt(notes.Length / 2))
+            else if(m_UnansweredNote < Mathf.CeilToInt(m_Notes.Length / 2))
                 star = 2;
 
             GameManager.Instance.Submit(star);
@@ -127,15 +128,15 @@ namespace EduGame
 
         public override void Reset()
         {
-            if(dataRythimMaker != null)
+            if(m_DataRythimMaker != null)
             {
-                unansweredNote = dataRythimMaker.Items.Length;
-                remainingNote = dataRythimMaker.Items.Length;
+                m_UnansweredNote = m_DataRythimMaker.Items.Length;
+                m_RemainingNote = m_DataRythimMaker.Items.Length;
             }
             
-            if(notes != null)
+            if(m_Notes != null)
             {
-                foreach (var choice in notes)
+                foreach (var choice in m_Notes)
                     choice.Reset();
             }
             
@@ -155,8 +156,8 @@ namespace EduGame
 
         void SetDialog()
         {
-            if (dataRythimMaker != null && !string.IsNullOrEmpty(dataRythimMaker.Question.Text))
-                GameManager.Instance.SetNPCDialog(dataRythimMaker.Question.Text);
+            if (m_DataRythimMaker != null && !string.IsNullOrEmpty(m_DataRythimMaker.Question.Text))
+                GameManager.Instance.SetNPCDialog(m_DataRythimMaker.Question.Text);
         }
     }
 }

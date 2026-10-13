@@ -2,26 +2,27 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestDragNDropSlot : QuestComponent
     {   
-        [SerializeField] protected TMP_Text text;
-        [SerializeField] private AudioPlayer audioPlayer;
-        [SerializeField] private Image image;
-        [SerializeField] private Image[] tints;
-        [SerializeField] private QuestDragNDropZone dropZone;
-        [SerializeField] private TMP_Text orderLabel;
-        [SerializeField] private Transform step;
+        [SerializeField] [FormerlySerializedAs("text")] protected TMP_Text m_Text;
+        [SerializeField] [FormerlySerializedAs("audioPlayer")] private AudioPlayer m_AudioPlayer;
+        [SerializeField] [FormerlySerializedAs("image")] private Image m_Image;
+        [SerializeField] [FormerlySerializedAs("tints")] private Image[] m_Tints;
+        [SerializeField] [FormerlySerializedAs("dropZone")] private QuestDragNDropZone m_DropZone;
+        [SerializeField] [FormerlySerializedAs("orderLabel")] private TMP_Text m_OrderLabel;
+        [SerializeField] [FormerlySerializedAs("step")] private Transform m_Step;
         
         public QuestUtilLabelGroup GroupData { get; private set; }
 
-        public QuestDragNDropZone DropZone => dropZone;
+        public QuestDragNDropZone DropZone => m_DropZone;
 
-        private QuestDragNDrop questDragNDrop;
+        private QuestDragNDrop m_QuestDragNDrop;
 
-        private Color[] labelColor = new Color[]
+        private Color[] m_LabelColor = new Color[]
         {
             Color.green,
             Color.orange,
@@ -30,15 +31,15 @@ namespace EduGame
 
         protected override void Start()
         {
-            questDragNDrop = GetComponentInParent<QuestDragNDrop>();
+            m_QuestDragNDrop = GetComponentInParent<QuestDragNDrop>();
 
-            dropZone = GetComponentInChildren<QuestDragNDropZone>();
+            m_DropZone = GetComponentInChildren<QuestDragNDropZone>();
             
-            if(!dropZone)
+            if(!m_DropZone)
                 Debug.LogError("QuestDragNDropZone not found in childern");
 
-            if(questDragNDrop)
-                quest = questDragNDrop;
+            if(m_QuestDragNDrop)
+                m_Quest = m_QuestDragNDrop;
             else
                 Debug.LogError("QuestDragNDrop not found in parent");
         }
@@ -49,46 +50,46 @@ namespace EduGame
 
             if(!string.IsNullOrEmpty(item.Label.Text))
             {
-                if(text)
-                    text.text = item.Label.Text;
+                if(m_Text)
+                    m_Text.text = item.Label.Text;
             }   
             else
             {
-                text?.gameObject.SetActive(false);
-                text?.transform.parent.gameObject.SetActive(false);   
+                m_Text?.gameObject.SetActive(false);
+                m_Text?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(item.Label.Audio)
             {
-                if(audioPlayer)
-                    audioPlayer.SetAudioClip(item.Label.Audio);
+                if(m_AudioPlayer)
+                    m_AudioPlayer.SetAudioClip(item.Label.Audio);
             }   
             else
             {
-                audioPlayer?.gameObject.SetActive(false);
-                audioPlayer?.transform.parent.gameObject.SetActive(false);   
+                m_AudioPlayer?.gameObject.SetActive(false);
+                m_AudioPlayer?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(item.Label.Image)
             {
-                if(image)
-                    image.sprite = item.Label.Image;
+                if(m_Image)
+                    m_Image.sprite = item.Label.Image;
             }   
             else
             {
-                image?.gameObject.SetActive(false);
-                image?.transform.parent.gameObject.SetActive(false);   
+                m_Image?.gameObject.SetActive(false);
+                m_Image?.transform.parent.gameObject.SetActive(false);   
             }
 
-            if(order > 0 && orderLabel)
-                orderLabel.SetText(order.ToString());
+            if(order > 0 && m_OrderLabel)
+                m_OrderLabel.SetText(order.ToString());
             
-            if(tints.Length > 0)
-                foreach(var tint in tints)
+            if(m_Tints.Length > 0)
+                foreach(var tint in m_Tints)
                     tint.color = item.Label.Color;
                 
-            if(step && isLast)
-                step.gameObject.SetActive(false);
+            if(m_Step && isLast)
+                m_Step.gameObject.SetActive(false);
         }
     }
 }

@@ -2,29 +2,30 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestDragNDropItem : QuestComponent, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
     {   
 
-        [SerializeField] protected TMP_Text text;
-        [SerializeField] private AudioPlayer audioPlayer;
-        [SerializeField] private Image image;
-        [SerializeField] private Image tint;
+        [SerializeField] [FormerlySerializedAs("text")] protected TMP_Text m_Text;
+        [SerializeField] [FormerlySerializedAs("audioPlayer")] private AudioPlayer m_AudioPlayer;
+        [SerializeField] [FormerlySerializedAs("image")] private Image m_Image;
+        [SerializeField] [FormerlySerializedAs("tint")] private Image m_Tint;
         
-        protected LayoutElement layoutElement;
-        protected Vector2 originalPosition; 
-        protected QuestDragNDropZone originalParent;
-        protected CanvasGroup canvasGroup;
-        protected Vector2 originalSize;
-        protected RectTransform imageRect;
+        protected LayoutElement m_LayoutElement;
+        protected Vector2 m_OriginalPosition; 
+        protected QuestDragNDropZone m_OriginalParent;
+        protected CanvasGroup m_CanvasGroup;
+        protected Vector2 m_OriginalSize;
+        protected RectTransform m_ImageRect;
 
-        [SerializeField] protected GameObject correct;
-        [SerializeField] protected GameObject wrong;
+        [SerializeField] [FormerlySerializedAs("correct")] protected GameObject m_Correct;
+        [SerializeField] [FormerlySerializedAs("wrong")] protected GameObject m_Wrong;
 
         public QuestUtilLabel ItemData { get; private set; }
-        public QuestDragNDropZone OriginalZone => originalParent;
+        public QuestDragNDropZone OriginalZone => m_OriginalParent;
 
         protected override void Awake()
         {
@@ -34,20 +35,20 @@ namespace EduGame
 
             Reset();
 
-            if(image)
-                imageRect = image.transform.GetComponent<RectTransform>();
+            if(m_Image)
+                m_ImageRect = m_Image.transform.GetComponent<RectTransform>();
 
-            if(imageRect)
-                originalSize = imageRect.sizeDelta;
+            if(m_ImageRect)
+                m_OriginalSize = m_ImageRect.sizeDelta;
             else
-                originalSize = Rect.sizeDelta;
+                m_OriginalSize = Rect.sizeDelta;
         }
 
         protected override void Start()
         {
             base.Start();
 
-            canvasGroup = GetComponent<CanvasGroup>();
+            m_CanvasGroup = GetComponent<CanvasGroup>();
         }
 
         public void OnBeginDrag(PointerEventData eventData)
@@ -55,17 +56,17 @@ namespace EduGame
             if(GameManager.Instance)
                 transform.SetParent(GameManager.Instance.Canvas.transform);
 
-            originalPosition = Rect.anchoredPosition;
+            m_OriginalPosition = Rect.anchoredPosition;
 
-            canvasGroup.blocksRaycasts = false;
+            m_CanvasGroup.blocksRaycasts = false;
             
-            if(imageRect)
-                imageRect.sizeDelta = originalSize;
+            if(m_ImageRect)
+                m_ImageRect.sizeDelta = m_OriginalSize;
             else
-                Rect.sizeDelta = originalSize;
+                Rect.sizeDelta = m_OriginalSize;
 
-            if(quest)
-                quest.PlayQuestionVoice(ItemData.Audio);
+            if(m_Quest)
+                m_Quest.PlayQuestionVoice(ItemData.Audio);
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -80,7 +81,7 @@ namespace EduGame
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            canvasGroup.blocksRaycasts = true;
+            m_CanvasGroup.blocksRaycasts = true;
 
             if(eventData.pointerEnter == null || !eventData.pointerEnter.GetComponent<QuestDragNDropZone>())
                 OriginalZone.ReInsertItem(this);
@@ -97,56 +98,56 @@ namespace EduGame
 
             if(!string.IsNullOrEmpty(item.Text))
             {
-                if(text)
-                    text.text = item.Text;
+                if(m_Text)
+                    m_Text.text = item.Text;
             }   
             else
             {
-                text?.gameObject.SetActive(false);
-                text?.transform.parent.gameObject.SetActive(false);   
+                m_Text?.gameObject.SetActive(false);
+                m_Text?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(item.Audio)
             {
-                if(audioPlayer)
-                    audioPlayer.SetAudioClip(item.Audio);
+                if(m_AudioPlayer)
+                    m_AudioPlayer.SetAudioClip(item.Audio);
             }   
             else
             {
-                audioPlayer?.gameObject.SetActive(false);
-                audioPlayer?.transform.parent.gameObject.SetActive(false);   
+                m_AudioPlayer?.gameObject.SetActive(false);
+                m_AudioPlayer?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(item.Image)
             {
-                if(image)
-                    image.sprite = item.Image;
+                if(m_Image)
+                    m_Image.sprite = item.Image;
             }   
             else
             {
-                image?.gameObject.SetActive(false);
-                image?.transform.parent.gameObject.SetActive(false);   
+                m_Image?.gameObject.SetActive(false);
+                m_Image?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(item.Color != Color.white && item.Color != Color.black)
             {
-                if(tint)
-                    tint.color = item.Color;
+                if(m_Tint)
+                    m_Tint.color = item.Color;
             }   
         }
 
         public override void Reset()
         {
-            if(correct)
-                correct.SetActive(false);
+            if(m_Correct)
+                m_Correct.SetActive(false);
 
-            if(wrong)
-                wrong.SetActive(false);
+            if(m_Wrong)
+                m_Wrong.SetActive(false);
         }
 
         public virtual void RegisterZone()
         {
-            originalParent = transform.parent.GetComponent<QuestDragNDropZone>();
+            m_OriginalParent = transform.parent.GetComponent<QuestDragNDropZone>();
         }
     }
 }

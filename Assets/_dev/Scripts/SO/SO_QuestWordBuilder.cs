@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -8,32 +9,32 @@ namespace EduGame
     public class SO_QuestWordBuilder : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private string answer = "";
+        [SerializeField] [FormerlySerializedAs("answer")] private string m_Answer = "";
         [Space()]
-        [SerializeField] private QuestUtilLabelValue[] values;
+        [SerializeField] [FormerlySerializedAs("values")] private QuestUtilLabelValue[] m_Values;
         [Space()]
         
         [Header("Rule")]
-        [SerializeField] private float timer = 0;
-        [SerializeField] private bool randomizeChoice;
+        [SerializeField] [FormerlySerializedAs("timer")] private float m_Timer = 0;
+        [SerializeField] [FormerlySerializedAs("randomizeChoice")] private bool m_RandomizeChoice;
 
-        public string Answer => answer;
-        public QuestUtilLabelValue[] Values => randomizeChoice ? GetRandomizedChoices() : values;
-        public float Timer => timer;
+        public string Answer => m_Answer;
+        public QuestUtilLabelValue[] Values => m_RandomizeChoice ? GetRandomizedChoices() : m_Values;
+        public float Timer => m_Timer;
         
-        [NonSerialized] private QuestUtilLabelValue[] randomizedChoices;
+        [NonSerialized] private QuestUtilLabelValue[] m_RandomizedChoices;
 
         QuestUtilLabelValue[] GetRandomizedChoices()
         {
-            if(randomizedChoices == null)
+            if(m_RandomizedChoices == null)
             {
-                randomizedChoices = new QuestUtilLabelValue[values.Length]; 
+                m_RandomizedChoices = new QuestUtilLabelValue[m_Values.Length]; 
 
                 System.Random random = new System.Random();
-                randomizedChoices = values.OrderBy(x => random.Next()).ToArray();
+                m_RandomizedChoices = m_Values.OrderBy(x => random.Next()).ToArray();
             }
 
-            return randomizedChoices;
+            return m_RandomizedChoices;
         }
     }
 }

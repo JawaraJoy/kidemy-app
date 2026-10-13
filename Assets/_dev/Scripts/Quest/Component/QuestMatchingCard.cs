@@ -5,51 +5,51 @@ namespace EduGame
 {
     public class QuestMatchingCard : QuestComponent
     {
-        public QuestUtilLabelMatching Match => match;
+        public QuestUtilLabelMatching Match => m_Match;
 
-        private Sprite cardFace;
-        private Sprite cardBack;
+        private Sprite m_CardFace;
+        private Sprite m_CardBack;
 
-        private QuestMatching matching;
-        private QuestUtilLabelMatching match;
+        private QuestMatching m_Matching;
+        private QuestUtilLabelMatching m_Match;
 
-        private bool isComplete;
+        private bool m_IsComplete;
 
         protected override void Start()
         {
-            matching = GetComponentInParent<QuestMatching>();
+            m_Matching = GetComponentInParent<QuestMatching>();
 
-            if(matching)
-                quest = matching;
+            if(m_Matching)
+                m_Quest = m_Matching;
             else
                 Debug.LogError("QuestMatching Component not found");   
 
             if(Image)
-                cardBack = Image.sprite;
+                m_CardBack = Image.sprite;
             else
                 Debug.LogError("Image Component not found");            
         }
 
         public virtual void SetMatch(QuestUtilLabelMatching match)
         {
-            this.match = match;
+            this.m_Match = match;
 
-            cardFace = match.Image;
+            m_CardFace = match.Image;
         }
 
         public override void OnClick()
         {
-            Image.sprite = cardFace;
+            Image.sprite = m_CardFace;
 
-            matching.Open(this);
+            m_Matching.Open(this);
         }
 
         public virtual void Close()
         {
-            if(!isComplete)
+            if(!m_IsComplete)
             {
-                if(cardBack)
-                    Image.sprite = cardBack;
+                if(m_CardBack)
+                    Image.sprite = m_CardBack;
                 Button.interactable = true;
             }
         }
@@ -61,11 +61,11 @@ namespace EduGame
 
         public virtual void Complete()
         {
-            isComplete = true;
+            m_IsComplete = true;
 
             Button.interactable = false;
 
-            Invoke("Hide", matching.PeekDuration);
+            Invoke("Hide", m_Matching.PeekDuration);
         }
 
         public virtual void Hide()
@@ -75,7 +75,7 @@ namespace EduGame
 
         public override void Reset()
         {
-            isComplete = false;
+            m_IsComplete = false;
 
             Button.interactable = true;
 

@@ -1,0 +1,35 @@
+RENAME PLAN: targets=21 (auto=21, manual=0), serialized=15, protected=0, files to edit=8, edits=87, shadow-skipped=0, inside #if=0, unparsable files=0, warnings=0
+
+=== MANUAL ===
+
+=== AUTOMATIC ===
+Assets/_dev/Scripts/Quest/Util/QuestColoringCursor.cs
+  QuestColoringCursor.baseCursorTexture -> m_BaseCursorTexture  [private instance serialized] renamed=6 this/base-forced=0 shadow-skipped=0
+  QuestColoringCursor.whiteThreshold -> m_WhiteThreshold  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestColoringCursor.isCustomCursorActive -> m_IsCustomCursorActive  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestColoringCursor.tintedCursorTexture -> m_TintedCursorTexture  [private instance] renamed=8 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Util/QuestUtilLabel.cs
+  QuestUtilLabel.image -> m_Image  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestUtilLabel.text -> m_Text  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestUtilLabel.color -> m_Color  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestUtilLabel.audio -> m_Audio  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Util/QuestUtilLabelChoice.cs
+  QuestUtilLabelChoice.isAnswer -> m_IsAnswer  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Util/QuestUtilLabelGroup.cs
+  QuestUtilLabelGroup.label -> m_Label  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+      string literal "label" at Assets/_dev/Scripts/Util/StringHelper.cs:63
+  QuestUtilLabelGroup.limit -> m_Limit  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestUtilLabelGroup.labels -> m_Labels  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Util/QuestUtilLabelMatchingPair.cs
+  QuestUtilLabelMatchingPair.matchA -> m_MatchA  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestUtilLabelMatchingPair.matchB -> m_MatchB  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Util/QuestUtilLabelValue.cs
+  QuestUtilLabelValue.value -> m_Value  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalClick.cs
+  QuestUtilRegionalClick.onclickEvent -> m_OnclickEvent  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestUtilRegionalClick.image -> m_Image  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Util/QuestUtilRegionalDrag.cs
+  QuestUtilRegionalDrag.onclickEvent -> m_OnclickEvent  [private instance serialized] renamed=1 this/base-forced=0 shadow-skipped=0
+  QuestUtilRegionalDrag.image -> m_Image  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestUtilRegionalDrag.rectTransform -> m_RectTransform  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestUtilRegionalDrag.parentCanvas -> m_ParentCanvas  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0

@@ -1,22 +1,23 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestPaginator : MonoBehaviour
     {
-        [SerializeField] private Button previousButton;
-        [SerializeField] private Button nextButton;
-        [SerializeField] private TMP_Text pageIndicator;
+        [SerializeField] [FormerlySerializedAs("previousButton")] private Button m_PreviousButton;
+        [SerializeField] [FormerlySerializedAs("nextButton")] private Button m_NextButton;
+        [SerializeField] [FormerlySerializedAs("pageIndicator")] private TMP_Text m_PageIndicator;
 
-        private int totalPages;
-        private int currentPageIndex = 0;
+        private int m_TotalPages;
+        private int m_CurrentPageIndex = 0;
         
 
         void Start()
         {
-            totalPages = transform.childCount;
+            m_TotalPages = transform.childCount;
 
             bool firstPage = true;
 
@@ -31,46 +32,46 @@ namespace EduGame
                     child.gameObject.SetActive(false);
             }
 
-            if(previousButton)
-                previousButton.interactable = false;
+            if(m_PreviousButton)
+                m_PreviousButton.interactable = false;
         }
 
         public void Next()
         {
-            int tNextPage = currentPageIndex + 1;
+            int tNextPage = m_CurrentPageIndex + 1;
 
-            if(tNextPage < totalPages)
+            if(tNextPage < m_TotalPages)
                 ChangePage(tNextPage);
 
-            if(nextButton)
+            if(m_NextButton)
             {
-                if(tNextPage + 1 >= totalPages)
-                    nextButton.interactable = false;
+                if(tNextPage + 1 >= m_TotalPages)
+                    m_NextButton.interactable = false;
                 else
-                    nextButton.interactable = true;
+                    m_NextButton.interactable = true;
             }
 
-            if(previousButton)
-                previousButton.interactable = true;
+            if(m_PreviousButton)
+                m_PreviousButton.interactable = true;
         }
 
         public void Previous()
         {
-             int tNextPage = currentPageIndex - 1;
+             int tNextPage = m_CurrentPageIndex - 1;
 
             if(tNextPage >= 0)
                 ChangePage(tNextPage);
 
-            if(previousButton)
+            if(m_PreviousButton)
             {
                 if(tNextPage - 1 < 0)
-                    previousButton.interactable = false;
+                    m_PreviousButton.interactable = false;
                 else
-                    previousButton.interactable = true;
+                    m_PreviousButton.interactable = true;
             }
 
-            if(nextButton)
-                nextButton.interactable = true;
+            if(m_NextButton)
+                m_NextButton.interactable = true;
         }
 
         public void ChangePage(int index)
@@ -81,7 +82,7 @@ namespace EduGame
             {
                 if(i == index)
                 {
-                    currentPageIndex = i;
+                    m_CurrentPageIndex = i;
                     child.gameObject.SetActive(true);
                 }
                 else
@@ -90,8 +91,8 @@ namespace EduGame
                 i++;
             }
 
-            if(pageIndicator)
-                pageIndicator.text = "Page " + (currentPageIndex + 1) + " of " + totalPages;
+            if(m_PageIndicator)
+                m_PageIndicator.text = "Page " + (m_CurrentPageIndex + 1) + " of " + m_TotalPages;
         }
     }
 }

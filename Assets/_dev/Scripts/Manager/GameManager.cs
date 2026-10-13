@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine.Events;
 using EasyTextEffects;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -32,46 +33,46 @@ namespace EduGame
         private static extern void ReloadIframe();
 
         [Header("Frame")]
-        [SerializeField] private TMP_Text title;
-        [SerializeField] private TMP_Text category;
-        [SerializeField] private TMP_Text timer;
-        [SerializeField] private Image background;
-        [SerializeField] private AudioClip backgroundMusic;
-        [SerializeField] private RectTransform npc;
-        [SerializeField] private TMP_Text npcDialog;
+        [SerializeField] [FormerlySerializedAs("title")] private TMP_Text m_Title;
+        [SerializeField] [FormerlySerializedAs("category")] private TMP_Text m_Category;
+        [SerializeField] [FormerlySerializedAs("timer")] private TMP_Text m_Timer;
+        [SerializeField] [FormerlySerializedAs("background")] private Image m_Background;
+        [SerializeField] [FormerlySerializedAs("backgroundMusic")] private AudioClip m_BackgroundMusic;
+        [SerializeField] [FormerlySerializedAs("npc")] private RectTransform m_Npc;
+        [SerializeField] [FormerlySerializedAs("npcDialog")] private TMP_Text m_NpcDialog;
 
         [Header("Result Pop")]
-        [SerializeField] private RectTransform popResult;
-        [SerializeField] private RectTransform correctTitle;
-        [SerializeField] private RectTransform wrongTitle;
-        [SerializeField] private RectTransform correctNote;
-        [SerializeField] private RectTransform wrongNote;
-        [SerializeField] private RectTransform starContainer;
-        [SerializeField] private Image starPrefab;
+        [SerializeField] [FormerlySerializedAs("popResult")] private RectTransform m_PopResult;
+        [SerializeField] [FormerlySerializedAs("correctTitle")] private RectTransform m_CorrectTitle;
+        [SerializeField] [FormerlySerializedAs("wrongTitle")] private RectTransform m_WrongTitle;
+        [SerializeField] [FormerlySerializedAs("correctNote")] private RectTransform m_CorrectNote;
+        [SerializeField] [FormerlySerializedAs("wrongNote")] private RectTransform m_WrongNote;
+        [SerializeField] [FormerlySerializedAs("starContainer")] private RectTransform m_StarContainer;
+        [SerializeField] [FormerlySerializedAs("starPrefab")] private Image m_StarPrefab;
 
         [Header("Button")]
-        [SerializeField] private Button buttonClue;
-        [SerializeField] private Button buttonBack;
-        [SerializeField] private Button buttonNext;
-        [SerializeField] private Button buttonHome;
-        [SerializeField] private Button buttonRestart;
-        [SerializeField] private Button buttonCharacter;
+        [SerializeField] [FormerlySerializedAs("buttonClue")] private Button m_ButtonClue;
+        [SerializeField] [FormerlySerializedAs("buttonBack")] private Button m_ButtonBack;
+        [SerializeField] [FormerlySerializedAs("buttonNext")] private Button m_ButtonNext;
+        [SerializeField] [FormerlySerializedAs("buttonHome")] private Button m_ButtonHome;
+        [SerializeField] [FormerlySerializedAs("buttonRestart")] private Button m_ButtonRestart;
+        [SerializeField] [FormerlySerializedAs("buttonCharacter")] private Button m_ButtonCharacter;
 
         [Header("Feedback")]
-        [SerializeField] private Feedback correctFeedback;
-        [SerializeField] private Feedback wrongFeedback;
-        [SerializeField] private Feedback idleFeedback;
-        [SerializeField] private Feedback thinkFeedback;
+        [SerializeField] [FormerlySerializedAs("correctFeedback")] private Feedback m_CorrectFeedback;
+        [SerializeField] [FormerlySerializedAs("wrongFeedback")] private Feedback m_WrongFeedback;
+        [SerializeField] [FormerlySerializedAs("idleFeedback")] private Feedback m_IdleFeedback;
+        [SerializeField] [FormerlySerializedAs("thinkFeedback")] private Feedback m_ThinkFeedback;
 
         [Header("Audio")]
-        [SerializeField] private AudioSource audioSource;
+        [SerializeField] [FormerlySerializedAs("audioSource")] private AudioSource m_AudioSource;
         [SerializeField]
         private AudioSource m_Music;
         public AudioSource Music => m_Music;
 
         [Header("Data")]
-        [SerializeField] private Quest questPrefab;
-        [SerializeField] private Quest[] questPrefabs;
+        [SerializeField] [FormerlySerializedAs("questPrefab")] private Quest m_QuestPrefab;
+        [SerializeField] [FormerlySerializedAs("questPrefabs")] private Quest[] m_QuestPrefabs;
         [SerializeField] private ParticleSystem m_ConffetyVFXPrefab;
         [SerializeField] private ReactionPanel m_ReactionPanelPrefab;
         [SerializeField] private ResultPanel m_ResultPanelPrefab;
@@ -106,33 +107,33 @@ namespace EduGame
         private ParticleSystem m_ConffetyVFX;
         private int m_RightAnswerCount;
         public int RightAnswerCount => m_RightAnswerCount;
-        public int QuestsCount => quests.Length;
+        public int QuestsCount => m_Quests.Length;
         public ResultPanel ResultPanel => m_ResultPanel;
 
-        private Image[] stars;
-        private Quest[] quests;
-        private int currentIndex = 0;
-        private float recordedTime;
-        private float startTime;
-        private IEnumerator timerCo;
-        private string baseURL;
-        private string frameURL;
-        private string sessionId;
-        private string islandId;
-        private ResultItem[] result;
-        private APIManager apiManager;
-        private AssetManager assetManager;
-        private string APIInfoURL = "https://be.kimee.io/api/v1/external/games";
-        private string APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
-        private string gameURL = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
+        private Image[] m_Stars;
+        private Quest[] m_Quests;
+        private int m_CurrentIndex = 0;
+        private float m_RecordedTime;
+        private float m_StartTime;
+        private IEnumerator m_TimerCo;
+        private string m_BaseURL;
+        private string m_FrameURL;
+        private string m_SessionId;
+        private string m_IslandId;
+        private ResultItem[] m_Result;
+        private APIManager m_ApiManager;
+        private AssetManager m_AssetManager;
+        private string m_APIInfoURL = "https://be.kimee.io/api/v1/external/games";
+        private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
+        private string m_GameURL = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
         private HandTutorial m_HandTutorial;
 
         public Canvas Canvas { get; private set; }
-        public AudioSource AudioSource => audioSource;
-        public float ResultTime => recordedTime;
+        public AudioSource AudioSource => m_AudioSource;
+        public float ResultTime => m_RecordedTime;
         public Color ColorTheme { get; private set; }
-        public APIManager API => apiManager;
-        public AssetManager Asset => assetManager;
+        public APIManager API => m_ApiManager;
+        public AssetManager Asset => m_AssetManager;
 
         public static GameManager Instance { get; private set; }
         public ChallengeConfig ChallengeConfig => m_ChallengeConfig;
@@ -149,7 +150,7 @@ namespace EduGame
             if (!Canvas)
                 Debug.LogError("Canvas is not found");
 
-            if (starPrefab)
+            if (m_StarPrefab)
                 InstantiateStar();
             
             if (m_ConffetyVFXPrefab)
@@ -163,76 +164,76 @@ namespace EduGame
         
         void Start()
         {
-            if(backgroundMusic && m_Music)
+            if(m_BackgroundMusic && m_Music)
             {
-                m_Music.PlayOneShot(backgroundMusic);
+                m_Music.PlayOneShot(m_BackgroundMusic);
 
             }
 
-            apiManager = GetComponent<APIManager>();
-            assetManager = GetComponent<AssetManager>();
+            m_ApiManager = GetComponent<APIManager>();
+            m_AssetManager = GetComponent<AssetManager>();
 
 #if !UNITY_EDITOR && UNITY_WEBGL
-                baseURL = GetParentURL();
-                frameURL = GetSelfURL();
+                m_BaseURL = GetParentURL();
+                m_FrameURL = GetSelfURL();
 #else
-            baseURL = "";
-            frameURL = "";
+            m_BaseURL = "";
+            m_FrameURL = "";
 #endif
 
 #if !UNITY_EDITOR && UNITY_WEBGL
-                LogToBrowser("Base URL: " + baseURL);
-                LogToBrowser("Frame URL: " + frameURL);
+                LogToBrowser("Base URL: " + m_BaseURL);
+                LogToBrowser("Frame URL: " + m_FrameURL);
 #endif
 
 #if !UNITY_EDITOR && UNITY_WEBGL
-                if(!string.IsNullOrEmpty(frameURL))
+                if(!string.IsNullOrEmpty(m_FrameURL))
                 {
-                    Dictionary<string, string> parameters = URIHelper.GetParameters(frameURL);
+                    Dictionary<string, string> parameters = URIHelper.GetParameters(m_FrameURL);
                     if(parameters.ContainsKey("redirect_url"))
                     {
-                        baseURL = parameters["redirect_url"];
+                        m_BaseURL = parameters["redirect_url"];
                     }
 
                     if(parameters.ContainsKey("bgm_volume"))
                     {
                         int volume = int.Parse(parameters["bgm_volume"]);
                         m_Music.volume = volume / 10f;
-                        audioSource.volume = volume / 10f;
+                        m_AudioSource.volume = volume / 10f;
                     }
                     else
                     {
                         m_Music.volume = 1f;
-                        audioSource.volume = 1f;
+                        m_AudioSource.volume = 1f;
                     }
                 }
-                LogToBrowser("Home URL: " + baseURL);
+                LogToBrowser("Home URL: " + m_BaseURL);
 #endif
 
-            if (!string.IsNullOrEmpty(frameURL))
+            if (!string.IsNullOrEmpty(m_FrameURL))
             {
-                Dictionary<string, string> param = URIHelper.GetParameters(frameURL);
+                Dictionary<string, string> param = URIHelper.GetParameters(m_FrameURL);
 
                 if (param.ContainsKey("session_id"))
-                    sessionId = param["session_id"];
+                    m_SessionId = param["session_id"];
                 else
-                    sessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+                    m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
             }
             else
-                sessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+                m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
 
             if (m_ChallengeConfig)
             {
                 if (m_ChallengeConfig.QuestConfigs.Length > 0)
                 {
-                    quests = new Quest[m_ChallengeConfig.QuestConfigs.Length];
+                    m_Quests = new Quest[m_ChallengeConfig.QuestConfigs.Length];
                     for (int i = 0; i < m_ChallengeConfig.QuestConfigs.Length; i++)
                     {
-                        quests[i] = InstantiateTemplate(m_ChallengeConfig.QuestLayoutPrefabs);
-                        quests[i].SetData(m_ChallengeConfig.QuestConfigs[i]);
-                        quests[i].SetChallenge(m_ChallengeConfig);
-                        quests[i].SetBackground(m_ChallengeConfig.Background);
-                        quests[i].gameObject.SetActive(false);
+                        m_Quests[i] = InstantiateTemplate(m_ChallengeConfig.QuestLayoutPrefabs);
+                        m_Quests[i].SetData(m_ChallengeConfig.QuestConfigs[i]);
+                        m_Quests[i].SetChallenge(m_ChallengeConfig);
+                        m_Quests[i].SetBackground(m_ChallengeConfig.Background);
+                        m_Quests[i].gameObject.SetActive(false);
                     }
                 }
                 else
@@ -251,22 +252,22 @@ namespace EduGame
             }
             else
             {
-                if (questPrefabs.Length > 0)
+                if (m_QuestPrefabs.Length > 0)
                 {
-                    quests = new Quest[questPrefabs.Length];
+                    m_Quests = new Quest[m_QuestPrefabs.Length];
 
-                    for (int i = 0; i < questPrefabs.Length; i++)
+                    for (int i = 0; i < m_QuestPrefabs.Length; i++)
                     {
-                        quests[i] = InstantiateTemplate(questPrefabs[i]);
-                        quests[i].gameObject.SetActive(false);
+                        m_Quests[i] = InstantiateTemplate(m_QuestPrefabs[i]);
+                        m_Quests[i].gameObject.SetActive(false);
                     }
 
                 }
-                else if (questPrefab)
+                else if (m_QuestPrefab)
                 {
-                    quests = new Quest[1];
+                    m_Quests = new Quest[1];
 
-                    quests[0] = InstantiateTemplate(questPrefab);
+                    m_Quests[0] = InstantiateTemplate(m_QuestPrefab);
                 }
                 else
                     Debug.LogError("Failed to load data, challenge will return empty");
@@ -281,17 +282,17 @@ namespace EduGame
 
             //quests[0].gameObject.SetActive(true);
 
-            Debug.Log(background);
+            Debug.Log(m_Background);
 
-            if (background)
-                background.sprite = quests[0].Background;
+            if (m_Background)
+                m_Background.sprite = m_Quests[0].Background;
 
             StartTimer();
 
-            foreach (var quest in quests)
+            foreach (var quest in m_Quests)
                 quest.Setup();
 
-            result = new ResultItem[quests.Length];
+            m_Result = new ResultItem[m_Quests.Length];
 
 #if !UNITY_EDITOR && UNITY_WEBGL
             JS_OnVoiceDownloadComplete();
@@ -302,36 +303,36 @@ namespace EduGame
 
         void StopTimer()
         {
-            if (timerCo != null)
+            if (m_TimerCo != null)
             {
-                recordedTime = Time.time - startTime;
+                m_RecordedTime = Time.time - m_StartTime;
 
-                StopCoroutine(timerCo);
-                timerCo = null;
+                StopCoroutine(m_TimerCo);
+                m_TimerCo = null;
             }
         }
 
         void StartTimer()
         {
-            if (timerCo == null)
+            if (m_TimerCo == null)
             {
-                startTime = Time.time;
+                m_StartTime = Time.time;
 
-                timerCo = TimerCo();
-                if (timerCo != null)
+                m_TimerCo = TimerCo();
+                if (m_TimerCo != null)
                 {
-                    StartCoroutine(timerCo);
+                    StartCoroutine(m_TimerCo);
                 }
             }
         }
 
         IEnumerator TimerCo()
         {
-            if (timer)
+            if (m_Timer)
             {
                 while (true)
                 {
-                    float elapsedTime = Time.time - startTime;
+                    float elapsedTime = Time.time - m_StartTime;
 
                     float m = Mathf.FloorToInt(elapsedTime / 60);
                     float s = Mathf.FloorToInt(elapsedTime % 60);
@@ -339,11 +340,11 @@ namespace EduGame
                     string timerText = m.ToString().PadLeft(2, '0') + ":" + s.ToString().PadLeft(2, '0');
 
                     if (s % 10 == 0)
-                        idleFeedback.Play(npc ? npc : transform);
+                        m_IdleFeedback.Play(m_Npc ? m_Npc : transform);
                     else if (s % 5 == 0)
-                        thinkFeedback.Play(npc ? npc : transform);
+                        m_ThinkFeedback.Play(m_Npc ? m_Npc : transform);
 
-                    timer.text = timerText;
+                    m_Timer.text = timerText;
 
                     yield return new WaitForSeconds(1);
                 }
@@ -354,7 +355,7 @@ namespace EduGame
 
         public virtual void SetNPC(RuntimeAnimatorController controller)
         {
-            Animator animator = npc.GetComponent<Animator>();
+            Animator animator = m_Npc.GetComponent<Animator>();
 
             if (animator)
                 animator.runtimeAnimatorController = controller;
@@ -362,10 +363,10 @@ namespace EduGame
 
         public virtual void SetNPCDialog(string dialog)
         {
-            if (npcDialog)
+            if (m_NpcDialog)
             {
-                npcDialog.text = StringHelper.RemoveUnsupportedSymbols(dialog);
-                if (npcDialog.TryGetComponent(out TextEffect textEffect))
+                m_NpcDialog.text = StringHelper.RemoveUnsupportedSymbols(dialog);
+                if (m_NpcDialog.TryGetComponent(out TextEffect textEffect))
                 {
                     textEffect.Refresh();
                 }
@@ -386,7 +387,7 @@ namespace EduGame
 
         protected virtual void InstantiateStar()
         {
-            stars = new Image[3];
+            m_Stars = new Image[3];
 
             
             /*stars[0] = Instantiate(starPrefab, starContainer);
@@ -399,28 +400,28 @@ namespace EduGame
             stars[2].gameObject.SetActive(false);*/
 
             // you should use for loop
-            for (int i = 0; i < stars.Length; i++)
+            for (int i = 0; i < m_Stars.Length; i++)
             {
-                Image star = Instantiate(starPrefab, starContainer);
-                stars[i] = star;
+                Image star = Instantiate(m_StarPrefab, m_StarContainer);
+                m_Stars[i] = star;
             }
         }
 
         public virtual void InitQuest(SO_Quest questData)
         {
-            if (title != null && questData.Title != null)
-                title.text = questData.Title;
+            if (m_Title != null && questData.Title != null)
+                m_Title.text = questData.Title;
 
-            if (category != null)
-                category.text = questData.Category.ToString().Replace('_', ' ');
+            if (m_Category != null)
+                m_Category.text = questData.Category.ToString().Replace('_', ' ');
             OnQuestStartInvoke();
         }
 
         public void PlayQuestionVoice()
         {
-            quests[currentIndex].PlayQuestionVoice();
+            m_Quests[m_CurrentIndex].PlayQuestionVoice();
             StartCoroutine(WaitToPlaySoundQuest());
-            PlayHowManySound(quests[currentIndex]);
+            PlayHowManySound(m_Quests[m_CurrentIndex]);
         }
         private void PlayHowManySound(Quest quest)
         {
@@ -432,30 +433,30 @@ namespace EduGame
         }
         public void PlaySoundQuest()
         {
-            quests[currentIndex].PlaySoundQuest();
+            m_Quests[m_CurrentIndex].PlaySoundQuest();
         }
 
         public void Play()
         {
-            currentIndex = -1;
+            m_CurrentIndex = -1;
             Next();
         }
 
         public void Next()
         {
-            int nextIndex = currentIndex + 1;
+            int nextIndex = m_CurrentIndex + 1;
 
-            if (quests.Length > 0 && nextIndex < quests.Length)
+            if (m_Quests.Length > 0 && nextIndex < m_Quests.Length)
             {
-                if (currentIndex >= 0)
-                    quests[currentIndex].gameObject.SetActive(false);
+                if (m_CurrentIndex >= 0)
+                    m_Quests[m_CurrentIndex].gameObject.SetActive(false);
 
-                quests[nextIndex].gameObject.SetActive(true);
+                m_Quests[nextIndex].gameObject.SetActive(true);
                 
-                if (background)
-                    background.sprite = quests[nextIndex].Background;
+                if (m_Background)
+                    m_Background.sprite = m_Quests[nextIndex].Background;
 
-                currentIndex = nextIndex;
+                m_CurrentIndex = nextIndex;
 
                 ResetQuest();
             }
@@ -497,13 +498,13 @@ namespace EduGame
             else if (star > 3)
                 star = 3;
 
-            if (star == 3 && quests[currentIndex].Data.TresholdTime > 0 && recordedTime > quests[currentIndex].Data.TresholdTime)
+            if (star == 3 && m_Quests[m_CurrentIndex].Data.TresholdTime > 0 && m_RecordedTime > m_Quests[m_CurrentIndex].Data.TresholdTime)
                 star = 2;
 
-            if (currentIndex < result.Length)
+            if (m_CurrentIndex < m_Result.Length)
             {
-                Debug.Log($"Submitting result for quest {currentIndex}: stars={star}, time={Mathf.RoundToInt(recordedTime)}");
-                result[currentIndex] = new ResultItem { stars = star, time = Mathf.RoundToInt(recordedTime) };
+                Debug.Log($"Submitting result for quest {m_CurrentIndex}: stars={star}, time={Mathf.RoundToInt(m_RecordedTime)}");
+                m_Result[m_CurrentIndex] = new ResultItem { stars = star, time = Mathf.RoundToInt(m_RecordedTime) };
             }
                 
             ShowResult(star);
@@ -520,23 +521,23 @@ namespace EduGame
         {
             Reset();
 
-            quests[currentIndex].Reset();
+            m_Quests[m_CurrentIndex].Reset();
         }
 
         public virtual void ShowResult(int star)
         {
             if (m_ReactionPanel)
             {
-                if (popResult)
-                    popResult.gameObject.SetActive(false);
+                if (m_PopResult)
+                    m_PopResult.gameObject.SetActive(false);
             }
             else
             {
-                if (popResult)
-                    popResult.gameObject.SetActive(true);
+                if (m_PopResult)
+                    m_PopResult.gameObject.SetActive(true);
             }
             
-            if (m_NeutralReaction && quests[currentIndex].name.IndexOf("ColortheIsland") > -1)
+            if (m_NeutralReaction && m_Quests[m_CurrentIndex].name.IndexOf("ColortheIsland") > -1)
             {
                 if(star > 1)
                     m_RightAnswerCount++;
@@ -565,14 +566,14 @@ namespace EduGame
                 }
                 else
                 {
-                    if (correctFeedback)
-                        correctFeedback.Play(npc ? npc : transform);
+                    if (m_CorrectFeedback)
+                        m_CorrectFeedback.Play(m_Npc ? m_Npc : transform);
 
-                    if (npcDialog)
+                    if (m_NpcDialog)
                         SetNPCDialog("Yaaay! Amazing!");
 
-                    correctTitle.gameObject.SetActive(true);
-                    correctNote.gameObject.SetActive(true);
+                    m_CorrectTitle.gameObject.SetActive(true);
+                    m_CorrectNote.gameObject.SetActive(true);
                 }
                 m_SFXSource.PlayOneShot(m_RightSFX);
             }
@@ -588,44 +589,44 @@ namespace EduGame
                 }
                 else
                 {
-                    if (wrongFeedback)
-                        wrongFeedback.Play(npc ? npc : transform);
+                    if (m_WrongFeedback)
+                        m_WrongFeedback.Play(m_Npc ? m_Npc : transform);
 
-                    if (npcDialog)
+                    if (m_NpcDialog)
                         SetNPCDialog("Oh no!");
 
-                    wrongTitle.gameObject.SetActive(true);
-                    wrongNote.gameObject.SetActive(true);
+                    m_WrongTitle.gameObject.SetActive(true);
+                    m_WrongNote.gameObject.SetActive(true);
                 }
                 m_SFXSource.PlayOneShot(m_WrongSFX);
             }
 
-            if (stars != null && stars.Length > 0)
+            if (m_Stars != null && m_Stars.Length > 0)
             {
-                for (int i = 0; i < stars.Length; i++)
+                for (int i = 0; i < m_Stars.Length; i++)
                 {
-                    stars[i].gameObject.SetActive(true);
+                    m_Stars[i].gameObject.SetActive(true);
 
                     if (i < star)
-                        stars[i].color = Color.white;
+                        m_Stars[i].color = Color.white;
                     else
-                        stars[i].color = Color.black;
+                        m_Stars[i].color = Color.black;
                 }
             }
 
             if (IsLastQuestInternal())
             {
-                buttonNext.gameObject.SetActive(false);
+                m_ButtonNext.gameObject.SetActive(false);
                 SendResult();
             }
             else
-                buttonNext.gameObject.SetActive(true);
+                m_ButtonNext.gameObject.SetActive(true);
 
         }
 
         private bool IsLastQuestInternal()
         {
-            return currentIndex + 1 == quests.Length;
+            return m_CurrentIndex + 1 == m_Quests.Length;
         }
         public bool IsLastQuest()
         {
@@ -634,10 +635,10 @@ namespace EduGame
 
         public virtual void GoHome()
         {
-            if (!string.IsNullOrEmpty(baseURL))
+            if (!string.IsNullOrEmpty(m_BaseURL))
             {
 #if !UNITY_EDITOR && UNITY_WEBGL
-                    RedirectParentWindow(baseURL);
+                    RedirectParentWindow(m_BaseURL);
 #endif
             }
         }
@@ -646,31 +647,31 @@ namespace EduGame
         {
             Result compiledResult = new Result
             {
-                session_id = sessionId,
-                result = result
+                session_id = m_SessionId,
+                result = m_Result
             };
 
             string json = JsonUtility.ToJson(compiledResult);
 
-            if (apiManager)
-                apiManager.SendData(APIResultURL, json);
+            if (m_ApiManager)
+                m_ApiManager.SendData(m_APIResultURL, json);
         }
 
 
         public virtual void CloseResult()
         {
-            if (popResult)
-                popResult.gameObject.SetActive(false);
+            if (m_PopResult)
+                m_PopResult.gameObject.SetActive(false);
 
-            correctTitle.gameObject.SetActive(false);
-            correctNote.gameObject.SetActive(false);
-            wrongTitle.gameObject.SetActive(false);
-            wrongNote.gameObject.SetActive(false);
+            m_CorrectTitle.gameObject.SetActive(false);
+            m_CorrectNote.gameObject.SetActive(false);
+            m_WrongTitle.gameObject.SetActive(false);
+            m_WrongNote.gameObject.SetActive(false);
 
-            if (stars != null && stars.Length > 0)
+            if (m_Stars != null && m_Stars.Length > 0)
             {
-                for (int i = 0; i < stars.Length; i++)
-                    stars[i].gameObject.SetActive(false);
+                for (int i = 0; i < m_Stars.Length; i++)
+                    m_Stars[i].gameObject.SetActive(false);
             }
         }
 
@@ -685,12 +686,12 @@ namespace EduGame
 
         public void ShowTutorial(RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Click)
         {
-            ShowTutorial(npcDialog.rectTransform, endPos, mode);
+            ShowTutorial(m_NpcDialog.rectTransform, endPos, mode);
         }
 
         public void ShowTutorial(RectTransform startPos, RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Click)
         {
-            if (m_HandTutorial && currentIndex == 0)
+            if (m_HandTutorial && m_CurrentIndex == 0)
             {
                 m_HandTutorial.PlayTutorial(startPos, endPos, Canvas.transform, mode);
             }

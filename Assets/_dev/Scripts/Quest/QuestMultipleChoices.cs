@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -15,45 +16,45 @@ namespace EduGame
         [Header("Components")]
         [SerializeField] 
         private RectTransform m_MultipleImagesQuestionContainer;
-        [SerializeField] private Image questionImage;
-        [SerializeField] private AudioPlayer questionAudio;
-        [SerializeField] private TMP_Text questionText;
+        [SerializeField] [FormerlySerializedAs("questionImage")] private Image m_QuestionImage;
+        [SerializeField] [FormerlySerializedAs("questionAudio")] private AudioPlayer m_QuestionAudio;
+        [SerializeField] [FormerlySerializedAs("questionText")] private TMP_Text m_QuestionText;
         [SerializeField]
         private TextMeshProUGUI m_QuestName;
-        [SerializeField] private RectTransform choicesContainer;
+        [SerializeField] [FormerlySerializedAs("choicesContainer")] private RectTransform m_ChoicesContainer;
         [SerializeField]
         private AnimationHandler m_QuestAnimationHandler;
 
         [Header("Prefab")]
-        [SerializeField] private QuestMultipleChoicesItem choiceItemPrefab;
+        [SerializeField] [FormerlySerializedAs("choiceItemPrefab")] private QuestMultipleChoicesItem m_ChoiceItemPrefab;
 
-        private SO_QuestMultipleChoice dataMultipleChoice;
-        private QuestMultipleChoicesItem[] choices;
+        private SO_QuestMultipleChoice m_DataMultipleChoice;
+        private QuestMultipleChoicesItem[] m_Choices;
         public AnimationHandler QuestAnimationHandler => m_QuestAnimationHandler;
-        private int unansweredCorrect = 0;
+        private int m_UnansweredCorrect = 0;
 
-        private VoiceRequest voiceQuestionRequest = new VoiceRequest();
+        private VoiceRequest m_VoiceQuestionRequest = new VoiceRequest();
 
         private List<Image> m_SpawnedmultipleImages = new List<Image>();
 
-        private QuestMultipleChoicesItem correctChoice;
+        private QuestMultipleChoicesItem m_CorrectChoice;
 
         private TextEffect m_TextEffect;
         protected override void Start()
         {
             base.Start();
             
-            if(!dataMultipleChoice)
+            if(!m_DataMultipleChoice)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoice");
 
-            unansweredCorrect = dataMultipleChoice.TotalAnswer;
+            m_UnansweredCorrect = m_DataMultipleChoice.TotalAnswer;
 
             // using the new multiple images question system
-            if (data.HasMultipleImages(out var multipleImages, out var prefab) && m_MultipleImagesQuestionContainer)
+            if (m_Data.HasMultipleImages(out var multipleImages, out var prefab) && m_MultipleImagesQuestionContainer)
             {
                 m_MultipleImagesQuestionContainer.gameObject.SetActive(true);
-                questionImage.gameObject.SetActive(false);
-                questionImage.transform.parent.gameObject.SetActive(false);
+                m_QuestionImage.gameObject.SetActive(false);
+                m_QuestionImage.transform.parent.gameObject.SetActive(false);
                 foreach (var image in m_SpawnedmultipleImages)
                 {
                     image.gameObject.SetActive(false);
@@ -80,57 +81,57 @@ namespace EduGame
                     m_MultipleImagesQuestionContainer.gameObject.SetActive(false);
                 }
                 // old code for single image question
-                if (questionImage)
+                if (m_QuestionImage)
                 {
-                    questionImage.gameObject.SetActive(true);
-                    if (dataMultipleChoice.Question.Image)
-                        questionImage.sprite = dataMultipleChoice.Question.Image;
+                    m_QuestionImage.gameObject.SetActive(true);
+                    if (m_DataMultipleChoice.Question.Image)
+                        m_QuestionImage.sprite = m_DataMultipleChoice.Question.Image;
                     else
                     {
-                        questionImage.gameObject.SetActive(false);
-                        questionImage.transform.parent.gameObject.SetActive(false);
+                        m_QuestionImage.gameObject.SetActive(false);
+                        m_QuestionImage.transform.parent.gameObject.SetActive(false);
                     }
                 }
 
             }
             
 
-            if (questionAudio)
+            if (m_QuestionAudio)
             {
-                if (dataMultipleChoice.Question.Audio)
-                    questionAudio.SetAudioClip(dataMultipleChoice.Question.Audio);
+                if (m_DataMultipleChoice.Question.Audio)
+                    m_QuestionAudio.SetAudioClip(m_DataMultipleChoice.Question.Audio);
                 else
                 {
-                    questionAudio.gameObject.SetActive(false);
-                    questionAudio.transform.parent.gameObject.SetActive(false);
+                    m_QuestionAudio.gameObject.SetActive(false);
+                    m_QuestionAudio.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (questionText)
+            if (m_QuestionText)
             {
-                if (dataMultipleChoice.Question.FormatedText)
+                if (m_DataMultipleChoice.Question.FormatedText)
                 {
-                    if (questionText.TryGetComponent(out TextEffect textEff))
+                    if (m_QuestionText.TryGetComponent(out TextEffect textEff))
                     {
                         m_TextEffect = textEff;
                     }
-                    m_TextEffect.preset = dataMultipleChoice.Question.FormatedText.EffectPreset;
-                    questionText.text = dataMultipleChoice.Question.FormatedText.GetFormattedText();
+                    m_TextEffect.preset = m_DataMultipleChoice.Question.FormatedText.EffectPreset;
+                    m_QuestionText.text = m_DataMultipleChoice.Question.FormatedText.GetFormattedText();
                     m_TextEffect.Refresh();
                 }
                 else
                 {
                     // we can control color with formated text, maybe we should remove this option in the future
-                    if (dataMultipleChoice.Question.UseTextColor)
+                    if (m_DataMultipleChoice.Question.UseTextColor)
                     {
-                        questionText.color = dataMultipleChoice.Question.TextColor;
+                        m_QuestionText.color = m_DataMultipleChoice.Question.TextColor;
                     }
-                    if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
-                        questionText.text = dataMultipleChoice.Question.Text;
+                    if (!string.IsNullOrEmpty(m_DataMultipleChoice.Question.Text))
+                        m_QuestionText.text = m_DataMultipleChoice.Question.Text;
                     else
                     {
-                        questionText.gameObject.SetActive(false);
-                        questionText.transform.parent.gameObject.SetActive(false);
+                        m_QuestionText.gameObject.SetActive(false);
+                        m_QuestionText.transform.parent.gameObject.SetActive(false);
                     }
                 }
                 
@@ -140,38 +141,38 @@ namespace EduGame
             {
                 if (m_Challenged.ChoicePrefab is QuestMultipleChoicesItem choicePrefab)
                 {
-                    choicesContainer.gameObject.SetActive(true);
-                    choices = new QuestMultipleChoicesItem[dataMultipleChoice.Choices.Length];
-                    for (int i = 0; i < dataMultipleChoice.Choices.Length; i++)
+                    m_ChoicesContainer.gameObject.SetActive(true);
+                    m_Choices = new QuestMultipleChoicesItem[m_DataMultipleChoice.Choices.Length];
+                    for (int i = 0; i < m_DataMultipleChoice.Choices.Length; i++)
                     {
-                        choices[i] = InstantiateItem(choicePrefab, i);
-                        choices[i].SetChoice(dataMultipleChoice.Choices[i]);
+                        m_Choices[i] = InstantiateItem(choicePrefab, i);
+                        m_Choices[i].SetChoice(m_DataMultipleChoice.Choices[i]);
 
-                        if(dataMultipleChoice.Choices[i].IsAnswer)
-                            correctChoice = choices[i];
+                        if(m_DataMultipleChoice.Choices[i].IsAnswer)
+                            m_CorrectChoice = m_Choices[i];
                     
                     }
                 }
                 if (m_QuestName)
                 {
-                    m_QuestName.text = dataMultipleChoice.Question.Text;
+                    m_QuestName.text = m_DataMultipleChoice.Question.Text;
                 }
             }
             else
             {
-                if (choicesContainer && choiceItemPrefab)
+                if (m_ChoicesContainer && m_ChoiceItemPrefab)
                 {
-                    choicesContainer.gameObject.SetActive(true);
+                    m_ChoicesContainer.gameObject.SetActive(true);
 
-                    choices = new QuestMultipleChoicesItem[dataMultipleChoice.Choices.Length];
+                    m_Choices = new QuestMultipleChoicesItem[m_DataMultipleChoice.Choices.Length];
 
-                    for (int i = 0; i < dataMultipleChoice.Choices.Length; i++)
+                    for (int i = 0; i < m_DataMultipleChoice.Choices.Length; i++)
                     {
-                        choices[i] = InstantiateItem(choices[0], i);
-                        choices[i].SetChoice(dataMultipleChoice.Choices[i]);
+                        m_Choices[i] = InstantiateItem(m_Choices[0], i);
+                        m_Choices[i].SetChoice(m_DataMultipleChoice.Choices[i]);
 
-                        if(dataMultipleChoice.Choices[i].IsAnswer)
-                            correctChoice = choices[i];
+                        if(m_DataMultipleChoice.Choices[i].IsAnswer)
+                            m_CorrectChoice = m_Choices[i];
                     }
                 }
             }
@@ -183,7 +184,7 @@ namespace EduGame
 
         public override void Setup()
         {
-            dataMultipleChoice = data as SO_QuestMultipleChoice;
+            m_DataMultipleChoice = m_Data as SO_QuestMultipleChoice;
 
             base.Setup();
         }
@@ -199,19 +200,19 @@ namespace EduGame
 
         IEnumerator PlayChoicesVoiceCO()
         {
-            yield return new WaitWhile(() => audioSource.isPlaying);
+            yield return new WaitWhile(() => m_AudioSource.isPlaying);
 
             yield return new WaitForSeconds(1);
 
-            foreach (var choice in dataMultipleChoice.Choices)
+            foreach (var choice in m_DataMultipleChoice.Choices)
             {
-                yield return new WaitWhile(() => audioSource.isPlaying);
+                yield return new WaitWhile(() => m_AudioSource.isPlaying);
 
                 if(choice.Audio)
                 {
                     yield return new WaitForSeconds(0.5f);
 
-                    audioSource.PlayOneShot(choice.Audio);
+                    m_AudioSource.PlayOneShot(choice.Audio);
                 }
             }
 
@@ -220,9 +221,9 @@ namespace EduGame
 
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)
         {
-            QuestMultipleChoicesItem choiceItem = Instantiate(prefab ? prefab : choiceItemPrefab);
+            QuestMultipleChoicesItem choiceItem = Instantiate(prefab ? prefab : m_ChoiceItemPrefab);
 
-            choiceItem.transform.SetParent(choicesContainer);
+            choiceItem.transform.SetParent(m_ChoicesContainer);
             choiceItem.transform.localPosition = Vector3.zero;
             choiceItem.Init();
             choiceItem.Rect.localScale = Vector3.one;
@@ -237,14 +238,14 @@ namespace EduGame
 
             if (result == true)
             {
-                unansweredCorrect--;
+                m_UnansweredCorrect--;
 
-                isFinished = unansweredCorrect <= 0;
+                isFinished = m_UnansweredCorrect <= 0;
             }
 
             if (isFinished)
             {
-                foreach (var choice in choices)
+                foreach (var choice in m_Choices)
                     choice.Disable();
 
                 Submit();
@@ -253,7 +254,7 @@ namespace EduGame
 
         public override void Submit(int star = 1)
         {
-            if(unansweredCorrect == 0)
+            if(m_UnansweredCorrect == 0)
                 star = 3;
 
             StopAllCoroutines();
@@ -263,11 +264,11 @@ namespace EduGame
 
         public override void Reset()
         {
-            unansweredCorrect = dataMultipleChoice.TotalAnswer;
+            m_UnansweredCorrect = m_DataMultipleChoice.TotalAnswer;
 
-            if(choices != null)
+            if(m_Choices != null)
             {
-                foreach (var choice in choices)
+                foreach (var choice in m_Choices)
                     choice.Reset();
             }
                 
@@ -278,11 +279,11 @@ namespace EduGame
 
         void RecalculateChoiceContainer()
         {
-            if (choices[0].Rect.sizeDelta.x > 0 && choices[0].Rect.sizeDelta.y > 0)
+            if (m_Choices[0].Rect.sizeDelta.x > 0 && m_Choices[0].Rect.sizeDelta.y > 0)
             {
-                GridLayoutGroup gridLayoutGroup = choicesContainer.GetComponent<GridLayoutGroup>();
+                GridLayoutGroup gridLayoutGroup = m_ChoicesContainer.GetComponent<GridLayoutGroup>();
                 if (gridLayoutGroup)
-                    gridLayoutGroup.cellSize = choices[0].Rect.sizeDelta;
+                    gridLayoutGroup.cellSize = m_Choices[0].Rect.sizeDelta;
             }
         }
 
@@ -299,21 +300,21 @@ namespace EduGame
         void SetDialog()
         {
             
-            if (!string.IsNullOrEmpty(dataMultipleChoice.Question.Text))
+            if (!string.IsNullOrEmpty(m_DataMultipleChoice.Question.Text))
             {
-                string dialog = dataMultipleChoice.Question.Text;
-                if (dataMultipleChoice.Question.FormatedText)
+                string dialog = m_DataMultipleChoice.Question.Text;
+                if (m_DataMultipleChoice.Question.FormatedText)
                 {
-                    dialog = dataMultipleChoice.Question.FormatedText.GetFormattedText();
+                    dialog = m_DataMultipleChoice.Question.FormatedText.GetFormattedText();
                     
                 }
                 GameManager.Instance.SetNPCDialog(dialog);
             }
             if (m_Challenged)
             {
-                if (dataMultipleChoice.HowManySoundConfig && m_QuestAnimationHandler)
+                if (m_DataMultipleChoice.HowManySoundConfig && m_QuestAnimationHandler)
                 {
-                    m_QuestAnimationHandler.SetClip(dataMultipleChoice.HowManySoundConfig);
+                    m_QuestAnimationHandler.SetClip(m_DataMultipleChoice.HowManySoundConfig);
                 }
             }
         }
@@ -325,8 +326,8 @@ namespace EduGame
         public override VoiceRequest[] GetVoiceRequests()
         {
             Setup();
-            return dataMultipleChoice != null
-                ? dataMultipleChoice.GetVoiceRequests()
+            return m_DataMultipleChoice != null
+                ? m_DataMultipleChoice.GetVoiceRequests()
                 : Array.Empty<VoiceRequest>();
         }
 
@@ -335,7 +336,7 @@ namespace EduGame
         /// </summary>
         public override bool HasVoiceClip(string requestId)
         {
-            return dataMultipleChoice != null && dataMultipleChoice.HasVoiceClip(requestId);
+            return m_DataMultipleChoice != null && m_DataMultipleChoice.HasVoiceClip(requestId);
         }
 
         /// <summary>
@@ -343,13 +344,13 @@ namespace EduGame
         /// </summary>
         public override void AssignVoiceClip(string requestId, AudioClip clip)
         {
-            if (dataMultipleChoice != null)
-                dataMultipleChoice.AssignVoiceClip(requestId, clip);
+            if (m_DataMultipleChoice != null)
+                m_DataMultipleChoice.AssignVoiceClip(requestId, clip);
         }
 
         public override void ShowTutorial()
         {
-            GameManager.Instance.ShowTutorial(correctChoice ? correctChoice.Rect : choices[0].Rect);
+            GameManager.Instance.ShowTutorial(m_CorrectChoice ? m_CorrectChoice.Rect : m_Choices[0].Rect);
         }
     }
 }

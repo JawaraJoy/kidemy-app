@@ -1,33 +1,34 @@
 using System;
 using EduGame;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     [CreateAssetMenu(fileName = "SO_Challenge", menuName = "EduGame/Challenge")]
     public class SO_Challenge : ScriptableObject
     {
-        [SerializeField] private QuestItem[] quests;
+        [SerializeField] [FormerlySerializedAs("quests")] private QuestItem[] m_Quests;
 
-        private int difficulty = 1;
+        private int m_Difficulty = 1;
 
-        public QuestItem[] Quests => quests;
-        public int Difficulty { get => difficulty; set { difficulty = value; } }
+        public QuestItem[] Quests => m_Quests;
+        public int Difficulty { get => m_Difficulty; set { m_Difficulty = value; } }
     }
 
     [Serializable]
     public class QuestItem
     {
-        [SerializeField] private bool active = true;
-        [SerializeField] private SO_Quest quest;
-        [SerializeField] private Quest template;
+        [SerializeField] [FormerlySerializedAs("active")] private bool m_Active = true;
+        [SerializeField] [FormerlySerializedAs("quest")] private SO_Quest m_Quest;
+        [SerializeField] [FormerlySerializedAs("template")] private Quest m_Template;
 
         [Header("Score (Leave zero to use score from quest)")]
-        [SerializeField] private int score;
+        [SerializeField] [FormerlySerializedAs("score")] private int m_Score;
 
-        public bool Active => active;
-        public SO_Quest Quest => quest;
-        public Quest Template => template;
-        public int Score => score;
+        public bool Active => m_Active;
+        public SO_Quest Quest => m_Quest;
+        public Quest Template => m_Template;
+        public int Score => m_Score;
     }
 }

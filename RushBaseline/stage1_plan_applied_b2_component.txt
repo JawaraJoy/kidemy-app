@@ -1,0 +1,135 @@
+RENAME PLAN: targets=92 (auto=92, manual=0), serialized=42, protected=31, files to edit=16, edits=470, shadow-skipped=43, inside #if=0, unparsable files=0, warnings=0
+
+=== MANUAL ===
+
+=== AUTOMATIC ===
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs
+  QuestColoringField.rect -> m_Rect  [private instance] renamed=6 this/base-forced=0 shadow-skipped=0
+  QuestColoringField.rt -> m_Rt  [private instance] renamed=11 this/base-forced=0 shadow-skipped=0
+  QuestColoringField.cb -> m_Cb  [private instance] renamed=7 this/base-forced=0 shadow-skipped=0
+  QuestColoringField.e -> m_E  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestColoringField.questColoring -> m_QuestColoring  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestColoringField.baseTexture -> m_BaseTexture  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestColoringItem.cs
+  QuestColoringItem.image -> m_Image  [private instance] renamed=6 this/base-forced=0 shadow-skipped=0
+  QuestColoringItem.texture -> m_Texture  [private instance] renamed=1 this/base-forced=0 shadow-skipped=0
+  QuestColoringItem.defaultColor -> m_DefaultColor  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestColoringItem.questColoring -> m_QuestColoring  [private instance] renamed=6 this/base-forced=0 shadow-skipped=0
+  QuestColoringItem.regionalClick -> m_RegionalClick  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestColoringPalette.cs
+  QuestColoringPalette.image -> m_Image  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestColoringPalette.button -> m_Button  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestColoringPalette.defaultColor -> m_DefaultColor  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestColoringPalette.questColoring -> m_QuestColoring  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestComponent.cs
+  QuestComponent.quest -> m_Quest  [protected instance] renamed=10 this/base-forced=0 shadow-skipped=0 files=6
+  QuestComponent.isInit -> m_IsInit  [protected instance] renamed=3 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropItem.cs
+  QuestDragNDropItem.text -> m_Text  [protected instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.audioPlayer -> m_AudioPlayer  [private instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.image -> m_Image  [private instance serialized] renamed=7 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.tint -> m_Tint  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.layoutElement -> m_LayoutElement  [protected instance] renamed=1 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.originalPosition -> m_OriginalPosition  [protected instance] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.originalParent -> m_OriginalParent  [protected instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.canvasGroup -> m_CanvasGroup  [protected instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.originalSize -> m_OriginalSize  [protected instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.imageRect -> m_ImageRect  [protected instance] renamed=6 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.correct -> m_Correct  [protected instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropItem.wrong -> m_Wrong  [protected instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropSlot.cs
+  QuestDragNDropSlot.text -> m_Text  [protected instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropSlot.audioPlayer -> m_AudioPlayer  [private instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropSlot.image -> m_Image  [private instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropSlot.tints -> m_Tints  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropSlot.dropZone -> m_DropZone  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropSlot.orderLabel -> m_OrderLabel  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropSlot.step -> m_Step  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropSlot.questDragNDrop -> m_QuestDragNDrop  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropSlot.labelColor -> m_LabelColor  [private instance] renamed=1 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs
+  QuestDragNDropZone.displayMode -> m_DisplayMode  [private instance serialized] renamed=18 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropZone.dropInfo -> m_DropInfo  [private instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropZone.verify -> m_Verify  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropZone.answer -> m_Answer  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropZone.acceptSound -> m_AcceptSound  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropZone.rejectSound -> m_RejectSound  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropZone.items -> m_Items  [private instance] renamed=8 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropZone.slot -> m_Slot  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropZone.quest -> m_Quest  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestDragNDropZone.grid -> m_Grid  [private instance] renamed=8 this/base-forced=0 shadow-skipped=2
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:271
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:277
+  QuestDragNDropZone.animator -> m_Animator  [private instance] renamed=6 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs
+  QuestMatchingCard.cardFace -> m_CardFace  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestMatchingCard.cardBack -> m_CardBack  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestMatchingCard.matching -> m_Matching  [private instance] renamed=6 this/base-forced=0 shadow-skipped=0
+  QuestMatchingCard.match -> m_Match  [private instance] renamed=3 this/base-forced=1 shadow-skipped=3
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:33
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:35
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:37
+  QuestMatchingCard.isComplete -> m_IsComplete  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs
+  QuestMultipleChoicesItem.text -> m_Text  [protected instance serialized] renamed=11 this/base-forced=0 shadow-skipped=0 files=2
+  QuestMultipleChoicesItem.audioPlayer -> m_AudioPlayer  [protected instance serialized] renamed=9 this/base-forced=0 shadow-skipped=0 files=2
+  QuestMultipleChoicesItem.image -> m_Image  [protected instance serialized] renamed=11 this/base-forced=0 shadow-skipped=0 files=2
+  QuestMultipleChoicesItem.tint -> m_Tint  [protected instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestMultipleChoicesItem.correct -> m_Correct  [protected instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestMultipleChoicesItem.wrong -> m_Wrong  [protected instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestMultipleChoicesItem.choice -> m_Choice  [protected instance] renamed=4 this/base-forced=2 shadow-skipped=24 files=2
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:51
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:53
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:55
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:59
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:75
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestMultipleChoicesItem.cs:77
+  QuestMultipleChoicesItem.events -> m_Events  [protected instance] renamed=6 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestPaginator.cs
+  QuestPaginator.previousButton -> m_PreviousButton  [private instance serialized] renamed=8 this/base-forced=0 shadow-skipped=0
+  QuestPaginator.nextButton -> m_NextButton  [private instance serialized] renamed=6 this/base-forced=0 shadow-skipped=0
+  QuestPaginator.pageIndicator -> m_PageIndicator  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestPaginator.totalPages -> m_TotalPages  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestPaginator.currentPageIndex -> m_CurrentPageIndex  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs
+  QuestRythimBeat.audioSource -> m_AudioSource  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestRythimBeat.clip -> m_Clip  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestRythimBeat.col -> m_Col  [private instance] renamed=6 this/base-forced=0 shadow-skipped=0
+  QuestRythimBeat.animator -> m_Animator  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestRythimBeat.isOnBeat -> m_IsOnBeat  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  QuestRythimBeat.isSuccess -> m_IsSuccess  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs
+  QuestRythimNote.point -> m_Point  [protected instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestRythimNote.rb -> m_Rb  [private instance] renamed=6 this/base-forced=0 shadow-skipped=0
+  QuestRythimNote.isPlaying -> m_IsPlaying  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestRythimNote.isDone -> m_IsDone  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestRythimNote.speed -> m_Speed  [private instance] renamed=3 this/base-forced=1 shadow-skipped=2
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:45
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:47
+  QuestRythimNote.delay -> m_Delay  [private instance] renamed=4 this/base-forced=1 shadow-skipped=2
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:45
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:48
+  QuestRythimNote.clip -> m_Clip  [private instance] renamed=4 this/base-forced=1 shadow-skipped=2
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:45
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:49
+Assets/_dev/Scripts/Quest/Component/QuestRythimNoteItem.cs
+  QuestRythimNoteItem.notePrefab -> m_NotePrefab  [protected instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestRythimNoteItem.delay -> m_Delay  [protected instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestRythimNoteItem.speedModifier -> m_SpeedModifier  [protected instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestRythimNoteItem.clip -> m_Clip  [protected instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestShapeItCanvas.cs
+  QuestShapeItCanvas.items -> m_Items  [protected instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestShapeItCanvas.zones -> m_Zones  [protected instance] renamed=3 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs
+  QuestWordBuilderItem.text -> m_Text  [protected instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestWordBuilderItem.audioPlayer -> m_AudioPlayer  [private instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestWordBuilderItem.image -> m_Image  [private instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  QuestWordBuilderItem.correct -> m_Correct  [protected instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestWordBuilderItem.wrong -> m_Wrong  [protected instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestWordBuilderItem.choice -> m_Choice  [protected instance] renamed=2 this/base-forced=1 shadow-skipped=8
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:33
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:35
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:37
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:40
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:48
+      shadowed in Assets/_dev/Scripts/Quest/Component/QuestWordBuilderItem.cs:51

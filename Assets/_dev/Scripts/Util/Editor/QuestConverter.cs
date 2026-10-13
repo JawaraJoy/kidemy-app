@@ -4,9 +4,9 @@ using EduGame;
 
 public static class QuestConverter
 {
-    private const string MenuItemName = "Assets/Convert Quest to Narrative";
+    private const string c_MenuItemName = "Assets/Convert Quest to Narrative";
 
-    [MenuItem(MenuItemName, false, 2000)]
+    [MenuItem(c_MenuItemName, false, 2000)]
     private static void ConvertQuestToNarrative()
     {
         Object[] selectedObjects = Selection.objects;
@@ -79,7 +79,7 @@ public static class QuestConverter
     }
 
     // Validation rule (Only enables the context menu item if a valid Prefab with QuestMultipleChoices is selected)
-    [MenuItem(MenuItemName, true)]
+    [MenuItem(c_MenuItemName, true)]
     private static bool ValidateConvertQuestToNarrative()
     {
         if (Selection.objects == null || Selection.objects.Length == 0) return false;

@@ -2,6 +2,7 @@ using EasyTextEffects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -10,7 +11,7 @@ namespace EduGame
         [SerializeField]
         private Image m_NPCPotrait;
         [SerializeField]
-        private Image ConfirmationImage;
+        [FormerlySerializedAs("ConfirmationImage")] private Image m_ConfirmationImage;
         [SerializeField]
         private Image m_FeelImage;
         [SerializeField]
@@ -34,7 +35,7 @@ namespace EduGame
         public void ShowReaction(ReactionConfig reactionConfig)
         {
             m_NPCPotrait.sprite = reactionConfig.NPCPotrait;
-            ConfirmationImage.sprite = reactionConfig.ConfirmationImage;
+            m_ConfirmationImage.sprite = reactionConfig.ConfirmationImage;
             m_FeelImage.color = reactionConfig.FeelColor;
             m_TextEffect.Refresh();
             m_TextEffect.preset = reactionConfig.DialogueConfig.EffectPreset;

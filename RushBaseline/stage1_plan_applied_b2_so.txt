@@ -1,0 +1,69 @@
+RENAME PLAN: targets=52 (auto=52, manual=0), serialized=41, protected=6, files to edit=12, edits=222, shadow-skipped=0, inside #if=0, unparsable files=0, warnings=0
+
+=== MANUAL ===
+
+=== AUTOMATIC ===
+Assets/_dev/Scripts/SO/SO_Challenge.cs
+  SO_Challenge.quests -> m_Quests  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_Challenge.difficulty -> m_Difficulty  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  QuestItem.active -> m_Active  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestItem.quest -> m_Quest  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestItem.template -> m_Template  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  QuestItem.score -> m_Score  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_Character.cs
+  SO_Character.characterId -> m_CharacterId  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_Character.characterName -> m_CharacterName  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_Character.characterImage -> m_CharacterImage  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_Character.characterController -> m_CharacterController  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_Quest.cs
+  SO_Quest.id -> m_Id  [protected instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_Quest.title -> m_Title  [protected instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_Quest.category -> m_Category  [protected instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_Quest.character -> m_Character  [protected instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  SO_Quest.question -> m_Question  [protected instance serialized] renamed=8 this/base-forced=0 shadow-skipped=0
+  SO_Quest.autoSubmit -> m_AutoSubmit  [protected instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_Quest.score -> m_Score  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_Quest.tresholdTime -> m_TresholdTime  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_QuestColoring.cs
+  SO_QuestColoring.text -> m_Text  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestColoring.canvas -> m_Canvas  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_QuestDragNDrop.cs
+  SO_QuestDragNDrop.groups -> m_Groups  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  SO_QuestDragNDrop.randomizeChoice -> m_RandomizeChoice  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestDragNDrop.answerInOrder -> m_AnswerInOrder  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestDragNDrop.timer -> m_Timer  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestDragNDrop.compiledIndex -> m_CompiledIndex  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  SO_QuestDragNDrop.compiledMap -> m_CompiledMap  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  SO_QuestDragNDrop.compiledItems -> m_CompiledItems  [private instance] renamed=6 this/base-forced=0 shadow-skipped=0
+  SO_QuestDragNDrop.slots -> m_Slots  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_QuestMatching.cs
+  SO_QuestMatching.text -> m_Text  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestMatching.matches -> m_Matches  [private instance serialized] renamed=6 this/base-forced=0 shadow-skipped=0
+  SO_QuestMatching.compiledMatches -> m_CompiledMatches  [private instance] renamed=8 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_QuestMultipleChoice.cs
+  SO_QuestMultipleChoice.choices -> m_Choices  [private instance serialized] renamed=16 this/base-forced=0 shadow-skipped=0
+  SO_QuestMultipleChoice.timer -> m_Timer  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestMultipleChoice.randomizeChoice -> m_RandomizeChoice  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestMultipleChoice.totalAnswer -> m_TotalAnswer  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  SO_QuestMultipleChoice.randomizedChoices -> m_RandomizedChoices  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_QuestMultipleChoiceFinder.cs
+  SO_QuestMultipleChoiceFinder.choices -> m_Choices  [private instance serialized] renamed=1 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_QuestMultipleChoiceNarrative.cs
+  SO_QuestMultipleChoiceNarrative.narrative -> m_Narrative  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_QuestRythimMaker.cs
+  SO_QuestRythimMaker.speed -> m_Speed  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestRythimMaker.notes -> m_Notes  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  SO_QuestRythimMaker.timer -> m_Timer  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestRythimMaker.randomizeChoice -> m_RandomizeChoice  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestRythimMaker.randomizedNotes -> m_RandomizedNotes  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_QuestShapeIt.cs
+  SO_QuestShapeIt.canvas -> m_Canvas  [private instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  SO_QuestShapeIt.timer -> m_Timer  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestShapeIt.randomizeChoice -> m_RandomizeChoice  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestShapeIt.randomizedChoices -> m_RandomizedChoices  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/SO/SO_QuestWordBuilder.cs
+  SO_QuestWordBuilder.answer -> m_Answer  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestWordBuilder.values -> m_Values  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  SO_QuestWordBuilder.timer -> m_Timer  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestWordBuilder.randomizeChoice -> m_RandomizeChoice  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  SO_QuestWordBuilder.randomizedChoices -> m_RandomizedChoices  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0

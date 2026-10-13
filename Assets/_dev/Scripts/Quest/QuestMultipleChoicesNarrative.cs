@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -8,24 +9,24 @@ namespace EduGame
         [Header("Data")]
 
         [Header("Components")]
-        [SerializeField] private TMP_Text narrativeText;
+        [SerializeField] [FormerlySerializedAs("narrativeText")] private TMP_Text m_NarrativeText;
 
-        private SO_QuestMultipleChoiceNarrative dataMultipleChoiceNarrative;
+        private SO_QuestMultipleChoiceNarrative m_DataMultipleChoiceNarrative;
 
         protected override void Start()
         {
             base.Start();
 
-            if (!dataMultipleChoiceNarrative)
+            if (!m_DataMultipleChoiceNarrative)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoiceNarrative");
 
-            if (narrativeText)
-                narrativeText.text = dataMultipleChoiceNarrative.Narrative;
+            if (m_NarrativeText)
+                m_NarrativeText.text = m_DataMultipleChoiceNarrative.Narrative;
         }
 
         public override void Setup()
         {
-            dataMultipleChoiceNarrative = data as SO_QuestMultipleChoiceNarrative;
+            m_DataMultipleChoiceNarrative = m_Data as SO_QuestMultipleChoiceNarrative;
 
             base.Setup();
         }
@@ -40,9 +41,9 @@ namespace EduGame
 
             VoiceRequest[] voiceRequests = base.GetVoiceRequests();
 
-            if (voiceRequests.Length > 0 && data != null && data.Question != null && !string.IsNullOrEmpty(data.Question.Text))
+            if (voiceRequests.Length > 0 && m_Data != null && m_Data.Question != null && !string.IsNullOrEmpty(m_Data.Question.Text))
             {
-                string textVoice = data.Question.Text;
+                string textVoice = m_Data.Question.Text;
                 
                 TMP_Text narrative = GetComponentInChildren<TMP_Text>();
                 

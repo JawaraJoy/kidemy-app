@@ -4,10 +4,10 @@ using EduGame;
 
 public class UpdateMultipleChoiceToNarrative : EditorWindow
 {
-    private const string MenuItemName = "Assets/Update to Narrative";
+    private const string c_MenuItemName = "Assets/Update to Narrative";
 
     // 1. Context Menu Action
-    [MenuItem(MenuItemName, false, 2000)]
+    [MenuItem(c_MenuItemName, false, 2000)]
     public static void UpdateSelectedToNarrative()
     {
         // Get all selected assets in the Project window
@@ -80,7 +80,7 @@ public class UpdateMultipleChoiceToNarrative : EditorWindow
     }
 
     // 2. Validation Rule (Controls menu visibility / active state)
-    [MenuItem(MenuItemName, true)]
+    [MenuItem(c_MenuItemName, true)]
     private static bool ValidateUpdateSelectedToNarrative()
     {
         if (Selection.objects == null || Selection.objects.Length == 0)

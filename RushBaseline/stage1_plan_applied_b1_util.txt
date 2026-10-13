@@ -1,0 +1,49 @@
+RENAME PLAN: targets=29 (auto=29, manual=0), serialized=16, protected=2, files to edit=13, edits=140, shadow-skipped=2, inside #if=15, unparsable files=0, warnings=0
+
+=== MANUAL ===
+
+=== AUTOMATIC ===
+Assets/_dev/Scripts/Util/AudioPlayer.cs
+  AudioPlayer.audioClip -> m_AudioClip  [private instance serialized] renamed=4 this/base-forced=1 shadow-skipped=2
+      shadowed in Assets/_dev/Scripts/Util/AudioPlayer.cs:21
+      shadowed in Assets/_dev/Scripts/Util/AudioPlayer.cs:23
+  AudioPlayer.button -> m_Button  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/ButtonEvent.cs
+  ButtonEvents.onPointerOver -> m_OnPointerOver  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  ButtonEvents.onPointerExit -> m_OnPointerExit  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  ButtonEvents.onPointerClick -> m_OnPointerClick  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs
+  QuestConverter.MenuItemName -> c_MenuItemName  [private const] renamed=3 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/Editor/UpdateMultipleChoiceToNarrative.cs
+  UpdateMultipleChoiceToNarrative.MenuItemName -> c_MenuItemName  [private const] renamed=3 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/Feedback.cs
+  Feedback.feedbackItems -> m_FeedbackItems  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/FeedbackItem.cs
+  FeedbackItem.delay -> m_Delay  [protected instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  FeedbackItem.delayStop -> m_DelayStop  [protected instance serialized] renamed=1 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/FeedbackItemAnimation.cs
+  FeedbackItemAnimation.previousAnimator -> m_PreviousAnimator  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  FeedbackItemAnimation.selectedAnimator -> m_SelectedAnimator  [private instance] renamed=7 this/base-forced=0 shadow-skipped=0
+  FeedbackItemAnimation.cachedAnimator -> s_CachedAnimator  [private static] renamed=5 this/base-forced=0 shadow-skipped=0
+  FeedbackItemAnimation.animationName -> m_AnimationName  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/FeedbackItemAudio.cs
+  FeedbackItemAudio.audioClip -> m_AudioClip  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/FeedbackItemParticles.cs
+  FeedbackItemParticle.particles -> m_Particles  [private instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/FullscreenToggle.cs
+  FullscreenToggle.toggleSprite -> m_ToggleSprite  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  FullscreenToggle.icon -> m_Icon  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0
+  FullscreenToggle.originalSprite -> m_OriginalSprite  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/HandTutorial.cs
+  HandTutorial.handImagePrefab -> m_HandImagePrefab  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  HandTutorial.repeat -> m_Repeat  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  HandTutorial.moveDuration -> m_MoveDuration  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  HandTutorial.fadeDuration -> m_FadeDuration  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  HandTutorial.handInstance -> m_HandInstance  [private instance] renamed=11 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs
+  QuestAudioPopulatorWindow.targetQuests -> m_TargetQuests  [private instance serialized] renamed=6 this/base-forced=0 shadow-skipped=0 inIf=6
+  QuestAudioPopulatorWindow.forceRedownload -> m_ForceRedownload  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0 inIf=4
+  QuestAudioPopulatorWindow.isProcessing -> m_IsProcessing  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0 inIf=5
+Assets/_dev/Scripts/Util/RawImageAlphaFilter.cs
+  RawImageAlphaFilter._maskTexture -> m_MaskTexture  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  RawImageAlphaFilter._rawImage -> m_RawImage  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0

@@ -1,0 +1,13 @@
+RENAME PLAN: targets=4 (auto=4, manual=0), serialized=2, protected=0, files to edit=4, edits=15, shadow-skipped=0, inside #if=5, unparsable files=0, warnings=0
+
+=== MANUAL ===
+
+=== AUTOMATIC ===
+Assets/_dev2/GenerateVoice/VoiceAPI.cs
+  VoiceAPI.API_URL -> c_ApiUrl  [private const] renamed=2 this/base-forced=0 shadow-skipped=0 inIf=1
+Assets/_dev2/GenerateVoice/VoiceAsset.cs
+  VoiceAsset.OUTPUT_FOLDER -> c_OutputFolder  [private const] renamed=4 this/base-forced=0 shadow-skipped=0 inIf=4
+Assets/_dev2/Quest/Scripts/ReactionPanel.cs
+  ReactionPanel.ConfirmationImage -> m_ConfirmationImage  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev2/Scripts/TweenHandler.cs
+  LoopTweenField._repeatCount -> m_RepeatCount  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0

@@ -2,27 +2,28 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestUtilRegionalClick : MonoBehaviour, IPointerClickHandler
     {
-        [SerializeField] private UnityEvent onclickEvent = new UnityEvent();
+        [SerializeField] [FormerlySerializedAs("onclickEvent")] private UnityEvent m_OnclickEvent = new UnityEvent();
 
-        private Image image; // Drag your Image GameObject here in the Inspector
+        private Image m_Image; // Drag your Image GameObject here in the Inspector
 
         void Start()
         {
-            image = GetComponent<Image>();
+            m_Image = GetComponent<Image>();
 
             // Set the threshold. Pixels with alpha less than 0.5 will be ignored by clicks.
-            if (image != null)
-                image.alphaHitTestMinimumThreshold = 0.5f;
+            if (m_Image != null)
+                m_Image.alphaHitTestMinimumThreshold = 0.5f;
         }
 
         public void AddClickEvent(UnityAction unityAction)
         {
-            onclickEvent.AddListener(unityAction);
+            m_OnclickEvent.AddListener(unityAction);
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -50,7 +51,7 @@ namespace EduGame
                 // is usually sufficient for most use cases like placing markers or detecting positions on a map.
             }
 
-            onclickEvent.Invoke();
+            m_OnclickEvent.Invoke();
         }
     }
 }

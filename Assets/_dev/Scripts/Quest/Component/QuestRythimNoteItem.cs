@@ -1,19 +1,20 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     [Serializable]
     public class QuestRythimNoteItem
     {   
-        [SerializeField] protected QuestRythimNote notePrefab;
-        [SerializeField] protected float delay;
-        [SerializeField] protected float speedModifier = 1;
-        [SerializeField] protected AudioClip clip;
+        [SerializeField] [FormerlySerializedAs("notePrefab")] protected QuestRythimNote m_NotePrefab;
+        [SerializeField] [FormerlySerializedAs("delay")] protected float m_Delay;
+        [SerializeField] [FormerlySerializedAs("speedModifier")] protected float m_SpeedModifier = 1;
+        [SerializeField] [FormerlySerializedAs("clip")] protected AudioClip m_Clip;
         
-        public QuestRythimNote Note => notePrefab;
-        public float Delay => delay;
-        public float SpeedModifier => speedModifier;
-        public AudioClip Clip => clip;
+        public QuestRythimNote Note => m_NotePrefab;
+        public float Delay => m_Delay;
+        public float SpeedModifier => m_SpeedModifier;
+        public AudioClip Clip => m_Clip;
     }
 }

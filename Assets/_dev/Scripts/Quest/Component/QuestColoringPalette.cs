@@ -1,40 +1,41 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestColoringPalette : QuestComponent
     {
-        [SerializeField] private Image image;
-        [SerializeField] private Button button;
+        [SerializeField] [FormerlySerializedAs("image")] private Image m_Image;
+        [SerializeField] [FormerlySerializedAs("button")] private Button m_Button;
         
-        private Color defaultColor;
-        private QuestColoring questColoring;
+        private Color m_DefaultColor;
+        private QuestColoring m_QuestColoring;
     
         protected override void Start()
         {
-            questColoring = GetComponentInParent<QuestColoring>();
+            m_QuestColoring = GetComponentInParent<QuestColoring>();
 
-            if (!questColoring)
+            if (!m_QuestColoring)
                 Debug.LogError("QuestColoring Component not found");
 
-            if (!image)
+            if (!m_Image)
                 Debug.LogError("Image Component not found");
 
-            if (!button)
+            if (!m_Button)
                 Debug.LogError("Button Component not found");
         }
 
         public void SetPaletteColor(Color color)
         {
-            image.color = new Color(color.r, color.g, color.b, 1);
+            m_Image.color = new Color(color.r, color.g, color.b, 1);
 
-            defaultColor = image.color;
+            m_DefaultColor = m_Image.color;
         }
 
         public void BindColor()
         {
-            questColoring.BindColor(defaultColor);
+            m_QuestColoring.BindColor(m_DefaultColor);
         }
     }
 }

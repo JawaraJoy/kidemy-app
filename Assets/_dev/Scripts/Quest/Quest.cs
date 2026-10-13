@@ -1,36 +1,37 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public abstract class Quest : MonoBehaviour
     {
         [Header("Data")]
-        [SerializeField] protected SO_Quest data;
+        [SerializeField] [FormerlySerializedAs("data")] protected SO_Quest m_Data;
 
         [Header("Theme")]
-        [SerializeField] protected Sprite background;
-        [SerializeField] protected Color color;
-        [SerializeField] protected RuntimeAnimatorController npcController;
-        [SerializeField] protected SO_Character character;
+        [SerializeField] [FormerlySerializedAs("background")] protected Sprite m_Background;
+        [SerializeField] [FormerlySerializedAs("color")] protected Color m_Color;
+        [SerializeField] [FormerlySerializedAs("npcController")] protected RuntimeAnimatorController m_NpcController;
+        [SerializeField] [FormerlySerializedAs("character")] protected SO_Character m_Character;
         
         [Header("Rules")]
-        [SerializeField] protected int score = 10;
+        [SerializeField] [FormerlySerializedAs("score")] protected int m_Score = 10;
 
-        protected bool isAnswered = false;
-        protected bool isCorrect = false;
-        protected AudioSource audioSource;
+        protected bool m_IsAnswered = false;
+        protected bool m_IsCorrect = false;
+        protected AudioSource m_AudioSource;
         protected ChallengeConfig m_Challenged;
         public ChallengeConfig Challenged => m_Challenged;
-        public Sprite Background => background;
-        public Color Color => color;
+        public Sprite Background => m_Background;
+        public Color Color => m_Color;
         
-        public SO_Quest Data => data;
+        public SO_Quest Data => m_Data;
         
         protected virtual void Start()
         {
-            if(!data)
+            if(!m_Data)
                 Debug.LogError("Quest not set");
             
             //if(npcController)
@@ -44,10 +45,10 @@ namespace EduGame
             }
             else
             {
-                if (character && character.CharacterController)
-                    GameManager.Instance.SetNPC(character.CharacterController);
+                if (m_Character && m_Character.CharacterController)
+                    GameManager.Instance.SetNPC(m_Character.CharacterController);
             }
-            GameManager.Instance.InitQuest(data);
+            GameManager.Instance.InitQuest(m_Data);
 
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
@@ -55,7 +56,7 @@ namespace EduGame
         }
         public void SetBackground(Sprite sprite)
         {
-            background = sprite;
+            m_Background = sprite;
         }
         public void SetChallenge(ChallengeConfig challenge)
         {
@@ -63,20 +64,20 @@ namespace EduGame
         }
         public void SetData(SO_Quest questData)
         {
-            data = questData;
+            m_Data = questData;
         }
         public virtual void Setup()
         {
             if(GameManager.Instance)
-                audioSource = GameManager.Instance.AudioSource;
+                m_AudioSource = GameManager.Instance.AudioSource;
         }
 
         public virtual void PlayQuestionVoice()
         {
-            Debug.Log(data.Question.Audio);
+            Debug.Log(m_Data.Question.Audio);
 
-            if(data.Question.Audio)
-                PlayQuestionVoice(data.Question.Audio);
+            if(m_Data.Question.Audio)
+                PlayQuestionVoice(m_Data.Question.Audio);
         }
         public virtual void PlaySoundQuest()
         {
@@ -85,7 +86,7 @@ namespace EduGame
 
         protected virtual void PlaySoundQuestInternal()
         {
-            if (data is SO_QuestMultipleChoice quest)
+            if (m_Data is SO_QuestMultipleChoice quest)
             {
                 if (quest.SoundQuest)
                 {
@@ -103,7 +104,7 @@ namespace EduGame
             }
             for (int i = 0; i < repeat; i++)
             {
-                audioSource.PlayOneShot(quest.SoundQuest);
+                m_AudioSource.PlayOneShot(quest.SoundQuest);
                 yield return new WaitForSeconds(quest.SoundQuest.length);
             }
         }
@@ -111,11 +112,11 @@ namespace EduGame
         public virtual void PlayQuestionVoice(AudioClip audioClip)
         {
             //StartCoroutine(PlayingQuestionVoice(audioClip));
-            if (audioSource)
+            if (m_AudioSource)
             {
-                audioSource.PlayOneShot(audioClip);
+                m_AudioSource.PlayOneShot(audioClip);
                 GameManager.Instance.StartCoroutine(ReduceMusicAWhile(audioClip));
-                if (data is SO_QuestMultipleChoice quest)
+                if (m_Data is SO_QuestMultipleChoice quest)
                 {
                     if (quest.SoundQuest != null)
                     {
@@ -141,7 +142,7 @@ namespace EduGame
 
         public virtual void OnAnswered(bool result, bool submit = true)
         {
-            isAnswered = true;
+            m_IsAnswered = true;
 
             if(submit)
                 Submit(result ? 3 : 1);
@@ -181,7 +182,7 @@ namespace EduGame
         /// </summary>
         public virtual string GetVoiceId()
         {
-            return data != null ? data.GetVoiceId() : "";
+            return m_Data != null ? m_Data.GetVoiceId() : "";
         }
 
         /// <summary>
@@ -190,7 +191,7 @@ namespace EduGame
         /// </summary>
         public virtual VoiceRequest[] GetVoiceRequests()
         {
-            return data != null ? data.GetVoiceRequests() : Array.Empty<VoiceRequest>();
+            return m_Data != null ? m_Data.GetVoiceRequests() : Array.Empty<VoiceRequest>();
         }
 
         /// <summary>
@@ -198,7 +199,7 @@ namespace EduGame
         /// </summary>
         public virtual bool HasVoiceClip(string requestId)
         {
-            return data != null && data.HasVoiceClip(requestId);
+            return m_Data != null && m_Data.HasVoiceClip(requestId);
         }
 
         /// <summary>
@@ -206,8 +207,8 @@ namespace EduGame
         /// </summary>
         public virtual void AssignVoiceClip(string requestId, AudioClip clip)
         {
-            if (data != null)
-                data.AssignVoiceClip(requestId, clip);
+            if (m_Data != null)
+                m_Data.AssignVoiceClip(requestId, clip);
         }
     }
 }

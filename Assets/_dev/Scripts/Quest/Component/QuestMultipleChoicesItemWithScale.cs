@@ -8,35 +8,35 @@ namespace EduGame
     {
         public override void SetChoice(QuestUtilLabelChoice choice)
         {
-            this.choice = choice;
+            this.m_Choice = choice;
 
             if(!string.IsNullOrEmpty(choice.Text))
             {
-                if(text)
-                    text.text = choice.Text;
+                if(m_Text)
+                    m_Text.text = choice.Text;
             }   
             else
             {
-                text?.gameObject.SetActive(false);
-                text?.transform.parent.gameObject.SetActive(false);   
+                m_Text?.gameObject.SetActive(false);
+                m_Text?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(choice.Audio)
             {
-                if(audioPlayer)
-                    audioPlayer.SetAudioClip(choice.Audio);
+                if(m_AudioPlayer)
+                    m_AudioPlayer.SetAudioClip(choice.Audio);
             }   
             else
             {
-                audioPlayer?.gameObject.SetActive(false);
-                audioPlayer?.transform.parent.gameObject.SetActive(false);   
+                m_AudioPlayer?.gameObject.SetActive(false);
+                m_AudioPlayer?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(choice.Image)
             {
-                if(image)
+                if(m_Image)
                 {
-                    RectTransform imageRect = image.transform.GetComponent<RectTransform>();
+                    RectTransform imageRect = m_Image.transform.GetComponent<RectTransform>();
 
                     if(imageRect)
                     {
@@ -50,13 +50,13 @@ namespace EduGame
                         imageRect.pivot = Vector2.one * 0.5f;
                     }
 
-                    image.sprite = choice.Image;   
+                    m_Image.sprite = choice.Image;   
                 }
             }   
             else
             {
-                image?.gameObject.SetActive(false);
-                image?.transform.parent.gameObject.SetActive(false);   
+                m_Image?.gameObject.SetActive(false);
+                m_Image?.transform.parent.gameObject.SetActive(false);   
             }
         }
     }

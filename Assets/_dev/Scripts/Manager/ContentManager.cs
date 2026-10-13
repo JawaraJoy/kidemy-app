@@ -6,7 +6,7 @@ namespace EduGame
 {
     public class ContentManager : MonoBehaviour
     {
-        private CanvasScaler canvasScaler;
+        private CanvasScaler m_CanvasScaler;
 
         // Import the native JS functions
         [DllImport("__Internal__")]
@@ -15,16 +15,16 @@ namespace EduGame
         [DllImport("__Internal__")]
         private static extern int GetBrowserHeight();
 
-        private Vector2 refRes = Vector2.one;
-        private Vector2 currentViewportSize = Vector2.zero;
+        private Vector2 m_RefRes = Vector2.one;
+        private Vector2 m_CurrentViewportSize = Vector2.zero;
 
         void Awake()
         {
-            canvasScaler = GetComponent<CanvasScaler>();
+            m_CanvasScaler = GetComponent<CanvasScaler>();
 
-            refRes = canvasScaler.referenceResolution + Vector2.up * 200;
+            m_RefRes = m_CanvasScaler.referenceResolution + Vector2.up * 200;
 
-            currentViewportSize = refRes;
+            m_CurrentViewportSize = m_RefRes;
 
             // Get the Canvas Scaler component
             UpdateScreen();
@@ -53,17 +53,17 @@ namespace EduGame
 #endif
 
             Debug.Log($"Browser Viewport: {viewportSize.x}x{ viewportSize.y}");     
-            Debug.Log($"Ref Viewport: {refRes.x}x{ refRes.y}");     
+            Debug.Log($"Ref Viewport: {m_RefRes.x}x{ m_RefRes.y}");     
 
-            if (viewportSize != currentViewportSize)
+            if (viewportSize != m_CurrentViewportSize)
             {
-                currentViewportSize = viewportSize;
+                m_CurrentViewportSize = viewportSize;
 
                 // Calculate the aspect ratios
                 float deviceAspect = viewportSize.x / viewportSize.y;
-                float referenceAspect = refRes.x / refRes.y;
+                float referenceAspect = m_RefRes.x / m_RefRes.y;
 
-                canvasScaler.matchWidthOrHeight = deviceAspect > referenceAspect ? 1f : 0f;
+                m_CanvasScaler.matchWidthOrHeight = deviceAspect > referenceAspect ? 1f : 0f;
             }
         }
     }

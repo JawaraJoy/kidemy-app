@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Runtime.InteropServices;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -33,11 +34,11 @@ namespace EduGame
 
         [Header("Debug Settings")]
         [Tooltip("Check this in the Inspector to force API downloads and overwrite existing files.")]
-        [SerializeField] private bool forceRedownload = false;
+        [SerializeField] [FormerlySerializedAs("forceRedownload")] private bool m_ForceRedownload = false;
 
-        private List<VoiceRequest> voiceRequests = new List<VoiceRequest>();
-        private bool currentRequestFinished = false;
-        private VoiceRequest activeRequest;
+        private List<VoiceRequest> m_VoiceRequests = new List<VoiceRequest>();
+        private bool m_CurrentRequestFinished = false;
+        private VoiceRequest m_ActiveRequest;
 
         private void Awake()
         {
@@ -57,9 +58,9 @@ namespace EduGame
             if (request == null) return;
 
             // Prevent duplicates in queue based on ID
-            if (!voiceRequests.Exists(r => r.id == request.id))
+            if (!m_VoiceRequests.Exists(r => r.id == request.id))
             {
-                voiceRequests.Add(request);
+                m_VoiceRequests.Add(request);
             }
         }
 
@@ -74,7 +75,7 @@ namespace EduGame
 
         private IEnumerator Routine_DownloadMissingVoices(Action onComplete)
         {
-            int totalRequests = voiceRequests.Count;
+            int totalRequests = m_VoiceRequests.Count;
 
             if (totalRequests == 0)
             {
@@ -89,13 +90,13 @@ namespace EduGame
         JS_UpdateVoiceProgress(0, totalRequests);
 #endif
 
-            foreach (VoiceRequest req in voiceRequests)
+            foreach (VoiceRequest req in m_VoiceRequests)
             {
                 string fileName = $"{req.id}.mp3";
                 string localPath = Path.Combine(Application.persistentDataPath, fileName);
 
                 // Skip download ONLY if forceRedownload is false AND file already exists
-                if (!forceRedownload && File.Exists(localPath))
+                if (!m_ForceRedownload && File.Exists(localPath))
                 {
                     Debug.Log($"[AssetManager] Voice '{req.id}' already cached. Skipping download.");
                     processedCount++;
@@ -106,13 +107,13 @@ namespace EduGame
                     continue;
                 }
 
-                if (forceRedownload && File.Exists(localPath))
+                if (m_ForceRedownload && File.Exists(localPath))
                 {
                     Debug.Log($"[AssetManager] [DEBUG] Voice '{req.id}' exists, but 'forceRedownload' is active. Overwriting...");
                 }
 
-                activeRequest = req;
-                currentRequestFinished = false;
+                m_ActiveRequest = req;
+                m_CurrentRequestFinished = false;
 
                 // Trigger API request
                 GameManager.Instance.API.RequestVoice(
@@ -123,7 +124,7 @@ namespace EduGame
                 );
 
                 // Wait for current request & file writing process to complete
-                yield return new WaitUntil(() => currentRequestFinished);
+                yield return new WaitUntil(() => m_CurrentRequestFinished);
 
                 processedCount++;
 
@@ -165,18 +166,18 @@ namespace EduGame
 
                 if (!string.IsNullOrEmpty(responseData?.audio_url))
                 {
-                    StartCoroutine(Routine_DownloadAndCacheAudio(responseData.audio_url, activeRequest?.id));
+                    StartCoroutine(Routine_DownloadAndCacheAudio(responseData.audio_url, m_ActiveRequest?.id));
                 }
                 else
                 {
-                    Debug.LogError($"[AssetManager] audio_url was null or empty for ID '{activeRequest?.id}'.");
-                    currentRequestFinished = true;
+                    Debug.LogError($"[AssetManager] audio_url was null or empty for ID '{m_ActiveRequest?.id}'.");
+                    m_CurrentRequestFinished = true;
                 }
             }
             catch (Exception e)
             {
-                Debug.LogError($"[AssetManager] Failed to parse success JSON for ID '{activeRequest?.id}': {e.Message}");
-                currentRequestFinished = true;
+                Debug.LogError($"[AssetManager] Failed to parse success JSON for ID '{m_ActiveRequest?.id}': {e.Message}");
+                m_CurrentRequestFinished = true;
             }
         }
 
@@ -190,20 +191,20 @@ namespace EduGame
                 {
                     foreach (var detail in validationError.detail)
                     {
-                        Debug.LogError($"[AssetManager] Validation Error (422) for Voice ID '{activeRequest?.id}': {detail.msg} (Type: {detail.type})");
+                        Debug.LogError($"[AssetManager] Validation Error (422) for Voice ID '{m_ActiveRequest?.id}': {detail.msg} (Type: {detail.type})");
                     }
                 }
                 else
                 {
-                    Debug.LogError($"[AssetManager] API Request failed for Voice ID '{activeRequest?.id}': {errorJsonResponse}");
+                    Debug.LogError($"[AssetManager] API Request failed for Voice ID '{m_ActiveRequest?.id}': {errorJsonResponse}");
                 }
             }
             catch
             {
-                Debug.LogError($"[AssetManager] API Request failed for Voice ID '{activeRequest?.id}': {errorJsonResponse}");
+                Debug.LogError($"[AssetManager] API Request failed for Voice ID '{m_ActiveRequest?.id}': {errorJsonResponse}");
             }
 
-            currentRequestFinished = true; // Unblock loop so remaining downloads can continue
+            m_CurrentRequestFinished = true; // Unblock loop so remaining downloads can continue
         }
 
         // --- File Downloading & Overwriting ---
@@ -233,7 +234,7 @@ namespace EduGame
                 }
             }
 
-            currentRequestFinished = true;
+            m_CurrentRequestFinished = true;
         }
 
         // <summary>

@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -9,32 +10,32 @@ namespace EduGame
     {
         public enum DisplayMode { Normal, Dynamic, Sticky, Fill, ScaledUp, ScaledDown, ScaledDown2, FollowParent }
 
-        [SerializeField] private DisplayMode displayMode;
-        [SerializeField] private TMP_Text dropInfo;
-        [SerializeField] private bool verify;
-        [SerializeField] private bool answer;
+        [SerializeField] [FormerlySerializedAs("displayMode")] private DisplayMode m_DisplayMode;
+        [SerializeField] [FormerlySerializedAs("dropInfo")] private TMP_Text m_DropInfo;
+        [SerializeField] [FormerlySerializedAs("verify")] private bool m_Verify;
+        [SerializeField] [FormerlySerializedAs("answer")] private bool m_Answer;
 
         [Header("Feedback")]
-        [SerializeField] private AudioClip acceptSound;
-        [SerializeField] private AudioClip rejectSound;
+        [SerializeField] [FormerlySerializedAs("acceptSound")] private AudioClip m_AcceptSound;
+        [SerializeField] [FormerlySerializedAs("rejectSound")] private AudioClip m_RejectSound;
 
-        private QuestDragNDropItem[] items;
-        private QuestDragNDropSlot slot;
-        private QuestZonePairing quest;
-        private GridLayoutGroup grid;
-        private Animator animator;
+        private QuestDragNDropItem[] m_Items;
+        private QuestDragNDropSlot m_Slot;
+        private QuestZonePairing m_Quest;
+        private GridLayoutGroup m_Grid;
+        private Animator m_Animator;
 
-        public QuestDragNDropItem[] Items => items;
-        public DisplayMode CurrentDisplayMode => displayMode;
+        public QuestDragNDropItem[] Items => m_Items;
+        public DisplayMode CurrentDisplayMode => m_DisplayMode;
 
         void Awake()
         {
-            slot = GetComponentInParent<QuestDragNDropSlot>();
+            m_Slot = GetComponentInParent<QuestDragNDropSlot>();
 
-            quest = GetComponentInParent<QuestZonePairing>();
+            m_Quest = GetComponentInParent<QuestZonePairing>();
 
-            animator = GetComponent<Animator>();
-            grid = GetComponentInChildren<GridLayoutGroup>();
+            m_Animator = GetComponent<Animator>();
+            m_Grid = GetComponentInChildren<GridLayoutGroup>();
 
             RegisterItems();
         }
@@ -43,7 +44,7 @@ namespace EduGame
         {
             if (item)
             {
-                int itemIndex = items.Length;
+                int itemIndex = m_Items.Length;
                 bool isSameZone = false;
 
                 if (item.OriginalZone && item.OriginalZone.GetEntityId() == transform.GetEntityId())
@@ -63,21 +64,21 @@ namespace EduGame
                     item.RegisterZone();
                 }
 
-                if (displayMode == DisplayMode.Fill)
+                if (m_DisplayMode == DisplayMode.Fill)
                     FillZone(item);
-                else if (displayMode == DisplayMode.Dynamic)
+                else if (m_DisplayMode == DisplayMode.Dynamic)
                     Dynamic(item);
-                else if (displayMode == DisplayMode.Sticky)
+                else if (m_DisplayMode == DisplayMode.Sticky)
                     Sticky(item);
-                else if (displayMode == DisplayMode.ScaledUp)
+                else if (m_DisplayMode == DisplayMode.ScaledUp)
                     Scaled(item, 2);
-                else if (displayMode == DisplayMode.ScaledDown)
+                else if (m_DisplayMode == DisplayMode.ScaledDown)
                     Scaled(item, 0.5f);
-                else if (displayMode == DisplayMode.ScaledDown2)
+                else if (m_DisplayMode == DisplayMode.ScaledDown2)
                     Scaled(item, 0.75f);
-                else if (displayMode == DisplayMode.FollowParent)
+                else if (m_DisplayMode == DisplayMode.FollowParent)
                     FollowParent(item);
-                else if (displayMode == DisplayMode.Normal)
+                else if (m_DisplayMode == DisplayMode.Normal)
                     Normal(item);
 
                 RegisterItems();
@@ -86,7 +87,7 @@ namespace EduGame
 
         public void RegisterItems()
         {
-            items = new QuestDragNDropItem[transform.childCount];
+            m_Items = new QuestDragNDropItem[transform.childCount];
 
             int x = 0;
 
@@ -94,17 +95,17 @@ namespace EduGame
             {
                 foreach (Transform child in transform)
                 {
-                    items[x] = child.GetComponent<QuestDragNDropItem>();
+                    m_Items[x] = child.GetComponent<QuestDragNDropItem>();
                     x++;
                 }
                 
-                if(dropInfo)
-                    dropInfo.gameObject.SetActive(false);
+                if(m_DropInfo)
+                    m_DropInfo.gameObject.SetActive(false);
             }
             else
             {
-                if(dropInfo)
-                    dropInfo.gameObject.SetActive(true);
+                if(m_DropInfo)
+                    m_DropInfo.gameObject.SetActive(true);
             }
         }
 
@@ -112,9 +113,9 @@ namespace EduGame
         {
             int i = 0;
 
-            if (items != null)
+            if (m_Items != null)
             {
-                foreach (var item in items)
+                foreach (var item in m_Items)
                 {
                     if (seekItem.transform.GetEntityId() != item.transform.GetEntityId())
                         i++;
@@ -134,14 +135,14 @@ namespace EduGame
 
                 if (draggedItem)
                 {
-                    bool slotLimitVerification = !slot || (slot.GroupData.Limit < 0 || (items.Length < slot.GroupData.Limit));
+                    bool slotLimitVerification = !m_Slot || (m_Slot.GroupData.Limit < 0 || (m_Items.Length < m_Slot.GroupData.Limit));
 
-                    if (slotLimitVerification && (!verify || quest.Verify(draggedItem, this)))
+                    if (slotLimitVerification && (!m_Verify || m_Quest.Verify(draggedItem, this)))
                     {
                         AddItem(draggedItem);
 
-                        if(answer)
-                            quest.OnAnswered(true);
+                        if(m_Answer)
+                            m_Quest.OnAnswered(true);
 
                         OnAccept();
                     }
@@ -162,21 +163,21 @@ namespace EduGame
             item.transform.SetParent(transform);
             item.transform.SetSiblingIndex(itemIndex);
 
-            if (displayMode == DisplayMode.Fill)
+            if (m_DisplayMode == DisplayMode.Fill)
                 FillZone(item);
-            else if (displayMode == DisplayMode.Dynamic)
+            else if (m_DisplayMode == DisplayMode.Dynamic)
                 Dynamic(item);
-            else if (displayMode == DisplayMode.Sticky)
+            else if (m_DisplayMode == DisplayMode.Sticky)
                 Sticky(item);
-            else if (displayMode == DisplayMode.ScaledUp)
+            else if (m_DisplayMode == DisplayMode.ScaledUp)
                 Scaled(item, 2);
-            else if (displayMode == DisplayMode.ScaledDown)
+            else if (m_DisplayMode == DisplayMode.ScaledDown)
                 Scaled(item, 0.5f);
-            else if (displayMode == DisplayMode.ScaledDown2)
+            else if (m_DisplayMode == DisplayMode.ScaledDown2)
                 Scaled(item, 0.75f);
-            else if (displayMode == DisplayMode.FollowParent)
+            else if (m_DisplayMode == DisplayMode.FollowParent)
                 FollowParent(item);
-            else if (displayMode == DisplayMode.Normal)
+            else if (m_DisplayMode == DisplayMode.Normal)
                 Normal(item);
 
             RegisterItems();
@@ -186,13 +187,13 @@ namespace EduGame
         {
             RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
 
-            if(grid)
+            if(m_Grid)
             {
-                Debug.Log(rect.rect.height + " > " + grid.cellSize.y);
-                if(rect.rect.width > grid.cellSize.x)
-                    Scaled(item, grid.cellSize.x/rect.rect.width);
-                else if(rect.rect.height > grid.cellSize.y)
-                    Scaled(item, grid.cellSize.y/rect.rect.height);
+                Debug.Log(rect.rect.height + " > " + m_Grid.cellSize.y);
+                if(rect.rect.width > m_Grid.cellSize.x)
+                    Scaled(item, m_Grid.cellSize.x/rect.rect.width);
+                else if(rect.rect.height > m_Grid.cellSize.y)
+                    Scaled(item, m_Grid.cellSize.y/rect.rect.height);
                 else
                     Sticky(item);
             }
@@ -279,20 +280,20 @@ namespace EduGame
 
         public void OnAccept()
         {
-            if(animator)
-                animator.Play("Accept");
+            if(m_Animator)
+                m_Animator.Play("Accept");
 
-            if(acceptSound)
-                GameManager.Instance.AudioSource.PlayOneShot(acceptSound);
+            if(m_AcceptSound)
+                GameManager.Instance.AudioSource.PlayOneShot(m_AcceptSound);
         }
 
         public void OnReject()
         {
-            if(animator)
-                animator.Play("Reject");
+            if(m_Animator)
+                m_Animator.Play("Reject");
 
-            if(rejectSound)
-                GameManager.Instance.AudioSource.PlayOneShot(rejectSound);
+            if(m_RejectSound)
+                GameManager.Instance.AudioSource.PlayOneShot(m_RejectSound);
         }
     }
 }

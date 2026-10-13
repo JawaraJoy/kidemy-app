@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -10,32 +11,32 @@ namespace EduGame
         [Range(0, 1)]
         //[SerializeField] private float alphaThreshold = 0.1f;
 
-        [SerializeField] private UnityEvent onclickEvent = new UnityEvent();
+        [SerializeField] [FormerlySerializedAs("onclickEvent")] private UnityEvent m_OnclickEvent = new UnityEvent();
 
 
-        private RawImage image; // Drag your Image GameObject here in the Inspector
-        private RectTransform rectTransform;
-        private Canvas parentCanvas;
+        private RawImage m_Image; // Drag your Image GameObject here in the Inspector
+        private RectTransform m_RectTransform;
+        private Canvas m_ParentCanvas;
 
         public bool Dragged { get; private set; }
         public PointerEventData PointerData { get; private set; }
 
         void Start()
         {
-            image = GetComponent<RawImage>();
+            m_Image = GetComponent<RawImage>();
 
-            if (!image)
+            if (!m_Image)
                 Debug.LogError("Image Component not found!");
 
-            rectTransform = GetComponent<RectTransform>();
+            m_RectTransform = GetComponent<RectTransform>();
 
-            if (!rectTransform)
+            if (!m_RectTransform)
                 Debug.LogError("RectTransform Component not found!");
 
             // Find the canvas this object belongs to
-            parentCanvas = GetComponentInParent<Canvas>();
+            m_ParentCanvas = GetComponentInParent<Canvas>();
 
-            if (!parentCanvas)
+            if (!m_ParentCanvas)
                 Debug.LogError("Parent not found!");
         }
 

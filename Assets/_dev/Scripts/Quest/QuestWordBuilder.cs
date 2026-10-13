@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -9,77 +10,77 @@ namespace EduGame
         [Header("Data")]
         
         [Header("Components")]
-        [SerializeField] private Image questionImage;
-        [SerializeField] private AudioPlayer questionAudio;
-        [SerializeField] private TMP_Text questionText;
-        [SerializeField] private RectTransform answerContainer;
-        [SerializeField] private RectTransform choicesContainer;
+        [SerializeField] [FormerlySerializedAs("questionImage")] private Image m_QuestionImage;
+        [SerializeField] [FormerlySerializedAs("questionAudio")] private AudioPlayer m_QuestionAudio;
+        [SerializeField] [FormerlySerializedAs("questionText")] private TMP_Text m_QuestionText;
+        [SerializeField] [FormerlySerializedAs("answerContainer")] private RectTransform m_AnswerContainer;
+        [SerializeField] [FormerlySerializedAs("choicesContainer")] private RectTransform m_ChoicesContainer;
 
         [Header("Prefab")]
-        [SerializeField] private QuestWordBuilderItem choiceItemPrefab;
+        [SerializeField] [FormerlySerializedAs("choiceItemPrefab")] private QuestWordBuilderItem m_ChoiceItemPrefab;
 
-        private SO_QuestWordBuilder dataWordBuilder;
-        private QuestWordBuilderItem[] choices;
+        private SO_QuestWordBuilder m_DataWordBuilder;
+        private QuestWordBuilderItem[] m_Choices;
         
         protected override void Start()
         {
-            dataWordBuilder = data as SO_QuestWordBuilder;
+            m_DataWordBuilder = m_Data as SO_QuestWordBuilder;
 
             base.Start();
 
-            if(!dataWordBuilder)
+            if(!m_DataWordBuilder)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestWordBuilder");
 
-            if (questionImage)
+            if (m_QuestionImage)
             {
-                if (dataWordBuilder.Question.Image)
-                    questionImage.sprite = dataWordBuilder.Question.Image;
+                if (m_DataWordBuilder.Question.Image)
+                    m_QuestionImage.sprite = m_DataWordBuilder.Question.Image;
                 else
                 {
-                    questionImage.gameObject.SetActive(false);
-                    questionImage.transform.parent.gameObject.SetActive(false);
+                    m_QuestionImage.gameObject.SetActive(false);
+                    m_QuestionImage.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (questionAudio)
+            if (m_QuestionAudio)
             {
-                if (dataWordBuilder.Question.Audio)
-                    questionAudio.SetAudioClip(dataWordBuilder.Question.Audio);
+                if (m_DataWordBuilder.Question.Audio)
+                    m_QuestionAudio.SetAudioClip(m_DataWordBuilder.Question.Audio);
                 else
                 {
-                    questionAudio.gameObject.SetActive(false);
-                    questionAudio.transform.parent.gameObject.SetActive(false);
+                    m_QuestionAudio.gameObject.SetActive(false);
+                    m_QuestionAudio.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (questionText)
+            if (m_QuestionText)
             {
-                if (!string.IsNullOrEmpty(dataWordBuilder.Question.Text))
-                    questionText.text = dataWordBuilder.Question.Text;
+                if (!string.IsNullOrEmpty(m_DataWordBuilder.Question.Text))
+                    m_QuestionText.text = m_DataWordBuilder.Question.Text;
                 else
                 {
-                    questionText.gameObject.SetActive(false);
-                    questionText.transform.parent.gameObject.SetActive(false);
+                    m_QuestionText.gameObject.SetActive(false);
+                    m_QuestionText.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (choicesContainer && choiceItemPrefab)
+            if (m_ChoicesContainer && m_ChoiceItemPrefab)
             {
-                choices = new QuestWordBuilderItem[dataWordBuilder.Values.Length];
+                m_Choices = new QuestWordBuilderItem[m_DataWordBuilder.Values.Length];
 
-                for (int i = 0; i < dataWordBuilder.Values.Length; i++)
+                for (int i = 0; i < m_DataWordBuilder.Values.Length; i++)
                 {
-                    choices[i] = InstantiateItem(choices[0], i);
-                    choices[i].SetChoice(dataWordBuilder.Values[i]);
+                    m_Choices[i] = InstantiateItem(m_Choices[0], i);
+                    m_Choices[i].SetChoice(m_DataWordBuilder.Values[i]);
                 }
             }
         }
 
         QuestWordBuilderItem InstantiateItem(QuestWordBuilderItem prefab, int index)
         {
-            QuestWordBuilderItem choiceItem = Instantiate(prefab ? prefab : choiceItemPrefab);
+            QuestWordBuilderItem choiceItem = Instantiate(prefab ? prefab : m_ChoiceItemPrefab);
 
-            choiceItem.transform.SetParent(choicesContainer);
+            choiceItem.transform.SetParent(m_ChoicesContainer);
             choiceItem.transform.localPosition = Vector3.zero;
             choiceItem.Rect.localScale = Vector3.one;
 
@@ -88,17 +89,17 @@ namespace EduGame
 
         public override void Reset()
         {
-            foreach (Transform child in answerContainer)
-                child.transform.parent = choicesContainer.transform;
+            foreach (Transform child in m_AnswerContainer)
+                child.transform.parent = m_ChoicesContainer.transform;
         }
 
         void RecalculateChoiceContainer()
         {
-            if (choices[0].Rect.sizeDelta.x > 0 && choices[0].Rect.sizeDelta.y > 0)
+            if (m_Choices[0].Rect.sizeDelta.x > 0 && m_Choices[0].Rect.sizeDelta.y > 0)
             {
-                GridLayoutGroup gridLayoutGroup = choicesContainer.GetComponent<GridLayoutGroup>();
+                GridLayoutGroup gridLayoutGroup = m_ChoicesContainer.GetComponent<GridLayoutGroup>();
                 if (gridLayoutGroup)
-                    gridLayoutGroup.cellSize = choices[0].Rect.sizeDelta;
+                    gridLayoutGroup.cellSize = m_Choices[0].Rect.sizeDelta;
             }
         }
 

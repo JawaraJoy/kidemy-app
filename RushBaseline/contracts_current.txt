@@ -20,6 +20,14 @@ EXTERN|EduGame.GameManager.JS_OnVoiceDownloadComplete|OK
 EXTERN|EduGame.GameManager.LogToBrowser|OK
 EXTERN|EduGame.GameManager.RedirectParentWindow|OK
 EXTERN|EduGame.GameManager.ReloadIframe|OK
+EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_convert_haptic_to_gamepad_rumble|NOJS
+EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_destroy|NOJS
+EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_get_durations|NOJS
+EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_get_high_frequency_motor_speeds|NOJS
+EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_get_last_error_length|NOJS
+EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_get_last_error|NOJS
+EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_get_length|NOJS
+EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_get_low_frequency_motor_speeds|NOJS
 INVOKE|FeedbackItem.cs|ExecPlay|count=1|OK
 INVOKE|FeedbackItem.cs|ExecStop|count=1|OK
 INVOKE|QuestColoring.cs|RecalculatePalettesContainer|count=1|OK

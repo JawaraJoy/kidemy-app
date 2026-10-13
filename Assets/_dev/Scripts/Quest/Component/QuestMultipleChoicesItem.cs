@@ -2,22 +2,23 @@ using EasyTextEffects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestMultipleChoicesItem : QuestComponent
     {
-        [SerializeField] protected TMP_Text text;
-        [SerializeField] protected AudioPlayer audioPlayer;
-        [SerializeField] protected Image image;
-        [SerializeField] protected Image tint;
-        [SerializeField] protected GameObject correct;
-        [SerializeField] protected GameObject wrong;
+        [SerializeField] [FormerlySerializedAs("text")] protected TMP_Text m_Text;
+        [SerializeField] [FormerlySerializedAs("audioPlayer")] protected AudioPlayer m_AudioPlayer;
+        [SerializeField] [FormerlySerializedAs("image")] protected Image m_Image;
+        [SerializeField] [FormerlySerializedAs("tint")] protected Image m_Tint;
+        [SerializeField] [FormerlySerializedAs("correct")] protected GameObject m_Correct;
+        [SerializeField] [FormerlySerializedAs("wrong")] protected GameObject m_Wrong;
         
         public bool IsRightAnswer { get; private set; } = false;
 
-        protected QuestUtilLabelChoice choice;
-        protected ButtonEvents events;
+        protected QuestUtilLabelChoice m_Choice;
+        protected ButtonEvents m_Events;
 
         private TextEffect m_TextEffect;
         
@@ -38,28 +39,28 @@ namespace EduGame
         {
             base.Init();
 
-            events = GetComponent<ButtonEvents> ();
+            m_Events = GetComponent<ButtonEvents> ();
             
-            if(events)
+            if(m_Events)
             {
-                events.AddEventOnPointerOver(FeedbackManager.Instance.ButtonOver.Play);
-                events.AddEventOnPointerExit(FeedbackManager.Instance.ButtonExit.Play);
-                events.AddEventOnPointerClick(FeedbackManager.Instance.ButtonClick.Play);
+                m_Events.AddEventOnPointerOver(FeedbackManager.Instance.ButtonOver.Play);
+                m_Events.AddEventOnPointerExit(FeedbackManager.Instance.ButtonExit.Play);
+                m_Events.AddEventOnPointerClick(FeedbackManager.Instance.ButtonClick.Play);
             }
         }
 
         public virtual void SetChoice(QuestUtilLabelChoice choice)
         {
-            this.choice = choice;
+            this.m_Choice = choice;
 
             if(!string.IsNullOrEmpty(choice.Text))
             {
-                if(text)
+                if(m_Text)
                 {
-                    text.text = choice.Text;
+                    m_Text.text = choice.Text;
                     if (m_TextEffect == null)
                     {
-                        if (text.TryGetComponent(out TextEffect effect))
+                        if (m_Text.TryGetComponent(out TextEffect effect))
                         {
                             m_TextEffect = effect;
                         }
@@ -74,55 +75,55 @@ namespace EduGame
                     
                 if (choice.UseTextColor)
                 {
-                    text.color = choice.TextColor;
+                    m_Text.color = choice.TextColor;
                 }
             }   
             else
             {
-                text?.gameObject.SetActive(false);
-                text?.transform.parent.gameObject.SetActive(false);   
+                m_Text?.gameObject.SetActive(false);
+                m_Text?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(choice.Audio)
             {
-                if(audioPlayer)
-                    audioPlayer.SetAudioClip(choice.Audio);
+                if(m_AudioPlayer)
+                    m_AudioPlayer.SetAudioClip(choice.Audio);
             }   
             else
             {
-                audioPlayer?.gameObject.SetActive(false);
-                audioPlayer?.transform.parent.gameObject.SetActive(false);   
+                m_AudioPlayer?.gameObject.SetActive(false);
+                m_AudioPlayer?.transform.parent.gameObject.SetActive(false);   
             }
             if(choice.Image)
             {
-                if(image)   
+                if(m_Image)   
                 {
-                    image.sprite = choice.Image;
-                    image.color = choice.ImageColor;
+                    m_Image.sprite = choice.Image;
+                    m_Image.color = choice.ImageColor;
                 }
             }   
             else
             {
-                image?.gameObject.SetActive(false);
-                image?.transform.parent.gameObject.SetActive(false);   
+                m_Image?.gameObject.SetActive(false);
+                m_Image?.transform.parent.gameObject.SetActive(false);   
             }
 
             if (choice.Color != Color.white && choice.Color != Color.black)
             {
                 
             }
-            if (tint)
-                tint.color = choice.Color;
+            if (m_Tint)
+                m_Tint.color = choice.Color;
         }
 
         public override void OnClick()
         {
             Disable();
 
-            if(choice.IsAnswer)
-                quest?.OnAnswered(true);
+            if(m_Choice.IsAnswer)
+                m_Quest?.OnAnswered(true);
             else
-                quest?.OnAnswered(false);
+                m_Quest?.OnAnswered(false);
         }
 
         public override void Disable()
@@ -134,11 +135,11 @@ namespace EduGame
         {
             Button.interactable = true;
 
-            if(correct)
-                correct.SetActive(false);
+            if(m_Correct)
+                m_Correct.SetActive(false);
 
-            if(wrong)
-                wrong.SetActive(false);
+            if(m_Wrong)
+                m_Wrong.SetActive(false);
         }
     }
 }

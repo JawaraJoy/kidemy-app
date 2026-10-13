@@ -9,12 +9,12 @@ namespace EduGame
 
     public class QuestColoringField : MonoBehaviour
     {
-        private RectTransform rect;
-        private RenderTexture rt;
-        private CommandBuffer cb;
-        private QuestUtilRegionalDrag e;
-        private QuestColoring questColoring;
-        private Texture baseTexture;
+        private RectTransform m_Rect;
+        private RenderTexture m_Rt;
+        private CommandBuffer m_Cb;
+        private QuestUtilRegionalDrag m_E;
+        private QuestColoring m_QuestColoring;
+        private Texture m_BaseTexture;
 
         public float Result => GetPaintedPercentage();
 
@@ -23,40 +23,40 @@ namespace EduGame
         {
             RawImage image = GetComponent<RawImage>();
 
-            rect = GetComponent<RectTransform>();
+            m_Rect = GetComponent<RectTransform>();
 
-            e = GetComponent<QuestUtilRegionalDrag>();
+            m_E = GetComponent<QuestUtilRegionalDrag>();
 
-            questColoring = GetComponentInParent<QuestColoring>();
+            m_QuestColoring = GetComponentInParent<QuestColoring>();
 
-            if (!rect)
+            if (!m_Rect)
                 Debug.LogError("RectTransform Component not found");
 
-            if (!e)
+            if (!m_E)
                 Debug.LogError("QuestUtilRegionalDrag Component not found");
 
             if (!image)
                 Debug.LogError("Image Component not found");
 
-            if(!questColoring)
+            if(!m_QuestColoring)
                 Debug.LogError("QuestColoring Component not found");
 
             if (image)
             {
-                baseTexture = image.texture;
+                m_BaseTexture = image.texture;
 
                 // Create a RenderTexture with the same dimensions and format as the Texture2D
-                rt = new RenderTexture(image.texture.width, image.texture.height, 0, RenderTextureFormat.ARGB32);
+                m_Rt = new RenderTexture(image.texture.width, image.texture.height, 0, RenderTextureFormat.ARGB32);
 
-                cb = new CommandBuffer { name = "UIPainter" };
+                m_Cb = new CommandBuffer { name = "UIPainter" };
                 
-                if (baseTexture)
+                if (m_BaseTexture)
                 {
                     // This puts your image (with its alpha) onto the canvas
-                    Graphics.Blit(baseTexture, rt);
+                    Graphics.Blit(m_BaseTexture, m_Rt);
                 }
 
-                image.texture = rt;
+                image.texture = m_Rt;
             }
             else
                 Debug.LogError("Texture not found");
@@ -65,20 +65,20 @@ namespace EduGame
         // Update is called once per frame
         void Update()
         {
-            if (e.Dragged)
-                Paint(e.PointerData);
+            if (m_E.Dragged)
+                Paint(m_E.PointerData);
         }
 
         private void Paint(PointerEventData eventData)
         {
             // 3. Convert Screen Position (mouse) to Local UV coordinates (0 to 1)
             Vector2 localPoint;
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(rect, eventData.position, eventData.pressEventCamera, out localPoint))
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(m_Rect, eventData.position, eventData.pressEventCamera, out localPoint))
             {
                 // RectTransform coordinates are based on pivot. We convert to 0-1 range.
                 Vector2 normalizedUV = new Vector2(
-                    (localPoint.x / rect.rect.width) + 0.5f,
-                    (localPoint.y / rect.rect.height) + 0.5f
+                    (localPoint.x / m_Rect.rect.width) + 0.5f,
+                    (localPoint.y / m_Rect.rect.height) + 0.5f
                 );
 
                 Draw(normalizedUV);
@@ -87,14 +87,14 @@ namespace EduGame
 
         void Draw(Vector2 uv)
         {
-            questColoring.Brush.SetVector("_BrushPos", uv);
+            m_QuestColoring.Brush.SetVector("_BrushPos", uv);
 
-            RenderTexture tempRT = RenderTexture.GetTemporary(rt.descriptor);
+            RenderTexture tempRT = RenderTexture.GetTemporary(m_Rt.descriptor);
 
-            cb.Clear();
-            cb.Blit(rt, tempRT, questColoring.Brush);
-            cb.Blit(tempRT, rt);
-            Graphics.ExecuteCommandBuffer(cb);
+            m_Cb.Clear();
+            m_Cb.Blit(m_Rt, tempRT, m_QuestColoring.Brush);
+            m_Cb.Blit(tempRT, m_Rt);
+            Graphics.ExecuteCommandBuffer(m_Cb);
 
             RenderTexture.ReleaseTemporary(tempRT);
         }
@@ -102,13 +102,13 @@ namespace EduGame
         public void Reset() 
         {
             // This instantly overwrites the colored RT with the clean original
-            Graphics.Blit(baseTexture, rt);
+            Graphics.Blit(m_BaseTexture, m_Rt);
         }
 
         private void OnDestroy()
         {
-            cb?.Release();
-            if (rt != null) rt.Release();
+            m_Cb?.Release();
+            if (m_Rt != null) m_Rt.Release();
         }
 
         protected float GetPaintedPercentage() {
@@ -119,7 +119,7 @@ namespace EduGame
             // 2. Downscale using Blit (GPU does the heavy lifting)
             // Use Bilinear filtering for better averaging of "painted" areas
             //rt.filterMode = FilterMode.Bilinear;
-            Graphics.Blit(rt, smallRT);
+            Graphics.Blit(m_Rt, smallRT);
 
             // 3. Copy only the small texture to CPU
             Texture2D tex = new Texture2D(64, 64, TextureFormat.ARGB32, false);

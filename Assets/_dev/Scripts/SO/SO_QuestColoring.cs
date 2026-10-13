@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -8,14 +9,14 @@ namespace EduGame
     public class SO_QuestColoring : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private string text;
-        [SerializeField] private RectTransform canvas;
+        [SerializeField] [FormerlySerializedAs("text")] private string m_Text;
+        [SerializeField] [FormerlySerializedAs("canvas")] private RectTransform m_Canvas;
 
         [Header("Rule")]
         //[SerializeField] private int attempt = 10;
         //[SerializeField] private float timer = 0;
         
-        public string Text => text;
-        public RectTransform Canvas => canvas;
+        public string Text => m_Text;
+        public RectTransform Canvas => m_Canvas;
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -8,29 +9,29 @@ namespace EduGame
     public class SO_QuestShapeIt : SO_Quest
     {
          [Header("Question")]
-        [SerializeField] private QuestShapeItCanvas canvas;
+        [SerializeField] [FormerlySerializedAs("canvas")] private QuestShapeItCanvas m_Canvas;
         
         [Header("Rule")]
-        [SerializeField] private float timer = 0;
-        [SerializeField] private bool randomizeChoice;
+        [SerializeField] [FormerlySerializedAs("timer")] private float m_Timer = 0;
+        [SerializeField] [FormerlySerializedAs("randomizeChoice")] private bool m_RandomizeChoice;
 
-        public QuestShapeItCanvas Canvas => canvas;
-        public QuestDragNDropItem[] Items => randomizeChoice ? GetRandomizedChoices() : canvas.Items;
-        public float Timer => timer;
+        public QuestShapeItCanvas Canvas => m_Canvas;
+        public QuestDragNDropItem[] Items => m_RandomizeChoice ? GetRandomizedChoices() : m_Canvas.Items;
+        public float Timer => m_Timer;
         
-        [NonSerialized] private QuestDragNDropItem[] randomizedChoices;
+        [NonSerialized] private QuestDragNDropItem[] m_RandomizedChoices;
 
         QuestDragNDropItem[] GetRandomizedChoices()
         {
-            if(randomizedChoices == null)
+            if(m_RandomizedChoices == null)
             {
-                randomizedChoices = new QuestDragNDropItem[canvas.Items.Length]; 
+                m_RandomizedChoices = new QuestDragNDropItem[m_Canvas.Items.Length]; 
 
                 System.Random random = new System.Random();
-                randomizedChoices = canvas.Items.OrderBy(x => random.Next()).ToArray();
+                m_RandomizedChoices = m_Canvas.Items.OrderBy(x => random.Next()).ToArray();
             }
 
-            return randomizedChoices;
+            return m_RandomizedChoices;
         }
     }
 }

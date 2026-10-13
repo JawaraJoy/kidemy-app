@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 public class HandTutorial : MonoBehaviour
 {
@@ -12,50 +13,50 @@ public class HandTutorial : MonoBehaviour
     }
 
     [Header("Hand Prefab Settings")]
-    [SerializeField] private GameObject handImagePrefab; // Assign UI Image Tangan di Inspector
-    [SerializeField] private int repeat = 5;
+    [SerializeField] [FormerlySerializedAs("handImagePrefab")] private GameObject m_HandImagePrefab; // Assign UI Image Tangan di Inspector
+    [SerializeField] [FormerlySerializedAs("repeat")] private int m_Repeat = 5;
 
     [Header("Animation Settings")]
-    [SerializeField] private float moveDuration = 1.2f;
-    [SerializeField] private float fadeDuration = 0.4f;
+    [SerializeField] [FormerlySerializedAs("moveDuration")] private float m_MoveDuration = 1.2f;
+    [SerializeField] [FormerlySerializedAs("fadeDuration")] private float m_FadeDuration = 0.4f;
 
     private readonly string m_IdleAnimationName = "Idle";
     private readonly string m_ClickAnimationName = "Click";
 
-    private GameObject handInstance;
+    private GameObject m_HandInstance;
 
     /// <summary>
     /// Memasang (Instantiate) tangan ke Canvas dan menjalankan animasinya
     /// </summary>
     public void PlayTutorial(RectTransform startTarget, RectTransform endTarget, Transform canvasTransform, TutorialMode mode = TutorialMode.Normal)
     {
-        if (handImagePrefab == null || startTarget == null || endTarget == null || canvasTransform == null) return;
+        if (m_HandImagePrefab == null || startTarget == null || endTarget == null || canvasTransform == null) return;
 
         // Instantiate prefab tangan di Canvas
-        handInstance = Instantiate(handImagePrefab, canvasTransform);
-        RectTransform handRect = handInstance.GetComponent<RectTransform>();
-        Image handImage = handInstance.GetComponent<Image>();
-        Animator animator = handInstance.GetComponentInChildren<Animator>();
+        m_HandInstance = Instantiate(m_HandImagePrefab, canvasTransform);
+        RectTransform handRect = m_HandInstance.GetComponent<RectTransform>();
+        Image handImage = m_HandInstance.GetComponent<Image>();
+        Animator animator = m_HandInstance.GetComponentInChildren<Animator>();
         Canvas canvas = canvasTransform.GetComponent<Canvas>();
 
         if (mode != TutorialMode.Swipe)
         {
-            foreach (TrailRenderer trail in handInstance.GetComponentsInChildren<TrailRenderer>(true))
+            foreach (TrailRenderer trail in m_HandInstance.GetComponentsInChildren<TrailRenderer>(true))
                 trail.enabled = false;
         }
 
         if (canvas)
         {
-            Canvas handCanvas = handInstance.GetComponent<Canvas>();
+            Canvas handCanvas = m_HandInstance.GetComponent<Canvas>();
             if (!handCanvas)
-                handCanvas = handInstance.AddComponent<Canvas>();
+                handCanvas = m_HandInstance.AddComponent<Canvas>();
 
             handCanvas.overrideSorting = true;
             handCanvas.sortingLayerID = canvas.sortingLayerID;
             handCanvas.sortingOrder = canvas.sortingOrder + 2;
         }
 
-        StartCoroutine(AnimateHand(handInstance, handRect, handImage, animator, canvas, startTarget, endTarget, mode));
+        StartCoroutine(AnimateHand(m_HandInstance, handRect, handImage, animator, canvas, startTarget, endTarget, mode));
     }
 
     private IEnumerator AnimateHand(GameObject handObj, RectTransform handRect, Image handImage, Animator animator, Canvas canvas, RectTransform startTarget, RectTransform endTarget, TutorialMode mode)
@@ -98,7 +99,7 @@ public class HandTutorial : MonoBehaviour
 
         }
 
-        for (int i = 0; i < repeat; i++)
+        for (int i = 0; i < m_Repeat; i++)
         {
             float elapsed = 0f;
             if (handRect == null) yield break;
@@ -119,10 +120,10 @@ public class HandTutorial : MonoBehaviour
                 trail.enabled = true;
             }
 
-            while (elapsed < moveDuration)
+            while (elapsed < m_MoveDuration)
             {
                 elapsed += Time.deltaTime;
-                float t = elapsed / moveDuration;
+                float t = elapsed / m_MoveDuration;
                 
                 // Bergerak halus dari Pertanyaan ke Jawaban
                 if (handRect != null)
@@ -154,10 +155,10 @@ public class HandTutorial : MonoBehaviour
 
             // Fade Out
             elapsed = 0f;
-            while (elapsed < fadeDuration)
+            while (elapsed < m_FadeDuration)
             {
                 elapsed += Time.deltaTime;
-                SetAlpha(handImage, Mathf.Lerp(1f, 0f, elapsed / fadeDuration));
+                SetAlpha(handImage, Mathf.Lerp(1f, 0f, elapsed / m_FadeDuration));
                 yield return null;
             }
 
@@ -180,9 +181,9 @@ public class HandTutorial : MonoBehaviour
 
     public void Disable()
     {
-        if(handInstance)
+        if(m_HandInstance)
         {
-            Destroy(handInstance);
+            Destroy(m_HandInstance);
         }
     }
 }

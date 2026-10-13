@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -9,44 +10,44 @@ namespace EduGame
     public class SO_QuestDragNDrop : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private QuestUtilLabelGroup[] groups;
+        [SerializeField] [FormerlySerializedAs("groups")] private QuestUtilLabelGroup[] m_Groups;
 
         [Header("Rule")]
-        [SerializeField] private bool randomizeChoice;
-        [SerializeField] private bool answerInOrder;
-        [SerializeField] private float timer = 0;
+        [SerializeField] [FormerlySerializedAs("randomizeChoice")] private bool m_RandomizeChoice;
+        [SerializeField] [FormerlySerializedAs("answerInOrder")] private bool m_AnswerInOrder;
+        [SerializeField] [FormerlySerializedAs("timer")] private float m_Timer = 0;
         
         public QuestUtilLabel[] Items => GetItems();
-        public QuestUtilLabelGroup[] Groups => groups;
-        public Dictionary<int, int> Index => compiledIndex;
-        public Dictionary<int, int[]> CompiledMap => compiledMap;
-        public QuestUtilLabelGroup[] Slots => slots;
-        public bool AnswerInOrder => answerInOrder;
-        public float Timer => timer;
+        public QuestUtilLabelGroup[] Groups => m_Groups;
+        public Dictionary<int, int> Index => m_CompiledIndex;
+        public Dictionary<int, int[]> CompiledMap => m_CompiledMap;
+        public QuestUtilLabelGroup[] Slots => m_Slots;
+        public bool AnswerInOrder => m_AnswerInOrder;
+        public float Timer => m_Timer;
 
-        [NonSerialized] private Dictionary<int, int> compiledIndex = new Dictionary<int, int>();
-        [NonSerialized] private Dictionary<int, int[]> compiledMap = new Dictionary<int, int[]>();
-        [NonSerialized] private QuestUtilLabel[] compiledItems;
-        [NonSerialized] private QuestUtilLabelGroup[] slots;
+        [NonSerialized] private Dictionary<int, int> m_CompiledIndex = new Dictionary<int, int>();
+        [NonSerialized] private Dictionary<int, int[]> m_CompiledMap = new Dictionary<int, int[]>();
+        [NonSerialized] private QuestUtilLabel[] m_CompiledItems;
+        [NonSerialized] private QuestUtilLabelGroup[] m_Slots;
 
         QuestUtilLabel[] GetItems()
         {
-            if(compiledItems == null)
+            if(m_CompiledItems == null)
             {
                 int totalItem = 0;
                 List<QuestUtilLabel> items = new List<QuestUtilLabel>();
 
-                slots = new QuestUtilLabelGroup[groups.Length];
+                m_Slots = new QuestUtilLabelGroup[m_Groups.Length];
 
                 int groupIndex = 0;
 
-                foreach (var group in groups)
+                foreach (var group in m_Groups)
                 {
                     group.Id = groupIndex;
-                    slots[group.Id] = group;
+                    m_Slots[group.Id] = group;
                     
-                    if(!compiledMap.ContainsKey(group.Id))
-                        compiledMap.Add(group.Id, new int[group.Labels.Length]);
+                    if(!m_CompiledMap.ContainsKey(group.Id))
+                        m_CompiledMap.Add(group.Id, new int[group.Labels.Length]);
 
                     int itemIndex = 0;
 
@@ -55,8 +56,8 @@ namespace EduGame
                         item.Id = totalItem + itemIndex;
                     
                         items.Add(item);
-                        compiledIndex.Add(item.Id, group.Id);
-                        compiledMap[group.Id][itemIndex] = item.Id;
+                        m_CompiledIndex.Add(item.Id, group.Id);
+                        m_CompiledMap[group.Id][itemIndex] = item.Id;
 
                         itemIndex++;
                     }
@@ -66,18 +67,18 @@ namespace EduGame
                     groupIndex++;
                 }
 
-                compiledItems = new QuestUtilLabel[totalItem]; 
+                m_CompiledItems = new QuestUtilLabel[totalItem]; 
                 
-                if(randomizeChoice)
+                if(m_RandomizeChoice)
                 {
                     System.Random random = new System.Random();
-                    compiledItems = items.OrderBy(x => random.Next()).ToArray();
+                    m_CompiledItems = items.OrderBy(x => random.Next()).ToArray();
                 }
                 else
-                    compiledItems = items.ToArray();
+                    m_CompiledItems = items.ToArray();
             }
 
-            return compiledItems;
+            return m_CompiledItems;
         }
     }
 }

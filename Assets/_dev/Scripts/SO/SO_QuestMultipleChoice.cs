@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -16,19 +17,19 @@ namespace EduGame
         [SerializeField]
         private AnimatorClipConfig m_HowManySoundConfig;
         [Space]
-        [SerializeField] private QuestUtilLabelChoice[] choices;
+        [SerializeField] [FormerlySerializedAs("choices")] private QuestUtilLabelChoice[] m_Choices;
         [Space()]
         
         [Header("Rule")]
-        [SerializeField] private float timer = 0;
-        [SerializeField] private bool randomizeChoice;
+        [SerializeField] [FormerlySerializedAs("timer")] private float m_Timer = 0;
+        [SerializeField] [FormerlySerializedAs("randomizeChoice")] private bool m_RandomizeChoice;
 
-        public QuestUtilLabelChoice[] Choices => randomizeChoice ? GetRandomizedChoices() : choices;
-        public float Timer => timer;
+        public QuestUtilLabelChoice[] Choices => m_RandomizeChoice ? GetRandomizedChoices() : m_Choices;
+        public float Timer => m_Timer;
         public int TotalAnswer => GetTotalAnswer();
 
-        [NonSerialized] private int totalAnswer = 0;
-        [NonSerialized] private QuestUtilLabelChoice[] randomizedChoices;
+        [NonSerialized] private int m_TotalAnswer = 0;
+        [NonSerialized] private QuestUtilLabelChoice[] m_RandomizedChoices;
 
         public AudioClip SoundQuest => m_SoundQuest;
         public AnimatorClipConfig HowManySoundConfig => m_HowManySoundConfig;
@@ -38,17 +39,17 @@ namespace EduGame
         {
             List<VoiceRequest> requests = new List<VoiceRequest>(base.GetVoiceRequests());
 
-            if (choices == null)
+            if (m_Choices == null)
                 return requests.ToArray();
 
-            for (int i = 0; i < choices.Length; i++)
+            for (int i = 0; i < m_Choices.Length; i++)
             {
-                if (choices[i] != null && !string.IsNullOrEmpty(choices[i].Text))
+                if (m_Choices[i] != null && !string.IsNullOrEmpty(m_Choices[i].Text))
                 {
                     requests.Add(new VoiceRequest
                     {
                         id = name + "_choice_" + i,
-                        text = choices[i].Text,
+                        text = m_Choices[i].Text,
                         voice_id = GetVoiceId()
                     });
                 }
@@ -60,7 +61,7 @@ namespace EduGame
         public override bool HasVoiceClip(string requestId)
         {
             if (TryGetChoiceIndex(requestId, out int index))
-                return choices[index] != null && choices[index].Audio != null;
+                return m_Choices[index] != null && m_Choices[index].Audio != null;
 
             return base.HasVoiceClip(requestId);
         }
@@ -69,8 +70,8 @@ namespace EduGame
         {
             if (TryGetChoiceIndex(requestId, out int index))
             {
-                if (choices[index] != null)
-                    choices[index].SetAudio(clip);
+                if (m_Choices[index] != null)
+                    m_Choices[index].SetAudio(clip);
 
                 return;
             }
@@ -86,34 +87,34 @@ namespace EduGame
                 return false;
 
             index = StringHelper.ExtractId(requestId);
-            return choices != null && index >= 0 && index < choices.Length;
+            return m_Choices != null && index >= 0 && index < m_Choices.Length;
         }
 
         QuestUtilLabelChoice[] GetRandomizedChoices()
         {
-            if(randomizedChoices == null)
+            if(m_RandomizedChoices == null)
             {
-                randomizedChoices = new QuestUtilLabelChoice[choices.Length]; 
+                m_RandomizedChoices = new QuestUtilLabelChoice[m_Choices.Length]; 
 
                 System.Random random = new System.Random();
-                randomizedChoices = choices.OrderBy(x => random.Next()).ToArray();
+                m_RandomizedChoices = m_Choices.OrderBy(x => random.Next()).ToArray();
             }
 
-            return randomizedChoices;
+            return m_RandomizedChoices;
         }
 
         int GetTotalAnswer()
         {
-            if(totalAnswer == 0)
+            if(m_TotalAnswer == 0)
             {
-                foreach (var choice in choices)
+                foreach (var choice in m_Choices)
                 {
                     if(choice.IsAnswer)
-                        totalAnswer++;
+                        m_TotalAnswer++;
                 }
             }
 
-            return totalAnswer;
+            return m_TotalAnswer;
         }
     }
 }

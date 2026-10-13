@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -8,36 +9,36 @@ namespace EduGame
     public class SO_QuestMatching : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private string text;
-        [SerializeField] private QuestUtilLabelMatching[] matches;
+        [SerializeField] [FormerlySerializedAs("text")] private string m_Text;
+        [SerializeField] [FormerlySerializedAs("matches")] private QuestUtilLabelMatching[] m_Matches;
 
         [Header("Rule")]
         //[SerializeField] private int attempt = 10;
         //[SerializeField] private float timer = 0;
 
-        public string Text => text;
+        public string Text => m_Text;
         public QuestUtilLabelMatching[] Matches => GetMatches();
 
-        [NonSerialized] private QuestUtilLabelMatching[] compiledMatches;
+        [NonSerialized] private QuestUtilLabelMatching[] m_CompiledMatches;
         
         QuestUtilLabelMatching[] GetMatches()
         {
-            if(compiledMatches == null)
+            if(m_CompiledMatches == null)
             {
-                compiledMatches = new QuestUtilLabelMatching[matches.Length * 2];
+                m_CompiledMatches = new QuestUtilLabelMatching[m_Matches.Length * 2];
                 
-                for (int i = 0; i < matches.Length; i++)
+                for (int i = 0; i < m_Matches.Length; i++)
                 {
-                    matches[i].SetId(i);
-                    compiledMatches[i * 2] =  matches[i];
-                    compiledMatches[i * 2 + 1] =  matches[i];
+                    m_Matches[i].SetId(i);
+                    m_CompiledMatches[i * 2] =  m_Matches[i];
+                    m_CompiledMatches[i * 2 + 1] =  m_Matches[i];
                 }
                     
                 System.Random random = new System.Random();
-                compiledMatches = compiledMatches.OrderBy(x => random.Next()).ToArray();
+                m_CompiledMatches = m_CompiledMatches.OrderBy(x => random.Next()).ToArray();
             }
 
-            return compiledMatches;
+            return m_CompiledMatches;
         }
     }
 }

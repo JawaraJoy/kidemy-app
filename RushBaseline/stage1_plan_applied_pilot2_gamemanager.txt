@@ -1,0 +1,49 @@
+RENAME PLAN: targets=43 (auto=43, manual=0), serialized=27, protected=0, files to edit=1, edits=235, shadow-skipped=0, inside #if=13, unparsable files=0, warnings=0
+
+=== MANUAL ===
+
+=== AUTOMATIC ===
+Assets/_dev/Scripts/Manager/GameManager.cs
+  GameManager.title -> m_Title  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.category -> m_Category  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.timer -> m_Timer  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.background -> m_Background  [private instance serialized] renamed=6 this/base-forced=0 shadow-skipped=0
+  GameManager.backgroundMusic -> m_BackgroundMusic  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.npc -> m_Npc  [private instance serialized] renamed=10 this/base-forced=0 shadow-skipped=0
+  GameManager.npcDialog -> m_NpcDialog  [private instance serialized] renamed=7 this/base-forced=0 shadow-skipped=0
+  GameManager.popResult -> m_PopResult  [private instance serialized] renamed=7 this/base-forced=0 shadow-skipped=0
+  GameManager.correctTitle -> m_CorrectTitle  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.wrongTitle -> m_WrongTitle  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.correctNote -> m_CorrectNote  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.wrongNote -> m_WrongNote  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.starContainer -> m_StarContainer  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  GameManager.starPrefab -> m_StarPrefab  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.buttonClue -> m_ButtonClue  [private instance serialized] renamed=1 this/base-forced=0 shadow-skipped=0
+  GameManager.buttonBack -> m_ButtonBack  [private instance serialized] renamed=1 this/base-forced=0 shadow-skipped=0
+  GameManager.buttonNext -> m_ButtonNext  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.buttonHome -> m_ButtonHome  [private instance serialized] renamed=1 this/base-forced=0 shadow-skipped=0
+  GameManager.buttonRestart -> m_ButtonRestart  [private instance serialized] renamed=1 this/base-forced=0 shadow-skipped=0
+  GameManager.buttonCharacter -> m_ButtonCharacter  [private instance serialized] renamed=1 this/base-forced=0 shadow-skipped=0
+  GameManager.correctFeedback -> m_CorrectFeedback  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.wrongFeedback -> m_WrongFeedback  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.idleFeedback -> m_IdleFeedback  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  GameManager.thinkFeedback -> m_ThinkFeedback  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  GameManager.audioSource -> m_AudioSource  [private instance serialized] renamed=4 this/base-forced=0 shadow-skipped=0 inIf=2
+  GameManager.questPrefab -> m_QuestPrefab  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.questPrefabs -> m_QuestPrefabs  [private instance serialized] renamed=5 this/base-forced=0 shadow-skipped=0
+  GameManager.stars -> m_Stars  [private instance] renamed=14 this/base-forced=0 shadow-skipped=0
+  GameManager.quests -> m_Quests  [private instance] renamed=29 this/base-forced=0 shadow-skipped=0
+  GameManager.currentIndex -> m_CurrentIndex  [private instance] renamed=18 this/base-forced=0 shadow-skipped=0
+  GameManager.recordedTime -> m_RecordedTime  [private instance] renamed=6 this/base-forced=0 shadow-skipped=0
+  GameManager.startTime -> m_StartTime  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  GameManager.timerCo -> m_TimerCo  [private instance] renamed=8 this/base-forced=0 shadow-skipped=0
+  GameManager.baseURL -> m_BaseURL  [private instance] renamed=8 this/base-forced=0 shadow-skipped=0 inIf=6
+  GameManager.frameURL -> m_FrameURL  [private instance] renamed=8 this/base-forced=0 shadow-skipped=0 inIf=5
+  GameManager.sessionId -> m_SessionId  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  GameManager.islandId -> m_IslandId  [private instance] renamed=1 this/base-forced=0 shadow-skipped=0
+  GameManager.result -> m_Result  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  GameManager.apiManager -> m_ApiManager  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  GameManager.assetManager -> m_AssetManager  [private instance] renamed=3 this/base-forced=0 shadow-skipped=0
+  GameManager.APIInfoURL -> m_APIInfoURL  [private instance] renamed=1 this/base-forced=0 shadow-skipped=0
+  GameManager.APIResultURL -> m_APIResultURL  [private instance] renamed=2 this/base-forced=0 shadow-skipped=0
+  GameManager.gameURL -> m_GameURL  [private instance] renamed=1 this/base-forced=0 shadow-skipped=0

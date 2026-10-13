@@ -1,21 +1,22 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestWordBuilderItem : QuestComponent
     {
-        [SerializeField] protected TMP_Text text;
-        [SerializeField] private AudioPlayer audioPlayer;
-        [SerializeField] private Image image;
+        [SerializeField] [FormerlySerializedAs("text")] protected TMP_Text m_Text;
+        [SerializeField] [FormerlySerializedAs("audioPlayer")] private AudioPlayer m_AudioPlayer;
+        [SerializeField] [FormerlySerializedAs("image")] private Image m_Image;
         
-        [SerializeField] protected GameObject correct;
-        [SerializeField] protected GameObject wrong;
+        [SerializeField] [FormerlySerializedAs("correct")] protected GameObject m_Correct;
+        [SerializeField] [FormerlySerializedAs("wrong")] protected GameObject m_Wrong;
         
         public bool IsRightAnswer { get; private set; } = false;
 
-        protected QuestUtilLabelValue choice;
+        protected QuestUtilLabelValue m_Choice;
 
         protected override void Awake()
         {
@@ -32,39 +33,39 @@ namespace EduGame
 
         public virtual void SetChoice(QuestUtilLabelValue choice)
         {
-            this.choice = choice;
+            this.m_Choice = choice;
 
             if(!string.IsNullOrEmpty(choice.Text))
             {
-                if(text)
-                    text.text = choice.Text;
+                if(m_Text)
+                    m_Text.text = choice.Text;
             }   
             else
             {
-                text?.gameObject.SetActive(false);
-                text?.transform.parent.gameObject.SetActive(false);   
+                m_Text?.gameObject.SetActive(false);
+                m_Text?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(choice.Audio)
             {
-                if(audioPlayer)
-                    audioPlayer.SetAudioClip(choice.Audio);
+                if(m_AudioPlayer)
+                    m_AudioPlayer.SetAudioClip(choice.Audio);
             }   
             else
             {
-                audioPlayer?.gameObject.SetActive(false);
-                audioPlayer?.transform.parent.gameObject.SetActive(false);   
+                m_AudioPlayer?.gameObject.SetActive(false);
+                m_AudioPlayer?.transform.parent.gameObject.SetActive(false);   
             }
 
             if(choice.Image)
             {
-                if(image)
-                    image.sprite = choice.Image;
+                if(m_Image)
+                    m_Image.sprite = choice.Image;
             }   
             else
             {
-                image?.gameObject.SetActive(false);
-                image?.transform.parent.gameObject.SetActive(false);   
+                m_Image?.gameObject.SetActive(false);
+                m_Image?.transform.parent.gameObject.SetActive(false);   
             }
         }
 
@@ -82,11 +83,11 @@ namespace EduGame
         {
             Button.interactable = true;
 
-            if(correct)
-                correct.SetActive(false);
+            if(m_Correct)
+                m_Correct.SetActive(false);
 
-            if(wrong)
-                wrong.SetActive(false);
+            if(m_Wrong)
+                m_Wrong.SetActive(false);
         }
     }
 }

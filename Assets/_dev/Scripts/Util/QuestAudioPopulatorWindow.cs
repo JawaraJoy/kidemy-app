@@ -4,14 +4,15 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Unity.EditorCoroutines.Editor; // Package for Edit-Mode Coroutines
 using EduGame; // Matches your project namespace
 
 public class QuestAudioPopulatorWindow : EditorWindow
 {
-    [SerializeField] private SO_Quest[] targetQuests = new SO_Quest[0];
-    private bool forceRedownload = false;
-    private bool isProcessing = false;
+    [SerializeField] [FormerlySerializedAs("targetQuests")] private SO_Quest[] m_TargetQuests = new SO_Quest[0];
+    private bool m_ForceRedownload = false;
+    private bool m_IsProcessing = false;
 
     [MenuItem("Tools/Audio/Populate Quest Audio")]
     public static void ShowWindow()
@@ -27,7 +28,7 @@ public class QuestAudioPopulatorWindow : EditorWindow
         SerializedObject serializedWindow = new SerializedObject(this);
         serializedWindow.Update();
         EditorGUILayout.PropertyField(
-            serializedWindow.FindProperty(nameof(targetQuests)),
+            serializedWindow.FindProperty(nameof(m_TargetQuests)),
             new GUIContent("Quest Assets"),
             true);
         serializedWindow.ApplyModifiedProperties();
@@ -36,11 +37,11 @@ public class QuestAudioPopulatorWindow : EditorWindow
             "Add the SO_Quest assets that should have their audio populated.",
             MessageType.Info);
 
-        forceRedownload = EditorGUILayout.Toggle("Force Redownload Existing", forceRedownload);
+        m_ForceRedownload = EditorGUILayout.Toggle("Force Redownload Existing", m_ForceRedownload);
 
         EditorGUILayout.Space(10);
 
-        GUI.enabled = !isProcessing;
+        GUI.enabled = !m_IsProcessing;
         if (GUILayout.Button("Populate Selected Quest Audio", GUILayout.Height(35)))
         {
             // Start coroutine cleanly in Edit Mode without MonoBehaviour!
@@ -72,19 +73,19 @@ public class QuestAudioPopulatorWindow : EditorWindow
             yield break;
         }
 
-        isProcessing = true;
+        m_IsProcessing = true;
 
-        if (targetQuests == null || targetQuests.Length == 0)
+        if (m_TargetQuests == null || m_TargetQuests.Length == 0)
         {
             Debug.LogWarning("[QuestAudioPopulator] No SO_Quest assets were assigned.");
-            isProcessing = false;
+            m_IsProcessing = false;
             yield break;
         }
 
-        Debug.Log($"[QuestAudioPopulator] Processing {targetQuests.Length} assigned SO_Quest slots.");
+        Debug.Log($"[QuestAudioPopulator] Processing {m_TargetQuests.Length} assigned SO_Quest slots.");
         HashSet<SO_Quest> processedQuests = new HashSet<SO_Quest>();
 
-        foreach (SO_Quest targetSO in targetQuests)
+        foreach (SO_Quest targetSO in m_TargetQuests)
         {
             if (targetSO == null || !processedQuests.Add(targetSO))
                 continue;
@@ -98,7 +99,7 @@ public class QuestAudioPopulatorWindow : EditorWindow
             foreach (var req in requests)
             {
                 // Skip existing audio clips unless Force Redownload is checked
-                if (!forceRedownload && targetSO.HasVoiceClip(req.id))
+                if (!m_ForceRedownload && targetSO.HasVoiceClip(req.id))
                 {
                     Debug.Log($"[QuestAudioPopulator] Skipping '{targetSO.name}' -> ID '{req.id}' (Audio exists)");
                     continue;
@@ -197,7 +198,7 @@ public class QuestAudioPopulatorWindow : EditorWindow
 
         AssetDatabase.SaveAssets();
         Debug.Log("[QuestAudioPopulator] Audio population complete!");
-        isProcessing = false;
+        m_IsProcessing = false;
     }
 
 }

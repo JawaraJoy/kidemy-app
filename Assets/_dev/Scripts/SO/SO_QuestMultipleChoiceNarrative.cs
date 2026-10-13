@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -6,8 +7,8 @@ namespace EduGame
     public class SO_QuestMultipleChoiceNarrative : SO_QuestMultipleChoice
     {
         [Header("Question")]
-        [SerializeField] private string narrative;
+        [SerializeField] [FormerlySerializedAs("narrative")] private string m_Narrative;
 
-        public string Narrative => narrative;
+        public string Narrative => m_Narrative;
     }
 }

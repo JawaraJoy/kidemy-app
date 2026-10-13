@@ -23,7 +23,7 @@ namespace EduGame
 
 #if UNITY_EDITOR
 
-        private const string OUTPUT_FOLDER =
+        private const string c_OutputFolder =
             "Assets/_dev2/GenerateVoice/Voice";
 
 #endif
@@ -266,7 +266,7 @@ namespace EduGame
             string outputDirectory =
                 Path.Combine(
                     projectPath,
-                    OUTPUT_FOLDER
+                    c_OutputFolder
                 );
 
             outputDirectory =
@@ -337,7 +337,7 @@ namespace EduGame
             yield return null;
 
             string unityAssetPath =
-                $"{OUTPUT_FOLDER}/{fileName}.mp3";
+                $"{c_OutputFolder}/{fileName}.mp3";
 
             unityAssetPath =
                 unityAssetPath.Replace(
@@ -666,7 +666,7 @@ namespace EduGame
                 );
 
                 EditorGUILayout.SelectableLabel(
-                    $"{OUTPUT_FOLDER}/Voice_{asset.NameVoice}.mp3",
+                    $"{c_OutputFolder}/Voice_{asset.NameVoice}.mp3",
                     EditorStyles.textField,
                     GUILayout.Height(18)
                 );

@@ -598,26 +598,33 @@ namespace RushRefactor
             }
             c[3] = compType + compIdx;
 
-            // 3. field renames on the property path (matched per path segment)
+            // 3. field renames on the property path. Every segment is resolved against the real field it belongs to,
+            // so a rule for one class never rewrites a same-named field of another class or of Unity itself.
             if (rules.Count == 0) return;
-            Type compClr = null;
-            bool compResolved = false;
-            string[] segs = null;
-            foreach (ResolvedRule rule in rules)
+            Type compClr = RushCommon.FindType(compType);
+            if (compClr == null) return;
+            string[] segs = c[4].Split('.');
+            Type cur = compClr;
+            for (int i = 0; i < segs.Length && cur != null; i++)
             {
-                if (rule.DeclaringType == null) continue;
-                if (rule.DeclaringIsUnityObject)
+                string seg = segs[i];
+                if (seg == "Array" || seg.StartsWith("data[", StringComparison.Ordinal)) continue;
+                string actual = seg;
+                foreach (ResolvedRule rule in rules)
                 {
-                    if (!compResolved) { compClr = RushCommon.FindType(compType); compResolved = true; }
-                    if (compClr == null || !rule.DeclaringType.IsAssignableFrom(compClr)) continue;
+                    if (rule.DeclaringType != null && rule.Entry.Old == seg && rule.DeclaringType.IsAssignableFrom(cur)) { actual = rule.Entry.New; break; }
                 }
-                if (segs == null) segs = c[4].Split('.');
-                for (int i = 0; i < segs.Length; i++)
-                {
-                    if (segs[i] == rule.Entry.Old) segs[i] = rule.Entry.New;
-                }
+                FieldInfo fi = null;
+                for (Type x = cur; x != null && x != typeof(object) && fi == null; x = x.BaseType)
+                    fi = x.GetField(actual, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+                if (actual != seg) segs[i] = actual;
+                if (fi == null) break;
+                Type ft = fi.FieldType;
+                if (ft.IsArray) ft = ft.GetElementType();
+                else if (ft.IsGenericType && ft.GetGenericTypeDefinition() == typeof(List<>)) ft = ft.GetGenericArguments()[0];
+                cur = ft;
             }
-            if (segs != null) c[4] = string.Join(".", segs);
+            c[4] = string.Join(".", segs);
         }
 
         public static List<RenameEntry> LoadRenameMap()

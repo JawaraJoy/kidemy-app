@@ -1,0 +1,22 @@
+RENAME PLAN: targets=13 (auto=13, manual=0), serialized=4, protected=0, files to edit=4, edits=58, shadow-skipped=0, inside #if=0, unparsable files=0, warnings=0
+
+=== MANUAL ===
+
+=== AUTOMATIC ===
+Assets/_dev/Scripts/Manager/APIManager.cs
+  APIManager.apiToken -> m_ApiToken  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  APIManager.apiUrl -> m_ApiUrl  [private instance] renamed=1 this/base-forced=0 shadow-skipped=0
+  APIManager.apiAIUrl -> m_ApiAIUrl  [private instance] renamed=2 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Manager/AssetManager.cs
+  AssetManager.forceRedownload -> m_ForceRedownload  [private instance serialized] renamed=3 this/base-forced=0 shadow-skipped=0
+  AssetManager.voiceRequests -> m_VoiceRequests  [private instance] renamed=5 this/base-forced=0 shadow-skipped=0
+  AssetManager.currentRequestFinished -> m_CurrentRequestFinished  [private instance] renamed=7 this/base-forced=0 shadow-skipped=0
+  AssetManager.activeRequest -> m_ActiveRequest  [private instance] renamed=8 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Manager/ContentManager.cs
+  ContentManager.canvasScaler -> m_CanvasScaler  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+  ContentManager.refRes -> m_RefRes  [private instance] renamed=7 this/base-forced=0 shadow-skipped=0
+  ContentManager.currentViewportSize -> m_CurrentViewportSize  [private instance] renamed=4 this/base-forced=0 shadow-skipped=0
+Assets/_dev/Scripts/Manager/FeedbackManager.cs
+  FeedbackManager.buttonClick -> m_ButtonClick  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  FeedbackManager.buttonOver -> m_ButtonOver  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0
+  FeedbackManager.buttonExit -> m_ButtonExit  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0

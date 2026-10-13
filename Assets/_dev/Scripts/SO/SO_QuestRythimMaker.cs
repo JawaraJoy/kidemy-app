@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -8,30 +9,30 @@ namespace EduGame
     public class SO_QuestRythimMaker : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private float speed = 1f;
-        [SerializeField] private QuestRythimNoteItem[] notes;
+        [SerializeField] [FormerlySerializedAs("speed")] private float m_Speed = 1f;
+        [SerializeField] [FormerlySerializedAs("notes")] private QuestRythimNoteItem[] m_Notes;
         
         [Header("Rule")]
-        [SerializeField] private float timer = 0;
-        [SerializeField] private bool randomizeChoice;
+        [SerializeField] [FormerlySerializedAs("timer")] private float m_Timer = 0;
+        [SerializeField] [FormerlySerializedAs("randomizeChoice")] private bool m_RandomizeChoice;
 
-        public QuestRythimNoteItem[] Items => randomizeChoice ? GetRandomizedChoices() : notes;
-        public float Timer => timer;
-        public float Speed => speed;
+        public QuestRythimNoteItem[] Items => m_RandomizeChoice ? GetRandomizedChoices() : m_Notes;
+        public float Timer => m_Timer;
+        public float Speed => m_Speed;
         
-        [NonSerialized] private QuestRythimNoteItem[] randomizedNotes;
+        [NonSerialized] private QuestRythimNoteItem[] m_RandomizedNotes;
 
         QuestRythimNoteItem[] GetRandomizedChoices()
         {
-            if(randomizedNotes == null)
+            if(m_RandomizedNotes == null)
             {
-                randomizedNotes = new QuestRythimNoteItem[notes.Length]; 
+                m_RandomizedNotes = new QuestRythimNoteItem[m_Notes.Length]; 
 
                 System.Random random = new System.Random();
-                randomizedNotes = notes.OrderBy(x => random.Next()).ToArray();
+                m_RandomizedNotes = m_Notes.OrderBy(x => random.Next()).ToArray();
             }
 
-            return randomizedNotes;
+            return m_RandomizedNotes;
         }
     }
 }

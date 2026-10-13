@@ -2,13 +2,14 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestShapeItItem : QuestDragNDropItem, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
     {   
-        [SerializeField] private bool canBeRotated = true;
+        [SerializeField] [FormerlySerializedAs("canBeRotated")] private bool m_CanBeRotated = true;
 
-        public bool CanBeRotated => canBeRotated;
+        public bool CanBeRotated => m_CanBeRotated;
     }
 }

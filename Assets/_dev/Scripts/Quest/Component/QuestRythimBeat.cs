@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -8,28 +9,28 @@ namespace EduGame
 
     public class QuestRythimBeat : QuestComponent
     {   
-        [SerializeField] private AudioSource audioSource;
-        [SerializeField] private AudioClip clip;
+        [SerializeField] [FormerlySerializedAs("audioSource")] private AudioSource m_AudioSource;
+        [SerializeField] [FormerlySerializedAs("clip")] private AudioClip m_Clip;
         
-        private Collider2D col;
-        private Animator animator;
+        private Collider2D m_Col;
+        private Animator m_Animator;
 
-        private bool isOnBeat;
+        private bool m_IsOnBeat;
 
-        private bool isSuccess;
+        private bool m_IsSuccess;
         
         protected override void Awake()
         {
             base.Awake();
 
-            col = GetComponent<Collider2D>();
-            animator = GetComponentInChildren<Animator>();
+            m_Col = GetComponent<Collider2D>();
+            m_Animator = GetComponentInChildren<Animator>();
 
-            if(!audioSource)
-                audioSource = GameManager.Instance.AudioSource;
+            if(!m_AudioSource)
+                m_AudioSource = GameManager.Instance.AudioSource;
 
-            if(col)
-                col.enabled = false;
+            if(m_Col)
+                m_Col.enabled = false;
             else
                 Debug.LogError("Collider not found");
 
@@ -41,12 +42,12 @@ namespace EduGame
 
         void Onclick()
         {
-            if(!isOnBeat)
+            if(!m_IsOnBeat)
             {
-                isOnBeat = true;
+                m_IsOnBeat = true;
 
-                if(animator)
-                    animator.Play("Tap");
+                if(m_Animator)
+                    m_Animator.Play("Tap");
 
                 StartCoroutine(BeatCo());
             }
@@ -54,27 +55,27 @@ namespace EduGame
 
         IEnumerator BeatCo()
         {
-            col.enabled = true;
+            m_Col.enabled = true;
 
             yield return new WaitForSeconds(0.1f);
 
-            if(clip && !isSuccess)
-                audioSource.PlayOneShot(clip);
+            if(m_Clip && !m_IsSuccess)
+                m_AudioSource.PlayOneShot(m_Clip);
 
             yield return new WaitForSeconds(0.1f);
 
-            col.enabled = false;
+            m_Col.enabled = false;
 
-            isOnBeat = false;
+            m_IsOnBeat = false;
 
-            isSuccess = false;
+            m_IsSuccess = false;
         }
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.tag == "NoteHead" && !isSuccess)
+            if(collision.tag == "NoteHead" && !m_IsSuccess)
             {
-                isSuccess = true;
+                m_IsSuccess = true;
                 
                 QuestRythimNote note = collision.GetComponent<QuestRythimNote>();
                 

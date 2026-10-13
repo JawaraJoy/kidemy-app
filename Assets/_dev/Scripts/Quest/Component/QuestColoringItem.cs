@@ -5,47 +5,47 @@ namespace EduGame
 {
     public class QuestColoringItem : QuestComponent
     {
-        private Image image;
-        private Texture2D texture;
-        private Color defaultColor;
+        private Image m_Image;
+        private Texture2D m_Texture;
+        private Color m_DefaultColor;
 
-        private QuestColoring questColoring;
-        private QuestUtilRegionalClick regionalClick;
+        private QuestColoring m_QuestColoring;
+        private QuestUtilRegionalClick m_RegionalClick;
 
         protected override void Awake()
         {
-            image = GetComponent<Image>();
-            questColoring = GetComponentInParent<QuestColoring>();
-            regionalClick = GetComponent<QuestUtilRegionalClick>();
+            m_Image = GetComponent<Image>();
+            m_QuestColoring = GetComponentInParent<QuestColoring>();
+            m_RegionalClick = GetComponent<QuestUtilRegionalClick>();
 
-            if (!image)
+            if (!m_Image)
                 Debug.LogError("Image Component not found");
             
-            if(!questColoring)
+            if(!m_QuestColoring)
                 Debug.LogError("Quest Component not found");
 
-            if(!regionalClick)
+            if(!m_RegionalClick)
                 Debug.LogError("QuestUtilRegionalEvent Component not found");
 
-            defaultColor = image.color;
+            m_DefaultColor = m_Image.color;
 
-            questColoring.AddColor(defaultColor);
+            m_QuestColoring.AddColor(m_DefaultColor);
 
-            regionalClick.AddClickEvent(ChangeColor);
+            m_RegionalClick.AddClickEvent(ChangeColor);
 
             ChangeColor(Color.white);    
         }
 
         public void ChangeColor(Color color)
         {
-            if(image.color != color)
-                image.color = new Color(color.r, color.g, color.b, 1);
+            if(m_Image.color != color)
+                m_Image.color = new Color(color.r, color.g, color.b, 1);
         }
 
         public void ChangeColor()
         {
-            if(questColoring.SelectedColor.a > 0.5f)
-                ChangeColor(questColoring.SelectedColor);
+            if(m_QuestColoring.SelectedColor.a > 0.5f)
+                ChangeColor(m_QuestColoring.SelectedColor);
         }
     }
 }

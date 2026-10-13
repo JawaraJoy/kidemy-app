@@ -1,24 +1,25 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public abstract class FeedbackItem : MonoBehaviour
     {
-        [SerializeField] protected float delay = 0f;
-        [SerializeField] protected float delayStop = 0f;
+        [SerializeField] [FormerlySerializedAs("delay")] protected float m_Delay = 0f;
+        [SerializeField] [FormerlySerializedAs("delayStop")] protected float m_DelayStop = 0f;
 
         public virtual void Play(Transform transform)
         {
-            if(delay > 0)
-                Invoke("ExecPlay", delay);
+            if(m_Delay > 0)
+                Invoke("ExecPlay", m_Delay);
             else
                 ExecPlay();
         }
 
         public virtual void Stop(Transform transform)
         {
-            if(delay > 0)
-                Invoke("ExecStop", delay);
+            if(m_Delay > 0)
+                Invoke("ExecStop", m_Delay);
             else
                 ExecStop();
         }

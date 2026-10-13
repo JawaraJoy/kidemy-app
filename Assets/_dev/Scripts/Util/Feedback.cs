@@ -4,18 +4,18 @@ namespace EduGame
 {
     public class Feedback : MonoBehaviour
     {
-        private FeedbackItem[] feedbackItems;
+        private FeedbackItem[] m_FeedbackItems;
 
         protected virtual void Start()
         {
-            feedbackItems = GetComponentsInChildren<FeedbackItem>();
+            m_FeedbackItems = GetComponentsInChildren<FeedbackItem>();
         }
 
         public virtual void Play(Transform transform)
         {
-            if (feedbackItems == null) return;
+            if (m_FeedbackItems == null) return;
             if (transform == null) return;
-            foreach (var feedbackItem in feedbackItems)
+            foreach (var feedbackItem in m_FeedbackItems)
             {
                 if (feedbackItem != null)
                 {

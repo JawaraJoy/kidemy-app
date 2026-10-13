@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -9,18 +10,18 @@ namespace EduGame
 
     public class QuestRythimNote : QuestComponent
     {   
-        [SerializeField] protected int point;
+        [SerializeField] [FormerlySerializedAs("point")] protected int m_Point;
         
-        public int Point => point;
+        public int Point => m_Point;
 
-        private Rigidbody2D rb;
+        private Rigidbody2D m_Rb;
 
-        private bool isPlaying;
-        private bool isDone;
+        private bool m_IsPlaying;
+        private bool m_IsDone;
         
-        private float speed = 1;
-        private float delay = 0;
-        private AudioClip clip;
+        private float m_Speed = 1;
+        private float m_Delay = 0;
+        private AudioClip m_Clip;
 
         protected override void Awake()
         {
@@ -31,10 +32,10 @@ namespace EduGame
         {
             base.Init();
 
-            rb = GetComponent<Rigidbody2D>();
+            m_Rb = GetComponent<Rigidbody2D>();
 
-            if(rb)
-                rb.gravityScale = 0;
+            if(m_Rb)
+                m_Rb.gravityScale = 0;
             else
                 Debug.LogError("Rigidbody not found");
 
@@ -44,16 +45,16 @@ namespace EduGame
 
         public void Setup(float speed, float delay, AudioClip clip = null)
         {
-            this.speed = speed;
-            this.delay = delay;
-            this.clip = clip;
+            this.m_Speed = speed;
+            this.m_Delay = delay;
+            this.m_Clip = clip;
         }
 
         public void Play()
         {
-            if(!isPlaying)
+            if(!m_IsPlaying)
             {
-                isPlaying = true;
+                m_IsPlaying = true;
 
                 StartCoroutine(PlayCo());
             }
@@ -61,37 +62,37 @@ namespace EduGame
 
         IEnumerator PlayCo()
         {
-            if(delay > 0)
-                yield return new WaitForSeconds(delay);
+            if(m_Delay > 0)
+                yield return new WaitForSeconds(m_Delay);
 
-            while (!isDone)
+            while (!m_IsDone)
             {
                 // 1. Calculate the next target position using fixedDeltaTime
-                Vector2 currentPosition = rb.position;
-                Vector2 targetPosition = currentPosition + (Vector2.left * (speed * 5000) * Time.fixedDeltaTime);
+                Vector2 currentPosition = m_Rb.position;
+                Vector2 targetPosition = currentPosition + (Vector2.left * (m_Speed * 5000) * Time.fixedDeltaTime);
 
                 // 2. Teleport the physics body smoothly to the new position
-                rb.MovePosition(targetPosition);
+                m_Rb.MovePosition(targetPosition);
 
                 // 3. CRITICAL: Wait exactly for the next physics loop calculation
                 yield return new WaitForFixedUpdate();
             }
 
-            isPlaying = false;
-            isDone = false;
+            m_IsPlaying = false;
+            m_IsDone = false;
         }
         
         public void OnBeat(bool success = true)
         {
-            isDone = true;
+            m_IsDone = true;
             StopAllCoroutines();
 
             if(success)
             {
-                if(clip && QuestRythimMaker.AudioSource)
-                    QuestRythimMaker.AudioSource.PlayOneShot(clip);
+                if(m_Clip && QuestRythimMaker.AudioSource)
+                    QuestRythimMaker.AudioSource.PlayOneShot(m_Clip);
                 
-                quest.OnAnswered(true);
+                m_Quest.OnAnswered(true);
             }
 
             
@@ -102,7 +103,7 @@ namespace EduGame
         {
             if(collision.tag == "NoteEnd")
             {
-                quest.OnAnswered(false);
+                m_Quest.OnAnswered(false);
 
                 OnBeat(false);
             }
@@ -110,8 +111,8 @@ namespace EduGame
 
         public override void Reset()
         {
-            isPlaying = false;
-            isDone = false;
+            m_IsPlaying = false;
+            m_IsDone = false;
         }
     }
 }

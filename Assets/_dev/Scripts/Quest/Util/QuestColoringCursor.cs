@@ -1,44 +1,45 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestColoringCursor : MonoBehaviour
     {
         [Header("Custom Cursor Settings")]
-        [SerializeField] private Texture2D baseCursorTexture;
+        [SerializeField] [FormerlySerializedAs("baseCursorTexture")] private Texture2D m_BaseCursorTexture;
         
         [Range(0f, 1f)]
         [Tooltip("How close to pure white a pixel must be to get tinted.")]
-        [SerializeField] private float whiteThreshold = 0.9f;
+        [SerializeField] [FormerlySerializedAs("whiteThreshold")] private float m_WhiteThreshold = 0.9f;
 
-        private bool isCustomCursorActive = false;
-        private Texture2D tintedCursorTexture;
+        private bool m_IsCustomCursorActive = false;
+        private Texture2D m_TintedCursorTexture;
 
         public void ToggleCursor(Color tintColor)
         {
-            if (isCustomCursorActive) ResetToDefault();
+            if (m_IsCustomCursorActive) ResetToDefault();
             else SetToCustom(tintColor);
         }
 
         public void SetToCustom(Color tintColor)
         {
-            if (baseCursorTexture == null) return;
+            if (m_BaseCursorTexture == null) return;
 
             ClearTintedTexture();
 
-            tintedCursorTexture = new Texture2D(baseCursorTexture.width, baseCursorTexture.height, TextureFormat.RGBA32, false);
-            Color[] pixels = baseCursorTexture.GetPixels();
+            m_TintedCursorTexture = new Texture2D(m_BaseCursorTexture.width, m_BaseCursorTexture.height, TextureFormat.RGBA32, false);
+            Color[] pixels = m_BaseCursorTexture.GetPixels();
 
-            Vector2 hotSpot = new Vector2(0, baseCursorTexture.height);
+            Vector2 hotSpot = new Vector2(0, m_BaseCursorTexture.height);
 
             for (int i = 0; i < pixels.Length; i++)
             {
                 Color originalPixel = pixels[i];
 
                 // Check if the pixel is bright enough to be considered "white"
-                if (originalPixel.r >= whiteThreshold &&
-                    originalPixel.g >= whiteThreshold &&
-                    originalPixel.b >= whiteThreshold)
+                if (originalPixel.r >= m_WhiteThreshold &&
+                    originalPixel.g >= m_WhiteThreshold &&
+                    originalPixel.b >= m_WhiteThreshold)
                 {
                     // Tint only the white area, keeping the asset's original transparency
                     pixels[i].r = tintColor.r * originalPixel.r;
@@ -48,26 +49,26 @@ namespace EduGame
                 // Black lines, gray shading, or outer borders are completely skipped and left alone
             }
 
-            tintedCursorTexture.SetPixels(pixels);
-            tintedCursorTexture.Apply();
+            m_TintedCursorTexture.SetPixels(pixels);
+            m_TintedCursorTexture.Apply();
 
-            Cursor.SetCursor(tintedCursorTexture, hotSpot, CursorMode.Auto);
-            isCustomCursorActive = true;
+            Cursor.SetCursor(m_TintedCursorTexture, hotSpot, CursorMode.Auto);
+            m_IsCustomCursorActive = true;
         }
 
         public void ResetToDefault()
         {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-            isCustomCursorActive = false;
+            m_IsCustomCursorActive = false;
             ClearTintedTexture();
         }
 
         private void ClearTintedTexture()
         {
-            if (tintedCursorTexture != null)
+            if (m_TintedCursorTexture != null)
             {
-                Destroy(tintedCursorTexture);
-                tintedCursorTexture = null;
+                Destroy(m_TintedCursorTexture);
+                m_TintedCursorTexture = null;
             }
         }
 

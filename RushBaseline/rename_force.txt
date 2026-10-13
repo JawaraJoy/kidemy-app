@@ -1,0 +1,4 @@
+# Reviewed by hand: the string literal / type name with the same text does not refer to the field.
+# Format: Type.oldFieldName
+QuestUtilLabelGroup.label
+Quest.data

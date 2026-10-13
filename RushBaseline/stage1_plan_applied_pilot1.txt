@@ -1,0 +1,7 @@
+RENAME PLAN: targets=1 (auto=1, manual=0), serialized=1, protected=0, files to edit=1, edits=4, shadow-skipped=0, inside #if=0, unparsable files=0, warnings=0
+
+=== MANUAL ===
+
+=== AUTOMATIC ===
+Assets/_dev/Scripts/Quest/Component/QuestShapeItItem.cs
+  QuestShapeItItem.canBeRotated -> m_CanBeRotated  [private instance serialized] renamed=2 this/base-forced=0 shadow-skipped=0

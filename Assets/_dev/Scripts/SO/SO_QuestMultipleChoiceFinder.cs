@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -8,7 +9,7 @@ namespace EduGame
     public class SO_QuestMultipleChoiceFinder : SO_Quest
     {
         [Header("Question")]
-        [SerializeField] private QuestUtilLabelChoice[] choices;
+        [SerializeField] [FormerlySerializedAs("choices")] private QuestUtilLabelChoice[] m_Choices;
         
     }
 }

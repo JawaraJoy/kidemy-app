@@ -9,9 +9,9 @@ namespace EduGame
         public Button Button { get; private set; }
         public Image Image { get; private set; }
 
-        protected Quest quest;
+        protected Quest m_Quest;
 
-        protected bool isInit;
+        protected bool m_IsInit;
 
         protected virtual void Awake()
         {
@@ -20,19 +20,19 @@ namespace EduGame
 
         public virtual void Init()
         {
-            if(!isInit)
+            if(!m_IsInit)
             {
                 Rect = GetComponent<RectTransform>();
                 Button = GetComponentInChildren<Button>();
                 Image = GetComponent<Image>();
 
-                isInit = true;   
+                m_IsInit = true;   
             }
         }
 
         protected virtual void Start()
         {
-            quest = GetComponentInParent<Quest>();
+            m_Quest = GetComponentInParent<Quest>();
         }
 
         public virtual void OnClick()

@@ -8,9 +8,9 @@ namespace EduGame
 {
     public class APIManager : MonoBehaviour
     {
-        private string apiToken = "game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e";
-        private string apiUrl = "";
-        private string apiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
+        private string m_ApiToken = "game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e";
+        private string m_ApiUrl = "";
+        private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
 
         public const string frogVoiceID = "n3tkGOcEribaYI5zg4pu";
 
@@ -31,7 +31,7 @@ namespace EduGame
             if (string.IsNullOrEmpty(request.voice_id))
                 request.voice_id = frogVoiceID;
 
-            string requestUrl = apiAIUrl + "v1/api/audio/generate";
+            string requestUrl = m_ApiAIUrl + "v1/api/audio/generate";
 
             RequestData(requestUrl, JsonUtility.ToJson(request), onSuccess, onFailure, false);
         }
@@ -54,7 +54,7 @@ namespace EduGame
                 request.downloadHandler = new DownloadHandlerBuffer();
 
                 // Explicitly define API header parameters
-                request.SetRequestHeader("Authorization", "Bearer " + apiToken);
+                request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
                 request.SetRequestHeader("Content-Type", "application/json");
                 request.SetRequestHeader("Accept", "application/json");
 
@@ -86,7 +86,7 @@ namespace EduGame
             using (UnityWebRequest request = UnityWebRequest.Get(url))
             {
                 if (auth)
-                    request.SetRequestHeader("Authorization", "Bearer " + apiToken);
+                    request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
 
                 // Wait until the network request completely finishes
                 yield return request.SendWebRequest();
@@ -127,12 +127,12 @@ namespace EduGame
                 request.downloadHandler = new DownloadHandlerBuffer();
 
                 // Explicitly define API header parameters
-                request.SetRequestHeader("Authorization", "Bearer " + apiToken);
+                request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
                 request.SetRequestHeader("Content-Type", "application/json");
                 request.SetRequestHeader("Accept", "application/json");
 
                 if (auth)
-                    request.SetRequestHeader("Authorization", "Bearer " + apiToken);
+                    request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
 
                 // Wait until the network request completely finishes
                 yield return request.SendWebRequest();

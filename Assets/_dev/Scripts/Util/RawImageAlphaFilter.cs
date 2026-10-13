@@ -7,33 +7,33 @@ public class RawImageAlphaFilter : MonoBehaviour, ICanvasRaycastFilter
     public float alphaThreshold = 0.1f;
     
     // We will use the original static texture for the "hit test"
-    private Texture2D _maskTexture;
-    private RawImage _rawImage;
+    private Texture2D m_MaskTexture;
+    private RawImage m_RawImage;
 
     void Awake()
     {
-        _rawImage = GetComponent<RawImage>();
+        m_RawImage = GetComponent<RawImage>();
         
         // IMPORTANT: Grab the texture BEFORE it gets swapped with the RenderTexture
         // Or assign the base texture manually in the inspector.
-        if (_rawImage.texture is Texture2D tex)
+        if (m_RawImage.texture is Texture2D tex)
         {
-            _maskTexture = tex;
+            m_MaskTexture = tex;
         }
     }
 
     public bool IsRaycastLocationValid(Vector2 screenPoint, Camera eventCamera)
     {
-        if (_maskTexture == null || alphaThreshold <= 0) return true;
+        if (m_MaskTexture == null || alphaThreshold <= 0) return true;
 
         Vector2 localPoint;
         if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            _rawImage.rectTransform, screenPoint, eventCamera, out localPoint))
+            m_RawImage.rectTransform, screenPoint, eventCamera, out localPoint))
         {
             return false;
         }
 
-        Rect rect = _rawImage.rectTransform.rect;
+        Rect rect = m_RawImage.rectTransform.rect;
         Vector2 normalizedUV = new Vector2(
             (localPoint.x - rect.x) / rect.width,
             (localPoint.y - rect.y) / rect.height
@@ -42,7 +42,7 @@ public class RawImageAlphaFilter : MonoBehaviour, ICanvasRaycastFilter
         // We sample the STATIC texture (CPU-accessible) instead of the RenderTexture
         try
         {
-            return _maskTexture.GetPixelBilinear(normalizedUV.x, normalizedUV.y).a >= alphaThreshold;
+            return m_MaskTexture.GetPixelBilinear(normalizedUV.x, normalizedUV.y).a >= alphaThreshold;
         }
         catch (UnityException)
         {

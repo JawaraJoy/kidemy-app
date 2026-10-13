@@ -4,6 +4,7 @@ using EasyTextEffects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -12,20 +13,20 @@ namespace EduGame
         [Header("Data")]
 
         [Header("Components")]
-        [SerializeField] private Image questionImage;
-        [SerializeField] private AudioPlayer questionAudio;
-        [SerializeField] private TMP_Text questionText;
-        [SerializeField] private RectTransform itemsContainer;
-        [SerializeField] private RectTransform slotsContainer;
+        [SerializeField] [FormerlySerializedAs("questionImage")] private Image m_QuestionImage;
+        [SerializeField] [FormerlySerializedAs("questionAudio")] private AudioPlayer m_QuestionAudio;
+        [SerializeField] [FormerlySerializedAs("questionText")] private TMP_Text m_QuestionText;
+        [SerializeField] [FormerlySerializedAs("itemsContainer")] private RectTransform m_ItemsContainer;
+        [SerializeField] [FormerlySerializedAs("slotsContainer")] private RectTransform m_SlotsContainer;
 
         [Header("Prefab")]
-        [SerializeField] private QuestDragNDropItem itemPrefab;
-        [SerializeField] private QuestDragNDropSlot slotPrefab;
+        [SerializeField] [FormerlySerializedAs("itemPrefab")] private QuestDragNDropItem m_ItemPrefab;
+        [SerializeField] [FormerlySerializedAs("slotPrefab")] private QuestDragNDropSlot m_SlotPrefab;
 
-        private SO_QuestDragNDrop dataDragNDrop;
-        private QuestDragNDropItem[] items;
-        private QuestDragNDropSlot[] slots;
-        private int totalLimit = 0;
+        private SO_QuestDragNDrop m_DataDragNDrop;
+        private QuestDragNDropItem[] m_Items;
+        private QuestDragNDropSlot[] m_Slots;
+        private int m_TotalLimit = 0;
 
         private TextEffect m_TextEffect;
 
@@ -33,78 +34,78 @@ namespace EduGame
         {
             base.Start();
 
-            if (!dataDragNDrop)
+            if (!m_DataDragNDrop)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoice");
 
-            if (questionImage)
+            if (m_QuestionImage)
             {
-                if (dataDragNDrop.Question.Image)
-                    questionImage.sprite = dataDragNDrop.Question.Image;
+                if (m_DataDragNDrop.Question.Image)
+                    m_QuestionImage.sprite = m_DataDragNDrop.Question.Image;
                 else
                 {
-                    questionImage.gameObject.SetActive(false);
-                    questionImage.transform.parent.gameObject.SetActive(false);
+                    m_QuestionImage.gameObject.SetActive(false);
+                    m_QuestionImage.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (questionAudio)
+            if (m_QuestionAudio)
             {
-                if (dataDragNDrop.Question.Audio)
-                    questionAudio.SetAudioClip(dataDragNDrop.Question.Audio);
+                if (m_DataDragNDrop.Question.Audio)
+                    m_QuestionAudio.SetAudioClip(m_DataDragNDrop.Question.Audio);
                 else
                 {
-                    questionAudio.gameObject.SetActive(false);
-                    questionAudio.transform.parent.gameObject.SetActive(false);
+                    m_QuestionAudio.gameObject.SetActive(false);
+                    m_QuestionAudio.transform.parent.gameObject.SetActive(false);
                 }
             }
 
-            if (questionText)
+            if (m_QuestionText)
             {
-                if (dataDragNDrop.Question.FormatedText)
+                if (m_DataDragNDrop.Question.FormatedText)
                 {
-                    if (questionText.TryGetComponent(out TextEffect textEff))
+                    if (m_QuestionText.TryGetComponent(out TextEffect textEff))
                     {
                         m_TextEffect = textEff;
                     }
-                    m_TextEffect.preset = dataDragNDrop.Question.FormatedText.EffectPreset;
-                    questionText.text = dataDragNDrop.Question.FormatedText.GetFormattedText();
+                    m_TextEffect.preset = m_DataDragNDrop.Question.FormatedText.EffectPreset;
+                    m_QuestionText.text = m_DataDragNDrop.Question.FormatedText.GetFormattedText();
                     m_TextEffect.Refresh();
                 }
                 else
                 {
-                    if (!string.IsNullOrEmpty(dataDragNDrop.Question.Text))
-                        questionText.text = dataDragNDrop.Question.Text;
+                    if (!string.IsNullOrEmpty(m_DataDragNDrop.Question.Text))
+                        m_QuestionText.text = m_DataDragNDrop.Question.Text;
                     else
                     {
-                        questionText.gameObject.SetActive(false);
-                        questionText.transform.parent.gameObject.SetActive(false);
+                        m_QuestionText.gameObject.SetActive(false);
+                        m_QuestionText.transform.parent.gameObject.SetActive(false);
                     }   
                 }
             }
 
-            if (itemsContainer && itemPrefab)
+            if (m_ItemsContainer && m_ItemPrefab)
             {
-                items = new QuestDragNDropItem[dataDragNDrop.Items.Length];
+                m_Items = new QuestDragNDropItem[m_DataDragNDrop.Items.Length];
 
-                for (int i = 0; i < dataDragNDrop.Items.Length; i++)
+                for (int i = 0; i < m_DataDragNDrop.Items.Length; i++)
                 {
-                    items[i] = InstantiateItem(items[0]);
-                    items[i].SetItem(dataDragNDrop.Items[i]);
+                    m_Items[i] = InstantiateItem(m_Items[0]);
+                    m_Items[i].SetItem(m_DataDragNDrop.Items[i]);
                 }
             }
 
-            if (slotsContainer && slotPrefab)
+            if (m_SlotsContainer && m_SlotPrefab)
             {
-                slots = new QuestDragNDropSlot[dataDragNDrop.Slots.Length];
+                m_Slots = new QuestDragNDropSlot[m_DataDragNDrop.Slots.Length];
 
-                for (int i = 0; i < dataDragNDrop.Slots.Length; i++)
+                for (int i = 0; i < m_DataDragNDrop.Slots.Length; i++)
                 {
-                    if(dataDragNDrop.Slots[i].Limit > 0)
+                    if(m_DataDragNDrop.Slots[i].Limit > 0)
                     {
-                        slots[i] = InstantiateSlot(slots[0]);
-                        slots[i].SetSlot(dataDragNDrop.Slots[i], i+1, i == dataDragNDrop.Items.Length - 1);
+                        m_Slots[i] = InstantiateSlot(m_Slots[0]);
+                        m_Slots[i].SetSlot(m_DataDragNDrop.Slots[i], i+1, i == m_DataDragNDrop.Items.Length - 1);
 
-                        totalLimit += slots[i].GroupData.Limit;
+                        m_TotalLimit += m_Slots[i].GroupData.Limit;
                     }
                 }
             }
@@ -114,14 +115,14 @@ namespace EduGame
 
         public override void Setup()
         {
-            dataDragNDrop = data as SO_QuestDragNDrop;
+            m_DataDragNDrop = m_Data as SO_QuestDragNDrop;
 
             base.Setup();
         }
 
         QuestDragNDropItem InstantiateItem(QuestDragNDropItem prefab)
         {
-            QuestDragNDropItem item = Instantiate(prefab ? prefab : itemPrefab, itemsContainer);
+            QuestDragNDropItem item = Instantiate(prefab ? prefab : m_ItemPrefab, m_ItemsContainer);
 
             item.transform.localPosition = Vector3.zero;
             item.Rect.localScale = Vector3.one;
@@ -131,7 +132,7 @@ namespace EduGame
 
         QuestDragNDropSlot InstantiateSlot(QuestDragNDropSlot prefab)
         {
-            QuestDragNDropSlot slot = Instantiate(prefab ? prefab : slotPrefab, slotsContainer);
+            QuestDragNDropSlot slot = Instantiate(prefab ? prefab : m_SlotPrefab, m_SlotsContainer);
 
             slot.transform.localPosition = Vector3.zero;
             slot.Rect.localScale = Vector3.one;
@@ -141,23 +142,23 @@ namespace EduGame
 
         void RecalculateContainer()
         {
-            if (items[0].Rect.sizeDelta.x > 0 && items[0].Rect.sizeDelta.y > 0)
+            if (m_Items[0].Rect.sizeDelta.x > 0 && m_Items[0].Rect.sizeDelta.y > 0)
             {
-                GridLayoutGroup gridLayoutGroup = itemsContainer.GetComponent<GridLayoutGroup>();
+                GridLayoutGroup gridLayoutGroup = m_ItemsContainer.GetComponent<GridLayoutGroup>();
                 if (gridLayoutGroup)
-                    gridLayoutGroup.cellSize = items[0].Rect.sizeDelta;
+                    gridLayoutGroup.cellSize = m_Items[0].Rect.sizeDelta;
             }
 
-            if (slots[0].Rect.sizeDelta.x > 0 && slots[0].Rect.sizeDelta.y > 0)
+            if (m_Slots[0].Rect.sizeDelta.x > 0 && m_Slots[0].Rect.sizeDelta.y > 0)
             {
-                GridLayoutGroup gridLayoutGroup = slotsContainer.GetComponent<GridLayoutGroup>();
+                GridLayoutGroup gridLayoutGroup = m_SlotsContainer.GetComponent<GridLayoutGroup>();
                 if (gridLayoutGroup)
-                    gridLayoutGroup.cellSize = slots[0].Rect.sizeDelta;
+                    gridLayoutGroup.cellSize = m_Slots[0].Rect.sizeDelta;
 
-                slotsContainer.sizeDelta = new Vector2(slotsContainer.sizeDelta.x * slots.Length, slotsContainer.sizeDelta.y);
+                m_SlotsContainer.sizeDelta = new Vector2(m_SlotsContainer.sizeDelta.x * m_Slots.Length, m_SlotsContainer.sizeDelta.y);
             }
 
-            QuestDragNDropZone questDragNDropZone = itemsContainer.GetComponent<QuestDragNDropZone>();
+            QuestDragNDropZone questDragNDropZone = m_ItemsContainer.GetComponent<QuestDragNDropZone>();
 
             if (questDragNDropZone)
                 questDragNDropZone.RegisterItems();
@@ -172,28 +173,28 @@ namespace EduGame
 
         public override void OnAnswered(bool answer, bool submit = true)
         {
-            if (dataDragNDrop.AutoSubmit)
+            if (m_DataDragNDrop.AutoSubmit)
             {
                 int answereds = 0;
 
-                foreach (var slot in slots)
+                foreach (var slot in m_Slots)
                 {
                     if(slot)
                         answereds += slot.DropZone.transform.childCount;
                 }
 
-                if (answereds >= dataDragNDrop.Items.Length || answereds >= totalLimit)
+                if (answereds >= m_DataDragNDrop.Items.Length || answereds >= m_TotalLimit)
                     Submit();
             }
         }
 
         public override void Submit(int star = 1)
         {
-            int totalAnswers = dataDragNDrop.AnswerInOrder ? Sort() : Check();
+            int totalAnswers = m_DataDragNDrop.AnswerInOrder ? Sort() : Check();
 
-            if (totalAnswers == dataDragNDrop.Items.Length || totalAnswers >= totalLimit)
+            if (totalAnswers == m_DataDragNDrop.Items.Length || totalAnswers >= m_TotalLimit)
                 star = 3;
-            else if (totalAnswers / dataDragNDrop.Items.Length >= 0.5f)
+            else if (totalAnswers / m_DataDragNDrop.Items.Length >= 0.5f)
                 star = 2;
 
             GameManager.Instance.Submit(star);
@@ -205,17 +206,17 @@ namespace EduGame
 
             int totalAnswers = 0;
 
-            foreach (var slot in slots)
+            foreach (var slot in m_Slots)
             {
                 if(slot)
                 {
                     QuestDragNDropItem[] answereds = slot.GetComponentsInChildren<QuestDragNDropItem>();
 
-                    if (dataDragNDrop.CompiledMap[slot.GroupData.Id].Length == answereds.Length)
+                    if (m_DataDragNDrop.CompiledMap[slot.GroupData.Id].Length == answereds.Length)
                     {
-                        for (int i = 0; i < dataDragNDrop.CompiledMap[slot.GroupData.Id].Length; i++)
+                        for (int i = 0; i < m_DataDragNDrop.CompiledMap[slot.GroupData.Id].Length; i++)
                         {
-                            if (dataDragNDrop.CompiledMap[slot.GroupData.Id][i] == answereds[i].ItemData.Id)
+                            if (m_DataDragNDrop.CompiledMap[slot.GroupData.Id][i] == answereds[i].ItemData.Id)
                                 totalAnswers++;
                         }
                     }
@@ -229,13 +230,13 @@ namespace EduGame
         {
             int totalAnswers = 0;
 
-            foreach (var slot in slots)
+            foreach (var slot in m_Slots)
             {
                 if (slot && slot.DropZone)
                 {
                     foreach (var item in slot.DropZone.Items)
                     {
-                        if (dataDragNDrop.Index[item.ItemData.Id] == slot.GroupData.Id)
+                        if (m_DataDragNDrop.Index[item.ItemData.Id] == slot.GroupData.Id)
                             totalAnswers++;
                     }
                 }
@@ -246,15 +247,15 @@ namespace EduGame
 
         public override void Reset()
         {
-            if(items != null)
+            if(m_Items != null)
             {
-                foreach (var choice in items)
-                    choice.transform.SetParent(itemsContainer);
+                foreach (var choice in m_Items)
+                    choice.transform.SetParent(m_ItemsContainer);
             }
                 
-            if(items != null)
+            if(m_Items != null)
             {
-                foreach (var slot in slots)
+                foreach (var slot in m_Slots)
                     if(slot)
                         slot.DropZone.RegisterItems();
             }
@@ -266,8 +267,8 @@ namespace EduGame
 
         void SetDialog()
         {
-            if (!string.IsNullOrEmpty(dataDragNDrop.Question.Text))
-                GameManager.Instance.SetNPCDialog(dataDragNDrop.Question.Text);
+            if (!string.IsNullOrEmpty(m_DataDragNDrop.Question.Text))
+                GameManager.Instance.SetNPCDialog(m_DataDragNDrop.Question.Text);
         }
 
 
@@ -279,7 +280,7 @@ namespace EduGame
         {
             Setup();
 
-            if (dataDragNDrop != null && dataDragNDrop.Groups.Length > 0)
+            if (m_DataDragNDrop != null && m_DataDragNDrop.Groups.Length > 0)
             {
                 List<VoiceRequest> voiceRequests = new List<VoiceRequest>();
 
@@ -288,11 +289,11 @@ namespace EduGame
                 if (baseVoiceRequest.Length > 0)
                     voiceRequests.Add(baseVoiceRequest[0]);
 
-                for (int i = 0; i < dataDragNDrop.Groups.Length; i++)
+                for (int i = 0; i < m_DataDragNDrop.Groups.Length; i++)
                 {
-                    for (int j = 0; j < dataDragNDrop.Groups[i].Labels.Length; j++)
+                    for (int j = 0; j < m_DataDragNDrop.Groups[i].Labels.Length; j++)
                     {
-                        string labelText = dataDragNDrop.Groups[i].Labels[j].Text;
+                        string labelText = m_DataDragNDrop.Groups[i].Labels[j].Text;
 
                         if (!string.IsNullOrEmpty(labelText))
                         {
@@ -322,10 +323,10 @@ namespace EduGame
                 int[] index = StringHelper.ExtractItemAndLabelIds(requestId);
 
                 if (index != null && index.Length == 2)
-                    return dataDragNDrop.Groups[index[0]] != null && dataDragNDrop.Groups[index[0]].Labels[index[1]] != null && dataDragNDrop.Groups[index[0]].Labels[index[1]].Audio != null;
+                    return m_DataDragNDrop.Groups[index[0]] != null && m_DataDragNDrop.Groups[index[0]].Labels[index[1]] != null && m_DataDragNDrop.Groups[index[0]].Labels[index[1]].Audio != null;
             }
             else if (requestId.IndexOf("_question") > 0)
-                return dataDragNDrop.Question.Audio != null;
+                return m_DataDragNDrop.Question.Audio != null;
 
             return false;
         }
@@ -340,10 +341,10 @@ namespace EduGame
                 int[] index = StringHelper.ExtractItemAndLabelIds(requestId);
 
                 if (index != null && index.Length == 2)
-                    dataDragNDrop.Groups[index[0]].Labels[index[1]].SetAudio(clip);
+                    m_DataDragNDrop.Groups[index[0]].Labels[index[1]].SetAudio(clip);
             }
             else if (requestId.IndexOf("_question") > 0)
-                data.Question.SetAudio(clip);
+                m_Data.Question.SetAudio(clip);
         }
     }
 }

@@ -1,35 +1,36 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class FeedbackItemAnimation : FeedbackItem
     {
-        private Animator previousAnimator;
-        private Animator selectedAnimator;
-        private static Dictionary<int, Animator> cachedAnimator = new Dictionary<int, Animator>();
+        private Animator m_PreviousAnimator;
+        private Animator m_SelectedAnimator;
+        private static Dictionary<int, Animator> s_CachedAnimator = new Dictionary<int, Animator>();
         
-        [SerializeField] private string animationName;
+        [SerializeField] [FormerlySerializedAs("animationName")] private string m_AnimationName;
 
         public override void Play(Transform transform)
         {
-            if(selectedAnimator)
-                previousAnimator = selectedAnimator;
+            if(m_SelectedAnimator)
+                m_PreviousAnimator = m_SelectedAnimator;
 
-            selectedAnimator = GetAnimator(transform);
+            m_SelectedAnimator = GetAnimator(transform);
 
             base.Play(transform);
         }
 
         public override void ExecPlay()
         {
-            if(selectedAnimator)
+            if(m_SelectedAnimator)
             {
-                if(previousAnimator)
-                    previousAnimator.Play("Idle");
+                if(m_PreviousAnimator)
+                    m_PreviousAnimator.Play("Idle");
 
-                selectedAnimator.enabled = true;        
-                selectedAnimator.Play(animationName);
+                m_SelectedAnimator.enabled = true;        
+                m_SelectedAnimator.Play(m_AnimationName);
             }
         }
 
@@ -39,18 +40,18 @@ namespace EduGame
 
             int id = transform.GetEntityId().GetHashCode();
 
-            if(!cachedAnimator.ContainsKey(id))
+            if(!s_CachedAnimator.ContainsKey(id))
             {
                 Animator tAnimator = transform.GetComponent<Animator>();
 
                 if(tAnimator)
                 {
-                    cachedAnimator.Add(id, tAnimator);
-                    res = cachedAnimator[id];
+                    s_CachedAnimator.Add(id, tAnimator);
+                    res = s_CachedAnimator[id];
                 }
             }
             else
-                res = cachedAnimator[id];
+                res = s_CachedAnimator[id];
 
             return res;
         }

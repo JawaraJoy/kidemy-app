@@ -6,18 +6,18 @@ namespace EduGame
 {
     public class QuestShapeItCanvas : QuestComponent
     {
-        protected QuestShapeItItem[] items;
-        protected QuestDragNDropZone[] zones;
+        protected QuestShapeItItem[] m_Items;
+        protected QuestDragNDropZone[] m_Zones;
 
-        public QuestShapeItItem[] Items => items;
-        public QuestDragNDropZone[] Zones => zones;
+        public QuestShapeItItem[] Items => m_Items;
+        public QuestDragNDropZone[] Zones => m_Zones;
         
         protected override void Awake()
         {
             base.Awake();
 
-            items = GetComponentsInChildren<QuestShapeItItem>();
-            zones = GetComponentsInChildren<QuestDragNDropZone>();
+            m_Items = GetComponentsInChildren<QuestShapeItItem>();
+            m_Zones = GetComponentsInChildren<QuestDragNDropZone>();
 
             if(!Rect)
                 Debug.LogError("Gameobject is not UI");

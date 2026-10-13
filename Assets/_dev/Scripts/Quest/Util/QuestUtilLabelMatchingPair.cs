@@ -1,13 +1,14 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
     public class QuestUtilLabelMatchingPair
     {
-        [SerializeField] private QuestUtilLabelMatching matchA;
-        [SerializeField] private QuestUtilLabelMatching matchB;
+        [SerializeField] [FormerlySerializedAs("matchA")] private QuestUtilLabelMatching m_MatchA;
+        [SerializeField] [FormerlySerializedAs("matchB")] private QuestUtilLabelMatching m_MatchB;
 
-        public QuestUtilLabelMatching MatchA => matchA;
-        public QuestUtilLabelMatching MatchB => matchB;
+        public QuestUtilLabelMatching MatchA => m_MatchA;
+        public QuestUtilLabelMatching MatchB => m_MatchB;
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace EduGame
 {
@@ -9,50 +10,50 @@ namespace EduGame
         public enum QuestCategory { MATH_AND_LOGIC, LITERACY_AND_LANGUAGE, CREATIVITY_AND_EXPRESSION, SOCIAL_EMOTIONAL_LEARNING, LIFE_SKILLS_AND_DISCOVERY }
 
         [Header("Identifier")]
-        [SerializeField] protected string id;
-        [SerializeField] protected string title;
-        [SerializeField] protected QuestCategory category;
+        [SerializeField] [FormerlySerializedAs("id")] protected string m_Id;
+        [SerializeField] [FormerlySerializedAs("title")] protected string m_Title;
+        [SerializeField] [FormerlySerializedAs("category")] protected QuestCategory m_Category;
 
         [Header("Question")]
-        [SerializeField] protected SO_Character character;
+        [SerializeField] [FormerlySerializedAs("character")] protected SO_Character m_Character;
         [SerializeField]
         private Image m_ImagePrefab;
         [SerializeField]
         private Sprite[] m_MultipleQuestImages;
-        [SerializeField] protected QuestUtilLabel question;
+        [SerializeField] [FormerlySerializedAs("question")] protected QuestUtilLabel m_Question;
 
         [Header("Rule")]
-        [SerializeField] protected bool autoSubmit;
-        [SerializeField] private int score = 10;
-        [SerializeField] private float tresholdTime = 20;
+        [SerializeField] [FormerlySerializedAs("autoSubmit")] protected bool m_AutoSubmit;
+        [SerializeField] [FormerlySerializedAs("score")] private int m_Score = 10;
+        [SerializeField] [FormerlySerializedAs("tresholdTime")] private float m_TresholdTime = 20;
 
         /*[SerializeField]
         private LayoutSettingField m_LayoutSetting;
         public LayoutSettingField LayoutSetting => m_LayoutSetting;*/
-        public string Id => id;
-        public string Title => title;
-        public QuestCategory Category => category;
-        public SO_Character Character => character;
-        public QuestUtilLabel Question => question;
-        public bool AutoSubmit => autoSubmit;
-        public int Score => score;
-        public float TresholdTime => tresholdTime;
+        public string Id => m_Id;
+        public string Title => m_Title;
+        public QuestCategory Category => m_Category;
+        public SO_Character Character => m_Character;
+        public QuestUtilLabel Question => m_Question;
+        public bool AutoSubmit => m_AutoSubmit;
+        public int Score => m_Score;
+        public float TresholdTime => m_TresholdTime;
 
         public virtual string GetVoiceId()
         {
-            return character != null ? character.CharacterId : string.Empty;
+            return m_Character != null ? m_Character.CharacterId : string.Empty;
         }
 
         public virtual VoiceRequest[] GetVoiceRequests()
         {
-            if (question != null && !string.IsNullOrEmpty(question.Text))
+            if (m_Question != null && !string.IsNullOrEmpty(m_Question.Text))
             {
                 return new[]
                 {
                     new VoiceRequest
                     {
                         id = name + "_question",
-                        text = question.Text,
+                        text = m_Question.Text,
                         voice_id = GetVoiceId()
                     }
                 };
@@ -63,13 +64,13 @@ namespace EduGame
 
         public virtual bool HasVoiceClip(string requestId)
         {
-            return question != null && question.Audio != null;
+            return m_Question != null && m_Question.Audio != null;
         }
 
         public virtual void AssignVoiceClip(string requestId, AudioClip clip)
         {
             if (!string.IsNullOrEmpty(requestId) && requestId.Contains("_question"))
-                question?.SetAudio(clip);
+                m_Question?.SetAudio(clip);
         }
         public bool HasMultipleImages(out Sprite[] multipleImages, out Image prefab)
         {

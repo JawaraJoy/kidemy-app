@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 namespace Rush
 {
@@ -67,7 +68,7 @@ namespace Rush
         [SerializeField] 
         private bool m_SetCompleteOnRepeat;
         [Tooltip("Set to -1 to infinity loop")]
-        [SerializeField] private int _repeatCount = 1;
+        [SerializeField] [FormerlySerializedAs("_repeatCount")] private int m_RepeatCount = 1;
         public void LoopControl(LTDescr tween)
         {
             switch (m_Type)
@@ -83,9 +84,9 @@ namespace Rush
                     break;
             }
 
-            if (_repeatCount > 0 )
+            if (m_RepeatCount > 0 )
             {
-                tween.setRepeat(_repeatCount);
+                tween.setRepeat(m_RepeatCount);
             }
             tween.setOnCompleteOnRepeat(m_SetCompleteOnRepeat);
         }
