@@ -25,6 +25,7 @@ namespace EduGame
         protected bool m_IsAnswered = false;
         protected bool m_IsCorrect = false;
         protected AudioSource m_AudioSource;
+        protected IQuestHost m_Host;
         protected ChallengeConfig m_Challenged;
         public ChallengeConfig Challenged => m_Challenged;
         public Sprite Background => m_Background;
@@ -43,15 +44,15 @@ namespace EduGame
             {
                 if (m_Challenged.Character != null)
                 {
-                    GameManager.Instance.SetNPC(m_Challenged.Character.CharacterController);
+                    m_Host.SetNPC(m_Challenged.Character.CharacterController);
                 }
             }
             else
             {
                 if (m_Character && m_Character.CharacterController)
-                    GameManager.Instance.SetNPC(m_Character.CharacterController);
+                    m_Host.SetNPC(m_Character.CharacterController);
             }
-            GameManager.Instance.InitQuest(m_Data);
+            m_Host.InitQuest(m_Data);
 
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
@@ -76,8 +77,8 @@ namespace EduGame
 
         protected virtual void SetupInternal()
         {
-            if(GameManager.Instance)
-                m_AudioSource = GameManager.Instance.AudioSource;
+            if(m_Host != null)
+                m_AudioSource = m_Host.AudioSource;
         }
 
         public void PlayQuestionVoice()
@@ -133,7 +134,7 @@ namespace EduGame
             if (m_AudioSource)
             {
                 m_AudioSource.PlayOneShot(audioClip);
-                GameManager.Instance.StartCoroutine(ReduceMusicAWhile(audioClip));
+                m_Host.StartCoroutine(ReduceMusicAWhile(audioClip));
                 if (m_Data is SO_QuestMultipleChoice quest)
                 {
                     if (quest.SoundQuest != null)
@@ -146,7 +147,7 @@ namespace EduGame
         }
         private IEnumerator ReduceMusicAWhile(AudioClip audioClip)
         {
-            AudioSource music = GameManager.Instance.Music;
+            AudioSource music = m_Host.Music;
             float durationvoice = audioClip.length;
             music.volume = c_MusicDuckVolume;
             yield return new WaitForSeconds(durationvoice);
@@ -173,12 +174,12 @@ namespace EduGame
 
         protected virtual void SubmitInternal(int star = 1)
         {
-            GameManager.Instance.Submit(star);
+            m_Host.Submit(star);
         }
 
         public virtual void ShowTutorial()
         {
-            GameManager.Instance.ShowTutorial(null);
+            m_Host.ShowTutorial(null);
         }
 
         public void Reset()
@@ -237,6 +238,13 @@ namespace EduGame
         {
             if (m_Data != null)
                 m_Data.AssignVoiceClip(requestId, clip);
+        }
+
+        public IQuestHost Host => m_Host;
+
+        public void SetHost(IQuestHost host)
+        {
+            m_Host = host;
         }
     }
 }

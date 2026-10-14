@@ -35,7 +35,7 @@ namespace EduGame
             TryGetComponent<AudioSource>(out s_AudioSource);
 
             if(!AudioSource)
-                s_AudioSource = GameManager.Instance.AudioSource;
+                s_AudioSource = m_Host.AudioSource;
 
             if(!m_DataRythimMaker)
                 Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestRythimMaker");
@@ -126,7 +126,7 @@ namespace EduGame
             else if(m_UnansweredNote < Mathf.CeilToInt(m_Notes.Length / 2))
                 star = 2;
 
-            GameManager.Instance.Submit(star);
+            m_Host.Submit(star);
         }
 
         protected override void ResetInternal()
@@ -160,7 +160,7 @@ namespace EduGame
         void SetDialog()
         {
             if (m_DataRythimMaker != null && !string.IsNullOrEmpty(m_DataRythimMaker.Question.Text))
-                GameManager.Instance.SetNPCDialog(m_DataRythimMaker.Question.Text);
+                m_Host.SetNPCDialog(m_DataRythimMaker.Question.Text);
         }
     }
 }

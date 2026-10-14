@@ -202,7 +202,7 @@ namespace EduGame
             else if (totalAnswers / m_DataDragNDrop.Items.Length >= 0.5f)
                 star = 2;
 
-            GameManager.Instance.Submit(star);
+            m_Host.Submit(star);
         }
 
         protected virtual int Sort()
@@ -273,7 +273,7 @@ namespace EduGame
         void SetDialog()
         {
             if (!string.IsNullOrEmpty(m_DataDragNDrop.Question.Text))
-                GameManager.Instance.SetNPCDialog(m_DataDragNDrop.Question.Text);
+                m_Host.SetNPCDialog(m_DataDragNDrop.Question.Text);
         }
 
 

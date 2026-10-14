@@ -40,6 +40,7 @@ namespace EduGame
         private List<VoiceRequest> m_VoiceRequests = new List<VoiceRequest>();
         private bool m_CurrentRequestFinished = false;
         private VoiceRequest m_ActiveRequest;
+        private GameManager m_GameManager;
 
         private void Awake()
         {
@@ -49,6 +50,7 @@ namespace EduGame
                 return;
             }
             s_Instance = this;
+            TryGetComponent<GameManager>(out m_GameManager);
         }
 
         /// <summary>
@@ -117,7 +119,7 @@ namespace EduGame
                 m_CurrentRequestFinished = false;
 
                 // Trigger API request
-                GameManager.Instance.API.RequestVoice(
+                m_GameManager.API.RequestVoice(
                     text: req.text,
                     voiceId: req.voice_id,
                     onSuccess: OnVoiceSuccess,
@@ -146,10 +148,10 @@ namespace EduGame
 
             onComplete?.Invoke();
 
-            if (GameManager.Instance != null)
+            if (m_GameManager != null)
             {
                 Debug.Log("[AssetManager] All assets ready! Launching game via GameManager.Instance.Play()...");
-                GameManager.Instance.Play();
+                m_GameManager.Play();
             }
             else
             {

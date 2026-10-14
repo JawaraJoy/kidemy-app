@@ -182,7 +182,7 @@ namespace EduGame
             float rotateValue = c_QuarterTurn;
 
             if(m_RotateSound)
-                GameManager.Instance.AudioSource.PlayOneShot(m_RotateSound);
+                m_Host.AudioSource.PlayOneShot(m_RotateSound);
             
             while (rotateValue > 0)
             {
@@ -208,7 +208,7 @@ namespace EduGame
         void SetDialog()
         {
             if (!string.IsNullOrEmpty(m_DataShapeIt.Question.Text))
-                GameManager.Instance.SetNPCDialog(m_DataShapeIt.Question.Text);
+                m_Host.SetNPCDialog(m_DataShapeIt.Question.Text);
         }
     }
 }

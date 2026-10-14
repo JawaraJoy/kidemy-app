@@ -11,7 +11,7 @@ using UnityEngine.Serialization;
 
 namespace EduGame
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : MonoBehaviour, IQuestHost, IResultHost
     {
         private const string c_ParamRedirectUrl = "redirect_url";
         private const string c_ParamBgmVolume = "bgm_volume";
@@ -262,6 +262,7 @@ namespace EduGame
                 }
                 
                 m_ResultPanel = Instantiate(m_ChallengeConfig.ResultPanelPrefab, m_PanelContainer, false);
+                m_ResultPanel.SetHost(this);
                 m_ReactionPanel = Instantiate(m_ChallengeConfig.ReactionPanelPrefab, m_PanelContainer, false);
 
                 if (m_ReactionPanel)
@@ -292,7 +293,7 @@ namespace EduGame
                 else
                     Debug.LogError("Failed to load data, challenge will return empty");
 
-                if(m_ResultPanelPrefab) m_ResultPanel = Instantiate(m_ResultPanelPrefab, m_PanelContainer, false);
+                if(m_ResultPanelPrefab) { m_ResultPanel = Instantiate(m_ResultPanelPrefab, m_PanelContainer, false); m_ResultPanel.SetHost(this); }
                     
                 if(m_ReactionPanelPrefab) m_ReactionPanel = Instantiate(m_ReactionPanelPrefab, m_PanelContainer, false);
 
@@ -406,6 +407,7 @@ namespace EduGame
             template.transform.localScale = Vector3.one;
 
             m_ColorTheme = template.Color;
+            template.SetHost(this);
 
             return template;
         }

@@ -16,9 +16,12 @@ namespace EduGame
             {
                 shadow.TryGetComponent<Image>(out Image shadowImage);
 
-                if(shadowImage && GameManager.Instance)
+                Quest quest = GetComponentInParent<Quest>();
+                IQuestHost host = quest ? quest.Host : null;
+
+                if(shadowImage && host != null)
                 {
-                    Color newColor = GameManager.Instance.ColorTheme;
+                    Color newColor = host.ColorTheme;
                     newColor.a = 1;
 
                     shadowImage.color = newColor;

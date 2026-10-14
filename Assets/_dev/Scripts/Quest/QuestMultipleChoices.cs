@@ -259,7 +259,7 @@ namespace EduGame
 
             StopAllCoroutines();
 
-            GameManager.Instance.Submit(star);
+            m_Host.Submit(star);
         }
 
         protected override void ResetInternal()
@@ -308,7 +308,7 @@ namespace EduGame
                     dialog = m_DataMultipleChoice.Question.FormatedText.GetFormattedText();
                     
                 }
-                GameManager.Instance.SetNPCDialog(dialog);
+                m_Host.SetNPCDialog(dialog);
             }
             if (m_Challenged)
             {
@@ -350,7 +350,7 @@ namespace EduGame
 
         public override void ShowTutorial()
         {
-            GameManager.Instance.ShowTutorial(m_CorrectChoice ? m_CorrectChoice.Rect : m_Choices[0].Rect);
+            m_Host.ShowTutorial(m_CorrectChoice ? m_CorrectChoice.Rect : m_Choices[0].Rect);
         }
     }
 }

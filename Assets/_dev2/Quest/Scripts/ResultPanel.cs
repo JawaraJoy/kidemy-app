@@ -31,13 +31,13 @@ namespace EduGame
         private TextEffect m_ScoreTextEff;
         private TextEffect m_LabelTextEff;
 
-        private GameManager m_GameManager;
+        private IResultHost m_Host;
 
         private void Start()
         {
-            m_GameManager = GameManager.Instance;
+            // m_Host disuntik GameManager lewat SetHost sebelum Start
 
-            m_NPCIcon.sprite = m_GameManager.ChallengeConfig.Character.ResultCharacterImage;
+            m_NPCIcon.sprite = m_Host.ChallengeConfig.Character.ResultCharacterImage;
             m_ResetButton.onClick.AddListener(ResetQuest);
             m_HomeButton.onClick.AddListener(Home);
             if (m_LabelText.TryGetComponent(out TextEffect textEffect))
@@ -85,12 +85,22 @@ namespace EduGame
         {
             // Alternates between fullscreen and windowed mode
             Screen.fullScreenMode = FullScreenMode.Windowed;
-            m_GameManager.ReloadScene();
+            m_Host.ReloadScene();
         }
         private void Home()
         {
             Screen.fullScreenMode = FullScreenMode.Windowed;
-            m_GameManager.GoHome();
+            m_Host.GoHome();
+        }
+
+        public void SetHost(IResultHost host)
+        {
+            m_Host = host;
+        }
+
+        public void SetRightAnswer(int set)
+        {
+            m_Host.SetRightAsnwer(set);
         }
     }
 }

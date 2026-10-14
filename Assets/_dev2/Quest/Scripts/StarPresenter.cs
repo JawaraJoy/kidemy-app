@@ -102,7 +102,7 @@ namespace EduGame
                 }
                 
             }
-            GameManager.Instance.SetRightAsnwer(0);
+            m_ResultPanel.SetRightAnswer(0);
         }
     }
 }

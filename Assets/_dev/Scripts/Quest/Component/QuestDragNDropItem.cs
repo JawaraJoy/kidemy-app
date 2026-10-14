@@ -54,8 +54,8 @@ namespace EduGame
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            if(GameManager.Instance)
-                transform.SetParent(GameManager.Instance.Canvas.transform);
+            if(Host != null)
+                transform.SetParent(Host.Canvas.transform);
 
             m_OriginalPosition = Rect.anchoredPosition;
 
@@ -74,8 +74,8 @@ namespace EduGame
         {
             float modifier = 1;
 
-            if(GameManager.Instance)
-                modifier = GameManager.Instance.Canvas.scaleFactor;
+            if(Host != null)
+                modifier = Host.Canvas.scaleFactor;
 
             Rect.anchoredPosition += eventData.delta / modifier;
         }

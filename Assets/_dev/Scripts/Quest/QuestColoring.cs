@@ -195,7 +195,7 @@ namespace EduGame
         void SetDialog()
         {
             if (!string.IsNullOrEmpty(m_DataQuestColoring.Text))
-                GameManager.Instance.SetNPCDialog(m_DataQuestColoring.Text);
+                m_Host.SetNPCDialog(m_DataQuestColoring.Text);
         }
     }
 }

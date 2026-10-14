@@ -9,6 +9,7 @@ namespace EduGame
         [SerializeField] [FormerlySerializedAs("audioClip")] private AudioClip m_AudioClip;
 
         private Button m_Button;
+        private Quest m_Quest;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -17,6 +18,8 @@ namespace EduGame
 
             if(!m_Button)
                 Debug.LogError("Button Component not found");
+
+            m_Quest = GetComponentInParent<Quest>();
         }
 
         public void SetAudioClip(AudioClip audioClip)
@@ -26,8 +29,10 @@ namespace EduGame
 
         public void OnClick()
         {
-            if(m_AudioClip && GameManager.Instance.AudioSource)
-                GameManager.Instance.AudioSource.PlayOneShot(m_AudioClip);
+            IQuestHost host = m_Quest ? m_Quest.Host : null;
+
+            if(m_AudioClip && host != null && host.AudioSource)
+                host.AudioSource.PlayOneShot(m_AudioClip);
         }
     }
 }

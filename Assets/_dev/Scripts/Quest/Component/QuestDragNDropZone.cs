@@ -298,7 +298,7 @@ namespace EduGame
                 m_Animator.Play(c_AcceptState);
 
             if(m_AcceptSound)
-                GameManager.Instance.AudioSource.PlayOneShot(m_AcceptSound);
+                m_Quest.Host.AudioSource.PlayOneShot(m_AcceptSound);
         }
 
         private void OnReject()
@@ -307,7 +307,7 @@ namespace EduGame
                 m_Animator.Play(c_RejectState);
 
             if(m_RejectSound)
-                GameManager.Instance.AudioSource.PlayOneShot(m_RejectSound);
+                m_Quest.Host.AudioSource.PlayOneShot(m_RejectSound);
         }
     }
 }

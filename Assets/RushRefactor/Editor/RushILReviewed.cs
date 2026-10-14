@@ -6,6 +6,7 @@ using System.Reflection.Emit;
 using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace RushRefactor
 {
@@ -112,18 +113,26 @@ namespace RushRefactor
             return d;
         }
 
+        static readonly Regex s_GenOrdinal = new Regex(@"(?<=\+<[^<>]+>d__)\d+");
+
+        // nomor urut kelas iterator buatan compiler (d__31) bergeser kalau jumlah anggota kelas berubah; di signature Reviewed dianggap sama (d__~)
+        static string NormTok(string t)
+        {
+            return s_GenOrdinal.Replace(t, "~");
+        }
+
         static string SigDiff(string baseSig, string curSig, HashSet<string> ignore, Dictionary<string, string> alias)
         {
             var bm = new Dictionary<string, int>(StringComparer.Ordinal);
             var cm = new Dictionary<string, int>(StringComparer.Ordinal);
-            foreach (string raw in (baseSig ?? "").Split('~'))
+            foreach (string raw0 in (baseSig ?? "").Split('~'))
             {
-                string a;
+                string a; string raw = NormTok(raw0);
                 string t = (alias != null && alias.TryGetValue(raw, out a)) ? a : raw;
                 if (t.Length == 0 || ignore.Contains(t)) continue;
                 int n; bm.TryGetValue(t, out n); bm[t] = n + 1;
             }
-            foreach (string t in (curSig ?? "").Split('~')) { if (t.Length == 0 || ignore.Contains(t)) continue; int n; cm.TryGetValue(t, out n); cm[t] = n + 1; }
+            foreach (string t0 in (curSig ?? "").Split('~')) { string t = NormTok(t0); if (t.Length == 0 || ignore.Contains(t)) continue; int n; cm.TryGetValue(t, out n); cm[t] = n + 1; }
             var onlyB = new List<string>();
             var onlyC = new List<string>();
             foreach (KeyValuePair<string, int> kv in bm) { int n; cm.TryGetValue(kv.Key, out n); for (int i = n; i < kv.Value; i++) onlyB.Add(kv.Key); }
@@ -135,6 +144,8 @@ namespace RushRefactor
         static void ApplyReviewed(Dictionary<string, string> b, Dictionary<string, string> c, List<MapRule> rules, Result r)
         {
             if (rules == null) return;
+            Dictionary<string, string> revBaseN = s_RevBase == null ? null : NormalizeGenerated(s_RevBase);
+            Dictionary<string, string> revSinkN = s_RevSink == null ? null : NormalizeGenerated(s_RevSink);
             foreach (MapRule rule in rules)
             {
                 if (rule.Kind != "Reviewed") continue;
@@ -146,7 +157,7 @@ namespace RushRefactor
                     string curKey;
                     if (!s_Renamed.TryGetValue(key, out curKey)) curKey = key;
                     string cs, bs;
-                    if (s_RevBase == null || s_RevSink == null || !s_RevSink.TryGetValue(curKey, out cs) || !s_RevBase.TryGetValue(curKey, out bs))
+                    if (revBaseN == null || revSinkN == null || !revSinkN.TryGetValue(curKey, out cs) || !revBaseN.TryGetValue(curKey, out bs))
                     {
                         r.Changed.Add(key + "  Reviewed rule has no signature data for " + curKey);
                         continue;
@@ -406,6 +417,20 @@ namespace RushRefactor
 
             s_RevBase = new Dictionary<string, string>();
             ok &= Expect(sb, "Reviewed without baseline signature => FAIL", Diff(bs, cs, none, rules).Verdict == "FAIL");
+
+            s_RevBase = new Dictionary<string, string> { { "E:N.T+<M>d__18::MoveNext#0", "call:X::A~lit:hi" } };
+            s_RevSink = new Dictionary<string, string> { { "E:N.T+<M>d__17::MoveNext#0", "call:X::A~lit:hi" } };
+            var itB = new List<string> { "E:N.T+<M>d__18::MoveNext#0\taaa" };
+            var itC = new List<string> { "E:N.T+<M>d__17::MoveNext#0\tzzz" };
+            var itRules = new List<MapRule> { new MapRule { Kind = "Reviewed", Type = "N.T+<M>d__~0", A = "MoveNext", B = "" } };
+            ok &= Expect(sb, "Reviewed on iterator MoveNext (generated index shifted) => PASS", Diff(itB, itC, none, itRules).Verdict == "PASS");
+            s_RevSink = new Dictionary<string, string> { { "E:N.T+<M>d__17::MoveNext#0", "call:X::A~call:Y::Extra~lit:hi" } };
+            ok &= Expect(sb, "Reviewed on iterator MoveNext with an extra call => FAIL", Diff(itB, itC, none, itRules).Verdict == "FAIL");
+            s_RevBase = new Dictionary<string, string> { { "E:N.T+<M>d__18::MoveNext#0", "fld:N.T+<M>d__18::<>1__state~lit:hi" } };
+            s_RevSink = new Dictionary<string, string> { { "E:N.T+<M>d__17::MoveNext#0", "fld:N.T+<M>d__17::<>1__state~lit:hi" } };
+            ok &= Expect(sb, "iterator tokens with a shifted d__ ordinal => PASS", Diff(itB, itC, none, itRules).Verdict == "PASS");
+            s_RevSink = new Dictionary<string, string> { { "E:N.T+<M>d__17::MoveNext#0", "fld:N.T+<M>d__17::<>2__current~lit:hi" } };
+            ok &= Expect(sb, "iterator tokens with a different field => FAIL", Diff(itB, itC, none, itRules).Verdict == "FAIL");
 
             s_RevBase = new Dictionary<string, string> { { "E:N.T::A#0", "fld:N.T::old~lit:hi" } };
             s_RevSink = new Dictionary<string, string> { { "E:N.T::A#0", "fld:N.T::m_Old~lit:hi" } };

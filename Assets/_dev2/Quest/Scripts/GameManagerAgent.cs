@@ -6,11 +6,11 @@ namespace EduGame
     {
         public void PlayQuestionVoice()
         {
-            GameManager.Instance.PlayQuestionVoice();
+            GetComponentInParent<Quest>(true).Host.PlayQuestionVoice();
         }
         public void PlaySoundQuest()
         {
-            GameManager.Instance.PlaySoundQuest();
+            GetComponentInParent<Quest>(true).Host.PlaySoundQuest();
         }
     }
 }

@@ -68,5 +68,7 @@ namespace EduGame
         {
             
         }
+
+        protected IQuestHost Host => m_Quest ? m_Quest.Host : null;
     }
 }

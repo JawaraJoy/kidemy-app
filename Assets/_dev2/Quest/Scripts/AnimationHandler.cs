@@ -21,9 +21,11 @@ namespace EduGame
         private AnimationEventCapture m_EventCapture;
         [SerializeField]
         private Button m_Play;
+        private Quest m_Quest;
         private void Start()
         {
             //m_Play.onClick.AddListener(PlayAnimationInternal);
+            m_Quest = GetComponentInParent<Quest>();
         }
 
         public void SetClip(AnimatorClipConfig clipConfig)
@@ -110,7 +112,7 @@ namespace EduGame
         {
             yield return new WaitForSeconds(c_ResultDelay);
             int loopCount = clipConfig.LoopTime;
-            AudioSource music = GameManager.Instance.Music;
+            AudioSource music = m_Quest.Host.Music;
             music.volume = c_MusicDuckVolume;
             for (int i = 0; i < loopCount; i++)
             {

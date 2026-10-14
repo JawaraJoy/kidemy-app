@@ -30,8 +30,8 @@ namespace EduGame
             TryGetComponent<Collider2D>(out m_Col);
             m_Animator = GetComponentInChildren<Animator>();
 
-            if(!m_AudioSource)
-                m_AudioSource = GameManager.Instance.AudioSource;
+            // m_AudioSource dari host Quest diisi di Start (host belum tersedia saat Awake)
+
 
             if(m_Col)
                 m_Col.enabled = false;
@@ -86,6 +86,14 @@ namespace EduGame
                 if(note)
                     note.OnBeat(true);
             }
+        }
+
+        protected override void Start()
+        {
+            base.Start();
+
+            if(!m_AudioSource)
+                m_AudioSource = Host.AudioSource;
         }
     }
 }

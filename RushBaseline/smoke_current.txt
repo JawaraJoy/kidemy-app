@@ -1,175 +1,175 @@
-SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=16
+SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=25
 ERR	Assets/_dev/Scenes/Dev_001_FrogsCount_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_B_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_B_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=25
 ERR	Assets/_dev/Scenes/Dev_001_FrogsCount_B_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=25
 ERR	Assets/_dev/Scenes/Dev_001_FrogsCount_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_002_AdditionTrek_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_002_AdditionTrek_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=25
 ERR	Assets/_dev/Scenes/Dev_002_AdditionTrek_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_002_AdditionTrek_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_002_AdditionTrek_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=25
 ERR	Assets/_dev/Scenes/Dev_002_AdditionTrek_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_002_AdditionTrek_B_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_002_AdditionTrek_B_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=26
 ERR	Assets/_dev/Scenes/Dev_002_AdditionTrek_B_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_002_AdditionTrek_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_002_AdditionTrek_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=26
 ERR	Assets/_dev/Scenes/Dev_002_AdditionTrek_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_003_PatternJungle_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_003_PatternJungle_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=26
 ERR	Assets/_dev/Scenes/Dev_003_PatternJungle_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_003_PatternJungle_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_003_PatternJungle_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=26
 ERR	Assets/_dev/Scenes/Dev_003_PatternJungle_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_003_PatternJungle_B_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_003_PatternJungle_B_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=26
 ERR	Assets/_dev/Scenes/Dev_003_PatternJungle_B_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_003_PatternJungle_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_003_PatternJungle_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=28
 ERR	Assets/_dev/Scenes/Dev_003_PatternJungle_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_004_PuzzleJungle_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_004_PuzzleJungle_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=26
 ERR	Assets/_dev/Scenes/Dev_004_PuzzleJungle_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_004_PuzzleJungle_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_004_PuzzleJungle_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=26
 ERR	Assets/_dev/Scenes/Dev_004_PuzzleJungle_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_004_PuzzleJungle_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_004_PuzzleJungle_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=26
 ERR	Assets/_dev/Scenes/Dev_004_PuzzleJungle_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_004_PuzzleJungle_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_004_PuzzleJungle_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=27
 ERR	Assets/_dev/Scenes/Dev_004_PuzzleJungle_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_005_SoundQuest_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_005_SoundQuest_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=27
 ERR	Assets/_dev/Scenes/Dev_005_SoundQuest_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_005_SoundQuest_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_005_SoundQuest_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=28
 ERR	Assets/_dev/Scenes/Dev_005_SoundQuest_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_005_SoundQuest_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_005_SoundQuest_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=27
 ERR	Assets/_dev/Scenes/Dev_005_SoundQuest_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_006_LetterHunt_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_006_LetterHunt_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=26
 ERR	Assets/_dev/Scenes/Dev_006_LetterHunt_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_006_LetterHunt_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_006_LetterHunt_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=27
 ERR	Assets/_dev/Scenes/Dev_006_LetterHunt_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_006_LetterHunt_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_006_LetterHunt_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=28
 ERR	Assets/_dev/Scenes/Dev_006_LetterHunt_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_007_WordBuilder_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=2;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_007_WordBuilder_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=27
 ERR	Assets/_dev/Scenes/Dev_007_WordBuilder_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_007_WordBuilder_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_007_WordBuilder_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=28
 ERR	Assets/_dev/Scenes/Dev_007_WordBuilder_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_007_WordBuilder_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_007_WordBuilder_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=28
 ERR	Assets/_dev/Scenes/Dev_007_WordBuilder_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_008_StoryAdventure_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=2;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_008_StoryAdventure_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=28
 ERR	Assets/_dev/Scenes/Dev_008_StoryAdventure_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_008_StoryAdventure_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_008_StoryAdventure_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=28
 ERR	Assets/_dev/Scenes/Dev_008_StoryAdventure_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_008_StoryAdventure_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_008_StoryAdventure_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=27
 ERR	Assets/_dev/Scenes/Dev_008_StoryAdventure_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rev.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rev.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=28
 ERR	Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_009_ColortheIsland_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_009_ColortheIsland_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_009_ColortheIsland_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_009_ColortheIsland_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_009_ColortheIsland_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_009_ColortheIsland_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_009_ColortheIsland_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_010_ShapeIt_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_010_ShapeIt_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_010_ShapeIt_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_010_ShapeIt_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_010_ShapeIt_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_010_ShapeIt_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_010_ShapeIt_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=2;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_010_ShapeIt_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=2;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=30
 ERR	Assets/_dev/Scenes/Dev_010_ShapeIt_B.unity	NullReferenceException: Object reference not set to an instance of an object
 ERR	Assets/_dev/Scenes/Dev_010_ShapeIt_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_010_ShapeIt_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=2;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_010_ShapeIt_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=2;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_010_ShapeIt_C.unity	NullReferenceException: Object reference not set to an instance of an object
 ERR	Assets/_dev/Scenes/Dev_010_ShapeIt_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_011_TuneTheMusic_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_011_TuneTheMusic_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_011_TuneTheMusic_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_011_TuneTheMusic_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_011_TuneTheMusic_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=31
 ERR	Assets/_dev/Scenes/Dev_011_TuneTheMusic_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_011_TuneTheMusic_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_011_TuneTheMusic_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_011_TuneTheMusic_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_012_RythimMaker_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_012_RythimMaker_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_012_RythimMaker_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_012_RythimMaker_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_012_RythimMaker_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=30
 ERR	Assets/_dev/Scenes/Dev_012_RythimMaker_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_012_RythimMaker_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_012_RythimMaker_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=30
 ERR	Assets/_dev/Scenes/Dev_012_RythimMaker_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_012_RythimMaker_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_012_RythimMaker_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=29
 ERR	Assets/_dev/Scenes/Dev_012_RythimMaker_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_013_EmotionMatch_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_013_EmotionMatch_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=30
 ERR	Assets/_dev/Scenes/Dev_013_EmotionMatch_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_013_EmotionMatch_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_013_EmotionMatch_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=31
 ERR	Assets/_dev/Scenes/Dev_013_EmotionMatch_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_013_EmotionMatch_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_013_EmotionMatch_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=31
 ERR	Assets/_dev/Scenes/Dev_013_EmotionMatch_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_014_MoodTracker_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=2;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_014_MoodTracker_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=32
 ERR	Assets/_dev/Scenes/Dev_014_MoodTracker_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_014_MoodTracker_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_014_MoodTracker_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=32
 ERR	Assets/_dev/Scenes/Dev_014_MoodTracker_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_014_MoodTracker_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_014_MoodTracker_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=32
 ERR	Assets/_dev/Scenes/Dev_014_MoodTracker_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_014_MoodTracker_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_014_MoodTracker_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=32
 ERR	Assets/_dev/Scenes/Dev_014_MoodTracker_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_015_KindnessQuest_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_015_KindnessQuest_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=33
 ERR	Assets/_dev/Scenes/Dev_015_KindnessQuest_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_015_KindnessQuest_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_015_KindnessQuest_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=34
 ERR	Assets/_dev/Scenes/Dev_015_KindnessQuest_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_015_KindnessQuest_C.unity	FAIL:EXC TargetInvocationException Exception has been thrown by the target of an invocation.	gm=?;quests=?;active=?;missing=?;errors=2;warnings=0;l2=-;sec=6
+SCENE	Assets/_dev/Scenes/Dev_015_KindnessQuest_C.unity	FAIL:EXC TargetInvocationException Exception has been thrown by the target of an invocation.	gm=?;quests=?;active=?;missing=?;errors=2;warnings=0;l2=-;sec=30
 ERR	Assets/_dev/Scenes/Dev_015_KindnessQuest_C.unity	Failed to load data, challenge will return empty
 ERR	Assets/_dev/Scenes/Dev_015_KindnessQuest_C.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_016_CompassionateChoice_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_016_CompassionateChoice_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=2;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=34
 ERR	Assets/_dev/Scenes/Dev_016_CompassionateChoice_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_016_CompassionateChoice_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_016_CompassionateChoice_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=33
 ERR	Assets/_dev/Scenes/Dev_016_CompassionateChoice_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_016_CompassionateChoice_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_016_CompassionateChoice_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=33
 ERR	Assets/_dev/Scenes/Dev_016_CompassionateChoice_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_017_DailyRoutine_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=2;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_017_DailyRoutine_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=32
 ERR	Assets/_dev/Scenes/Dev_017_DailyRoutine_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_017_DailyRoutine_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_017_DailyRoutine_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=33
 ERR	Assets/_dev/Scenes/Dev_017_DailyRoutine_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_017_DailyRoutine_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_017_DailyRoutine_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=34
 ERR	Assets/_dev/Scenes/Dev_017_DailyRoutine_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_017_DailyRoutine_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_017_DailyRoutine_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=34
 ERR	Assets/_dev/Scenes/Dev_017_DailyRoutine_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_018_DailySchedule_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=2;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_018_DailySchedule_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=34
 ERR	Assets/_dev/Scenes/Dev_018_DailySchedule_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_018_DailySchedule_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
+SCENE	Assets/_dev/Scenes/Dev_018_DailySchedule_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=33
 ERR	Assets/_dev/Scenes/Dev_018_DailySchedule_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_018_DailySchedule_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_018_DailySchedule_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=33
 ERR	Assets/_dev/Scenes/Dev_018_DailySchedule_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_018_DailySchedule_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_018_DailySchedule_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=33
 ERR	Assets/_dev/Scenes/Dev_018_DailySchedule_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_019_Safety Puzzles_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_019_Safety Puzzles_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=34
 ERR	Assets/_dev/Scenes/Dev_019_Safety Puzzles_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_019_Safety Puzzles_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_019_Safety Puzzles_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=35
 ERR	Assets/_dev/Scenes/Dev_019_Safety Puzzles_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_019_Safety Puzzles_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_019_Safety Puzzles_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=36
 ERR	Assets/_dev/Scenes/Dev_019_Safety Puzzles_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_020_StepSequence_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=2;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_020_StepSequence_A_rev.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=35
 ERR	Assets/_dev/Scenes/Dev_020_StepSequence_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_020_StepSequence_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
+SCENE	Assets/_dev/Scenes/Dev_020_StepSequence_A_rewrite.unity	OK	gm=True;quests=5;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=36
 ERR	Assets/_dev/Scenes/Dev_020_StepSequence_A_rewrite.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Dev_020_StepSequence_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=9
+SCENE	Assets/_dev/Scenes/Dev_020_StepSequence_B.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=35
 ERR	Assets/_dev/Scenes/Dev_020_StepSequence_B.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_020_StepSequence_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=10
+SCENE	Assets/_dev/Scenes/Dev_020_StepSequence_C.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=37
 ERR	Assets/_dev/Scenes/Dev_020_StepSequence_C.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_021_FindTheFriend_A_rev.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=10
+SCENE	Assets/_dev/Scenes/Dev_021_FindTheFriend_A_rev.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=37
 ERR	Assets/_dev/Scenes/Dev_021_FindTheFriend_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_022_ChoseHealthy_A_rev.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=10
+SCENE	Assets/_dev/Scenes/Dev_022_ChoseHealthy_A_rev.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=38
 ERR	Assets/_dev/Scenes/Dev_022_ChoseHealthy_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Dev_023_SortByColor_A_rev.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=1;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=10
+SCENE	Assets/_dev/Scenes/Dev_023_SortByColor_A_rev.unity	OK	gm=True;quests=1;active=1;missing=0;errors=1;warnings=0;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:skipped(last-quest->API),Next:skipped(last),ResetQuest:ok;sec=38
 ERR	Assets/_dev/Scenes/Dev_023_SortByColor_A_rev.unity	UnassignedReferenceException: The variable m_Music of GameManager has not been assigned.
-SCENE	Assets/_dev/Scenes/Test/Dev_Confetti.unity	OK	gm=False;quests=?;active=0;missing=0;errors=0;warnings=1;l2=nogm;sec=7
-SCENE	Assets/_dev/Scenes/Test/Dev_Frontend.unity	OK	gm=False;quests=?;active=0;missing=1;errors=0;warnings=1;l2=nogm;sec=7
-SCENE	Assets/_dev/Scenes/Test/Dev_TestRoom.unity	FAIL:EXC TargetInvocationException Exception has been thrown by the target of an invocation.	gm=?;quests=?;active=?;missing=?;errors=2;warnings=0;l2=-;sec=7
+SCENE	Assets/_dev/Scenes/Test/Dev_Confetti.unity	OK	gm=False;quests=?;active=0;missing=0;errors=0;warnings=0;l2=nogm;sec=34
+SCENE	Assets/_dev/Scenes/Test/Dev_Frontend.unity	OK	gm=False;quests=?;active=0;missing=1;errors=0;warnings=0;l2=nogm;sec=35
+SCENE	Assets/_dev/Scenes/Test/Dev_TestRoom.unity	FAIL:EXC TargetInvocationException Exception has been thrown by the target of an invocation.	gm=?;quests=?;active=?;missing=?;errors=2;warnings=1;l2=-;sec=50
 ERR	Assets/_dev/Scenes/Test/Dev_TestRoom.unity	Failed to load data, challenge will return empty
 ERR	Assets/_dev/Scenes/Test/Dev_TestRoom.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev/Scenes/Test/Dev_TestRoomApril.unity	FAIL:EXC TargetInvocationException Exception has been thrown by the target of an invocation.	gm=?;quests=?;active=?;missing=?;errors=2;warnings=0;l2=-;sec=7
+SCENE	Assets/_dev/Scenes/Test/Dev_TestRoomApril.unity	FAIL:EXC TargetInvocationException Exception has been thrown by the target of an invocation.	gm=?;quests=?;active=?;missing=?;errors=2;warnings=0;l2=-;sec=35
 ERR	Assets/_dev/Scenes/Test/Dev_TestRoomApril.unity	Failed to load data, challenge will return empty
 ERR	Assets/_dev/Scenes/Test/Dev_TestRoomApril.unity	NullReferenceException: Object reference not set to an instance of an object
-SCENE	Assets/_dev2/Addon/TextAnimation/Scenes/Demo.unity	OK	gm=False;quests=?;active=0;missing=2;errors=0;warnings=5;l2=nogm;sec=7
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_1_BigOrSmall/OtherDev_BigOrSmall_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_1_HowManyFrog/OtherDev_HowManyFrog_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=5;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_1_Whichone is Different/OtherDev_WhichOneIs_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=5;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_2_FindThePair/OtherDev_FindThePair_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=5;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_2_Letter Hunt/OtherDev_LetterHunt_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=5;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_2_NameThePart/OtherDev_NameThePart_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=5;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_3_Find My Shadow/OtherDev_FindMyShadow_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_3_HowManySound/OtherDev_Island_3_HowManySound_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_3_MatchTheColor/OtherDev_MatchTheColor_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_4_Feed My Friend/OtherDev_Feed My Friend_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_4_Find the friend/OtherDev_Find the friend_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_4_KIndnessQuest/OtherDev_KIndnessQuest_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_4_What do they Need/OtherDev_What do they need_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_5_ChooseHealthy/OtherDev_ChooseHealthy_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=5;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_5_Sort Color/OtherDev_Sort Color_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=5;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
-SCENE	Assets/_dev2/Quest/Multiple Choice/Island_5_Sound Quest/OtherDev_Sound Quest_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=5;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=10
+SCENE	Assets/_dev2/Addon/TextAnimation/Scenes/Demo.unity	OK	gm=False;quests=?;active=0;missing=2;errors=0;warnings=6;l2=nogm;sec=36
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_1_BigOrSmall/OtherDev_BigOrSmall_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=5;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=38
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_1_HowManyFrog/OtherDev_HowManyFrog_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=39
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_1_Whichone is Different/OtherDev_WhichOneIs_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=39
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_2_FindThePair/OtherDev_FindThePair_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=39
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_2_Letter Hunt/OtherDev_LetterHunt_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=39
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_2_NameThePart/OtherDev_NameThePart_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=39
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_3_Find My Shadow/OtherDev_FindMyShadow_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=38
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_3_HowManySound/OtherDev_Island_3_HowManySound_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=38
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_3_MatchTheColor/OtherDev_MatchTheColor_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=41
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_4_Feed My Friend/OtherDev_Feed My Friend_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=41
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_4_Find the friend/OtherDev_Find the friend_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=41
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_4_KIndnessQuest/OtherDev_KIndnessQuest_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=42
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_4_What do they Need/OtherDev_What do they need_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=42
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_5_ChooseHealthy/OtherDev_ChooseHealthy_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=42
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_5_Sort Color/OtherDev_Sort Color_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=42
+SCENE	Assets/_dev2/Quest/Multiple Choice/Island_5_Sound Quest/OtherDev_Sound Quest_A_001.unity	OK	gm=True;quests=5;active=1;missing=0;errors=0;warnings=4;l2=PlayQuestionVoice:ok,PlaySoundQuest:ok,Submit:ok,Next:ok,ResetQuest:ok;sec=44
 DONE	DONE
