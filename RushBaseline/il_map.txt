@@ -121,7 +121,7 @@ Reviewed|EduGame.AudioPlayer|Start|
 Reviewed|EduGame.ContentManager|Awake|
 Reviewed|EduGame.FeedbackItemAnimation|GetAnimator|
 Reviewed|EduGame.GameManager|SetNPC|
-Reviewed|EduGame.GameManager|Start|
+Reviewed|EduGame.GameManager|Start|fld:EduGame.GameManager::m_FallbackSessionId;lit:67e05cdd-c077-4d84-8c49-15767bf13ef2
 Reviewed|EduGame.QuestColoringField|Start|
 Reviewed|EduGame.QuestColoringItem|Awake|
 Reviewed|EduGame.QuestColoring|Awake|
@@ -159,3 +159,5 @@ Reviewed|EduGame.QuestWordBuilder|RecalculateChoiceContainer|
 Reviewed|HandTutorial|PlayTutorial|
 Reviewed|RawImageAlphaFilter|Awake|
 Reviewed|EduGame.QuestDragNDropItem|OnEndDrag|call:UnityEngine.Object::op_Implicit
+
+Reviewed|EduGame.GameManager|.ctor|fld:EduGame.GameManager::m_FallbackSessionId;lit:67e05cdd-c077-4d84-8c49-15767bf13ef2

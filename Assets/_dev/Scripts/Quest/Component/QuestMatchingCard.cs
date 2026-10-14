@@ -5,6 +5,8 @@ namespace EduGame
 {
     public class QuestMatchingCard : QuestComponent
     {
+        private const string c_HideMethod = "Hide";
+
         public QuestUtilLabelMatching Match => m_Match;
 
         private Sprite m_CardFace;
@@ -70,7 +72,7 @@ namespace EduGame
 
             Button.interactable = false;
 
-            Invoke("Hide", m_Matching.PeekDuration);
+            Invoke(c_HideMethod, m_Matching.PeekDuration);
         }
 
         public virtual void Hide()

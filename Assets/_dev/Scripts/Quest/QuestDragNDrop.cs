@@ -10,6 +10,11 @@ namespace EduGame
 {
     public class QuestDragNDrop : QuestZonePairing
     {
+        private const string c_RecalculateContainerMethod = "RecalculateContainer";
+        private const string c_GroupSegment = "_group_";
+        private const string c_LabelSegment = "_label_";
+        private const string c_QuestionSegment = "_question";
+
         [Header("Data")]
 
         [Header("Components")]
@@ -168,7 +173,7 @@ namespace EduGame
         {
             base.Enabled();
 
-            Invoke("RecalculateContainer", 0.5f);
+            Invoke(c_RecalculateContainerMethod, 0.5f);
         }
 
         public override void OnAnswered(bool answer, bool submit = true)
@@ -193,7 +198,7 @@ namespace EduGame
             int totalAnswers = m_DataDragNDrop.AnswerInOrder ? Sort() : Check();
 
             if (totalAnswers == m_DataDragNDrop.Items.Length || totalAnswers >= m_TotalLimit)
-                star = 3;
+                star = c_MaxStar;
             else if (totalAnswers / m_DataDragNDrop.Items.Length >= 0.5f)
                 star = 2;
 
@@ -299,7 +304,7 @@ namespace EduGame
                         {
                             voiceRequests.Add(new VoiceRequest
                             {
-                                id = name + "_group_" + i + "_label_" + j,
+                                id = name + c_GroupSegment + i + c_LabelSegment + j,
                                 text = labelText,
                                 voice_id = GetVoiceId()
                             });
@@ -318,14 +323,14 @@ namespace EduGame
         /// </summary>
         public override bool HasVoiceClip(string requestId)
         {
-            if (requestId.IndexOf("_group_") > 0)
+            if (requestId.IndexOf(c_GroupSegment) > 0)
             {
                 int[] index = StringHelper.ExtractItemAndLabelIds(requestId);
 
                 if (index != null && index.Length == 2)
                     return m_DataDragNDrop.Groups[index[0]] != null && m_DataDragNDrop.Groups[index[0]].Labels[index[1]] != null && m_DataDragNDrop.Groups[index[0]].Labels[index[1]].Audio != null;
             }
-            else if (requestId.IndexOf("_question") > 0)
+            else if (requestId.IndexOf(c_QuestionSegment) > 0)
                 return m_DataDragNDrop.Question.Audio != null;
 
             return false;
@@ -336,14 +341,14 @@ namespace EduGame
         /// </summary>
         public override void AssignVoiceClip(string requestId, AudioClip clip)
         {
-            if (requestId.IndexOf("_group_") > 0)
+            if (requestId.IndexOf(c_GroupSegment) > 0)
             {
                 int[] index = StringHelper.ExtractItemAndLabelIds(requestId);
 
                 if (index != null && index.Length == 2)
                     m_DataDragNDrop.Groups[index[0]].Labels[index[1]].SetAudio(clip);
             }
-            else if (requestId.IndexOf("_question") > 0)
+            else if (requestId.IndexOf(c_QuestionSegment) > 0)
                 m_Data.Question.SetAudio(clip);
         }
     }

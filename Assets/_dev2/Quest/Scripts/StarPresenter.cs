@@ -6,6 +6,12 @@ namespace EduGame
 {
     public class StarPresenter : MonoBehaviour
     {
+        private const string c_ReactionZeroStar = "Oh nooo";
+        private const string c_ReactionOneStar = "Good Job!";
+        private const string c_ReactionTwoStar = "Excellent!!";
+        private const string c_ReactionThreeStar = "Smart Kid!!!";
+        private const float c_StarRevealDelay = 0.2f;
+
         [System.Serializable]
         public class Star
         {
@@ -62,21 +68,21 @@ namespace EduGame
             m_StarCount = 0;
 
             float rate = resultContext.GetRate();
-            string reactionWord = "Oh nooo";
+            string reactionWord = c_ReactionZeroStar;
             if (rate > c_ZeroThresholdRate)
             {
                 m_StarCount++;
-                reactionWord = "Good Job!";
+                reactionWord = c_ReactionOneStar;
             }
             if (rate >= c_MiddleThresholdRate)
             {
                 m_StarCount++;
-                reactionWord = "Excellent!!";
+                reactionWord = c_ReactionTwoStar;
             }
             if (rate >= c_PerfectThresholdRate)
             {
                 m_StarCount++;
-                reactionWord = "Smart Kid!!!";
+                reactionWord = c_ReactionThreeStar;
             }
             StartCoroutine(SetActiveStars(true));
 
@@ -89,7 +95,7 @@ namespace EduGame
             for (int i = 0; i < m_Stars.Length; i++)
             {
                 m_Stars[i].SetStarContent(active);
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(c_StarRevealDelay);
                 if (i < m_StarCount)
                 {
                     m_Stars[i].SetActiveStar(active);

@@ -1,0 +1,15 @@
+batch=s4_b2 spec=s4_b2.spec file=2 ganti=4 sisip=1 error=0 dry=True
+APIManager.cs:14
+  - private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
+  + [SerializeField] private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
+GameManager.cs:140
+  - private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
+  + [SerializeField] private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
+GameManager.cs:236
+  - m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+  + m_SessionId = m_FallbackSessionId;
+GameManager.cs:239
+  - m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+  + m_SessionId = m_FallbackSessionId;
+GameManager.cs: sisip 1 baris setelah baris 141
+  + [SerializeField] private string m_FallbackSessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";

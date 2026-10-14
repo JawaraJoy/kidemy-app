@@ -7,6 +7,9 @@ namespace EduGame
 {
     public abstract class Quest : MonoBehaviour
     {
+        protected const int c_MaxStar = 3;
+        private const float c_MusicDuckVolume = 0.4f;
+
         [Header("Data")]
         [SerializeField] [FormerlySerializedAs("data")] protected SO_Quest m_Data;
 
@@ -145,7 +148,7 @@ namespace EduGame
         {
             AudioSource music = GameManager.Instance.Music;
             float durationvoice = audioClip.length;
-            music.volume = 0.4f;
+            music.volume = c_MusicDuckVolume;
             yield return new WaitForSeconds(durationvoice);
             music.volume = 1f;
         }
@@ -160,7 +163,7 @@ namespace EduGame
             m_IsAnswered = true;
 
             if(submit)
-                SubmitInternal(result ? 3 : 1);
+                SubmitInternal(result ? c_MaxStar : 1);
         }
 
         public void Submit(int star = 1)

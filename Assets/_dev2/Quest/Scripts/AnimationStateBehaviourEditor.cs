@@ -8,6 +8,16 @@ namespace EduGame.Editor
     [CustomEditor(typeof(AnimationStateBehaviour))]
     public class AnimationStateBehaviourEditor : UnityEditor.Editor
     {
+        private const string c_ClipConfigProperty = "m_ClipConfig";
+        private const string c_StateHashProperty = "m_StateHash";
+        private const string c_ClipLengthProperty = "m_ClipLength";
+        private const string c_RefreshButton = "Refresh";
+        private const string c_StateNotDetected = "Animator State could not be detected.";
+        private const string c_StateLabel = "State";
+        private const string c_StatePathLabel = "State Path";
+        private const string c_StateHashLabel = "State Hash";
+        private const string c_ClipLengthLabel = "Clip Length";
+
         private SerializedProperty m_ClipConfig;
         private SerializedProperty m_StateHash;
         private SerializedProperty m_ClipLength;
@@ -29,13 +39,13 @@ namespace EduGame.Editor
             }
 
             m_ClipConfig =
-                serializedObject.FindProperty("m_ClipConfig");
+                serializedObject.FindProperty(c_ClipConfigProperty);
 
             m_StateHash =
-                serializedObject.FindProperty("m_StateHash");
+                serializedObject.FindProperty(c_StateHashProperty);
 
             m_ClipLength =
-                serializedObject.FindProperty("m_ClipLength");
+                serializedObject.FindProperty(c_ClipLengthProperty);
 
             RefreshStateInfo();
         }
@@ -54,7 +64,7 @@ namespace EduGame.Editor
 
             EditorGUILayout.Space();
 
-            if (GUILayout.Button("Refresh"))
+            if (GUILayout.Button(c_RefreshButton))
             {
                 RefreshStateInfo();
             }
@@ -67,7 +77,7 @@ namespace EduGame.Editor
             if (m_State == null)
             {
                 EditorGUILayout.HelpBox(
-                    "Animator State could not be detected.",
+                    c_StateNotDetected,
                     MessageType.Warning
                 );
 
@@ -75,22 +85,22 @@ namespace EduGame.Editor
             }
 
             EditorGUILayout.LabelField(
-                "State",
+                c_StateLabel,
                 m_State.name
             );
 
             EditorGUILayout.LabelField(
-                "State Path",
+                c_StatePathLabel,
                 m_StatePath
             );
 
             EditorGUILayout.LabelField(
-                "State Hash",
+                c_StateHashLabel,
                 m_StateHash.intValue.ToString()
             );
 
             EditorGUILayout.LabelField(
-                "Clip Length",
+                c_ClipLengthLabel,
                 $"{m_ClipLength.floatValue:F3} seconds"
             );
         }

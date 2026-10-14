@@ -10,6 +10,9 @@ namespace EduGame
 
     public class QuestRythimNote : QuestComponent
     {   
+        private const int c_SpeedScale = 5000;
+        private const string c_NoteEndTag = "NoteEnd";
+
         [SerializeField] [FormerlySerializedAs("point")] protected int m_Point;
         
         public int Point => m_Point;
@@ -69,7 +72,7 @@ namespace EduGame
             {
                 // 1. Calculate the next target position using fixedDeltaTime
                 Vector2 currentPosition = m_Rb.position;
-                Vector2 targetPosition = currentPosition + (Vector2.left * (m_Speed * 5000) * Time.fixedDeltaTime);
+                Vector2 targetPosition = currentPosition + (Vector2.left * (m_Speed * c_SpeedScale) * Time.fixedDeltaTime);
 
                 // 2. Teleport the physics body smoothly to the new position
                 m_Rb.MovePosition(targetPosition);
@@ -106,7 +109,7 @@ namespace EduGame
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.tag == "NoteEnd")
+            if(collision.tag == c_NoteEndTag)
             {
                 m_Quest.OnAnswered(false);
 

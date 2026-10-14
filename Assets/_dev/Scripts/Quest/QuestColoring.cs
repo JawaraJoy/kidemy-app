@@ -7,6 +7,13 @@ namespace EduGame
 {
     public class QuestColoring : Quest
     {
+        private const string c_BrushColorProperty = "_BrushColor";
+        private const string c_BrushSizeProperty = "_BrushSize";
+        private const string c_RecalculatePalettesMethod = "RecalculatePalettesContainer";
+        private const int c_CursorOffset = 26;
+        private const int c_CursorSize = 32;
+        private const double c_ThreeStarAppraisal = 0.85;
+
         public static Color EmptyColor => new Color(0, 0, 0, 0);
 
         [Header("Palettes")]
@@ -69,7 +76,7 @@ namespace EduGame
                     m_Palettes[i].SetPaletteColor(m_ColorOptions[i]);
                 }
 
-                Invoke("RecalculatePalettesContainer", 0.5f);
+                Invoke(c_RecalculatePalettesMethod, 0.5f);
             }
 
             if (m_CanvasContainer)
@@ -93,8 +100,8 @@ namespace EduGame
             m_BindedColor = color;
 
             // Assign SelectedColor to brush
-            m_Brush.SetColor("_BrushColor", m_BindedColor);
-            m_Brush.SetFloat("_BrushSize", m_BrushSize);
+            m_Brush.SetColor(c_BrushColorProperty, m_BindedColor);
+            m_Brush.SetFloat(c_BrushSizeProperty, m_BrushSize);
 
             if (m_ColoringCursor)
                 m_ColoringCursor.SetToCustom(color);
@@ -142,7 +149,7 @@ namespace EduGame
                 Cursor.visible = false;
 
                 GUI.color = m_BindedColor;
-                GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+                GUI.DrawTexture(new Rect(mousePosition.x - c_CursorOffset, Screen.height - mousePosition.y - c_CursorOffset, c_CursorSize, c_CursorSize), m_BindedCursor.texture);
             }
             else
             {
@@ -166,8 +173,8 @@ namespace EduGame
                 appraisal = appraisal / m_Fields.Length;
             }
 
-            if (appraisal >= 0.85)
-                star = 3;
+            if (appraisal >= c_ThreeStarAppraisal)
+                star = c_MaxStar;
             else if (appraisal >= 0.5)
                 star = 2;
 

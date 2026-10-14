@@ -1,0 +1,311 @@
+batch=s4_b4 spec=s4_b4.spec file=9 ganti=74 sisip=78 error=0 dry=True
+BatchScenesBuilder.cs:21
+  - string baseOutputPath = Path.Combine(Application.dataPath, "../Builds/HTML5");
+  + string baseOutputPath = Path.Combine(Application.dataPath, c_BuildOutputFolder);
+BatchScenesBuilder.cs: sisip 2 baris setelah baris 7
+  + private const string c_BuildOutputFolder = "../Builds/HTML5";
+  + 
+MissingScriptFinder.cs:28
+  - string[] prefabPaths = AssetDatabase.FindAssets("t:Prefab");
+  + string[] prefabPaths = AssetDatabase.FindAssets(c_PrefabFilter);
+MissingScriptFinder.cs: sisip 2 baris setelah baris 6
+  + private const string c_PrefabFilter = "t:Prefab";
+  + 
+QuestConverter.cs:26
+  - if (string.IsNullOrEmpty(path) || !path.EndsWith(".prefab")) continue;
+  + if (string.IsNullOrEmpty(path) || !path.EndsWith(c_PrefabExtension)) continue;
+QuestConverter.cs:42
+  - SerializedProperty scriptProperty = so.FindProperty("m_Script");
+  + SerializedProperty scriptProperty = so.FindProperty(c_ScriptProperty);
+QuestConverter.cs:90
+  - if (path != null && path.EndsWith(".prefab"))
+  + if (path != null && path.EndsWith(c_PrefabExtension))
+QuestConverter.cs: sisip 3 baris setelah baris 6
+  + private const string c_PrefabExtension = ".prefab";
+  + private const string c_ScriptProperty = "m_Script";
+  + 
+UpdateMultipleChoiceToNarrative.cs:67
+  - if (prop.name == "m_Script") continue;
+  + if (prop.name == c_ScriptProperty) continue;
+UpdateMultipleChoiceToNarrative.cs: sisip 2 baris setelah baris 6
+  + private const string c_ScriptProperty = "m_Script";
+  + 
+QuestAudioPopulatorWindow.cs:20
+  - GetWindow<QuestAudioPopulatorWindow>("Quest Audio Populator");
+  + GetWindow<QuestAudioPopulatorWindow>(c_WindowTitle);
+QuestAudioPopulatorWindow.cs:25
+  - GUILayout.Label("Quest Audio Batch Populator", EditorStyles.boldLabel);
+  + GUILayout.Label(c_HeaderLabel, EditorStyles.boldLabel);
+QuestAudioPopulatorWindow.cs:26
+  - EditorGUILayout.Space(5);
+  + EditorGUILayout.Space(c_SpaceSmall);
+QuestAudioPopulatorWindow.cs:32
+  - new GUIContent("Quest Assets"),
+  + new GUIContent(c_QuestAssetsLabel),
+QuestAudioPopulatorWindow.cs:37
+  - "Add the SO_Quest assets that should have their audio populated.",
+  + c_QuestAssetsHelp,
+QuestAudioPopulatorWindow.cs:40
+  - m_ForceRedownload = EditorGUILayout.Toggle("Force Redownload Existing", m_ForceRedownload);
+  + m_ForceRedownload = EditorGUILayout.Toggle(c_ForceRedownloadLabel, m_ForceRedownload);
+QuestAudioPopulatorWindow.cs:42
+  - EditorGUILayout.Space(10);
+  + EditorGUILayout.Space(c_SpaceLarge);
+QuestAudioPopulatorWindow.cs:45
+  - if (GUILayout.Button("Populate Selected Quest Audio", GUILayout.Height(35)))
+  + if (GUILayout.Button(c_PopulateButton, GUILayout.Height(35)))
+QuestAudioPopulatorWindow.cs:45
+  - if (GUILayout.Button(c_PopulateButton, GUILayout.Height(35)))
+  + if (GUILayout.Button(c_PopulateButton, GUILayout.Height(c_ButtonHeight)))
+QuestAudioPopulatorWindow.cs: sisip 10 baris setelah baris 12
+  + private const string c_WindowTitle = "Quest Audio Populator";
+  + private const string c_HeaderLabel = "Quest Audio Batch Populator";
+  + private const string c_QuestAssetsLabel = "Quest Assets";
+  + private const string c_QuestAssetsHelp = "Add the SO_Quest assets that should have their audio populated.";
+  + private const string c_ForceRedownloadLabel = "Force Redownload Existing";
+  + private const string c_PopulateButton = "Populate Selected Quest Audio";
+  + private const int c_SpaceSmall = 5;
+  + private const int c_SpaceLarge = 10;
+  + private const int c_ButtonHeight = 35;
+  + 
+SceneButtonGenerator.cs:62
+  - string pattern = @"(rewrite|otherdev|dev|_|\d+|\[\d+\])";
+  + string pattern = c_NoisePattern;
+SceneButtonGenerator.cs:64
+  - cleanedName = Regex.Replace(cleanedName, @"(?<=[a-z])(?=[A-Z])", " ");
+  + cleanedName = Regex.Replace(cleanedName, c_CamelBoundaryPattern, " ");
+SceneButtonGenerator.cs:64
+  - cleanedName = Regex.Replace(cleanedName, c_CamelBoundaryPattern, " ");
+  + cleanedName = Regex.Replace(cleanedName, c_CamelBoundaryPattern, c_Space);
+SceneButtonGenerator.cs:65
+  - cleanedName = Regex.Replace(cleanedName, @"\s+", " ").Trim();
+  + cleanedName = Regex.Replace(cleanedName, c_WhitespacePattern, " ").Trim();
+SceneButtonGenerator.cs:65
+  - cleanedName = Regex.Replace(cleanedName, c_WhitespacePattern, " ").Trim();
+  + cleanedName = Regex.Replace(cleanedName, c_WhitespacePattern, c_Space).Trim();
+SceneButtonGenerator.cs:84
+  - newButtonObj.name = "Btn_" + rawName;
+  + newButtonObj.name = c_ButtonPrefix + rawName;
+SceneButtonGenerator.cs:132
+  - Undo.RegisterCreatedObjectUndo(newButtonObj, "Generate Scene Button");
+  + Undo.RegisterCreatedObjectUndo(newButtonObj, c_UndoGenerateButton);
+SceneButtonGenerator.cs:143
+  - GameObject eventSystemObj = new GameObject("EventSystem");
+  + GameObject eventSystemObj = new GameObject(c_EventSystemName);
+SceneButtonGenerator.cs:146
+  - Undo.RegisterCreatedObjectUndo(eventSystemObj, "Create EventSystem");
+  + Undo.RegisterCreatedObjectUndo(eventSystemObj, c_UndoCreateEventSystem);
+SceneButtonGenerator.cs: sisip 9 baris setelah baris 27
+  + private const string c_NoisePattern = @"(rewrite|otherdev|dev|_|\d+|\[\d+\])";
+  + private const string c_CamelBoundaryPattern = @"(?<=[a-z])(?=[A-Z])";
+  + private const string c_WhitespacePattern = @"\s+";
+  + private const string c_Space = " ";
+  + private const string c_ButtonPrefix = "Btn_";
+  + private const string c_UndoGenerateButton = "Generate Scene Button";
+  + private const string c_EventSystemName = "EventSystem";
+  + private const string c_UndoCreateEventSystem = "Create EventSystem";
+  + 
+VoiceAPI.cs:34
+  - onFailure?.Invoke("Text is empty.");
+  + onFailure?.Invoke(c_ErrorTextEmpty);
+VoiceAPI.cs:40
+  - onFailure?.Invoke("API Token is empty.");
+  + onFailure?.Invoke(c_ErrorTokenEmpty);
+VoiceAPI.cs:106
+  - "Authorization",
+  + c_HeaderAuthorization,
+VoiceAPI.cs:107
+  - "Bearer " + apiToken
+  + c_BearerPrefix + apiToken
+VoiceAPI.cs:111
+  - "Content-Type",
+  + c_HeaderContentType,
+VoiceAPI.cs:112
+  - "application/json"
+  + c_MimeJson
+VoiceAPI.cs:116
+  - "Accept",
+  + c_HeaderAccept,
+VoiceAPI.cs:117
+  - "application/json"
+  + c_MimeJson
+VoiceAPI.cs:188
+  - "API response could not be parsed."
+  + c_ErrorParse
+VoiceAPI.cs:201
+  - "API response does not contain audio_url.\n" +
+  + c_ErrorNoAudioUrl +
+VoiceAPI.cs: sisip 10 baris setelah baris 24
+  + private const string c_ErrorTextEmpty = "Text is empty.";
+  + private const string c_ErrorTokenEmpty = "API Token is empty.";
+  + private const string c_HeaderAuthorization = "Authorization";
+  + private const string c_BearerPrefix = "Bearer ";
+  + private const string c_HeaderContentType = "Content-Type";
+  + private const string c_HeaderAccept = "Accept";
+  + private const string c_MimeJson = "application/json";
+  + private const string c_ErrorParse = "API response could not be parsed.";
+  + private const string c_ErrorNoAudioUrl = "API response does not contain audio_url.\n";
+  + 
+VoiceAsset.cs:344
+  - "\\",
+  + c_WindowsSeparator,
+VoiceAsset.cs:345
+  - "/"
+  + c_UnitySeparator
+VoiceAsset.cs:380
+  - "Generate Voice Audio"
+  + c_UndoGenerate
+VoiceAsset.cs:437
+  - "_"
+  + c_InvalidCharReplacement
+VoiceAsset.cs:473
+  - "m_NameVoice"
+  + c_NameVoiceProperty
+VoiceAsset.cs:478
+  - "m_Text"
+  + c_TextProperty
+VoiceAsset.cs:483
+  - "m_VoiceId"
+  + c_VoiceIdProperty
+VoiceAsset.cs:488
+  - "m_AudioClip"
+  + c_AudioClipProperty
+VoiceAsset.cs:493
+  - "m_ApiToken"
+  + c_ApiTokenProperty
+VoiceAsset.cs:498
+  - "m_IsGenerating"
+  + c_IsGeneratingProperty
+VoiceAsset.cs:514
+  - "Voice",
+  + c_VoiceHeader,
+VoiceAsset.cs:518
+  - EditorGUILayout.Space(3);
+  + EditorGUILayout.Space(c_SpaceSmall);
+VoiceAsset.cs:526
+  - new GUIContent("Name Voice")
+  + new GUIContent(c_NameVoiceLabel)
+VoiceAsset.cs:535
+  - new GUIContent("Text")
+  + new GUIContent(c_TextLabel)
+VoiceAsset.cs:544
+  - new GUIContent("Voice ID")
+  + new GUIContent(c_VoiceIdLabel)
+VoiceAsset.cs:553
+  - new GUIContent("Audio Clip")
+  + new GUIContent(c_AudioClipLabel)
+VoiceAsset.cs:556
+  - EditorGUILayout.Space(10);
+  + EditorGUILayout.Space(c_SpaceLarge);
+VoiceAsset.cs:563
+  - "API",
+  + c_ApiHeader,
+VoiceAsset.cs:567
+  - EditorGUILayout.Space(3);
+  + EditorGUILayout.Space(c_SpaceSmall);
+VoiceAsset.cs:571
+  - new GUIContent("API Token")
+  + new GUIContent(c_ApiTokenLabel)
+VoiceAsset.cs:574
+  - EditorGUILayout.Space(10);
+  + EditorGUILayout.Space(c_SpaceLarge);
+VoiceAsset.cs:610
+  - ? "Generating..."
+  + ? c_GeneratingButton
+VoiceAsset.cs:611
+  - : "Generate Audio",
+  + : c_GenerateButton,
+VoiceAsset.cs:612
+  - GUILayout.Height(40)
+  + GUILayout.Height(c_ButtonHeight)
+VoiceAsset.cs:628
+  - "Name Voice is empty.",
+  + c_HelpNameEmpty,
+VoiceAsset.cs:636
+  - "Text is empty.",
+  + c_HelpTextEmpty,
+VoiceAsset.cs:644
+  - "API Token is empty.",
+  + c_HelpTokenEmpty,
+VoiceAsset.cs:652
+  - "Generating audio...",
+  + c_HelpGenerating,
+VoiceAsset.cs:661
+  - EditorGUILayout.Space(10);
+  + EditorGUILayout.Space(c_SpaceLarge);
+VoiceAsset.cs:664
+  - "Output",
+  + c_OutputHeader,
+VoiceAsset.cs:671
+  - GUILayout.Height(18)
+  + GUILayout.Height(c_PathHeight)
+VoiceAsset.cs: sisip 25 baris setelah baris 460
+  + private const string c_NameVoiceProperty = "m_NameVoice";
+  + private const string c_TextProperty = "m_Text";
+  + private const string c_VoiceIdProperty = "m_VoiceId";
+  + private const string c_AudioClipProperty = "m_AudioClip";
+  + private const string c_ApiTokenProperty = "m_ApiToken";
+  + private const string c_IsGeneratingProperty = "m_IsGenerating";
+  + private const string c_VoiceHeader = "Voice";
+  + private const string c_NameVoiceLabel = "Name Voice";
+  + private const string c_TextLabel = "Text";
+  + private const string c_VoiceIdLabel = "Voice ID";
+  + private const string c_AudioClipLabel = "Audio Clip";
+  + private const string c_ApiHeader = "API";
+  + private const string c_ApiTokenLabel = "API Token";
+  + private const string c_GeneratingButton = "Generating...";
+  + private const string c_GenerateButton = "Generate Audio";
+  + private const string c_HelpNameEmpty = "Name Voice is empty.";
+  + private const string c_HelpTextEmpty = "Text is empty.";
+  + private const string c_HelpTokenEmpty = "API Token is empty.";
+  + private const string c_HelpGenerating = "Generating audio...";
+  + private const string c_OutputHeader = "Output";
+  + private const int c_SpaceSmall = 3;
+  + private const int c_SpaceLarge = 10;
+  + private const int c_ButtonHeight = 40;
+  + private const int c_PathHeight = 18;
+  + 
+VoiceAsset.cs: sisip 5 baris setelah baris 83
+  + private const string c_WindowsSeparator = "\\";
+  + private const string c_UnitySeparator = "/";
+  + private const string c_UndoGenerate = "Generate Voice Audio";
+  + private const string c_InvalidCharReplacement = "_";
+  + 
+AnimationStateBehaviourEditor.cs:32
+  - serializedObject.FindProperty("m_ClipConfig");
+  + serializedObject.FindProperty(c_ClipConfigProperty);
+AnimationStateBehaviourEditor.cs:35
+  - serializedObject.FindProperty("m_StateHash");
+  + serializedObject.FindProperty(c_StateHashProperty);
+AnimationStateBehaviourEditor.cs:38
+  - serializedObject.FindProperty("m_ClipLength");
+  + serializedObject.FindProperty(c_ClipLengthProperty);
+AnimationStateBehaviourEditor.cs:57
+  - if (GUILayout.Button("Refresh"))
+  + if (GUILayout.Button(c_RefreshButton))
+AnimationStateBehaviourEditor.cs:70
+  - "Animator State could not be detected.",
+  + c_StateNotDetected,
+AnimationStateBehaviourEditor.cs:78
+  - "State",
+  + c_StateLabel,
+AnimationStateBehaviourEditor.cs:83
+  - "State Path",
+  + c_StatePathLabel,
+AnimationStateBehaviourEditor.cs:88
+  - "State Hash",
+  + c_StateHashLabel,
+AnimationStateBehaviourEditor.cs:93
+  - "Clip Length",
+  + c_ClipLengthLabel,
+AnimationStateBehaviourEditor.cs: sisip 10 baris setelah baris 10
+  + private const string c_ClipConfigProperty = "m_ClipConfig";
+  + private const string c_StateHashProperty = "m_StateHash";
+  + private const string c_ClipLengthProperty = "m_ClipLength";
+  + private const string c_RefreshButton = "Refresh";
+  + private const string c_StateNotDetected = "Animator State could not be detected.";
+  + private const string c_StateLabel = "State";
+  + private const string c_StatePathLabel = "State Path";
+  + private const string c_StateHashLabel = "State Hash";
+  + private const string c_ClipLengthLabel = "Clip Length";
+  + 

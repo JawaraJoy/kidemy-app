@@ -9,6 +9,12 @@ namespace EduGame
 
     public class QuestColoringField : MonoBehaviour
     {
+        private const string c_CommandBufferName = "UIPainter";
+        private const string c_BrushPosProperty = "_BrushPos";
+        private const int c_SampleSize = 64;
+        private const float c_AlphaCutoff = 20f;
+        private const int c_WhiteCutoff = 250;
+
         private RectTransform m_Rect;
         private RenderTexture m_Rt;
         private CommandBuffer m_Cb;
@@ -48,7 +54,7 @@ namespace EduGame
                 // Create a RenderTexture with the same dimensions and format as the Texture2D
                 m_Rt = new RenderTexture(image.texture.width, image.texture.height, 0, RenderTextureFormat.ARGB32);
 
-                m_Cb = new CommandBuffer { name = "UIPainter" };
+                m_Cb = new CommandBuffer { name = c_CommandBufferName };
                 
                 if (m_BaseTexture)
                 {
@@ -87,7 +93,7 @@ namespace EduGame
 
         void Draw(Vector2 uv)
         {
-            m_QuestColoring.Brush.SetVector("_BrushPos", uv);
+            m_QuestColoring.Brush.SetVector(c_BrushPosProperty, uv);
 
             RenderTexture tempRT = RenderTexture.GetTemporary(m_Rt.descriptor);
 
@@ -114,7 +120,7 @@ namespace EduGame
         protected float GetPaintedPercentage() {
             // 1. Create a tiny temporary RenderTexture
             // 64x64 is usually enough for a accurate score
-            RenderTexture smallRT = RenderTexture.GetTemporary(64, 64);
+            RenderTexture smallRT = RenderTexture.GetTemporary(c_SampleSize, c_SampleSize);
             
             // 2. Downscale using Blit (GPU does the heavy lifting)
             // Use Bilinear filtering for better averaging of "painted" areas
@@ -122,9 +128,9 @@ namespace EduGame
             Graphics.Blit(m_Rt, smallRT);
 
             // 3. Copy only the small texture to CPU
-            Texture2D tex = new Texture2D(64, 64, TextureFormat.ARGB32, false);
+            Texture2D tex = new Texture2D(c_SampleSize, c_SampleSize, TextureFormat.ARGB32, false);
             RenderTexture.active = smallRT;
-            tex.ReadPixels(new Rect(0, 0, 64, 64), 0, 0);
+            tex.ReadPixels(new Rect(0, 0, c_SampleSize, c_SampleSize), 0, 0);
             tex.Apply();
 
             // 4. Count colored pixels on the small array
@@ -135,12 +141,12 @@ namespace EduGame
 
             for (int i = 0; i < pixels.Length; i++) {
                 
-                if(pixels[i].a > 20f)
+                if(pixels[i].a > c_AlphaCutoff)
                 {
                     pixelCount++;
 
                     // If not white (using a small threshold for safety)
-                    if (pixels[i].r < 250 || pixels[i].g < 250 || pixels[i].b < 250)
+                    if (pixels[i].r < c_WhiteCutoff || pixels[i].g < c_WhiteCutoff || pixels[i].b < c_WhiteCutoff)
                         paintedCount++;
                 }
             }

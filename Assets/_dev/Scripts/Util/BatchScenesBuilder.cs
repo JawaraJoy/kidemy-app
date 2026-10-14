@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BatchScenesBuilder
 {
+    private const string c_BuildOutputFolder = "../Builds/HTML5";
+
     [MenuItem("Tools/Build/Build Scenes To HTML5")]
     public static void BuildAllScenesToSeparateFolders()
     {
@@ -18,7 +20,7 @@ public class BatchScenesBuilder
         }
 
         // Define base output directory
-        string baseOutputPath = Path.Combine(Application.dataPath, "../Builds/HTML5");
+        string baseOutputPath = Path.Combine(Application.dataPath, c_BuildOutputFolder);
 
         foreach (EditorBuildSettingsScene buildScene in scenes)
         {

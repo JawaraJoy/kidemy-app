@@ -1,0 +1,336 @@
+# STAGE 4 CLASSIFICATION (hasil heuristik dari stage3_inventory.txt bagian [E]; sumber SECRET disembunyikan)
+# file:line	owner	STR|NUM	kategori	sumber
+Assets/_dev/Scripts/APIWrapper/VoiceRequest.cs:12	VoiceRequest.format	STR	RUNTIME-STR	public string format = "wav";
+Assets/_dev/Scripts/Global.cs:7	Global.s_FalseVector	NUM	RUNTIME-NUM	private static Vector2 s_FalseVector = Vector2.one * 100000;
+Assets/_dev/Scripts/Manager/APIManager.cs:12	APIManager.m_ApiToken	STR	SECRET	<DISEMBUNYIKAN>
+Assets/_dev/Scripts/Manager/APIManager.cs:13	APIManager.m_ApiUrl	STR	RUNTIME-STR	private string m_ApiUrl = "";
+Assets/_dev/Scripts/Manager/APIManager.cs:14	APIManager.m_ApiAIUrl	STR	URL-CONFIG	private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
+Assets/_dev/Scripts/Manager/APIManager.cs:22	APIManager.RequestVoice	STR	RUNTIME-STR	public void RequestVoice(string text, string voiceId = "", Action<string> onSuccess = null, Action<string> onFailure = null)
+Assets/_dev/Scripts/Manager/APIManager.cs:47	APIManager.RequestVoiceInternal	STR	RUNTIME-STR	string requestUrl = m_ApiAIUrl + "v1/api/audio/generate";
+Assets/_dev/Scripts/Manager/APIManager.cs:63	APIManager.SendDataCo	STR	RUNTIME-STR	using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+Assets/_dev/Scripts/Manager/APIManager.cs:70	APIManager.SendDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:70	APIManager.SendDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:71	APIManager.SendDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Content-Type", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:71	APIManager.SendDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Content-Type", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:72	APIManager.SendDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Accept", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:72	APIManager.SendDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Accept", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:102	APIManager.FetchDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:102	APIManager.FetchDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:136	APIManager.RequestDataCo	STR	RUNTIME-STR	using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+Assets/_dev/Scripts/Manager/APIManager.cs:143	APIManager.RequestDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:143	APIManager.RequestDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:144	APIManager.RequestDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Content-Type", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:144	APIManager.RequestDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Content-Type", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:145	APIManager.RequestDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Accept", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:145	APIManager.RequestDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Accept", "application/json");
+Assets/_dev/Scripts/Manager/APIManager.cs:148	APIManager.RequestDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/APIManager.cs:148	APIManager.RequestDataCo	STR	RUNTIME-STR	request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+Assets/_dev/Scripts/Manager/AssetManager.cs:96	AssetManager.Routine_DownloadMissingVoices	STR	RUNTIME-STR	string fileName = $"{req.id}.mp3";
+Assets/_dev/Scripts/Manager/AssetManager.cs:221	AssetManager.Routine_DownloadAndCacheAudio	STR	RUNTIME-STR	string fileName = $"{voiceId}.wav";
+Assets/_dev/Scripts/Manager/AssetManager.cs:247	AssetManager.GetCachedAudio	STR	RUNTIME-STR	string fileName = $"{voiceId}.wav";
+Assets/_dev/Scripts/Manager/AssetManager.cs:252	AssetManager.GetCachedAudio	STR	RUNTIME-STR	string errorMessage = $"[AssetManager] Audio file for ID '{voiceId}' does not exist in local cache.";
+Assets/_dev/Scripts/Manager/AssetManager.cs:270	AssetManager.GetCachedAudio	STR	RUNTIME-STR	string errorMessage = $"[AssetManager] Failed to parse WAV bytes for ID '{voiceId}'.";
+Assets/_dev/Scripts/Manager/AssetManager.cs:277	AssetManager.GetCachedAudio	STR	RUNTIME-STR	string errorMessage = $"[AssetManager] Exception reading cached file '{voiceId}': {e.Message}";
+Assets/_dev/Scripts/Manager/ContentManager.cs:25	ContentManager.Awake	NUM	RUNTIME-NUM	m_RefRes = m_CanvasScaler.referenceResolution + Vector2.up * 200;
+Assets/_dev/Scripts/Manager/GameManager.cs:126	GameManager.m_APIInfoURL	STR	URL-CONFIG	private string m_APIInfoURL = "https://be.kimee.io/api/v1/external/games";
+Assets/_dev/Scripts/Manager/GameManager.cs:127	GameManager.m_APIResultURL	STR	URL-CONFIG	private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
+Assets/_dev/Scripts/Manager/GameManager.cs:128	GameManager.m_GameURL	STR	URL-CONFIG	private string m_GameURL = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
+Assets/_dev/Scripts/Manager/GameManager.cs:183	GameManager.Start	STR	RUNTIME-STR	m_BaseURL = "";
+Assets/_dev/Scripts/Manager/GameManager.cs:184	GameManager.Start	STR	RUNTIME-STR	m_FrameURL = "";
+Assets/_dev/Scripts/Manager/GameManager.cs:188	GameManager.Start	STR	DEBUG	LogToBrowser("Base URL: " + m_BaseURL);
+Assets/_dev/Scripts/Manager/GameManager.cs:189	GameManager.Start	STR	DEBUG	LogToBrowser("Frame URL: " + m_FrameURL);
+Assets/_dev/Scripts/Manager/GameManager.cs:196	GameManager.Start	STR	RUNTIME-STR	if(parameters.ContainsKey("redirect_url"))
+Assets/_dev/Scripts/Manager/GameManager.cs:198	GameManager.Start	STR	RUNTIME-STR	m_BaseURL = parameters["redirect_url"];
+Assets/_dev/Scripts/Manager/GameManager.cs:201	GameManager.Start	STR	RUNTIME-STR	if(parameters.ContainsKey("bgm_volume"))
+Assets/_dev/Scripts/Manager/GameManager.cs:203	GameManager.Start	STR	RUNTIME-STR	int volume = int.Parse(parameters["bgm_volume"]);
+Assets/_dev/Scripts/Manager/GameManager.cs:204	GameManager.Start	NUM	RUNTIME-NUM	m_Music.volume = volume / 10f;
+Assets/_dev/Scripts/Manager/GameManager.cs:205	GameManager.Start	NUM	RUNTIME-NUM	m_AudioSource.volume = volume / 10f;
+Assets/_dev/Scripts/Manager/GameManager.cs:213	GameManager.Start	STR	DEBUG	LogToBrowser("Home URL: " + m_BaseURL);
+Assets/_dev/Scripts/Manager/GameManager.cs:220	GameManager.Start	STR	RUNTIME-STR	if (param.ContainsKey("session_id"))
+Assets/_dev/Scripts/Manager/GameManager.cs:221	GameManager.Start	STR	RUNTIME-STR	m_SessionId = param["session_id"];
+Assets/_dev/Scripts/Manager/GameManager.cs:223	GameManager.Start	STR	FALLBACK-SESSION	m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+Assets/_dev/Scripts/Manager/GameManager.cs:226	GameManager.Start	STR	FALLBACK-SESSION	m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+Assets/_dev/Scripts/Manager/GameManager.cs:340	GameManager.TimerCo	NUM	RUNTIME-NUM	float m = Mathf.FloorToInt(elapsedTime / 60);
+Assets/_dev/Scripts/Manager/GameManager.cs:341	GameManager.TimerCo	NUM	RUNTIME-NUM	float s = Mathf.FloorToInt(elapsedTime % 60);
+Assets/_dev/Scripts/Manager/GameManager.cs:343	GameManager.TimerCo	STR	RUNTIME-STR	string timerText = m.ToString().PadLeft(2, '0') + ":" + s.ToString().PadLeft(2, '0');
+Assets/_dev/Scripts/Manager/GameManager.cs:345	GameManager.TimerCo	NUM	RUNTIME-NUM	if (s % 10 == 0)
+Assets/_dev/Scripts/Manager/GameManager.cs:347	GameManager.TimerCo	NUM	RUNTIME-NUM	else if (s % 5 == 0)
+Assets/_dev/Scripts/Manager/GameManager.cs:521	GameManager.Submit	NUM	RUNTIME-NUM	else if (star > 3)
+Assets/_dev/Scripts/Manager/GameManager.cs:522	GameManager.Submit	NUM	RUNTIME-NUM	star = 3;
+Assets/_dev/Scripts/Manager/GameManager.cs:524	GameManager.Submit	NUM	RUNTIME-NUM	if (star == 3 && m_Quests[m_CurrentIndex].Data.TresholdTime > 0 && m_RecordedTime > m_Quests[m_CurrentIndex].Data.TresholdTime)
+Assets/_dev/Scripts/Manager/GameManager.cs:578	GameManager.ShowResultInternal	STR	RUNTIME-STR	if (m_NeutralReaction && m_Quests[m_CurrentIndex].name.IndexOf("ColortheIsland") > -1)
+Assets/_dev/Scripts/Manager/GameManager.cs:611	GameManager.ShowResultInternal	STR	RUNTIME-STR	SetNPCDialogInternal("Yaaay! Amazing!");
+Assets/_dev/Scripts/Manager/GameManager.cs:634	GameManager.ShowResultInternal	STR	RUNTIME-STR	SetNPCDialogInternal("Oh no!");
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:51	QuestColoringField.Start	STR	RUNTIME-STR	m_Cb = new CommandBuffer { name = "UIPainter" };
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:90	QuestColoringField.Draw	STR	RUNTIME-STR	m_QuestColoring.Brush.SetVector("_BrushPos", uv);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:117	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	RenderTexture smallRT = RenderTexture.GetTemporary(64, 64);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:117	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	RenderTexture smallRT = RenderTexture.GetTemporary(64, 64);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:125	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	Texture2D tex = new Texture2D(64, 64, TextureFormat.ARGB32, false);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:125	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	Texture2D tex = new Texture2D(64, 64, TextureFormat.ARGB32, false);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:127	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	tex.ReadPixels(new Rect(0, 0, 64, 64), 0, 0);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:127	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	tex.ReadPixels(new Rect(0, 0, 64, 64), 0, 0);
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:138	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	if(pixels[i].a > 20f)
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:143	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	if (pixels[i].r < 250 || pixels[i].g < 250 || pixels[i].b < 250)
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:143	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	if (pixels[i].r < 250 || pixels[i].g < 250 || pixels[i].b < 250)
+Assets/_dev/Scripts/Quest/Component/QuestColoringField.cs:143	QuestColoringField.GetPaintedPercentage	NUM	RUNTIME-NUM	if (pixels[i].r < 250 || pixels[i].g < 250 || pixels[i].b < 250)
+Assets/_dev/Scripts/Quest/Component/QuestContainer.cs:11	QuestContainer.Start	STR	RUNTIME-STR	Transform shadow = transform.Find("Shadow");
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:83	QuestDragNDropZone.AddItemInternal	NUM	RUNTIME-NUM	Scaled(item, 0.75f);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:187	QuestDragNDropZone.ReInsertItem	NUM	RUNTIME-NUM	Scaled(item, 0.75f);
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:294	QuestDragNDropZone.OnAccept	STR	RUNTIME-STR	m_Animator.Play("Accept");
+Assets/_dev/Scripts/Quest/Component/QuestDragNDropZone.cs:303	QuestDragNDropZone.OnReject	STR	RUNTIME-STR	m_Animator.Play("Reject");
+Assets/_dev/Scripts/Quest/Component/QuestMatchingCard.cs:73	QuestMatchingCard.Complete	STR	RUNTIME-STR	Invoke("Hide", m_Matching.PeekDuration);
+Assets/_dev/Scripts/Quest/Component/QuestPaginator.cs:95	QuestPaginator.ChangePage	STR	RUNTIME-STR	m_PageIndicator.text = "Page " + (m_CurrentPageIndex + 1) + " of " + m_TotalPages;
+Assets/_dev/Scripts/Quest/Component/QuestPaginator.cs:95	QuestPaginator.ChangePage	STR	RUNTIME-STR	m_PageIndicator.text = "Page " + (m_CurrentPageIndex + 1) + " of " + m_TotalPages;
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:50	QuestRythimBeat.Onclick	STR	RUNTIME-STR	m_Animator.Play("Tap");
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:60	QuestRythimBeat.BeatCo	NUM	RUNTIME-NUM	yield return new WaitForSeconds(0.1f);
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:65	QuestRythimBeat.BeatCo	NUM	RUNTIME-NUM	yield return new WaitForSeconds(0.1f);
+Assets/_dev/Scripts/Quest/Component/QuestRythimBeat.cs:76	QuestRythimBeat.OnTriggerEnter2D	STR	RUNTIME-STR	if(collision.tag == "NoteHead" && !m_IsSuccess)
+Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:72	QuestRythimNote.PlayCo	NUM	RUNTIME-NUM	Vector2 targetPosition = currentPosition + (Vector2.left * (m_Speed * 5000) * Time.fixedDeltaTime);
+Assets/_dev/Scripts/Quest/Component/QuestRythimNote.cs:109	QuestRythimNote.OnTriggerEnter2D	STR	RUNTIME-STR	if(collision.tag == "NoteEnd")
+Assets/_dev/Scripts/Quest/Quest.cs:20	Quest.m_Score	NUM	RUNTIME-NUM	[SerializeField] [FormerlySerializedAs("score")] protected int m_Score = 10;
+Assets/_dev/Scripts/Quest/Quest.cs:148	Quest.ReduceMusicAWhile	NUM	RUNTIME-NUM	music.volume = 0.4f;
+Assets/_dev/Scripts/Quest/Quest.cs:163	Quest.OnAnswered	NUM	RUNTIME-NUM	SubmitInternal(result ? 3 : 1);
+Assets/_dev/Scripts/Quest/Quest.cs:210	Quest.GetVoiceId	STR	RUNTIME-STR	return m_Data != null ? m_Data.GetVoiceId() : "";
+Assets/_dev/Scripts/Quest/QuestColoring.cs:15	QuestColoring.m_BrushSize	NUM	RUNTIME-NUM	[SerializeField] [FormerlySerializedAs("brushSize")] private float m_BrushSize = 0.1f;
+Assets/_dev/Scripts/Quest/QuestColoring.cs:72	QuestColoring.Start	STR	RUNTIME-STR	Invoke(<DISEMBUNYIKAN>, 0.5f);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:96	QuestColoring.BindColor	STR	RUNTIME-STR	m_Brush.SetColor("_BrushColor", m_BindedColor);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:97	QuestColoring.BindColor	STR	RUNTIME-STR	m_Brush.SetFloat("_BrushSize", m_BrushSize);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:145	QuestColoring.OnGUI	NUM	RUNTIME-NUM	GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:145	QuestColoring.OnGUI	NUM	RUNTIME-NUM	GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:145	QuestColoring.OnGUI	NUM	RUNTIME-NUM	GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:145	QuestColoring.OnGUI	NUM	RUNTIME-NUM	GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+Assets/_dev/Scripts/Quest/QuestColoring.cs:169	QuestColoring.SubmitInternal	NUM	RUNTIME-NUM	if (appraisal >= 0.85)
+Assets/_dev/Scripts/Quest/QuestColoring.cs:170	QuestColoring.SubmitInternal	NUM	RUNTIME-NUM	star = 3;
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:171	QuestDragNDrop.Enabled	STR	RUNTIME-STR	Invoke("RecalculateContainer", 0.5f);
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:196	QuestDragNDrop.SubmitInternal	NUM	RUNTIME-NUM	star = 3;
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:302	QuestDragNDrop.GetVoiceRequests	STR	RUNTIME-STR	id = name + "_group_" + i + "_label_" + j,
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:302	QuestDragNDrop.GetVoiceRequests	STR	RUNTIME-STR	id = name + "_group_" + i + "_label_" + j,
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:321	QuestDragNDrop.HasVoiceClip	STR	RUNTIME-STR	if (requestId.IndexOf("_group_") > 0)
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:328	QuestDragNDrop.HasVoiceClip	STR	RUNTIME-STR	else if (requestId.IndexOf("_question") > 0)
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:339	QuestDragNDrop.AssignVoiceClip	STR	RUNTIME-STR	if (requestId.IndexOf("_group_") > 0)
+Assets/_dev/Scripts/Quest/QuestDragNDrop.cs:346	QuestDragNDrop.AssignVoiceClip	STR	RUNTIME-STR	else if (requestId.IndexOf("_question") > 0)
+Assets/_dev/Scripts/Quest/QuestMatching.cs:90	QuestMatching.Open	STR	RUNTIME-STR	Invoke("Success", m_PeekDuration);
+Assets/_dev/Scripts/Quest/QuestMatching.cs:97	QuestMatching.Open	STR	RUNTIME-STR	Invoke("CloaseAllCard", m_PeekDuration);
+Assets/_dev/Scripts/Quest/QuestMatching.cs:154	QuestMatching.Enabled	STR	RUNTIME-STR	Invoke(<DISEMBUNYIKAN>, 0.5f);
+Assets/_dev/Scripts/Quest/QuestMultipleChoices.cs:258	QuestMultipleChoices.SubmitInternal	NUM	RUNTIME-NUM	star = 3;
+Assets/_dev/Scripts/Quest/QuestMultipleChoicesNarrative.cs:51	QuestMultipleChoicesNarrative.GetVoiceRequests	STR	RUNTIME-STR	textVoice = narrative.text + "." + textVoice;
+Assets/_dev/Scripts/Quest/QuestMultipleChoicesNarrative.cs:55	QuestMultipleChoicesNarrative.GetVoiceRequests	STR	RUNTIME-STR	id = name + "_question",
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:88	QuestRythimMaker.Start	STR	RUNTIME-STR	Invoke("StartPlay", 2);
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:123	QuestRythimMaker.SubmitInternal	NUM	RUNTIME-NUM	star = 3;
+Assets/_dev/Scripts/Quest/QuestRythimMaker.cs:146	QuestRythimMaker.ResetInternal	STR	RUNTIME-STR	Invoke("StartPlay", 2);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:120	QuestShapeIt.ResetInternal	NUM	RUNTIME-NUM	shape.Rect.localRotation = Quaternion.Euler(Vector3.forward * (Random.Range(0, 4) * 90));
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:120	QuestShapeIt.ResetInternal	NUM	RUNTIME-NUM	shape.Rect.localRotation = Quaternion.Euler(Vector3.forward * (Random.Range(0, 4) * 90));
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:151	QuestShapeIt.Verify	NUM	RUNTIME-NUM	ret = m_ItemIndex[id] == zone.transform.GetEntityId() && item.Rect.eulerAngles.z < 0.01f;
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:161	QuestShapeIt.OnAnswered	NUM	RUNTIME-NUM	Submit(3);
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:176	QuestShapeIt.RotateCo	NUM	RUNTIME-NUM	float rotateValue = 90f;
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:188	QuestShapeIt.RotateCo	NUM	RUNTIME-NUM	item.Rect.localRotation = Quaternion.Euler(Vector3.forward * (item.Rect.eulerAngles.z + 3));
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:190	QuestShapeIt.RotateCo	NUM	RUNTIME-NUM	if(item.Rect.eulerAngles.z == 360)
+Assets/_dev/Scripts/Quest/QuestShapeIt.cs:194	QuestShapeIt.RotateCo	NUM	RUNTIME-NUM	rotateValue -= 3;
+Assets/_dev/Scripts/Quest/QuestWordBuilder.cs:110	QuestWordBuilder.Enabled	STR	RUNTIME-STR	Invoke(<DISEMBUNYIKAN>, 0.5f);
+Assets/_dev/Scripts/Quest/Util/QuestColoringCursor.cs:13	QuestColoringCursor.m_WhiteThreshold	NUM	RUNTIME-NUM	[SerializeField] [FormerlySerializedAs("whiteThreshold")] private float m_WhiteThreshold = 0.9f;
+Assets/_dev/Scripts/SO/SO_Quest.cs:27	SO_Quest.m_Score	NUM	RUNTIME-NUM	[SerializeField] [FormerlySerializedAs("score")] private int m_Score = 10;
+Assets/_dev/Scripts/SO/SO_Quest.cs:28	SO_Quest.m_TresholdTime	NUM	RUNTIME-NUM	[SerializeField] [FormerlySerializedAs("tresholdTime")] private float m_TresholdTime = 20;
+Assets/_dev/Scripts/SO/SO_Quest.cs:60	SO_Quest.GetVoiceRequests	STR	RUNTIME-STR	id = name + "_question",
+Assets/_dev/Scripts/SO/SO_Quest.cs:77	SO_Quest.AssignVoiceClip	STR	RUNTIME-STR	if (!string.IsNullOrEmpty(requestId) && requestId.Contains("_question"))
+Assets/_dev/Scripts/SO/SO_QuestMultipleChoice.cs:51	SO_QuestMultipleChoice.GetVoiceRequests	STR	RUNTIME-STR	id = name + "_choice_" + i,
+Assets/_dev/Scripts/SO/SO_QuestMultipleChoice.cs:86	SO_QuestMultipleChoice.TryGetChoiceIndex	STR	RUNTIME-STR	if (string.IsNullOrEmpty(requestId) || !requestId.Contains("_choice_"))
+Assets/_dev/Scripts/SO/SO_QuestWordBuilder.cs:12	SO_QuestWordBuilder.m_Answer	STR	RUNTIME-STR	[SerializeField] [FormerlySerializedAs("answer")] private string m_Answer = "";
+Assets/_dev/Scripts/Util/BatchScenesBuilder.cs:21	BatchScenesBuilder.BuildAllScenesToSeparateFolders	STR	EDITOR-STR	string baseOutputPath = Path.Combine(Application.dataPath, "../Builds/HTML5");
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:10	DynamicFlowLayoutGroup.m_CellSize	NUM	RUNTIME-NUM	private Vector2 m_CellSize = new Vector2(100, 100);
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:10	DynamicFlowLayoutGroup.m_CellSize	NUM	RUNTIME-NUM	private Vector2 m_CellSize = new Vector2(100, 100);
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:13	DynamicFlowLayoutGroup.m_Spacing	NUM	RUNTIME-NUM	private Vector2 m_Spacing = new Vector2(10, 10);
+Assets/_dev/Scripts/Util/DynamicFlowLayoutGroup.cs:13	DynamicFlowLayoutGroup.m_Spacing	NUM	RUNTIME-NUM	private Vector2 m_Spacing = new Vector2(10, 10);
+Assets/_dev/Scripts/Util/Editor/MissingScriptFinder.cs:28	MissingScriptFinder.FindMissingScripts	STR	EDITOR-STR	string[] prefabPaths = AssetDatabase.FindAssets("t:Prefab");
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:26	QuestConverter.ConvertQuestToNarrative	STR	EDITOR-STR	if (string.IsNullOrEmpty(path) || !path.EndsWith(".prefab")) continue;
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:42	QuestConverter.ConvertQuestToNarrative	STR	EDITOR-STR	SerializedProperty scriptProperty = so.FindProperty("m_Script");
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:68	QuestConverter.FindScriptAsset	STR	EDITOR-STR	string[] guids = AssetDatabase.FindAssets($"t:MonoScript {type.Name}");
+Assets/_dev/Scripts/Util/Editor/QuestConverter.cs:90	QuestConverter.ValidateConvertQuestToNarrative	STR	EDITOR-STR	if (path != null && path.EndsWith(".prefab"))
+Assets/_dev/Scripts/Util/Editor/UpdateMultipleChoiceToNarrative.cs:67	UpdateMultipleChoiceToNarrative.CopyMatchingSerializedProperties	STR	EDITOR-STR	if (prop.name == "m_Script") continue;
+Assets/_dev/Scripts/Util/FeedbackItem.cs:14	FeedbackItem.Play	STR	RUNTIME-STR	Invoke("ExecPlay", m_Delay);
+Assets/_dev/Scripts/Util/FeedbackItem.cs:22	FeedbackItem.Stop	STR	RUNTIME-STR	Invoke("ExecStop", m_Delay);
+Assets/_dev/Scripts/Util/FeedbackItemAnimation.cs:30	FeedbackItemAnimation.ExecPlayInternal	STR	RUNTIME-STR	m_PreviousAnimator.Play("Idle");
+Assets/_dev/Scripts/Util/HandTutorial.cs:17	HandTutorial.m_Repeat	NUM	RUNTIME-NUM	[SerializeField] [FormerlySerializedAs("repeat")] private int m_Repeat = 5;
+Assets/_dev/Scripts/Util/HandTutorial.cs:20	HandTutorial.m_MoveDuration	NUM	RUNTIME-NUM	[SerializeField] [FormerlySerializedAs("moveDuration")] private float m_MoveDuration = 1.2f;
+Assets/_dev/Scripts/Util/HandTutorial.cs:21	HandTutorial.m_FadeDuration	NUM	RUNTIME-NUM	[SerializeField] [FormerlySerializedAs("fadeDuration")] private float m_FadeDuration = 0.4f;
+Assets/_dev/Scripts/Util/HandTutorial.cs:23	HandTutorial.m_IdleAnimationName	STR	RUNTIME-STR	private readonly string m_IdleAnimationName = "Idle";
+Assets/_dev/Scripts/Util/HandTutorial.cs:24	HandTutorial.m_ClickAnimationName	STR	RUNTIME-STR	private readonly string m_ClickAnimationName = "Click";
+Assets/_dev/Scripts/Util/HandTutorial.cs:73	HandTutorial.AnimateHand	STR	RUNTIME-STR	GameObject trailOrigin = new GameObject("TrailOrigin");
+Assets/_dev/Scripts/Util/HandTutorial.cs:165	HandTutorial.AnimateHand	NUM	RUNTIME-NUM	yield return new WaitForSeconds(mode == TutorialMode.Click ? 1f : 0.2f);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:20	QuestAudioPopulatorWindow.ShowWindow	STR	EDITOR-STR	GetWindow<QuestAudioPopulatorWindow>("Quest Audio Populator");
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:25	QuestAudioPopulatorWindow.OnGUI	STR	EDITOR-STR	GUILayout.Label("Quest Audio Batch Populator", EditorStyles.boldLabel);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:26	QuestAudioPopulatorWindow.OnGUI	NUM	EDITOR-NUM	EditorGUILayout.Space(5);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:32	QuestAudioPopulatorWindow.OnGUI	STR	EDITOR-STR	new GUIContent("Quest Assets"),
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:37	QuestAudioPopulatorWindow.OnGUI	STR	EDITOR-STR	"Add the SO_Quest assets that should have their audio populated.",
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:40	QuestAudioPopulatorWindow.OnGUI	STR	EDITOR-STR	m_ForceRedownload = EditorGUILayout.Toggle("Force Redownload Existing", m_ForceRedownload);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:42	QuestAudioPopulatorWindow.OnGUI	NUM	EDITOR-NUM	EditorGUILayout.Space(10);
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:45	QuestAudioPopulatorWindow.OnGUI	STR	EDITOR-STR	if (GUILayout.Button("Populate Selected Quest Audio", GUILayout.Height(35)))
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:45	QuestAudioPopulatorWindow.OnGUI	NUM	EDITOR-NUM	if (GUILayout.Button("Populate Selected Quest Audio", GUILayout.Height(35)))
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:158	QuestAudioPopulatorWindow.Routine_PopulateAllQuests	STR	EDITOR-STR	string relativeFolder = $"Assets/_dev/Audio/Voices/{targetSO.name}";
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:159	QuestAudioPopulatorWindow.Routine_PopulateAllQuests	STR	EDITOR-STR	string fullFolder = Path.Combine(Application.dataPath, $"_dev/Audio/Voices/{targetSO.name}");
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:166	QuestAudioPopulatorWindow.Routine_PopulateAllQuests	STR	EDITOR-STR	string relativeFilePath = $"{relativeFolder}/{req.id}.mp3";
+Assets/_dev/Scripts/Util/QuestAudioPopulatorWindow.cs:167	QuestAudioPopulatorWindow.Routine_PopulateAllQuests	STR	EDITOR-STR	string fullFilePath = Path.Combine(fullFolder, $"{req.id}.mp3");
+Assets/_dev/Scripts/Util/RawImageAlphaFilter.cs:10	RawImageAlphaFilter.m_AlphaThreshold	NUM	RUNTIME-NUM	private float m_AlphaThreshold = 0.1f;
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:62	SceneButtonGenerator.GenerateButtonsInEditor	STR	EDITOR-STR	string pattern = @"(rewrite|otherdev|dev|_|\d+|\[\d+\])";
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:63	SceneButtonGenerator.GenerateButtonsInEditor	STR	EDITOR-STR	string cleanedName = Regex.Replace(rawName, pattern, "", RegexOptions.IgnoreCase);
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:64	SceneButtonGenerator.GenerateButtonsInEditor	STR	EDITOR-STR	cleanedName = Regex.Replace(cleanedName, @"(?<=[a-z])(?=[A-Z])", " ");
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:64	SceneButtonGenerator.GenerateButtonsInEditor	STR	EDITOR-STR	cleanedName = Regex.Replace(cleanedName, @"(?<=[a-z])(?=[A-Z])", " ");
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:65	SceneButtonGenerator.GenerateButtonsInEditor	STR	EDITOR-STR	cleanedName = Regex.Replace(cleanedName, @"\s+", " ").Trim();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:65	SceneButtonGenerator.GenerateButtonsInEditor	STR	EDITOR-STR	cleanedName = Regex.Replace(cleanedName, @"\s+", " ").Trim();
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:84	SceneButtonGenerator.GenerateButtonsInEditor	STR	EDITOR-STR	newButtonObj.name = "Btn_" + rawName;
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:132	SceneButtonGenerator.GenerateButtonsInEditor	STR	EDITOR-STR	Undo.RegisterCreatedObjectUndo(newButtonObj, "Generate Scene Button");
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:143	SceneButtonGenerator.EnsureEventSystemExists	STR	EDITOR-STR	GameObject eventSystemObj = new GameObject("EventSystem");
+Assets/_dev/Scripts/Util/SceneButtonGenerator.cs:146	SceneButtonGenerator.EnsureEventSystemExists	STR	EDITOR-STR	Undo.RegisterCreatedObjectUndo(eventSystemObj, "Create EventSystem");
+Assets/_dev/Scripts/Util/StringHelper.cs:13	StringHelper.TextToId	STR	RUNTIME-STR	string combinedInput = $"{text.Trim().ToLowerInvariant()}";
+Assets/_dev/Scripts/Util/StringHelper.cs:25	StringHelper.TextToId	STR	RUNTIME-STR	sb.Append(b.ToString("x2"));
+Assets/_dev/Scripts/Util/StringHelper.cs:60	StringHelper.ExtractItemAndLabelIds	NUM	RUNTIME-NUM	if (length < 5) return null;
+Assets/_dev/Scripts/Util/StringHelper.cs:63	StringHelper.ExtractItemAndLabelIds	STR	RUNTIME-STR	if (segments[length - 2] != "label" || segments[length - 4] != "group")
+Assets/_dev/Scripts/Util/StringHelper.cs:63	StringHelper.ExtractItemAndLabelIds	STR	RUNTIME-STR	if (segments[length - 2] != "label" || segments[length - 4] != "group")
+Assets/_dev/Scripts/Util/URIHelper.cs:14	URIHelper.GetParameters	STR	RUNTIME-STR	string[] d1 = url.Split("?");
+Assets/_dev/Scripts/Util/URIHelper.cs:19	URIHelper.GetParameters	STR	RUNTIME-STR	string[] d2 = v.Split("&");
+Assets/_dev/Scripts/Util/URIHelper.cs:25	URIHelper.GetParameters	STR	RUNTIME-STR	string[] d3 = d.Split("=");
+Assets/_dev/Scripts/Util/URIHelper.cs:47	URIHelper.GetBaseUrl	STR	RUNTIME-STR	if (!urlInput.Contains("://"))
+Assets/_dev/Scripts/Util/URIHelper.cs:62	URIHelper.GetBaseUrl	STR	RUNTIME-STR	return basePart + "/";
+Assets/_dev/Scripts/Util/URIHelper.cs:110	URIHelper.RemoveQueryParam	STR	RUNTIME-STR	return basePath + "?" + string.Join("&", remainingPairs);
+Assets/_dev/Scripts/Util/URIHelper.cs:110	URIHelper.RemoveQueryParam	STR	RUNTIME-STR	return basePath + "?" + string.Join("&", remainingPairs);
+Assets/_dev/Scripts/Util/WavUtility.cs:6	WavUtility.ToAudioClip	STR	RUNTIME-STR	public static AudioClip ToAudioClip(byte[] wavFileBytes, string clipName = "wavClip")
+Assets/_dev/Scripts/Util/WavUtility.cs:8	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	if (wavFileBytes == null || wavFileBytes.Length < 44)
+Assets/_dev/Scripts/Util/WavUtility.cs:15	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	int channels = BitConverter.ToInt16(wavFileBytes, 22);
+Assets/_dev/Scripts/Util/WavUtility.cs:16	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	int sampleRate = BitConverter.ToInt32(wavFileBytes, 24);
+Assets/_dev/Scripts/Util/WavUtility.cs:17	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	int bitDepth = BitConverter.ToInt16(wavFileBytes, 34);
+Assets/_dev/Scripts/Util/WavUtility.cs:20	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	int pos = 12;
+Assets/_dev/Scripts/Util/WavUtility.cs:21	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	while (pos < wavFileBytes.Length - 8)
+Assets/_dev/Scripts/Util/WavUtility.cs:23	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	string chunkId = System.Text.Encoding.ASCII.GetString(wavFileBytes, pos, 4);
+Assets/_dev/Scripts/Util/WavUtility.cs:24	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	int chunkSize = BitConverter.ToInt32(wavFileBytes, pos + 4);
+Assets/_dev/Scripts/Util/WavUtility.cs:26	WavUtility.ToAudioClip	STR	RUNTIME-STR	if (chunkId == "data")
+Assets/_dev/Scripts/Util/WavUtility.cs:28	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	pos += 8; // Move past header to actual audio bytes
+Assets/_dev/Scripts/Util/WavUtility.cs:31	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	pos += 8 + chunkSize;
+Assets/_dev/Scripts/Util/WavUtility.cs:35	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	int bytesPerSample = bitDepth / 8;
+Assets/_dev/Scripts/Util/WavUtility.cs:45	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	if (bitDepth == 16)
+Assets/_dev/Scripts/Util/WavUtility.cs:48	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	audioData[sampleIndex] = sample16 / 32768f;
+Assets/_dev/Scripts/Util/WavUtility.cs:50	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	else if (bitDepth == 8)
+Assets/_dev/Scripts/Util/WavUtility.cs:52	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	audioData[sampleIndex] = (wavFileBytes[i] - 128) / 128f;
+Assets/_dev/Scripts/Util/WavUtility.cs:52	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	audioData[sampleIndex] = (wavFileBytes[i] - 128) / 128f;
+Assets/_dev/Scripts/Util/WavUtility.cs:54	WavUtility.ToAudioClip	NUM	RUNTIME-NUM	else if (bitDepth == 32)
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:10	WordSetting.m_Words	STR	RUNTIME-STR	private string m_Words = "Hello";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:30	WordSetting.GetFormattedText	STR	RUNTIME-STR	wordEffects += $"{WordSetting.c_AddEffect}{tag}";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:39	WordSetting.GetFormattedText	STR	RUNTIME-STR	wordEffects += $"{WordSetting.c_EndEffect}{m_Words}{WordSetting.c_EndFormat}";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:42	WordSetting.GetFormattedText	STR	RUNTIME-STR	wordEffects += " ";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:48	WordSetting.GetPlainText	STR	RUNTIME-STR	return m_AddSpaceForNext? m_Words + " " : m_Words;
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:59	WordSetting.GetFormatedText	STR	RUNTIME-STR	wordEffects += $"{WordSetting.c_AddEffect}{tag}";
+Assets/_dev2/Addon/TextAnimation/Scripts/WordSetting.cs:68	WordSetting.GetFormatedText	STR	RUNTIME-STR	wordEffects += $"{WordSetting.c_EndEffect}{text}{WordSetting.c_EndFormat}";
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:34	VoiceAPI.Generate	STR	EDITOR-STR	onFailure?.Invoke("Text is empty.");
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:40	VoiceAPI.Generate	STR	EDITOR-STR	onFailure?.Invoke("API Token is empty.");
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:81	VoiceAPI.GenerateRoutine	STR	DEBUG	$"[VoiceAPI] Requesting voice...\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:82	VoiceAPI.GenerateRoutine	STR	DEBUG	$"Voice ID: {voiceId}\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:83	VoiceAPI.GenerateRoutine	STR	DEBUG	$"Text: {text}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:106	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	"Authorization",
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:107	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	"Bearer " + apiToken
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:111	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	"Content-Type",
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:112	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	"application/json"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:116	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	"Accept",
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:117	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	"application/json"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:136	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	$"HTTP {request.responseCode}: " +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:137	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	$"{request.error}\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:138	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	$"Response: {request.downloadHandler.text}";
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:141	VoiceAPI.GenerateRoutine	STR	DEBUG	$"[VoiceAPI] Request failed:\n{error}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:157	VoiceAPI.GenerateRoutine	STR	DEBUG	$"[VoiceAPI] Response:\n{response}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:172	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	$"Failed to parse API response.\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:173	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	$"{exception.Message}\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:174	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	$"Response: {response}";
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:177	VoiceAPI.GenerateRoutine	STR	DEBUG	$"[VoiceAPI] {error}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:188	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	"API response could not be parsed."
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:201	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	"API response does not contain audio_url.\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:202	VoiceAPI.GenerateRoutine	STR	EDITOR-STR	$"Response: {response}"
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:209	VoiceAPI.GenerateRoutine	STR	DEBUG	$"[VoiceAPI] Audio URL received:\n" +
+Assets/_dev2/GenerateVoice/VoiceAPI.cs:210	VoiceAPI.GenerateRoutine	STR	DEBUG	$"{voiceResponse.audio_url}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:93	VoiceAsset.GenerateAudio	STR	DEBUG	$"[VoiceAsset] '{name}' is already generating."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:106	VoiceAsset.GenerateAudio	STR	DEBUG	$"[VoiceAsset] Name Voice is empty on '{name}'."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:119	VoiceAsset.GenerateAudio	STR	DEBUG	$"[VoiceAsset] Text is empty on '{name}'."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:132	VoiceAsset.GenerateAudio	STR	DEBUG	$"[VoiceAsset] API Token is empty on '{name}'."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:158	VoiceAsset.GenerateAudio	STR	DEBUG	$"[VoiceAsset] Starting generation...\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:159	VoiceAsset.GenerateAudio	STR	DEBUG	$"Name      : {m_NameVoice}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:160	VoiceAsset.GenerateAudio	STR	DEBUG	$"Voice ID  : {voiceId}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:161	VoiceAsset.GenerateAudio	STR	DEBUG	$"Text      : {m_Text}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:191	VoiceAsset.GenerateAudio	STR	DEBUG	$"[VoiceAsset] Generation failed:\n{error}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:208	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"[VoiceAsset] Downloading audio...\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:209	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"{audioUrl}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:227	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"[VoiceAsset] Audio download failed:\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:228	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"{request.error}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:249	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	"[VoiceAsset] Downloaded audio is empty."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:294	VoiceAsset.DownloadAudioRoutine	STR	EDITOR-STR	$"Voice_{voiceName}";
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:299	VoiceAsset.DownloadAudioRoutine	STR	EDITOR-STR	$"{fileName}.mp3"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:316	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"[VoiceAsset] Failed to save audio:\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:317	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"{exception}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:326	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"[VoiceAsset] Audio saved:\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:327	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"{fullFilePath}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:340	VoiceAsset.DownloadAudioRoutine	STR	EDITOR-STR	$"{c_OutputFolder}/{fileName}.mp3";
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:344	VoiceAsset.DownloadAudioRoutine	STR	EDITOR-STR	"\\",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:345	VoiceAsset.DownloadAudioRoutine	STR	EDITOR-STR	"/"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:349	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"[VoiceAsset] Loading AudioClip:\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:350	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"{unityAssetPath}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:365	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"[VoiceAsset] Unity could not load " +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:366	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"AudioClip:\n{unityAssetPath}"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:380	VoiceAsset.DownloadAudioRoutine	STR	EDITOR-STR	"Generate Voice Audio"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:390	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"[VoiceAsset] ==============================\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:391	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"[VoiceAsset] GENERATION SUCCESS\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:392	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"[VoiceAsset] ==============================\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:393	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"Name      : {m_NameVoice}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:394	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"Audio     : {clip.name}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:395	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"Path      : {unityAssetPath}\n" +
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:396	VoiceAsset.DownloadAudioRoutine	STR	DEBUG	$"=============================================="
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:437	VoiceAsset.SanitizeFileName	STR	EDITOR-STR	"_"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:473	VoiceAssetEditor.OnEnable	STR	EDITOR-STR	"m_NameVoice"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:478	VoiceAssetEditor.OnEnable	STR	EDITOR-STR	"m_Text"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:483	VoiceAssetEditor.OnEnable	STR	EDITOR-STR	"m_VoiceId"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:488	VoiceAssetEditor.OnEnable	STR	EDITOR-STR	"m_AudioClip"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:493	VoiceAssetEditor.OnEnable	STR	EDITOR-STR	"m_ApiToken"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:498	VoiceAssetEditor.OnEnable	STR	EDITOR-STR	"m_IsGenerating"
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:514	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	"Voice",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:518	VoiceAssetEditor.OnInspectorGUI	NUM	EDITOR-NUM	EditorGUILayout.Space(3);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:526	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	new GUIContent("Name Voice")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:535	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	new GUIContent("Text")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:544	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	new GUIContent("Voice ID")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:553	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	new GUIContent("Audio Clip")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:556	VoiceAssetEditor.OnInspectorGUI	NUM	EDITOR-NUM	EditorGUILayout.Space(10);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:563	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	"API",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:567	VoiceAssetEditor.OnInspectorGUI	NUM	EDITOR-NUM	EditorGUILayout.Space(3);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:571	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	new GUIContent("API Token")
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:574	VoiceAssetEditor.OnInspectorGUI	NUM	EDITOR-NUM	EditorGUILayout.Space(10);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:610	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	? "Generating..."
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:611	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	: "Generate Audio",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:612	VoiceAssetEditor.OnInspectorGUI	NUM	EDITOR-NUM	GUILayout.Height(40)
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:628	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	"Name Voice is empty.",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:636	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	"Text is empty.",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:644	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	"API Token is empty.",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:652	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	"Generating audio...",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:661	VoiceAssetEditor.OnInspectorGUI	NUM	EDITOR-NUM	EditorGUILayout.Space(10);
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:664	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	"Output",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:669	VoiceAssetEditor.OnInspectorGUI	STR	EDITOR-STR	$"{c_OutputFolder}/Voice_{asset.NameVoice}.mp3",
+Assets/_dev2/GenerateVoice/VoiceAsset.cs:671	VoiceAssetEditor.OnInspectorGUI	NUM	EDITOR-NUM	GUILayout.Height(18)
+Assets/_dev2/Quest/Scripts/AnimationHandler.cs:108	AnimationHandler.Playing	NUM	RUNTIME-NUM	yield return new WaitForSeconds(1.5f);
+Assets/_dev2/Quest/Scripts/AnimationHandler.cs:111	AnimationHandler.Playing	NUM	RUNTIME-NUM	music.volume = 0.4f;
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:32	AnimationStateBehaviourEditor.OnEnable	STR	EDITOR-STR	serializedObject.FindProperty("m_ClipConfig");
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:35	AnimationStateBehaviourEditor.OnEnable	STR	EDITOR-STR	serializedObject.FindProperty("m_StateHash");
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:38	AnimationStateBehaviourEditor.OnEnable	STR	EDITOR-STR	serializedObject.FindProperty("m_ClipLength");
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:57	AnimationStateBehaviourEditor.OnInspectorGUI	STR	EDITOR-STR	if (GUILayout.Button("Refresh"))
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:70	AnimationStateBehaviourEditor.DrawStateInfo	STR	EDITOR-STR	"Animator State could not be detected.",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:78	AnimationStateBehaviourEditor.DrawStateInfo	STR	EDITOR-STR	"State",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:83	AnimationStateBehaviourEditor.DrawStateInfo	STR	EDITOR-STR	"State Path",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:88	AnimationStateBehaviourEditor.DrawStateInfo	STR	EDITOR-STR	"State Hash",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:93	AnimationStateBehaviourEditor.DrawStateInfo	STR	EDITOR-STR	"Clip Length",
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:94	AnimationStateBehaviourEditor.DrawStateInfo	STR	EDITOR-STR	$"{m_ClipLength.floatValue:F3} seconds"
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:236	AnimationStateBehaviourEditor.FindStatePath	STR	EDITOR-STR	return $"{currentPath}.{state.name}";
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:244	AnimationStateBehaviourEditor.FindStatePath	STR	EDITOR-STR	$"{currentPath}." +
+Assets/_dev2/Quest/Scripts/AnimationStateBehaviourEditor.cs:245	AnimationStateBehaviourEditor.FindStatePath	STR	EDITOR-STR	$"{childStateMachine.stateMachine.name}";
+Assets/_dev2/Quest/Scripts/ResultPanel.cs:62	ResultPanel.ShowResult	NUM	RUNTIME-NUM	float rate = context.GetRate() * 100f;
+Assets/_dev2/Quest/Scripts/ResultPanel.cs:66	ResultPanel.ShowResult	STR	RUNTIME-STR	string scoreText = $"{rightCountText} right(s) of {context.GetTotalQuest()}";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:65	StarPresenter.StarsResult	STR	RUNTIME-STR	string reactionWord = "Oh nooo";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:69	StarPresenter.StarsResult	STR	RUNTIME-STR	reactionWord = "Good Job!";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:74	StarPresenter.StarsResult	STR	RUNTIME-STR	reactionWord = "Excellent!!";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:79	StarPresenter.StarsResult	STR	RUNTIME-STR	reactionWord = "Smart Kid!!!";
+Assets/_dev2/Quest/Scripts/StarPresenter.cs:92	StarPresenter.SetActiveStars	NUM	RUNTIME-NUM	yield return new WaitForSeconds(0.2f);
+Assets/_dev2/Scripts/TweenHandler.cs:143	TweenField.m_Delay	NUM	RUNTIME-NUM	private float m_Delay = 0.1f;
+Assets/_dev2/Scripts/TweenHandler.cs:145	TweenField.m_EaseDuration	NUM	RUNTIME-NUM	private float m_EaseDuration = 0.3f;
+Assets/_dev2/Scripts/TweenHandler.cs:265	TweenField.Init	NUM	RUNTIME-NUM	int random = UnityEngine.Random.Range(1000, 9999);
+Assets/_dev2/Scripts/TweenHandler.cs:265	TweenField.Init	NUM	RUNTIME-NUM	int random = UnityEngine.Random.Range(1000, 9999);
+Assets/_dev2/Scripts/TweenHandler.cs:437	TweenField.ColorImageTween	NUM	RUNTIME-NUM	m_ColorTween = LeanTween.value(m_Content, 0.1f, 1f, m_EaseDuration);

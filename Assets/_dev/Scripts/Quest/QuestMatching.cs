@@ -7,6 +7,10 @@ namespace EduGame
 {
     public class QuestMatching : Quest
     {
+        private const string c_SuccessMethod = "Success";
+        private const string c_CloseAllCardMethod = "CloaseAllCard";
+        private const string c_RecalculateChoiceContainerMethod = "RecalculateChoiceContainer";
+
         [Header("Data")]
         [SerializeField] [FormerlySerializedAs("questionText")] private TMP_Text m_QuestionText;
         [SerializeField] [FormerlySerializedAs("cardsContainer")] private RectTransform m_CardsContainer;
@@ -87,14 +91,14 @@ namespace EduGame
                     m_UnansweredCorrect--;
                     
                     if(m_UnansweredCorrect <= 0)
-                        Invoke("Success", m_PeekDuration);
+                        Invoke(c_SuccessMethod, m_PeekDuration);
                 }
                 else
                 {
                     foreach (var c in m_Cards)
                         c.Disable();
 
-                    Invoke("CloaseAllCard", m_PeekDuration);
+                    Invoke(c_CloseAllCardMethod, m_PeekDuration);
                 }
 
                 m_OpenedCard = null;    
@@ -151,7 +155,7 @@ namespace EduGame
         {
             base.Enabled();
 
-            Invoke("RecalculateChoiceContainer", 0.5f);
+            Invoke(c_RecalculateChoiceContainerMethod, 0.5f);
         }
     }
 }

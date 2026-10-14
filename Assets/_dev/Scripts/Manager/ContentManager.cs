@@ -6,6 +6,8 @@ namespace EduGame
 {
     public class ContentManager : MonoBehaviour
     {
+        private const int c_RefResExtraHeight = 200;
+
         private CanvasScaler m_CanvasScaler;
 
         // Import the native JS functions
@@ -22,7 +24,7 @@ namespace EduGame
         {
             TryGetComponent<CanvasScaler>(out m_CanvasScaler);
 
-            m_RefRes = m_CanvasScaler.referenceResolution + Vector2.up * 200;
+            m_RefRes = m_CanvasScaler.referenceResolution + Vector2.up * c_RefResExtraHeight;
 
             m_CurrentViewportSize = m_RefRes;
 

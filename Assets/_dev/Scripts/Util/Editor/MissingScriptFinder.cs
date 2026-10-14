@@ -4,6 +4,8 @@ using UnityEditor.SceneManagement;
 
 public class MissingScriptFinder : Editor
 {
+    private const string c_PrefabFilter = "t:Prefab";
+
     [MenuItem("Tools/Find All Missing Scripts")]
     public static void FindMissingScripts()
     {
@@ -25,7 +27,7 @@ public class MissingScriptFinder : Editor
         }
 
         // 2. Search Prefabs in Assets Folder
-        string[] prefabPaths = AssetDatabase.FindAssets("t:Prefab");
+        string[] prefabPaths = AssetDatabase.FindAssets(c_PrefabFilter);
         foreach (string guid in prefabPaths)
         {
             string path = AssetDatabase.GUIDToAssetPath(guid);

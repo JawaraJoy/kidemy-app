@@ -4,6 +4,9 @@ using EduGame;
 
 public static class QuestConverter
 {
+    private const string c_PrefabExtension = ".prefab";
+    private const string c_ScriptProperty = "m_Script";
+
     private const string c_MenuItemName = "Assets/Convert Quest to Narrative";
 
     [MenuItem(c_MenuItemName, false, 2000)]
@@ -23,7 +26,7 @@ public static class QuestConverter
         foreach (Object obj in selectedObjects)
         {
             string path = AssetDatabase.GetAssetPath(obj);
-            if (string.IsNullOrEmpty(path) || !path.EndsWith(".prefab")) continue;
+            if (string.IsNullOrEmpty(path) || !path.EndsWith(c_PrefabExtension)) continue;
 
             // Load prefab contents safely in isolation
             GameObject prefabRoot = PrefabUtility.LoadPrefabContents(path);
@@ -39,7 +42,7 @@ public static class QuestConverter
                 {
                     // Swap m_Script reference directly on the component
                     SerializedObject so = new SerializedObject(comp);
-                    SerializedProperty scriptProperty = so.FindProperty("m_Script");
+                    SerializedProperty scriptProperty = so.FindProperty(c_ScriptProperty);
 
                     scriptProperty.objectReferenceValue = targetScript;
                     so.ApplyModifiedProperties();
@@ -87,7 +90,7 @@ public static class QuestConverter
         foreach (Object obj in Selection.objects)
         {
             string path = AssetDatabase.GetAssetPath(obj);
-            if (path != null && path.EndsWith(".prefab"))
+            if (path != null && path.EndsWith(c_PrefabExtension))
             {
                 GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);
                 if (prefab != null)

@@ -341,8 +341,8 @@ namespace EduGame
 
             unityAssetPath =
                 unityAssetPath.Replace(
-                    "\\",
-                    "/"
+                    c_WindowsSeparator,
+                    c_UnitySeparator
                 );
 
             Debug.Log(
@@ -377,7 +377,7 @@ namespace EduGame
 
             Undo.RecordObject(
                 this,
-                "Generate Voice Audio"
+                c_UndoGenerate
             );
 
             m_AudioClip = clip;
@@ -434,7 +434,7 @@ namespace EduGame
                 value =
                     value.Replace(
                         character.ToString(),
-                        "_"
+                        c_InvalidCharReplacement
                     );
             }
 
@@ -451,6 +451,11 @@ namespace EduGame
                 .RepaintAllViews();
         }
 
+        private const string c_WindowsSeparator = "\\";
+        private const string c_UnitySeparator = "/";
+        private const string c_UndoGenerate = "Generate Voice Audio";
+        private const string c_InvalidCharReplacement = "_";
+
         // ============================================================
         // CUSTOM INSPECTOR
         // ============================================================
@@ -458,6 +463,31 @@ namespace EduGame
         [CustomEditor(typeof(VoiceAsset))]
         private class VoiceAssetEditor : UnityEditor.Editor
         {
+            private const string c_NameVoiceProperty = "m_NameVoice";
+            private const string c_TextProperty = "m_Text";
+            private const string c_VoiceIdProperty = "m_VoiceId";
+            private const string c_AudioClipProperty = "m_AudioClip";
+            private const string c_ApiTokenProperty = "m_ApiToken";
+            private const string c_IsGeneratingProperty = "m_IsGenerating";
+            private const string c_VoiceHeader = "Voice";
+            private const string c_NameVoiceLabel = "Name Voice";
+            private const string c_TextLabel = "Text";
+            private const string c_VoiceIdLabel = "Voice ID";
+            private const string c_AudioClipLabel = "Audio Clip";
+            private const string c_ApiHeader = "API";
+            private const string c_ApiTokenLabel = "API Token";
+            private const string c_GeneratingButton = "Generating...";
+            private const string c_GenerateButton = "Generate Audio";
+            private const string c_HelpNameEmpty = "Name Voice is empty.";
+            private const string c_HelpTextEmpty = "Text is empty.";
+            private const string c_HelpTokenEmpty = "API Token is empty.";
+            private const string c_HelpGenerating = "Generating audio...";
+            private const string c_OutputHeader = "Output";
+            private const int c_SpaceSmall = 3;
+            private const int c_SpaceLarge = 10;
+            private const int c_ButtonHeight = 40;
+            private const int c_PathHeight = 18;
+
             private SerializedProperty m_NameVoice;
             private SerializedProperty m_Text;
             private SerializedProperty m_VoiceId;
@@ -470,32 +500,32 @@ namespace EduGame
             {
                 m_NameVoice =
                     serializedObject.FindProperty(
-                        "m_NameVoice"
+                        c_NameVoiceProperty
                     );
 
                 m_Text =
                     serializedObject.FindProperty(
-                        "m_Text"
+                        c_TextProperty
                     );
 
                 m_VoiceId =
                     serializedObject.FindProperty(
-                        "m_VoiceId"
+                        c_VoiceIdProperty
                     );
 
                 m_AudioClip =
                     serializedObject.FindProperty(
-                        "m_AudioClip"
+                        c_AudioClipProperty
                     );
 
                 m_ApiToken =
                     serializedObject.FindProperty(
-                        "m_ApiToken"
+                        c_ApiTokenProperty
                     );
 
                 m_IsGenerating =
                     serializedObject.FindProperty(
-                        "m_IsGenerating"
+                        c_IsGeneratingProperty
                     );
             }
 
@@ -511,11 +541,11 @@ namespace EduGame
                 // ====================================================
 
                 EditorGUILayout.LabelField(
-                    "Voice",
+                    c_VoiceHeader,
                     EditorStyles.boldLabel
                 );
 
-                EditorGUILayout.Space(3);
+                EditorGUILayout.Space(c_SpaceSmall);
 
                 // ----------------------------------------------------
                 // NAME
@@ -523,7 +553,7 @@ namespace EduGame
 
                 EditorGUILayout.PropertyField(
                     m_NameVoice,
-                    new GUIContent("Name Voice")
+                    new GUIContent(c_NameVoiceLabel)
                 );
 
                 // ----------------------------------------------------
@@ -532,7 +562,7 @@ namespace EduGame
 
                 EditorGUILayout.PropertyField(
                     m_Text,
-                    new GUIContent("Text")
+                    new GUIContent(c_TextLabel)
                 );
 
                 // ----------------------------------------------------
@@ -541,7 +571,7 @@ namespace EduGame
 
                 EditorGUILayout.PropertyField(
                     m_VoiceId,
-                    new GUIContent("Voice ID")
+                    new GUIContent(c_VoiceIdLabel)
                 );
 
                 // ----------------------------------------------------
@@ -550,28 +580,28 @@ namespace EduGame
 
                 EditorGUILayout.PropertyField(
                     m_AudioClip,
-                    new GUIContent("Audio Clip")
+                    new GUIContent(c_AudioClipLabel)
                 );
 
-                EditorGUILayout.Space(10);
+                EditorGUILayout.Space(c_SpaceLarge);
 
                 // ====================================================
                 // API
                 // ====================================================
 
                 EditorGUILayout.LabelField(
-                    "API",
+                    c_ApiHeader,
                     EditorStyles.boldLabel
                 );
 
-                EditorGUILayout.Space(3);
+                EditorGUILayout.Space(c_SpaceSmall);
 
                 EditorGUILayout.PropertyField(
                     m_ApiToken,
-                    new GUIContent("API Token")
+                    new GUIContent(c_ApiTokenLabel)
                 );
 
-                EditorGUILayout.Space(10);
+                EditorGUILayout.Space(c_SpaceLarge);
 
                 // ====================================================
                 // GENERATE BUTTON
@@ -607,9 +637,9 @@ namespace EduGame
                 if (
                     GUILayout.Button(
                         isGenerating
-                            ? "Generating..."
-                            : "Generate Audio",
-                        GUILayout.Height(40)
+                            ? c_GeneratingButton
+                            : c_GenerateButton,
+                        GUILayout.Height(c_ButtonHeight)
                     )
                 )
                 {
@@ -625,7 +655,7 @@ namespace EduGame
                 if (!hasName)
                 {
                     EditorGUILayout.HelpBox(
-                        "Name Voice is empty.",
+                        c_HelpNameEmpty,
                         MessageType.Warning
                     );
                 }
@@ -633,7 +663,7 @@ namespace EduGame
                 if (!hasText)
                 {
                     EditorGUILayout.HelpBox(
-                        "Text is empty.",
+                        c_HelpTextEmpty,
                         MessageType.Warning
                     );
                 }
@@ -641,7 +671,7 @@ namespace EduGame
                 if (!hasToken)
                 {
                     EditorGUILayout.HelpBox(
-                        "API Token is empty.",
+                        c_HelpTokenEmpty,
                         MessageType.Warning
                     );
                 }
@@ -649,7 +679,7 @@ namespace EduGame
                 if (isGenerating)
                 {
                     EditorGUILayout.HelpBox(
-                        "Generating audio...",
+                        c_HelpGenerating,
                         MessageType.Info
                     );
                 }
@@ -658,17 +688,17 @@ namespace EduGame
                 // OUTPUT
                 // ====================================================
 
-                EditorGUILayout.Space(10);
+                EditorGUILayout.Space(c_SpaceLarge);
 
                 EditorGUILayout.LabelField(
-                    "Output",
+                    c_OutputHeader,
                     EditorStyles.boldLabel
                 );
 
                 EditorGUILayout.SelectableLabel(
                     $"{c_OutputFolder}/Voice_{asset.NameVoice}.mp3",
                     EditorStyles.textField,
-                    GUILayout.Height(18)
+                    GUILayout.Height(c_PathHeight)
                 );
 
                 serializedObject.ApplyModifiedProperties();

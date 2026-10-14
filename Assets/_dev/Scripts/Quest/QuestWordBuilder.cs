@@ -7,6 +7,8 @@ namespace EduGame
 {
     public class QuestWordBuilder : Quest
     {
+        private const string c_RecalculateChoiceContainerMethod = "RecalculateChoiceContainer";
+
         [Header("Data")]
         
         [Header("Components")]
@@ -107,7 +109,7 @@ namespace EduGame
         {
             base.Enabled();
 
-            Invoke("RecalculateChoiceContainer", 0.5f);
+            Invoke(c_RecalculateChoiceContainerMethod, 0.5f);
         }
     }
 }

@@ -7,6 +7,9 @@ namespace EduGame
 {
     public class QuestPaginator : MonoBehaviour
     {
+        private const string c_PagePrefix = "Page ";
+        private const string c_PageOf = " of ";
+
         [SerializeField] [FormerlySerializedAs("previousButton")] private Button m_PreviousButton;
         [SerializeField] [FormerlySerializedAs("nextButton")] private Button m_NextButton;
         [SerializeField] [FormerlySerializedAs("pageIndicator")] private TMP_Text m_PageIndicator;
@@ -92,7 +95,7 @@ namespace EduGame
             }
 
             if(m_PageIndicator)
-                m_PageIndicator.text = "Page " + (m_CurrentPageIndex + 1) + " of " + m_TotalPages;
+                m_PageIndicator.text = c_PagePrefix + (m_CurrentPageIndex + 1) + c_PageOf + m_TotalPages;
         }
     }
 }

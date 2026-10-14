@@ -11,9 +11,17 @@ namespace EduGame
     {
         private string m_ApiToken = "game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e";
         private string m_ApiUrl = "";
-        private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
+        [SerializeField] private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
 
         private const string c_FrogVoiceId = "n3tkGOcEribaYI5zg4pu";
+        private const string c_VoiceGeneratePath = "v1/api/audio/generate";
+        private const string c_HttpMethodPost = "POST";
+        private const string c_HeaderAuthorization = "Authorization";
+        private const string c_HeaderContentType = "Content-Type";
+        private const string c_HeaderAccept = "Accept";
+        private const string c_BearerPrefix = "Bearer ";
+        private const string c_MimeJson = "application/json";
+
 
         [SerializeField]
         [FormerlySerializedAs("Instance")]
@@ -44,7 +52,7 @@ namespace EduGame
             if (string.IsNullOrEmpty(request.voice_id))
                 request.voice_id = c_FrogVoiceId;
 
-            string requestUrl = m_ApiAIUrl + "v1/api/audio/generate";
+            string requestUrl = m_ApiAIUrl + c_VoiceGeneratePath;
 
             RequestData(requestUrl, JsonUtility.ToJson(request), onSuccess, onFailure, false);
         }
@@ -60,16 +68,16 @@ namespace EduGame
             byte[] rawBodyData = Encoding.UTF8.GetBytes(jsonString);
 
             // Initialize a clean UnityWebRequest configured for POST
-            using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+            using (UnityWebRequest request = new UnityWebRequest(url, c_HttpMethodPost))
             {
                 // Attach raw handlers to bypass default URL-encoding format
                 request.uploadHandler = new UploadHandlerRaw(rawBodyData);
                 request.downloadHandler = new DownloadHandlerBuffer();
 
                 // Explicitly define API header parameters
-                request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
-                request.SetRequestHeader("Content-Type", "application/json");
-                request.SetRequestHeader("Accept", "application/json");
+                request.SetRequestHeader(c_HeaderAuthorization, c_BearerPrefix + m_ApiToken);
+                request.SetRequestHeader(c_HeaderContentType, c_MimeJson);
+                request.SetRequestHeader(c_HeaderAccept, c_MimeJson);
 
                 // Optional: Include authorization headers if your API requires it
                 // request.SetRequestHeader("Authorization", "Bearer YOUR_TOKEN_HERE");
@@ -99,7 +107,7 @@ namespace EduGame
             using (UnityWebRequest request = UnityWebRequest.Get(url))
             {
                 if (auth)
-                    request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+                    request.SetRequestHeader(c_HeaderAuthorization, c_BearerPrefix + m_ApiToken);
 
                 // Wait until the network request completely finishes
                 yield return request.SendWebRequest();
@@ -133,19 +141,19 @@ namespace EduGame
             // Convert string payload into raw binary data
             byte[] rawBodyData = Encoding.UTF8.GetBytes(jsonString);
 
-            using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+            using (UnityWebRequest request = new UnityWebRequest(url, c_HttpMethodPost))
             {
                 // Attach raw handlers to bypass default URL-encoding format
                 request.uploadHandler = new UploadHandlerRaw(rawBodyData);
                 request.downloadHandler = new DownloadHandlerBuffer();
 
                 // Explicitly define API header parameters
-                request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
-                request.SetRequestHeader("Content-Type", "application/json");
-                request.SetRequestHeader("Accept", "application/json");
+                request.SetRequestHeader(c_HeaderAuthorization, c_BearerPrefix + m_ApiToken);
+                request.SetRequestHeader(c_HeaderContentType, c_MimeJson);
+                request.SetRequestHeader(c_HeaderAccept, c_MimeJson);
 
                 if (auth)
-                    request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+                    request.SetRequestHeader(c_HeaderAuthorization, c_BearerPrefix + m_ApiToken);
 
                 // Wait until the network request completely finishes
                 yield return request.SendWebRequest();

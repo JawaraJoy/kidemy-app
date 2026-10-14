@@ -5,6 +5,10 @@ using UnityEngine.Serialization;
 
 public class HandTutorial : MonoBehaviour
 {
+    private const string c_TrailOriginName = "TrailOrigin";
+    private const float c_ClickWaitSeconds = 1f;
+    private const float c_DefaultWaitSeconds = 0.2f;
+
     public enum TutorialMode
     {
         Normal,
@@ -70,7 +74,7 @@ public class HandTutorial : MonoBehaviour
             TrailRenderer prefabTrail = handObj.GetComponentInChildren<TrailRenderer>();
             if (prefabTrail)
             {
-                GameObject trailOrigin = new GameObject("TrailOrigin");
+                GameObject trailOrigin = new GameObject(c_TrailOriginName);
                 trailOrigin.transform.SetParent(handObj.transform, false);
                 trailOrigin.transform.localPosition = Vector3.zero;
 
@@ -162,7 +166,7 @@ public class HandTutorial : MonoBehaviour
                 yield return null;
             }
 
-            yield return new WaitForSeconds(mode == TutorialMode.Click ? 1f : 0.2f);
+            yield return new WaitForSeconds(mode == TutorialMode.Click ? c_ClickWaitSeconds : c_DefaultWaitSeconds);
         }
 
         // Hancurkan objek tangan setelah animasi selesai

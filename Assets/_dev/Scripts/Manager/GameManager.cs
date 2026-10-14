@@ -13,6 +13,19 @@ namespace EduGame
 {
     public class GameManager : MonoBehaviour
     {
+        private const string c_ParamRedirectUrl = "redirect_url";
+        private const string c_ParamBgmVolume = "bgm_volume";
+        private const string c_ParamSessionId = "session_id";
+        private const float c_BgmVolumeScale = 10f;
+        private const int c_SecondsPerMinute = 60;
+        private const string c_TimerSeparator = ":";
+        private const int c_TimerMajorTick = 10;
+        private const int c_TimerMinorTick = 5;
+        private const int c_MaxStar = 3;
+        private const string c_ColorTheIslandKey = "ColortheIsland";
+        private const string c_DialogCorrect = "Yaaay! Amazing!";
+        private const string c_DialogWrong = "Oh no!";
+
         // Import the JavaScript functions
         [DllImport("__Internal")]
         private static extern string GetParentURL();
@@ -124,8 +137,9 @@ namespace EduGame
         private APIManager m_ApiManager;
         private AssetManager m_AssetManager;
         private string m_APIInfoURL = "https://be.kimee.io/api/v1/external/games";
-        private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
+        [SerializeField] private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
         private string m_GameURL = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
+        [SerializeField] private string m_FallbackSessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
         private HandTutorial m_HandTutorial;
         private Canvas m_Canvas;
         private Color m_ColorTheme;
@@ -193,16 +207,16 @@ namespace EduGame
                 if(!string.IsNullOrEmpty(m_FrameURL))
                 {
                     Dictionary<string, string> parameters = URIHelper.GetParameters(m_FrameURL);
-                    if(parameters.ContainsKey("redirect_url"))
+                    if(parameters.ContainsKey(c_ParamRedirectUrl))
                     {
-                        m_BaseURL = parameters["redirect_url"];
+                        m_BaseURL = parameters[c_ParamRedirectUrl];
                     }
 
-                    if(parameters.ContainsKey("bgm_volume"))
+                    if(parameters.ContainsKey(c_ParamBgmVolume))
                     {
-                        int volume = int.Parse(parameters["bgm_volume"]);
-                        m_Music.volume = volume / 10f;
-                        m_AudioSource.volume = volume / 10f;
+                        int volume = int.Parse(parameters[c_ParamBgmVolume]);
+                        m_Music.volume = volume / c_BgmVolumeScale;
+                        m_AudioSource.volume = volume / c_BgmVolumeScale;
                     }
                     else
                     {
@@ -217,13 +231,13 @@ namespace EduGame
             {
                 Dictionary<string, string> param = URIHelper.GetParameters(m_FrameURL);
 
-                if (param.ContainsKey("session_id"))
-                    m_SessionId = param["session_id"];
+                if (param.ContainsKey(c_ParamSessionId))
+                    m_SessionId = param[c_ParamSessionId];
                 else
-                    m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+                    m_SessionId = m_FallbackSessionId;
             }
             else
-                m_SessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
+                m_SessionId = m_FallbackSessionId;
 
             if (m_ChallengeConfig)
             {
@@ -337,14 +351,14 @@ namespace EduGame
                 {
                     float elapsedTime = Time.time - m_StartTime;
 
-                    float m = Mathf.FloorToInt(elapsedTime / 60);
-                    float s = Mathf.FloorToInt(elapsedTime % 60);
+                    float m = Mathf.FloorToInt(elapsedTime / c_SecondsPerMinute);
+                    float s = Mathf.FloorToInt(elapsedTime % c_SecondsPerMinute);
 
-                    string timerText = m.ToString().PadLeft(2, '0') + ":" + s.ToString().PadLeft(2, '0');
+                    string timerText = m.ToString().PadLeft(2, '0') + c_TimerSeparator + s.ToString().PadLeft(2, '0');
 
-                    if (s % 10 == 0)
+                    if (s % c_TimerMajorTick == 0)
                         m_IdleFeedback.Play(m_Npc ? m_Npc : transform);
-                    else if (s % 5 == 0)
+                    else if (s % c_TimerMinorTick == 0)
                         m_ThinkFeedback.Play(m_Npc ? m_Npc : transform);
 
                     m_Timer.text = timerText;
@@ -518,10 +532,10 @@ namespace EduGame
 
             if (star < 1)
                 star = 1;
-            else if (star > 3)
-                star = 3;
+            else if (star > c_MaxStar)
+                star = c_MaxStar;
 
-            if (star == 3 && m_Quests[m_CurrentIndex].Data.TresholdTime > 0 && m_RecordedTime > m_Quests[m_CurrentIndex].Data.TresholdTime)
+            if (star == c_MaxStar && m_Quests[m_CurrentIndex].Data.TresholdTime > 0 && m_RecordedTime > m_Quests[m_CurrentIndex].Data.TresholdTime)
                 star = 2;
 
             if (m_CurrentIndex < m_Result.Length)
@@ -575,7 +589,7 @@ namespace EduGame
                     m_PopResult.gameObject.SetActive(true);
             }
             
-            if (m_NeutralReaction && m_Quests[m_CurrentIndex].name.IndexOf("ColortheIsland") > -1)
+            if (m_NeutralReaction && m_Quests[m_CurrentIndex].name.IndexOf(c_ColorTheIslandKey) > -1)
             {
                 if(star > 1)
                     m_RightAnswerCount++;
@@ -608,7 +622,7 @@ namespace EduGame
                         m_CorrectFeedback.Play(m_Npc ? m_Npc : transform);
 
                     if (m_NpcDialog)
-                        SetNPCDialogInternal("Yaaay! Amazing!");
+                        SetNPCDialogInternal(c_DialogCorrect);
 
                     m_CorrectTitle.gameObject.SetActive(true);
                     m_CorrectNote.gameObject.SetActive(true);
@@ -631,7 +645,7 @@ namespace EduGame
                         m_WrongFeedback.Play(m_Npc ? m_Npc : transform);
 
                     if (m_NpcDialog)
-                        SetNPCDialogInternal("Oh no!");
+                        SetNPCDialogInternal(c_DialogWrong);
 
                     m_WrongTitle.gameObject.SetActive(true);
                     m_WrongNote.gameObject.SetActive(true);

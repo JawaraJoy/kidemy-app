@@ -6,6 +6,8 @@ namespace EduGame
 {
     public class FeedbackItemAnimation : FeedbackItem
     {
+        private const string c_IdleState = "Idle";
+
         private Animator m_PreviousAnimator;
         private Animator m_SelectedAnimator;
         private static Dictionary<int, Animator> s_CachedAnimator = new Dictionary<int, Animator>();
@@ -27,7 +29,7 @@ namespace EduGame
             if(m_SelectedAnimator)
             {
                 if(m_PreviousAnimator)
-                    m_PreviousAnimator.Play("Idle");
+                    m_PreviousAnimator.Play(c_IdleState);
 
                 m_SelectedAnimator.enabled = true;        
                 m_SelectedAnimator.Play(m_AnimationName);

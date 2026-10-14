@@ -6,6 +6,8 @@ namespace AddOn.TextAnimation
     [System.Serializable]
     public class WordSetting
     {
+        private const string c_WordSeparator = " ";
+
         [SerializeField, TextArea]
         private string m_Words = "Hello";
         [SerializeField]
@@ -39,13 +41,13 @@ namespace AddOn.TextAnimation
             wordEffects += $"{WordSetting.c_EndEffect}{m_Words}{WordSetting.c_EndFormat}";
             if (m_AddSpaceForNext)
             {
-                wordEffects += " ";
+                wordEffects += c_WordSeparator;
             }
             return wordEffects;
         }
         public string GetPlainText()
         {
-            return m_AddSpaceForNext? m_Words + " " : m_Words;
+            return m_AddSpaceForNext? m_Words + c_WordSeparator : m_Words;
         }
 
         public static string GetFormatedText(string text, TextEffectInstance[] textEffects)

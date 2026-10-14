@@ -9,6 +9,10 @@ namespace EduGame
 
     public class QuestRythimBeat : QuestComponent
     {   
+        private const string c_TapState = "Tap";
+        private const float c_TapFeedbackDelay = 0.1f;
+        private const string c_NoteHeadTag = "NoteHead";
+
         [SerializeField] [FormerlySerializedAs("audioSource")] private AudioSource m_AudioSource;
         [SerializeField] [FormerlySerializedAs("clip")] private AudioClip m_Clip;
         
@@ -47,7 +51,7 @@ namespace EduGame
                 m_IsOnBeat = true;
 
                 if(m_Animator)
-                    m_Animator.Play("Tap");
+                    m_Animator.Play(c_TapState);
 
                 StartCoroutine(BeatCo());
             }
@@ -57,12 +61,12 @@ namespace EduGame
         {
             m_Col.enabled = true;
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(c_TapFeedbackDelay);
 
             if(m_Clip && !m_IsSuccess)
                 m_AudioSource.PlayOneShot(m_Clip);
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(c_TapFeedbackDelay);
 
             m_Col.enabled = false;
 
@@ -73,7 +77,7 @@ namespace EduGame
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.tag == "NoteHead" && !m_IsSuccess)
+            if(collision.tag == c_NoteHeadTag && !m_IsSuccess)
             {
                 m_IsSuccess = true;
                 

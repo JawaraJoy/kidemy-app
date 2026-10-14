@@ -255,7 +255,7 @@ namespace EduGame
         protected override void SubmitInternal(int star = 1)
         {
             if(m_UnansweredCorrect == 0)
-                star = 3;
+                star = c_MaxStar;
 
             StopAllCoroutines();
 

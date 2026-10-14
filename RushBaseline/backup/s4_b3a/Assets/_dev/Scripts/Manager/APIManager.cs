@@ -1,0 +1,172 @@
+using System;
+using System.Collections;
+using System.Text;
+using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.Networking;
+
+namespace EduGame
+{
+    public class APIManager : MonoBehaviour
+    {
+        private string m_ApiToken = "game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e";
+        private string m_ApiUrl = "";
+        private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
+
+        private const string c_FrogVoiceId = "n3tkGOcEribaYI5zg4pu";
+
+        [SerializeField]
+        [FormerlySerializedAs("Instance")]
+        private APIManager m_Instance;
+        
+        public void RequestVoice(string text, string voiceId = "", Action<string> onSuccess = null, Action<string> onFailure = null)
+        {
+            RequestVoiceInternal(text, voiceId, onSuccess, onFailure);
+        }
+
+        private void RequestVoiceInternal(string text, string voiceId, Action<string> onSuccess, Action<string> onFailure)
+        {
+            VoiceRequest request = new VoiceRequest() {
+                text = text,
+                voice_id = voiceId
+            };
+            
+            RequestVoiceInternal(request, onSuccess, onFailure);
+        }
+
+        public void RequestVoice(VoiceRequest request, Action<string> onSuccess = null, Action<string> onFailure = null)
+        {
+            RequestVoiceInternal(request, onSuccess, onFailure);
+        }
+
+        private void RequestVoiceInternal(VoiceRequest request, Action<string> onSuccess, Action<string> onFailure)
+        {
+            if (string.IsNullOrEmpty(request.voice_id))
+                request.voice_id = c_FrogVoiceId;
+
+            string requestUrl = m_ApiAIUrl + "v1/api/audio/generate";
+
+            RequestData(requestUrl, JsonUtility.ToJson(request), onSuccess, onFailure, false);
+        }
+
+        public void SendData(string url, string jsonString)
+        {
+            StartCoroutine(SendDataCo(url, jsonString));
+        }
+
+        private IEnumerator SendDataCo(string url, string jsonString)
+        {
+            // Convert string payload into raw binary data
+            byte[] rawBodyData = Encoding.UTF8.GetBytes(jsonString);
+
+            // Initialize a clean UnityWebRequest configured for POST
+            using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+            {
+                // Attach raw handlers to bypass default URL-encoding format
+                request.uploadHandler = new UploadHandlerRaw(rawBodyData);
+                request.downloadHandler = new DownloadHandlerBuffer();
+
+                // Explicitly define API header parameters
+                request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+                request.SetRequestHeader("Content-Type", "application/json");
+                request.SetRequestHeader("Accept", "application/json");
+
+                // Optional: Include authorization headers if your API requires it
+                // request.SetRequestHeader("Authorization", "Bearer YOUR_TOKEN_HERE");
+
+                // Execute request synchronously via coroutine pipeline
+                yield return request.SendWebRequest();
+
+                // Handle server output tracking
+                if (request.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError($"API Error: {request.error} | Response Code: {request.responseCode}");
+                }
+                else
+                {
+                    Debug.Log($"Data Sent Successfully! Response: {request.downloadHandler.text}");
+                }
+            }
+        }
+
+        public void FetchData(string url, Action<string> onSuccess, Action<string> onFailure = null, bool auth = false)
+        {
+            StartCoroutine(FetchDataCo(url, onSuccess, onFailure, auth));
+        }
+
+        private IEnumerator FetchDataCo(string url, Action<string> onSuccess, Action<string> onFailure, bool auth = false)
+        {
+            using (UnityWebRequest request = UnityWebRequest.Get(url))
+            {
+                if (auth)
+                    request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+
+                // Wait until the network request completely finishes
+                yield return request.SendWebRequest();
+
+                // Check for network or HTTP error states
+                if (request.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError($"Network Error: {request.error}");
+
+                    // Fire the failure callback if one was provided
+                    onFailure?.Invoke(request.error);
+                }
+                else
+                {
+                    // Extract raw string payload from the download handler
+                    string rawJson = request.downloadHandler.text;
+
+                    // Fire the success callback and pass the JSON data back
+                    onSuccess?.Invoke(rawJson);
+                }
+            }
+        }
+
+        private void RequestData(string url, string jsonString, Action<string> onSuccess, Action<string> onFailure = null, bool auth = false)
+        {
+            StartCoroutine(RequestDataCo(url, jsonString, onSuccess, onFailure, auth));
+        }
+
+        private IEnumerator RequestDataCo(string url, string jsonString, Action<string> onSuccess, Action<string> onFailure, bool auth = false)
+        {
+            // Convert string payload into raw binary data
+            byte[] rawBodyData = Encoding.UTF8.GetBytes(jsonString);
+
+            using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+            {
+                // Attach raw handlers to bypass default URL-encoding format
+                request.uploadHandler = new UploadHandlerRaw(rawBodyData);
+                request.downloadHandler = new DownloadHandlerBuffer();
+
+                // Explicitly define API header parameters
+                request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+                request.SetRequestHeader("Content-Type", "application/json");
+                request.SetRequestHeader("Accept", "application/json");
+
+                if (auth)
+                    request.SetRequestHeader("Authorization", "Bearer " + m_ApiToken);
+
+                // Wait until the network request completely finishes
+                yield return request.SendWebRequest();
+
+                // Check for network or HTTP error states
+                if (request.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError($"Network Error: {request.error}");
+
+                    // Fire the failure callback if one was provided
+                    onFailure?.Invoke(request.error);
+                }
+                else
+                {
+                    // Extract raw string payload from the download handler
+                    string rawJson = request.downloadHandler.text;
+
+                    // Fire the success callback and pass the JSON data back
+                    onSuccess?.Invoke(rawJson);
+                }
+            }
+        }
+    }
+}

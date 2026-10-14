@@ -9,6 +9,12 @@ namespace EduGame
 {
     public class QuestShapeIt : QuestZonePairing
     {
+        private const int c_RotationStepCount = 4;
+        private const int c_QuarterTurn = 90;
+        private const float c_AngleEpsilon = 0.01f;
+        private const int c_RotateStepDegrees = 3;
+        private const int c_FullCircle = 360;
+
         [Header("Components")]
         [SerializeField] [FormerlySerializedAs("questionImage")] private Image m_QuestionImage;
         [SerializeField] [FormerlySerializedAs("questionAudio")] private AudioPlayer m_QuestionAudio;
@@ -117,7 +123,7 @@ namespace EduGame
                     m_ItemsContainer.AddItem(shape);
 
                     if(shape.CanBeRotated)
-                        shape.Rect.localRotation = Quaternion.Euler(Vector3.forward * (Random.Range(0, 4) * 90));
+                        shape.Rect.localRotation = Quaternion.Euler(Vector3.forward * (Random.Range(0, c_RotationStepCount) * c_QuarterTurn));
                 }
             }
 
@@ -148,7 +154,7 @@ namespace EduGame
             var id = item.transform.GetEntityId();
 
             if(m_ItemIndex.ContainsKey(id))
-                ret = m_ItemIndex[id] == zone.transform.GetEntityId() && item.Rect.eulerAngles.z < 0.01f;
+                ret = m_ItemIndex[id] == zone.transform.GetEntityId() && item.Rect.eulerAngles.z < c_AngleEpsilon;
 
             return ret;
         }
@@ -158,7 +164,7 @@ namespace EduGame
             m_UnansweredQuestion--;
 
             if(m_UnansweredQuestion <= 0)
-                Submit(3);
+                Submit(c_MaxStar);
         }
 
         public virtual void Rotate()
@@ -173,7 +179,7 @@ namespace EduGame
 
         IEnumerator RotateCo()
         {
-            float rotateValue = 90f;
+            float rotateValue = c_QuarterTurn;
 
             if(m_RotateSound)
                 GameManager.Instance.AudioSource.PlayOneShot(m_RotateSound);
@@ -185,13 +191,13 @@ namespace EduGame
                     if(!item.CanBeRotated || item.transform.parent.GetEntityId() != m_ItemsContainer.transform.GetEntityId())
                         continue;
 
-                    item.Rect.localRotation = Quaternion.Euler(Vector3.forward * (item.Rect.eulerAngles.z + 3));
+                    item.Rect.localRotation = Quaternion.Euler(Vector3.forward * (item.Rect.eulerAngles.z + c_RotateStepDegrees));
 
-                    if(item.Rect.eulerAngles.z == 360)
+                    if(item.Rect.eulerAngles.z == c_FullCircle)
                         item.Rect.localRotation = Quaternion.Euler(Vector3.zero);
                 }
 
-                rotateValue -= 3;
+                rotateValue -= c_RotateStepDegrees;
 
                 yield return new WaitForSeconds(Time.deltaTime);
             }

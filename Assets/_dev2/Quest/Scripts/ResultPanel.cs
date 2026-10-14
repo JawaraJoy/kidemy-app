@@ -9,6 +9,8 @@ namespace EduGame
 {
     public class ResultPanel : PanelView
     {
+        private const float c_Percent = 100f;
+
         [SerializeField]
         private Image m_NPCIcon;
         [SerializeField]
@@ -59,7 +61,7 @@ namespace EduGame
         {
             int wrongCount = context.WrongCount;
             int rightCount = context.RightCount;
-            float rate = context.GetRate() * 100f;
+            float rate = context.GetRate() * c_Percent;
             string wrongCountText = WordSetting.GetFormatedText(wrongCount.ToString(), new TextEffectInstance[1] { m_WrongTextEffect });
             string rightCountText = WordSetting.GetFormatedText(rightCount.ToString(), new TextEffectInstance[1] {m_RightTextEffect});
 

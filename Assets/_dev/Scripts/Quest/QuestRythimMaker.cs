@@ -7,6 +7,8 @@ namespace EduGame
 {
     public class QuestRythimMaker : Quest
     {
+        private const string c_StartPlayMethod = "StartPlay";
+
         [Header("Data")]
         
         [Header("Components")]
@@ -85,7 +87,7 @@ namespace EduGame
 
             SetDialog();
 
-            Invoke("StartPlay", 2);
+            Invoke(c_StartPlayMethod, 2);
         }
 
         QuestRythimNote InstantiateItem(QuestRythimNoteItem item)
@@ -120,7 +122,7 @@ namespace EduGame
         protected override void SubmitInternal(int star = 1)
         {
             if(m_UnansweredNote <= 1)
-                star = 3;
+                star = c_MaxStar;
             else if(m_UnansweredNote < Mathf.CeilToInt(m_Notes.Length / 2))
                 star = 2;
 
@@ -143,7 +145,7 @@ namespace EduGame
             
             SetDialog();
 
-            Invoke("StartPlay", 2);
+            Invoke(c_StartPlayMethod, 2);
 
             base.ResetInternal();
         }

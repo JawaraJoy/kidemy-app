@@ -46,6 +46,12 @@ namespace RushRefactor
         static readonly Regex s_Invoke = new Regex(
             @"(?<![\.\w])(Invoke|InvokeRepeating)\(\s*""([^""]+)""", RegexOptions.Compiled);
 
+        static readonly Regex s_InvokeConst = new Regex(
+            @"(?<![\.\w])(Invoke|InvokeRepeating)\(\s*(c_\w+)\s*[,)]", RegexOptions.Compiled);
+
+        static readonly Regex s_ConstString = new Regex(
+            @"\bconst\s+string\s+(c_\w+)\s*=\s*""([^""]*)""\s*;", RegexOptions.Compiled);
+
         static readonly Regex s_JsFn = new Regex(@"^\s*(\w+)\s*:\s*function\s*\(", RegexOptions.Multiline | RegexOptions.Compiled);
 
         public sealed class DiffResult
@@ -299,7 +305,11 @@ namespace RushRefactor
             foreach (string file in FilesUnderRoots(f => f.EndsWith(".cs", StringComparison.OrdinalIgnoreCase)))
             {
                 string cls = Path.GetFileNameWithoutExtension(file);
-                foreach (string raw in File.ReadAllLines(file))
+                string[] allLines = File.ReadAllLines(file);
+                var constMap = new Dictionary<string, string>(StringComparer.Ordinal);
+                foreach (string cl in allLines)
+                    foreach (Match cm in s_ConstString.Matches(cl)) constMap[cm.Groups[1].Value] = cm.Groups[2].Value;
+                foreach (string raw in allLines)
                 {
                     string line = raw.TrimStart();
                     if (line.StartsWith("//", StringComparison.Ordinal) || line.StartsWith("*", StringComparison.Ordinal) ||
@@ -312,6 +322,17 @@ namespace RushRefactor
                         counts.TryGetValue(key, out n);
                         counts[key] = n + 1;
                         if (!status.ContainsKey(key)) status[key] = InvokeStatus(cls, name, bySimple);
+                    }
+                    foreach (Match m in s_InvokeConst.Matches(raw))
+                    {
+                        string cname = m.Groups[2].Value;
+                        string name;
+                        if (!constMap.TryGetValue(cname, out name)) name = "UNRESOLVED:" + cname;
+                        string key = cls + ".cs|" + name;
+                        int n;
+                        counts.TryGetValue(key, out n);
+                        counts[key] = n + 1;
+                        if (!status.ContainsKey(key)) status[key] = name.StartsWith("UNRESOLVED:", StringComparison.Ordinal) ? "UNRESOLVED" : InvokeStatus(cls, name, bySimple);
                     }
                 }
             }

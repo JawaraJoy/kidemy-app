@@ -129,6 +129,10 @@ namespace Rush
     [Serializable]
     public class TweenField
     {
+        private const int c_RandomIdMin = 1000;
+        private const int c_RandomIdMax = 9999;
+        private const float c_ColorFadeFrom = 0.1f;
+
         [SerializeField] 
         private string m_Id;
         [SerializeField] 
@@ -262,7 +266,7 @@ namespace Rush
 
             if (m_Group == string.Empty)
             {
-                int random = UnityEngine.Random.Range(1000, 9999);
+                int random = UnityEngine.Random.Range(c_RandomIdMin, c_RandomIdMax);
                 m_Group = random.ToString();
             }
         }
@@ -434,7 +438,7 @@ namespace Rush
         }
         private void ColorImageTween()
         {
-            m_ColorTween = LeanTween.value(m_Content, 0.1f, 1f, m_EaseDuration);
+            m_ColorTween = LeanTween.value(m_Content, c_ColorFadeFrom, 1f, m_EaseDuration);
             if (!m_IsReverse)
             {
                 ColorImageControl(m_ColorTween, m_Image, m_ColorImage.StartColor, m_ColorImage.EndColor);

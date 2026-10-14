@@ -4,6 +4,11 @@ using System.Globalization;
 
 public static class StringHelper
 {
+    private const string c_HexFormat = "x2";
+    private const int c_MinSegmentCount = 5;
+    private const string c_LabelSegment = "label";
+    private const string c_GroupSegment = "group";
+
     /// <summary>
     /// Generates a unique, deterministic hash ID based on text and voice settings.
     /// </summary>
@@ -22,7 +27,7 @@ public static class StringHelper
             StringBuilder sb = new StringBuilder();
             foreach (byte b in hashBytes)
             {
-                sb.Append(b.ToString("x2"));
+                sb.Append(b.ToString(c_HexFormat));
             }
 
             return sb.ToString(); // e.g., "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -57,10 +62,10 @@ public static class StringHelper
         int length = segments.Length;
 
         // Must have at least 5 parts: [prefix] + "item" + [num] + "label" + [num]
-        if (length < 5) return null;
+        if (length < c_MinSegmentCount) return null;
 
         // Strict validation of the structural text labels
-        if (segments[length - 2] != "label" || segments[length - 4] != "group")
+        if (segments[length - 2] != c_LabelSegment || segments[length - 4] != c_GroupSegment)
         {
             return null;
         }

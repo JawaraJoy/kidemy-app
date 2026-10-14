@@ -7,22 +7,28 @@ namespace EduGame
 {
     public class URIHelper
     {
+        private const string c_QueryMark = "?";
+        private const string c_PairSeparator = "&";
+        private const string c_KeyValueSeparator = "=";
+        private const string c_SchemeSeparator = "://";
+        private const string c_PathSeparator = "/";
+
         public static Dictionary<string, string> GetParameters(string url)
         {
             Dictionary<string, string> res = new Dictionary<string, string>();
 
-            string[] d1 = url.Split("?");
+            string[] d1 = url.Split(c_QueryMark);
 
             if (d1.Length > 0)
             {
                 string v = d1[d1.Length - 1];
-                string[] d2 = v.Split("&");
+                string[] d2 = v.Split(c_PairSeparator);
 
                 if (d2.Length > 0)
                 {
                     foreach (var d in d2)
                     {
-                        string[] d3 = d.Split("=");
+                        string[] d3 = d.Split(c_KeyValueSeparator);
 
                         if (d3.Length > 1)
                             res.Add(d3[0], System.Uri.UnescapeDataString(d3[1]));
@@ -44,7 +50,7 @@ namespace EduGame
 
             // 2. Ensure the string contains a scheme (like http:// or https://)
             // Without this, Uri.TryCreate might accept relative paths, which break GetLeftPart()
-            if (!urlInput.Contains("://"))
+            if (!urlInput.Contains(c_SchemeSeparator))
             {
                 Debug.LogWarning($"URL extraction failed: Input lacks a valid scheme. Input: {urlInput}");
                 return string.Empty;
@@ -59,7 +65,7 @@ namespace EduGame
                     string basePart = validatedUri.GetLeftPart(UriPartial.Authority);
 
                     // Return with the mandatory trailing slash
-                    return basePart + "/";
+                    return basePart + c_PathSeparator;
                 }
                 catch (ArgumentException ex)
                 {
@@ -107,7 +113,7 @@ namespace EduGame
             // Rebuild query string if parameters remain
             if (remainingPairs.Count > 0)
             {
-                return basePath + "?" + string.Join("&", remainingPairs);
+                return basePath + c_QueryMark + string.Join(c_PairSeparator, remainingPairs);
             }
 
             return basePath;

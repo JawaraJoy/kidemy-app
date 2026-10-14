@@ -8,6 +8,10 @@ namespace EduGame
 {
     public class QuestDragNDropZone : MonoBehaviour, IDropHandler
     {
+        private const float c_ItemScale = 0.75f;
+        private const string c_AcceptState = "Accept";
+        private const string c_RejectState = "Reject";
+
         public enum DisplayMode { Normal, Dynamic, Sticky, Fill, ScaledUp, ScaledDown, ScaledDown2, FollowParent }
 
         [SerializeField] [FormerlySerializedAs("displayMode")] private DisplayMode m_DisplayMode;
@@ -80,7 +84,7 @@ namespace EduGame
                 else if (m_DisplayMode == DisplayMode.ScaledDown)
                     Scaled(item, 0.5f);
                 else if (m_DisplayMode == DisplayMode.ScaledDown2)
-                    Scaled(item, 0.75f);
+                    Scaled(item, c_ItemScale);
                 else if (m_DisplayMode == DisplayMode.FollowParent)
                     FollowParent(item);
                 else if (m_DisplayMode == DisplayMode.Normal)
@@ -184,7 +188,7 @@ namespace EduGame
             else if (m_DisplayMode == DisplayMode.ScaledDown)
                 Scaled(item, 0.5f);
             else if (m_DisplayMode == DisplayMode.ScaledDown2)
-                Scaled(item, 0.75f);
+                Scaled(item, c_ItemScale);
             else if (m_DisplayMode == DisplayMode.FollowParent)
                 FollowParent(item);
             else if (m_DisplayMode == DisplayMode.Normal)
@@ -291,7 +295,7 @@ namespace EduGame
         private void OnAccept()
         {
             if(m_Animator)
-                m_Animator.Play("Accept");
+                m_Animator.Play(c_AcceptState);
 
             if(m_AcceptSound)
                 GameManager.Instance.AudioSource.PlayOneShot(m_AcceptSound);
@@ -300,7 +304,7 @@ namespace EduGame
         private void OnReject()
         {
             if(m_Animator)
-                m_Animator.Play("Reject");
+                m_Animator.Play(c_RejectState);
 
             if(m_RejectSound)
                 GameManager.Instance.AudioSource.PlayOneShot(m_RejectSound);

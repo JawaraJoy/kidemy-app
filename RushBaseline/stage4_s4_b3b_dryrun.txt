@@ -1,0 +1,221 @@
+batch=s4_b3b spec=s4_b3b.spec file=14 ganti=50 sisip=56 error=0 dry=True
+VoiceRequest.cs:12
+  - public string format = "wav";
+  + public string format = c_DefaultFormat;
+VoiceRequest.cs: sisip 2 baris setelah baris 8
+  + private const string c_DefaultFormat = "wav";
+  + 
+Global.cs:7
+  - private static Vector2 s_FalseVector = Vector2.one * 100000;
+  + private static Vector2 s_FalseVector = Vector2.one * c_FalseVectorScale;
+Global.cs: sisip 2 baris setelah baris 6
+  + private const int c_FalseVectorScale = 100000;
+  + 
+ContentManager.cs:25
+  - m_RefRes = m_CanvasScaler.referenceResolution + Vector2.up * 200;
+  + m_RefRes = m_CanvasScaler.referenceResolution + Vector2.up * c_RefResExtraHeight;
+ContentManager.cs: sisip 2 baris setelah baris 8
+  + private const int c_RefResExtraHeight = 200;
+  + 
+GameManager.cs:196
+  - if(parameters.ContainsKey("redirect_url"))
+  + if(parameters.ContainsKey(c_ParamRedirectUrl))
+GameManager.cs:198
+  - m_BaseURL = parameters["redirect_url"];
+  + m_BaseURL = parameters[c_ParamRedirectUrl];
+GameManager.cs:201
+  - if(parameters.ContainsKey("bgm_volume"))
+  + if(parameters.ContainsKey(c_ParamBgmVolume))
+GameManager.cs:203
+  - int volume = int.Parse(parameters["bgm_volume"]);
+  + int volume = int.Parse(parameters[c_ParamBgmVolume]);
+GameManager.cs:204
+  - m_Music.volume = volume / 10f;
+  + m_Music.volume = volume / c_BgmVolumeScale;
+GameManager.cs:205
+  - m_AudioSource.volume = volume / 10f;
+  + m_AudioSource.volume = volume / c_BgmVolumeScale;
+GameManager.cs:220
+  - if (param.ContainsKey("session_id"))
+  + if (param.ContainsKey(c_ParamSessionId))
+GameManager.cs:221
+  - m_SessionId = param["session_id"];
+  + m_SessionId = param[c_ParamSessionId];
+GameManager.cs:340
+  - float m = Mathf.FloorToInt(elapsedTime / 60);
+  + float m = Mathf.FloorToInt(elapsedTime / c_SecondsPerMinute);
+GameManager.cs:341
+  - float s = Mathf.FloorToInt(elapsedTime % 60);
+  + float s = Mathf.FloorToInt(elapsedTime % c_SecondsPerMinute);
+GameManager.cs:343
+  - string timerText = m.ToString().PadLeft(2, '0') + ":" + s.ToString().PadLeft(2, '0');
+  + string timerText = m.ToString().PadLeft(2, '0') + c_TimerSeparator + s.ToString().PadLeft(2, '0');
+GameManager.cs:345
+  - if (s % 10 == 0)
+  + if (s % c_TimerMajorTick == 0)
+GameManager.cs:347
+  - else if (s % 5 == 0)
+  + else if (s % c_TimerMinorTick == 0)
+GameManager.cs:521
+  - else if (star > 3)
+  + else if (star > c_MaxStar)
+GameManager.cs:522
+  - star = 3;
+  + star = c_MaxStar;
+GameManager.cs:524
+  - if (star == 3 && m_Quests[m_CurrentIndex].Data.TresholdTime > 0 && m_RecordedTime > m_Quests[m_CurrentIndex].Data.TresholdTime)
+  + if (star == c_MaxStar && m_Quests[m_CurrentIndex].Data.TresholdTime > 0 && m_RecordedTime > m_Quests[m_CurrentIndex].Data.TresholdTime)
+GameManager.cs:578
+  - if (m_NeutralReaction && m_Quests[m_CurrentIndex].name.IndexOf("ColortheIsland") > -1)
+  + if (m_NeutralReaction && m_Quests[m_CurrentIndex].name.IndexOf(c_ColorTheIslandKey) > -1)
+GameManager.cs:611
+  - SetNPCDialogInternal("Yaaay! Amazing!");
+  + SetNPCDialogInternal(c_DialogCorrect);
+GameManager.cs:634
+  - SetNPCDialogInternal("Oh no!");
+  + SetNPCDialogInternal(c_DialogWrong);
+GameManager.cs: sisip 13 baris setelah baris 15
+  + private const string c_ParamRedirectUrl = "redirect_url";
+  + private const string c_ParamBgmVolume = "bgm_volume";
+  + private const string c_ParamSessionId = "session_id";
+  + private const float c_BgmVolumeScale = 10f;
+  + private const int c_SecondsPerMinute = 60;
+  + private const string c_TimerSeparator = ":";
+  + private const int c_TimerMajorTick = 10;
+  + private const int c_TimerMinorTick = 5;
+  + private const int c_MaxStar = 3;
+  + private const string c_ColorTheIslandKey = "ColortheIsland";
+  + private const string c_DialogCorrect = "Yaaay! Amazing!";
+  + private const string c_DialogWrong = "Oh no!";
+  + 
+FeedbackItem.cs:14
+  - Invoke("ExecPlay", m_Delay);
+  + Invoke(c_PlayMethod, m_Delay);
+FeedbackItem.cs:22
+  - Invoke("ExecStop", m_Delay);
+  + Invoke(c_StopMethod, m_Delay);
+FeedbackItem.cs: sisip 3 baris setelah baris 7
+  + private const string c_PlayMethod = "ExecPlay";
+  + private const string c_StopMethod = "ExecStop";
+  + 
+FeedbackItemAnimation.cs:30
+  - m_PreviousAnimator.Play("Idle");
+  + m_PreviousAnimator.Play(c_IdleState);
+FeedbackItemAnimation.cs: sisip 2 baris setelah baris 8
+  + private const string c_IdleState = "Idle";
+  + 
+HandTutorial.cs:73
+  - GameObject trailOrigin = new GameObject("TrailOrigin");
+  + GameObject trailOrigin = new GameObject(c_TrailOriginName);
+HandTutorial.cs:165
+  - yield return new WaitForSeconds(mode == TutorialMode.Click ? 1f : 0.2f);
+  + yield return new WaitForSeconds(mode == TutorialMode.Click ? c_ClickWaitSeconds : c_DefaultWaitSeconds);
+HandTutorial.cs: sisip 4 baris setelah baris 7
+  + private const string c_TrailOriginName = "TrailOrigin";
+  + private const float c_ClickWaitSeconds = 1f;
+  + private const float c_DefaultWaitSeconds = 0.2f;
+  + 
+StringHelper.cs:25
+  - sb.Append(b.ToString("x2"));
+  + sb.Append(b.ToString(c_HexFormat));
+StringHelper.cs:60
+  - if (length < 5) return null;
+  + if (length < c_MinSegmentCount) return null;
+StringHelper.cs:63
+  - if (segments[length - 2] != "label" || segments[length - 4] != "group")
+  + if (segments[length - 2] != c_LabelSegment || segments[length - 4] != "group")
+StringHelper.cs:63
+  - if (segments[length - 2] != c_LabelSegment || segments[length - 4] != "group")
+  + if (segments[length - 2] != c_LabelSegment || segments[length - 4] != c_GroupSegment)
+StringHelper.cs: sisip 5 baris setelah baris 6
+  + private const string c_HexFormat = "x2";
+  + private const int c_MinSegmentCount = 5;
+  + private const string c_LabelSegment = "label";
+  + private const string c_GroupSegment = "group";
+  + 
+URIHelper.cs:14
+  - string[] d1 = url.Split("?");
+  + string[] d1 = url.Split(c_QueryMark);
+URIHelper.cs:19
+  - string[] d2 = v.Split("&");
+  + string[] d2 = v.Split(c_PairSeparator);
+URIHelper.cs:25
+  - string[] d3 = d.Split("=");
+  + string[] d3 = d.Split(c_KeyValueSeparator);
+URIHelper.cs:47
+  - if (!urlInput.Contains("://"))
+  + if (!urlInput.Contains(c_SchemeSeparator))
+URIHelper.cs:62
+  - return basePart + "/";
+  + return basePart + c_PathSeparator;
+URIHelper.cs:110
+  - return basePath + "?" + string.Join("&", remainingPairs);
+  + return basePath + c_QueryMark + string.Join("&", remainingPairs);
+URIHelper.cs:110
+  - return basePath + c_QueryMark + string.Join("&", remainingPairs);
+  + return basePath + c_QueryMark + string.Join(c_PairSeparator, remainingPairs);
+URIHelper.cs: sisip 6 baris setelah baris 9
+  + private const string c_QueryMark = "?";
+  + private const string c_PairSeparator = "&";
+  + private const string c_KeyValueSeparator = "=";
+  + private const string c_SchemeSeparator = "://";
+  + private const string c_PathSeparator = "/";
+  + 
+WordSetting.cs:42
+  - wordEffects += " ";
+  + wordEffects += c_WordSeparator;
+WordSetting.cs:48
+  - return m_AddSpaceForNext? m_Words + " " : m_Words;
+  + return m_AddSpaceForNext? m_Words + c_WordSeparator : m_Words;
+WordSetting.cs: sisip 2 baris setelah baris 8
+  + private const string c_WordSeparator = " ";
+  + 
+AnimationHandler.cs:108
+  - yield return new WaitForSeconds(1.5f);
+  + yield return new WaitForSeconds(c_ResultDelay);
+AnimationHandler.cs:111
+  - music.volume = 0.4f;
+  + music.volume = c_MusicDuckVolume;
+AnimationHandler.cs: sisip 3 baris setelah baris 9
+  + private const float c_ResultDelay = 1.5f;
+  + private const float c_MusicDuckVolume = 0.4f;
+  + 
+ResultPanel.cs:62
+  - float rate = context.GetRate() * 100f;
+  + float rate = context.GetRate() * c_Percent;
+ResultPanel.cs: sisip 2 baris setelah baris 11
+  + private const float c_Percent = 100f;
+  + 
+StarPresenter.cs:65
+  - string reactionWord = "Oh nooo";
+  + string reactionWord = c_ReactionZeroStar;
+StarPresenter.cs:69
+  - reactionWord = "Good Job!";
+  + reactionWord = c_ReactionOneStar;
+StarPresenter.cs:74
+  - reactionWord = "Excellent!!";
+  + reactionWord = c_ReactionTwoStar;
+StarPresenter.cs:79
+  - reactionWord = "Smart Kid!!!";
+  + reactionWord = c_ReactionThreeStar;
+StarPresenter.cs:92
+  - yield return new WaitForSeconds(0.2f);
+  + yield return new WaitForSeconds(c_StarRevealDelay);
+StarPresenter.cs: sisip 6 baris setelah baris 8
+  + private const string c_ReactionZeroStar = "Oh nooo";
+  + private const string c_ReactionOneStar = "Good Job!";
+  + private const string c_ReactionTwoStar = "Excellent!!";
+  + private const string c_ReactionThreeStar = "Smart Kid!!!";
+  + private const float c_StarRevealDelay = 0.2f;
+  + 
+TweenHandler.cs:265
+  - int random = UnityEngine.Random.Range(1000, 9999);
+  + int random = UnityEngine.Random.Range(c_RandomIdMin, c_RandomIdMax);
+TweenHandler.cs:437
+  - m_ColorTween = LeanTween.value(m_Content, 0.1f, 1f, m_EaseDuration);
+  + m_ColorTween = LeanTween.value(m_Content, c_ColorFadeFrom, 1f, m_EaseDuration);
+TweenHandler.cs: sisip 4 baris setelah baris 131
+  + private const int c_RandomIdMin = 1000;
+  + private const int c_RandomIdMax = 9999;
+  + private const float c_ColorFadeFrom = 0.1f;
+  + 

@@ -6,6 +6,9 @@ namespace EduGame
 {
     public class QuestMultipleChoicesNarrative : QuestMultipleChoices
     {
+        private const string c_SentenceEnd = ".";
+        private const string c_QuestionSegment = "_question";
+
         [Header("Data")]
 
         [Header("Components")]
@@ -48,11 +51,11 @@ namespace EduGame
                 TMP_Text narrative = GetComponentInChildren<TMP_Text>();
                 
                 if (narrative && !string.IsNullOrEmpty(narrative.text))
-                    textVoice = narrative.text + "." + textVoice;
+                    textVoice = narrative.text + c_SentenceEnd + textVoice;
 
                 voiceRequests[0] = new VoiceRequest
                 {
-                    id = name + "_question",
+                    id = name + c_QuestionSegment,
                     text = textVoice,
                     voice_id = GetVoiceId()
                 };

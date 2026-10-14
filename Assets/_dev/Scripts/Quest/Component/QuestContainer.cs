@@ -5,10 +5,12 @@ namespace EduGame
 {
     public class QuestContainer : MonoBehaviour
     {
+        private const string c_ShadowName = "Shadow";
+
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            Transform shadow = transform.Find("Shadow");
+            Transform shadow = transform.Find(c_ShadowName);
 
             if(shadow)
             {

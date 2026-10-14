@@ -25,6 +25,15 @@ public class SceneButtonGenerator : MonoBehaviour
     private GameObject m_ButtonPrefab;
 
 #if UNITY_EDITOR
+    private const string c_NoisePattern = @"(rewrite|otherdev|dev|_|\d+|\[\d+\])";
+    private const string c_CamelBoundaryPattern = @"(?<=[a-z])(?=[A-Z])";
+    private const string c_WhitespacePattern = @"\s+";
+    private const string c_Space = " ";
+    private const string c_ButtonPrefix = "Btn_";
+    private const string c_UndoGenerateButton = "Generate Scene Button";
+    private const string c_EventSystemName = "EventSystem";
+    private const string c_UndoCreateEventSystem = "Create EventSystem";
+
     [ContextMenu("Generate Scene Buttons")]
     public void GenerateButtonsInEditor()
     {
@@ -59,10 +68,10 @@ public class SceneButtonGenerator : MonoBehaviour
             string rawName = System.IO.Path.GetFileNameWithoutExtension(scene.path);
 
             // 4. Clean Nama Scene
-            string pattern = @"(rewrite|otherdev|dev|_|\d+|\[\d+\])";
+            string pattern = c_NoisePattern;
             string cleanedName = Regex.Replace(rawName, pattern, "", RegexOptions.IgnoreCase);
-            cleanedName = Regex.Replace(cleanedName, @"(?<=[a-z])(?=[A-Z])", " ");
-            cleanedName = Regex.Replace(cleanedName, @"\s+", " ").Trim();
+            cleanedName = Regex.Replace(cleanedName, c_CamelBoundaryPattern, c_Space);
+            cleanedName = Regex.Replace(cleanedName, c_WhitespacePattern, c_Space).Trim();
 
             if (string.IsNullOrWhiteSpace(cleanedName))
             {
@@ -81,7 +90,7 @@ public class SceneButtonGenerator : MonoBehaviour
                 newButtonObj.transform.SetParent(m_Container, false);
             }
 
-            newButtonObj.name = "Btn_" + rawName;
+            newButtonObj.name = c_ButtonPrefix + rawName;
 
             newButtonObj.TryGetComponent<Image>(out Image btnImage);
             if (btnImage != null)
@@ -129,7 +138,7 @@ public class SceneButtonGenerator : MonoBehaviour
                 UnityEventTools.AddPersistentListener(btnComponent.onClick, loader.LoadTargetScene);
             }
 
-            Undo.RegisterCreatedObjectUndo(newButtonObj, "Generate Scene Button");
+            Undo.RegisterCreatedObjectUndo(newButtonObj, c_UndoGenerateButton);
         }
 
         EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
@@ -140,10 +149,10 @@ public class SceneButtonGenerator : MonoBehaviour
     {
         if (FindObjectOfType<EventSystem>() == null)
         {
-            GameObject eventSystemObj = new GameObject("EventSystem");
+            GameObject eventSystemObj = new GameObject(c_EventSystemName);
             eventSystemObj.AddComponent<EventSystem>();
             eventSystemObj.AddComponent<StandaloneInputModule>();
-            Undo.RegisterCreatedObjectUndo(eventSystemObj, "Create EventSystem");
+            Undo.RegisterCreatedObjectUndo(eventSystemObj, c_UndoCreateEventSystem);
             Debug.Log("[SceneButtonGenerator] EventSystem otomatis dibuat.");
         }
     }

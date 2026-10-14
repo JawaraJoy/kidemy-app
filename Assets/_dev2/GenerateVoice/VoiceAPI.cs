@@ -22,6 +22,16 @@ namespace EduGame
 
 #if UNITY_EDITOR
 
+        private const string c_ErrorTextEmpty = "Text is empty.";
+        private const string c_ErrorTokenEmpty = "API Token is empty.";
+        private const string c_HeaderAuthorization = "Authorization";
+        private const string c_BearerPrefix = "Bearer ";
+        private const string c_HeaderContentType = "Content-Type";
+        private const string c_HeaderAccept = "Accept";
+        private const string c_MimeJson = "application/json";
+        private const string c_ErrorParse = "API response could not be parsed.";
+        private const string c_ErrorNoAudioUrl = "API response does not contain audio_url.\n";
+
         public void Generate(
             string text,
             string voiceId,
@@ -31,13 +41,13 @@ namespace EduGame
         {
             if (string.IsNullOrWhiteSpace(text))
             {
-                onFailure?.Invoke("Text is empty.");
+                onFailure?.Invoke(c_ErrorTextEmpty);
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(apiToken))
             {
-                onFailure?.Invoke("API Token is empty.");
+                onFailure?.Invoke(c_ErrorTokenEmpty);
                 return;
             }
 
@@ -103,18 +113,18 @@ namespace EduGame
                 new DownloadHandlerBuffer();
 
             request.SetRequestHeader(
-                "Authorization",
-                "Bearer " + apiToken
+                c_HeaderAuthorization,
+                c_BearerPrefix + apiToken
             );
 
             request.SetRequestHeader(
-                "Content-Type",
-                "application/json"
+                c_HeaderContentType,
+                c_MimeJson
             );
 
             request.SetRequestHeader(
-                "Accept",
-                "application/json"
+                c_HeaderAccept,
+                c_MimeJson
             );
 
             // ========================================================
@@ -185,7 +195,7 @@ namespace EduGame
             if (voiceResponse == null)
             {
                 onFailure?.Invoke(
-                    "API response could not be parsed."
+                    c_ErrorParse
                 );
 
                 yield break;
@@ -198,7 +208,7 @@ namespace EduGame
             )
             {
                 onFailure?.Invoke(
-                    "API response does not contain audio_url.\n" +
+                    c_ErrorNoAudioUrl +
                     $"Response: {response}"
                 );
 

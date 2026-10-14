@@ -4,6 +4,8 @@ using EduGame;
 
 public class UpdateMultipleChoiceToNarrative : EditorWindow
 {
+    private const string c_ScriptProperty = "m_Script";
+
     private const string c_MenuItemName = "Assets/Update to Narrative";
 
     // 1. Context Menu Action
@@ -64,7 +66,7 @@ public class UpdateMultipleChoiceToNarrative : EditorWindow
             do
             {
                 // Skip internal script pointer (don't overwrite newSO's script type back to SO1)
-                if (prop.name == "m_Script") continue;
+                if (prop.name == c_ScriptProperty) continue;
 
                 // Find matching property in target SO2
                 SerializedProperty targetProp = destSO.FindProperty(prop.name);

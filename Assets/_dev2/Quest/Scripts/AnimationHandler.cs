@@ -7,6 +7,9 @@ namespace EduGame
 {
     public class AnimationHandler : MonoBehaviour
     {
+        private const float c_ResultDelay = 1.5f;
+        private const float c_MusicDuckVolume = 0.4f;
+
         private AnimatorClipConfig m_ClipConfig;
 
         [SerializeField]
@@ -105,10 +108,10 @@ namespace EduGame
 
         private IEnumerator Playing(AnimatorClipConfig clipConfig, AnimationStateBehaviour animationState)
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(c_ResultDelay);
             int loopCount = clipConfig.LoopTime;
             AudioSource music = GameManager.Instance.Music;
-            music.volume = 0.4f;
+            music.volume = c_MusicDuckVolume;
             for (int i = 0; i < loopCount; i++)
             {
                 m_Animator.Play(animationState.StateHash);

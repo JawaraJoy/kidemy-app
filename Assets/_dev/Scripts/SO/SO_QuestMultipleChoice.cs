@@ -9,6 +9,8 @@ namespace EduGame
     [CreateAssetMenu(fileName = "SO_QuestMultipleChoice", menuName = "EduGame/Quest/MultipleChoice")]
     public class SO_QuestMultipleChoice : SO_Quest
     {
+        private const string c_ChoiceSegment = "_choice_";
+
         [Space]
         [SerializeField, Min(1)]
         private int m_RepeatSoundQuest = 1;
@@ -48,7 +50,7 @@ namespace EduGame
                 {
                     requests.Add(new VoiceRequest
                     {
-                        id = name + "_choice_" + i,
+                        id = name + c_ChoiceSegment + i,
                         text = m_Choices[i].Text,
                         voice_id = GetVoiceId()
                     });
@@ -83,7 +85,7 @@ namespace EduGame
         {
             index = -1;
 
-            if (string.IsNullOrEmpty(requestId) || !requestId.Contains("_choice_"))
+            if (string.IsNullOrEmpty(requestId) || !requestId.Contains(c_ChoiceSegment))
                 return false;
 
             index = StringHelper.ExtractId(requestId);

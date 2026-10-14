@@ -7,6 +7,8 @@ namespace EduGame
 {
     public abstract class SO_Quest : ScriptableObject
     {
+        private const string c_QuestionSegment = "_question";
+
         public enum QuestCategory { MATH_AND_LOGIC, LITERACY_AND_LANGUAGE, CREATIVITY_AND_EXPRESSION, SOCIAL_EMOTIONAL_LEARNING, LIFE_SKILLS_AND_DISCOVERY }
 
         [Header("Identifier")]
@@ -57,7 +59,7 @@ namespace EduGame
                 {
                     new VoiceRequest
                     {
-                        id = name + "_question",
+                        id = name + c_QuestionSegment,
                         text = m_Question.Text,
                         voice_id = GetVoiceIdInternal()
                     }
@@ -74,7 +76,7 @@ namespace EduGame
 
         public virtual void AssignVoiceClip(string requestId, AudioClip clip)
         {
-            if (!string.IsNullOrEmpty(requestId) && requestId.Contains("_question"))
+            if (!string.IsNullOrEmpty(requestId) && requestId.Contains(c_QuestionSegment))
                 m_Question?.SetAudio(clip);
         }
         public bool HasMultipleImages(out Sprite[] multipleImages, out Image prefab)

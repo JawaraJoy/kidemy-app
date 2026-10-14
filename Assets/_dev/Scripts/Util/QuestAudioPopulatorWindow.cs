@@ -10,6 +10,16 @@ using EduGame; // Matches your project namespace
 
 public class QuestAudioPopulatorWindow : EditorWindow
 {
+    private const string c_WindowTitle = "Quest Audio Populator";
+    private const string c_HeaderLabel = "Quest Audio Batch Populator";
+    private const string c_QuestAssetsLabel = "Quest Assets";
+    private const string c_QuestAssetsHelp = "Add the SO_Quest assets that should have their audio populated.";
+    private const string c_ForceRedownloadLabel = "Force Redownload Existing";
+    private const string c_PopulateButton = "Populate Selected Quest Audio";
+    private const int c_SpaceSmall = 5;
+    private const int c_SpaceLarge = 10;
+    private const int c_ButtonHeight = 35;
+
     [SerializeField] [FormerlySerializedAs("targetQuests")] private SO_Quest[] m_TargetQuests = new SO_Quest[0];
     private bool m_ForceRedownload = false;
     private bool m_IsProcessing = false;
@@ -17,32 +27,32 @@ public class QuestAudioPopulatorWindow : EditorWindow
     [MenuItem("Tools/Audio/Populate Quest Audio")]
     public static void ShowWindow()
     {
-        GetWindow<QuestAudioPopulatorWindow>("Quest Audio Populator");
+        GetWindow<QuestAudioPopulatorWindow>(c_WindowTitle);
     }
 
     private void OnGUI()
     {
-        GUILayout.Label("Quest Audio Batch Populator", EditorStyles.boldLabel);
-        EditorGUILayout.Space(5);
+        GUILayout.Label(c_HeaderLabel, EditorStyles.boldLabel);
+        EditorGUILayout.Space(c_SpaceSmall);
 
         SerializedObject serializedWindow = new SerializedObject(this);
         serializedWindow.Update();
         EditorGUILayout.PropertyField(
             serializedWindow.FindProperty(nameof(m_TargetQuests)),
-            new GUIContent("Quest Assets"),
+            new GUIContent(c_QuestAssetsLabel),
             true);
         serializedWindow.ApplyModifiedProperties();
 
         EditorGUILayout.HelpBox(
-            "Add the SO_Quest assets that should have their audio populated.",
+            c_QuestAssetsHelp,
             MessageType.Info);
 
-        m_ForceRedownload = EditorGUILayout.Toggle("Force Redownload Existing", m_ForceRedownload);
+        m_ForceRedownload = EditorGUILayout.Toggle(c_ForceRedownloadLabel, m_ForceRedownload);
 
-        EditorGUILayout.Space(10);
+        EditorGUILayout.Space(c_SpaceLarge);
 
         GUI.enabled = !m_IsProcessing;
-        if (GUILayout.Button("Populate Selected Quest Audio", GUILayout.Height(35)))
+        if (GUILayout.Button(c_PopulateButton, GUILayout.Height(c_ButtonHeight)))
         {
             // Start coroutine cleanly in Edit Mode without MonoBehaviour!
             EditorCoroutineUtility.StartCoroutineOwnerless(Routine_PopulateAllQuests());

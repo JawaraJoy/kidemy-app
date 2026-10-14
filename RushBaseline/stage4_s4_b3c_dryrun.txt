@@ -1,0 +1,252 @@
+batch=s4_b3c spec=s4_b3c.spec file=18 ganti=58 sisip=60 error=0 dry=True
+QuestColoringField.cs:51
+  - m_Cb = new CommandBuffer { name = "UIPainter" };
+  + m_Cb = new CommandBuffer { name = c_CommandBufferName };
+QuestColoringField.cs:90
+  - m_QuestColoring.Brush.SetVector("_BrushPos", uv);
+  + m_QuestColoring.Brush.SetVector(c_BrushPosProperty, uv);
+QuestColoringField.cs:117
+  - RenderTexture smallRT = RenderTexture.GetTemporary(64, 64);
+  + RenderTexture smallRT = RenderTexture.GetTemporary(c_SampleSize, c_SampleSize);
+QuestColoringField.cs:125
+  - Texture2D tex = new Texture2D(64, 64, TextureFormat.ARGB32, false);
+  + Texture2D tex = new Texture2D(c_SampleSize, c_SampleSize, TextureFormat.ARGB32, false);
+QuestColoringField.cs:127
+  - tex.ReadPixels(new Rect(0, 0, 64, 64), 0, 0);
+  + tex.ReadPixels(new Rect(0, 0, c_SampleSize, c_SampleSize), 0, 0);
+QuestColoringField.cs:138
+  - if(pixels[i].a > 20f)
+  + if(pixels[i].a > c_AlphaCutoff)
+QuestColoringField.cs:143
+  - if (pixels[i].r < 250 || pixels[i].g < 250 || pixels[i].b < 250)
+  + if (pixels[i].r < c_WhiteCutoff || pixels[i].g < c_WhiteCutoff || pixels[i].b < c_WhiteCutoff)
+QuestColoringField.cs: sisip 6 baris setelah baris 11
+  + private const string c_CommandBufferName = "UIPainter";
+  + private const string c_BrushPosProperty = "_BrushPos";
+  + private const int c_SampleSize = 64;
+  + private const float c_AlphaCutoff = 20f;
+  + private const int c_WhiteCutoff = 250;
+  + 
+QuestContainer.cs:11
+  - Transform shadow = transform.Find("Shadow");
+  + Transform shadow = transform.Find(c_ShadowName);
+QuestContainer.cs: sisip 2 baris setelah baris 7
+  + private const string c_ShadowName = "Shadow";
+  + 
+QuestDragNDropZone.cs:83
+  - Scaled(item, 0.75f);
+  + Scaled(item, c_ItemScale);
+QuestDragNDropZone.cs:187
+  - Scaled(item, 0.75f);
+  + Scaled(item, c_ItemScale);
+QuestDragNDropZone.cs:294
+  - m_Animator.Play("Accept");
+  + m_Animator.Play(c_AcceptState);
+QuestDragNDropZone.cs:303
+  - m_Animator.Play("Reject");
+  + m_Animator.Play(c_RejectState);
+QuestDragNDropZone.cs: sisip 4 baris setelah baris 10
+  + private const float c_ItemScale = 0.75f;
+  + private const string c_AcceptState = "Accept";
+  + private const string c_RejectState = "Reject";
+  + 
+QuestMatchingCard.cs:73
+  - Invoke("Hide", m_Matching.PeekDuration);
+  + Invoke(c_HideMethod, m_Matching.PeekDuration);
+QuestMatchingCard.cs: sisip 2 baris setelah baris 7
+  + private const string c_HideMethod = "Hide";
+  + 
+QuestPaginator.cs:95
+  - m_PageIndicator.text = "Page " + (m_CurrentPageIndex + 1) + " of " + m_TotalPages;
+  + m_PageIndicator.text = c_PagePrefix + (m_CurrentPageIndex + 1) + " of " + m_TotalPages;
+QuestPaginator.cs:95
+  - m_PageIndicator.text = c_PagePrefix + (m_CurrentPageIndex + 1) + " of " + m_TotalPages;
+  + m_PageIndicator.text = c_PagePrefix + (m_CurrentPageIndex + 1) + c_PageOf + m_TotalPages;
+QuestPaginator.cs: sisip 3 baris setelah baris 9
+  + private const string c_PagePrefix = "Page ";
+  + private const string c_PageOf = " of ";
+  + 
+QuestRythimBeat.cs:50
+  - m_Animator.Play("Tap");
+  + m_Animator.Play(c_TapState);
+QuestRythimBeat.cs:60
+  - yield return new WaitForSeconds(0.1f);
+  + yield return new WaitForSeconds(c_TapFeedbackDelay);
+QuestRythimBeat.cs:65
+  - yield return new WaitForSeconds(0.1f);
+  + yield return new WaitForSeconds(c_TapFeedbackDelay);
+QuestRythimBeat.cs:76
+  - if(collision.tag == "NoteHead" && !m_IsSuccess)
+  + if(collision.tag == c_NoteHeadTag && !m_IsSuccess)
+QuestRythimBeat.cs: sisip 4 baris setelah baris 11
+  + private const string c_TapState = "Tap";
+  + private const float c_TapFeedbackDelay = 0.1f;
+  + private const string c_NoteHeadTag = "NoteHead";
+  + 
+QuestRythimNote.cs:72
+  - Vector2 targetPosition = currentPosition + (Vector2.left * (m_Speed * 5000) * Time.fixedDeltaTime);
+  + Vector2 targetPosition = currentPosition + (Vector2.left * (m_Speed * c_SpeedScale) * Time.fixedDeltaTime);
+QuestRythimNote.cs:109
+  - if(collision.tag == "NoteEnd")
+  + if(collision.tag == c_NoteEndTag)
+QuestRythimNote.cs: sisip 3 baris setelah baris 12
+  + private const int c_SpeedScale = 5000;
+  + private const string c_NoteEndTag = "NoteEnd";
+  + 
+Quest.cs:148
+  - music.volume = 0.4f;
+  + music.volume = c_MusicDuckVolume;
+Quest.cs:163
+  - SubmitInternal(result ? 3 : 1);
+  + SubmitInternal(result ? c_MaxStar : 1);
+Quest.cs: sisip 3 baris setelah baris 9
+  + protected const int c_MaxStar = 3;
+  + private const float c_MusicDuckVolume = 0.4f;
+  + 
+QuestColoring.cs:72
+  - Invoke("RecalculatePalettesContainer", 0.5f);
+  + Invoke(c_RecalculatePalettesMethod, 0.5f);
+QuestColoring.cs:96
+  - m_Brush.SetColor("_BrushColor", m_BindedColor);
+  + m_Brush.SetColor(c_BrushColorProperty, m_BindedColor);
+QuestColoring.cs:97
+  - m_Brush.SetFloat("_BrushSize", m_BrushSize);
+  + m_Brush.SetFloat(c_BrushSizeProperty, m_BrushSize);
+QuestColoring.cs:145
+  - GUI.DrawTexture(new Rect(mousePosition.x - 26, Screen.height - mousePosition.y - 26, 32, 32), m_BindedCursor.texture);
+  + GUI.DrawTexture(new Rect(mousePosition.x - c_CursorOffset, Screen.height - mousePosition.y - c_CursorOffset, c_CursorSize, c_CursorSize), m_BindedCursor.texture);
+QuestColoring.cs:169
+  - if (appraisal >= 0.85)
+  + if (appraisal >= c_ThreeStarAppraisal)
+QuestColoring.cs:170
+  - star = 3;
+  + star = c_MaxStar;
+QuestColoring.cs: sisip 7 baris setelah baris 9
+  + private const string c_BrushColorProperty = "_BrushColor";
+  + private const string c_BrushSizeProperty = "_BrushSize";
+  + private const string c_RecalculatePalettesMethod = "RecalculatePalettesContainer";
+  + private const int c_CursorOffset = 26;
+  + private const int c_CursorSize = 32;
+  + private const double c_ThreeStarAppraisal = 0.85;
+  + 
+QuestDragNDrop.cs:171
+  - Invoke("RecalculateContainer", 0.5f);
+  + Invoke(c_RecalculateContainerMethod, 0.5f);
+QuestDragNDrop.cs:196
+  - star = 3;
+  + star = c_MaxStar;
+QuestDragNDrop.cs:302
+  - id = name + "_group_" + i + "_label_" + j,
+  + id = name + c_GroupSegment + i + "_label_" + j,
+QuestDragNDrop.cs:302
+  - id = name + c_GroupSegment + i + "_label_" + j,
+  + id = name + c_GroupSegment + i + c_LabelSegment + j,
+QuestDragNDrop.cs:321
+  - if (requestId.IndexOf("_group_") > 0)
+  + if (requestId.IndexOf(c_GroupSegment) > 0)
+QuestDragNDrop.cs:328
+  - else if (requestId.IndexOf("_question") > 0)
+  + else if (requestId.IndexOf(c_QuestionSegment) > 0)
+QuestDragNDrop.cs:339
+  - if (requestId.IndexOf("_group_") > 0)
+  + if (requestId.IndexOf(c_GroupSegment) > 0)
+QuestDragNDrop.cs:346
+  - else if (requestId.IndexOf("_question") > 0)
+  + else if (requestId.IndexOf(c_QuestionSegment) > 0)
+QuestDragNDrop.cs: sisip 5 baris setelah baris 12
+  + private const string c_RecalculateContainerMethod = "RecalculateContainer";
+  + private const string c_GroupSegment = "_group_";
+  + private const string c_LabelSegment = "_label_";
+  + private const string c_QuestionSegment = "_question";
+  + 
+QuestMatching.cs:90
+  - Invoke("Success", m_PeekDuration);
+  + Invoke(c_SuccessMethod, m_PeekDuration);
+QuestMatching.cs:97
+  - Invoke("CloaseAllCard", m_PeekDuration);
+  + Invoke(c_CloseAllCardMethod, m_PeekDuration);
+QuestMatching.cs:154
+  - Invoke("RecalculateChoiceContainer", 0.5f);
+  + Invoke(c_RecalculateChoiceContainerMethod, 0.5f);
+QuestMatching.cs: sisip 4 baris setelah baris 9
+  + private const string c_SuccessMethod = "Success";
+  + private const string c_CloseAllCardMethod = "CloaseAllCard";
+  + private const string c_RecalculateChoiceContainerMethod = "RecalculateChoiceContainer";
+  + 
+QuestMultipleChoices.cs:258
+  - star = 3;
+  + star = c_MaxStar;
+QuestMultipleChoicesNarrative.cs:51
+  - textVoice = narrative.text + "." + textVoice;
+  + textVoice = narrative.text + c_SentenceEnd + textVoice;
+QuestMultipleChoicesNarrative.cs:55
+  - id = name + "_question",
+  + id = name + c_QuestionSegment,
+QuestMultipleChoicesNarrative.cs: sisip 3 baris setelah baris 8
+  + private const string c_SentenceEnd = ".";
+  + private const string c_QuestionSegment = "_question";
+  + 
+QuestRythimMaker.cs:88
+  - Invoke("StartPlay", 2);
+  + Invoke(c_StartPlayMethod, 2);
+QuestRythimMaker.cs:123
+  - star = 3;
+  + star = c_MaxStar;
+QuestRythimMaker.cs:146
+  - Invoke("StartPlay", 2);
+  + Invoke(c_StartPlayMethod, 2);
+QuestRythimMaker.cs: sisip 2 baris setelah baris 9
+  + private const string c_StartPlayMethod = "StartPlay";
+  + 
+QuestShapeIt.cs:120
+  - shape.Rect.localRotation = Quaternion.Euler(Vector3.forward * (Random.Range(0, 4) * 90));
+  + shape.Rect.localRotation = Quaternion.Euler(Vector3.forward * (Random.Range(0, c_RotationStepCount) * c_QuarterTurn));
+QuestShapeIt.cs:151
+  - ret = m_ItemIndex[id] == zone.transform.GetEntityId() && item.Rect.eulerAngles.z < 0.01f;
+  + ret = m_ItemIndex[id] == zone.transform.GetEntityId() && item.Rect.eulerAngles.z < c_AngleEpsilon;
+QuestShapeIt.cs:161
+  - Submit(3);
+  + Submit(c_MaxStar);
+QuestShapeIt.cs:176
+  - float rotateValue = 90f;
+  + float rotateValue = c_QuarterTurn;
+QuestShapeIt.cs:188
+  - item.Rect.localRotation = Quaternion.Euler(Vector3.forward * (item.Rect.eulerAngles.z + 3));
+  + item.Rect.localRotation = Quaternion.Euler(Vector3.forward * (item.Rect.eulerAngles.z + c_RotateStepDegrees));
+QuestShapeIt.cs:190
+  - if(item.Rect.eulerAngles.z == 360)
+  + if(item.Rect.eulerAngles.z == c_FullCircle)
+QuestShapeIt.cs:194
+  - rotateValue -= 3;
+  + rotateValue -= c_RotateStepDegrees;
+QuestShapeIt.cs: sisip 6 baris setelah baris 11
+  + private const int c_RotationStepCount = 4;
+  + private const int c_QuarterTurn = 90;
+  + private const float c_AngleEpsilon = 0.01f;
+  + private const int c_RotateStepDegrees = 3;
+  + private const int c_FullCircle = 360;
+  + 
+QuestWordBuilder.cs:110
+  - Invoke("RecalculateChoiceContainer", 0.5f);
+  + Invoke(c_RecalculateChoiceContainerMethod, 0.5f);
+QuestWordBuilder.cs: sisip 2 baris setelah baris 9
+  + private const string c_RecalculateChoiceContainerMethod = "RecalculateChoiceContainer";
+  + 
+SO_Quest.cs:60
+  - id = name + "_question",
+  + id = name + c_QuestionSegment,
+SO_Quest.cs:77
+  - if (!string.IsNullOrEmpty(requestId) && requestId.Contains("_question"))
+  + if (!string.IsNullOrEmpty(requestId) && requestId.Contains(c_QuestionSegment))
+SO_Quest.cs: sisip 2 baris setelah baris 9
+  + private const string c_QuestionSegment = "_question";
+  + 
+SO_QuestMultipleChoice.cs:51
+  - id = name + "_choice_" + i,
+  + id = name + c_ChoiceSegment + i,
+SO_QuestMultipleChoice.cs:86
+  - if (string.IsNullOrEmpty(requestId) || !requestId.Contains("_choice_"))
+  + if (string.IsNullOrEmpty(requestId) || !requestId.Contains(c_ChoiceSegment))
+SO_QuestMultipleChoice.cs: sisip 2 baris setelah baris 11
+  + private const string c_ChoiceSegment = "_choice_";
+  + 
