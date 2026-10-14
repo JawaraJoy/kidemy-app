@@ -98,7 +98,7 @@ Move|EduGame.FeedbackItemParticle|ExecPlay
 
 # Stage 3 batch 1: public fields -> private serialized, public const -> c_ (rules checked via the reviewed signature)
 Reviewed|EduGame.Global|.cctor|lit:Assets/_dev/SO/Challenge/;lit:SO_Challenge_$$.asset;fld:EduGame.Global::CHALLENGE_DATA_DIR;fld:EduGame.Global::CHALLENGE_DATA_NAME
-Reviewed|EduGame.VoiceAsset|GenerateAudio|call:EduGame.VoiceAPI::get_DefaultVoiceId;lit:n3tkGOcEribaYI5zg4pu;call:EduGame.VoiceAPI::.ctor
+Reviewed|EduGame.VoiceAsset|GenerateAudio|call:EduGame.VoiceAPI::get_DefaultVoiceId;lit:n3tkGOcEribaYI5zg4pu;call:EduGame.VoiceAPI::.ctor;fld:EduGame.VoiceAsset::m_ApiToken;call:EduGame.VoiceAsset::ResolveApiTokenInternal
 Reviewed|SceneButtonGenerator|GenerateButtonsInEditor|alias:fld:SceneButtonGenerator::container=fld:SceneButtonGenerator::m_Container;alias:fld:SceneButtonGenerator::buttonPrefab=fld:SceneButtonGenerator::m_ButtonPrefab;fld:SceneLoader::targetSceneName;call:SceneLoader::SetTargetSceneName
 
 # Stage 3 batch 2: TweenHandler struct fields -> private serialized + get-only property
@@ -121,7 +121,7 @@ Reviewed|EduGame.AudioPlayer|Start|
 Reviewed|EduGame.ContentManager|Awake|
 Reviewed|EduGame.FeedbackItemAnimation|GetAnimator|
 Reviewed|EduGame.GameManager|SetNPC|
-Reviewed|EduGame.GameManager|Start|fld:EduGame.GameManager::m_FallbackSessionId;lit:67e05cdd-c077-4d84-8c49-15767bf13ef2
+Reviewed|EduGame.GameManager|Start|fld:EduGame.GameManager::m_FallbackSessionId;lit:67e05cdd-c077-4d84-8c49-15767bf13ef2;call:EduGame.GameManager::ApplyApiTokenFromUrl;call:EduGame.URIHelper::RemoveQueryParam;lit:token
 Reviewed|EduGame.QuestColoringField|Start|
 Reviewed|EduGame.QuestColoringItem|Awake|
 Reviewed|EduGame.QuestColoring|Awake|
@@ -160,4 +160,6 @@ Reviewed|HandTutorial|PlayTutorial|
 Reviewed|RawImageAlphaFilter|Awake|
 Reviewed|EduGame.QuestDragNDropItem|OnEndDrag|call:UnityEngine.Object::op_Implicit
 
-Reviewed|EduGame.GameManager|.ctor|fld:EduGame.GameManager::m_FallbackSessionId;lit:67e05cdd-c077-4d84-8c49-15767bf13ef2
+Reviewed|EduGame.GameManager|.ctor|fld:EduGame.GameManager::m_FallbackSessionId;lit:67e05cdd-c077-4d84-8c49-15767bf13ef2;fld:EduGame.GameManager::m_APIInfoURL;fld:EduGame.GameManager::m_GameURL;lit:https://be.kimee.io/api/v1/external/games;lit:https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]
+Reviewed|EduGame.APIManager|.ctor|fld:EduGame.APIManager::m_ApiToken;lit:game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e
+Reviewed|EduGame.VoiceAsset+VoiceAssetEditor|OnInspectorGUI|call:UnityEditor.SerializedProperty::get_stringValue;fld:EduGame.VoiceAsset+VoiceAssetEditor::m_ApiToken;call:EduGame.VoiceAsset::get_ResolvedApiToken

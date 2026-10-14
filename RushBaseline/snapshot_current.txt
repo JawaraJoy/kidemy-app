@@ -139326,7 +139326,7 @@ ASSET	Assets/_dev2/GenerateVoice/VoiceAsset.asset	(asset)	EduGame.VoiceAsset#0	m
 ASSET	Assets/_dev2/GenerateVoice/VoiceAsset.asset	(asset)	EduGame.VoiceAsset#0	m_Text	How many times is the sound played?
 ASSET	Assets/_dev2/GenerateVoice/VoiceAsset.asset	(asset)	EduGame.VoiceAsset#0	m_VoiceId	n3tkGOcEribaYI5zg4pu
 ASSET	Assets/_dev2/GenerateVoice/VoiceAsset.asset	(asset)	EduGame.VoiceAsset#0	m_AudioClip	null
-ASSET	Assets/_dev2/GenerateVoice/VoiceAsset.asset	(asset)	EduGame.VoiceAsset#0	m_ApiToken	game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e
+ASSET	Assets/_dev2/GenerateVoice/VoiceAsset.asset	(asset)	EduGame.VoiceAsset#0	m_ApiToken	
 ASSET	Assets/_dev2/GenerateVoice/VoiceAsset.asset	(asset)	EduGame.VoiceAsset#0	m_IsGenerating	0
 ASSET	Assets/_dev2/Quest/Multiple Choice/Island_1_BigOrSmall/Configs/Challenge_BigOrSmall.asset	(asset)	EduGame.ChallengeConfig#0	m_Enabled	1
 ASSET	Assets/_dev2/Quest/Multiple Choice/Island_1_BigOrSmall/Configs/Challenge_BigOrSmall.asset	(asset)	EduGame.ChallengeConfig#0	m_Script	asset:03830a30161896548ad60f71ef12271d:11500000:UnityEditor.MonoScript

@@ -9,7 +9,7 @@ namespace EduGame
 {
     public class APIManager : MonoBehaviour
     {
-        private string m_ApiToken = "game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e";
+        private string m_ApiToken;
         private string m_ApiUrl = "";
         [SerializeField] private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
 
@@ -176,5 +176,18 @@ namespace EduGame
                 }
             }
         }
+
+        public void SetApiToken(string token)
+        {
+            m_ApiToken = token;
+        }
+
+#if UNITY_EDITOR
+        private void Awake()
+        {
+            if (string.IsNullOrEmpty(m_ApiToken))
+                m_ApiToken = LocalApiToken.Read();
+        }
+#endif
     }
 }

@@ -16,6 +16,7 @@ namespace EduGame
         private const string c_ParamRedirectUrl = "redirect_url";
         private const string c_ParamBgmVolume = "bgm_volume";
         private const string c_ParamSessionId = "session_id";
+        private const string c_ParamApiToken = "token";
         private const float c_BgmVolumeScale = 10f;
         private const int c_SecondsPerMinute = 60;
         private const string c_TimerSeparator = ":";
@@ -136,9 +137,9 @@ namespace EduGame
         private ResultItem[] m_Result;
         private APIManager m_ApiManager;
         private AssetManager m_AssetManager;
-        private string m_APIInfoURL = "https://be.kimee.io/api/v1/external/games";
+        private const string c_ApiInfoUrl = "https://be.kimee.io/api/v1/external/games";
         [SerializeField] private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
-        private string m_GameURL = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
+        private const string c_GameUrl = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
         [SerializeField] private string m_FallbackSessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
         private HandTutorial m_HandTutorial;
         private Canvas m_Canvas;
@@ -200,7 +201,7 @@ namespace EduGame
 
 #if !UNITY_EDITOR && UNITY_WEBGL
                 LogToBrowser("Base URL: " + m_BaseURL);
-                LogToBrowser("Frame URL: " + m_FrameURL);
+                LogToBrowser("Frame URL: " + URIHelper.RemoveQueryParam(m_FrameURL, c_ParamApiToken));
 #endif
 
 #if !UNITY_EDITOR && UNITY_WEBGL
@@ -235,6 +236,8 @@ namespace EduGame
                     m_SessionId = param[c_ParamSessionId];
                 else
                     m_SessionId = m_FallbackSessionId;
+
+                ApplyApiTokenFromUrl(param);
             }
             else
                 m_SessionId = m_FallbackSessionId;
@@ -767,6 +770,12 @@ namespace EduGame
             {
                 m_HandTutorial.PlayTutorial(startPos, endPos, Canvas.transform, mode);
             }
+        }
+
+        private void ApplyApiTokenFromUrl(Dictionary<string, string> param)
+        {
+            if (m_ApiManager && param.ContainsKey(c_ParamApiToken))
+                m_ApiManager.SetApiToken(param[c_ParamApiToken]);
         }
     }
 }

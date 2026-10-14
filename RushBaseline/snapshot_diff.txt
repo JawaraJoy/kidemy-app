@@ -1,3 +1,4 @@
+CHANGED	ASSET	Assets/_dev2/GenerateVoice/VoiceAsset.asset	(asset)	EduGame.VoiceAsset#0	m_ApiToken	game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e  =>  
 ADDED	SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_A_rev.unity	Stage[0]/UI[1]/Container[0]/Challenge[1]	EduGame.GameManager#0	m_APIResultURL	https://be.kimee.io/api/v1/external/games/progress
 ADDED	SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_A_rev.unity	Stage[0]/UI[1]/Container[0]/Challenge[1]	EduGame.GameManager#0	m_FallbackSessionId	67e05cdd-c077-4d84-8c49-15767bf13ef2
 ADDED	SCENE	Assets/_dev/Scenes/Dev_001_FrogsCount_A_rev.unity	Stage[0]/UI[1]/Container[0]/Challenge[1]	EduGame.APIManager#0	m_ApiAIUrl	https://kimee-ai-stg.linkit360.ai/

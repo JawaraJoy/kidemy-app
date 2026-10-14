@@ -16,5 +16,5 @@ MonoBehaviour:
   m_Text: How many times is the sound played?
   m_VoiceId: n3tkGOcEribaYI5zg4pu
   m_AudioClip: {fileID: 0}
-  m_ApiToken: game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e
+  m_ApiToken: 
   m_IsGenerating: 0

@@ -126,7 +126,9 @@ namespace EduGame
             // Validate API Token
             // --------------------------------------------------------
 
-            if (string.IsNullOrWhiteSpace(m_ApiToken))
+            string apiToken = ResolveApiTokenInternal();
+
+            if (string.IsNullOrWhiteSpace(apiToken))
             {
                 Debug.LogError(
                     $"[VoiceAsset] API Token is empty on '{name}'."
@@ -168,7 +170,7 @@ namespace EduGame
             new VoiceAPI().Generate(
                 m_Text,
                 voiceId,
-                m_ApiToken,
+                apiToken,
 
                 // ====================================================
                 // SUCCESS
@@ -456,6 +458,16 @@ namespace EduGame
         private const string c_UndoGenerate = "Generate Voice Audio";
         private const string c_InvalidCharReplacement = "_";
 
+        public string ResolvedApiToken => ResolveApiTokenInternal();
+
+        private string ResolveApiTokenInternal()
+        {
+            if (!string.IsNullOrWhiteSpace(m_ApiToken))
+                return m_ApiToken;
+
+            return LocalApiToken.Read();
+        }
+
         // ============================================================
         // CUSTOM INSPECTOR
         // ============================================================
@@ -622,7 +634,7 @@ namespace EduGame
 
                 bool hasToken =
                     !string.IsNullOrWhiteSpace(
-                        m_ApiToken.stringValue
+                        asset.ResolvedApiToken
                     );
 
                 bool canGenerate =

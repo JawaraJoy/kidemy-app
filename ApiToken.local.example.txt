@@ -1,0 +1,5 @@
+# Salin berkas ini menjadi ApiToken.local.txt (di root project, berkas itu di-.gitignore),
+# lalu ganti SELURUH isinya dengan satu baris: token API Anda. Tanpa komentar, tanpa tanda kutip.
+# Dipakai HANYA di Editor: APIManager (Play Mode) dan VoiceAsset (Generate Audio).
+# Di build WebGL, token dikirim halaman pembungkus lewat parameter URL 'token'.
+PASTE_YOUR_API_TOKEN_HERE

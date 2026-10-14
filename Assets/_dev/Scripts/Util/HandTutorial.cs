@@ -8,6 +8,8 @@ public class HandTutorial : MonoBehaviour
     private const string c_TrailOriginName = "TrailOrigin";
     private const float c_ClickWaitSeconds = 1f;
     private const float c_DefaultWaitSeconds = 0.2f;
+    private const string c_IdleAnimationName = "Idle";
+    private const string c_ClickAnimationName = "Click";
 
     public enum TutorialMode
     {
@@ -24,8 +26,8 @@ public class HandTutorial : MonoBehaviour
     [SerializeField] [FormerlySerializedAs("moveDuration")] private float m_MoveDuration = 1.2f;
     [SerializeField] [FormerlySerializedAs("fadeDuration")] private float m_FadeDuration = 0.4f;
 
-    private readonly string m_IdleAnimationName = "Idle";
-    private readonly string m_ClickAnimationName = "Click";
+    private readonly string m_IdleAnimationName = c_IdleAnimationName;
+    private readonly string m_ClickAnimationName = c_ClickAnimationName;
 
     private GameObject m_HandInstance;
 
