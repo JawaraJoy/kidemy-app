@@ -1,6 +1,6 @@
 file=C:\Users\Pongo\Documents\Project\Unity\kidemy-app\RushBaseline\snapshot_current.txt
 queue=763 scenes=94 prefabs=270 assets=361
 gameObjects=8885 components=27784 missingScripts=11 lines=145122
-elapsedSec=13.2
+elapsedSec=17.4
 errors=0
 dirtyOnOpen=0

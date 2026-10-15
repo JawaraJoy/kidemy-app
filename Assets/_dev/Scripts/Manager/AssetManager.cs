@@ -31,7 +31,7 @@ namespace EduGame
         private static extern void JS_OnVoiceDownloadComplete();
 
         private static AssetManager s_Instance;
-        public static AssetManager Instance => s_Instance;
+        
 
         [Header("Debug Settings")]
         [Tooltip("Check this in the Inspector to force API downloads and overwrite existing files.")]
@@ -44,7 +44,7 @@ namespace EduGame
 
         private void Awake()
         {
-            if (Instance != null && Instance != this)
+            if (s_Instance != null && s_Instance != this)
             {
                 Destroy(gameObject);
                 return;

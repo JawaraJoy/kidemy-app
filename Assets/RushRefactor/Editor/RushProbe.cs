@@ -345,6 +345,7 @@ namespace RushRefactor
             Add("dialog", DialogText(gm));
             Add("quest", FirstActiveName("Quest"));
             Add("shadow", ShadowSummary());
+            Add("x_anim", AnimSummary(gm));
 
             AudioSource sfx = Member(gm, "AudioSource") as AudioSource;
             AudioSource music = Member(gm, "Music") as AudioSource;
@@ -473,6 +474,7 @@ namespace RushRefactor
         static void Step2(object gm)
         {
             if (gm == null) return;
+            Add("x_anim2", AnimSummary(gm));
             if (SessionInfoHas("result="))
             {
                 Add("right", Convert.ToString(Member(gm, "RightAnswerCount"), RushCommon.Inv));
@@ -490,6 +492,7 @@ namespace RushRefactor
         static void Step3(object gm)
         {
             if (gm == null) return;
+            Add("x_anim3", AnimSummary(gm));
             if (SessionInfoHas("result="))
             {
                 Add("x_right2", Convert.ToString(Member(gm, "RightAnswerCount"), RushCommon.Inv));
@@ -519,6 +522,13 @@ namespace RushRefactor
         // ---------------------------------------------------------------- reflection helpers
 
         static Type Ty(string name) { return RushCommon.FindType("EduGame." + name); }
+
+        static string AnimSummary(object gm)
+        {
+            List<Component> hs = ActiveOf("AnimationHandler").ToList();
+            AudioSource music = Member(gm, "Music") as AudioSource;
+            return hs.Count + ":" + (music != null ? music.volume.ToString("F2", RushCommon.Inv) : "-");
+        }
 
         static object GetGm()
         {
