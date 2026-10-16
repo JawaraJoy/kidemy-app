@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fe99ace52ee110469853422c88e340f, type: 3}
-  m_Name: Dialogue_FindTheShape
+  m_Name: Dialogue_FindTheShape_00 1
   m_EditorClassIdentifier: Assembly-CSharp::AddOn.TextAnimation.DialogueConfig
   m_Identic:
     m_Id: findtheshape
@@ -22,7 +22,10 @@ MonoBehaviour:
   - m_Words: Find
     m_AddSpaceForNext: 1
     m_Effects: []
-  - m_Words: circle
+  - m_Words: a
+    m_AddSpaceForNext: 1
+    m_Effects: []
+  - m_Words: Triangle
     m_AddSpaceForNext: 0
     m_Effects:
     - {fileID: 11400000, guid: 64f0c6aad2a9fde4f82965844609bc47, type: 2}
