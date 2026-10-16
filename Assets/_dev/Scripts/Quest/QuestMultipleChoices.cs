@@ -222,6 +222,7 @@ namespace EduGame
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)
         {
             QuestMultipleChoicesItem choiceItem = Instantiate(prefab ? prefab : m_ChoiceItemPrefab);
+            choiceItem.SetFeedbackManager(m_Host.FeedbackManager);
 
             choiceItem.transform.SetParent(m_ChoicesContainer);
             choiceItem.transform.localPosition = Vector3.zero;

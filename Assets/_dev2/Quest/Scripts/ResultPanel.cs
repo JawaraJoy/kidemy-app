@@ -7,10 +7,12 @@ using UnityEngine.UI;
 
 namespace EduGame
 {
-    public class ResultPanel : PanelView
+    public class ResultPanel : MonoBehaviour
     {
         private const float c_Percent = 100f;
 
+        [SerializeField]
+        private PanelView m_Panel;
         [SerializeField]
         private Image m_NPCIcon;
         [SerializeField]
@@ -77,7 +79,7 @@ namespace EduGame
                 m_LabelTextEff.Refresh();
             }
 
-            ShowInternal();
+            m_Panel.Show();
             m_StarPresenter.DisableAllStars();
             m_StarPresenter.StarsResult(context);
         }

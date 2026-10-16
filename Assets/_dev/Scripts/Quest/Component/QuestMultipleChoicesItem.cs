@@ -22,6 +22,8 @@ namespace EduGame
         protected ButtonEvents m_Events;
 
         private TextEffect m_TextEffect;
+        private FeedbackManager m_FeedbackManager;
+        private bool m_IsFeedbackBound = false;
         
         protected override void Awake()
         {
@@ -42,12 +44,25 @@ namespace EduGame
 
             TryGetComponent<ButtonEvents>(out m_Events);
             
-            if(m_Events)
+            if(m_Events && m_FeedbackManager && !m_IsFeedbackBound)
             {
-                m_Events.AddEventOnPointerOver(FeedbackManager.Instance.ButtonOver.Play);
-                m_Events.AddEventOnPointerExit(FeedbackManager.Instance.ButtonExit.Play);
-                m_Events.AddEventOnPointerClick(FeedbackManager.Instance.ButtonClick.Play);
+                m_IsFeedbackBound = true;
+                m_Events.AddEventOnPointerOver(m_FeedbackManager.ButtonOver.Play);
+                m_Events.AddEventOnPointerExit(m_FeedbackManager.ButtonExit.Play);
+                m_Events.AddEventOnPointerClick(m_FeedbackManager.ButtonClick.Play);
             }
+        }
+
+        public void SetFeedbackManager(FeedbackManager feedbackManager)
+        {
+            SetFeedbackManagerInternal(feedbackManager);
+        }
+
+        protected virtual void SetFeedbackManagerInternal(FeedbackManager feedbackManager)
+        {
+            m_FeedbackManager = feedbackManager;
+
+            InitInternal();
         }
 
         public virtual void SetChoice(QuestUtilLabelChoice choice)

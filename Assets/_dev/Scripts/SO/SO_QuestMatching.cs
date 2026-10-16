@@ -10,22 +10,22 @@ namespace EduGame
     {
         [Header("Question")]
         [SerializeField] [FormerlySerializedAs("text")] private string m_Text;
-        [SerializeField] [FormerlySerializedAs("matches")] private QuestUtilLabelMatching[] m_Matches;
+        [SerializeField] [FormerlySerializedAs("matches")] private QuestUtilLabel[] m_Matches;
 
         [Header("Rule")]
         //[SerializeField] private int attempt = 10;
         //[SerializeField] private float timer = 0;
 
         public string Text => m_Text;
-        public QuestUtilLabelMatching[] Matches => GetMatches();
+        public QuestUtilLabel[] Matches => GetMatches();
 
-        [NonSerialized] private QuestUtilLabelMatching[] m_CompiledMatches;
+        [NonSerialized] private QuestUtilLabel[] m_CompiledMatches;
         
-        QuestUtilLabelMatching[] GetMatches()
+        QuestUtilLabel[] GetMatches()
         {
             if(m_CompiledMatches == null)
             {
-                m_CompiledMatches = new QuestUtilLabelMatching[m_Matches.Length * 2];
+                m_CompiledMatches = new QuestUtilLabel[m_Matches.Length * 2];
                 
                 for (int i = 0; i < m_Matches.Length; i++)
                 {

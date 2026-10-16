@@ -77,6 +77,7 @@ namespace EduGame
         [SerializeField] [FormerlySerializedAs("wrongFeedback")] private Feedback m_WrongFeedback;
         [SerializeField] [FormerlySerializedAs("idleFeedback")] private Feedback m_IdleFeedback;
         [SerializeField] [FormerlySerializedAs("thinkFeedback")] private Feedback m_ThinkFeedback;
+        [SerializeField] private FeedbackManager m_FeedbackManager;
 
         [Header("Audio")]
         [SerializeField] [FormerlySerializedAs("audioSource")] private AudioSource m_AudioSource;
@@ -137,9 +138,7 @@ namespace EduGame
         private ResultItem[] m_Result;
         private APIManager m_ApiManager;
         private AssetManager m_AssetManager;
-        private const string c_ApiInfoUrl = "https://be.kimee.io/api/v1/external/games";
         [SerializeField] private string m_APIResultURL = "https://be.kimee.io/api/v1/external/games/progress";
-        private const string c_GameUrl = "https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]";
         [SerializeField] private string m_FallbackSessionId = "67e05cdd-c077-4d84-8c49-15767bf13ef2";
         private HandTutorial m_HandTutorial;
         private Canvas m_Canvas;
@@ -150,6 +149,7 @@ namespace EduGame
         public AudioSource AudioSource => m_AudioSource;
         public float ResultTime => m_RecordedTime;
         public Color ColorTheme => m_ColorTheme;
+        public FeedbackManager FeedbackManager => m_FeedbackManager;
         public APIManager API => m_ApiManager;
         public AssetManager Asset => m_AssetManager;
 

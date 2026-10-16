@@ -141,15 +141,16 @@ Reviewed|EduGame.QuestDragNDropZone|Sticky|
 Reviewed|EduGame.QuestDragNDrop|RecalculateContainer|
 Reviewed|EduGame.QuestMatching|RecalculateChoiceContainer|
 Reviewed|EduGame.QuestMultipleChoicesItemWithScale|SetChoice|
-Reviewed|EduGame.QuestMultipleChoicesItem|Init|alias:call:spec:1512820501121d::.ctor=call:spec:1512820901121d::.ctor;alias:call:spec:151281dd01121d::.ctor=call:spec:151281e101121d::.ctor
+# Tahap 6 batch C0 (F-1): listener Feedback didaftarkan sekali per item (guard m_IsFeedbackBound); perubahan perilaku disengaja (audio hover/klik 1x, bukan 2x)
+Reviewed|EduGame.QuestMultipleChoicesItem|Init|alias:call:spec:1512820501121d::.ctor=call:spec:1512820901121d::.ctor;alias:call:spec:151281dd01121d::.ctor=call:spec:151281e101121d::.ctor;call:EduGame.FeedbackManager::get_Instance;call:UnityEngine.Object::op_Implicit;fld:EduGame.QuestMultipleChoicesItem::m_FeedbackManager;fld:EduGame.QuestMultipleChoicesItem::m_IsFeedbackBound;num:1
 Reviewed|EduGame.QuestMultipleChoices|RecalculateChoiceContainer|
 Reviewed|EduGame.QuestRythimBeat|Awake|call:EduGame.GameManager::get_AudioSource;call:EduGame.GameManager::get_Instance;call:UnityEngine.Object::op_Implicit;fld:EduGame.QuestRythimBeat::m_AudioSource
 Reviewed|EduGame.QuestRythimBeat|OnTriggerEnter2D|
 Reviewed|EduGame.QuestRythimMaker|Start|call:EduGame.GameManager::get_Instance;fld:EduGame.Quest::m_Host;alias:call:EduGame.GameManager::get_AudioSource=call:EduGame.IQuestHost::get_AudioSource
 Reviewed|EduGame.QuestRythimNote|Init|
 Reviewed|EduGame.QuestShapeIt|RecalculateContainer|
-Reviewed|EduGame.QuestShapeIt|Reset|alias:call:spec:151280e1021181d91181d9::Add=call:spec:151280e1021181dd1181dd::Add;alias:call:spec:151280e1021181d91181d9::ContainsKey=call:spec:151280e1021181dd1181dd::ContainsKey;alias:call:spec:151280e1021181b11181b1::Add=call:spec:151280e1021181b51181b5::Add;alias:call:spec:151280e1021181b11181b1::ContainsKey=call:spec:151280e1021181b51181b5::ContainsKey
-Reviewed|EduGame.QuestShapeIt|Start|alias:call:spec:1512820501121d::.ctor=call:spec:1512820901121d::.ctor;alias:call:spec:151281dd01121d::.ctor=call:spec:151281e101121d::.ctor
+Reviewed|EduGame.QuestShapeIt|Reset|alias:call:spec:151280e1021181d91181d9::Add=call:spec:151280e1021181e11181e1::Add;alias:call:spec:151280e1021181d91181d9::ContainsKey=call:spec:151280e1021181e11181e1::ContainsKey;alias:call:spec:151280e1021181b11181b1::Add=call:spec:151280e1021181b91181b9::Add;alias:call:spec:151280e1021181b11181b1::ContainsKey=call:spec:151280e1021181b91181b9::ContainsKey
+Reviewed|EduGame.QuestShapeIt|Start|alias:call:spec:1512820501121d::.ctor=call:spec:1512820901121d::.ctor;alias:call:spec:151281dd01121d::.ctor=call:spec:151281e101121d::.ctor;call:EduGame.FeedbackManager::get_Instance;call:EduGame.IQuestHost::get_FeedbackManager;fld:EduGame.Quest::m_Host
 Reviewed|EduGame.QuestUtilButton|Awake|
 Reviewed|EduGame.QuestUtilGameObject|Awake|
 Reviewed|EduGame.QuestUtilRegionalClick|OnPointerClick|
@@ -161,7 +162,7 @@ Reviewed|RawImageAlphaFilter|Awake|
 Reviewed|EduGame.QuestDragNDropItem|OnEndDrag|call:UnityEngine.Object::op_Implicit
 
 Reviewed|EduGame.GameManager|.ctor|fld:EduGame.GameManager::m_FallbackSessionId;lit:67e05cdd-c077-4d84-8c49-15767bf13ef2;fld:EduGame.GameManager::m_APIInfoURL;fld:EduGame.GameManager::m_GameURL;lit:https://be.kimee.io/api/v1/external/games;lit:https://kimee.io/en/island-map/games?islandId=[ISLAND_ID]
-Reviewed|EduGame.APIManager|.ctor|fld:EduGame.APIManager::m_ApiToken;lit:game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e
+Reviewed|EduGame.APIManager|.ctor|fld:EduGame.APIManager::m_ApiToken;lit:game_9cee47c0b425fffc4ff48c75b718a6bfceb7164be962491e;fld:EduGame.APIManager::m_ApiUrl;lit:
 Reviewed|EduGame.VoiceAsset+VoiceAssetEditor|OnInspectorGUI|call:UnityEditor.SerializedProperty::get_stringValue;fld:EduGame.VoiceAsset+VoiceAssetEditor::m_ApiToken;call:EduGame.VoiceAsset::get_ResolvedApiToken
 Reviewed|EduGame.GameManager|InstantiateTemplate|call:EduGame.Quest::SetHost
 Reviewed|EduGame.Quest|Start|call:EduGame.GameManager::get_Instance;fld:EduGame.Quest::m_Host;alias:call:EduGame.GameManager::SetNPC=call:EduGame.IQuestHost::SetNPC;alias:call:EduGame.GameManager::InitQuest=call:EduGame.IQuestHost::InitQuest
@@ -190,7 +191,7 @@ Reviewed|EduGame.AnimationHandler|Start|call:UnityEngine.Component::GetComponent
 Reviewed|EduGame.AnimationHandler+<Playing>d__~0|MoveNext|call:EduGame.GameManager::get_Instance;fld:EduGame.AnimationHandler+<Playing>d__~::<>4__this;fld:EduGame.AnimationHandler::m_Quest;call:EduGame.Quest::get_Host;alias:call:EduGame.GameManager::get_Music=call:EduGame.IQuestHost::get_Music
 Reviewed|EduGame.AssetManager|Awake|call:UnityEngine.Component::GetComponent<EduGame.GameManager>;fld:EduGame.AssetManager::m_GameManager;alias:call:EduGame.AssetManager::get_Instance=fld:EduGame.AssetManager::s_Instance
 Reviewed|EduGame.AssetManager|ReportComplete|call:EduGame.GameManager::get_Instance;fld:EduGame.AssetManager::m_GameManager
-Reviewed|EduGame.AssetManager+<Routine_DownloadMissingVoices>d__~1|MoveNext|call:EduGame.GameManager::get_Instance;fld:EduGame.AssetManager::m_GameManager;fld:EduGame.AssetManager+<Routine_DownloadMissingVoices>d__~::<>4__this;alias:call:EduGame.AssetManager::<Routine_DownloadMissingVoices>b__13_0=call:EduGame.AssetManager::<Routine_DownloadMissingVoices>b__12_0;alias:call:spec:1512840d0102::.ctor=call:spec:151284190102::.ctor
+Reviewed|EduGame.AssetManager+<Routine_DownloadMissingVoices>d__~1|MoveNext|call:EduGame.GameManager::get_Instance;fld:EduGame.AssetManager::m_GameManager;fld:EduGame.AssetManager+<Routine_DownloadMissingVoices>d__~::<>4__this;alias:call:EduGame.AssetManager::<Routine_DownloadMissingVoices>b__13_0=call:EduGame.AssetManager::<Routine_DownloadMissingVoices>b__12_0;alias:call:spec:1512840d0102::.ctor=call:spec:1512841d0102::.ctor;alias:call:spec:151283650102::.ctor=call:spec:151283690102::.ctor
 Reviewed|EduGame.GameManagerAgent|PlayQuestionVoice|call:EduGame.GameManager::get_Instance;call:UnityEngine.Component::GetComponentInParent<EduGame.Quest>;call:EduGame.Quest::get_Host;alias:call:EduGame.GameManager::PlayQuestionVoice=call:EduGame.IQuestHost::PlayQuestionVoice;num:1
 Reviewed|EduGame.GameManagerAgent|PlaySoundQuest|call:EduGame.GameManager::get_Instance;call:UnityEngine.Component::GetComponentInParent<EduGame.Quest>;call:EduGame.Quest::get_Host;alias:call:EduGame.GameManager::PlaySoundQuest=call:EduGame.IQuestHost::PlaySoundQuest;num:1
 Reviewed|EduGame.ResultPanel|Start|call:EduGame.GameManager::get_Instance;fld:EduGame.ResultPanel::m_GameManager;fld:EduGame.ResultPanel::m_Host;alias:call:EduGame.GameManager::get_ChallengeConfig=call:EduGame.IResultHost::get_ChallengeConfig
@@ -199,3 +200,26 @@ Reviewed|EduGame.ResultPanel|ResetQuest|fld:EduGame.ResultPanel::m_GameManager;f
 Reviewed|EduGame.StarPresenter+<SetActiveStars>d__~0|MoveNext|call:EduGame.GameManager::get_Instance;fld:EduGame.StarPresenter::m_ResultPanel;fld:EduGame.StarPresenter+<SetActiveStars>d__~::<>4__this;alias:call:EduGame.GameManager::SetRightAsnwer=call:EduGame.ResultPanel::SetRightAnswer
 # Stage 5 batch 5.5a: AssetManager.Instance getter publik dihapus (0 pemakai luar); guard Awake memakai s_Instance
 Gone|EduGame.AssetManager|get_Instance
+# Tahap 6 batch A1: FeedbackItemAudio memakai m_AudioSource serialized (bukan GameManager.Instance); Debug.Log dihapus
+Reviewed|EduGame.FeedbackItemAudio|ExecPlay|call:EduGame.GameManager::get_AudioSource;call:EduGame.GameManager::get_Instance;fld:EduGame.FeedbackItemAudio::m_AudioSource;call:UnityEngine.Debug::Log;lit:oooowa
+# Tahap 6 batch A2: FeedbackManager.Instance diganti injeksi host (GameManager -> IQuestHost.FeedbackManager)
+Reviewed|EduGame.QuestMultipleChoices|InstantiateItem|call:EduGame.IQuestHost::get_FeedbackManager;call:EduGame.QuestMultipleChoicesItem::SetFeedbackManager;fld:EduGame.Quest::m_Host
+# Tahap 6 batch A3: FeedbackManager.Instance (static Get tanpa pemakai) dan Awake penjaga singleton dihapus; E-7 ditutup
+Gone|EduGame.FeedbackManager|get_Instance
+Gone|EduGame.FeedbackManager|Awake
+# Tahap 6 batch B1: Feedback.Play memanggil m_Juice (MMF_Player) bila ada; hook Feel aditif, kosong = perilaku lama
+Reviewed|EduGame.Feedback|Play|call:MoreMountains.Feedbacks.MMF_Player::PlayFeedbacks;call:UnityEngine.Object::op_Implicit;call:UnityEngine.Transform::get_position;fld:EduGame.Feedback::m_Juice;num:0;num:1
+Gone|EduGame.FeedbackItem|Stop
+Gone|EduGame.FeedbackItem|ExecStop
+Gone|EduGame.FeedbackItem|ExecStopInternal
+Gone|EduGame.Global|get_CHALLENGE_DATA_DIR
+Gone|EduGame.Global|get_CHALLENGE_DATA_NAME
+
+# Tahap 7C batch 3: PanelView jadi kelas serial (komposisi, aturan 9). ReactionPanel/ResultPanel memegang m_Panel dan memanggil Show/Hide; PanelView.Show/Hide hanya berubah opcode callvirt->call (tidak virtual lagi), token sama.
+Reviewed|EduGame.PanelView|Show|
+Reviewed|EduGame.PanelView|Hide|
+Reviewed|EduGame.ReactionPanel|Home|call:EduGame.PanelView::HideInternal;call:EduGame.PanelView::Hide;fld:EduGame.ReactionPanel::m_Panel
+Reviewed|EduGame.ReactionPanel|Next|call:EduGame.PanelView::HideInternal;call:EduGame.PanelView::Hide;fld:EduGame.ReactionPanel::m_Panel
+Reviewed|EduGame.ReactionPanel|Replay|call:EduGame.PanelView::HideInternal;call:EduGame.PanelView::Hide;fld:EduGame.ReactionPanel::m_Panel
+Reviewed|EduGame.ReactionPanel|ShowReaction|call:EduGame.PanelView::ShowInternal;call:EduGame.PanelView::Show;fld:EduGame.ReactionPanel::m_Panel
+Reviewed|EduGame.ResultPanel|ShowResult|call:EduGame.PanelView::ShowInternal;call:EduGame.PanelView::Show;fld:EduGame.ResultPanel::m_Panel

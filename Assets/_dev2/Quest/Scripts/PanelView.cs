@@ -3,7 +3,8 @@ using UnityEngine.Events;
 
 namespace EduGame
 {
-    public abstract class PanelView : MonoBehaviour
+    [System.Serializable]
+    public class PanelView
     {
         [SerializeField]
         private GameObject m_Content;
@@ -22,12 +23,12 @@ namespace EduGame
             HideInternal();
         }
 
-        protected virtual void ShowInternal()
+        private void ShowInternal()
         {
             m_Content.SetActive(true);
             m_OnShow.Invoke();
         } 
-        protected virtual void HideInternal()
+        private void HideInternal()
         {
             m_Content.SetActive(false);
             m_OnHide.Invoke();

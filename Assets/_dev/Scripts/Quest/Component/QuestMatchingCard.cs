@@ -7,13 +7,13 @@ namespace EduGame
     {
         private const string c_HideMethod = "Hide";
 
-        public QuestUtilLabelMatching Match => m_Match;
+        public QuestUtilLabel Match => m_Match;
 
         private Sprite m_CardFace;
         private Sprite m_CardBack;
 
         private QuestMatching m_Matching;
-        private QuestUtilLabelMatching m_Match;
+        private QuestUtilLabel m_Match;
 
         private bool m_IsComplete;
 
@@ -32,7 +32,7 @@ namespace EduGame
                 Debug.LogError("Image Component not found");            
         }
 
-        public virtual void SetMatch(QuestUtilLabelMatching match)
+        public virtual void SetMatch(QuestUtilLabel match)
         {
             this.m_Match = match;
 

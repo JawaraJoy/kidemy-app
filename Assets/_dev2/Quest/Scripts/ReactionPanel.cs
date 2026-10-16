@@ -6,8 +6,10 @@ using UnityEngine.Serialization;
 
 namespace EduGame
 {
-    public class ReactionPanel : PanelView
+    public class ReactionPanel : MonoBehaviour
     {
+        [SerializeField]
+        private PanelView m_Panel;
         [SerializeField]
         private Image m_NPCPotrait;
         [SerializeField]
@@ -40,7 +42,7 @@ namespace EduGame
             m_TextEffect.Refresh();
             m_TextEffect.preset = reactionConfig.DialogueConfig.EffectPreset;
             m_NPCText.text = reactionConfig.DialogueConfig.GetFormattedText();
-            ShowInternal();
+            m_Panel.Show();
         }
 
         private void Next()
@@ -58,7 +60,7 @@ namespace EduGame
                 {
                     m_GameManager.Next();
                 }
-                HideInternal();
+                m_Panel.Hide();
             }
             
         }
@@ -67,7 +69,7 @@ namespace EduGame
             if (m_GameManager)
             {
                 m_GameManager.Reset();
-                HideInternal();
+                m_Panel.Hide();
             }
         }
         private void Home()
@@ -75,7 +77,7 @@ namespace EduGame
             if (m_GameManager)
             {
                 m_GameManager.GoHome();
-                HideInternal();
+                m_Panel.Hide();
             }
         }
     }

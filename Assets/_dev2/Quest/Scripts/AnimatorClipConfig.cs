@@ -3,8 +3,10 @@ using UnityEngine;
 namespace EduGame
 {
     [CreateAssetMenu(fileName = "Clip_", menuName = "OtherDev/Animation/Clip")]
-    public class AnimatorClipConfig : Config
+    public class AnimatorClipConfig : ScriptableObject
     {
+        [SerializeField]
+        private Identifield m_Identic;
         [SerializeField]
         private Sprite m_StartingSprite;
         [SerializeField, Min(0)]
@@ -13,6 +15,7 @@ namespace EduGame
         private RuntimeAnimatorController m_Controller;
         [SerializeField]
         private AudioClip m_SoundSFX;
+        public Identifield Identic => m_Identic;
         public RuntimeAnimatorController Controller => m_Controller;
         public AudioClip SoundSFX => m_SoundSFX;
         public int LoopTime => m_LoopTime;

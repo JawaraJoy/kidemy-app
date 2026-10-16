@@ -10,7 +10,6 @@ namespace EduGame
     public class APIManager : MonoBehaviour
     {
         private string m_ApiToken;
-        private string m_ApiUrl = "";
         [SerializeField] private string m_ApiAIUrl = "https://kimee-ai-stg.linkit360.ai/";
 
         private const string c_FrogVoiceId = "n3tkGOcEribaYI5zg4pu";
@@ -22,11 +21,6 @@ namespace EduGame
         private const string c_BearerPrefix = "Bearer ";
         private const string c_MimeJson = "application/json";
 
-
-        [SerializeField]
-        [FormerlySerializedAs("Instance")]
-        private APIManager m_Instance;
-        
         public void RequestVoice(string text, string voiceId = "", Action<string> onSuccess = null, Action<string> onFailure = null)
         {
             RequestVoiceInternal(text, voiceId, onSuccess, onFailure);

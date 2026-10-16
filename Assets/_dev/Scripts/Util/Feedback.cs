@@ -1,9 +1,14 @@
 using UnityEngine;
+using MoreMountains.Feedbacks;
 
 namespace EduGame
 {
     public class Feedback : MonoBehaviour
     {
+        private const float c_JuiceIntensity = 1f;
+
+        [SerializeField] private MMF_Player m_Juice;
+
         private FeedbackItem[] m_FeedbackItems;
 
         protected virtual void Start()
@@ -22,6 +27,9 @@ namespace EduGame
                     feedbackItem.Play(transform);
                 }
             }
+
+            if (m_Juice)
+                m_Juice.PlayFeedbacks(transform.position, c_JuiceIntensity, false);
                 
         }
     }

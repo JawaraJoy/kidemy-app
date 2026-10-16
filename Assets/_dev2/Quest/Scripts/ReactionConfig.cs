@@ -4,8 +4,10 @@ using UnityEngine;
 namespace EduGame
 {
     [CreateAssetMenu(fileName = "ReactionConfig", menuName = "OtherDev/ReactionConfig")]
-    public class ReactionConfig : Config
+    public class ReactionConfig : ScriptableObject
     {
+        [SerializeField]
+        private Identifield m_Identic;
         [SerializeField]
         private Sprite m_NPCPotrait;
         [SerializeField]
@@ -15,6 +17,7 @@ namespace EduGame
         [SerializeField]
         private DialogueConfig m_DialogueConfig;
 
+        public Identifield Identic => m_Identic;
         public Sprite NPCPotrait => m_NPCPotrait;
         public Sprite ConfirmationImage => m_ConfirmationImage;
         public Color FeelColor => m_FeelColor;

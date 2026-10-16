@@ -29,7 +29,6 @@ EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_get_last_error|NOJS
 EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_get_length|NOJS
 EXTERN|Lofelt.NiceVibrations.HapticImporter.nv_plugin_get_low_frequency_motor_speeds|NOJS
 INVOKE|FeedbackItem.cs|ExecPlay|count=1|OK
-INVOKE|FeedbackItem.cs|ExecStop|count=1|OK
 INVOKE|QuestColoring.cs|RecalculatePalettesContainer|count=1|OK
 INVOKE|QuestDragNDrop.cs|RecalculateContainer|count=1|OK
 INVOKE|QuestMatching.cs|CloaseAllCard|count=1|OK

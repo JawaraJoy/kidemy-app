@@ -88,12 +88,36 @@ namespace RushRefactor
             List<string> cur = Scan();
             WriteLines(RushCommon.FileIn(c_CurrentFile), cur);
             DiffResult d = Diff(File.ReadAllLines(basePath), cur);
+            int allowed = ApplyAllowList(d);
             var sb = new StringBuilder();
             foreach (string s in d.Missing) sb.AppendLine("- " + s);
             foreach (string s in d.Added) sb.AppendLine("+ " + s);
             File.WriteAllText(RushCommon.FileIn(c_DiffFile), sb.ToString(), new UTF8Encoding(false));
-            return "CONTRACTS " + d.Verdict + " (missing=" + d.Missing.Count + ", added=" + d.Added.Count + ")\n" +
+            return "CONTRACTS " + d.Verdict + " (missing=" + d.Missing.Count + ", added=" + d.Added.Count + ", allowed=" + allowed + ")\n" +
                    (d.Missing.Count > 0 ? "First missing:\n" + string.Join("\n", d.Missing.Take(15).ToArray()) : "");
+        }
+
+        // Penghapusan kontrak yang DISENGAJA (kode mati terbukti tak terpakai) dicatat di RushBaseline/contracts_allow.txt.
+        // Baseline tidak diubah; baris yang diizinkan tidak dihitung sebagai 'missing' dan jumlahnya dilaporkan (allowed=n).
+        static int ApplyAllowList(DiffResult d)
+        {
+            string allowPath = RushCommon.FileIn("contracts_allow.txt");
+            if (!File.Exists(allowPath)) return 0;
+            var allow = new HashSet<string>(StringComparer.Ordinal);
+            foreach (string line in File.ReadAllLines(allowPath))
+            {
+                if (line.Length == 0 || line[0] == '#') continue;
+                allow.Add(line);
+            }
+            int allowed = 0;
+            var keep = new List<string>();
+            foreach (string s in d.Missing)
+            {
+                if (allow.Contains(s)) allowed++; else keep.Add(s);
+            }
+            d.Missing = keep;
+            d.Verdict = d.Missing.Count > 0 ? "FAIL" : (d.Added.Count > 0 ? "PASS(with additions)" : "PASS");
+            return allowed;
         }
 
         public static string SelfTest()

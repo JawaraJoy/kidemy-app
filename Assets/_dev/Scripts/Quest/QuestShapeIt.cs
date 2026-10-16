@@ -82,9 +82,9 @@ namespace EduGame
 
                 if(buttonEvents)
                 {
-                    buttonEvents.AddEventOnPointerOver(FeedbackManager.Instance.ButtonOver.Play);
-                    buttonEvents.AddEventOnPointerExit(FeedbackManager.Instance.ButtonExit.Play);
-                    buttonEvents.AddEventOnPointerClick(FeedbackManager.Instance.ButtonClick.Play);
+                    buttonEvents.AddEventOnPointerOver(m_Host.FeedbackManager.ButtonOver.Play);
+                    buttonEvents.AddEventOnPointerExit(m_Host.FeedbackManager.ButtonExit.Play);
+                    buttonEvents.AddEventOnPointerClick(m_Host.FeedbackManager.ButtonClick.Play);
                 }
             }
 

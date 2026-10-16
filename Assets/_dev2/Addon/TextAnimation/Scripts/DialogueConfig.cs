@@ -6,8 +6,10 @@ using EduGame;
 namespace AddOn.TextAnimation
 {
     [CreateAssetMenu(fileName = "Dialogue_", menuName = "AddOn/TextAnimation/Dialogue")]
-    public class DialogueConfig : Config
+    public class DialogueConfig : ScriptableObject
     {
+        [SerializeField]
+        private Identifield m_Identic;
         [SerializeField]
         private Sprite m_Potrait;
         [SerializeField]
@@ -17,6 +19,7 @@ namespace AddOn.TextAnimation
         [SerializeField]
         private AudioClip m_VoiceClip; // generate audio to this
 
+        public Identifield Identic => m_Identic;
         public Sprite Potrait => m_Potrait;
         public TagEffectsPreset EffectPreset => m_EffectPreset;
         public AudioClip VoiceClip => m_VoiceClip;

@@ -12,7 +12,7 @@ namespace RushRefactor
     /// <summary>
     /// Tahap 5: aturan arsitektur yang dijaga setelah refactor (read-only, tidak mengubah aset).
     /// RC-5a/b/c: tidak ada Instance yang membaca GameManager / FeedbackManager / AssetManager lewat global ("X.Instance"),
-    ///            kecuali berkas pada daftar pengecualian terdokumentasi (E-7: FeedbackManager menunggu paket Feel; E-5: kode Editor-only).
+    ///            kecuali berkas pada daftar pengecualian terdokumentasi (E-5: kode Editor-only). E-7 (FeedbackManager) ditutup di Tahap 6A.
     /// RC-5d: tidak ada pencarian global di kode runtime (Find*, SendMessage, BroadcastMessage, transform.root).
     /// Komentar dan literal string diabaikan; kode Editor (folder Editor), _Archives, dan RushRefactor tidak dipindai.
     /// Batas yang diketahui: isi lubang string interpolasi ($"{...}") ikut diabaikan.
@@ -47,9 +47,6 @@ namespace RushRefactor
         // pengecualian terdokumentasi: "aturan|nama berkas" -> jumlah pemakaian maksimum
         static readonly Dictionary<string, int> s_Allow = new Dictionary<string, int>
         {
-            { "RC-5a|FeedbackItemAudio.cs", 3 },
-            { "RC-5b|QuestShapeIt.cs", 3 },
-            { "RC-5b|QuestMultipleChoicesItem.cs", 3 },
             // E-5: kode Editor-only (#if UNITY_EDITOR) di folder runtime
             { "RC-5d|QuestAudioPopulatorWindow.cs", 2 },
             { "RC-5d|SceneButtonGenerator.cs", 1 }
@@ -215,16 +212,18 @@ namespace RushRefactor
             ok &= Expect(sb, "string verbatim diabaikan", Count("Foo.cs", "var s = @\"a \"\"GameManager.Instance\"\" b\";", false) == 0);
             ok &= Expect(sb, "kode setelah string tetap dipindai", Count("Foo.cs", "var s = \"x\"; GameManager.Instance.Play();", false) == 1);
             ok &= Expect(sb, "FeedbackManager.Instance => RC-5b", Count("Foo.cs", "FeedbackManager.Instance.ButtonOver.Play();", false) == 1);
+            ok &= Expect(sb, "bekas pengecualian E-7 (QuestShapeIt) kini VIOLATION", Count("QuestShapeIt.cs", "FeedbackManager.Instance.ButtonOver.Play();", false) == 1);
             ok &= Expect(sb, "AssetManager.Instance => RC-5c", Count("Foo.cs", "var a = AssetManager.Instance;", false) == 1);
             ok &= Expect(sb, "FindObjectOfType => RC-5d", Count("Foo.cs", "var x = FindObjectOfType<Foo>();", false) == 1);
             ok &= Expect(sb, "transform.root => RC-5d", Count("Foo.cs", "var r = transform.root;", false) == 1);
             ok &= Expect(sb, "nomor baris benar", Line("Foo.cs", "int a;\n// c\nint b = GameManager.Instance.X;") == 3);
 
-            string fiaOk = "a GameManager.Instance.A; b GameManager.Instance.B; c GameManager.Instance.C;";
-            ok &= Expect(sb, "pengecualian FeedbackItemAudio 3 pemakaian => diizinkan", Count("FeedbackItemAudio.cs", fiaOk, false) == 0);
-            ok &= Expect(sb, "pengecualian FeedbackItemAudio 4 pemakaian => VIOLATION", Count("FeedbackItemAudio.cs", fiaOk + " GameManager.Instance.D;", false) == 4);
-            ok &= Expect(sb, "pengecualian tidak berlaku untuk berkas lain", Count("Other.cs", fiaOk, false) == 3);
-            ok &= Expect(sb, "pengecualian GameManager tidak membuka FeedbackManager", Count("FeedbackItemAudio.cs", "FeedbackManager.Instance.X;", false) == 1);
+            string fiaOld = "a GameManager.Instance.A; b GameManager.Instance.B; c GameManager.Instance.C;";
+            ok &= Expect(sb, "bekas pengecualian E-7 (FeedbackItemAudio, 3 pemakaian) kini VIOLATION", Count("FeedbackItemAudio.cs", fiaOld, false) == 3);
+            string edOk = "var a = FindObjectOfType<A>(); var b = FindObjectOfType<B>();";
+            ok &= Expect(sb, "pengecualian E-5 (QuestAudioPopulatorWindow, 2 pemakaian) => diizinkan", Count("QuestAudioPopulatorWindow.cs", edOk, false) == 0);
+            ok &= Expect(sb, "pengecualian E-5 3 pemakaian => VIOLATION", Count("QuestAudioPopulatorWindow.cs", edOk + " var c = FindObjectOfType<C>();", false) == 3);
+            ok &= Expect(sb, "pengecualian E-5 tidak berlaku untuk berkas lain", Count("Other.cs", edOk, false) == 2);
 
             sb.Insert(0, ok ? "RULES SELFTEST PASS\n" : "RULES SELFTEST FAIL\n");
             return sb.ToString();

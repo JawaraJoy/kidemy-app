@@ -13,6 +13,7 @@ namespace EduGame
         AudioSource Music { get; }
         Canvas Canvas { get; }
         Color ColorTheme { get; }
+        FeedbackManager FeedbackManager { get; }
 
         void Submit(int star);
         void SetNPC(RuntimeAnimatorController controller);
