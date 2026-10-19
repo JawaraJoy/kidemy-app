@@ -200,6 +200,10 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: m_ChallengeConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d9607ac5f4a350479095ef31334d33c, type: 2}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_OnQuestNext.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}

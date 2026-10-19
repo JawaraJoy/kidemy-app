@@ -1,9 +1,19 @@
+editor	CHANGED	E:EduGame.GameManager::Start#0  reviewed signature differs: before-only [call:EduGame.ChallengeConfig::get_Background, call:EduGame.ChallengeConfig::get_QuestConfigs, call:EduGame.ChallengeConfig::get_QuestConfigs, call:EduGame.ChallengeConfig::get_QuestConfigs, call:EduGame.ChallengeConfig::get_QuestConfigs, call:EduGame.ChallengeConfig::get_QuestLayoutPrefabs] after-only [call:EduGame.GameManager::CreateQuest, call:EduGame.GameManager::ResolveQuestCount]
+editor	CHANGED	E:EduGame.Quest::Start#0  reviewed signature differs: before-only [call:EduGame.ChallengeConfig::get_Character, call:EduGame.IQuestHost::SetNPC, call:EduGame.SO_Character::get_CharacterController, call:UnityEngine.Object::op_Inequality, fld:EduGame.Quest::m_Challenged, fld:EduGame.Quest::m_Character] after-only []
+editor	CHANGED	E:EduGame.GameManager::Awake#0  60:48ce1b3db1074581 => 56:acc9a3bd0eb2ddcf
+editor	CHANGED	E:EduGame.GameManager::ShowResult#0  259:15f727a010c3f61d => 242:0b912137cb005f71
+editor	CHANGED	E:EduGame.GameManager::Start#0  293:aab66475d4acaf42 => 189:f02a298ef3f5e137
+editor	CHANGED	E:EduGame.Quest::Start#0  47:192ba71a4e76e74e => 40:e6b4fae5babe2364
+editor	CHANGED	E:EduGame.QuestMultipleChoices::Start#0  414:91820900a949a972 => 356:ca40af2b5bde7576
 editor	ADDED	E:AddOn.TextAnimation.DialogueConfig::get_Identic#0
 editor	ADDED	E:EduGame.APIManager::Awake#0
 editor	ADDED	E:EduGame.APIManager::SetApiToken#0
 editor	ADDED	E:EduGame.AnimatorClipConfig::get_Identic#0
 editor	ADDED	E:EduGame.GameManager::ApplyApiTokenFromUrl#0
+editor	ADDED	E:EduGame.GameManager::CreateQuest#0
 editor	ADDED	E:EduGame.GameManager::EduGame.IQuestHost.StartCoroutine#0
+editor	ADDED	E:EduGame.GameManager::ResolveQuestCount#0
+editor	ADDED	E:EduGame.GameManager::ResolveReaction#0
 editor	ADDED	E:EduGame.GameManager::get_FeedbackManager#0
 editor	ADDED	E:EduGame.IQuestHost::InitQuest#0
 editor	ADDED	E:EduGame.IQuestHost::PlayQuestionVoice#0
@@ -51,11 +61,21 @@ editor	ADDED	E:Rush.RectPosStruct::get_StartRectPosition#0
 editor	ADDED	E:Rush.ScaleStruct::get_EndScale#0
 editor	ADDED	E:Rush.ScaleStruct::get_StartScale#0
 editor	ADDED	E:SceneLoader::SetTargetSceneName#0
+player(WebGL)	CHANGED	P:EduGame.GameManager::Start#0  reviewed signature differs: before-only [call:EduGame.ChallengeConfig::get_Background, call:EduGame.ChallengeConfig::get_QuestConfigs, call:EduGame.ChallengeConfig::get_QuestConfigs, call:EduGame.ChallengeConfig::get_QuestConfigs, call:EduGame.ChallengeConfig::get_QuestConfigs, call:EduGame.ChallengeConfig::get_QuestLayoutPrefabs] after-only [call:EduGame.GameManager::CreateQuest, call:EduGame.GameManager::ResolveQuestCount]
+player(WebGL)	CHANGED	P:EduGame.Quest::Start#0  reviewed signature differs: before-only [call:EduGame.ChallengeConfig::get_Character, call:EduGame.IQuestHost::SetNPC, call:EduGame.SO_Character::get_CharacterController, call:UnityEngine.Object::op_Inequality, fld:EduGame.Quest::m_Challenged, fld:EduGame.Quest::m_Character] after-only []
+player(WebGL)	CHANGED	P:EduGame.GameManager::Awake#0  60:48ce1b3db1074581 => 56:acc9a3bd0eb2ddcf
+player(WebGL)	CHANGED	P:EduGame.GameManager::ShowResult#0  259:15f727a010c3f61d => 242:0b912137cb005f71
+player(WebGL)	CHANGED	P:EduGame.GameManager::Start#0  358:1408f81ea782ae09 => 256:fcccce6ddf6ffe8c
+player(WebGL)	CHANGED	P:EduGame.Quest::Start#0  47:192ba71a4e76e74e => 40:e6b4fae5babe2364
+player(WebGL)	CHANGED	P:EduGame.QuestMultipleChoices::Start#0  414:91820900a949a972 => 356:ca40af2b5bde7576
 player(WebGL)	ADDED	P:AddOn.TextAnimation.DialogueConfig::get_Identic#0
 player(WebGL)	ADDED	P:EduGame.APIManager::SetApiToken#0
 player(WebGL)	ADDED	P:EduGame.AnimatorClipConfig::get_Identic#0
 player(WebGL)	ADDED	P:EduGame.GameManager::ApplyApiTokenFromUrl#0
+player(WebGL)	ADDED	P:EduGame.GameManager::CreateQuest#0
 player(WebGL)	ADDED	P:EduGame.GameManager::EduGame.IQuestHost.StartCoroutine#0
+player(WebGL)	ADDED	P:EduGame.GameManager::ResolveQuestCount#0
+player(WebGL)	ADDED	P:EduGame.GameManager::ResolveReaction#0
 player(WebGL)	ADDED	P:EduGame.GameManager::get_FeedbackManager#0
 player(WebGL)	ADDED	P:EduGame.IQuestHost::InitQuest#0
 player(WebGL)	ADDED	P:EduGame.IQuestHost::PlayQuestionVoice#0

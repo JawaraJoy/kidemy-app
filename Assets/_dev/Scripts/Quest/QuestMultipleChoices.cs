@@ -137,45 +137,25 @@ namespace EduGame
                 
                 
             }
-            if (m_Challenged)
+            QuestMultipleChoicesItem choicePrefab = m_Challenged ? m_Challenged.ChoicePrefab as QuestMultipleChoicesItem : m_ChoiceItemPrefab;
+            if (choicePrefab && m_ChoicesContainer)
             {
-                if (m_Challenged.ChoicePrefab is QuestMultipleChoicesItem choicePrefab)
-                {
-                    m_ChoicesContainer.gameObject.SetActive(true);
-                    m_Choices = new QuestMultipleChoicesItem[m_DataMultipleChoice.Choices.Length];
-                    for (int i = 0; i < m_DataMultipleChoice.Choices.Length; i++)
-                    {
-                        m_Choices[i] = InstantiateItem(choicePrefab, i);
-                        m_Choices[i].SetChoice(m_DataMultipleChoice.Choices[i]);
+                m_ChoicesContainer.gameObject.SetActive(true);
 
-                        if(m_DataMultipleChoice.Choices[i].IsAnswer)
-                            m_CorrectChoice = m_Choices[i];
-                    
-                    }
-                }
-                if (m_QuestName)
+                m_Choices = new QuestMultipleChoicesItem[m_DataMultipleChoice.Choices.Length];
+
+                for (int i = 0; i < m_DataMultipleChoice.Choices.Length; i++)
                 {
-                    m_QuestName.text = m_DataMultipleChoice.Question.Text;
+                    m_Choices[i] = InstantiateItem(choicePrefab, i);
+                    m_Choices[i].SetChoice(m_DataMultipleChoice.Choices[i]);
+
+                    if (m_DataMultipleChoice.Choices[i].IsAnswer)
+                        m_CorrectChoice = m_Choices[i];
                 }
             }
-            else
-            {
-                if (m_ChoicesContainer && m_ChoiceItemPrefab)
-                {
-                    m_ChoicesContainer.gameObject.SetActive(true);
 
-                    m_Choices = new QuestMultipleChoicesItem[m_DataMultipleChoice.Choices.Length];
-
-                    for (int i = 0; i < m_DataMultipleChoice.Choices.Length; i++)
-                    {
-                        m_Choices[i] = InstantiateItem(m_Choices[0], i);
-                        m_Choices[i].SetChoice(m_DataMultipleChoice.Choices[i]);
-
-                        if(m_DataMultipleChoice.Choices[i].IsAnswer)
-                            m_CorrectChoice = m_Choices[i];
-                    }
-                }
-            }
+            if (m_Challenged && m_QuestName)
+                m_QuestName.text = m_DataMultipleChoice.Question.Text;
             
 
 

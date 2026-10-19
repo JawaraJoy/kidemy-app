@@ -21,12 +21,12 @@ MonoBehaviour:
   m_Question:
     m_Image: {fileID: 0}
     m_Text: Which one is Bigger?
-    m_FormatedText: {fileID: 11400000, guid: c85834526a2e35c40a17416bc2c76733, type: 2}
+    m_FormatedText: {fileID: 11400000, guid: 8cabba257765bda46abd62c1329123ec, type: 2}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: cd1d9320717d4874d906b47c2f0f5989, type: 3}
+    m_Audio: {fileID: 0}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0
@@ -34,32 +34,32 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 21300000, guid: efd1ff3e81819264c8fc2c61ac55f6bc, type: 3}
+  - m_Image: {fileID: 21300000, guid: 691796f45427505458de8834b12836e7, type: 3}
     m_Text: Clock
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: de66d927d6b273e47888f7420f3faef7, type: 3}
+    m_Audio: {fileID: 0}
     m_IsAnswer: 1
-  - m_Image: {fileID: 21300000, guid: 2c372a3924b58ea4082bbca220386493, type: 3}
+  - m_Image: {fileID: 21300000, guid: c5ca3d8511dd0fb41887eaaf61578875, type: 3}
     m_Text: Book
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 5e01ac3b3bfef6e4cafba464823a5aaf, type: 3}
+    m_Audio: {fileID: 0}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 2c372a3924b58ea4082bbca220386493, type: 3}
+  - m_Image: {fileID: 21300000, guid: cb1b6591a249ab04290d2e4a25ed3b90, type: 3}
     m_Text: Kite
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 5e01ac3b3bfef6e4cafba464823a5aaf, type: 3}
+    m_Audio: {fileID: 0}
     m_IsAnswer: 0
   m_Timer: 0
   m_RandomizeChoice: 0

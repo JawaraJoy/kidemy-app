@@ -46,6 +46,20 @@ namespace RushRefactor
         const double c_EnterTimeout = 90.0;
         const double c_StopTimeout = 90.0;
 
+        // Tahap 9: jadwal langkah memakai WAKTU GAME (Time.timeAsDouble), bukan waktu dinding; waktu dinding hanya pengaman.
+        const string c_ProbeVersion = "2";
+        const int c_StepFps = 60;
+        const double c_GameStallTimeout = 60.0;
+        const int c_PinWidth = 1920;
+        const int c_PinHeight = 1080;
+        const string c_SinceWall = "RushProbe.SinceWall";
+        const string c_Timing = "RushProbe.Timing";
+        const string c_GvPrev = "RushProbe.GvPrev";
+        const string c_GvAdded = "RushProbe.GvAdded";
+        const string c_GvPinned = "RushProbe.GvPinned";
+        const string c_PinW = "RushProbe.PinW";
+        const string c_PinH = "RushProbe.PinH";
+
         // detik menunggu SEBELUM langkah ke-i (langkah 0 = setelah masuk Play Mode)
         static readonly double[] s_GapBefore = { 3.0, 0.4, 2.4, 4.0 };
 
@@ -100,7 +114,10 @@ namespace RushRefactor
             return list.ToArray();
         }
 
-        public static string Begin(string outFileName, string[] scenePaths)
+        public static string Begin(string outFileName, string[] scenePaths) { return Begin(outFileName, scenePaths, c_PinWidth, c_PinHeight); }
+
+        // pinWidth/pinHeight <= 0: Game view tidak dipatok (hanya dicatat di baris HEADER)
+        public static string Begin(string outFileName, string[] scenePaths, int pinWidth, int pinHeight)
         {
             if (SessionState.GetString(c_Active, "") == "1") return "ALREADY RUNNING: " + Status();
             if (EditorApplication.isPlayingOrWillChangePlaymode) return "ABORT: editor is in play mode";
@@ -122,6 +139,10 @@ namespace RushRefactor
             SessionState.SetBool(c_PrevMute, EditorUtility.audioMasterMute);
             SessionState.SetString(c_RunStarted, EditorApplication.timeSinceStartup.ToString("R", RushCommon.Inv));
             EditorUtility.audioMasterMute = true;
+            SessionState.SetInt(c_PinW, pinWidth);
+            SessionState.SetInt(c_PinH, pinHeight);
+            string pin = PinGameView(pinWidth, pinHeight);
+            AppendOut("HEADER" + (char)9 + "probe=" + c_ProbeVersion + (char)9 + "clock=game" + (char)9 + "drive=step@" + c_StepFps + (char)9 + "pin=" + pin + (char)9 + "gv=" + GameViewSizeText() + (char)9 + "gaps=" + string.Join(",", s_GapBefore.Select(g => g.ToString("F1", RushCommon.Inv)).ToArray()));
             SessionState.SetString(c_Phase, "OPEN");
             SessionState.SetString(c_Active, "1");
             return "STARTED: " + scenePaths.Length + " scenes -> " + outPath;
@@ -166,6 +187,7 @@ namespace RushRefactor
             double now = EditorApplication.timeSinceStartup;
             try
             {
+                if (phase == "RUN" && EditorApplication.isPlaying) DriveFrame();
                 switch (phase)
                 {
                     case "OPEN": DoOpen(now); break;
@@ -233,7 +255,10 @@ namespace RushRefactor
             if (EditorApplication.isPlaying)
             {
                 SessionState.SetString(c_Phase, "RUN");
-                SessionState.SetString(c_Since, now.ToString("R", RushCommon.Inv));
+                InjectClock();
+                SessionState.SetString(c_Since, s_GameClock.ToString("R", RushCommon.Inv));
+                SessionState.SetString(c_SinceWall, now.ToString("R", RushCommon.Inv));
+                SessionState.SetString(c_Timing, "");
                 return;
             }
             if (now - since > c_EnterTimeout)
@@ -244,7 +269,7 @@ namespace RushRefactor
             }
         }
 
-        static void DoRun(double now)
+static void DoRun(double now)
         {
             if (!EditorApplication.isPlaying)
             {
@@ -253,14 +278,28 @@ namespace RushRefactor
                 SessionState.SetString(c_Since, now.ToString("R", RushCommon.Inv));
                 return;
             }
+            if (!s_ClockInjected) { InjectClock(); SessionState.SetString(c_Since, "0"); }
             int step = SessionState.GetInt(c_Step, 0);
-            double since = ParseD(SessionState.GetString(c_Since, "0"));
-            if (now - since < s_GapBefore[step]) return;
+            // Tahap 9: c_Since = waktu GAME langkah sebelumnya; c_SinceWall = waktu dinding (hanya untuk pengaman jam game macet)
+            double gsince = ParseD(SessionState.GetString(c_Since, "0"));
+            double wsince = ParseD(SessionState.GetString(c_SinceWall, "0"));
+            double gnow = s_GameClock;
+            if (gnow - gsince < s_GapBefore[step])
+            {
+                if (now - wsince > c_GameStallTimeout)
+                {
+                    SetStatus("FAIL:GAME_CLOCK_STALL frames=" + s_GameFrames);
+                    StopPlay(now);
+                }
+                return;
+            }
 
             RunStep(step);
+            SessionState.SetString(c_Timing, SessionState.GetString(c_Timing, "") + step + ":g=" + (gnow - gsince).ToString("F2", RushCommon.Inv) + ",w=" + (now - wsince).ToString("F2", RushCommon.Inv) + ";");
             step++;
             SessionState.SetInt(c_Step, step);
-            SessionState.SetString(c_Since, now.ToString("R", RushCommon.Inv));
+            SessionState.SetString(c_Since, gnow.ToString("R", RushCommon.Inv));
+            SessionState.SetString(c_SinceWall, now.ToString("R", RushCommon.Inv));
             if (step >= s_GapBefore.Length) StopPlay(now);
         }
 
@@ -273,6 +312,7 @@ namespace RushRefactor
 
         static void DoWaitStop(double now)
         {
+            ReleaseDrive();
             if (EditorApplication.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode)
             {
                 double since = ParseD(SessionState.GetString(c_Since, "0"));
@@ -296,6 +336,7 @@ namespace RushRefactor
             if (info.Length == 0) info = "none=1";
             string line = "SCENE\t" + path + "\t" + SessionState.GetString(c_Status, "OK") + "\t" + info + "errors=" + SessionState.GetInt(c_Errors, 0);
             AppendOut(line);
+            AppendOut("TIMING" + (char)9 + path + (char)9 + SessionState.GetString(c_Timing, ""));
             foreach (string m in SessionState.GetString(c_ErrMsgs, "").Split('\n'))
             {
                 if (m.Length > 0) AppendOut("ERR\t" + path + "\t" + m);
@@ -306,6 +347,7 @@ namespace RushRefactor
 
         static void DoAborting()
         {
+            ReleaseDrive();
             if (EditorApplication.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode) return;
             Finish("ABORTED");
         }
@@ -313,6 +355,8 @@ namespace RushRefactor
         static void Finish(string why)
         {
             EditorUtility.audioMasterMute = SessionState.GetBool(c_PrevMute, false);
+            RestoreGameView();
+            ReleaseDrive();
             string original = SessionState.GetString(c_Original, "");
             if (original.Length > 0) OpenOnly(original);
             AppendOut("DONE\t" + why);
@@ -346,6 +390,7 @@ namespace RushRefactor
             Add("quest", FirstActiveName("Quest"));
             Add("shadow", ShadowSummary());
             Add("x_anim", AnimSummary(gm));
+            Add("x_scr", Screen.width + "x" + Screen.height);
 
             AudioSource sfx = Member(gm, "AudioSource") as AudioSource;
             AudioSource music = Member(gm, "Music") as AudioSource;
@@ -517,6 +562,187 @@ namespace RushRefactor
                 }
                 Add("x_drive", e + ":" + Convert.ToString(Member(gm, "RightAnswerCount"), RushCommon.Inv));
             }
+        }
+
+        // ---------------------------------------------------------------- jam game dari dalam player loop + Game view tetap + catatan versi (Tahap 9)
+
+        // Time.* yang dibaca dari callback Editor (EditorApplication.update) tidak dipakai: saat Play Mode macet teramati frame=1, time=0.
+        // Jam game dihitung di DALAM player loop: sistem kecil menambahkan Time.deltaTime tiap frame. Static ini hanya hidup selama satu sesi Play.
+        static double s_GameClock;
+        static int s_GameFrames;
+        static bool s_ClockInjected;
+
+        // Maju satu frame secara eksplisit: Editor dijeda, tiap Tick memanggil Step() dengan deltaTime tetap (1/c_StepFps).
+        // Hasilnya jam game = jumlah frame / c_StepFps, tidak bergantung jendela Unity, vSync, atau beban mesin.
+        static void DriveFrame()
+        {
+            if (!EditorApplication.isPaused) EditorApplication.isPaused = true;
+            if (Time.captureFramerate != c_StepFps) Time.captureFramerate = c_StepFps;
+            EditorApplication.Step();
+        }
+
+        static void ReleaseDrive()
+        {
+            if (Time.captureFramerate != 0) Time.captureFramerate = 0;
+        }
+
+        static void ClockTick()
+        {
+            s_GameClock += Time.deltaTime;
+            s_GameFrames++;
+        }
+
+        static void InjectClock()
+        {
+            s_GameClock = 0;
+            s_GameFrames = 0;
+            UnityEngine.LowLevel.PlayerLoopSystem loop = UnityEngine.LowLevel.PlayerLoop.GetCurrentPlayerLoop();
+            var list = new List<UnityEngine.LowLevel.PlayerLoopSystem>();
+            if (loop.subSystemList != null) list.AddRange(loop.subSystemList.Where(s => s.type != typeof(RushProbe)));
+            var sys = new UnityEngine.LowLevel.PlayerLoopSystem();
+            sys.type = typeof(RushProbe);
+            sys.updateDelegate = ClockTick;
+            list.Add(sys);
+            loop.subSystemList = list.ToArray();
+            UnityEngine.LowLevel.PlayerLoop.SetPlayerLoop(loop);
+            s_ClockInjected = true;
+        }
+
+        static readonly BindingFlags s_AnyMember = BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
+
+        static Type EditorInternalType(string name) { return typeof(Editor).Assembly.GetType("UnityEditor." + name); }
+
+        static EditorWindow FindGameView()
+        {
+            Type t = EditorInternalType("GameView");
+            if (t == null) return null;
+            UnityEngine.Object[] all = Resources.FindObjectsOfTypeAll(t);
+            return all.Length > 0 ? all[0] as EditorWindow : null;
+        }
+
+        static object GameViewGroup()
+        {
+            Type sizes = EditorInternalType("GameViewSizes");
+            if (sizes == null) return null;
+            Type single = typeof(ScriptableSingleton<>).MakeGenericType(sizes);
+            object inst = single.GetProperty("instance", s_AnyMember).GetValue(null, null);
+            return sizes.GetProperty("currentGroup", s_AnyMember).GetValue(inst, null);
+        }
+
+        static string GameViewSizeText()
+        {
+            try
+            {
+                EditorWindow gv = FindGameView();
+                if (gv == null) return "NA";
+                Vector2 v = (Vector2)gv.GetType().GetProperty("targetRenderSize", s_AnyMember).GetValue(gv, null);
+                return Mathf.RoundToInt(v.x) + "x" + Mathf.RoundToInt(v.y);
+            }
+            catch (Exception) { return "NA"; }
+        }
+
+        static void SelectGameViewSize(EditorWindow gv, int index)
+        {
+            MethodInfo cb = gv.GetType().GetMethod("SizeSelectionCallback", s_AnyMember);
+            if (cb != null) cb.Invoke(gv, new object[] { index, null });
+            else gv.GetType().GetProperty("selectedSizeIndex", s_AnyMember).SetValue(gv, index, null);
+        }
+
+        // indeks (total) ukuran FixedResolution w x h pertama; -1 bila tak ada
+        static int FindFixedSize(object group, int w, int h)
+        {
+            Type gt = group.GetType();
+            int total = (int)gt.GetMethod("GetTotalCount", s_AnyMember).Invoke(group, null);
+            MethodInfo get = gt.GetMethod("GetGameViewSize", s_AnyMember);
+            for (int i = 0; i < total; i++)
+            {
+                object sz = get.Invoke(group, new object[] { i });
+                Type st = sz.GetType();
+                string kind = Convert.ToString(st.GetProperty("sizeType", s_AnyMember).GetValue(sz, null), RushCommon.Inv);
+                if (kind != "FixedResolution") continue;
+                if ((int)st.GetProperty("width", s_AnyMember).GetValue(sz, null) == w && (int)st.GetProperty("height", s_AnyMember).GetValue(sz, null) == h) return i;
+            }
+            return -1;
+        }
+
+        static string PinGameView(int w, int h)
+        {
+            SessionState.SetBool(c_GvPinned, false);
+            SessionState.SetBool(c_GvAdded, false);
+            SessionState.SetInt(c_GvPrev, -1);
+            if (w <= 0 || h <= 0) return "off";
+            try
+            {
+                EditorWindow gv = FindGameView();
+                if (gv == null) return "NA:no_gameview_window";
+                object group = GameViewGroup();
+                if (group == null) return "NA:no_group";
+                int prev = (int)gv.GetType().GetProperty("selectedSizeIndex", s_AnyMember).GetValue(gv, null);
+                int idx = FindFixedSize(group, w, h);
+                if (idx < 0)
+                {
+                    Type sizeT = EditorInternalType("GameViewSize");
+                    object fixedRes = Enum.Parse(EditorInternalType("GameViewSizeType"), "FixedResolution");
+                    object size = Activator.CreateInstance(sizeT, new object[] { fixedRes, w, h, "RushProbe" });
+                    group.GetType().GetMethod("AddCustomSize", s_AnyMember).Invoke(group, new object[] { size });
+                    SessionState.SetBool(c_GvAdded, true);
+                    idx = FindFixedSize(group, w, h);
+                    if (idx < 0) return "NA:add_failed";
+                }
+                SessionState.SetInt(c_GvPrev, prev);
+                SessionState.SetBool(c_GvPinned, true);
+                SelectGameViewSize(gv, idx);
+                string actual = GameViewSizeText();
+                return actual == w + "x" + h ? "ok" : "unverified:" + actual;
+            }
+            catch (Exception e) { return "NA:" + e.GetType().Name; }
+        }
+
+        // mengembalikan pilihan Game view milik pengguna; entri kustom yang ditambahkan probe dihapus (hanya bila entri TERAKHIR dan cocok)
+        static void RestoreGameView()
+        {
+            if (!SessionState.GetBool(c_GvPinned, false)) return;
+            SessionState.SetBool(c_GvPinned, false);
+            try
+            {
+                EditorWindow gv = FindGameView();
+                int prev = SessionState.GetInt(c_GvPrev, -1);
+                if (gv != null && prev >= 0) SelectGameViewSize(gv, prev);
+                if (!SessionState.GetBool(c_GvAdded, false)) return;
+                SessionState.SetBool(c_GvAdded, false);
+                object group = GameViewGroup();
+                if (group == null) return;
+                Type gt = group.GetType();
+                int total = (int)gt.GetMethod("GetTotalCount", s_AnyMember).Invoke(group, null);
+                int builtin = (int)gt.GetMethod("GetBuiltinCount", s_AnyMember).Invoke(group, null);
+                int idx = FindFixedSize(group, SessionState.GetInt(c_PinW, 0), SessionState.GetInt(c_PinH, 0));
+                if (idx >= builtin && idx == total - 1) gt.GetMethod("RemoveCustomSize", s_AnyMember).Invoke(group, new object[] { idx });
+            }
+            catch (Exception e) { Debug.LogWarning("[RushProbe] Game view tidak dapat dipulihkan: " + e.GetType().Name); }
+        }
+
+        static string HeaderValue(string path, string key)
+        {
+            foreach (string line in File.ReadAllLines(path))
+            {
+                if (!line.StartsWith("HEADER" + (char)9, StringComparison.Ordinal)) continue;
+                foreach (string kv in line.Split((char)9))
+                {
+                    if (kv.StartsWith(key + "=", StringComparison.Ordinal)) return kv.Substring(key.Length + 1);
+                }
+            }
+            return null;
+        }
+
+        static string VersionNote(string baselinePath, string currentPath)
+        {
+            string vb = HeaderValue(baselinePath, "probe") ?? "1";
+            string vc = HeaderValue(currentPath, "probe") ?? "1";
+            if (vb != vc) return "NOTE: versi probe baseline=" + vb + " current=" + vc + " (jadwal berbeda; selisih right/errors/drag tidak sebanding, lihat stage9_report)" + (char)10;
+            string gb = HeaderValue(baselinePath, "gv");
+            string gc = HeaderValue(currentPath, "gv");
+            if (gb != gc) return "NOTE: ukuran Game view baseline=" + gb + " current=" + gc + " (drag tidak sebanding)" + (char)10;
+            return "";
         }
 
         // ---------------------------------------------------------------- reflection helpers
@@ -808,6 +1034,12 @@ namespace RushRefactor
 
         public static List<string> CompareLines(IEnumerable<string> baseline, IEnumerable<string> current)
         {
+            return CompareLines(baseline, current, 0.0);
+        }
+
+        // dragTol > 0: field drag dianggap sama bila bagian teksnya sama dan selisih x dan y <= dragTol (jitter float32 di batas pembulatan F3). dragTol = 0: ketat.
+        public static List<string> CompareLines(IEnumerable<string> baseline, IEnumerable<string> current, double dragTol)
+        {
             ProbeFile b = Parse(baseline);
             ProbeFile c = Parse(current);
             var reg = new List<string>();
@@ -820,11 +1052,35 @@ namespace RushRefactor
                     string bv, cv;
                     kv.Value.TryGetValue(key, out bv);
                     cur.TryGetValue(key, out cv);
-                    if (bv != cv && !(bv == null && key.StartsWith("x_", StringComparison.Ordinal))) reg.Add("FIELD " + kv.Key + " " + key + ": " + bv + " -> " + cv);
+                    if (bv != cv && !(key == "drag" && DragClose(bv, cv, dragTol)) && !(bv == null && key.StartsWith("x_", StringComparison.Ordinal))) reg.Add("FIELD " + kv.Key + " " + key + ": " + bv + " -> " + cv);
                 }
             }
             foreach (string e in c.Errors) if (!b.Errors.Contains(e)) reg.Add("NEW ERROR " + e);
             return reg;
+        }
+
+        static bool DragClose(string bv, string cv, double tol)
+        {
+            if (tol <= 0.0 || bv == null || cv == null) return false;
+            int bi = bv.LastIndexOf(':');
+            int ci = cv.LastIndexOf(':');
+            if (bi < 0 || ci < 0) return false;
+            if (bv.Substring(0, bi) != cv.Substring(0, ci)) return false;
+            string[] bp = bv.Substring(bi + 1).Split(',');
+            string[] cp = cv.Substring(ci + 1).Split(',');
+            if (bp.Length != 2 || cp.Length != 2) return false;
+            return System.Math.Abs(ParseD(bp[0]) - ParseD(cp[0])) <= tol && System.Math.Abs(ParseD(bp[1]) - ParseD(cp[1])) <= tol;
+        }
+
+        // Bandingkan dua berkas probe di RushBaseline (tanpa menulis berkas diff). Pakai dragTol 0.01 untuk probe v2.
+        public static string CompareFiles(string baselineFile, string currentFile, double dragTol)
+        {
+            string b = RushCommon.FileIn(baselineFile);
+            string c = RushCommon.FileIn(currentFile);
+            if (!File.Exists(b)) return "NO BASELINE " + baselineFile;
+            if (!File.Exists(c)) return "NO CURRENT " + currentFile;
+            List<string> reg = CompareLines(File.ReadAllLines(b), File.ReadAllLines(c), dragTol);
+            return VersionNote(b, c) + "PROBE " + (reg.Count == 0 ? "PASS" : "FAIL") + " (regressions=" + reg.Count + ", dragTol=" + dragTol.ToString("F3", RushCommon.Inv) + ")" + (char)10 + string.Join("" + (char)10, reg.Take(40).ToArray());
         }
 
         public static string CompareToBaseline()
@@ -835,7 +1091,7 @@ namespace RushRefactor
             if (!File.Exists(c)) return "NO CURRENT";
             List<string> reg = CompareLines(File.ReadAllLines(b), File.ReadAllLines(c));
             File.WriteAllText(RushCommon.FileIn(c_DiffFile), string.Join("\n", reg.ToArray()) + "\n", new UTF8Encoding(false));
-            return "PROBE " + (reg.Count == 0 ? "PASS" : "FAIL") + " (regressions=" + reg.Count + ")\n" + string.Join("\n", reg.Take(15).ToArray());
+            return VersionNote(b, c) + "PROBE " + (reg.Count == 0 ? "PASS" : "FAIL") + " (regressions=" + reg.Count + ")\n" + string.Join("\n", reg.Take(15).ToArray());
         }
     }
 }

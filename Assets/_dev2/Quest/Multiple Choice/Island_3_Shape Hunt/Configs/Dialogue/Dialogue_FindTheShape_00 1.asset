@@ -25,7 +25,7 @@ MonoBehaviour:
   - m_Words: a
     m_AddSpaceForNext: 1
     m_Effects: []
-  - m_Words: Triangle
+  - m_Words: triangle
     m_AddSpaceForNext: 0
     m_Effects:
     - {fileID: 11400000, guid: 64f0c6aad2a9fde4f82965844609bc47, type: 2}

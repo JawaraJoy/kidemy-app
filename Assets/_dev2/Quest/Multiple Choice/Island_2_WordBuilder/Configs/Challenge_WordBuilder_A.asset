@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
+  m_Name: Challenge_WordBuilder_A
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
+  m_Background: {fileID: 21300000, guid: 3b10404c8f3f0c6438c311a2b690b766, type: 3}
+  m_ConffetyVFXPrefab: {fileID: 6391076248617746661, guid: 9c831dc923a84ea4f81165339485f098, type: 3}
+  m_ChoicePrefab: {fileID: -102638525429766386, guid: 83e7f692533edae4b844f114fa9ce453, type: 3}
+  m_QuestLayoutPrefabs: {fileID: 8344063676491614192, guid: 0a2cd65fb0a67244aa6c8744e352d06a, type: 3}
+  m_ReactionPanelPrefab: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
+  m_ResultPanelPrefab: {fileID: 4395721995340702901, guid: 82fc430240f383547805088edce2f7a3, type: 3}
+  m_Character: {fileID: 11400000, guid: ae2730b94a2996342a8cf515aaf142f8, type: 2}
+  m_SceneConfig: {fileID: 11400000, guid: f6723d591ae6e1e4d8e395b2b6f54ae7, type: 2}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: 17a968d6bdea6f045a35227b2761fa7a, type: 2}
+  - {fileID: 11400000, guid: be970fe1b58b8dc4abeb085fae3b2ee2, type: 2}
+  - {fileID: 11400000, guid: 1dee3e1c885d65747b6aec01bb9b2611, type: 2}
+  - {fileID: 11400000, guid: 4a1849d3c5cc2694dbe6de249289ae64, type: 2}
+  - {fileID: 11400000, guid: 8818e400d8e9666408f97aa627c62c46, type: 2}

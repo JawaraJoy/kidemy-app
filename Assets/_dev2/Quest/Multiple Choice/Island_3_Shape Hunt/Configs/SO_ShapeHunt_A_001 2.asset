@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_ShapeHunt_A_001 2
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  m_Id: 001A
+  m_Title: Frog Count
+  m_Category: 0
+  m_Character: {fileID: 11400000, guid: 7300581e70cc4a4449ab43d226480236, type: 2}
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  m_Question:
+    m_Image: {fileID: 0}
+    m_Text: Which one is Bigger?
+    m_FormatedText: {fileID: 11400000, guid: d3413bd6175b57c49a38311b4d40be4b, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 0}
+  m_AutoSubmit: 0
+  m_Score: 10
+  m_TresholdTime: 0
+  m_RepeatSoundQuest: 1
+  m_SoundQuest: {fileID: 0}
+  m_HowManySoundConfig: {fileID: 0}
+  m_Choices:
+  - m_Image: {fileID: 21300000, guid: 9ac319a98d7c15f4f9052c8f253221d9, type: 3}
+    m_Text: Window
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 0}
+    m_IsAnswer: 1
+  - m_Image: {fileID: 21300000, guid: 1662430d50236cd4a9add3712b3df961, type: 3}
+    m_Text: Book
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 0}
+    m_IsAnswer: 0
+  - m_Image: {fileID: 21300000, guid: 2c77895283ab94843a02eb29ae24b82d, type: 3}
+    m_Text: Pi
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 0}
+    m_IsAnswer: 0
+  m_Timer: 0
+  m_RandomizeChoice: 0

@@ -34,8 +34,8 @@ namespace EduGame
         public Quest QuestLayoutPrefabs => m_QuestLayoutPrefabs;
         public SO_Quest[] QuestConfigs => m_QuestConfigs;
         public ParticleSystem ConffetyVFXPrefab => m_ConffetyVFXPrefab;
-        public ReactionConfig RightReaction => m_Character.RightReaction;
-        public ReactionConfig WrongReaction => m_Character.WrongReaction;
+        public ReactionConfig RightReaction => m_Character ? m_Character.RightReaction : null;
+        public ReactionConfig WrongReaction => m_Character ? m_Character.WrongReaction : null;
         public ResultPanel ResultPanelPrefab => m_ResultPanelPrefab;
         public ReactionPanel ReactionPanelPrefab => m_ReactionPanelPrefab;
 

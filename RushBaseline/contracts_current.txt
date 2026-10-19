@@ -67,7 +67,7 @@ TOOLAPI|EduGame.GameManager::PlaySoundQuest|public|params=|ret=Void
 TOOLAPI|EduGame.GameManager::ResetQuest|public|params=|ret=Void
 TOOLAPI|EduGame.GameManager::Submit|public|params=Int32|ret=Void
 TOOLAPI|EduGame.GameManager::get_Instance|public,static|params=|ret=GameManager
-UEVENT|EduGame.AudioPlayer::OnClick|count=23|OK
+UEVENT|EduGame.AudioPlayer::OnClick|count=24|OK
 UEVENT|EduGame.ChallengeManager::Next|count=4|NOTYPE
 UEVENT|EduGame.ChallengeManager::ResetQuest|count=3|NOTYPE
 UEVENT|EduGame.Feedback::Play|count=102|OK

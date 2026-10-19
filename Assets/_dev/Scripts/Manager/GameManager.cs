@@ -171,10 +171,9 @@ namespace EduGame
             if (m_StarPrefab)
                 InstantiateStar();
             
-            if (m_ConffetyVFXPrefab)
-                m_ConffetyVFX = Instantiate(m_ConffetyVFXPrefab, m_ChallengeContainer, false);
-            else if (m_ChallengeConfig && m_ChallengeConfig.ConffetyVFXPrefab)
-                m_ConffetyVFX = Instantiate(m_ChallengeConfig.ConffetyVFXPrefab, m_ChallengeContainer, false);
+            ParticleSystem confettiPrefab = m_ConffetyVFXPrefab ? m_ConffetyVFXPrefab : (m_ChallengeConfig ? m_ChallengeConfig.ConffetyVFXPrefab : null);
+            if (confettiPrefab)
+                m_ConffetyVFX = Instantiate(confettiPrefab, m_ChallengeContainer, false);
             
             m_RightAnswerCount = 0;
         }
@@ -242,63 +241,29 @@ namespace EduGame
             else
                 m_SessionId = m_FallbackSessionId;
 
-            if (m_ChallengeConfig)
+            int questCount = ResolveQuestCount();
+            if (questCount > 0)
             {
-                if (m_ChallengeConfig.QuestConfigs.Length > 0)
-                {
-                    m_Quests = new Quest[m_ChallengeConfig.QuestConfigs.Length];
-                    for (int i = 0; i < m_ChallengeConfig.QuestConfigs.Length; i++)
-                    {
-                        m_Quests[i] = InstantiateTemplate(m_ChallengeConfig.QuestLayoutPrefabs);
-                        m_Quests[i].SetData(m_ChallengeConfig.QuestConfigs[i]);
-                        m_Quests[i].SetChallenge(m_ChallengeConfig);
-                        m_Quests[i].SetBackground(m_ChallengeConfig.Background);
-                        m_Quests[i].gameObject.SetActive(false);
-                    }
-                }
-                else
-                {
-                    Debug.LogError("Failed to load data, challenge will return empty");
-                }
-                
-                m_ResultPanel = Instantiate(m_ChallengeConfig.ResultPanelPrefab, m_PanelContainer, false);
-                m_ResultPanel.SetHost(this);
-                m_ReactionPanel = Instantiate(m_ChallengeConfig.ReactionPanelPrefab, m_PanelContainer, false);
-
-                if (m_ReactionPanel)
-                {
-                    m_ReactionPanel.Init(this);
-                }
-                
+                m_Quests = new Quest[questCount];
+                for (int i = 0; i < questCount; i++)
+                    m_Quests[i] = CreateQuest(i);
             }
             else
+                Debug.LogError("Failed to load data, challenge will return empty");
+
+            ResultPanel resultPrefab = m_ChallengeConfig ? m_ChallengeConfig.ResultPanelPrefab : m_ResultPanelPrefab;
+            if (resultPrefab)
             {
-                if (m_QuestPrefabs.Length > 0)
-                {
-                    m_Quests = new Quest[m_QuestPrefabs.Length];
-
-                    for (int i = 0; i < m_QuestPrefabs.Length; i++)
-                    {
-                        m_Quests[i] = InstantiateTemplate(m_QuestPrefabs[i]);
-                        m_Quests[i].gameObject.SetActive(false);
-                    }
-
-                }
-                else if (m_QuestPrefab)
-                {
-                    m_Quests = new Quest[1];
-
-                    m_Quests[0] = InstantiateTemplate(m_QuestPrefab);
-                }
-                else
-                    Debug.LogError("Failed to load data, challenge will return empty");
-
-                if(m_ResultPanelPrefab) { m_ResultPanel = Instantiate(m_ResultPanelPrefab, m_PanelContainer, false); m_ResultPanel.SetHost(this); }
-                    
-                if(m_ReactionPanelPrefab) m_ReactionPanel = Instantiate(m_ReactionPanelPrefab, m_PanelContainer, false);
-
-                if (m_ReactionPanel) m_ReactionPanel.Init(this);
+                m_ResultPanel = Instantiate(resultPrefab, m_PanelContainer, false);
+                m_ResultPanel.SetHost(this);
             }
+
+            ReactionPanel reactionPrefab = m_ChallengeConfig ? m_ChallengeConfig.ReactionPanelPrefab : m_ReactionPanelPrefab;
+            if (reactionPrefab)
+                m_ReactionPanel = Instantiate(reactionPrefab, m_PanelContainer, false);
+
+            if (m_ReactionPanel)
+                m_ReactionPanel.Init(this);
             
 
             //quests[0].gameObject.SetActive(true);
@@ -576,6 +541,46 @@ namespace EduGame
             m_Quests[m_CurrentIndex].Reset();
         }
 
+        // Satu pintu untuk dua sumber data: ChallengeConfig (OtherDev) atau field prefab langsung di GameManager.
+        private ReactionConfig ResolveReaction(bool right)
+        {
+            if (m_ChallengeConfig)
+                return right ? m_ChallengeConfig.RightReaction : m_ChallengeConfig.WrongReaction;
+
+            return right ? m_RightReaction : m_WrongReaction;
+        }
+
+        private int ResolveQuestCount()
+        {
+            if (m_ChallengeConfig)
+                return m_ChallengeConfig.QuestConfigs.Length;
+
+            if (m_QuestPrefabs.Length > 0)
+                return m_QuestPrefabs.Length;
+
+            return m_QuestPrefab ? 1 : 0;
+        }
+
+        private Quest CreateQuest(int index)
+        {
+            Quest quest;
+            if (m_ChallengeConfig)
+            {
+                quest = InstantiateTemplate(m_ChallengeConfig.QuestLayoutPrefabs);
+                quest.SetData(m_ChallengeConfig.QuestConfigs[index]);
+                quest.SetChallenge(m_ChallengeConfig);
+                quest.SetBackground(m_ChallengeConfig.Background);
+            }
+            else
+                quest = InstantiateTemplate(m_QuestPrefabs.Length > 0 ? m_QuestPrefabs[index] : m_QuestPrefab);
+
+            // Prefab tunggal (jalur lama) tetap aktif seperti sebelumnya.
+            if (m_ChallengeConfig || m_QuestPrefabs.Length > 0)
+                quest.gameObject.SetActive(false);
+
+            return quest;
+        }
+
         public void ShowResult(int star)
         {
             ShowResultInternal(star);
@@ -605,21 +610,14 @@ namespace EduGame
             else if (star > 1) // jika bintang lebih dari 1 maka dianggap jawaban benar
             {
                 m_RightAnswerCount++;
-                if (m_ChallengeConfig)
+                ReactionConfig rightReaction = ResolveReaction(true);
+                if (m_ChallengeConfig || rightReaction)
                 {
-                    m_ReactionPanel.ShowReaction(m_ChallengeConfig.RightReaction);
+                    m_ReactionPanel.ShowReaction(rightReaction);
                     if (m_ConffetyVFX)
                     {
                         m_ConffetyVFX.Play();
-                    }    
-                }
-                else if (m_RightReaction)
-                {
-                    m_ReactionPanel.ShowReaction(m_RightReaction);
-                    if (m_ConffetyVFX)
-                    {
-                        m_ConffetyVFX.Play();
-                    }   
+                    }
                 }
                 else
                 {
@@ -636,13 +634,10 @@ namespace EduGame
             }
             else
             {
-                if (m_ChallengeConfig)
+                ReactionConfig wrongReaction = ResolveReaction(false);
+                if (m_ChallengeConfig || wrongReaction)
                 {
-                    m_ReactionPanel.ShowReaction(m_ChallengeConfig.WrongReaction);
-                }
-                else if (m_WrongReaction)
-                {
-                    m_ReactionPanel.ShowReaction(m_WrongReaction);
+                    m_ReactionPanel.ShowReaction(wrongReaction);
                 }
                 else
                 {

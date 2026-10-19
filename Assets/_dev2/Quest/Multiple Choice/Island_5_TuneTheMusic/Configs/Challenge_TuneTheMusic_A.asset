@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
+  m_Name: Challenge_TuneTheMusic_A
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
+  m_Background: {fileID: 21300000, guid: 6fcd064ad665f6a44bcb6d08ae6aba7c, type: 3}
+  m_ConffetyVFXPrefab: {fileID: 6391076248617746661, guid: 9c831dc923a84ea4f81165339485f098, type: 3}
+  m_ChoicePrefab: {fileID: -102638525429766386, guid: 23320805bd1437f4399800fe801285d1, type: 3}
+  m_QuestLayoutPrefabs: {fileID: 8344063676491614192, guid: acd269c5a6900ed449a7395d18f6f98d, type: 3}
+  m_ReactionPanelPrefab: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
+  m_ResultPanelPrefab: {fileID: 4395721995340702901, guid: 82fc430240f383547805088edce2f7a3, type: 3}
+  m_Character: {fileID: 11400000, guid: 835a5f97fe91ead4390fef37675e7290, type: 2}
+  m_SceneConfig: {fileID: 11400000, guid: d9b24f277835ef44ea118fdd3f2b645c, type: 2}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: bcfc665c7f9b1fa4c8cb1b70bbc715ce, type: 2}
+  - {fileID: 11400000, guid: 6d2de5d9e8350ed458ce9db44af2ff00, type: 2}
+  - {fileID: 11400000, guid: bdc7f22a651de804386470374df291c4, type: 2}
+  - {fileID: 11400000, guid: 28738b629228ec846afef1b04c464b8b, type: 2}
+  - {fileID: 11400000, guid: 8ea816453060e274d87a54267b9089b4, type: 2}
