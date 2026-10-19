@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
+  m_Name: Challenge_AdditionTrek_A
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
+  m_Background: {fileID: 21300000, guid: 7591fd12999cebe63a89e714f4dbd30a, type: 3}
+  m_ConffetyVFXPrefab: {fileID: 6391076248617746661, guid: 9c831dc923a84ea4f81165339485f098, type: 3}
+  m_ChoicePrefab: {fileID: -102638525429766386, guid: 58e515e52a08ae5468721cc65593766e, type: 3}
+  m_QuestLayoutPrefabs: {fileID: 8344063676491614192, guid: 9c847417bead70543858ee1b6ab56411, type: 3}
+  m_ReactionPanelPrefab: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
+  m_ResultPanelPrefab: {fileID: 4395721995340702901, guid: 82fc430240f383547805088edce2f7a3, type: 3}
+  m_Character: {fileID: 11400000, guid: 7300581e70cc4a4449ab43d226480236, type: 2}
+  m_SceneConfig: {fileID: 11400000, guid: 6e375bbc9fc203b4384245e01da9efda, type: 2}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: aa4b48c2552691a4388b7c25e358e957, type: 2}
+  - {fileID: 11400000, guid: fc46331afea511649813bf41a4617ff6, type: 2}
+  - {fileID: 11400000, guid: ed2e31a1ccb81074b8ac0a4eadcbdbe5, type: 2}
+  - {fileID: 11400000, guid: 4d14187b851ab0f4d924bff4a58d26f7, type: 2}
+  - {fileID: 11400000, guid: 2a2d3640a1ce2c944bf8de1a6857215c, type: 2}
+  m_QuestLayoutOverrides:
+  - {fileID: 0}
+  - {fileID: 8344063676491614192, guid: c7f114de3e632d44199ec114a9383e44, type: 3}
+  - {fileID: 0}
+  - {fileID: 8344063676491614192, guid: 40ad796584b2b5e4aa6984c91179ca0a, type: 3}
+  - {fileID: 8344063676491614192, guid: e44c4d70f5558c64f9bb1433e0057179, type: 3}
+  m_BackgroundOverrides:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

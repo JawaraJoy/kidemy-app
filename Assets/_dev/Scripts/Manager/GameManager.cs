@@ -17,6 +17,7 @@ namespace EduGame
         private const string c_ParamBgmVolume = "bgm_volume";
         private const string c_ParamSessionId = "session_id";
         private const string c_ParamApiToken = "token";
+        private const string c_ParamChallenge = "challenge";
         private const float c_BgmVolumeScale = 10f;
         private const int c_SecondsPerMinute = 60;
         private const string c_TimerSeparator = ":";
@@ -98,6 +99,11 @@ namespace EduGame
         [Header("Other Dev")]
         [SerializeField]
         private ChallengeConfig m_ChallengeConfig;
+        [Header("Single scene: challenge picked at runtime")]
+        [SerializeField]
+        private GameConfig m_GameConfig;
+        [SerializeField]
+        private ChallengeConfig m_DebugChallenge;
         [SerializeField]
         private Transform m_ChallengeContainer;
         [SerializeField]
@@ -159,6 +165,8 @@ namespace EduGame
         void Awake()
         {
             m_Canvas = GetComponentInParent<Canvas>();
+
+            m_ChallengeConfig = ResolveChallenge();
 
             m_HandTutorial = GetComponentInChildren<HandTutorial>();
 
@@ -561,15 +569,40 @@ namespace EduGame
             return m_QuestPrefab ? 1 : 0;
         }
 
-        private Quest CreateQuest(int index)
+        private // Challenge dipilih dari scene (m_ChallengeConfig), URL WebGL (?challenge=<Id> lewat GameConfig), atau m_DebugChallenge.
+        ChallengeConfig ResolveChallenge()
+        {
+            if (m_ChallengeConfig)
+                return m_ChallengeConfig;
+            if (!m_GameConfig)
+                return null;
+
+            string id = null;
+#if !UNITY_EDITOR && UNITY_WEBGL
+            string url = GetSelfURL();
+            if (!string.IsNullOrEmpty(url))
+            {
+                Dictionary<string, string> parameters = URIHelper.GetParameters(url);
+                if (parameters.ContainsKey(c_ParamChallenge))
+                    id = parameters[c_ParamChallenge];
+            }
+#endif
+            ChallengeConfig found = m_GameConfig.Find(id);
+            if (!found && !string.IsNullOrEmpty(id))
+                Debug.LogError("Challenge not found in GameConfig: " + id);
+            return found ? found : m_DebugChallenge;
+        }
+
+        Quest CreateQuest(int index)
         {
             Quest quest;
             if (m_ChallengeConfig)
             {
-                quest = InstantiateTemplate(m_ChallengeConfig.QuestLayoutPrefabs);
+                quest = InstantiateTemplate(m_ChallengeConfig.GetLayout(index));
                 quest.SetData(m_ChallengeConfig.QuestConfigs[index]);
                 quest.SetChallenge(m_ChallengeConfig);
-                quest.SetBackground(m_ChallengeConfig.Background);
+                quest.SetChallengeIndex(index);
+                quest.SetBackground(m_ChallengeConfig.GetBackground(index));
             }
             else
                 quest = InstantiateTemplate(m_QuestPrefabs.Length > 0 ? m_QuestPrefabs[index] : m_QuestPrefab);

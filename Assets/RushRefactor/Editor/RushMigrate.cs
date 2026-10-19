@@ -11,6 +11,8 @@ namespace RushRefactor
 {
     // Alat sekali pakai: replikasi game _dev (Stage legacy) ke pola _dev2 (ChallengeConfig + scene tipis).
     // Aset legacy tidak diubah. Mengembalikan teks laporan; "ABORT" bila ada ketidakcocokan (tidak ada aset dibuat).
+    // Layout berbeda antar soal -> satu layout prefab per bentuk (override per soal di ChallengeConfig);
+    // latar berbeda antar soal -> override latar per soal.
     public static class RushMigrate
     {
         private const string c_Dev2Root = "Assets/_dev2/Quest/Multiple Choice";
@@ -22,23 +24,26 @@ namespace RushRefactor
         public static string Migrate(string legacyScenePath, string gameName, int island)
         {
             string folder = c_Dev2Root + "/Island_" + island + "_" + gameName;
-            string layoutPath = c_LayoutDir + "/QuestLayout_" + gameName + "_001.prefab";
-            if (AssetDatabase.IsValidFolder(folder) || File.Exists(layoutPath))
+            if (AssetDatabase.IsValidFolder(folder) || File.Exists(LayoutPath(gameName, 1)))
                 return "ABORT: target sudah ada: " + folder;
 
-            string plan = ReadLegacy(legacyScenePath, out List<GameObject> prefabs, out Sprite background, out Object choice, out Object character);
-            if (plan != null) return plan;
+            string error = ReadLegacy(legacyScenePath, out List<GameObject> prefabs);
+            if (error != null) return error;
 
-            string mismatch = CheckSameTree(prefabs);
-            if (mismatch != null) return "ABORT: " + mismatch;
+            error = CheckSameFields(prefabs);
+            if (error != null) return "ABORT: " + error;
 
-            return Build(folder, layoutPath, gameName, prefabs, background, choice, character);
+            return Build(folder, gameName, prefabs);
         }
 
-        private static string ReadLegacy(string scenePath, out List<GameObject> prefabs, out Sprite background, out Object choice, out Object character)
+        private static string LayoutPath(string gameName, int number)
+        {
+            return c_LayoutDir + "/QuestLayout_" + gameName + "_" + number.ToString("000") + ".prefab";
+        }
+
+        private static string ReadLegacy(string scenePath, out List<GameObject> prefabs)
         {
             prefabs = new List<GameObject>();
-            background = null; choice = null; character = null;
             SceneSetup[] setup = EditorSceneManager.GetSceneManagerSetup();
             UnityEngine.SceneManagement.Scene scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Additive);
             GameManager gm = null;
@@ -61,15 +66,6 @@ namespace RushRefactor
                 else if (one != null && one.objectReferenceValue) prefabs.Add(AsPrefab(one.objectReferenceValue));
                 if (prefabs.Count == 0 || prefabs.Contains(null)) error = "ABORT: prefab quest tidak lengkap";
             }
-            if (error == null)
-            {
-                Quest q = prefabs[0].GetComponent<Quest>();
-                SerializedObject qs = new SerializedObject(q);
-                background = qs.FindProperty("m_Background").objectReferenceValue as Sprite;
-                character = qs.FindProperty("m_Character").objectReferenceValue;
-                SerializedProperty ci = qs.FindProperty("m_ChoiceItemPrefab");
-                choice = ci != null ? ci.objectReferenceValue : null;
-            }
             EditorSceneManager.CloseScene(scene, true);
             EditorSceneManager.RestoreSceneManagerSetup(setup);
             return error;
@@ -81,6 +77,13 @@ namespace RushRefactor
             return c ? c.gameObject : o as GameObject;
         }
 
+        private static Object ObjectField(GameObject prefab, string field)
+        {
+            Quest q = prefab.GetComponent<Quest>();
+            SerializedProperty p = q ? new SerializedObject(q).FindProperty(field) : null;
+            return p != null ? p.objectReferenceValue : null;
+        }
+
         private static string Tree(Transform t, bool isRoot)
         {
             StringBuilder sb = new StringBuilder(isRoot ? "ROOT" : t.name);
@@ -89,52 +92,51 @@ namespace RushRefactor
             return sb.ToString();
         }
 
-        private static string CheckSameTree(List<GameObject> prefabs)
+        // Karakter dan prefab pilihan harus sama antar soal (ChallengeConfig hanya punya satu).
+        private static string CheckSameFields(List<GameObject> prefabs)
         {
-            string first = Tree(prefabs[0].transform, true);
-            SerializedObject s0 = new SerializedObject(prefabs[0].GetComponent<Quest>());
             for (int i = 1; i < prefabs.Count; i++)
             {
-                if (Tree(prefabs[i].transform, true) != first) return "pohon objek prefab " + prefabs[i].name + " berbeda dari " + prefabs[0].name;
-                SerializedObject si = new SerializedObject(prefabs[i].GetComponent<Quest>());
-                foreach (string f in new string[] { "m_Background", "m_Character", "m_ChoiceItemPrefab", "m_NpcController" })
+                foreach (string f in new string[] { "m_Character", "m_ChoiceItemPrefab" })
                 {
-                    SerializedProperty a = s0.FindProperty(f); SerializedProperty b = si.FindProperty(f);
-                    if (a != null && b != null && a.objectReferenceValue != b.objectReferenceValue) return "field " + f + " berbeda di " + prefabs[i].name;
+                    if (ObjectField(prefabs[i], f) != ObjectField(prefabs[0], f))
+                        return "field " + f + " berbeda di " + prefabs[i].name;
                 }
             }
             return null;
         }
 
-        private static string Build(string folder, string layoutPath, string gameName, List<GameObject> prefabs, Sprite background, Object choice, Object character)
+        private static string Build(string folder, string gameName, List<GameObject> prefabs)
         {
-            StringBuilder report = new StringBuilder();
-            QuestMultipleChoices legacyMc = prefabs[0].GetComponent<QuestMultipleChoices>();
-            SerializedProperty legacyChoice = legacyMc ? new SerializedObject(legacyMc).FindProperty("m_ChoiceItemPrefab") : null;
-            if (legacyChoice != null) choice = legacyChoice.objectReferenceValue;
             string template = c_Dev2Root + "/" + c_TemplateFolder + "/";
             AssetDatabase.CreateFolder(c_Dev2Root, Path.GetFileName(folder));
             AssetDatabase.CreateFolder(folder, "Configs");
 
-            AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(prefabs[0]), layoutPath);
-            GameObject root = PrefabUtility.LoadPrefabContents(layoutPath);
-            SerializedObject ls = new SerializedObject(root.GetComponent<Quest>());
-            foreach (string f in new string[] { "m_Data", "m_Background", "m_Character", "m_ChoiceItemPrefab" })
+            // satu layout per bentuk pohon yang berbeda
+            List<string> signatures = new List<string>();
+            List<string> layoutPaths = new List<string>();
+            int[] layoutOf = new int[prefabs.Count];
+            for (int i = 0; i < prefabs.Count; i++)
             {
-                SerializedProperty p = ls.FindProperty(f);
-                if (p != null) p.objectReferenceValue = null;
+                string sig = Tree(prefabs[i].transform, true);
+                int at = signatures.IndexOf(sig);
+                if (at < 0)
+                {
+                    signatures.Add(sig);
+                    string lp = LayoutPath(gameName, signatures.Count);
+                    CreateLayout(prefabs[i], lp);
+                    layoutPaths.Add(lp);
+                    at = signatures.Count - 1;
+                }
+                layoutOf[i] = at;
             }
-            ls.ApplyModifiedProperties();
-            root.name = Path.GetFileNameWithoutExtension(layoutPath);
-            PrefabUtility.SaveAsPrefabAsset(root, layoutPath);
-            PrefabUtility.UnloadPrefabContents(root);
 
             Object[] sos = new Object[prefabs.Count];
             for (int i = 0; i < prefabs.Count; i++)
             {
-                SerializedProperty d = new SerializedObject(prefabs[i].GetComponent<Quest>()).FindProperty("m_Data");
+                Object data = ObjectField(prefabs[i], "m_Data");
                 string np = folder + "/Configs/SO_" + gameName + "_A_0" + i + ".asset";
-                AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(d.objectReferenceValue), np);
+                AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(data), np);
                 sos[i] = AssetDatabase.LoadAssetAtPath<Object>(np);
             }
 
@@ -146,17 +148,33 @@ namespace RushRefactor
             scs.FindProperty("m_SceneAsset").objectReferenceValue = AssetDatabase.LoadAssetAtPath<Object>(scenePath);
             scs.ApplyModifiedProperties();
 
+            Sprite background = ObjectField(prefabs[0], "m_Background") as Sprite;
             string cc = folder + "/Configs/Challenge_" + gameName + "_A.asset";
             AssetDatabase.CopyAsset(template + c_TemplateChallenge, cc);
             SerializedObject cs = new SerializedObject(AssetDatabase.LoadAssetAtPath<Object>(cc));
             cs.FindProperty("m_Background").objectReferenceValue = background;
-            cs.FindProperty("m_ChoicePrefab").objectReferenceValue = choice;
-            cs.FindProperty("m_QuestLayoutPrefabs").objectReferenceValue = AssetDatabase.LoadAssetAtPath<Object>(layoutPath);
-            cs.FindProperty("m_Character").objectReferenceValue = character;
+            cs.FindProperty("m_ChoicePrefab").objectReferenceValue = ObjectField(prefabs[0], "m_ChoiceItemPrefab");
+            cs.FindProperty("m_QuestLayoutPrefabs").objectReferenceValue = AssetDatabase.LoadAssetAtPath<Object>(layoutPaths[0]);
+            cs.FindProperty("m_Character").objectReferenceValue = ObjectField(prefabs[0], "m_Character");
             cs.FindProperty("m_SceneConfig").objectReferenceValue = sc;
             SerializedProperty arr = cs.FindProperty("m_QuestConfigs");
             arr.arraySize = sos.Length;
             for (int i = 0; i < sos.Length; i++) arr.GetArrayElementAtIndex(i).objectReferenceValue = sos[i];
+
+            int layoutOverrides = 0, backgroundOverrides = 0;
+            SerializedProperty lov = cs.FindProperty("m_QuestLayoutOverrides");
+            SerializedProperty bov = cs.FindProperty("m_BackgroundOverrides");
+            lov.arraySize = prefabs.Count;
+            bov.arraySize = prefabs.Count;
+            for (int i = 0; i < prefabs.Count; i++)
+            {
+                lov.GetArrayElementAtIndex(i).objectReferenceValue = layoutOf[i] == 0 ? null : AssetDatabase.LoadAssetAtPath<Object>(layoutPaths[layoutOf[i]]);
+                if (layoutOf[i] != 0) layoutOverrides++;
+                Sprite bg = ObjectField(prefabs[i], "m_Background") as Sprite;
+                bool differs = bg != background;
+                bov.GetArrayElementAtIndex(i).objectReferenceValue = differs ? bg : null;
+                if (differs) backgroundOverrides++;
+            }
             cs.ApplyModifiedProperties();
 
             string oldGuid = AssetDatabase.AssetPathToGUID(template + c_TemplateChallenge);
@@ -166,10 +184,27 @@ namespace RushRefactor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
 
-            report.Append("OK ").Append(gameName).Append(": ").Append(sos.Length).Append(" soal, layout=").Append(prefabs[0].GetComponent<Quest>().GetType().Name);
-            report.Append(", bg=").Append(background ? background.name : "null").Append(", choice=").Append(choice ? choice.name : "null");
-            report.Append(", char=").Append(character ? character.name : "null").Append(", scene=").Append(scenePath);
-            return report.ToString();
+            Object character = ObjectField(prefabs[0], "m_Character");
+            Object choice = ObjectField(prefabs[0], "m_ChoiceItemPrefab");
+            return "OK " + gameName + ": " + sos.Length + " soal, mekanik=" + prefabs[0].GetComponent<Quest>().GetType().Name
+                + ", layout=" + layoutPaths.Count + " (override " + layoutOverrides + "), latar override=" + backgroundOverrides
+                + ", choice=" + (choice ? choice.name : "null") + ", char=" + (character ? character.name : "null") + ", scene=" + scenePath;
+        }
+
+        private static void CreateLayout(GameObject source, string layoutPath)
+        {
+            AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(source), layoutPath);
+            GameObject root = PrefabUtility.LoadPrefabContents(layoutPath);
+            SerializedObject ls = new SerializedObject(root.GetComponent<Quest>());
+            foreach (string f in new string[] { "m_Data", "m_Background", "m_Character", "m_ChoiceItemPrefab" })
+            {
+                SerializedProperty p = ls.FindProperty(f);
+                if (p != null) p.objectReferenceValue = null;
+            }
+            ls.ApplyModifiedProperties();
+            root.name = Path.GetFileNameWithoutExtension(layoutPath);
+            PrefabUtility.SaveAsPrefabAsset(root, layoutPath);
+            PrefabUtility.UnloadPrefabContents(root);
         }
     }
 }

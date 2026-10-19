@@ -137,7 +137,7 @@ namespace EduGame
                 
                 
             }
-            QuestMultipleChoicesItem choicePrefab = m_Challenged ? m_Challenged.ChoicePrefab as QuestMultipleChoicesItem : m_ChoiceItemPrefab;
+            QuestMultipleChoicesItem choicePrefab = m_Challenged ? m_Challenged.GetChoicePrefab(m_ChallengeIndex) as QuestMultipleChoicesItem : m_ChoiceItemPrefab;
             if (choicePrefab && m_ChoicesContainer)
             {
                 m_ChoicesContainer.gameObject.SetActive(true);
