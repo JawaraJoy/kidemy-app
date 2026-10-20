@@ -26,7 +26,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: 028fa485ca8d4544b953c17606619780, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: 9542c2cc21943fc4e9f667df29c5b78a, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: 21300000, guid: 9ac319a98d7c15f4f9052c8f253221d9, type: 3}
     m_Text: Window
@@ -50,7 +50,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: 2b11929874092534898adbd932769db5, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: 21300000, guid: 7969c842357dff743af3057632bf264b, type: 3}
     m_Text: Pi
@@ -59,7 +59,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: 0968bfe425305234ca85352786903b57, type: 3}
     m_IsAnswer: 1
   m_Timer: 0
   m_RandomizeChoice: 0

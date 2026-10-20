@@ -171,10 +171,10 @@ RectTransform:
   - {fileID: 6427968901849508403}
   m_Father: {fileID: 7029759817752411399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 381.25, y: -361.875}
+  m_SizeDelta: {x: 762.5, y: 144.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4837509903548569000
 CanvasRenderer:
@@ -204,6 +204,8 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+  m_MaxWidth: -1
+  m_MaxHeight: -1
 --- !u!1 &5161559065646764610
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,10 +386,10 @@ RectTransform:
   - {fileID: 8160067568446731495}
   m_Father: {fileID: 7029759817752411399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 381.25, y: -144.75}
+  m_SizeDelta: {x: 762.5, y: 289.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4686921181399235971
 MonoBehaviour:
@@ -409,6 +411,8 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 2
   m_LayoutPriority: 1
+  m_MaxWidth: -1
+  m_MaxHeight: -1
 --- !u!1 &7329335613864971328
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,19 +615,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395d84bf1697fe94ea351f2684fad354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.QuestMultipleChoices
-  data: {fileID: 11400000, guid: 38040f97a44245f4b98543c7ff1e3fd0, type: 2}
-  background: {fileID: 21300000, guid: e669b2decd815094bbb44d98b7d12ad0, type: 3}
-  color: {r: 0.21960784, g: 0.5568628, b: 0.34117648, a: 0}
-  npcController: {fileID: 9100000, guid: ee0292fe0a32e0d4387871e6462a4a8d, type: 2}
-  character: {fileID: 11400000, guid: 7300581e70cc4a4449ab43d226480236, type: 2}
-  score: 10
+  m_Data: {fileID: 11400000, guid: 38040f97a44245f4b98543c7ff1e3fd0, type: 2}
+  m_Background: {fileID: 21300000, guid: e669b2decd815094bbb44d98b7d12ad0, type: 3}
+  m_Color: {r: 0.21960784, g: 0.5568628, b: 0.34117648, a: 0}
+  m_NpcController: {fileID: 9100000, guid: ee0292fe0a32e0d4387871e6462a4a8d, type: 2}
+  m_Character: {fileID: 11400000, guid: 7300581e70cc4a4449ab43d226480236, type: 2}
+  m_Score: 10
   m_MultipleImagesQuestionContainer: {fileID: 5251151821345307247}
-  questionImage: {fileID: 648616099878991184}
-  questionAudio: {fileID: 0}
-  questionText: {fileID: 0}
+  m_QuestionImage: {fileID: 648616099878991184}
+  m_QuestionAudio: {fileID: 0}
+  m_QuestionText: {fileID: 0}
   m_QuestName: {fileID: 0}
-  choicesContainer: {fileID: 6427968901849508403}
-  choiceItemPrefab: {fileID: 8156987785838361269, guid: 9b79ee89d29d93c4a9cb9b2845bde327, type: 3}
+  m_ChoicesContainer: {fileID: 6427968901849508403}
+  m_QuestAnimationHandler: {fileID: 0}
+  m_ChoiceItemPrefab: {fileID: 8156987785838361269, guid: 9b79ee89d29d93c4a9cb9b2845bde327, type: 3}
 --- !u!1 &9080917371053460374
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,9 +723,9 @@ MonoBehaviour:
     m_Bottom: 5
   m_ChildAlignment: 4
   m_Spacing: 0
-  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0

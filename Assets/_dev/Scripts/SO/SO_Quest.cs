@@ -20,15 +20,19 @@ namespace EduGame
         [SerializeField] [FormerlySerializedAs("character")] protected SO_Character m_Character;
         [SerializeField]
         private Image m_ImagePrefab;
+
         [SerializeField]
-        private Sprite[] m_MultipleQuestImages;
+        private int m_ConstraintCount;
+        [SerializeField]
+        private MultipleImageMechanic[] m_MultipleQuestImages;
+        
         [SerializeField] [FormerlySerializedAs("question")] protected QuestUtilLabel m_Question;
 
         [Header("Rule")]
         [SerializeField] [FormerlySerializedAs("autoSubmit")] protected bool m_AutoSubmit;
         [SerializeField] [FormerlySerializedAs("score")] private int m_Score = 10;
         [SerializeField] [FormerlySerializedAs("tresholdTime")] private float m_TresholdTime = 20;
-
+        public int ConstraintCount => m_ConstraintCount;
         /*[SerializeField]
         private LayoutSettingField m_LayoutSetting;
         public LayoutSettingField LayoutSetting => m_LayoutSetting;*/
@@ -79,7 +83,7 @@ namespace EduGame
             if (!string.IsNullOrEmpty(requestId) && requestId.Contains(c_QuestionSegment))
                 m_Question?.SetAudio(clip);
         }
-        public bool HasMultipleImages(out Sprite[] multipleImages, out Image prefab)
+        public bool HasMultipleImages(out MultipleImageMechanic[] multipleImages, out Image prefab)
         {
             multipleImages = m_MultipleQuestImages;
             prefab = m_ImagePrefab;

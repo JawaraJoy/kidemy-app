@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_Whose turn_A_00 2
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  m_Id: 001A
+  m_Title: Frog Count
+  m_Category: 0
+  m_Character: {fileID: 0}
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  m_Question:
+    m_Image: {fileID: 21300000, guid: 61e8e0ef66a0b3e48b3c08beef85f264, type: 3}
+    m_Text: Bird
+    m_FormatedText: {fileID: 11400000, guid: d49a4781b7b8dd2459eb084466a6c89a, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 4dfa4c1b22ccd434b8963bf850fe90bd, type: 3}
+  m_AutoSubmit: 0
+  m_Score: 10
+  m_TresholdTime: 0
+  m_RepeatSoundQuest: 1
+  m_SoundQuest: {fileID: 0}
+  m_HowManySoundConfig: {fileID: 0}
+  m_Choices:
+  - m_Image: {fileID: 21300000, guid: 254b2de9614a65b49ae47c1f091881e4, type: 3}
+    m_Text: Loppi
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: f538cdc063cd9d54f8f4f5a44262e36f, type: 3}
+    m_IsAnswer: 0
+  - m_Image: {fileID: 21300000, guid: 05162f20fd0c0aa83a23d3d568891540, type: 3}
+    m_Text: Bobo
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 4d91d862e89b713498a293a77fa11b2c, type: 3}
+    m_IsAnswer: 1
+  - m_Image: {fileID: 21300000, guid: c290233326fe28641bee8d9dceeb1974, type: 3}
+    m_Text: Melo
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 82679beddf0cb6b4da7f663de4d82dc8, type: 3}
+    m_IsAnswer: 0
+  m_Timer: 0
+  m_RandomizeChoice: 0

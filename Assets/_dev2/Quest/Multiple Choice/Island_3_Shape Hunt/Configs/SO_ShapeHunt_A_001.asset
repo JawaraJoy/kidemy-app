@@ -26,7 +26,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: 123002a8b9546c740b049e1d2a9a9bd8, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: e40896a4b41727145ac480055d027661, type: 3}
     m_IsAnswer: 1
   - m_Image: {fileID: 21300000, guid: c5ca3d8511dd0fb41887eaaf61578875, type: 3}
     m_Text: Book
@@ -50,7 +50,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: 7b94fb7d45e665f42b6ff4e4a01c0421, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: 21300000, guid: cb1b6591a249ab04290d2e4a25ed3b90, type: 3}
     m_Text: Kite
@@ -59,7 +59,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: b9cd71fa04d252540acb4c5e07a4543d, type: 3}
     m_IsAnswer: 0
   m_Timer: 0
   m_RandomizeChoice: 0

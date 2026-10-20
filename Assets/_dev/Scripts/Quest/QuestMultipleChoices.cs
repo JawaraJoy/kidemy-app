@@ -53,6 +53,11 @@ namespace EduGame
             if (m_Data.HasMultipleImages(out var multipleImages, out var prefab) && m_MultipleImagesQuestionContainer)
             {
                 m_MultipleImagesQuestionContainer.gameObject.SetActive(true);
+                // atur jumlah kolom grid sesuai soal (0 = pakai nilai bawaan prefab)
+                if (m_Data.ConstraintCount > 0 && m_MultipleImagesQuestionContainer.TryGetComponent(out GridLayoutGroup grid))
+                {
+                    grid.constraintCount = m_Data.ConstraintCount;
+                }
                 m_QuestionImage.gameObject.SetActive(false);
                 m_QuestionImage.transform.parent.gameObject.SetActive(false);
                 foreach (var image in m_SpawnedmultipleImages)
@@ -63,12 +68,14 @@ namespace EduGame
                 {
                     if (i < m_SpawnedmultipleImages.Count)
                     {
-                        m_SpawnedmultipleImages[i].sprite = multipleImages[i];
+                        m_SpawnedmultipleImages[i].sprite = multipleImages[i].Illustration;
+                        multipleImages[i].Init(m_SpawnedmultipleImages[i]);
                     }
                     else
                     {
                         Image image = Instantiate(prefab, m_MultipleImagesQuestionContainer);
-                        image.sprite = multipleImages[i];
+                        image.sprite = multipleImages[i].Illustration;
+                        multipleImages[i].Init(image);
                         m_SpawnedmultipleImages.Add(image);
                     }
                     m_SpawnedmultipleImages[i].gameObject.SetActive(true);

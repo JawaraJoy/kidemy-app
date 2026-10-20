@@ -26,7 +26,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: b92c63b649a0ae540b1f8eccb5f6bcae, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: f41c34bf51b87934a94028796c06bde8, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: 21300000, guid: 6d3004cb3b297414a904909c34d839fe, type: 3}
     m_Text: Pi
@@ -50,7 +50,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: abebe84f272601c46a379378bc0d3c63, type: 3}
     m_IsAnswer: 1
   - m_Image: {fileID: 21300000, guid: d4b32dca6eb80f64d921510f83f9d652, type: 3}
     m_Text: Book
@@ -59,7 +59,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 0}
+    m_Audio: {fileID: 8300000, guid: 9b5e5b6759870db49a4ff1bc70c6c3b9, type: 3}
     m_IsAnswer: 0
   m_Timer: 0
   m_RandomizeChoice: 0

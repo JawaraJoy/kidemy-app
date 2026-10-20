@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_OppositeMatch_A_001 2
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  m_Id: 001A
+  m_Title: Frog Count
+  m_Category: 0
+  m_Character: {fileID: 11400000, guid: ae2730b94a2996342a8cf515aaf142f8, type: 2}
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  m_Question:
+    m_Image: {fileID: 21300000, guid: b73b8fc063184824999e3d0237f09bd6, type: 3}
+    m_Text: Dry Tshirt
+    m_FormatedText: {fileID: 11400000, guid: 0e5a54698517ac7459e252f847feb880, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 6982df908a5b27148ab0a5be4f3c92d3, type: 3}
+  m_AutoSubmit: 0
+  m_Score: 10
+  m_TresholdTime: 0
+  m_RepeatSoundQuest: 1
+  m_SoundQuest: {fileID: 0}
+  m_HowManySoundConfig: {fileID: 0}
+  m_Choices:
+  - m_Image: {fileID: 21300000, guid: 9ca9e7e30ea1ff1499091979013549c3, type: 3}
+    m_Text: Dry Towel
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0.9333334, g: 0.509804, b: 0.9333334, a: 1}
+    m_Audio: {fileID: 8300000, guid: 5892c024dbab3594aa377adb9faf9452, type: 3}
+    m_IsAnswer: 0
+  - m_Image: {fileID: 21300000, guid: 436863b151b6ac04da326966f36dec32, type: 3}
+    m_Text: Clean Hat
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 0, b: 0.20157957, a: 1}
+    m_Audio: {fileID: 8300000, guid: 668d69e06086cad41bc21c2fc7a5f480, type: 3}
+    m_IsAnswer: 0
+  - m_Image: {fileID: 21300000, guid: d56cb09d57a26cf4e96ec3407223f775, type: 3}
+    m_Text: Wet Shirt
+    m_FormatedText: {fileID: 11400000, guid: cb2957e7b8018024b80c6d00ba01f849, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0.31271622, g: 0.5323337, b: 0.9924528, a: 1}
+    m_Audio: {fileID: 8300000, guid: 3fe24b4836c7a5f47a30d0ff917a2da6, type: 3}
+    m_IsAnswer: 1
+  m_Timer: 0
+  m_RandomizeChoice: 0
