@@ -66,8 +66,6 @@ namespace EduGame
 
         public virtual void PlayQuestionVoice()
         {
-            Debug.Log(data.Question.Audio);
-
             if(data.Question.Audio)
             {
                 PlayQuestionVoice(data.Question.Audio);

@@ -60,8 +60,6 @@ namespace EduGame
                         textEffects.Refresh();
                     }
                 }
-
-                
                     
                 if (choice.UseTextColor)
                 {

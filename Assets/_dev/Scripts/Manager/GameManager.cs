@@ -429,9 +429,9 @@ namespace EduGame
             OnQuestStartInvoke();
         }
 
-        public void PlayQuestionVoice()
+        public void ReplayQuestionVoice()
         {
-            //quests[currentIndex].PlayQuestionVoice();
+            quests[currentIndex].PlayQuestionVoice();
         }
 
         public void Play()

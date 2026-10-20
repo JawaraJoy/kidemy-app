@@ -34,7 +34,7 @@ namespace EduGame
             base.Start();
 
             if (!dataDragNDrop)
-                Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoice");
+                Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestDragNDrop type");
 
             if (questionImage)
             {

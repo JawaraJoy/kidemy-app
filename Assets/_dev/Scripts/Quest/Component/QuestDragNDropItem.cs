@@ -2,6 +2,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using EasyTextEffects;
 
 namespace EduGame
 {
@@ -54,18 +55,29 @@ namespace EduGame
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+            Vector3 worldPosition = Rect.position;
+
             if(GameManager.Instance)
-                transform.SetParent(GameManager.Instance.Canvas.transform);
+            {
+                // An item that was dropped into a Fill zone uses stretch anchors. Reset it
+                // before moving it back to the canvas; otherwise it stretches to the size
+                // of the entire canvas when dragged again.
+                Rect.SetParent(GameManager.Instance.Canvas.transform, true);
+                Rect.anchorMin = Vector2.one * 0.5f;
+                Rect.anchorMax = Vector2.one * 0.5f;
+                Rect.pivot = Vector2.one * 0.5f;
+                if (!imageRect)
+                    Rect.sizeDelta = originalSize;
+                Rect.position = worldPosition;
+            }
 
             originalPosition = Rect.anchoredPosition;
 
             canvasGroup.blocksRaycasts = false;
-            
+
             if(imageRect)
                 imageRect.sizeDelta = originalSize;
-            else
-                Rect.sizeDelta = originalSize;
-
+            
             if(quest && ItemData != null && ItemData.Audio)
                 quest.PlayQuestionVoice(ItemData.Audio);
             
@@ -103,7 +115,18 @@ namespace EduGame
             if(!string.IsNullOrEmpty(item.Text))
             {
                 if(text)
+                {
                     text.text = item.Text;
+                    if (text.TryGetComponent(out TextEffect textEffects))
+                    {
+                        textEffects.Refresh();
+                    }
+                }
+                    
+                if (item.UseTextColor)
+                {
+                    text.color = item.TextColor;
+                }
             }   
             else
             {
