@@ -24,47 +24,164 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: f2736f08f0a98a58ebddc46f412da02b, type: 3}
   autoSubmit: 1
   score: 10
   tresholdTime: 0
   groups:
-  - label: {image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+  - label:
+      image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}
+      text: Blue
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
     limit: 1
     labels:
-    - {image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
-  - label: {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+    - image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}
+      text: Blue
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: a82853a7fa611bee0b347c29083fa586, type: 3}
+  - label:
+      image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
     limit: 1
     labels:
-    - {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
-  - label: {image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+    - image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: 63a5130e3bde423438e752d06874d353, type: 3}
+  - label:
+      image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}
+      text: Blue
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
     limit: 1
     labels:
-    - {image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
-  - label: {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+    - image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}
+      text: Blue
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: 1ece1f9893c916921ab1cc3b44727368, type: 3}
+  - label:
+      image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
     limit: 1
     labels:
-    - {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
-  - label: {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+    - image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: 2584ce3cd5395e5d79a98a05a1b5d436, type: 3}
+  - label:
+      image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
     limit: 1
     labels:
-    - {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
-  - label: {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+    - image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: 77778e2d015866ab6b67d61b27e5c086, type: 3}
+  - label:
+      image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
     limit: 1
     labels:
-    - {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
-  - label: {image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+    - image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: 1f2f0003bb24a772f8332c13fc3223aa, type: 3}
+  - label:
+      image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}
+      text: Blue
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
     limit: 1
     labels:
-    - {image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
-  - label: {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+    - image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}
+      text: Blue
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: d14f17b3c87137a17a3eacbccc916647, type: 3}
+  - label:
+      image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
     limit: 1
     labels:
-    - {image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
-  - label: {image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+    - image: {fileID: 21300000, guid: e38efd9b5386ab94bb7b7e5bdd8eeaac, type: 3}
+      text: Red
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: a8409ef1876acfba086510e1cd9a4237, type: 3}
+  - label:
+      image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}
+      text: Blue
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 0}
     limit: 1
     labels:
-    - {image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}, text: '', m_FormatedText: {fileID: 0}, color: {r: 1, g: 1, b: 1, a: 1}, m_UseTextColor: 0, m_TextColor: {r: 1, g: 1, b: 1, a: 1}, audio: {fileID: 0}}
+    - image: {fileID: 21300000, guid: f313b1339fbc61457ae3e06a40c76934, type: 3}
+      text: Blue
+      m_FormatedText: {fileID: 0}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      m_UseTextColor: 0
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      audio: {fileID: 8300000, guid: 0e72e54437700257c8899c4d65c0d6ef, type: 3}
   randomizeChoice: 1
   answerInOrder: 0
   timer: 0

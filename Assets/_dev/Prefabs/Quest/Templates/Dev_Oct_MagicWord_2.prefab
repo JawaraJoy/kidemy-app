@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2748091319418182341
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1022417642310649222, guid: 113898283bfa45b08afa66ae5260da1f, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 01f0cd1d283f4e8e8626979b11cf7350, type: 2}
+    - target: {fileID: 1894427853158794235, guid: 113898283bfa45b08afa66ae5260da1f, type: 3}
+      propertyPath: m_Name
+      value: Dev_Oct_MagicWord_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148896991843420728, guid: 113898283bfa45b08afa66ae5260da1f, type: 3}
+      propertyPath: m_text
+      value: Ribbo wants to borrow Melo's crayons.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 113898283bfa45b08afa66ae5260da1f, type: 3}
