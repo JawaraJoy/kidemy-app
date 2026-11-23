@@ -1,0 +1,33 @@
+{
+  "title": "Rhyme Time",
+  "island": 2,
+  "ageBaseline": 3,
+  "instruction": "Find the rhyme!",
+  "language": "en-US",
+  "questions": [
+    { "stimulus": "cat", "choices": ["hat", "dog", "sun"], "answer": "hat" },
+    { "stimulus": "sun", "choices": ["bed", "cup", "bun"], "answer": "bun" },
+    { "stimulus": "pig", "choices": ["hen", "wig", "cow"], "answer": "wig" },
+    { "stimulus": "bed", "choices": ["red", "bus", "fish"], "answer": "red" },
+    { "stimulus": "star", "choices": ["moon", "tree", "car"], "answer": "car" }
+  ],
+  "audio": {
+    "generator": "Windows System.Speech offline TTS",
+    "voice": "Microsoft David Desktop",
+    "rate": -2,
+    "status": "Local preview voice; replace with the project's character voice when available.",
+    "questionTemplate": "Find the rhyme! {stimulus}.",
+    "choiceTemplate": "{word}"
+  },
+  "images": {
+    "generator": "Built-in ImageGen",
+    "transparentBackground": true,
+    "prompts": {
+      "Images/Bun.png": "A single round bread bun, golden brown with three little cream scoring marks, cute polished preschool educational game item sprite, bold smooth dark brown outlines, soft warm shaded cartoon style, centered entire object with generous empty margin, no plate, no face, no text, no letters, no other objects. Transparent background.",
+      "Images/Wig.png": "A single unmistakable costume wig, chestnut brown bob haircut with bangs and curled tips, hollow opening at bottom so it is clearly a wearable wig, cute polished preschool educational game item sprite, bold smooth dark brown outlines, soft shaded cartoon style, centered entire object with generous empty margin. No head, no mannequin, no face, no text, no letters, no other objects. Transparent background.",
+      "Images/Moon.png": "A single golden yellow crescent moon preschool educational game item sprite, cute polished soft shaded cartoon, simple clean silhouette, centered with generous empty margin. No stars, no face, no background, no text or letters. Transparent background."
+    },
+    "redSwatch": "Images/Red.png: procedural plain red rounded square.",
+    "remainingImages": "References to existing project sprites."
+  }
+}

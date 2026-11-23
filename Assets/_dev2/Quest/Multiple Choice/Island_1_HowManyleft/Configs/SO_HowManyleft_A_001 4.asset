@@ -77,7 +77,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 1
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: dd9f3264d53009140b5522e39f8e1d81, type: 3}
+    m_Audio: {fileID: 8300000, guid: 911639e9d2eaa504d9a2e0300c7c2bf7, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0

@@ -36,7 +36,7 @@ MonoBehaviour:
     m_FloatUpDistance: 200
   - m_Illustraion: {fileID: 21300000, guid: 9a878b4ae08d344b49df7c9ef0ca6e11, type: 3}
     m_Gone: 0
-    m_GhostAlpha: 0
+    m_GhostAlpha: 0.5
     m_FadeAwayDuration: 0
     m_FloatUpDistance: 0
   - m_Illustraion: {fileID: 21300000, guid: 76888d18ebe074483ad1451633a3a082, type: 3}
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_FloatUpDistance: 0
   - m_Illustraion: {fileID: 21300000, guid: d7cb53c6a47784ee980c3a62fcbafb58, type: 3}
     m_Gone: 1
-    m_GhostAlpha: 0
+    m_GhostAlpha: 0.5
     m_FadeAwayDuration: 2
     m_FloatUpDistance: 200
   - m_Illustraion: {fileID: 21300000, guid: 54e5a5213021c41a89a7c4cad953eb44, type: 3}
@@ -67,7 +67,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 1
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 8cedd93e0d4fd53a589f28f9dfee26d1, type: 3}
+    m_Audio: {fileID: 8300000, guid: 49040994a3fe1ce4ea12da16b5217c8c, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0

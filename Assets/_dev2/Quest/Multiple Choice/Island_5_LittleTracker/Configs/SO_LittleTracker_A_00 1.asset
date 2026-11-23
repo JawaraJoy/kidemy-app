@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_LittleTracker_A_00 1
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  m_Id: 001A
+  m_Title: Frog Count
+  m_Category: 0
+  m_Character: {fileID: 11400000, guid: a4ea7451d0e445641b898e311491bed9, type: 2}
+  m_ImagePrefab: {fileID: 0}
+  m_ConstraintCount: 0
+  m_MultipleQuestImages: []
+  m_Question:
+    m_Image: {fileID: 21300000, guid: 55aab56aa5c3aaf4d93552568aa4ba62, type: 3}
+    m_Text: Dog
+    m_FormatedText: {fileID: 11400000, guid: 2e6782642e2e5d64ab0e3503eff523bf, type: 2}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: fe66c92607406514684615c8141a7973, type: 3}
+  m_AutoSubmit: 0
+  m_Score: 10
+  m_TresholdTime: 0
+  m_RepeatSoundQuest: 1
+  m_SoundQuest: {fileID: 0}
+  m_HowManySoundConfig: {fileID: 0}
+  m_Choices:
+  - m_Image: {fileID: 21300000, guid: 9a33b55195c4ce642a5f74b0822621ee, type: 3}
+    m_Text: as
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 9f8ecde26981c6740bb81f6ec3b67fc2, type: 3}
+    m_IsAnswer: 0
+  - m_Image: {fileID: 21300000, guid: 1cf574c98e7acfc4aa4fa24b6c04779a, type: 3}
+    m_Text: as
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 5ce05604b8b8eab42a3670e1a2bd9dbe, type: 3}
+    m_IsAnswer: 0
+  - m_Image: {fileID: 21300000, guid: fe28685db64afc74b99e4810c07dd7c9, type: 3}
+    m_Text: as
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 54a3d53ba7b61c3488ed344bfc245bd1, type: 3}
+    m_IsAnswer: 1
+  m_Timer: 0
+  m_RandomizeChoice: 0
