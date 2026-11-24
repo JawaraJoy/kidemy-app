@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_WhoHelpsUs_A_001
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  m_Id: WhoHelpsUs_A_001
+  m_Title: Who Helps Us?
+  m_Category: 3
+  m_Character: {fileID: 11400000, guid: 7300581e70cc4a4449ab43d226480236, type: 2}
+  m_ImagePrefab: {fileID: 0}
+  m_ConstraintCount: 0
+  m_MultipleQuestImages: []
+  m_Question:
+    m_Image: {fileID: 336026719, guid: 5af51a9bad974719a7eb5ff6762914f4, type: 3}
+    m_Text: Who helps us put out a fire?
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 2a2524ae0bdc46e6aec25f0d7664b8e0, type: 3}
+  m_AutoSubmit: 0
+  m_Score: 10
+  m_TresholdTime: 0
+  m_RepeatSoundQuest: 1
+  m_SoundQuest: {fileID: 0}
+  m_HowManySoundConfig: {fileID: 0}
+  m_Choices:
+  - m_Image: {fileID: -1470352633, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+    m_Text: Firefighter
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 531bfded03f34388b17ed29ad811fc96, type: 3}
+    m_IsAnswer: 1
+  - m_Image: {fileID: 1539439775, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+    m_Text: Baker
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: 5149e878aa6d4f9badf22ab529180fcb, type: 3}
+    m_IsAnswer: 0
+  - m_Image: {fileID: 1489655479, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+    m_Text: Teacher
+    m_FormatedText: {fileID: 0}
+    m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Audio: {fileID: 8300000, guid: f854dd1c85bc4d79abb3a1073f81e323, type: 3}
+    m_IsAnswer: 0
+  m_Timer: 0
+  m_RandomizeChoice: 0

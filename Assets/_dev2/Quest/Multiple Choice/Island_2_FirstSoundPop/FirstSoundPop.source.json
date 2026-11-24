@@ -1,0 +1,73 @@
+{
+  "title": "First Sound Pop",
+  "island": 2,
+  "islandName": "Storybook Land",
+  "ageBaseline": 3,
+  "language": "en-US",
+  "instruction": "Find a word that starts with <letter>!",
+  "questions": [
+    {
+      "letter": "B",
+      "choices": [
+        "Ball",
+        "Cat",
+        "Sun",
+        "Fish"
+      ],
+      "answer": "Ball"
+    },
+    {
+      "letter": "S",
+      "choices": [
+        "Dog",
+        "Mop",
+        "Hat",
+        "Sun"
+      ],
+      "answer": "Sun"
+    },
+    {
+      "letter": "M",
+      "choices": [
+        "Bus",
+        "Cup",
+        "Moon",
+        "Pig"
+      ],
+      "answer": "Moon"
+    },
+    {
+      "letter": "D",
+      "choices": [
+        "Jam",
+        "Duck",
+        "Fan",
+        "Key"
+      ],
+      "answer": "Duck"
+    },
+    {
+      "letter": "F",
+      "choices": [
+        "Fish",
+        "Tree",
+        "Bear",
+        "Pen"
+      ],
+      "answer": "Fish"
+    }
+  ],
+  "audio": {
+    "phonemes": "The English instruction ends with the isolated initial consonant. Replay also reads the picture labels in grid order.",
+    "newClips": "Microsoft David Desktop, en-US, offline synthesis. The phonemes use explicit SAPI pronunciations."
+  },
+  "images": {
+    "generator": "Built-in ImageGen",
+    "prompts": {
+      "Images/Mop.png": "Use case: illustration-story. A single centered transparent PNG vocabulary picture sprite for a preschool phonics game, depicting a household string floor mop, a teal grip on a long warm wood handle tilting diagonally from lower left to upper right, a generous bundle of off-white and sky-blue cotton strings spread at its base; unmistakably a mop, no bucket. Match a cheerful hand-inked children's flashcard: bold smooth dark warm outline, simplified plump silhouettes, flat vivid color, light two-tone cel shading and a small glossy highlight from upper left. Isolated object fully in frame with just 8% clear padding; no card, border, ground, cast shadow, letters, watermark, or other props. Genuine transparent background, square composition, readable at 100 pixels.",
+      "Images/Jam.png": "Use case: illustration-story. A single centered transparent PNG vocabulary picture sprite for a preschool phonics game, depicting one plump clear squat glass jar full of ruby-red strawberry jam, chunky berry jam visible, scarlet lid with a simple gingham cloth edge and a small cream label containing only one red strawberry illustration; no lettering; front three-quarter view. Match a cheerful hand-inked children's flashcard: bold smooth dark warm outline, simplified plump silhouettes, flat vivid color, light two-tone cel shading and a small glossy highlight from upper left. Isolated object fully in frame with just 8% clear padding; no card, border, ground, cast shadow, letters, watermark, or other props. Genuine transparent background, square composition, readable at 100 pixels.",
+      "Images/Fan.png": "Use case: illustration-story. A single centered transparent PNG vocabulary picture sprite for a preschool phonics game, depicting one turquoise electric tabletop fan with three visible coral-orange blades, front-facing rounded protective cage drawn with only a few spokes, a short stalk and stable yellow foot; clearly a fan even at tiny size. Match a cheerful hand-inked children's flashcard: bold smooth dark warm outline, simplified plump silhouettes, flat vivid color, light two-tone cel shading and a small glossy highlight from upper left. Isolated object fully in frame with just 8% clear padding; no card, border, ground, cast shadow, letters, watermark, or other props. Genuine transparent background, square composition, readable at 100 pixels.",
+      "Images/Pen.png": "Use case: illustration-story. A single transparent PNG vocabulary picture for an English preschool game. One unmistakable blue ballpoint ink pen with a visible metal conical nib pointing diagonally toward the lower left, dark navy grip and a shiny clip near the click button at upper right. Turquoise barrel, soft colored highlights, simple bold rounded dark outlines, cheerful hand-inked children's flashcard illustration with minimal cel shading. Center the entire object in a square with narrow clear margins. No wood, eraser, pencil, writing, brand, background, shadow, card or other props. Genuine transparent background."
+    }
+  }
+}

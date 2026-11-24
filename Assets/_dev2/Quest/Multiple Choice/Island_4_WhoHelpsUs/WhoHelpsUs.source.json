@@ -1,0 +1,86 @@
+{
+  "title": "Who Helps Us?",
+  "ageBaseline": 3,
+  "island": 4,
+  "islandName": "Empathy Bay",
+  "language": "en-US",
+  "instruction": "Who helps us <task>?",
+  "questions": [
+    {
+      "prompt": "Who helps us put out a fire?",
+      "situation": "Campfire",
+      "choices": [
+        "Firefighter",
+        "Baker",
+        "Teacher"
+      ],
+      "answer": "Firefighter"
+    },
+    {
+      "prompt": "Who helps us learn at school?",
+      "situation": "Classroom",
+      "choices": [
+        "Doctor",
+        "Farmer",
+        "Teacher"
+      ],
+      "answer": "Teacher"
+    },
+    {
+      "prompt": "Who helps us grow vegetables?",
+      "situation": "VegetableGarden",
+      "choices": [
+        "Chef",
+        "Farmer",
+        "Police officer"
+      ],
+      "answer": "Farmer"
+    },
+    {
+      "prompt": "Who helps us stay safe on the road?",
+      "situation": "RoadCrossing",
+      "choices": [
+        "Police officer",
+        "Baker",
+        "Doctor"
+      ],
+      "answer": "Police officer"
+    },
+    {
+      "prompt": "Who helps us bring letters?",
+      "situation": "LetterDelivery",
+      "choices": [
+        "Pilot",
+        "Chef",
+        "Postman"
+      ],
+      "answer": "Postman"
+    }
+  ],
+  "audio": {
+    "voice": "Microsoft David Desktop",
+    "rate": -2
+  },
+  "art": {
+    "portraits": "Images/CommunityHelpers.png",
+    "portraitOrder": [
+      "Firefighter",
+      "Baker",
+      "Teacher",
+      "Doctor",
+      "Farmer",
+      "Chef",
+      "Police officer",
+      "Pilot",
+      "Postman"
+    ],
+    "situations": "Images/Situations.png",
+    "situationOrder": [
+      "Campfire",
+      "Classroom",
+      "VegetableGarden",
+      "RoadCrossing",
+      "LetterDelivery"
+    ]
+  }
+}

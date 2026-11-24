@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe99ace52ee110469853422c88e340f, type: 3}
+  m_Name: Dialogue_FirstSoundPop_A_003
+  m_EditorClassIdentifier: Assembly-CSharp::AddOn.TextAnimation.DialogueConfig
+  m_Identic:
+    m_Id: FirstSoundPop_A_003
+    m_Name: 
+    m_Description: 
+  m_Potrait: {fileID: 0}
+  m_EffectPreset: {fileID: 11400000, guid: 698c3cb4a6437f0428945215f02337d9, type: 2}
+  m_WordSettings:
+  - m_Words: Find a word that starts with
+    m_AddSpaceForNext: 1
+    m_Effects: []
+  - m_Words: <size=125%>M</size>
+    m_AddSpaceForNext: 0
+    m_Effects:
+    - {fileID: 11400000, guid: 64f0c6aad2a9fde4f82965844609bc47, type: 2}
+  - m_Words: '!'
+    m_AddSpaceForNext: 0
+    m_Effects: []
+  m_VoiceClip: {fileID: 8300000, guid: af89ca937fee42ed9c8eeaab6844d71d, type: 3}

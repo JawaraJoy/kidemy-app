@@ -1,0 +1,67 @@
+{
+  "title": "One or Many",
+  "island": 2,
+  "islandName": "Storybook Land",
+  "ageBaseline": 6,
+  "language": "en-US",
+  "instruction": "Find the <plural word>!",
+  "questions": [
+    {
+      "plural": "cats",
+      "choices": [
+        "3 cats",
+        "1 cat",
+        "3 dogs"
+      ],
+      "answer": "3 cats"
+    },
+    {
+      "plural": "boxes",
+      "choices": [
+        "1 box",
+        "2 balls",
+        "2 boxes"
+      ],
+      "answer": "2 boxes"
+    },
+    {
+      "plural": "feet",
+      "choices": [
+        "2 hands",
+        "2 feet",
+        "1 foot"
+      ],
+      "answer": "2 feet"
+    },
+    {
+      "plural": "buses",
+      "choices": [
+        "3 buses",
+        "1 bus",
+        "3 cars"
+      ],
+      "answer": "3 buses"
+    },
+    {
+      "plural": "mice",
+      "choices": [
+        "1 mouse",
+        "2 birds",
+        "2 mice"
+      ],
+      "answer": "2 mice"
+    }
+  ],
+  "audio": {
+    "voice": "Microsoft David Desktop",
+    "language": "en-US",
+    "rate": -2
+  },
+  "illustrations": {
+    "generator": "ImageGen",
+    "prompts": {
+      "Images/Cat.png": "Use case: background-extraction. The supplied image is a Unity game mockup. Extract and redraw at game-sprite resolution the one LARGE full-body sitting orange tabby CAT pictured alone on the left white card. Preserve the cheerful front-facing pose, triangular ears, warm orange forehead stripes, cream muzzle, belly and toes, pink smiling mouth and curled striped tail visible on its right. Deliver exactly ONE isolated animal from ears to feet, same simple cheerful children's storybook cartoon line art and softly shaded flat colors as its reference. Plain genuine transparent background, all paws and ears visible. Center and fit the single animal tightly with a narrow clear margin on a close-fitting vertical canvas. No other subjects, copies, cards, letters, numbers, shadows on the ground, scenery, frame, stickers or logos.",
+      "Images/Dog.png": "Use case: background-extraction. The supplied image is a Unity game mockup. Extract and redraw at game-sprite resolution one single seated front-facing brown-and-white floppy-eared PUPPY, matching the leftmost dog on the rightmost white card. Preserve the rounded brown floppy ears, white forehead stripe, little dark nose, peach tongue, cream chest, rounded feet and sweet expression. Deliver exactly ONE isolated animal from ears to feet, same simple cheerful children's storybook cartoon line art and softly shaded flat colors as its reference. Plain genuine transparent background, all paws and ears visible. Center and fit the single animal tightly with a narrow clear margin on a close-fitting vertical canvas. No other subjects, copies, cards, letters, numbers, shadows on the ground, scenery, frame, stickers or logos."
+    }
+  }
+}
