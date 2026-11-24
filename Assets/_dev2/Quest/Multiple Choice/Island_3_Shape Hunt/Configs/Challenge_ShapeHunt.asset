@@ -26,3 +26,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aec88049fb4cada4bbcb8131ddca8ea0, type: 2}
   - {fileID: 11400000, guid: 960e689aebdc6444492033ef9d45d6da, type: 2}
   - {fileID: 11400000, guid: 3a2d9c59c67f7224ebffe8afc21d2466, type: 2}
+  m_QuestLayoutOverrides: []
+  m_BackgroundOverrides: []
+  m_ChoiceOverrides: []
+  m_Id: 

@@ -28,6 +28,8 @@ namespace EduGame
         protected IQuestHost m_Host;
         protected ChallengeConfig m_Challenged;
         public ChallengeConfig Challenged => m_Challenged;
+        protected int m_ChallengeIndex;
+        public int ChallengeIndex => m_ChallengeIndex;
         public Sprite Background => m_Background;
         public Color Color => m_Color;
         
@@ -52,6 +54,10 @@ namespace EduGame
         public void SetBackground(Sprite sprite)
         {
             m_Background = sprite;
+        }
+        public void SetChallengeIndex(int index)
+        {
+            m_ChallengeIndex = index;
         }
         public void SetChallenge(ChallengeConfig challenge)
         {

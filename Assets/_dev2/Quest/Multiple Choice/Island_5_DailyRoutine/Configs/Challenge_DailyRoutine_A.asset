@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03830a30161896548ad60f71ef12271d, type: 3}
+  m_Name: Challenge_DailyRoutine_A
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ChallengeConfig
+  m_Background: {fileID: 21300000, guid: cf45d2cde343f13ed87fd98a1b1163be, type: 3}
+  m_ConffetyVFXPrefab: {fileID: 6391076248617746661, guid: 9c831dc923a84ea4f81165339485f098, type: 3}
+  m_ChoicePrefab: {fileID: 0}
+  m_QuestLayoutPrefabs: {fileID: 3198629066879550302, guid: 7a8c9d0630f8d784aba89afbec429a01, type: 3}
+  m_ReactionPanelPrefab: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
+  m_ResultPanelPrefab: {fileID: 4395721995340702901, guid: 82fc430240f383547805088edce2f7a3, type: 3}
+  m_Character: {fileID: 11400000, guid: 3ffdcd2a59f2a934e8cbef1f048d8760, type: 2}
+  m_SceneConfig: {fileID: 11400000, guid: f1ca59410938210418ad2a2eea6f25f9, type: 2}
+  m_QuestConfigs:
+  - {fileID: 11400000, guid: e91dc4a50c01d0b4b842d0e949bd747d, type: 2}
+  - {fileID: 11400000, guid: 2c10406c4cee9f440817ec05ebd07d31, type: 2}
+  - {fileID: 11400000, guid: 230a0e742ad847046b90eb4810d5065d, type: 2}
+  - {fileID: 11400000, guid: 680a1b1eb662c244189e841bd7dcf68f, type: 2}
+  - {fileID: 11400000, guid: 60460154de13aa844a59b97d80dbd2ee, type: 2}
+  m_QuestLayoutOverrides:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_BackgroundOverrides:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

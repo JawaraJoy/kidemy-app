@@ -14,8 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.GameConfig
   m_Note: Put all config here to handle Content Delivery in the future
   m_ChallengeConfigs:
+  - {fileID: 11400000, guid: 93836a14d26d81140aa822ddfa979779, type: 2}
   - {fileID: 11400000, guid: 0b39a487b231b0c45862f76c57f5f8ef, type: 2}
+  - {fileID: 11400000, guid: 0fa53f7d3f2dbad4fb44f72dc16c8202, type: 2}
+  - {fileID: 11400000, guid: 38e9f028eabfd1b4b9277d2655101f7f, type: 2}
+  - {fileID: 11400000, guid: 66cba1122b00a3d45bf81b625a014bf9, type: 2}
+  - {fileID: 11400000, guid: 07bca48e52fb46d478b715babb5a9db2, type: 2}
+  - {fileID: 11400000, guid: 4f318685f5449804aa2525bfe14e3050, type: 2}
+  - {fileID: 11400000, guid: c8577f125086d244986d6fc504443d18, type: 2}
+  - {fileID: 11400000, guid: b0b31cc5629d5c0439908c6b87bb34e3, type: 2}
+  - {fileID: 11400000, guid: 37f3fd8b84a271b4f91efab133307439, type: 2}
+  - {fileID: 11400000, guid: 9a2aaa93780faf84dbe9d07e13b56bdc, type: 2}
   - {fileID: 11400000, guid: 046bb0c11779f2f4399621fc00c47c91, type: 2}
+  - {fileID: 11400000, guid: d668183e3d8bfdc4a8c3471a920341d8, type: 2}
+  - {fileID: 11400000, guid: 6ca66a0bebd6e8644a294db3ca440d42, type: 2}
+  - {fileID: 11400000, guid: ad916118d1775f84ab7830bcb0ec5d59, type: 2}
+  - {fileID: 11400000, guid: 89c332a3028f8e14c8763d4aec2ff638, type: 2}
   - {fileID: 11400000, guid: 6d1462060f6f7ff4b91cdd705c642579, type: 2}
+  - {fileID: 11400000, guid: 83e20e7f206e3e943a319a872f1b475c, type: 2}
   - {fileID: 11400000, guid: 97279c3d07da3dc40be2507a7a33a4d5, type: 2}
+  - {fileID: 11400000, guid: 1d4e75798676cec4cb1b809695b52e1d, type: 2}
+  - {fileID: 11400000, guid: a4ee336e8be7608498823982b3e9279b, type: 2}
+  - {fileID: 11400000, guid: ac142262ec996b04cb88a053b8690f95, type: 2}
+  - {fileID: 11400000, guid: 7b75925c5d1635140acf5fcdf902d261, type: 2}
+  - {fileID: 11400000, guid: 2d9607ac5f4a350479095ef31334d33c, type: 2}
+  - {fileID: 11400000, guid: 6e870996861b1aa438819e53bcf73dc9, type: 2}
+  - {fileID: 11400000, guid: cb8f69e122e344146a9fe17c2c01ee82, type: 2}
+  - {fileID: 11400000, guid: c4b441f840699ba49a1018689ff440b4, type: 2}
+  - {fileID: 11400000, guid: e8293c1d8f80e1d48b0c7b91ba626d12, type: 2}
+  - {fileID: 11400000, guid: 77f11437f939a5449a6f85aa19927703, type: 2}
+  - {fileID: 11400000, guid: 17ab48d1c66db334da423da407fe99e9, type: 2}
+  - {fileID: 11400000, guid: edefa948782b6dd488fcad70c6e939cb, type: 2}
   - {fileID: 11400000, guid: 68f918a83ea595e48a0926d1b6e528a7, type: 2}
+  - {fileID: 11400000, guid: 154f26eaab623f541a0ac59bb6ee7028, type: 2}
+  - {fileID: 11400000, guid: dabe07bde911d494fa8487dabf25a06b, type: 2}
