@@ -37,7 +37,10 @@ namespace EduGame
 
         private List<Image> m_SpawnedmultipleImages = new List<Image>();
 
+        private const float c_ChoiceIntroDelay = 1f;
+        private const float c_ChoiceGap = 0.5f;
         private QuestMultipleChoicesItem m_CorrectChoice;
+        protected RectTransform CorrectChoiceRect => m_CorrectChoice ? m_CorrectChoice.Rect : null;
 
         private TextEffect m_TextEffect;
         protected override void Start()
@@ -172,38 +175,22 @@ namespace EduGame
         protected override void SetupInternal()
         {
             m_DataMultipleChoice = m_Data as SO_QuestMultipleChoice;
+            if (m_QuestAnimationHandler) m_QuestAnimationHandler.SetHost(m_Host);
 
             base.SetupInternal();
         }
 
-        protected override void PlayQuestionVoiceInternal()
+        protected override IEnumerator PlayChoiceVoices()
         {
-            base.PlayQuestionVoiceInternal();
-
-            StopAllCoroutines();
-
-            StartCoroutine(PlayChoicesVoiceCO());
-        }
-
-        IEnumerator PlayChoicesVoiceCO()
-        {
-            yield return new WaitWhile(() => m_AudioSource.isPlaying);
-
-            yield return new WaitForSeconds(1);
-
+            if (!m_DataMultipleChoice) yield break;
+            yield return new WaitForSeconds(c_ChoiceIntroDelay);
             foreach (var choice in m_DataMultipleChoice.Choices)
             {
+                if (!choice.Audio) continue;
+                yield return new WaitForSeconds(c_ChoiceGap);
+                PlayClipInternal(choice.Audio);
                 yield return new WaitWhile(() => m_AudioSource.isPlaying);
-
-                if(choice.Audio)
-                {
-                    yield return new WaitForSeconds(0.5f);
-
-                    m_AudioSource.PlayOneShot(choice.Audio);
-                }
             }
-
-            yield return null;
         }
 
         QuestMultipleChoicesItem InstantiateItem(QuestMultipleChoicesItem prefab, int index)
@@ -338,7 +325,7 @@ namespace EduGame
 
         public override void ShowTutorial()
         {
-            m_Host.ShowTutorial(m_CorrectChoice ? m_CorrectChoice.Rect : m_Choices[0].Rect);
+            if (CorrectChoiceRect) m_Host.ShowTutorial(CorrectChoiceRect);
         }
     }
 }

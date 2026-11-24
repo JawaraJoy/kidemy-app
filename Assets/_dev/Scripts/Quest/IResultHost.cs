@@ -6,6 +6,7 @@
     public interface IResultHost
     {
         ChallengeConfig ChallengeConfig { get; }
+        SO_Character CurrentCharacter { get; }
 
         void ReloadScene();
         void GoHome();

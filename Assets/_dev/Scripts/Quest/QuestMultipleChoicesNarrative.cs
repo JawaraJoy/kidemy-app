@@ -9,29 +9,13 @@ namespace EduGame
         private const string c_SentenceEnd = ".";
         private const string c_QuestionSegment = "_question";
 
-        [Header("Data")]
-
-        [Header("Components")]
         [SerializeField] [FormerlySerializedAs("narrativeText")] private TMP_Text m_NarrativeText;
-
-        private SO_QuestMultipleChoiceNarrative m_DataMultipleChoiceNarrative;
 
         protected override void Start()
         {
             base.Start();
-
-            if (!m_DataMultipleChoiceNarrative)
-                Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoiceNarrative");
-
-            if (m_NarrativeText)
-                m_NarrativeText.text = m_DataMultipleChoiceNarrative.Narrative;
-        }
-
-        protected override void SetupInternal()
-        {
-            m_DataMultipleChoiceNarrative = m_Data as SO_QuestMultipleChoiceNarrative;
-
-            base.SetupInternal();
+            if (m_NarrativeText && Data is SO_QuestMultipleChoiceNarrative narrative)
+                m_NarrativeText.text = narrative.Narrative;
         }
 
         /// <summary>
@@ -40,18 +24,15 @@ namespace EduGame
         /// </summary>
         public override VoiceRequest[] GetVoiceRequests()
         {
-            SetupInternal();
-
             VoiceRequest[] voiceRequests = base.GetVoiceRequests();
 
             if (voiceRequests.Length > 0 && m_Data != null && m_Data.Question != null && !string.IsNullOrEmpty(m_Data.Question.Text))
             {
                 string textVoice = m_Data.Question.Text;
                 
-                TMP_Text narrative = GetComponentInChildren<TMP_Text>();
-                
-                if (narrative && !string.IsNullOrEmpty(narrative.text))
-                    textVoice = narrative.text + c_SentenceEnd + textVoice;
+                string narrative = Data is SO_QuestMultipleChoiceNarrative config ? config.Narrative : null;
+                if (string.IsNullOrEmpty(narrative) && m_NarrativeText) narrative = m_NarrativeText.text;
+                if (!string.IsNullOrEmpty(narrative)) textVoice = narrative + c_SentenceEnd + textVoice;
 
                 voiceRequests[0] = new VoiceRequest
                 {

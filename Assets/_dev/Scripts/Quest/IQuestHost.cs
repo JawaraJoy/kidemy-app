@@ -22,6 +22,9 @@ namespace EduGame
         void ShowTutorial(RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Click);
         void PlayQuestionVoice();
         void PlaySoundQuest();
+        void DuckMusicFor(float seconds);
+        void ShowTutorial(RectTransform start, RectTransform end, HandTutorial.TutorialMode mode);
+        void ShowTutorialCustom(RectTransform[] targets, bool startFromDialog = true);
         Coroutine StartCoroutine(IEnumerator routine);
     }
 }

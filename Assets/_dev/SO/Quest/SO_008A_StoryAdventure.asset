@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 008A
   title: StoryAdventure
   category: 1
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: What did Melo find?
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 01fa2de8f5fc9bd97bdde24b9334e8b9, type: 3}
   autoSubmit: 0
   score: 10
@@ -26,23 +31,27 @@ MonoBehaviour:
   choices:
   - image: {fileID: 21300000, guid: 03f6ba410a416994d837859b8ca2b52c, type: 3}
     text: Stone
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: c0a87ff9071d88e0e8c14175f7e3e54b, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: 4753cd8efbadd0e4d84d2bff8c89ba4e, type: 3}
     text: Chest
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 75da19b9173e77423b9a179d7ce5421c, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 102d026297ad827439b86bb7cb009bb6, type: 3}
     text: Stick
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: bd0ea6af58ddbc2e38e256a15d18a9fd, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: 86e82c348962a994da1940de9a8a7fce, type: 3}
-    text: Apple
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 459760483d853b0748cd1deb26e4b02a, type: 3}
     isAnswer: 0
   timer: 0
   randomizeChoice: 0

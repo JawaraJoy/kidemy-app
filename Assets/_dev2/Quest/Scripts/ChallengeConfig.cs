@@ -22,6 +22,8 @@ namespace EduGame
         [Header("Configs")]
         [SerializeField]
         private SO_Character m_Character;
+        [SerializeField] private ReactionConfig m_RightReaction;
+        [SerializeField] private ReactionConfig m_WrongReaction;
         [SerializeField]
         private SceneConfig m_SceneConfig;
         [SerializeField]
@@ -67,8 +69,8 @@ namespace EduGame
         }
         public SO_Quest[] QuestConfigs => m_QuestConfigs;
         public ParticleSystem ConffetyVFXPrefab => m_ConffetyVFXPrefab;
-        public ReactionConfig RightReaction => m_Character ? m_Character.RightReaction : null;
-        public ReactionConfig WrongReaction => m_Character ? m_Character.WrongReaction : null;
+        public ReactionConfig RightReaction => m_Character && m_Character.RightReaction ? m_Character.RightReaction : m_RightReaction;
+        public ReactionConfig WrongReaction => m_Character && m_Character.WrongReaction ? m_Character.WrongReaction : m_WrongReaction;
         public ResultPanel ResultPanelPrefab => m_ResultPanelPrefab;
         public ReactionPanel ReactionPanelPrefab => m_ReactionPanelPrefab;
 

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9543550d054fad449bc40a93da2304dd, type: 3}
+  m_Name: ReactionConfig_Neutral
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.ReactionConfig
+  m_Identic:
+    m_Id: neutral
+    m_Name: 
+    m_Description: 
+  m_NPCPotrait: {fileID: 21300000, guid: 10e0800cc33d7f149877c89dc955dbc1, type: 3}
+  m_ConfirmationImage: {fileID: 21300000, guid: ff32ef2253de2304fa7f1c475102f577, type: 3}
+  m_FeelColor: {r: 1, g: 0.38304034, b: 0.26981127, a: 1}
+  m_DialogueConfig: {fileID: 11400000, guid: 4bb6deb468ef9f588aefd5ff51202b08, type: 2}

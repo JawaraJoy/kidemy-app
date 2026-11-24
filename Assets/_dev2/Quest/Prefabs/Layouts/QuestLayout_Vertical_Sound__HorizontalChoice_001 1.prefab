@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a708520a5a16f418d8f6228f3d4080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.GameManagerAgent
+  m_Quest: {fileID: 9102783833377469605}
 --- !u!114 &9039834055881792900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1170,7 @@ Animator:
   m_GameObject: {fileID: 6279525524833500879}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e9356b20fad69ee43b253887cb2b3243, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

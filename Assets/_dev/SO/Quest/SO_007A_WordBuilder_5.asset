@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 007A
   title: WordBuilder
   category: 1
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: Find the letter!
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 5935b871e1cb3f5709b3379acdb22a25, type: 3}
   autoSubmit: 0
   score: 10
@@ -26,28 +31,27 @@ MonoBehaviour:
   choices:
   - image: {fileID: 0}
     text: A
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 2abde1c618f90d53c95c5c947e47da62, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: I
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 6c52c3a4b45216095b32664858b4368e, type: 3}
     isAnswer: 0
   - image: {fileID: 0}
     text: U
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: d60d2547822a4073e8a4fb78bff8c21f, type: 3}
     isAnswer: 1
-  - image: {fileID: 0}
-    text: E
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 355e381745c7d4dab8a117b8ced40b89, type: 3}
-    isAnswer: 0
-  - image: {fileID: 0}
-    text: O
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 9dd6da1a808c06252a2575c7ea222bcf, type: 3}
-    isAnswer: 0
   timer: 0
   randomizeChoice: 0

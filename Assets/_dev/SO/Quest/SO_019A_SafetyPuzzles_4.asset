@@ -15,28 +15,34 @@ MonoBehaviour:
   id: 019A
   title: Safety Puzzles
   category: 3
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 21300000, guid: 5230d537d884e299aaf6d77739041e67, type: 3}
     text: Which is the safest choice?
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: e699ea4c3f1ef7006adbf20e02f57feb, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: 9b6629afe8a52670aa039878ac5fe32b, type: 3}
+  - image: {fileID: 21300000, guid: 4a26e81ff128d09adacc6357f906d28d, type: 3}
     text: Taste it
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: a70bb70970f62a08e970c9523d7001cb, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: 1412e3deb467fb60989432a96076ab6e, type: 3}
-    text: Share it with a friend
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 666817c4598a168178d5234c527cb6de, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: a9ae0fbd04d635ec08e17900dfb22454, type: 3}
+  - image: {fileID: 21300000, guid: 8382022853fe5d5cc86e29bf44d0fc33, type: 3}
     text: Tell a grown-up
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 3b7aab5311b046ff2b1f12c89f91b0e3, type: 3}
     isAnswer: 1
   timer: 0

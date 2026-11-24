@@ -122,3 +122,6 @@ Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app
 /RushBaseline/
 # Token API lokal untuk Editor. Jangan di-commit.
 /ApiToken.local.txt
+
+_Debug.mp4
+_Debug.png

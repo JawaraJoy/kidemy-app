@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a708520a5a16f418d8f6228f3d4080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EduGame.GameManagerAgent
+  m_Quest: {fileID: 9102783833377469605}
 --- !u!114 &9039834055881792900
 MonoBehaviour:
   m_ObjectHideFlags: 0

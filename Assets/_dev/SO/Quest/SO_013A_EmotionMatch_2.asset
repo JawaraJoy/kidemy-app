@@ -15,10 +15,15 @@ MonoBehaviour:
   id: 013
   title: Emotion Match
   category: 3
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
-    text: What emotion is the character feeling right now
+    text: What is Ribbo's emotion right now?
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 9770df25b848f2eb29abe78a19040a13, type: 3}
   autoSubmit: 0
   score: 10
@@ -26,22 +31,34 @@ MonoBehaviour:
   choices:
   - image: {fileID: 21300000, guid: 292d538ae017f9897b96cc9418fa5a5d, type: 3}
     text: Happy
+    m_FormatedText: {fileID: 0}
     color: {r: 0.36756855, g: 0.833057, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 07a5706af5ddf33858d11adb64999610, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: b14ba83aae80a21a3a83263cb5bc3925, type: 3}
     text: Sad
+    m_FormatedText: {fileID: 0}
     color: {r: 0.8533286, g: 0.8533286, b: 0.8533286, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: daad41fbb021d8b77ae3e8f6b447522e, type: 3}
     isAnswer: 1
   - image: {fileID: 21300000, guid: 5e65203da8a5670b2ae1fda9fd37ef26, type: 3}
     text: Proud
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 0.5469919, b: 0.8349893, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: d13d09cb6c62e7a938432d542474da65, type: 3}
     isAnswer: 0
   - image: {fileID: 21300000, guid: dee642326bc9f7cc3a1990d95729668a, type: 3}
     text: Calm
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 0.7510726, b: 0.37611258, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 9461e93cb80bf8b3cbbb5e97a6abec35, type: 3}
     isAnswer: 0
   timer: 0

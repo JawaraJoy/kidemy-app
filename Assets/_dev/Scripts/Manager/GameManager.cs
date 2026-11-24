@@ -19,6 +19,7 @@ namespace EduGame
         private const string c_ParamApiToken = "token";
         private const string c_ParamChallenge = "challenge";
         private const float c_BgmVolumeScale = 10f;
+        private const float c_MusicDuckFactor = 0.4f;
         private const int c_SecondsPerMinute = 60;
         private const string c_TimerSeparator = ":";
         private const int c_TimerMajorTick = 10;
@@ -82,8 +83,10 @@ namespace EduGame
 
         [Header("Audio")]
         [SerializeField] [FormerlySerializedAs("audioSource")] private AudioSource m_AudioSource;
-        [SerializeField]
-        private AudioSource m_Music;
+        [SerializeField, FormerlySerializedAs("bgmSource")] private AudioSource m_Music;
+        private Coroutine m_MusicRestore;
+        private float m_NormalMusicVolume;
+        private float m_DuckUntil;
         public AudioSource Music => m_Music;
 
         [Header("Data")]
@@ -161,6 +164,9 @@ namespace EduGame
 
         public static GameManager Instance => s_Instance;
         public ChallengeConfig ChallengeConfig => m_ChallengeConfig;
+        private Quest CurrentQuest => m_Quests != null && m_CurrentIndex >= 0 && m_CurrentIndex < m_Quests.Length
+            ? m_Quests[m_CurrentIndex] : null;
+        public SO_Character CurrentCharacter => CurrentQuest ? CurrentQuest.Character : (m_ChallengeConfig ? m_ChallengeConfig.Character : null);
 
         void Awake()
         {
@@ -189,10 +195,10 @@ namespace EduGame
         
         void Start()
         {
-            if(m_BackgroundMusic && m_Music)
+            if (m_BackgroundMusic && m_Music)
             {
-                m_Music.PlayOneShot(m_BackgroundMusic);
-
+                m_Music.clip = m_BackgroundMusic;
+                m_Music.Play();
             }
 
             TryGetComponent<APIManager>(out m_ApiManager);
@@ -220,16 +226,11 @@ namespace EduGame
                         m_BaseURL = parameters[c_ParamRedirectUrl];
                     }
 
-                    if(parameters.ContainsKey(c_ParamBgmVolume))
+                    if (parameters.TryGetValue(c_ParamBgmVolume, out string rawVolume) && int.TryParse(rawVolume, out int volume))
                     {
-                        int volume = int.Parse(parameters[c_ParamBgmVolume]);
-                        m_Music.volume = volume / c_BgmVolumeScale;
-                        m_AudioSource.volume = volume / c_BgmVolumeScale;
-                    }
-                    else
-                    {
-                        m_Music.volume = 1f;
-                        m_AudioSource.volume = 1f;
+                        float level = Mathf.Clamp01(volume / c_BgmVolumeScale);
+                        if (m_Music) m_Music.volume = level;
+                        if (m_AudioSource) m_AudioSource.volume = level;
                     }
                 }
                 LogToBrowser("Home URL: " + m_BaseURL);
@@ -257,7 +258,10 @@ namespace EduGame
                     m_Quests[i] = CreateQuest(i);
             }
             else
-                Debug.LogError("Failed to load data, challenge will return empty");
+            {
+                Debug.LogError("No quests configured for this challenge.", this);
+                return;
+            }
 
             ResultPanel resultPrefab = m_ChallengeConfig ? m_ChallengeConfig.ResultPanelPrefab : m_ResultPanelPrefab;
             if (resultPrefab)
@@ -273,10 +277,6 @@ namespace EduGame
             if (m_ReactionPanel)
                 m_ReactionPanel.Init(this);
             
-
-            //quests[0].gameObject.SetActive(true);
-
-            Debug.Log(m_Background);
 
             if (m_Background)
                 m_Background.sprite = m_Quests[0].Background;
@@ -387,19 +387,9 @@ namespace EduGame
 
         protected virtual void InstantiateStar()
         {
-            m_Stars = new Image[3];
+            m_Stars = new Image[c_MaxStar];
 
             
-            /*stars[0] = Instantiate(starPrefab, starContainer);
-            stars[0].gameObject.SetActive(false);
-
-            stars[1] = Instantiate(stars[0], starContainer);
-            stars[1].gameObject.SetActive(false);
-
-            stars[2] = Instantiate(stars[0], starContainer);
-            stars[2].gameObject.SetActive(false);*/
-
-            // you should use for loop
             for (int i = 0; i < m_Stars.Length; i++)
             {
                 Image star = Instantiate(m_StarPrefab, m_StarContainer);
@@ -417,28 +407,39 @@ namespace EduGame
             OnQuestStartInvoke();
         }
 
-        public void PlayQuestionVoice()
+        // Both names are used by persistent UnityEvents in shipped stages.
+        public void PlayQuestionVoice() => PlayQuestionVoiceInternal();
+        public void ReplayQuestionVoice() => PlayQuestionVoiceInternal();
+
+        private void PlayQuestionVoiceInternal()
         {
-            m_Quests[m_CurrentIndex].PlayQuestionVoice();
-            StartCoroutine(WaitToPlaySoundQuest());
-            PlayHowManySound(m_Quests[m_CurrentIndex]);
-        }
-        private void PlayHowManySound(Quest quest)
-        {
-            if (quest is QuestMultipleChoices multipleChoices)
-            {
-                if (multipleChoices.QuestAnimationHandler == null) return;
-                multipleChoices.QuestAnimationHandler.PlayAnimation();
-            }
-        }
-        public void PlaySoundQuest()
-        {
-            PlaySoundQuestInternal();
+            Quest quest = CurrentQuest;
+            if (!quest) return;
+            quest.PlayQuestionVoice();
+            if (quest is QuestMultipleChoices choices && choices.QuestAnimationHandler)
+                choices.QuestAnimationHandler.PlayAnimation();
         }
 
-        private void PlaySoundQuestInternal()
+        public void PlaySoundQuest()
         {
-            m_Quests[m_CurrentIndex].PlaySoundQuest();
+            if (CurrentQuest) CurrentQuest.PlaySoundQuest();
+        }
+
+        public void DuckMusicFor(float seconds)
+        {
+            if (!m_Music || seconds <= 0f) return;
+            m_DuckUntil = Mathf.Max(m_DuckUntil, Time.unscaledTime + seconds);
+            if (m_MusicRestore != null) return;
+            m_NormalMusicVolume = m_Music.volume;
+            m_Music.volume = m_NormalMusicVolume * c_MusicDuckFactor;
+            m_MusicRestore = StartCoroutine(RestoreMusicVolume());
+        }
+
+        private IEnumerator RestoreMusicVolume()
+        {
+            while (Time.unscaledTime < m_DuckUntil) yield return null;
+            if (m_Music) m_Music.volume = m_NormalMusicVolume;
+            m_MusicRestore = null;
         }
 
         public void Play()
@@ -483,15 +484,10 @@ namespace EduGame
         private void OnQuestStartInvoke()
         {
             m_OnQuestStart?.Invoke();
-            Debug.Log("OnQuestStartInvoke called");
-            StartCoroutine(WaitToPlaySoundQuest());
+            if (m_OnQuestStart == null || m_OnQuestStart.GetPersistentEventCount() == 0)
+                PlayQuestionVoiceInternal();
         }
 
-        private IEnumerator WaitToPlaySoundQuest()
-        {
-            yield return new WaitForSeconds(2f);
-            PlaySoundQuestInternal();
-        }
         private void OnQuestEndInvoke()
         {
             m_OnQuestEnd?.Invoke();
@@ -499,12 +495,12 @@ namespace EduGame
         private void OnQuestNextInvoke()
         {
             m_OnQuestNext?.Invoke();
-            Debug.Log("OnQuestNextInvoke called");
         }
         public virtual void Submit(int star = 0)
         {
-            if(m_HandTutorial)
-                m_HandTutorial.Disable();
+            if (!CurrentQuest || m_Result == null || m_Result[m_CurrentIndex] != null) return;
+            if (m_AudioSource) m_AudioSource.Stop();
+            if (m_HandTutorial) m_HandTutorial.Disable();
             
             StopTimer();
 
@@ -516,12 +512,7 @@ namespace EduGame
             if (star == c_MaxStar && m_Quests[m_CurrentIndex].Data.TresholdTime > 0 && m_RecordedTime > m_Quests[m_CurrentIndex].Data.TresholdTime)
                 star = 2;
 
-            if (m_CurrentIndex < m_Result.Length)
-            {
-                Debug.Log($"Submitting result for quest {m_CurrentIndex}: stars={star}, time={Mathf.RoundToInt(m_RecordedTime)}");
-                m_Result[m_CurrentIndex] = new ResultItem { stars = star, time = Mathf.RoundToInt(m_RecordedTime) };
-            }
-                
+            m_Result[m_CurrentIndex] = new ResultItem { stars = star, time = Mathf.RoundToInt(m_RecordedTime) };
             ShowResultInternal(star);
         }
 
@@ -532,6 +523,11 @@ namespace EduGame
 
         protected virtual void ResetInternal()
         {
+            if (CurrentQuest && m_Result != null && m_Result[m_CurrentIndex] != null)
+            {
+                if (m_Result[m_CurrentIndex].stars > 1) m_RightAnswerCount--;
+                m_Result[m_CurrentIndex] = null;
+            }
             CloseResultInternal();
             StopTimer();
             StartTimer();
@@ -552,10 +548,11 @@ namespace EduGame
         // Satu pintu untuk dua sumber data: ChallengeConfig (OtherDev) atau field prefab langsung di GameManager.
         private ReactionConfig ResolveReaction(bool right)
         {
-            if (m_ChallengeConfig)
-                return right ? m_ChallengeConfig.RightReaction : m_ChallengeConfig.WrongReaction;
-
-            return right ? m_RightReaction : m_WrongReaction;
+            var configured = m_ChallengeConfig ? (right ? m_ChallengeConfig.RightReaction : m_ChallengeConfig.WrongReaction) : null;
+            if (configured) return configured;
+            var character = CurrentCharacter;
+            var reaction = character ? (right ? character.RightReaction : character.WrongReaction) : null;
+            return reaction ? reaction : (right ? m_RightReaction : m_WrongReaction);
         }
 
         private int ResolveQuestCount()
@@ -563,7 +560,7 @@ namespace EduGame
             if (m_ChallengeConfig)
                 return m_ChallengeConfig.QuestConfigs.Length;
 
-            if (m_QuestPrefabs.Length > 0)
+            if (m_QuestPrefabs != null && m_QuestPrefabs.Length > 0)
                 return m_QuestPrefabs.Length;
 
             return m_QuestPrefab ? 1 : 0;
@@ -605,10 +602,10 @@ namespace EduGame
                 quest.SetBackground(m_ChallengeConfig.GetBackground(index));
             }
             else
-                quest = InstantiateTemplate(m_QuestPrefabs.Length > 0 ? m_QuestPrefabs[index] : m_QuestPrefab);
+                quest = InstantiateTemplate(m_QuestPrefabs != null && m_QuestPrefabs.Length > 0 ? m_QuestPrefabs[index] : m_QuestPrefab);
 
             // Prefab tunggal (jalur lama) tetap aktif seperti sebelumnya.
-            if (m_ChallengeConfig || m_QuestPrefabs.Length > 0)
+            if (m_ChallengeConfig || (m_QuestPrefabs != null && m_QuestPrefabs.Length > 0))
                 quest.gameObject.SetActive(false);
 
             return quest;
@@ -621,70 +618,29 @@ namespace EduGame
 
         protected virtual void ShowResultInternal(int star)
         {
-            if (m_ReactionPanel)
+            bool correct = star > 1;
+            bool neutral = m_NeutralReaction && CurrentQuest && CurrentQuest.name.Contains(c_ColorTheIslandKey);
+            var reaction = neutral ? m_NeutralReaction : ResolveReaction(correct);
+            bool showPanel = m_ReactionPanel && reaction;
+            if (correct) m_RightAnswerCount++;
+            if (m_PopResult) m_PopResult.gameObject.SetActive(!showPanel);
+            if (showPanel)
             {
-                if (m_PopResult)
-                    m_PopResult.gameObject.SetActive(false);
+                m_ReactionPanel.ShowReaction(reaction);
+                if (correct && !neutral && m_ConffetyVFX) m_ConffetyVFX.Play();
             }
             else
             {
-                if (m_PopResult)
-                    m_PopResult.gameObject.SetActive(true);
+                var feedback = correct ? m_CorrectFeedback : m_WrongFeedback;
+                if (feedback) feedback.Play(m_Npc ? m_Npc : transform);
+                SetNPCDialogInternal(correct ? c_DialogCorrect : c_DialogWrong);
+                var title = correct ? m_CorrectTitle : m_WrongTitle;
+                var note = correct ? m_CorrectNote : m_WrongNote;
+                if (title) title.gameObject.SetActive(true);
+                if (note) note.gameObject.SetActive(true);
             }
-            
-            if (m_NeutralReaction && m_Quests[m_CurrentIndex].name.IndexOf(c_ColorTheIslandKey) > -1)
-            {
-                if(star > 1)
-                    m_RightAnswerCount++;
-                
-                m_ReactionPanel.ShowReaction(m_NeutralReaction);
-                m_SFXSource.PlayOneShot(m_NeutralSFX);
-            }
-            else if (star > 1) // jika bintang lebih dari 1 maka dianggap jawaban benar
-            {
-                m_RightAnswerCount++;
-                ReactionConfig rightReaction = ResolveReaction(true);
-                if (m_ChallengeConfig || rightReaction)
-                {
-                    m_ReactionPanel.ShowReaction(rightReaction);
-                    if (m_ConffetyVFX)
-                    {
-                        m_ConffetyVFX.Play();
-                    }
-                }
-                else
-                {
-                    if (m_CorrectFeedback)
-                        m_CorrectFeedback.Play(m_Npc ? m_Npc : transform);
-
-                    if (m_NpcDialog)
-                        SetNPCDialogInternal(c_DialogCorrect);
-
-                    m_CorrectTitle.gameObject.SetActive(true);
-                    m_CorrectNote.gameObject.SetActive(true);
-                }
-                m_SFXSource.PlayOneShot(m_RightSFX);
-            }
-            else
-            {
-                ReactionConfig wrongReaction = ResolveReaction(false);
-                if (m_ChallengeConfig || wrongReaction)
-                {
-                    m_ReactionPanel.ShowReaction(wrongReaction);
-                }
-                else
-                {
-                    if (m_WrongFeedback)
-                        m_WrongFeedback.Play(m_Npc ? m_Npc : transform);
-
-                    if (m_NpcDialog)
-                        SetNPCDialogInternal(c_DialogWrong);
-
-                    m_WrongTitle.gameObject.SetActive(true);
-                    m_WrongNote.gameObject.SetActive(true);
-                }
-                m_SFXSource.PlayOneShot(m_WrongSFX);
-            }
+            var sound = neutral ? m_NeutralSFX : (correct ? m_RightSFX : m_WrongSFX);
+            if (sound && m_SFXSource) m_SFXSource.PlayOneShot(sound);
 
             if (m_Stars != null && m_Stars.Length > 0)
             {
@@ -699,14 +655,9 @@ namespace EduGame
                 }
             }
 
-            if (IsLastQuestInternal())
-            {
-                m_ButtonNext.gameObject.SetActive(false);
-                SendResultInternal();
-            }
-            else
-                m_ButtonNext.gameObject.SetActive(true);
-
+            bool last = IsLastQuestInternal();
+            if (m_ButtonNext) m_ButtonNext.gameObject.SetActive(!last);
+            if (last) SendResultInternal();
         }
 
         private bool IsLastQuestInternal()
@@ -758,10 +709,10 @@ namespace EduGame
             if (m_PopResult)
                 m_PopResult.gameObject.SetActive(false);
 
-            m_CorrectTitle.gameObject.SetActive(false);
-            m_CorrectNote.gameObject.SetActive(false);
-            m_WrongTitle.gameObject.SetActive(false);
-            m_WrongNote.gameObject.SetActive(false);
+            if (m_CorrectTitle) m_CorrectTitle.gameObject.SetActive(false);
+            if (m_CorrectNote) m_CorrectNote.gameObject.SetActive(false);
+            if (m_WrongTitle) m_WrongTitle.gameObject.SetActive(false);
+            if (m_WrongNote) m_WrongNote.gameObject.SetActive(false);
 
             if (m_Stars != null && m_Stars.Length > 0)
             {
@@ -786,7 +737,7 @@ namespace EduGame
 
         private void ShowTutorialInternal(RectTransform endPos, HandTutorial.TutorialMode mode)
         {
-            ShowTutorialInternal(m_NpcDialog.rectTransform, endPos, mode);
+            if (m_NpcDialog) ShowTutorialInternal(m_NpcDialog.rectTransform, endPos, mode);
         }
 
         public void ShowTutorial(RectTransform startPos, RectTransform endPos, HandTutorial.TutorialMode mode = HandTutorial.TutorialMode.Click)
@@ -796,10 +747,23 @@ namespace EduGame
 
         private void ShowTutorialInternal(RectTransform startPos, RectTransform endPos, HandTutorial.TutorialMode mode)
         {
-            if (m_HandTutorial && m_CurrentIndex == 0)
+            if (m_HandTutorial && m_Canvas && m_CurrentIndex == 0)
             {
                 m_HandTutorial.PlayTutorial(startPos, endPos, Canvas.transform, mode);
             }
+        }
+
+        public void ShowTutorialCustom(RectTransform[] targets, bool startFromDialog = true)
+        {
+            if (!m_HandTutorial || !m_Canvas || m_CurrentIndex != 0 || targets == null) return;
+            if (startFromDialog && m_NpcDialog)
+            {
+                var steps = new RectTransform[targets.Length + 1];
+                steps[0] = m_NpcDialog.rectTransform;
+                System.Array.Copy(targets, 0, steps, 1, targets.Length);
+                targets = steps;
+            }
+            m_HandTutorial.PlayTutorialCustom(targets, m_Canvas.transform);
         }
 
         private void ApplyApiTokenFromUrl(Dictionary<string, string> param)

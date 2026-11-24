@@ -10,7 +10,7 @@ namespace EduGame
 
     public class QuestRythimNote : QuestComponent
     {   
-        private const int c_SpeedScale = 5000;
+        private const int c_SpeedScale = 50;
         private const string c_NoteEndTag = "NoteEnd";
 
         [SerializeField] [FormerlySerializedAs("point")] protected int m_Point;

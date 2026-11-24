@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4965145b4956fd94e8c23692194d6359, type: 3}
+  m_Name: SO_SepA_WordInScene_2
+  m_EditorClassIdentifier: Assembly-CSharp::EduGame.SO_QuestMultipleChoice
+  id: 002B
+  title: WordInScene
+  category: 1
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
+  question:
+    image: {fileID: 21300000, guid: 1f162dc6fa56dfc45ab8bf0e3bde3150, type: 3}
+    text: Choose the correct word
+    m_FormatedText: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 27cd8b2c65c0fc86ca9d37ff8bddf791, type: 3}
+  autoSubmit: 0
+  score: 10
+  tresholdTime: 0
+  choices:
+  - image: {fileID: 0}
+    text: Flies
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0, g: 0.6075771, b: 1, a: 1}
+    audio: {fileID: 8300000, guid: 58aff372742d5da718bf44d1906de382, type: 3}
+    isAnswer: 1
+  - image: {fileID: 0}
+    text: Swim
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 1
+    m_TextColor: {r: 0, g: 0.7169812, b: 0.11626253, a: 1}
+    audio: {fileID: 8300000, guid: 049ad209976c3cbd0bdcaab5a4bd1879, type: 3}
+    isAnswer: 0
+  - image: {fileID: 0}
+    text: Read
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 1
+    m_TextColor: {r: 1, g: 0.6060061, b: 0, a: 1}
+    audio: {fileID: 8300000, guid: 40a8016b339e7ea9bb57be56bc7b1413, type: 3}
+    isAnswer: 0
+  timer: 0
+  randomizeChoice: 1

@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 75c00af63d0b0340aada63b3c64f301e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8454768854605583518
+    second: SOAL-4_0
+  - first:
+      213: 6170702700871643675
+    second: SOAL-4_1
+  - first:
+      213: -1250059344319852138
+    second: SOAL-4_2
+  - first:
+      213: 5870840458207359473
+    second: SOAL-4_3
+  - first:
+      213: 526883780373188730
+    second: SOAL-4_4
+  - first:
+      213: 4048619042669460025
+    second: SOAL-4_5
+  - first:
+      213: 6656684949322205421
+    second: SOAL-4_6
+  - first:
+      213: 6052834512516622278
+    second: SOAL-4_7
+  - first:
+      213: -8517111339857196123
+    second: SOAL-4_8
+  - first:
+      213: 5452588485338426195
+    second: SOAL-4_9
+  - first:
+      213: -4358100409766045809
+    second: SOAL-4_10
+  - first:
+      213: 827738775624002978
+    second: SOAL-4_11
+  - first:
+      213: -2584910228851022126
+    second: SOAL-4_12
+  - first:
+      213: -607768196337929863
+    second: SOAL-4_13
+  - first:
+      213: 3837077798591111068
+    second: SOAL-4_14
+  - first:
+      213: 8689377366520464618
+    second: SOAL-4_15
+  - first:
+      213: -5927830738526095718
+    second: SOAL-4_16
+  - first:
+      213: 570682527601927670
+    second: SOAL-4_17
+  - first:
+      213: -1038823041265993909
+    second: SOAL-4_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 29
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SOAL-4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 83
+        width: 266
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ba233a580aaaa80800000000000000
+      internalID: -8454768854605583518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 417
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b127ff3a96db2a550800000000000000
+      internalID: 6170702700871643675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_2
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 416
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69158a146a5e6aee0800000000000000
+      internalID: -1250059344319852138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_3
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 406
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1f07caa4a697150800000000000000
+      internalID: 5870840458207359473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_4
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 385
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a701f07b10edf4700800000000000000
+      internalID: 526883780373188730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_5
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 354
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93af13d91959f2830800000000000000
+      internalID: 4048619042669460025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_6
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 319
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de80a0a51bb416c50800000000000000
+      internalID: 6656684949322205421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_7
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 283
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c727ca7becfff350800000000000000
+      internalID: 6052834512516622278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_8
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 259
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab4c5bac542dc980800000000000000
+      internalID: -8517111339857196123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_9
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 224
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b6bfe965c7bab40800000000000000
+      internalID: 5452588485338426195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_10
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 185
+        width: 8
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87196c74cae483c0800000000000000
+      internalID: -4358100409766045809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_11
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 149
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ada2e7e708bc7b00800000000000000
+      internalID: 827738775624002978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_12
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 134
+        width: 29
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6af01a7dd802cd0800000000000000
+      internalID: -2584910228851022126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_13
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 125
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9717f77ab06c097f0800000000000000
+      internalID: -607768196337929863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_14
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 134
+        width: 27
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f9f889de9004530800000000000000
+      internalID: 3837077798591111068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_15
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 94
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae485c23daed69870800000000000000
+      internalID: 8689377366520464618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_16
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 106
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96b28da95d1cbda0800000000000000
+      internalID: -5927830738526095718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_17
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 83
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f52c393cb87be700800000000000000
+      internalID: 570682527601927670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SOAL-4_18
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 86
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4779d8a2fb5591f0800000000000000
+      internalID: -1038823041265993909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SOAL-4_0: -8454768854605583518
+      SOAL-4_1: 6170702700871643675
+      SOAL-4_10: -4358100409766045809
+      SOAL-4_11: 827738775624002978
+      SOAL-4_12: -2584910228851022126
+      SOAL-4_13: -607768196337929863
+      SOAL-4_14: 3837077798591111068
+      SOAL-4_15: 8689377366520464618
+      SOAL-4_16: -5927830738526095718
+      SOAL-4_17: 570682527601927670
+      SOAL-4_18: -1038823041265993909
+      SOAL-4_2: -1250059344319852138
+      SOAL-4_3: 5870840458207359473
+      SOAL-4_4: 526883780373188730
+      SOAL-4_5: 4048619042669460025
+      SOAL-4_6: 6656684949322205421
+      SOAL-4_7: 6052834512516622278
+      SOAL-4_8: -8517111339857196123
+      SOAL-4_9: 5452588485338426195
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

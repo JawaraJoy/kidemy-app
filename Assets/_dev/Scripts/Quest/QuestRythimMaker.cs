@@ -162,5 +162,11 @@ namespace EduGame
             if (m_DataRythimMaker != null && !string.IsNullOrEmpty(m_DataRythimMaker.Question.Text))
                 m_Host.SetNPCDialog(m_DataRythimMaker.Question.Text);
         }
+
+        public override void ShowTutorial()
+        {
+            var beat = GetComponentInChildren<QuestRythimBeat>();
+            if (beat) m_Host.ShowTutorial(beat.transform as RectTransform, HandTutorial.TutorialMode.Click);
+        }
     }
 }

@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3216478807956348711, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: c0cd647da6a7d16e39b7b997a1dc9882, type: 2}
     - target: {fileID: 3495686456354060879, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -300,6 +304,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: m_NeutralSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 78b3ffd306580d73fad1ca22d6f4901f, type: 3}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: backgroundMusic
       value: 
       objectReference: {fileID: 8300000, guid: 7cc961e4dfe52542199f9ce6689faf61, type: 3}
@@ -315,6 +323,10 @@ PrefabInstance:
       propertyPath: m_ChallengeConfig
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: m_NeutralReaction
+      value: 
+      objectReference: {fileID: 11400000, guid: e93b85c4927638471b44641b4d2922dc, type: 2}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_ConffetyVFXPrefab
       value: 
@@ -411,6 +423,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8527715874548471621, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: c0cd647da6a7d16e39b7b997a1dc9882, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

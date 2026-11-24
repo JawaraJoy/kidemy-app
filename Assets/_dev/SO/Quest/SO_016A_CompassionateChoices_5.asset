@@ -15,35 +15,36 @@ MonoBehaviour:
   id: 016A
   title: Compassionate Choices
   category: 3
+  m_ImagePrefab: {fileID: 0}
+  m_MultipleQuestImages: []
   question:
     image: {fileID: 0}
     text: What is the compassionate choice?
+    m_FormatedText: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
+    m_UseTextColor: 0
+    m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     audio: {fileID: 8300000, guid: 16513aa326a06820080767afae08b03d, type: 3}
   autoSubmit: 0
   score: 10
   tresholdTime: 0
   choices:
-  - image: {fileID: 21300000, guid: f5fef254fdec0bc4fb648843ed290051, type: 3}
-    text: Keep it all day
-    color: {r: 1, g: 1, b: 1, a: 1}
+  - image: {fileID: 21300000, guid: 635e675a75d1e47eb97258671d56b6ef, type: 3}
+    text: Cheer her on.
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0, b: 0, a: 0}
     audio: {fileID: 8300000, guid: 07b2cde34773fc0b6ad7e278f6513296, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: 3d779e1d297471d41af9e6b4646e4af2, type: 3}
-    text: Throw it away
-    color: {r: 1, g: 1, b: 1, a: 1}
+    isAnswer: 1
+  - image: {fileID: 21300000, guid: f70762ce90c651b7f8721f42deb81118, type: 3}
+    text: Leave the room.
+    m_FormatedText: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseTextColor: 0
+    m_TextColor: {r: 0, g: 0, b: 0, a: 0}
     audio: {fileID: 8300000, guid: 8b40e9169743903b0a47765d1bfe6ee8, type: 3}
     isAnswer: 0
-  - image: {fileID: 21300000, guid: b3a62046b3617694c99bd32a44c06467, type: 3}
-    text: Say no forever
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: 9eb2e47ff04f5c70da7d3b43a6bdcb5d, type: 3}
-    isAnswer: 0
-  - image: {fileID: 21300000, guid: 73da531ea26d6494b9335e628a02fd9f, type: 3}
-    text: Give Bobo a turn
-    color: {r: 1, g: 1, b: 1, a: 1}
-    audio: {fileID: 8300000, guid: fd38d99a73eba40cea7840dfb42618a9, type: 3}
-    isAnswer: 1
   timer: 0
   randomizeChoice: 0
   narrative: 

@@ -1,14 +1,12 @@
 using Rush;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace EduGame
 {
     public class AnimationHandler : MonoBehaviour
     {
         private const float c_ResultDelay = 1.5f;
-        private const float c_MusicDuckVolume = 0.4f;
 
         private AnimatorClipConfig m_ClipConfig;
 
@@ -19,13 +17,15 @@ namespace EduGame
 
         [SerializeField]
         private AnimationEventCapture m_EventCapture;
-        [SerializeField]
-        private Button m_Play;
-        private Quest m_Quest;
-        private void Start()
+        private IQuestHost m_Host;
+        private Coroutine m_Playback;
+
+        public void SetHost(IQuestHost host) => m_Host = host;
+
+        private void OnDisable()
         {
-            //m_Play.onClick.AddListener(PlayAnimationInternal);
-            m_Quest = GetComponentInParent<Quest>();
+            if (m_Playback != null) StopCoroutine(m_Playback);
+            m_Playback = null;
         }
 
         public void SetClip(AnimatorClipConfig clipConfig)
@@ -82,12 +82,6 @@ namespace EduGame
             return null;
         }
 
-        private bool HasAnimationState(AnimatorClipConfig clipConfig, out AnimationStateBehaviour animationState)
-        {
-            animationState = GetAnimationState(clipConfig);
-
-            return animationState != null;
-        }
         public void PlayAnimation()
         {
             PlayAnimationInternal();
@@ -96,32 +90,30 @@ namespace EduGame
         {
             if (m_Animator == null) return;
             if (m_ClipConfig == null) return;
-            m_EventCapture.SetPlayedConfig(m_ClipConfig);
-            if (!HasAnimationState(m_ClipConfig, out AnimationStateBehaviour animationState))
+            if (m_EventCapture) m_EventCapture.SetPlayedConfig(m_ClipConfig);
+            var animationState = GetAnimationState(m_ClipConfig);
+            if (!animationState)
             {
                 Debug.LogWarning($"AnimationStateBehaviour for " + $"'{m_ClipConfig.Identic.Id}' was not found.", this);
 
                 return;
             }
 
-            // apakah animationState.name = nama dari state tersebut?
-            StartCoroutine(Playing(m_ClipConfig, animationState));
+            if (m_Playback != null) StopCoroutine(m_Playback);
+            m_Playback = StartCoroutine(Playing(m_ClipConfig, animationState));
         }
 
         private IEnumerator Playing(AnimatorClipConfig clipConfig, AnimationStateBehaviour animationState)
         {
             yield return new WaitForSeconds(c_ResultDelay);
             int loopCount = clipConfig.LoopTime;
-            AudioSource music = m_Quest.Host.Music;
-            music.volume = c_MusicDuckVolume;
+            m_Host?.DuckMusicFor(animationState.ClipLength * loopCount);
             for (int i = 0; i < loopCount; i++)
             {
                 m_Animator.Play(animationState.StateHash);
-                //m_Animator.SetTrigger("Bunyi");
-                Debug.Log($"Play clip animation {animationState.StateHash}");
                 yield return new WaitForSeconds(animationState.ClipLength);
             }
-            music.volume = 1f;
+            m_Playback = null;
         }
     }
 }

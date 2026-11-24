@@ -8,4 +8,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_dev2/Quest/Multiple Choice/Island_5_LittleTracker/OtherDev_LittleTracker_A_001.unity
     guid: 3b0470fe355cf31478fee5c08d36c860
+  - enabled: 0
+    path: Assets/_dev/Scenes/Dev_Oct_LineNumberUp_A_rewrite.unity
+    guid: d06812275dbc114b584c0554d7c20a28
+  - enabled: 0
+    path: Assets/_dev/Scenes/Dev_Oct_MozaicMarker_B_rewrite.unity
+    guid: 786e52f7c16753291891e22bc7df0298
+  - enabled: 0
+    path: Assets/_dev/Scenes/Dev_Oct_PlantOrAnimal_A_rewrite.unity
+    guid: f2566d8353a7e6719b93bc0d63648721
+  - enabled: 1
+    path: Assets/_dev/Scenes/Dev_Oct_MagicWord_A_rewrite.unity
+    guid: 3270fd876d905d3fe917ebbfccb0685b
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

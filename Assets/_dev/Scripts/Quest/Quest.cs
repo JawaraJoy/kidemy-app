@@ -8,7 +8,8 @@ namespace EduGame
     public abstract class Quest : MonoBehaviour
     {
         protected const int c_MaxStar = 3;
-        private const float c_MusicDuckVolume = 0.4f;
+        private const float c_TutorialDelay = 2f;
+        private Coroutine m_PromptPlayback;
 
         [Header("Data")]
         [SerializeField] [FormerlySerializedAs("data")] protected SO_Quest m_Data;
@@ -34,17 +35,15 @@ namespace EduGame
         public Color Color => m_Color;
         
         public SO_Quest Data => m_Data;
+        public SO_Character Character => m_Challenged && m_Challenged.Character ? m_Challenged.Character : m_Character;
         
         protected virtual void Start()
         {
             if(!m_Data)
                 Debug.LogError("Quest not set");
             
-            //if(npcController)
-            //    GameManager.Instance.SetNPC(npcController);
-            SO_Character character = m_Challenged != null ? m_Challenged.Character : m_Character;
-            if (character && character.CharacterController)
-                m_Host.SetNPC(character.CharacterController);
+            if (Character && Character.CharacterController)
+                m_Host.SetNPC(Character.CharacterController);
             m_Host.InitQuest(m_Data);
 
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
@@ -85,75 +84,67 @@ namespace EduGame
 
         protected virtual void PlayQuestionVoiceInternal()
         {
-            Debug.Log(m_Data.Question.Audio);
+            if (!m_AudioSource || !isActiveAndEnabled) return;
+            StopPromptInternal();
+            m_PromptPlayback = StartCoroutine(PlayPromptSequence());
+        }
 
-            if(m_Data.Question.Audio)
-                PlayQuestionVoiceInternal(m_Data.Question.Audio);
-        }
-        public virtual void PlaySoundQuest()
+        private IEnumerator PlayPromptSequence()
         {
-            PlaySoundQuestInternal();
+            AudioClip question = m_Data ? m_Data.Question?.Audio : null;
+            if (question)
+            {
+                PlayClipInternal(question);
+                yield return new WaitWhile(() => m_AudioSource.isPlaying);
+            }
+
+            yield return PlaySoundClips();
+            yield return PlayChoiceVoices();
+            m_PromptPlayback = null;
         }
+
+        protected virtual IEnumerator PlayChoiceVoices() { yield break; }
+
+        public virtual void PlaySoundQuest() => PlaySoundQuestInternal();
 
         protected virtual void PlaySoundQuestInternal()
         {
-            if (m_Data is SO_QuestMultipleChoice quest)
+            if (!m_AudioSource || !isActiveAndEnabled) return;
+            StopPromptInternal();
+            m_PromptPlayback = StartCoroutine(PlaySoundClips());
+        }
+
+        private IEnumerator PlaySoundClips()
+        {
+            if (!(m_Data is SO_QuestMultipleChoice choice) || !choice.SoundQuest) yield break;
+            for (int i = 0; i < Mathf.Max(1, choice.RepeatSoundQuest); i++)
             {
-                if (quest.SoundQuest)
-                {
-                    StartCoroutine(PlayingSoundQuest(quest));
-                }
+                PlayClipInternal(choice.SoundQuest);
+                yield return new WaitWhile(() => m_AudioSource.isPlaying);
             }
         }
 
-        private IEnumerator PlayingSoundQuest(SO_QuestMultipleChoice quest)
+        public void PlayQuestionVoice(AudioClip clip) => PlayQuestionVoiceInternal(clip);
+
+        protected virtual void PlayQuestionVoiceInternal(AudioClip clip)
         {
-            int repeat = quest.RepeatSoundQuest;
-            if (repeat <= 0)
-            {
-                repeat = 1;
-            }
-            for (int i = 0; i < repeat; i++)
-            {
-                m_AudioSource.PlayOneShot(quest.SoundQuest);
-                yield return new WaitForSeconds(quest.SoundQuest.length);
-            }
-        }
-        
-        public void PlayQuestionVoice(AudioClip audioClip)
-        {
-            PlayQuestionVoiceInternal(audioClip);
+            if (!clip || !m_AudioSource) return;
+            StopPromptInternal();
+            PlayClipInternal(clip);
         }
 
-        protected virtual void PlayQuestionVoiceInternal(AudioClip audioClip)
+        protected void PlayClipInternal(AudioClip clip)
         {
-            //StartCoroutine(PlayingQuestionVoice(audioClip));
-            if (m_AudioSource)
-            {
-                m_AudioSource.PlayOneShot(audioClip);
-                m_Host.StartCoroutine(ReduceMusicAWhile(audioClip));
-                if (m_Data is SO_QuestMultipleChoice quest)
-                {
-                    if (quest.SoundQuest != null)
-                    {
-                        float clipduration = quest.SoundQuest.length;
-                        StartCoroutine(PlaySoundQuestAfterQuestionVoiceDone(clipduration));
-                    }
-                }
-            }
+            m_AudioSource.Stop();
+            m_AudioSource.PlayOneShot(clip);
+            m_Host.DuckMusicFor(clip.length);
         }
-        private IEnumerator ReduceMusicAWhile(AudioClip audioClip)
+
+        private void StopPromptInternal()
         {
-            AudioSource music = m_Host.Music;
-            float durationvoice = audioClip.length;
-            music.volume = c_MusicDuckVolume;
-            yield return new WaitForSeconds(durationvoice);
-            music.volume = 1f;
-        }
-        private IEnumerator PlaySoundQuestAfterQuestionVoiceDone(float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            PlaySoundQuestInternal();
+            if (m_PromptPlayback == null) return;
+            StopCoroutine(m_PromptPlayback);
+            m_PromptPlayback = null;
         }
 
         public virtual void OnAnswered(bool result, bool submit = true)
@@ -174,10 +165,7 @@ namespace EduGame
             m_Host.Submit(star);
         }
 
-        public virtual void ShowTutorial()
-        {
-            m_Host.ShowTutorial(null);
-        }
+        public virtual void ShowTutorial() { }
 
         public void Reset()
         {
@@ -186,9 +174,8 @@ namespace EduGame
 
         protected virtual void ResetInternal()
         {
-            //PlayQuestionVoice();
-
-            Invoke(nameof(ShowTutorial), 2f);
+            CancelInvoke(nameof(ShowTutorial));
+            Invoke(nameof(ShowTutorial), c_TutorialDelay);
         }
 
         public virtual void Disabled()

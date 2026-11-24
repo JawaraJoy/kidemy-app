@@ -85,7 +85,7 @@ namespace EduGame
         }
         public bool HasMultipleImages(out MultipleImageMechanic[] multipleImages, out Image prefab)
         {
-            multipleImages = m_MultipleQuestImages;
+            multipleImages = m_MultipleQuestImages ?? Array.Empty<MultipleImageMechanic>();
             prefab = m_ImagePrefab;
             return multipleImages.Length > 0 && prefab != null;
         }

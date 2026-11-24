@@ -33,6 +33,7 @@ namespace EduGame
         private QuestDragNDropSlot[] m_Slots;
         private int m_TotalLimit = 0;
 
+        private const float c_HalfCredit = 0.5f;
         private TextEffect m_TextEffect;
 
         protected override void Start()
@@ -40,7 +41,10 @@ namespace EduGame
             base.Start();
 
             if (!m_DataDragNDrop)
-                Debug.LogError("Quest data on '" + gameObject.name + "' is not valid, please assign the one with SO_QuestMultipleChoice");
+            {
+                Debug.LogError("Assign SO_QuestDragNDrop to this quest.", this);
+                return;
+            }
 
             if (m_QuestionImage)
             {
@@ -99,21 +103,7 @@ namespace EduGame
                 }
             }
 
-            if (m_SlotsContainer && m_SlotPrefab)
-            {
-                m_Slots = new QuestDragNDropSlot[m_DataDragNDrop.Slots.Length];
-
-                for (int i = 0; i < m_DataDragNDrop.Slots.Length; i++)
-                {
-                    if(m_DataDragNDrop.Slots[i].Limit > 0)
-                    {
-                        m_Slots[i] = InstantiateSlot(m_Slots[0]);
-                        m_Slots[i].SetSlot(m_DataDragNDrop.Slots[i], i+1, i == m_DataDragNDrop.Items.Length - 1);
-
-                        m_TotalLimit += m_Slots[i].GroupData.Limit;
-                    }
-                }
-            }
+            CreateSlots();
 
             SetDialog();
         }
@@ -135,26 +125,37 @@ namespace EduGame
             return item;
         }
 
-        QuestDragNDropSlot InstantiateSlot(QuestDragNDropSlot prefab)
+        protected virtual RectTransform SlotParent(int index) => m_SlotsContainer;
+
+        private void CreateSlots()
         {
-            QuestDragNDropSlot slot = Instantiate(prefab ? prefab : m_SlotPrefab, m_SlotsContainer);
-
-            slot.transform.localPosition = Vector3.zero;
-            slot.Rect.localScale = Vector3.one;
-
-            return slot;
+            var slots = new List<QuestDragNDropSlot>();
+            var groups = m_DataDragNDrop.Groups;
+            for (int i = 0; m_SlotPrefab && i < groups.Length; i++)
+            {
+                if (groups[i].Limit <= 0) continue;
+                var parent = SlotParent(slots.Count);
+                if (!parent) continue;
+                var slot = Instantiate(m_SlotPrefab, parent, false);
+                slot.transform.localPosition = Vector3.zero;
+                slot.Rect.localScale = Vector3.one;
+                slots.Add(slot);
+                slot.SetSlot(groups[i], slots.Count, i == groups.Length - 1);
+                m_TotalLimit += groups[i].Limit;
+            }
+            m_Slots = slots.ToArray();
         }
 
         void RecalculateContainer()
         {
-            if (m_Items[0].Rect.sizeDelta.x > 0 && m_Items[0].Rect.sizeDelta.y > 0)
+            if (m_ItemsContainer && m_Items?.Length > 0 && m_Items[0].Rect.sizeDelta.x > 0 && m_Items[0].Rect.sizeDelta.y > 0)
             {
                 m_ItemsContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
                 if (gridLayoutGroup)
                     gridLayoutGroup.cellSize = m_Items[0].Rect.sizeDelta;
             }
 
-            if (m_Slots[0].Rect.sizeDelta.x > 0 && m_Slots[0].Rect.sizeDelta.y > 0)
+            if (m_SlotsContainer && m_Slots?.Length > 0 && m_Slots[0].Rect.sizeDelta.x > 0 && m_Slots[0].Rect.sizeDelta.y > 0)
             {
                 m_SlotsContainer.TryGetComponent<GridLayoutGroup>(out GridLayoutGroup gridLayoutGroup);
                 if (gridLayoutGroup)
@@ -163,9 +164,7 @@ namespace EduGame
                 m_SlotsContainer.sizeDelta = new Vector2(m_SlotsContainer.sizeDelta.x * m_Slots.Length, m_SlotsContainer.sizeDelta.y);
             }
 
-            m_ItemsContainer.TryGetComponent<QuestDragNDropZone>(out QuestDragNDropZone questDragNDropZone);
-
-            if (questDragNDropZone)
+            if (m_ItemsContainer && m_ItemsContainer.TryGetComponent(out QuestDragNDropZone questDragNDropZone))
                 questDragNDropZone.RegisterItems();
         }
 
@@ -199,7 +198,7 @@ namespace EduGame
 
             if (totalAnswers == m_DataDragNDrop.Items.Length || totalAnswers >= m_TotalLimit)
                 star = c_MaxStar;
-            else if (totalAnswers / m_DataDragNDrop.Items.Length >= 0.5f)
+            else if (totalAnswers >= m_DataDragNDrop.Items.Length * c_HalfCredit)
                 star = 2;
 
             m_Host.Submit(star);
@@ -207,8 +206,6 @@ namespace EduGame
 
         protected virtual int Sort()
         {
-            Dictionary<int, int> answers = new Dictionary<int, int>();
-
             int totalAnswers = 0;
 
             foreach (var slot in m_Slots)
@@ -241,13 +238,36 @@ namespace EduGame
                 {
                     foreach (var item in slot.DropZone.Items)
                     {
-                        if (m_DataDragNDrop.Index[item.ItemData.Id] == slot.GroupData.Id)
+                        if (MatchesSlot(item, slot))
                             totalAnswers++;
                     }
                 }
             }
 
             return totalAnswers;
+        }
+
+        public override bool Verify(QuestDragNDropItem item, QuestDragNDropZone zone)
+        {
+            return zone && MatchesSlot(item, zone.Slot);
+        }
+
+        protected virtual bool MatchesSlot(QuestDragNDropItem item, QuestDragNDropSlot slot)
+        {
+            return item && item.ItemData != null && slot && slot.GroupData != null &&
+                   m_DataDragNDrop.Index.TryGetValue(item.ItemData.Id, out int id) && id == slot.GroupData.Id;
+        }
+
+        public override void ShowTutorial()
+        {
+            if (m_Items == null || m_Slots == null) return;
+            foreach (var item in m_Items)
+                foreach (var slot in m_Slots)
+                    if (MatchesSlot(item, slot))
+                    {
+                        m_Host.ShowTutorial(item.Rect, slot.Rect, HandTutorial.TutorialMode.Swipe);
+                        return;
+                    }
         }
 
         protected override void ResetInternal()
@@ -258,7 +278,7 @@ namespace EduGame
                     choice.transform.SetParent(m_ItemsContainer);
             }
                 
-            if(m_Items != null)
+            if (m_Slots != null)
             {
                 foreach (var slot in m_Slots)
                     if(slot)

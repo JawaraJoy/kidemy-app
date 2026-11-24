@@ -1,6 +1,7 @@
 using System.Text;
 using System.Security.Cryptography;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 public static class StringHelper
 {
@@ -32,6 +33,12 @@ public static class StringHelper
 
             return sb.ToString(); // e.g., "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
+    }
+
+    public static bool TryParseCount(string text, out int count)
+    {
+        count = 0;
+        return !string.IsNullOrEmpty(text) && int.TryParse(Regex.Match(text, @"\d+").Value, out count);
     }
 
     public static int ExtractId(string text)

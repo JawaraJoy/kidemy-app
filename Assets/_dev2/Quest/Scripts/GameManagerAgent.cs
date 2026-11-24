@@ -4,13 +4,9 @@ namespace EduGame
 {
     public class GameManagerAgent : MonoBehaviour
     {
-        public void PlayQuestionVoice()
-        {
-            GetComponentInParent<Quest>(true).Host.PlayQuestionVoice();
-        }
-        public void PlaySoundQuest()
-        {
-            GetComponentInParent<Quest>(true).Host.PlaySoundQuest();
-        }
+        [SerializeField] private Quest m_Quest;
+
+        public void PlayQuestionVoice() => m_Quest?.Host?.PlayQuestionVoice();
+        public void PlaySoundQuest() => m_Quest?.Host?.PlaySoundQuest();
     }
 }

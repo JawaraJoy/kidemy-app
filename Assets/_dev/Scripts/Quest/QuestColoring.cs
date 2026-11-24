@@ -181,6 +181,12 @@ namespace EduGame
             base.SubmitInternal(star);
         }
 
+        public override void ShowTutorial()
+        {
+            if (m_Palettes?.Length > 0 && m_Fields?.Length > 0 && m_Palettes[0] && m_Fields[0])
+                m_Host.ShowTutorial(m_Palettes[0].Rect, m_Fields[0].transform as RectTransform, HandTutorial.TutorialMode.Swipe);
+        }
+
         protected override void ResetInternal()
         {
             if (m_Fields != null && m_Fields.Length > 0)

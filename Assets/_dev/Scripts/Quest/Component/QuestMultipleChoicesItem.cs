@@ -86,10 +86,8 @@ namespace EduGame
                         m_TextEffect.Refresh();
                     }
                 }
-
-                
                     
-                if (choice.UseTextColor)
+                if (m_Text && choice.UseTextColor)
                 {
                     m_Text.color = choice.TextColor;
                 }
@@ -124,10 +122,6 @@ namespace EduGame
                 m_Image?.transform.parent.gameObject.SetActive(false);   
             }
 
-            if (choice.Color != Color.white && choice.Color != Color.black)
-            {
-                
-            }
             if (m_Tint)
                 m_Tint.color = choice.Color;
         }

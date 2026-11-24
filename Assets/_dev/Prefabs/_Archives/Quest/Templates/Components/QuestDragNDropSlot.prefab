@@ -253,7 +253,7 @@ MonoBehaviour:
   text: {fileID: 6034082453414962026}
   audioPlayer: {fileID: 0}
   image: {fileID: 0}
-  dropZone: {fileID: 7961546647160375635}
+  m_DropZone: {fileID: 2750285867446617652}
 --- !u!1 &5071802883280598199
 GameObject:
   m_ObjectHideFlags: 0

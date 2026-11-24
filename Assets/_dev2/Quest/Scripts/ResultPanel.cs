@@ -9,7 +9,7 @@ namespace EduGame
 {
     public class ResultPanel : MonoBehaviour
     {
-        private const float c_Percent = 100f;
+        [SerializeField] private Image m_LightImage;
 
         [SerializeField]
         private PanelView m_Panel;
@@ -37,9 +37,9 @@ namespace EduGame
 
         private void Start()
         {
-            // m_Host disuntik GameManager lewat SetHost sebelum Start
-
-            m_NPCIcon.sprite = m_Host.ChallengeConfig.Character.ResultCharacterImage;
+            var character = m_Host?.CurrentCharacter;
+            if (m_NPCIcon && character && character.ResultCharacterImage)
+                m_NPCIcon.sprite = character.ResultCharacterImage;
             m_ResetButton.onClick.AddListener(ResetQuest);
             m_HomeButton.onClick.AddListener(Home);
             if (m_LabelText.TryGetComponent(out TextEffect textEffect))
@@ -61,10 +61,7 @@ namespace EduGame
         }
         public void ShowResult(ResultContext context)
         {
-            int wrongCount = context.WrongCount;
             int rightCount = context.RightCount;
-            float rate = context.GetRate() * c_Percent;
-            string wrongCountText = WordSetting.GetFormatedText(wrongCount.ToString(), new TextEffectInstance[1] { m_WrongTextEffect });
             string rightCountText = WordSetting.GetFormatedText(rightCount.ToString(), new TextEffectInstance[1] {m_RightTextEffect});
 
             string scoreText = $"{rightCountText} right(s) of {context.GetTotalQuest()}";
@@ -79,6 +76,11 @@ namespace EduGame
                 m_LabelTextEff.Refresh();
             }
 
+            if (m_LightImage)
+            {
+                m_LightImage.rectTransform.offsetMin = Vector2.zero;
+                m_LightImage.rectTransform.offsetMax = Vector2.zero;
+            }
             m_Panel.Show();
             m_StarPresenter.DisableAllStars();
             m_StarPresenter.StarsResult(context);

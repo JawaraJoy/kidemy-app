@@ -2,6 +2,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using EasyTextEffects;
 using UnityEngine.Serialization;
 
 namespace EduGame
@@ -24,7 +25,13 @@ namespace EduGame
         [SerializeField] [FormerlySerializedAs("correct")] protected GameObject m_Correct;
         [SerializeField] [FormerlySerializedAs("wrong")] protected GameObject m_Wrong;
 
+        [SerializeField, FormerlySerializedAs("container")] private Image m_Container;
         private QuestUtilLabel m_ItemData;
+        public void SetContainerVisible(bool visible)
+        {
+            if (m_Container) m_Container.enabled = visible;
+        }
+
         public QuestUtilLabel ItemData => m_ItemData;
         public QuestDragNDropZone OriginalZone => m_OriginalParent;
 
@@ -52,22 +59,23 @@ namespace EduGame
             TryGetComponent<CanvasGroup>(out m_CanvasGroup);
         }
 
+        public void OnPointerDown(PointerEventData eventData) { }
+
         public void OnBeginDrag(PointerEventData eventData)
         {
-            if(Host != null)
-                transform.SetParent(Host.Canvas.transform);
-
+            Vector3 position = Rect.position;
+            if (Host?.Canvas)
+            {
+                Rect.SetParent(Host.Canvas.transform, true);
+                Rect.anchorMin = Rect.anchorMax = Rect.pivot = Vector2.one * 0.5f;
+                if (!m_ImageRect) Rect.sizeDelta = m_OriginalSize;
+                Rect.position = position;
+            }
             m_OriginalPosition = Rect.anchoredPosition;
-
-            m_CanvasGroup.blocksRaycasts = false;
-            
-            if(m_ImageRect)
-                m_ImageRect.sizeDelta = m_OriginalSize;
-            else
-                Rect.sizeDelta = m_OriginalSize;
-
-            if(m_Quest)
-                m_Quest.PlayQuestionVoice(ItemData.Audio);
+            if (m_CanvasGroup) m_CanvasGroup.blocksRaycasts = false;
+            if (m_ImageRect) m_ImageRect.sizeDelta = m_OriginalSize;
+            if (m_Quest && ItemData?.Audio) m_Quest.PlayQuestionVoice(ItemData.Audio);
+            if (m_Container) m_Container.enabled = false;
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -82,15 +90,9 @@ namespace EduGame
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            m_CanvasGroup.blocksRaycasts = true;
-
-            if(eventData.pointerEnter == null || !eventData.pointerEnter.TryGetComponent<QuestDragNDropZone>(out _))
+            if (m_CanvasGroup) m_CanvasGroup.blocksRaycasts = true;
+            if (OriginalZone && Rect.parent != OriginalZone.transform)
                 OriginalZone.ReInsertItem(this);
-        }
-
-        public void OnPointerDown(PointerEventData eventData)
-        {
-            //throw new System.NotImplementedException();
         }
 
         public virtual void SetItem(QuestUtilLabel item)
@@ -99,8 +101,12 @@ namespace EduGame
 
             if(!string.IsNullOrEmpty(item.Text))
             {
-                if(m_Text)
+                if (m_Text)
+                {
                     m_Text.text = item.Text;
+                    if (item.UseTextColor) m_Text.color = item.TextColor;
+                    if (m_Text.TryGetComponent(out TextEffect effect)) effect.Refresh();
+                }
             }   
             else
             {

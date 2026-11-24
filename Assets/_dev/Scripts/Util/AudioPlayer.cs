@@ -29,10 +29,7 @@ namespace EduGame
 
         public void OnClick()
         {
-            IQuestHost host = m_Quest ? m_Quest.Host : null;
-
-            if(m_AudioClip && host != null && host.AudioSource)
-                host.AudioSource.PlayOneShot(m_AudioClip);
+            if (m_Quest && m_AudioClip) m_Quest.PlayQuestionVoice(m_AudioClip);
         }
     }
 }

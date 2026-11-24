@@ -3177,6 +3177,7 @@ MonoBehaviour:
   m_StarPresenter: {fileID: 1741936009789667340}
   m_ResetButton: {fileID: 2609048803313123218}
   m_HomeButton: {fileID: 7717214468087372660}
+  m_LightImage: {fileID: 148331479979800521}
 --- !u!1 &8105492692274653600
 GameObject:
   m_ObjectHideFlags: 0

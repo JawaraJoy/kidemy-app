@@ -9,10 +9,12 @@ namespace EduGame
     public class QuestDragNDropZone : MonoBehaviour, IDropHandler
     {
         private const float c_ItemScale = 0.75f;
+        private const float c_ScaleUp = 2f;
+        private const float c_ScaleDown = 0.5f;
         private const string c_AcceptState = "Accept";
         private const string c_RejectState = "Reject";
 
-        public enum DisplayMode { Normal, Dynamic, Sticky, Fill, ScaledUp, ScaledDown, ScaledDown2, FollowParent }
+        public enum DisplayMode { Normal, Dynamic, Sticky, Fill, ScaledUp, ScaledDown, ScaledDown2, FollowParent, Hide }
 
         [SerializeField] [FormerlySerializedAs("displayMode")] private DisplayMode m_DisplayMode;
         [SerializeField] [FormerlySerializedAs("dropInfo")] private TMP_Text m_DropInfo;
@@ -31,6 +33,7 @@ namespace EduGame
 
         public QuestDragNDropItem[] Items => m_Items;
         public DisplayMode CurrentDisplayMode => m_DisplayMode;
+        public QuestDragNDropSlot Slot => m_Slot;
 
         void Awake()
         {
@@ -73,22 +76,7 @@ namespace EduGame
                     item.RegisterZone();
                 }
 
-                if (m_DisplayMode == DisplayMode.Fill)
-                    FillZone(item);
-                else if (m_DisplayMode == DisplayMode.Dynamic)
-                    Dynamic(item);
-                else if (m_DisplayMode == DisplayMode.Sticky)
-                    Sticky(item);
-                else if (m_DisplayMode == DisplayMode.ScaledUp)
-                    Scaled(item, 2);
-                else if (m_DisplayMode == DisplayMode.ScaledDown)
-                    Scaled(item, 0.5f);
-                else if (m_DisplayMode == DisplayMode.ScaledDown2)
-                    Scaled(item, c_ItemScale);
-                else if (m_DisplayMode == DisplayMode.FollowParent)
-                    FollowParent(item);
-                else if (m_DisplayMode == DisplayMode.Normal)
-                    Normal(item);
+                ApplyDisplayMode(item);
 
                 RegisterItemsInternal();
             }
@@ -101,44 +89,17 @@ namespace EduGame
 
         private void RegisterItemsInternal()
         {
-            m_Items = new QuestDragNDropItem[transform.childCount];
-
-            int x = 0;
-
-            if(transform.childCount > 0)
-            {
-                foreach (Transform child in transform)
-                {
-                    child.TryGetComponent<QuestDragNDropItem>(out m_Items[x]);
-                    x++;
-                }
-                
-                if(m_DropInfo)
-                    m_DropInfo.gameObject.SetActive(false);
-            }
-            else
-            {
-                if(m_DropInfo)
-                    m_DropInfo.gameObject.SetActive(true);
-            }
+            var items = new System.Collections.Generic.List<QuestDragNDropItem>(transform.childCount);
+            foreach (Transform child in transform)
+                if (child.TryGetComponent(out QuestDragNDropItem item)) items.Add(item);
+            m_Items = items.ToArray();
+            if (m_DropInfo) m_DropInfo.gameObject.SetActive(m_Items.Length == 0);
         }
 
-        int GetItemIndex(QuestDragNDropItem seekItem)
+        private int GetItemIndex(QuestDragNDropItem item)
         {
-            int i = 0;
-
-            if (m_Items != null)
-            {
-                foreach (var item in m_Items)
-                {
-                    if (seekItem.transform.GetEntityId() != item.transform.GetEntityId())
-                        i++;
-                    else
-                        break;
-                }
-            }
-
-            return i;
+            int index = System.Array.IndexOf(m_Items, item);
+            return index >= 0 ? index : m_Items.Length;
         }
 
         public void OnDrop(PointerEventData eventData)
@@ -149,14 +110,13 @@ namespace EduGame
 
                 if (draggedItem)
                 {
-                    bool slotLimitVerification = !m_Slot || (m_Slot.GroupData.Limit < 0 || (m_Items.Length < m_Slot.GroupData.Limit));
+                    bool slotLimitVerification = draggedItem.OriginalZone == this || !m_Slot || (m_Slot.GroupData != null && (m_Slot.GroupData.Limit < 0 || m_Items.Length < m_Slot.GroupData.Limit));
 
-                    if (slotLimitVerification && (!m_Verify || m_Quest.Verify(draggedItem, this)))
+                    if (slotLimitVerification && (!m_Verify || (m_Quest && m_Quest.Verify(draggedItem, this))))
                     {
                         AddItemInternal(draggedItem);
 
-                        if(m_Answer)
-                            m_Quest.OnAnswered(true);
+                        if (m_Answer && m_Quest) m_Quest.OnAnswered(true);
 
                         OnAccept();
                     }
@@ -177,24 +137,29 @@ namespace EduGame
             item.transform.SetParent(transform);
             item.transform.SetSiblingIndex(itemIndex);
 
-            if (m_DisplayMode == DisplayMode.Fill)
-                FillZone(item);
-            else if (m_DisplayMode == DisplayMode.Dynamic)
-                Dynamic(item);
-            else if (m_DisplayMode == DisplayMode.Sticky)
-                Sticky(item);
-            else if (m_DisplayMode == DisplayMode.ScaledUp)
-                Scaled(item, 2);
-            else if (m_DisplayMode == DisplayMode.ScaledDown)
-                Scaled(item, 0.5f);
-            else if (m_DisplayMode == DisplayMode.ScaledDown2)
-                Scaled(item, c_ItemScale);
-            else if (m_DisplayMode == DisplayMode.FollowParent)
-                FollowParent(item);
-            else if (m_DisplayMode == DisplayMode.Normal)
-                Normal(item);
-
+            ApplyDisplayMode(item);
             RegisterItemsInternal();
+        }
+
+        private void ApplyDisplayMode(QuestDragNDropItem item)
+        {
+            item.SetContainerVisible(!m_Answer);
+            if (item.transform.childCount == 0) return;
+            if (m_DisplayMode == DisplayMode.Hide)
+            {
+                item.transform.GetChild(0).gameObject.SetActive(false);
+                return;
+            }
+            switch (m_DisplayMode)
+            {
+                case DisplayMode.Fill: FillZone(item); break;
+                case DisplayMode.Dynamic: Dynamic(item); break;
+                case DisplayMode.Sticky: Sticky(item); break;
+                case DisplayMode.ScaledUp: Scaled(item, c_ScaleUp); break;
+                case DisplayMode.ScaledDown: Scaled(item, c_ScaleDown); break;
+                case DisplayMode.ScaledDown2: Scaled(item, c_ItemScale); break;
+                case DisplayMode.FollowParent: FollowParent(item); break;
+            }
         }
 
         private void Dynamic(QuestDragNDropItem item)
@@ -203,7 +168,6 @@ namespace EduGame
 
             if(m_Grid)
             {
-                Debug.Log(rect.rect.height + " > " + m_Grid.cellSize.y);
                 if(rect.rect.width > m_Grid.cellSize.x)
                     Scaled(item, m_Grid.cellSize.x/rect.rect.width);
                 else if(rect.rect.height > m_Grid.cellSize.y)
@@ -211,28 +175,6 @@ namespace EduGame
                 else
                     Sticky(item);
             }
-            else
-                Normal(item);
-        }
-
-        private void Normal(QuestDragNDropItem item)
-        {
-            /*
-            RectTransform rect = item.transform.GetChild(0).GetComponent<RectTransform>();
-            RectTransform rectParent = item.transform.GetComponent<RectTransform>();
-
-            rectParent.pivot = Vector2.one * 0.5f;
-            rectParent.anchorMax = Vector2.one * 0.5f;
-            rectParent.anchorMin = Vector2.one * 0.5f;
-
-            rectParent.anchoredPosition = Vector2.zero;
-
-            rect.pivot = Vector2.one * 0.5f;
-            rect.anchorMax = Vector2.one * 0.5f;
-            rect.anchorMin = Vector2.one * 0.5f;
-
-            rect.anchoredPosition = Vector2.zero;
-            */
         }
 
         private void Sticky(QuestDragNDropItem item)
@@ -268,7 +210,6 @@ namespace EduGame
 
         private void Scaled(QuestDragNDropItem item, float scale)
         {
-            Debug.Log(scale);
             item.transform.GetChild(0).TryGetComponent<RectTransform>(out RectTransform rect);
 
             rect.pivot = Vector2.one * 0.5f;
@@ -297,7 +238,7 @@ namespace EduGame
             if(m_Animator)
                 m_Animator.Play(c_AcceptState);
 
-            if(m_AcceptSound)
+            if (m_AcceptSound && m_Quest && m_Quest.Host?.AudioSource)
                 m_Quest.Host.AudioSource.PlayOneShot(m_AcceptSound);
         }
 
@@ -306,7 +247,7 @@ namespace EduGame
             if(m_Animator)
                 m_Animator.Play(c_RejectState);
 
-            if(m_RejectSound)
+            if (m_RejectSound && m_Quest && m_Quest.Host?.AudioSource)
                 m_Quest.Host.AudioSource.PlayOneShot(m_RejectSound);
         }
     }
