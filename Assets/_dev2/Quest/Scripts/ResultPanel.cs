@@ -81,9 +81,12 @@ namespace EduGame
                 m_LightImage.rectTransform.offsetMin = Vector2.zero;
                 m_LightImage.rectTransform.offsetMax = Vector2.zero;
             }
+
             m_Panel.Show();
             m_StarPresenter.DisableAllStars();
             m_StarPresenter.StarsResult(context);
+
+            Invoke(nameof(AlignLightImage), 0.5f);
         }
         private void ResetQuest()
         {
@@ -105,6 +108,15 @@ namespace EduGame
         public void SetRightAnswer(int set)
         {
             m_Host.SetRightAsnwer(set);
+        }
+
+        private void AlignLightImage()
+        {
+            if (m_LightImage)
+            {
+                m_LightImage.rectTransform.offsetMin = Vector2.zero;
+                m_LightImage.rectTransform.offsetMax = Vector2.zero;
+            }
         }
     }
 }

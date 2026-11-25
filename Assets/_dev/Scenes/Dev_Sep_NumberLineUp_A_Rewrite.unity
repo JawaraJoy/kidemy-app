@@ -312,6 +312,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e600e5bc56a130642a96f8863fd26f79, type: 2}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: m_BackgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: dc56da58d1d064a5492d14448060b70a, type: 3}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_ChallengeConfig
       value: 
       objectReference: {fileID: 0}
@@ -329,6 +333,10 @@ PrefabInstance:
       objectReference: {fileID: 2280316910148446087, guid: 90dbb441090ac074e9410b416243062e, type: 3}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: questPrefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: m_QuestPrefabs.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
@@ -351,6 +359,26 @@ PrefabInstance:
       propertyPath: 'questPrefabs.Array.data[4]'
       value: 
       objectReference: {fileID: 3198629066879550302, guid: c60656174fec02427b65de962a6fc4a2, type: 3}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: 'm_QuestPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3198629066879550302, guid: 1d0c66a7a64013c1786d11f3ed466d6d, type: 3}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: 'm_QuestPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3198629066879550302, guid: 01cf82daabac308b7ba1b0a5687c522b, type: 3}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: 'm_QuestPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3198629066879550302, guid: 9175c6df0cee0be23a5c497ecbe46a14, type: 3}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: 'm_QuestPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 3198629066879550302, guid: 76fdcf517aeaa3110b7f5bbcf4aaf788, type: 3}
+    - target: {fileID: 7251968833812456290, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
+      propertyPath: 'm_QuestPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3198629066879550302, guid: 021ce12ad77e595c8b47d83c765abca8, type: 3}
     - target: {fileID: 7672696211634173981, guid: a0e8ce96f9bf4724ab736fc556564da1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
