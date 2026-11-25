@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 53aefeb6b8cf4172ba9a9e72e0bbc1ee, type: 3}
+    m_Audio: {fileID: 8300000, guid: f57f8bf47f54155448d65cf153acdc61, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: addd791ecc8948ebb3406b2af67f8a1d, type: 3}
+    m_Audio: {fileID: 8300000, guid: 8bde5e425356034498039772c48adb86, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: -388412226, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
     m_Text: Farmer
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 5eda0d80b6d94b2d849ab2f51b7502f8, type: 3}
+    m_Audio: {fileID: 8300000, guid: 876b36f21af497d4d9bf406f3bf3f7ea, type: 3}
     m_IsAnswer: 1
   - m_Image: {fileID: 692189802, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
     m_Text: Police officer
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 9945b8c89c7d43b48b4e18a14d74653c, type: 3}
+    m_Audio: {fileID: 8300000, guid: 864f16c9b60b9e44db0964db50279f36, type: 3}
     m_IsAnswer: 0
   m_Timer: 0
   m_RandomizeChoice: 0

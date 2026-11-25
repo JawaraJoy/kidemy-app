@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 6593d197bb35cda46afc8f231c091cba, type: 3}
+    m_Audio: {fileID: 8300000, guid: dbf5c770c12caf64cbf1aa4d558997a3, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 0.31271622, g: 0.5323337, b: 0.9924528, a: 1}
-    m_Audio: {fileID: 8300000, guid: 674ac4d79d01428479fc882fc5362138, type: 3}
+    m_Audio: {fileID: 8300000, guid: 516e80b2d5c39eaf69280b6284f772cf, type: 3}
     m_IsAnswer: 1
   - m_Image: {fileID: 21300000, guid: b44c7021c02283444a3ffd31b4a58157, type: 3}
     m_Text: dog
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 0.9333334, g: 0.509804, b: 0.9333334, a: 1}
-    m_Audio: {fileID: 8300000, guid: 37c7107b59b9ece4a827aea681f58b46, type: 3}
+    m_Audio: {fileID: 8300000, guid: d6235db84a8341e6db00b9dd46dab78c, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: 21300000, guid: 9eea3dbe8a710744b965e271c11948fe, type: 3}
     m_Text: sun
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 0, b: 0.20157957, a: 1}
-    m_Audio: {fileID: 8300000, guid: a7235baab64ed6e47b65eb75b74e8366, type: 3}
+    m_Audio: {fileID: 8300000, guid: 2ac67c122ba5cee4dbc8191a41bd8447, type: 3}
     m_IsAnswer: 0
   m_Timer: 0
   m_RandomizeChoice: 0

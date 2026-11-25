@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Text: 'Loppi has the ball. Melo is next in the passing
 
     line. Who goes next?'
-  m_VoiceId: ocZQ262SsZb9RIxcQBOj
+  m_CharacterConfig: {fileID: 11400000, guid: 6a4383fb892482c459d54ad433ce9b44, type: 2}
   m_AudioClip: {fileID: 8300000, guid: 53e4c8fbece93f34895c1a1a1c6b2114, type: 3}
   m_ApiToken: 
   m_IsGenerating: 0

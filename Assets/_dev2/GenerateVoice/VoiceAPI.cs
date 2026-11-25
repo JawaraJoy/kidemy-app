@@ -10,29 +10,17 @@ using Unity.EditorCoroutines.Editor;
 
 namespace EduGame
 {
-    public sealed class VoiceAPI
+    public static class VoiceAPI
     {
-        private const string c_ApiUrl =
+        private const string API_URL =
             "https://kimee-ai-stg.linkit360.ai/v1/api/audio/generate";
 
-        private const string c_DefaultVoiceId =
+        public const string DefaultVoiceId =
             "n3tkGOcEribaYI5zg4pu";
-
-        public static string DefaultVoiceId => c_DefaultVoiceId;
 
 #if UNITY_EDITOR
 
-        private const string c_ErrorTextEmpty = "Text is empty.";
-        private const string c_ErrorTokenEmpty = "API Token is empty.";
-        private const string c_HeaderAuthorization = "Authorization";
-        private const string c_BearerPrefix = "Bearer ";
-        private const string c_HeaderContentType = "Content-Type";
-        private const string c_HeaderAccept = "Accept";
-        private const string c_MimeJson = "application/json";
-        private const string c_ErrorParse = "API response could not be parsed.";
-        private const string c_ErrorNoAudioUrl = "API response does not contain audio_url.\n";
-
-        public void Generate(
+        public static void Generate(
             string text,
             string voiceId,
             string apiToken,
@@ -41,19 +29,19 @@ namespace EduGame
         {
             if (string.IsNullOrWhiteSpace(text))
             {
-                onFailure?.Invoke(c_ErrorTextEmpty);
+                onFailure?.Invoke("Text is empty.");
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(apiToken))
             {
-                onFailure?.Invoke(c_ErrorTokenEmpty);
+                onFailure?.Invoke("API Token is empty.");
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(voiceId))
             {
-                voiceId = c_DefaultVoiceId;
+                voiceId = DefaultVoiceId;
             }
 
             EditorCoroutineUtility.StartCoroutineOwnerless(
@@ -102,7 +90,7 @@ namespace EduGame
 
             using UnityWebRequest request =
                 new UnityWebRequest(
-                    c_ApiUrl,
+                    API_URL,
                     UnityWebRequest.kHttpVerbPOST
                 );
 
@@ -113,18 +101,18 @@ namespace EduGame
                 new DownloadHandlerBuffer();
 
             request.SetRequestHeader(
-                c_HeaderAuthorization,
-                c_BearerPrefix + apiToken
+                "Authorization",
+                "Bearer " + apiToken
             );
 
             request.SetRequestHeader(
-                c_HeaderContentType,
-                c_MimeJson
+                "Content-Type",
+                "application/json"
             );
 
             request.SetRequestHeader(
-                c_HeaderAccept,
-                c_MimeJson
+                "Accept",
+                "application/json"
             );
 
             // ========================================================
@@ -195,7 +183,7 @@ namespace EduGame
             if (voiceResponse == null)
             {
                 onFailure?.Invoke(
-                    c_ErrorParse
+                    "API response could not be parsed."
                 );
 
                 yield break;
@@ -208,7 +196,7 @@ namespace EduGame
             )
             {
                 onFailure?.Invoke(
-                    c_ErrorNoAudioUrl +
+                    "API response does not contain audio_url.\n" +
                     $"Response: {response}"
                 );
 

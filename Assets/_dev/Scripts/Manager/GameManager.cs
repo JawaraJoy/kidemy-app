@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine.Events;
 using EasyTextEffects;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 namespace EduGame
@@ -29,7 +30,7 @@ namespace EduGame
         private const string c_DialogCorrect = "Yaaay! Amazing!";
         private const string c_DialogWrong = "Oh no!";
 
-        // Import the JavaScript functions
+#if UNITY_WEBGL && !UNITY_EDITOR
         [DllImport("__Internal")]
         private static extern string GetParentURL();
 
@@ -47,6 +48,7 @@ namespace EduGame
 
         [DllImport("__Internal")]
         private static extern void ReloadIframe();
+#endif
 
         [Header("Frame")]
         [SerializeField] [FormerlySerializedAs("title")] private TMP_Text m_Title;
@@ -723,8 +725,21 @@ namespace EduGame
 
         public virtual void ReloadScene()
         {
-            ReloadIframe();
+            ReloadSceneInternal();
         }
+
+        private void ReloadSceneInternal()
+        {
+#if UNITY_EDITOR
+            UnityEditor.SceneManagement.EditorSceneManager.LoadSceneAsyncInPlayMode(
+                gameObject.scene.path, new LoadSceneParameters(LoadSceneMode.Single));
+#elif UNITY_WEBGL
+            ReloadIframe();
+#else
+            SceneManager.LoadSceneAsync(gameObject.scene.buildIndex);
+#endif
+        }
+
         public void PlaySFX(AudioClip audioClip)
         {
             m_SFXSource.PlayOneShot(audioClip);

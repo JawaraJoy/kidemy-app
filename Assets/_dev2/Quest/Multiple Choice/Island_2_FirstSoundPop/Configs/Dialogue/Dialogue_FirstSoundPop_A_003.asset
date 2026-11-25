@@ -29,4 +29,4 @@ MonoBehaviour:
   - m_Words: '!'
     m_AddSpaceForNext: 0
     m_Effects: []
-  m_VoiceClip: {fileID: 8300000, guid: af89ca937fee42ed9c8eeaab6844d71d, type: 3}
+  m_VoiceClip: {fileID: 8300000, guid: 79b931283b3f37c41bbddcf3c1a16ec1, type: 3}

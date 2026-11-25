@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 2a2524ae0bdc46e6aec25f0d7664b8e0, type: 3}
+    m_Audio: {fileID: 8300000, guid: 8468454ad6b18bb4189b079a5cb07a58, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 531bfded03f34388b17ed29ad811fc96, type: 3}
+    m_Audio: {fileID: 8300000, guid: 629b4a0bf19d1f848972104cc1944f00, type: 3}
     m_IsAnswer: 1
   - m_Image: {fileID: 1539439775, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
     m_Text: Baker
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 5149e878aa6d4f9badf22ab529180fcb, type: 3}
+    m_Audio: {fileID: 8300000, guid: c62b7b4cf4c6cc84093ac41aa7c96cb6, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: 1489655479, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
     m_Text: Teacher
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: f854dd1c85bc4d79abb3a1073f81e323, type: 3}
+    m_Audio: {fileID: 8300000, guid: 0ef851c7cb4615446a76bb39da49bce1, type: 3}
     m_IsAnswer: 0
   m_Timer: 0
   m_RandomizeChoice: 0

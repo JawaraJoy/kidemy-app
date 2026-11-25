@@ -64,7 +64,7 @@ MonoBehaviour:
   m_QuestAnimationHandler: {fileID: 0}
   m_ChoiceItemPrefab: {fileID: 4394343087330201723, guid: 161517c9c5498554f860105ab2a174ac, type: 3}
   m_AnswerInput: {fileID: 6395368979902727365}
-  m_TryAgain: {fileID: 8300000, guid: 4e80c7801a634941a73ddf24f4ca0ac7, type: 3}
+  m_TryAgain: {fileID: 8300000, guid: 295ef7e9b0ab1a8498de4d3a3e052d01, type: 3}
 --- !u!1 &4243147974834119898
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: a3490b73537b4bad9d3dbd431d25cd91, type: 3}
+    m_Audio: {fileID: 8300000, guid: 0476a14471a3a284eacd305d7855f34d, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: f4e8eeed4c9e44868146762818e14582, type: 3}
+    m_Audio: {fileID: 8300000, guid: 798dc6dc81cd74e41b29a4aa404ad91d, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: 1984614511, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
     m_Text: Chef
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: addd791ecc8948ebb3406b2af67f8a1d, type: 3}
+    m_Audio: {fileID: 8300000, guid: 8bde5e425356034498039772c48adb86, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: 1821418793, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
     m_Text: Postman
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 12ac64b24b054cadb575f8619e670612, type: 3}
+    m_Audio: {fileID: 8300000, guid: b31c9e8a9a86c09429bb234184349faa, type: 3}
     m_IsAnswer: 1
   m_Timer: 0
   m_RandomizeChoice: 0

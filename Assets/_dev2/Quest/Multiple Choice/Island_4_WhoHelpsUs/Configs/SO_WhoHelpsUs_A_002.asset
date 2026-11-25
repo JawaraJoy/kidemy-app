@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: b9533605a51541a8b788c8bfbf307939, type: 3}
+    m_Audio: {fileID: 8300000, guid: 857e2b365110e084eb217f049a19fe68, type: 3}
   m_AutoSubmit: 0
   m_Score: 10
   m_TresholdTime: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 6130024ca22d4d30a28b3ee1f48e79cc, type: 3}
+    m_Audio: {fileID: 8300000, guid: f84fe1953aa809a498b6bb9a40891d50, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: -388412226, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
     m_Text: Farmer
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: 5eda0d80b6d94b2d849ab2f51b7502f8, type: 3}
+    m_Audio: {fileID: 8300000, guid: 876b36f21af497d4d9bf406f3bf3f7ea, type: 3}
     m_IsAnswer: 0
   - m_Image: {fileID: 1489655479, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
     m_Text: Teacher
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
     m_UseTextColor: 0
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Audio: {fileID: 8300000, guid: f854dd1c85bc4d79abb3a1073f81e323, type: 3}
+    m_Audio: {fileID: 8300000, guid: 0ef851c7cb4615446a76bb39da49bce1, type: 3}
     m_IsAnswer: 1
   m_Timer: 0
   m_RandomizeChoice: 0
