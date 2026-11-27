@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ConstraintCount: 0
   m_MultipleQuestImages: []
   m_Question:
-    m_Image: {fileID: -1642073432, guid: 5af51a9bad974719a7eb5ff6762914f4, type: 3}
+    m_Image: {fileID: 21300000, guid: f83448948ba546d49c546811ade2de95, type: 3}
     m_Text: Who helps us grow vegetables?
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 1984614511, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+  - m_Image: {fileID: 21300000, guid: 2767ae8fe849413186a83721e8863deb, type: 3}
     m_Text: Chef
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 8bde5e425356034498039772c48adb86, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: -388412226, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+  - m_Image: {fileID: 21300000, guid: ec67acb153dd4a4e9b47cccf339ecb5b, type: 3}
     m_Text: Farmer
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 876b36f21af497d4d9bf406f3bf3f7ea, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 692189802, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+  - m_Image: {fileID: 21300000, guid: 56be9f997ca7418aad333013c0632d40, type: 3}
     m_Text: Police officer
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

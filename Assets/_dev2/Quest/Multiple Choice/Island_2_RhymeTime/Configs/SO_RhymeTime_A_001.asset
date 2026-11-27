@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ConstraintCount: 0
   m_MultipleQuestImages: []
   m_Question:
-    m_Image: {fileID: 21300000, guid: c845515025f7daf469734ec0f3f46859, type: 3}
+    m_Image: {fileID: 21300000, guid: c690bb02f2784ac2a7bd7968d1651f7a, type: 3}
     m_Text: Find the rhyme! Cat.
     m_FormatedText: {fileID: 11400000, guid: 3cdff74676bc9ca4583e4aa1df7502c3, type: 2}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 21300000, guid: 436863b151b6ac04da326966f36dec32, type: 3}
+  - m_Image: {fileID: 21300000, guid: 390c8493098348d8aa426397f19d77f8, type: 3}
     m_Text: hat
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 0.31271622, g: 0.5323337, b: 0.9924528, a: 1}
     m_Audio: {fileID: 8300000, guid: 516e80b2d5c39eaf69280b6284f772cf, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 21300000, guid: b44c7021c02283444a3ffd31b4a58157, type: 3}
+  - m_Image: {fileID: 21300000, guid: 7d7712b20cc947d3a0034ddcaad77fed, type: 3}
     m_Text: dog
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 0.9333334, g: 0.509804, b: 0.9333334, a: 1}
     m_Audio: {fileID: 8300000, guid: d6235db84a8341e6db00b9dd46dab78c, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 9eea3dbe8a710744b965e271c11948fe, type: 3}
+  - m_Image: {fileID: 21300000, guid: 75daeffb958f490db959ea3d51174156, type: 3}
     m_Text: sun
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

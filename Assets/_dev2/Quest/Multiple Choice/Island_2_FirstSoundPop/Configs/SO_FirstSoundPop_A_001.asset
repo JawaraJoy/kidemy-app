@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 21300000, guid: 1662430d50236cd4a9add3712b3df961, type: 3}
+  - m_Image: {fileID: 21300000, guid: 767a1b7c4e954d8ba5913db3fe9bb708, type: 3}
     m_Text: Ball
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 388f81d15c234aa419e2b303957c86f2, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 21300000, guid: ffaeaf39ac9d0d44d8deb4e4bdf53e97, type: 3}
+  - m_Image: {fileID: 21300000, guid: 1e06ce79f5de4594a9640a99b8494643, type: 3}
     m_Text: Cat
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 703c8052bc74b6f4f802abfa983b8017, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 9eea3dbe8a710744b965e271c11948fe, type: 3}
+  - m_Image: {fileID: 21300000, guid: fbd869ab8af349a38c47a61a4c88bacd, type: 3}
     m_Text: Sun
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -62,7 +62,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: d3e76d996ddf0d4478c708bcc4bc3ce7, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 9f9240fa985115041ac4aab17438a40e, type: 3}
+  - m_Image: {fileID: 21300000, guid: 87fa80dfc83e4a8cb927a545b364c91d, type: 3}
     m_Text: Fish
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

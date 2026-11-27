@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 21300000, guid: 9f9240fa985115041ac4aab17438a40e, type: 3}
+  - m_Image: {fileID: 21300000, guid: 87fa80dfc83e4a8cb927a545b364c91d, type: 3}
     m_Text: Fish
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 58caa56cbe821444381f263768577774, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 21300000, guid: 938949c3388c5d440bc1e4ca63062d93, type: 3}
+  - m_Image: {fileID: 21300000, guid: 3da0f3baa5504e179c4afb6954c6c12b, type: 3}
     m_Text: Tree
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 819ab49d14510944da119b842f5f8154, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 1cf574c98e7acfc4aa4fa24b6c04779a, type: 3}
+  - m_Image: {fileID: 21300000, guid: 0d28c6adfd7d4520aa5853a2164d293f, type: 3}
     m_Text: Bear
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

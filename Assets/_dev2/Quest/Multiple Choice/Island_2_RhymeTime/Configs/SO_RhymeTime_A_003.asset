@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ConstraintCount: 0
   m_MultipleQuestImages: []
   m_Question:
-    m_Image: {fileID: 21300000, guid: ddfef73782e254043a51f1a2c14acf20, type: 3}
+    m_Image: {fileID: 21300000, guid: 16e94cb1e0994510bf3529f3df2bb66c, type: 3}
     m_Text: Find the rhyme! Pig.
     m_FormatedText: {fileID: 11400000, guid: 817bd09fb5fbe2d4cb615d959d5487e2, type: 2}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 21300000, guid: bbdb72a3cf4ae0345a3a5c67f18e697a, type: 3}
+  - m_Image: {fileID: 21300000, guid: 14b0e25d983f447eb1903ec27e2826bd, type: 3}
     m_Text: hen
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 0.9333334, g: 0.509804, b: 0.9333334, a: 1}
     m_Audio: {fileID: 8300000, guid: c59380a711915f642b8ece84de31d742, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 21300000, guid: 55889d81673ce304bb54a2a74f60c86b, type: 3}
+  - m_Image: {fileID: 21300000, guid: d0b8705b972848ceaf814dd52018a8d7, type: 3}
     m_Text: cow
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

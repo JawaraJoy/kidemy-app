@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 21300000, guid: 367357bac7d2c7149b7ddb6d437d89e0, type: 3}
+  - m_Image: {fileID: 21300000, guid: fbd0feca89e4481aa1fccd6b22004bfc, type: 3}
     m_Text: 1 mouse
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: f29570c1c80b35547ae9bda82555a466, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 30df53421bd30e8449835b8c5351cb73, type: 3}
+  - m_Image: {fileID: 21300000, guid: a0b32e61d5e3421da42b8b12550cb89b, type: 3}
     m_Text: 2 birds
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: b41f03712017f74409dea55b2feece50, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 367357bac7d2c7149b7ddb6d437d89e0, type: 3}
+  - m_Image: {fileID: 21300000, guid: 66189f9606b847dabf73602a55dc4c1d, type: 3}
     m_Text: 2 mice
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ConstraintCount: 0
   m_MultipleQuestImages: []
   m_Question:
-    m_Image: {fileID: 21300000, guid: 9eea3dbe8a710744b965e271c11948fe, type: 3}
+    m_Image: {fileID: 21300000, guid: 75daeffb958f490db959ea3d51174156, type: 3}
     m_Text: Find the rhyme! Sun.
     m_FormatedText: {fileID: 11400000, guid: 908000f03e8cf8d40acd87a6afd05cb8, type: 2}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 21300000, guid: c696f271bf601724ebe27f4eb15510e7, type: 3}
+  - m_Image: {fileID: 21300000, guid: 5adc96f97f284887bc22a73903d337aa, type: 3}
     m_Text: bed
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 0.31271622, g: 0.5323337, b: 0.9924528, a: 1}
     m_Audio: {fileID: 8300000, guid: 95361ca197e42b04786958c89aea78f9, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 3f0fc3947720de54ab926fe6767d37e2, type: 3}
+  - m_Image: {fileID: 21300000, guid: 47111d05e35c42b79cea57812f56f40f, type: 3}
     m_Text: cup
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

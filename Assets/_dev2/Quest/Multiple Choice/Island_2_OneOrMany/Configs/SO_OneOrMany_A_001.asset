@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 18846988, guid: 7335ee5486514e12b44998b7e77f1e8e, type: 3}
+  - m_Image: {fileID: 21300000, guid: e37793fc29d04e0b82c5afe8afd82fd2, type: 3}
     m_Text: 3 cats
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: c0df26729c51c6345b80b92d87194835, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 18846988, guid: 7335ee5486514e12b44998b7e77f1e8e, type: 3}
+  - m_Image: {fileID: 21300000, guid: 7335ee5486514e12b44998b7e77f1e8e, type: 3}
     m_Text: 1 cat
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: afd7fbf3f611a434c925337a81720b4f, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: -619063069, guid: aa92372d021d4e2dac8d947638bfe3c5, type: 3}
+  - m_Image: {fileID: 21300000, guid: aa92372d021d4e2dac8d947638bfe3c5, type: 3}
     m_Text: 3 dogs
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

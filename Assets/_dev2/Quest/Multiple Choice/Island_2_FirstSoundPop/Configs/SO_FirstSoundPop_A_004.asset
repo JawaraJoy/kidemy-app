@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 0540d2fb27467f343bd8f1037b275a3c, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 5fc3476e02fdeae42a35411ec44bd5a1, type: 3}
+  - m_Image: {fileID: 21300000, guid: e5f74720e6fa48619c530d38f8e09734, type: 3}
     m_Text: Duck
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -62,7 +62,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: fa32fd7bf86198c46aa96e3b9b7e4dc5, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: f95c99f6ab2d34391ad76da49a9d5fda, type: 3}
+  - m_Image: {fileID: 21300000, guid: c47157ba5d9e48c984f1a6365b8da8c0, type: 3}
     m_Text: Key
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

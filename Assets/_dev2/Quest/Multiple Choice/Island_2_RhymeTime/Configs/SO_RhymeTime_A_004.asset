@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ConstraintCount: 0
   m_MultipleQuestImages: []
   m_Question:
-    m_Image: {fileID: 21300000, guid: c696f271bf601724ebe27f4eb15510e7, type: 3}
+    m_Image: {fileID: 21300000, guid: 5adc96f97f284887bc22a73903d337aa, type: 3}
     m_Text: Find the rhyme! Bed.
     m_FormatedText: {fileID: 11400000, guid: faed96e7faf7ee44bb9c17a323716c7c, type: 2}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 0.31271622, g: 0.5323337, b: 0.9924528, a: 1}
     m_Audio: {fileID: 8300000, guid: 9be9e32ab1865da4680b26fed15d3c4e, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 21300000, guid: 596c19041af53fd4fa2511cb89e8b044, type: 3}
+  - m_Image: {fileID: 21300000, guid: b2d803487b2c4dcebacbdd85950077b5, type: 3}
     m_Text: bus
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 0.9333334, g: 0.509804, b: 0.9333334, a: 1}
     m_Audio: {fileID: 8300000, guid: 08a41645f4e26cb41be112b0d9dd6962, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 9f9240fa985115041ac4aab17438a40e, type: 3}
+  - m_Image: {fileID: 21300000, guid: d6ceff7474694b31a6527442279dbf15, type: 3}
     m_Text: fish
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

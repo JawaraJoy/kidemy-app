@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 21300000, guid: 596c19041af53fd4fa2511cb89e8b044, type: 3}
+  - m_Image: {fileID: 21300000, guid: 821afcd521704117a8cfae1486491828, type: 3}
     m_Text: 3 buses
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: c9bf2c4a425a512458bed3260a76b688, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 21300000, guid: 596c19041af53fd4fa2511cb89e8b044, type: 3}
+  - m_Image: {fileID: 21300000, guid: a90dd9632a83445f8f007214153a8f50, type: 3}
     m_Text: 1 bus
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 012fc561ae8385849909d809d051edb0, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 7d3341558ccb3f14287c0522b84e71d8, type: 3}
+  - m_Image: {fileID: 21300000, guid: 2693ff0ba4ad4a31a3fa1cfc6b48e2fe, type: 3}
     m_Text: 3 cars
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

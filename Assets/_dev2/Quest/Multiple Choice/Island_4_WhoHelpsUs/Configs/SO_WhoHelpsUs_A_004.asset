@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ConstraintCount: 0
   m_MultipleQuestImages: []
   m_Question:
-    m_Image: {fileID: -952566200, guid: 5af51a9bad974719a7eb5ff6762914f4, type: 3}
+    m_Image: {fileID: 21300000, guid: 99db4f8e9f8f43d38b6a8c0e74c441b8, type: 3}
     m_Text: Who helps us stay safe on the road?
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 692189802, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+  - m_Image: {fileID: 21300000, guid: 56be9f997ca7418aad333013c0632d40, type: 3}
     m_Text: Police officer
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 864f16c9b60b9e44db0964db50279f36, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 1539439775, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+  - m_Image: {fileID: 21300000, guid: 0a7545f9d897448d9cbe1749bbc0019e, type: 3}
     m_Text: Baker
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: c62b7b4cf4c6cc84093ac41aa7c96cb6, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: -552190881, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+  - m_Image: {fileID: 21300000, guid: e38699b4b7c44491ac585924e2d926e9, type: 3}
     m_Text: Doctor
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ConstraintCount: 0
   m_MultipleQuestImages: []
   m_Question:
-    m_Image: {fileID: 336026719, guid: 5af51a9bad974719a7eb5ff6762914f4, type: 3}
+    m_Image: {fileID: 21300000, guid: 4879f2d25d384d419272133261883af1, type: 3}
     m_Text: Who helps us put out a fire?
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: -1470352633, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+  - m_Image: {fileID: 21300000, guid: 4243a950f77746769982b795e2d2a7e8, type: 3}
     m_Text: Firefighter
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 629b4a0bf19d1f848972104cc1944f00, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 1539439775, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+  - m_Image: {fileID: 21300000, guid: 0a7545f9d897448d9cbe1749bbc0019e, type: 3}
     m_Text: Baker
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: c62b7b4cf4c6cc84093ac41aa7c96cb6, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 1489655479, guid: 5288e2f1808448c08bf443664090b9f9, type: 3}
+  - m_Image: {fileID: 21300000, guid: 70cd8b0762a6459e9eb5b1e33b0a44c5, type: 3}
     m_Text: Teacher
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}

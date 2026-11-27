@@ -35,7 +35,7 @@ MonoBehaviour:
   m_SoundQuest: {fileID: 0}
   m_HowManySoundConfig: {fileID: 0}
   m_Choices:
-  - m_Image: {fileID: 21300000, guid: 596c19041af53fd4fa2511cb89e8b044, type: 3}
+  - m_Image: {fileID: 21300000, guid: b2d803487b2c4dcebacbdd85950077b5, type: 3}
     m_Text: Bus
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 54f3087dbfd30fe48b44ad7002f8157d, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 3f0fc3947720de54ab926fe6767d37e2, type: 3}
+  - m_Image: {fileID: 21300000, guid: 57a2c5987de14630896f8eaa56ca49ca, type: 3}
     m_Text: Cup
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: ae3fd010341d3c945b825bce3a66a4ce, type: 3}
     m_IsAnswer: 0
-  - m_Image: {fileID: 21300000, guid: 43bc2d89776b1d64dade68032d160071, type: 3}
+  - m_Image: {fileID: 21300000, guid: aa84471ba6804f9696664a457ee9f950, type: 3}
     m_Text: Moon
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -62,7 +62,7 @@ MonoBehaviour:
     m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Audio: {fileID: 8300000, guid: 237b990eb29323b4bb2c23071f9ea6ef, type: 3}
     m_IsAnswer: 1
-  - m_Image: {fileID: 21300000, guid: ddfef73782e254043a51f1a2c14acf20, type: 3}
+  - m_Image: {fileID: 21300000, guid: c62c21245db841c5864078f79eda8ff7, type: 3}
     m_Text: Pig
     m_FormatedText: {fileID: 0}
     m_ImageColor: {r: 1, g: 1, b: 1, a: 1}
